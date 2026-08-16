@@ -1175,6 +1175,10 @@ html&gt;body{padding:0}&lt;/style&gt;
     #neurotech-atlas-2026 .na-lab-browser { min-height: 535px; padding-top: 5px; }
     #neurotech-atlas-2026 .na-universe {
       border: 1px solid var(--border);
+      border-radius: 14px;
+      background:
+        radial-gradient(circle at 50% 45%, color-mix(in srgb, var(--foreground) 4%, transparent), transparent 52%),
+        color-mix(in srgb, var(--background) 96%, var(--foreground));
       cursor: grab;
       display: block;
       min-height: 535px;
@@ -1300,7 +1304,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;div&gt;
       &lt;div class=&quot;na-kicker&quot;&gt;Global neuroengineering field atlas&lt;/div&gt;
       &lt;h1&gt;Global neurotechnology atlas&lt;/h1&gt;
-      &lt;p class=&quot;na-sub&quot;&gt;Explore 86 technologies and 399 organizations, then open details only when you need them.&lt;/p&gt;
+      &lt;p class=&quot;na-sub&quot;&gt;Browse the field as a map: color marks technology families, position shows access and maturity, and node size reflects mapped organizations. Open details only when you need them.&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class=&quot;na-asof&quot;&gt;Curated through 16 Aug 2026&lt;/div&gt;
   &lt;/div&gt;
@@ -1311,7 +1315,7 @@ html&gt;body{padding:0}&lt;/style&gt;
     &lt;button class=&quot;na-filter-toggle&quot; id=&quot;na-filter-toggle&quot; type=&quot;button&quot; aria-expanded=&quot;false&quot;&gt;Filters&lt;/button&gt;
     &lt;div class=&quot;na-view&quot; aria-label=&quot;View&quot;&gt;
       &lt;button type=&quot;button&quot; data-view=&quot;atlas&quot; aria-pressed=&quot;false&quot;&gt;Technologies&lt;/button&gt;
-      &lt;button type=&quot;button&quot; data-view=&quot;universe&quot; aria-pressed=&quot;true&quot;&gt;3D universe&lt;/button&gt;
+      &lt;button type=&quot;button&quot; data-view=&quot;universe&quot; aria-pressed=&quot;true&quot;&gt;Field map&lt;/button&gt;
       &lt;button type=&quot;button&quot; data-view=&quot;labs&quot; aria-pressed=&quot;false&quot;&gt;Rank projects &amp; orgs&lt;/button&gt;
       &lt;button type=&quot;button&quot; data-view=&quot;timeline&quot; aria-pressed=&quot;false&quot;&gt;Milestones&lt;/button&gt;
     &lt;/div&gt;
@@ -1334,10 +1338,10 @@ html&gt;body{padding:0}&lt;/style&gt;
 
   &lt;div class=&quot;na-main&quot;&gt;
     &lt;section class=&quot;na-plot-wrap&quot; aria-label=&quot;Interactive neuroengineering landscape&quot;&gt;
-      &lt;div class=&quot;na-plot-title&quot;&gt;&lt;strong id=&quot;na-plot-heading&quot;&gt;Technology landscape&lt;/strong&gt;&lt;span id=&quot;na-plot-caption&quot;&gt;Select a node to inspect it&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;na-plot-title&quot;&gt;&lt;strong id=&quot;na-plot-heading&quot;&gt;Neurotechnology field map&lt;/strong&gt;&lt;span id=&quot;na-plot-caption&quot;&gt;X access · Y maturity · color family · size mapped organizations&lt;/span&gt;&lt;/div&gt;
       &lt;svg id=&quot;na-chart&quot; role=&quot;img&quot; aria-label=&quot;Neuroengineering technologies by interface depth and translation stage&quot;&gt;&lt;/svg&gt;
       &lt;div class=&quot;na-space-ui&quot; hidden&gt;
-        &lt;div class=&quot;na-space-actions&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-entities&quot; aria-pressed=&quot;false&quot;&gt;Show organizations&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-focus&quot; aria-pressed=&quot;false&quot; hidden&gt;Focus selected&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-reset&quot;&gt;Reset orbit&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-zoom-out&quot; aria-label=&quot;Zoom out&quot;&gt;−&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-zoom-in&quot; aria-label=&quot;Zoom in&quot;&gt;+&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-ask&quot;&gt;Ask about this view&lt;/button&gt;&lt;/div&gt;
+        &lt;div class=&quot;na-space-actions&quot;&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-entities&quot; aria-pressed=&quot;false&quot;&gt;Show organizations&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-focus&quot; aria-pressed=&quot;false&quot; hidden&gt;Focus selected&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-reset&quot;&gt;Reset view&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-zoom-out&quot; aria-label=&quot;Zoom out&quot;&gt;−&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-zoom-in&quot; aria-label=&quot;Zoom in&quot;&gt;+&lt;/button&gt;&lt;button type=&quot;button&quot; id=&quot;na-space-ask&quot;&gt;Ask about this view&lt;/button&gt;&lt;/div&gt;
         &lt;details class=&quot;na-space-help&quot;&gt;
           &lt;summary&gt;Legend &amp;amp; axes&lt;/summary&gt;
           &lt;div class=&quot;na-space-legend&quot; aria-label=&quot;3D node types&quot;&gt;
@@ -1345,12 +1349,13 @@ html&gt;body{padding:0}&lt;/style&gt;
             &lt;span&gt;&lt;i class=&quot;na-shape academic&quot; style=&quot;--shape-color:var(--viz-series-3)&quot;&gt;&lt;/i&gt;University&lt;/span&gt;
             &lt;span&gt;&lt;i class=&quot;na-shape industry&quot; style=&quot;--shape-color:var(--viz-series-2)&quot;&gt;&lt;/i&gt;Company&lt;/span&gt;
             &lt;span&gt;&lt;i class=&quot;na-shape independent&quot; style=&quot;--shape-color:var(--viz-series-4)&quot;&gt;&lt;/i&gt;Independent / public&lt;/span&gt;
+            &lt;span&gt;&lt;i class=&quot;na-shape tech&quot; style=&quot;--shape-color:var(--foreground);width:5px;height:5px&quot;&gt;&lt;/i&gt;&lt;i class=&quot;na-shape tech&quot; style=&quot;--shape-color:var(--foreground);width:11px;height:11px&quot;&gt;&lt;/i&gt;Technology size = linked organizations&lt;/span&gt;
           &lt;/div&gt;
           &lt;div class=&quot;na-tech-colors&quot; aria-label=&quot;Technology family colors&quot;&gt;&lt;b&gt;Technology color&lt;/b&gt;&lt;span&gt;&lt;i style=&quot;--c:var(--viz-series-1)&quot;&gt;&lt;/i&gt;Record&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;--c:var(--viz-series-2)&quot;&gt;&lt;/i&gt;Stimulate&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;--c:var(--viz-series-3)&quot;&gt;&lt;/i&gt;Restore&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;--c:var(--viz-series-4)&quot;&gt;&lt;/i&gt;Decode&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;--c:var(--viz-series-5)&quot;&gt;&lt;/i&gt;Regenerate&lt;/span&gt;&lt;span&gt;&lt;i style=&quot;--c:var(--viz-series-6)&quot;&gt;&lt;/i&gt;Personal&lt;/span&gt;&lt;/div&gt;
-          &lt;div class=&quot;na-axis-guide&quot; aria-label=&quot;Meaning of the three-dimensional axes&quot;&gt;&lt;span&gt;&lt;b&gt;X · INTERFACE&lt;/b&gt;&lt;br&gt;remote / wearable → surface / penetrating&lt;/span&gt;&lt;span&gt;&lt;b&gt;Y · MATURITY&lt;/b&gt;&lt;br&gt;exploratory → clinical or established&lt;/span&gt;&lt;span&gt;&lt;b&gt;Z · WORLD REGION&lt;/b&gt;&lt;br&gt;ordered regional bands, not geographic distance&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;na-axis-guide&quot; aria-label=&quot;Meaning of the three-dimensional axes&quot;&gt;&lt;span&gt;&lt;b&gt;X · INTERFACE&lt;/b&gt;&lt;br&gt;remote / wearable → surface / penetrating&lt;/span&gt;&lt;span&gt;&lt;b&gt;Y · MATURITY&lt;/b&gt;&lt;br&gt;exploratory → clinical or established&lt;/span&gt;&lt;span&gt;&lt;b&gt;Z · FAMILY LAYER&lt;/b&gt;&lt;br&gt;separates technology territories; region remains a filter&lt;/span&gt;&lt;/div&gt;
         &lt;/details&gt;
       &lt;/div&gt;
-      &lt;canvas id=&quot;na-universe&quot; class=&quot;na-universe&quot; hidden role=&quot;img&quot; aria-label=&quot;Rotatable network: X encodes interface depth, Y encodes translation maturity, Z separates categorical world regions; edges connect organizations to technologies&quot;&gt;Interactive three-dimensional neurotechnology network.&lt;/canvas&gt;
+      &lt;canvas id=&quot;na-universe&quot; class=&quot;na-universe&quot; hidden role=&quot;img&quot; aria-label=&quot;Rotatable neurotechnology field map: colored territories represent technology families, X encodes interface depth, Y encodes translation maturity, Z separates family layers, and technology size reflects linked organizations&quot;&gt;Interactive three-dimensional neurotechnology field map.&lt;/canvas&gt;
       &lt;div class=&quot;na-lab-browser&quot; hidden aria-label=&quot;Worldwide neurotechnology projects, organizations, laboratories and initiatives&quot;&gt;&lt;/div&gt;
       &lt;div class=&quot;na-metric-note&quot; hidden&gt;&lt;/div&gt;
       &lt;div class=&quot;tooltip&quot; role=&quot;tooltip&quot;&gt;&lt;/div&gt;
@@ -2564,6 +2569,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       svg.append(&#x27;text&#x27;).attr(&#x27;class&#x27;,&#x27;axis-title&#x27;).attr(&#x27;data-axis&#x27;,&#x27;x&#x27;).attr(&#x27;x&#x27;,m.left+iw/2).attr(&#x27;y&#x27;,h-5).attr(&#x27;text-anchor&#x27;,&#x27;middle&#x27;).text(&#x27;Year&#x27;);
     }
     var orbit={rx:-.22,ry:-.58,zoom:1,focus:false,showEntities:false,drag:false,moved:false,lastX:0,lastY:0,hit:[],hover:null,w:0,h:0};
+    var technologyLinkCount={};
+    L.forEach(function(entity){entity.t.forEach(function(id){technologyLinkCount[id]=(technologyLinkCount[id]||0)+1;});});
     function resolvePaint(value){
       var probe=document.createElement(&#x27;span&#x27;);
       probe.style.color=value; probe.hidden=true; root.appendChild(probe);
@@ -2599,16 +2606,17 @@ html&gt;body{padding:0}&lt;/style&gt;
       var regions=Array.from(new Set(L.map(function(d){return d.r;}))).sort();
       var techNodes=tech.map(function(d){
         var gi=groupKeys.indexOf(d.g);
-        return {key:&#x27;t:&#x27;+d.id,type:&#x27;tech&#x27;,d:d,x:(d.x-2)*125,y:(2-d.y)*112,z:(gi-(groupKeys.length-1)/2)*34};
+        return {key:&#x27;t:&#x27;+d.id,type:&#x27;tech&#x27;,d:d,x:(d.x-2)*125,y:(2-d.y)*112,z:(gi-(groupKeys.length-1)/2)*72};
       });
       var entityNodes=entities.map(function(d){
         var related=d.t.map(function(id){return T.find(function(x){return x.id===id;});}).filter(Boolean);
         var ax=related.length?d3.mean(related,function(x){return (x.x-2)*125;}):0;
         var ay=related.length?d3.mean(related,function(x){return (2-x.y)*112;}):0;
+        var az=related.length?d3.mean(related,function(x){return (groupKeys.indexOf(x.g)-(groupKeys.length-1)/2)*72;}):0;
         var hv=hash(d.id),jx=((hv%997)/996-.5)*150,jy=(((Math.floor(hv/997))%991)/990-.5)*120;
         var ri=Math.max(0,regions.indexOf(d.r));
-        var rz=regions.length&gt;1?(ri/(regions.length-1)-.5)*520:0;
-        return {key:&#x27;e:&#x27;+d.id,type:&#x27;lab&#x27;,shape:entityType(d),d:d,x:ax+jx,y:ay+jy,z:rz};
+        var rz=regions.length&gt;1?(ri/(regions.length-1)-.5)*72:0;
+        return {key:&#x27;e:&#x27;+d.id,type:&#x27;lab&#x27;,shape:entityType(d),d:d,x:ax+jx,y:ay+jy,z:az+rz};
       });
       var entityById={}; entityNodes.forEach(function(n){entityById[n.d.id]=n;});
       var techNodeById={}; techNodes.forEach(function(n){techNodeById[n.d.id]=n;});
@@ -2623,6 +2631,31 @@ html&gt;body{padding:0}&lt;/style&gt;
       var camera=760,p=orbit.zoom*camera/(camera+z2);
       return {x:orbit.w/2+x1*p,y:orbit.h/2+y1*p,z:z2,s:p};
     }
+    function drawFieldTerritories(projected,groupPaint,palette,w,h){
+      var ctx=universeContext;
+      var offsets={record:[-28,-55],stimulate:[-76,16],restore:[68,-13],compute:[28,40],regenerate:[72,58],personal:[-70,63]};
+      groupKeys.forEach(function(k){
+        var pts=projected.filter(function(p){return p.n.type===&#x27;tech&#x27;&amp;&amp;p.n.d.g===k;});
+        if(pts.length&lt;3)return;
+        var cx=d3.mean(pts,function(p){return p.x;}),cy=d3.mean(pts,function(p){return p.y;});
+        var expanded=pts.map(function(p){return [cx+(p.x-cx)*1.10,cy+(p.y-cy)*1.10];});
+        var hull=d3.polygonHull(expanded);
+        if(!hull)return;
+        var spread=Math.max(72,Math.min(138,d3.max(pts,function(p){return Math.hypot(p.x-cx,p.y-cy);})*.64));
+        ctx.save();var glow=ctx.createRadialGradient(cx,cy,6,cx,cy,spread);glow.addColorStop(0,groupPaint[k]);glow.addColorStop(1,&#x27;transparent&#x27;);
+        ctx.fillStyle=glow;ctx.globalAlpha=.13;ctx.beginPath();ctx.arc(cx,cy,spread,0,Math.PI*2);ctx.fill();ctx.restore();
+        ctx.save();ctx.lineJoin=&#x27;round&#x27;;ctx.lineCap=&#x27;round&#x27;;ctx.beginPath();
+        hull.forEach(function(p,i){if(i===0)ctx.moveTo(p[0],p[1]);else ctx.lineTo(p[0],p[1]);});ctx.closePath();
+        ctx.strokeStyle=groupPaint[k];ctx.globalAlpha=.22;ctx.lineWidth=1;ctx.stroke();ctx.restore();
+        ctx.save();ctx.fillStyle=groupPaint[k];ctx.globalAlpha=.43;ctx.textAlign=&#x27;center&#x27;;ctx.textBaseline=&#x27;middle&#x27;;
+        ctx.font=(w&lt;520?&#x27;750 12px&#x27;:&#x27;750 16px&#x27;)+&#x27; ui-sans-serif, sans-serif&#x27;;
+        var label=groups[k].name,tw=ctx.measureText(label).width,off=offsets[k]||[0,0];
+        var lx=Math.max(tw/2+12,Math.min(w-tw/2-12,cx+off[0])),ly=Math.max(28,Math.min(h-28,cy+off[1]));
+        ctx.fillText(label,lx,ly);ctx.restore();
+      });
+      ctx.save();ctx.fillStyle=palette.muted;ctx.globalAlpha=.58;ctx.font=&#x27;650 10px ui-sans-serif, sans-serif&#x27;;
+      ctx.fillText(&#x27;DRAG TO ORBIT · SCROLL TO ZOOM&#x27;,14,20);ctx.restore();
+    }
     function drawUniverse(){
       var box=root.querySelector(&#x27;.na-plot-wrap&#x27;).getBoundingClientRect();
       var w=Math.max(320,box.width),h=w&lt;500?470:535,dpr=Math.min(2,window.devicePixelRatio||1);
@@ -2631,17 +2664,19 @@ html&gt;body{padding:0}&lt;/style&gt;
       var data=universeData();
       var palette={foreground:resolvePaint(&#x27;var(--foreground)&#x27;),muted:resolvePaint(&#x27;var(--muted-foreground)&#x27;),border:resolvePaint(&#x27;var(--border)&#x27;),tech:resolvePaint(&#x27;var(--viz-series-1)&#x27;),academic:resolvePaint(&#x27;var(--viz-series-3)&#x27;),industry:resolvePaint(&#x27;var(--viz-series-2)&#x27;),independent:resolvePaint(&#x27;var(--viz-series-4)&#x27;)};
       var groupPaint={};groupKeys.forEach(function(k){groupPaint[k]=resolvePaint(groups[k].color);});
-      universeContext.lineWidth=1;universeContext.strokeStyle=palette.border;universeContext.globalAlpha=.55;
+      var projected=data.nodes.map(function(n){var p=projectUniverse(n);return {n:n,x:p.x,y:p.y,z:p.z,s:p.s};}).filter(function(p){return p.s&gt;.2;}).sort(function(a,b){return b.z-a.z;});
+      drawFieldTerritories(projected,groupPaint,palette,w,h);
+      universeContext.lineWidth=1.25;universeContext.strokeStyle=palette.border;universeContext.globalAlpha=.72;
       [[{x:-300,y:0,z:0},{x:300,y:0,z:0}],[{x:0,y:-250,z:0},{x:0,y:250,z:0}],[{x:0,y:0,z:-300},{x:0,y:0,z:300}]].forEach(function(axis){var a=projectUniverse(axis[0]),b=projectUniverse(axis[1]);universeContext.beginPath();universeContext.moveTo(a.x,a.y);universeContext.lineTo(b.x,b.y);universeContext.stroke();});
-      universeContext.globalAlpha=.72;universeContext.fillStyle=palette.muted;universeContext.font=&#x27;11px ui-sans-serif, sans-serif&#x27;;
-      var labels=[{p:{x:-310,y:0,z:0},t:&#x27;X · remote&#x27;},{p:{x:310,y:0,z:0},t:&#x27;X · penetrating&#x27;},{p:{x:0,y:260,z:0},t:&#x27;Y · exploratory&#x27;},{p:{x:0,y:-260,z:0},t:&#x27;Y · established&#x27;},{p:{x:0,y:0,z:310},t:&#x27;Z · categorical region&#x27;}];
-      labels.forEach(function(l){var p=projectUniverse(l.p),tw=universeContext.measureText(l.t).width,lx=Math.max(6,Math.min(w-tw-6,p.x+4)),ly=Math.max(14,Math.min(h-6,p.y-4));universeContext.fillText(l.t,lx,ly);});
+      universeContext.globalAlpha=.82;universeContext.fillStyle=palette.foreground;universeContext.font=&#x27;650 11px ui-sans-serif, sans-serif&#x27;;
+      var labels=[{p:{x:-310,y:0,z:0},t:&#x27;X · REMOTE / WEARABLE&#x27;},{p:{x:310,y:0,z:0},t:&#x27;X · SURFACE / PENETRATING&#x27;},{p:{x:0,y:260,z:0},t:&#x27;Y · EXPLORATORY&#x27;},{p:{x:0,y:-260,z:0},t:&#x27;Y · CLINICAL / ESTABLISHED&#x27;},{p:{x:0,y:0,z:310},t:&#x27;Z · FAMILY LAYER&#x27;}];
+      labels.forEach(function(l){var p=projectUniverse(l.p),tw=universeContext.measureText(l.t).width,lx=Math.max(8,Math.min(w-tw-8,p.x+4)),ly=Math.max(34,Math.min(h-10,p.y-4));universeContext.fillText(l.t,lx,ly);});
       universeContext.strokeStyle=palette.border;universeContext.globalAlpha=.16;
       data.edges.forEach(function(edge){var a=projectUniverse(edge[0]),b=projectUniverse(edge[1]);if(a.s&lt;=0||b.s&lt;=0)return;universeContext.beginPath();universeContext.moveTo(a.x,a.y);universeContext.lineTo(b.x,b.y);universeContext.stroke();});
-      var projected=data.nodes.map(function(n){var p=projectUniverse(n);return {n:n,x:p.x,y:p.y,z:p.z,s:p.s};}).filter(function(p){return p.s&gt;.2;}).sort(function(a,b){return b.z-a.z;});
       orbit.hit=[];universeContext.globalAlpha=1;
       projected.forEach(function(p){
-        var n=p.n,r=n.type===&#x27;tech&#x27;?Math.max(3.8,5*p.s):Math.max(3,4.2*p.s);
+        var n=p.n,linked=n.type===&#x27;tech&#x27;?(technologyLinkCount[n.d.id]||0):0;
+        var r=n.type===&#x27;tech&#x27;?Math.max(3.8,Math.min(11,(3.7+Math.sqrt(linked)*.92)*p.s)):Math.max(3,4.2*p.s);
         var selected=n.type===&#x27;tech&#x27;?(state.universeType===&#x27;tech&#x27;&amp;&amp;n.d.id===state.selected):(state.universeType===&#x27;lab&#x27;&amp;&amp;n.d.id===state.selectedLab);
         universeContext.fillStyle=n.type===&#x27;tech&#x27;?groupPaint[n.d.g]:palette[n.shape];
         universeContext.beginPath();
@@ -2669,7 +2704,7 @@ html&gt;body{padding:0}&lt;/style&gt;
       if(!p){orbit.hover=null;hideTip();return;}
       orbit.hover=p;
       var d=p.n.d;
-      tooltip.innerHTML=p.n.type===&#x27;tech&#x27;?&#x27;&lt;strong&gt;&#x27;+d.n+&#x27;&lt;/strong&gt;&#x27;+depth(d)+&#x27; · &#x27;+stage(d)+&#x27;&lt;br&gt;&#x27;+d.summary:&#x27;&lt;strong&gt;&#x27;+d.n+&#x27;&lt;/strong&gt;&#x27;+d.k+&#x27; · &#x27;+d.r+&#x27; region layer · &#x27;+d.t.length+&#x27; linked technologies&lt;br&gt;&#x27;+d.city+&#x27;, &#x27;+d.country+&#x27; · &#x27;+d.d;
+      tooltip.innerHTML=p.n.type===&#x27;tech&#x27;?&#x27;&lt;strong&gt;&#x27;+d.n+&#x27;&lt;/strong&gt;&#x27;+(technologyLinkCount[d.id]||0)+&#x27; mapped organizations · &#x27;+depth(d)+&#x27; · &#x27;+stage(d)+&#x27;&lt;br&gt;&#x27;+d.summary:&#x27;&lt;strong&gt;&#x27;+d.n+&#x27;&lt;/strong&gt;&#x27;+d.k+&#x27; · &#x27;+d.r+&#x27; region layer · &#x27;+d.t.length+&#x27; linked technologies&lt;br&gt;&#x27;+d.city+&#x27;, &#x27;+d.country+&#x27; · &#x27;+d.d;
       var plot=root.querySelector(&#x27;.na-plot-wrap&#x27;).getBoundingClientRect();
       tooltip.style.left=Math.max(0,Math.min(plot.width-260,event.clientX-plot.left))+&#x27;px&#x27;;tooltip.style.top=Math.max(5,event.clientY-plot.top)+&#x27;px&#x27;;tooltip.style.opacity=&#x27;1&#x27;;
     }
@@ -2742,8 +2777,8 @@ html&gt;body{padding:0}&lt;/style&gt;
       if(state.view===&#x27;universe&#x27;){
         var network=universeData();
         root.querySelector(&#x27;.na-count&#x27;).textContent=!orbit.showEntities&amp;&amp;!orbit.focus?network.technologies+&#x27; technologies · organizations hidden&#x27;:network.entities+&#x27; projects &amp; organizations · &#x27;+network.technologies+&#x27; technologies&#x27;;
-        root.querySelector(&#x27;#na-plot-heading&#x27;).textContent=&#x27;3D neurotechnology universe&#x27;;
-        root.querySelector(&#x27;#na-plot-caption&#x27;).textContent=root.getBoundingClientRect().width&lt;500?&#x27;Drag to orbit · tap to inspect&#x27;:&#x27;Drag to orbit · scroll to zoom · reveal organizations when needed&#x27;;
+        root.querySelector(&#x27;#na-plot-heading&#x27;).textContent=&#x27;Neurotechnology field map&#x27;;
+        root.querySelector(&#x27;#na-plot-caption&#x27;).textContent=root.getBoundingClientRect().width&lt;500?&#x27;Color = family · size = mapped organizations&#x27;:&#x27;X access · Y maturity · color family · size mapped organizations&#x27;;
         svg.selectAll(&#x27;*&#x27;).remove();root.querySelector(&#x27;#na-chart&#x27;).setAttribute(&#x27;hidden&#x27;,&#x27;&#x27;);labBrowser.hidden=true;metricNote.hidden=true;universe.hidden=false;spaceUI.hidden=false;drawUniverse();return;
       }
       var data=filtered();
