@@ -17,4 +17,4 @@ The application is now separated into maintainable web sources:
 - `src/app.ts` contains the typed atlas data, state, filtering, ranking, canvas rendering, and interactions.
 - `dist/app.js` is the browser-ready JavaScript generated from TypeScript.
 
-Run `pnpm install` and `pnpm build` after changing the TypeScript source. GitHub Pages publishes the compiled static site from the root of the `main` branch.
+Run `pnpm install` and `pnpm build` after changing the TypeScript source. The compiled script is emitted as a classic browser script so both GitHub Pages and direct `file://` opening work. GitHub Pages publishes the static site from the root of the `main` branch.
