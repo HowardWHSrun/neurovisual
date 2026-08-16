@@ -10,4 +10,11 @@ The map-first interaction is informed by the spatial taxonomy pattern used by [O
 
 Live site: https://howardwhsrun.github.io/neurovisual/
 
-The application is a self-contained static page. GitHub Pages publishes `index.html` from the root of the `main` branch.
+The application is now separated into maintainable web sources:
+
+- `index.html` contains semantic page structure.
+- `styles.css` contains the responsive visual system and map presentation.
+- `src/app.ts` contains the typed atlas data, state, filtering, ranking, canvas rendering, and interactions.
+- `dist/app.js` is the browser-ready JavaScript generated from TypeScript.
+
+Run `pnpm install` and `pnpm build` after changing the TypeScript source. GitHub Pages publishes the compiled static site from the root of the `main` branch.
