@@ -259,7 +259,8 @@ const pathwayRoles = [
         skills: ["Python", "linear algebra", "signal processing", "statistics", "ML evaluation", "reproducible data"],
         evidence: "A strong portfolio shows one end-to-end neural dataset project, leakage-resistant validation, readable code and an explanation of physiological assumptions.",
         market: "Neurotech titles are a narrow subset of the broader data-science and software market. U.S. BLS projects data-scientist employment to grow 34% from 2024–34; that is context, not a forecast for neural decoding jobs.",
-        sourceUrl: "https://www.bls.gov/ooh/math/data-scientists.htm", searchUrl: "https://neurojobs.sfn.org/"
+        sourceUrl: "https://www.bls.gov/ooh/math/data-scientists.htm", searchUrl: "https://neurojobs.sfn.org/",
+        openRole: { title: "Machine Learning Engineer", employer: "Neuralink", location: "Austin, TX / South San Francisco, CA", url: "https://boards.greenhouse.io/neuralink/jobs/5663271003", asOf: "17 Aug 2026" }
     },
     {
         id: "interface-hardware", name: "Neural-interface hardware engineer", lane: "Electronics & devices", entry: "BS/MS in EE, computer engineering, BME or related engineering", fit: ["device", "code", "translation"],
@@ -267,7 +268,8 @@ const pathwayRoles = [
         skills: ["analog/digital circuits", "PCB design", "embedded systems", "noise analysis", "verification", "bench instrumentation"],
         evidence: "Show schematics, layout decisions, noise or power budgets, firmware tests and measured results—not only a polished enclosure.",
         market: "The closest broad BLS category is electrical/electronics engineering, projected at 7% growth from 2024–34. Neurotech demand is much smaller and concentrated in particular companies and research hubs.",
-        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm", searchUrl: "https://www.embs.org/career-resources/"
+        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/electrical-and-electronics-engineers.htm", searchUrl: "https://www.embs.org/career-resources/",
+        openRole: { title: "Electrical Engineer, Implant Embedded Systems", employer: "Neuralink", location: "Austin, TX / South San Francisco, CA", url: "https://boards.greenhouse.io/neuralink/jobs/7702524003", asOf: "17 Aug 2026" }
     },
     {
         id: "bioelectronic-device", name: "Bioelectronic materials / device engineer", lane: "Materials & microfabrication", entry: "BS for process roles; MS/PhD common for novel materials and implant R&D", fit: ["device", "biology", "research"],
@@ -275,7 +277,8 @@ const pathwayRoles = [
         skills: ["microfabrication", "electrochemistry", "materials characterization", "CAD", "reliability", "biocompatibility"],
         evidence: "Demonstrate fabrication or characterization ownership, quantitative failure analysis and careful separation of in-vitro, animal and human evidence.",
         market: "These jobs appear under materials, process, MEMS, R&D and biomedical-engineering titles; searching only for “neuroengineer” misses much of the market.",
-        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm", searchUrl: "https://neurojobs.sfn.org/"
+        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm", searchUrl: "https://neurojobs.sfn.org/",
+        openRole: { title: "Microfabrication Engineer (R&D)", employer: "Neuralink", location: "Fremont, CA", url: "https://boards.greenhouse.io/neuralink/jobs/7689641003", asOf: "17 Aug 2026" }
     },
     {
         id: "clinical-neuromod", name: "Clinical neuromodulation / applications engineer", lane: "Clinical translation", entry: "BS in BME/EE or clinical engineering; travel and clinical training often required", fit: ["clinical", "device", "translation"],
@@ -283,7 +286,8 @@ const pathwayRoles = [
         skills: ["neuroanatomy", "instrumentation", "clinical communication", "troubleshooting", "documentation", "patient safety"],
         evidence: "Highlight calm technical work with clinicians or users, traceable documentation and decisions made under safety constraints.",
         market: "Roles may be called field clinical engineer, clinical specialist or therapy development specialist. They can involve operating-room schedules and regional travel.",
-        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm", searchUrl: "https://www.medtronic.com/us-en/our-company/careers.html"
+        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm", searchUrl: "https://www.medtronic.com/us-en/our-company/careers.html",
+        openRole: { title: "Field Clinical Engineer", employer: "Neuralink", location: "Austin, TX", url: "https://boards.greenhouse.io/neuralink/jobs/7796362003", asOf: "17 Aug 2026" }
     },
     {
         id: "computational-neuroscientist", name: "Computational neuroscientist / research scientist", lane: "Research", entry: "PhD is typical for independent scientist roles; MS can support modeling teams", fit: ["code", "research", "explore"],
@@ -291,7 +295,8 @@ const pathwayRoles = [
         skills: ["statistics", "dynamical systems", "experimental design", "scientific computing", "writing", "domain depth"],
         evidence: "Research quality is judged through contributions: a thesis, preprint, conference work, rigorous code or letters that explain your independence and judgment.",
         market: "U.S. BLS projects medical-scientist employment to grow 9% from 2024–34, but academic and neurotech research hiring depends strongly on grants, specialty and geography.",
-        sourceUrl: "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm", searchUrl: "https://neurojobs.sfn.org/"
+        sourceUrl: "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm", searchUrl: "https://neurojobs.sfn.org/",
+        openRole: { title: "Neuroengineer, Next Gen", employer: "Neuralink", location: "South San Francisco, CA", url: "https://boards.greenhouse.io/neuralink/jobs/7571489003", asOf: "17 Aug 2026" }
     },
     {
         id: "ephys-specialist", name: "Electrophysiology research specialist", lane: "Experimental research", entry: "BS/MS for technician or specialist roles; PhD for independent research leadership", fit: ["biology", "device", "research"],
@@ -299,7 +304,8 @@ const pathwayRoles = [
         skills: ["electrophysiology", "animal or human protocols", "DAQ systems", "scripting", "quality control", "lab documentation"],
         evidence: "Show reliable experimental ownership: preparation success, troubleshooting logs, signal-quality metrics and analysis that influenced the next experiment.",
         market: "Search university laboratories, hospitals, CROs and device companies using technique names such as EEG, ECoG, patch clamp, Neuropixels or intraoperative monitoring.",
-        sourceUrl: "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm", searchUrl: "https://jobs.nih.gov/"
+        sourceUrl: "https://www.bls.gov/ooh/life-physical-and-social-science/medical-scientists.htm", searchUrl: "https://jobs.nih.gov/",
+        openRole: { title: "Research Associate II - In vivo Electrophysiology and Behavior", employer: "Allen Institute", location: "Seattle, WA", url: "https://alleninstitute.org/careers/jobs?jobId=09c3fea4-fb46-9a70-3fbc-bf7562ce3859", asOf: "17 Aug 2026" }
     },
     {
         id: "clinical-research", name: "Clinical research coordinator", lane: "Trials & human research", entry: "BS is common; clinical experience and human-subjects training strengthen applications", fit: ["clinical", "biology", "translation"],
@@ -307,7 +313,8 @@ const pathwayRoles = [
         skills: ["human-subjects research", "protocol operations", "data quality", "communication", "scheduling", "regulatory documentation"],
         evidence: "Use examples of accurate coordination, participant-facing communication, privacy protection and protocol deviations resolved responsibly.",
         market: "O*NET describes the occupation as planning or coordinating clinical research and ensuring protocol compliance; device-trial experience is especially relevant to neurotechnology.",
-        sourceUrl: "https://www.onetonline.org/link/details/11-9121.01", searchUrl: "https://jobs.nih.gov/"
+        sourceUrl: "https://www.onetonline.org/link/details/11-9121.01", searchUrl: "https://jobs.nih.gov/",
+        openRole: { title: "Clinical Research Associate", employer: "Neuralink", location: "Austin, TX", url: "https://boards.greenhouse.io/neuralink/jobs/7865371003", asOf: "17 Aug 2026" }
     },
     {
         id: "regulatory-quality", name: "Regulatory affairs / quality engineer", lane: "Safety & evidence", entry: "BS in engineering or science; device quality or regulatory experience is highly valued", fit: ["translation", "clinical", "device"],
@@ -315,7 +322,8 @@ const pathwayRoles = [
         skills: ["design controls", "risk management", "verification", "technical writing", "quality systems", "regulatory strategy"],
         evidence: "Show how you converted a requirement or hazard into traceable tests, documentation and a defensible decision.",
         market: "These roles exist across the medical-device sector and may use titles such as regulatory engineer, quality systems engineer or submissions specialist.",
-        sourceUrl: "https://www.onetonline.org/link/details/13-1041.07", searchUrl: "https://www.raps.org/careers"
+        sourceUrl: "https://www.onetonline.org/link/details/13-1041.07", searchUrl: "https://www.raps.org/careers",
+        openRole: { title: "Regulatory Engineer", employer: "Neuralink", location: "Austin, TX", url: "https://boards.greenhouse.io/neuralink/jobs/7741688003", asOf: "17 Aug 2026" }
     },
     {
         id: "neural-data-infra", name: "Neural-data infrastructure engineer", lane: "Software & open science", entry: "BS/MS in CS, data engineering or quantitative neuroscience", fit: ["code", "research", "translation"],
@@ -323,7 +331,8 @@ const pathwayRoles = [
         skills: ["software engineering", "databases", "cloud/HPC", "APIs", "data standards", "testing"],
         evidence: "Contribute to a real open-science project or publish a pipeline with tests, documentation, provenance and a realistic dataset.",
         market: "The broad software market is much larger than neuroscience-specific infrastructure. BLS projects 16% growth for software developers from 2024–34; specialist roles still require domain fluency.",
-        sourceUrl: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm", searchUrl: "https://neurojobs.sfn.org/"
+        sourceUrl: "https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm", searchUrl: "https://neurojobs.sfn.org/",
+        openRole: { title: "Software Engineer II - Scientific Computing", employer: "Allen Institute", location: "Seattle, WA", url: "https://alleninstitute.org/careers/jobs?jobId=eaf7f3c2-59c1-8e73-7d9e-56463c4bcbe1", asOf: "17 Aug 2026" }
     },
     {
         id: "human-factors-product", name: "Neurotechnology product / human-factors specialist", lane: "Product & responsible use", entry: "BS/MS plus evidence in engineering, design research, clinical workflow or neuroethics", fit: ["translation", "clinical", "explore"],
@@ -331,7 +340,8 @@ const pathwayRoles = [
         skills: ["user research", "requirements", "human factors", "accessibility", "risk communication", "cross-functional planning"],
         evidence: "Show a case study that connects observed user needs to changed requirements and validated outcomes, including what the design should not do.",
         market: "Titles vary widely—human factors engineer, product specialist, UX researcher, program manager or responsible-innovation lead—so search by function as well as industry.",
-        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm", searchUrl: "https://neurojobs.sfn.org/"
+        sourceUrl: "https://www.bls.gov/ooh/architecture-and-engineering/biomedical-engineers.htm", searchUrl: "https://neurojobs.sfn.org/",
+        openRole: { title: "UI Design Engineer", employer: "Neuralink", location: "South San Francisco, CA", url: "https://boards.greenhouse.io/neuralink/jobs/6057476003", asOf: "17 Aug 2026" }
     }
 ];
 const pathwayGuides = {
