@@ -1111,7 +1111,7 @@
     function stage(d) { return stageLabels[Math.max(0, Math.min(4, Math.round(d.y)))]; }
     function depth(d) { return depthLabels[Math.max(0, Math.min(4, Math.round(d.x)))]; }
     function showTip(event, d) {
-        tooltip.innerHTML = '<strong>' + d.n + '</strong>' + depth(d) + ' · ' + stage(d) + '<br>' + d.summary;
+        tooltip.innerHTML = '<strong>' + d.n + '</strong> ' + depth(d) + ' · ' + stage(d) + '<br>' + d.summary;
         var box = root.querySelector('.na-plot-wrap').getBoundingClientRect();
         tooltip.style.left = Math.max(0, Math.min(box.width - 260, event.clientX - box.left)) + 'px';
         tooltip.style.top = Math.max(5, event.clientY - box.top) + 'px';
@@ -1368,7 +1368,7 @@
             builders.push(x); }); });
         detail.style.setProperty('--group-color', groups[d.g].color);
         detail.innerHTML =
-            '<div class="na-detail-top"><div><div class="na-detail-group">' + groups[d.g].name + ' · ' + d.o.replace('closed', 'closed loop') + '</div><h2>' + d.n + '</h2><div class="na-state">' + stage(d) + '</div></div><button class="na-detail-close" type="button" data-close-detail aria-label="Close details">×</button></div>' +
+            '<div class="na-detail-top"><div><div class="na-detail-group">' + groups[d.g].name + ' · ' + ({ read: 'Read', write: 'Write', closed: 'Closed loop', model: 'Model / compute' })[d.o] + '</div><h2>' + d.n + '</h2><div class="na-state">' + stage(d) + '</div></div><button class="na-detail-close" type="button" data-close-detail aria-label="Close details">×</button></div>' +
                 '<p class="na-summary">' + d.summary + '</p>' +
                 '<div class="na-profile"><div><span>Interface</span><strong>' + depth(d) + '</strong></div><div><span>Signal</span><strong>' + d.signal + '</strong></div><div><span>Spatial</span><strong>' + d.res + '</strong></div><div><span>Temporal</span><strong>' + d.temp + '</strong></div><div><span>Use horizon</span><strong>' + d.duration + '</strong></div><div><span>Purpose</span><strong>' + d.i.join(' · ') + '</strong></div></div>' +
                 '<details class="na-layer"><summary>Method, evidence &amp; limits</summary><div class="na-section"><h3>Method and mechanism</h3><p>' + d.mechanism + '</p></div><div class="na-section"><h3>Evidence and readiness</h3><p>' + d.standing + '</p></div><div class="na-section"><h3>Why it matters</h3><p>' + d.promise + '</p></div><div class="na-section"><h3>Hard problem</h3><p>' + d.limit + '</p></div></details>' +
@@ -1424,16 +1424,29 @@
         }
     }
     function drawTimeline(w, h) {
-        var m = { top: 55, right: 28, bottom: 44, left: 54 };
+        var m = { top: 46, right: 24, bottom: 30, left: 54 };
         var iw = w - m.left - m.right;
+        var rightEdge = m.left + iw;
         var x = d3.scaleLinear().domain(d3.extent(milestones, function (d) { return d.year; })).nice().range([m.left, m.left + iw]);
-        var mid = h * .53;
+        var mid = h * .30;
         svg.append('line').attr('class', 'na-timeline-line').attr('x1', m.left).attr('x2', m.left + iw).attr('y1', mid).attr('y2', mid);
         svg.append('g').attr('class', 'axis').attr('transform', 'translate(0,' + mid + ')').call(d3.axisBottom(x).ticks(w < 500 ? 5 : 9).tickFormat(d3.format('d')));
-        var gm = svg.selectAll('.na-milestone').data(milestones).enter().append('g').attr('class', 'na-milestone').attr('transform', function (d, i) { return 'translate(' + x(d.year) + ',' + mid + ')'; }).on('click', function (e, d) { selectTech(d.id); });
-        gm.append('line').attr('y2', function (d, i) { return i % 2 ? -92 : 92; });
+        var rowHeight = 16, leaderTop = 42, used = [];
+        milestones.forEach(function (d) {
+            var text = Math.floor(d.year) + ' · ' + d.title;
+            var tw = text.length * 6.1;
+            var cx = x(d.year), row = 0;
+            while (used[row] && used[row].some(function (s) { return Math.abs(cx - s.cx) < (tw + s.tw) / 2 + 9; }))
+                row++;
+            (used[row] = used[row] || []).push({ cx: cx, tw: tw });
+            d._row = row;
+            d._tw = tw;
+            d._cx = cx;
+        });
+        var gm = svg.selectAll('.na-milestone').data(milestones).enter().append('g').attr('class', 'na-milestone').attr('transform', function (d) { return 'translate(' + x(d.year) + ',' + mid + ')'; }).on('click', function (e, d) { selectTech(d.id); });
+        gm.append('line').attr('y1', 5).attr('y2', function (d) { return leaderTop + d._row * rowHeight - 4; });
         gm.append('circle').attr('r', function (d) { return d.id === state.selected ? 8 : 6; }).style('fill', function (d) { var t = T.find(function (x) { return x.id === d.id; }); return color(t); }).attr('stroke', 'var(--background)').attr('stroke-width', 2);
-        gm.append('text').attr('transform', function (d, i) { return 'translate(0,' + (i % 2 ? -101 : 105) + ') rotate(-42)'; }).attr('text-anchor', function (d, i) { return i % 2 ? 'start' : 'end'; }).text(function (d) { return Math.floor(d.year) + ' · ' + d.title; });
+        gm.append('text').attr('x', function (d) { return d._cx + d._tw + 9 > rightEdge ? -9 : 9; }).attr('y', function (d) { return leaderTop + d._row * rowHeight; }).attr('text-anchor', function (d) { return d._cx + d._tw + 9 > rightEdge ? 'end' : 'start'; }).text(function (d) { return Math.floor(d.year) + ' · ' + d.title; });
         svg.append('text').attr('class', 'axis-title').attr('data-axis', 'x').attr('x', m.left + iw / 2).attr('y', h - 5).attr('text-anchor', 'middle').text('Year');
     }
     var orbit = { rx: -.22, ry: -.58, zoom: 1, focus: false, showEntities: false, drag: false, moved: false, lastX: 0, lastY: 0, hit: [], hover: null, w: 0, h: 0 };
@@ -1590,11 +1603,19 @@
         universeContext.strokeStyle = palette.border;
         universeContext.globalAlpha = .72;
         [[{ x: -300, y: 0, z: 0 }, { x: 300, y: 0, z: 0 }], [{ x: 0, y: -250, z: 0 }, { x: 0, y: 250, z: 0 }], [{ x: 0, y: 0, z: -300 }, { x: 0, y: 0, z: 300 }]].forEach(function (axis) { var a = projectUniverse(axis[0]), b = projectUniverse(axis[1]); universeContext.beginPath(); universeContext.moveTo(a.x, a.y); universeContext.lineTo(b.x, b.y); universeContext.stroke(); });
-        universeContext.globalAlpha = .82;
+        var axisText = ['X · remote / wearable → surface / penetrating', 'Y · exploratory → clinical / established', 'Z · family layer'];
+        universeContext.font = '600 10px ui-sans-serif, sans-serif';
+        var axisW = axisText.reduce(function (m, t) { return Math.max(m, universeContext.measureText(t).width); }, 0) + 16;
+        var axisH = axisText.length * 14 + 8;
+        universeContext.globalAlpha = .9;
+        universeContext.fillStyle = resolvePaint('var(--popover)');
+        universeContext.fillRect(8, 8, axisW, axisH);
+        universeContext.globalAlpha = .6;
+        universeContext.strokeStyle = palette.border;
+        universeContext.strokeRect(8.5, 8.5, axisW - 1, axisH - 1);
+        universeContext.globalAlpha = 1;
         universeContext.fillStyle = palette.foreground;
-        universeContext.font = '650 11px ui-sans-serif, sans-serif';
-        var labels = [{ p: { x: -310, y: 0, z: 0 }, t: 'X · REMOTE / WEARABLE' }, { p: { x: 310, y: 0, z: 0 }, t: 'X · SURFACE / PENETRATING' }, { p: { x: 0, y: 260, z: 0 }, t: 'Y · EXPLORATORY' }, { p: { x: 0, y: -260, z: 0 }, t: 'Y · CLINICAL / ESTABLISHED' }, { p: { x: 0, y: 0, z: 310 }, t: 'Z · FAMILY LAYER' }];
-        labels.forEach(function (l) { var p = projectUniverse(l.p), tw = universeContext.measureText(l.t).width, lx = Math.max(8, Math.min(w - tw - 8, p.x + 4)), ly = Math.max(34, Math.min(h - 10, p.y - 4)); universeContext.fillText(l.t, lx, ly); });
+        axisText.forEach(function (t, i) { universeContext.fillText(t, 16, 26 + i * 14); });
         universeContext.strokeStyle = palette.border;
         universeContext.globalAlpha = .16;
         data.edges.forEach(function (edge) { var a = projectUniverse(edge[0]), b = projectUniverse(edge[1]); if (a.s <= 0 || b.s <= 0)
@@ -1661,7 +1682,7 @@
         }
         orbit.hover = p;
         var d = p.n.d;
-        tooltip.innerHTML = p.n.type === 'tech' ? '<strong>' + d.n + '</strong>' + (technologyLinkCount[d.id] || 0) + ' mapped organizations · ' + depth(d) + ' · ' + stage(d) + '<br>' + d.summary : '<strong>' + d.n + '</strong>' + d.k + ' · ' + d.r + ' region layer · ' + d.t.length + ' linked technologies<br>' + d.city + ', ' + d.country + ' · ' + d.d;
+        tooltip.innerHTML = p.n.type === 'tech' ? '<strong>' + d.n + '</strong> ' + (technologyLinkCount[d.id] || 0) + ' mapped organizations · ' + depth(d) + ' · ' + stage(d) + '<br>' + d.summary : '<strong>' + d.n + '</strong> ' + d.k + ' · ' + d.r + ' region layer · ' + d.t.length + ' linked technologies<br>' + d.city + ', ' + d.country + ' · ' + d.d;
         var plot = root.querySelector('.na-plot-wrap').getBoundingClientRect();
         tooltip.style.left = Math.max(0, Math.min(plot.width - 260, event.clientX - plot.left)) + 'px';
         tooltip.style.top = Math.max(5, event.clientY - plot.top) + 'px';
