@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T03:53:16.223Z",
+  "generatedAt": "2026-08-17T08:07:46.343Z",
   "cadence": "Every Monday at 07:30 UTC",
   "method": "Live postings pulled from public ATS boards plus a small curated list for companies without a public API. Levels and functions are inferred from title keywords and are approximate.",
   "boards": [
