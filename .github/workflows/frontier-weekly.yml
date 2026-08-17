@@ -1,0 +1,33 @@
+name: Refresh frontier weekly
+
+on:
+  schedule:
+    - cron: "17 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: frontier-weekly
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out atlas
+        uses: actions/checkout@v4
+      - name: Refresh frontier sources
+        run: node scripts/update-frontier.mjs
+      - name: Commit updated snapshot
+        run: |
+          if git diff --quiet -- data/frontier.json dist/frontier-data.js; then
+            echo "No frontier changes to publish."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/frontier.json dist/frontier-data.js
+          git commit -m "Update weekly frontier feed"
+          git push

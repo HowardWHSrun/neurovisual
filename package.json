@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "check": "tsc -p tsconfig.json --noEmit"
+    "check": "tsc -p tsconfig.json --noEmit",
+    "frontier:update": "node scripts/update-frontier.mjs"
   },
   "devDependencies": {
     "typescript": "^5.9.2"
