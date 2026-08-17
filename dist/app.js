@@ -1458,7 +1458,7 @@
         gm.append('text').attr('x', function (d) { return d._cx + d._tw + 9 > rightEdge ? -9 : 9; }).attr('y', function (d) { return leaderTop + d._row * rowHeight; }).attr('text-anchor', function (d) { return d._cx + d._tw + 9 > rightEdge ? 'end' : 'start'; }).text(function (d) { return Math.floor(d.year) + ' · ' + d.title; });
         svg.append('text').attr('class', 'axis-title').attr('data-axis', 'x').attr('x', m.left + iw / 2).attr('y', h - 5).attr('text-anchor', 'middle').text('Year');
     }
-    var orbit = { rx: -.22, ry: -.58, zoom: 1, focus: false, showEntities: false, drag: false, moved: false, lastX: 0, lastY: 0, hit: [], hover: null, w: 0, h: 0 };
+    var orbit = { focus: false, showEntities: false, hit: [], hover: null };
     var technologyLinkCount = {};
     L.forEach(function (entity) { entity.t.forEach(function (id) { technologyLinkCount[id] = (technologyLinkCount[id] || 0) + 1; }); });
     function resolvePaint(value) {
@@ -1479,7 +1479,7 @@
             return 'academic';
         return 'independent';
     }
-    function universeData() {
+    function visibleUniverse() {
         var q = state.search.toLowerCase().trim();
         var availableEntities = filteredLabs();
         var entities = orbit.showEntities ? availableEntities : [];
@@ -1494,7 +1494,7 @@
         }
         var linked = new Set();
         entities.forEach(function (d) { d.t.forEach(function (id) { linked.add(id); }); });
-        var tech = T.filter(function (d) {
+        var techs = T.filter(function (d) {
             if (orbit.focus && state.universeType === 'tech')
                 return d.id === focusedTech;
             if (orbit.focus && state.universeType === 'lab')
@@ -1504,225 +1504,167 @@
             var hay = [d.n, d.summary, d.signal, d.mechanism, d.ex.join(' ')].join(' ').toLowerCase();
             return hay.indexOf(q) >= 0 || linked.has(d.id);
         });
-        var techMap = {};
-        tech.forEach(function (d) { techMap[d.id] = d; });
-        var regions = Array.from(new Set(L.map(function (d) { return d.r; }))).sort();
-        var techNodes = tech.map(function (d) {
-            var gi = groupKeys.indexOf(d.g);
-            return { key: 't:' + d.id, type: 'tech', d: d, x: (d.x - 2) * 125, y: (2 - d.y) * 112, z: (gi - (groupKeys.length - 1) / 2) * 72 };
-        });
-        var entityNodes = entities.map(function (d) {
-            var related = d.t.map(function (id) { return T.find(function (x) { return x.id === id; }); }).filter(Boolean);
-            var ax = related.length ? d3.mean(related, function (x) { return (x.x - 2) * 125; }) : 0;
-            var ay = related.length ? d3.mean(related, function (x) { return (2 - x.y) * 112; }) : 0;
-            var az = related.length ? d3.mean(related, function (x) { return (groupKeys.indexOf(x.g) - (groupKeys.length - 1) / 2) * 72; }) : 0;
-            var hv = hash(d.id), jx = ((hv % 997) / 996 - .5) * 48, jy = (((Math.floor(hv / 997)) % 991) / 990 - .5) * 36;
-            var ri = Math.max(0, regions.indexOf(d.r));
-            var rz = regions.length > 1 ? (ri / (regions.length - 1) - .5) * 72 : 0;
-            return { key: 'e:' + d.id, type: 'lab', shape: entityType(d), d: d, x: ax + jx, y: ay + jy, z: az + rz };
-        });
-        var entityById = {};
-        entityNodes.forEach(function (n) { entityById[n.d.id] = n; });
-        var techNodeById = {};
-        techNodes.forEach(function (n) { techNodeById[n.d.id] = n; });
-        var edges = [];
-        entityNodes.forEach(function (n) { n.d.t.forEach(function (id) { if (techNodeById[id])
-            edges.push([n, techNodeById[id]]); }); });
-        return { nodes: techNodes.concat(entityNodes), edges: edges, technologies: techNodes.length, entities: entityNodes.length };
+        return { techs: techs, entities: entities, technologies: techs.length, orgCount: entities.length };
     }
-    function projectUniverse(n) {
-        var cy = Math.cos(orbit.ry), sy = Math.sin(orbit.ry), cx = Math.cos(orbit.rx), sx = Math.sin(orbit.rx);
-        var x1 = n.x * cy - n.z * sy, z1 = n.x * sy + n.z * cy;
-        var y1 = n.y * cx - z1 * sx, z2 = n.y * sx + z1 * cx;
-        var camera = 760, p = orbit.zoom * camera / (camera + z2);
-        return { x: orbit.w / 2 + x1 * p, y: orbit.h / 2 + y1 * p, z: z2, s: p };
+    function universeData() {
+        var v = visibleUniverse();
+        return { technologies: v.technologies, entities: v.orgCount };
     }
-    function drawFieldTerritories(projected, groupPaint, palette, w, h) {
-        var ctx = universeContext;
-        var offsets = { record: [-28, -55], stimulate: [-76, 16], restore: [68, -13], compute: [28, 40], regenerate: [72, 58], personal: [-70, 63] };
-        groupKeys.forEach(function (k) {
-            var pts = projected.filter(function (p) { return p.n.type === 'tech' && p.n.d.g === k; });
-            if (pts.length < 3)
-                return;
-            var cx = d3.mean(pts, function (p) { return p.x; }), cy = d3.mean(pts, function (p) { return p.y; });
-            var expanded = pts.map(function (p) { return [cx + (p.x - cx) * 1.10, cy + (p.y - cy) * 1.10]; });
-            var hull = d3.polygonHull(expanded);
-            if (!hull)
-                return;
-            var spread = Math.max(72, Math.min(138, d3.max(pts, function (p) { return Math.hypot(p.x - cx, p.y - cy); }) * .64));
-            ctx.save();
-            var glow = ctx.createRadialGradient(cx, cy, 6, cx, cy, spread);
-            glow.addColorStop(0, groupPaint[k]);
-            glow.addColorStop(1, 'transparent');
-            ctx.fillStyle = glow;
-            ctx.globalAlpha = .13;
-            ctx.beginPath();
-            ctx.arc(cx, cy, spread, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.restore();
-            ctx.save();
-            ctx.lineJoin = 'round';
-            ctx.lineCap = 'round';
-            ctx.beginPath();
-            var smooth = hull;
-            for (var pass = 0; pass < 2; pass++) {
-                var out = [];
-                for (var i = 0; i < smooth.length; i++) {
-                    var a = smooth[i], b = smooth[(i + 1) % smooth.length];
-                    out.push([a[0] * .75 + b[0] * .25, a[1] * .75 + b[1] * .25]);
-                    out.push([a[0] * .25 + b[0] * .75, a[1] * .25 + b[1] * .75]);
+    function layoutTreemap(techs, entities, w, h) {
+        var byGroup = {};
+        techs.forEach(function (d) { (byGroup[d.g] = byGroup[d.g] || []).push(d); });
+        var children = groupKeys.map(function (k) {
+            return { name: groups[k].name, key: k, children: (byGroup[k] || []).map(function (d) { return { tech: d, size: (technologyLinkCount[d.id] || 0) + 1 }; }) };
+        }).filter(function (g) { return g.children.length > 0; });
+        var root = d3.hierarchy({ children: children }).sum(function (d) { return d.size || 0; });
+        d3.treemap().size([w, h]).paddingInner(4).paddingOuter(8).paddingTop(30).round(true)(root);
+        var families = [], cells = [];
+        root.children.forEach(function (f) {
+            families.push({ key: f.data.key, name: f.data.name, x0: f.x0, y0: f.y0, x1: f.x1, y1: f.y1 });
+            f.children.forEach(function (c) { cells.push({ tech: c.data.tech, x0: c.x0, y0: c.y0, x1: c.x1, y1: c.y1 }); });
+        });
+        var cellByTech = {};
+        cells.forEach(function (c) { cellByTech[c.tech.id] = c; });
+        var orgDots = [];
+        entities.forEach(function (d) {
+            var cell = null;
+            for (var i = 0; i < d.t.length; i++) {
+                if (cellByTech[d.t[i]]) {
+                    cell = cellByTech[d.t[i]];
+                    break;
                 }
-                smooth = out;
             }
-            smooth.forEach(function (p, i) { if (i === 0)
-                ctx.moveTo(p[0], p[1]);
-            else
-                ctx.lineTo(p[0], p[1]); });
-            ctx.closePath();
-            ctx.fillStyle = groupPaint[k];
-            ctx.globalAlpha = .06;
-            ctx.fill();
-            ctx.strokeStyle = groupPaint[k];
-            ctx.globalAlpha = .30;
-            ctx.lineWidth = 1.5;
-            ctx.stroke();
-            ctx.restore();
-            ctx.save();
-            ctx.fillStyle = groupPaint[k];
-            ctx.globalAlpha = .62;
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.font = (w < 520 ? '750 12px' : '750 16px') + ' ui-sans-serif, sans-serif';
-            var label = groups[k].name, tw = ctx.measureText(label).width, off = offsets[k] || [0, 0];
-            var lx = Math.max(tw / 2 + 12, Math.min(w - tw / 2 - 12, cx + off[0])), ly = Math.max(28, Math.min(h - 28, cy + off[1]));
-            ctx.lineJoin = 'round';
-            ctx.strokeStyle = resolvePaint('var(--background)');
-            ctx.lineWidth = 4;
-            ctx.strokeText(label, lx, ly);
-            ctx.fillText(label, lx, ly);
-            ctx.restore();
+            if (!cell)
+                return;
+            var hv = hash(d.id);
+            var fx = ((hv % 97) / 96) * .86 + .07, fy = ((Math.floor(hv / 97) % 89) / 88) * .86 + .07;
+            orgDots.push({ d: d, shape: entityType(d), x: cell.x0 + (cell.x1 - cell.x0) * fx, y: cell.y0 + (cell.y1 - cell.y0) * fy });
         });
-        ctx.save();
-        ctx.fillStyle = palette.muted;
-        ctx.globalAlpha = .65;
-        ctx.font = '650 10px ui-sans-serif, sans-serif';
-        ctx.textAlign = 'right';
-        ctx.fillText('DRAG TO ORBIT · SCROLL TO ZOOM', w - 12, 20);
-        ctx.textAlign = 'left';
-        ctx.restore();
+        return { families: families, cells: cells, entities: orgDots, technologies: techs.length, orgCount: entities.length };
+    }
+    function rr(ctx, x, y, w, h, r) { var q = Math.min(r, w / 2, h / 2); ctx.beginPath(); ctx.moveTo(x + q, y); ctx.arcTo(x + w, y, x + w, y + h, q); ctx.arcTo(x + w, y + h, x, y + h, q); ctx.arcTo(x, y + h, x, y, q); ctx.arcTo(x, y, x + w, y, q); ctx.closePath(); }
+    function fitText(ctx, text, maxW, fs) {
+        ctx.font = '500 ' + fs + 'px ui-sans-serif, sans-serif';
+        if (ctx.measureText(text).width <= maxW)
+            return text;
+        var lo = 0, hi = text.length, mid;
+        while (lo < hi) {
+            mid = Math.ceil((lo + hi) / 2);
+            if (ctx.measureText(text.slice(0, mid) + '…').width <= maxW)
+                lo = mid;
+            else
+                hi = mid - 1;
+        }
+        return text.slice(0, lo) + '…';
     }
     function drawUniverse() {
         var box = root.querySelector('.na-plot-wrap').getBoundingClientRect();
-        var w = Math.max(320, box.width), h = w < 500 ? 470 : 535, dpr = Math.min(2, window.devicePixelRatio || 1);
-        orbit.w = w;
-        orbit.h = h;
+        var w = Math.max(320, box.width), h = w < 500 ? 540 : 580, dpr = Math.min(2, window.devicePixelRatio || 1);
         universe.width = Math.round(w * dpr);
         universe.height = Math.round(h * dpr);
         universe.style.height = h + 'px';
         universeContext.setTransform(dpr, 0, 0, dpr, 0, 0);
         universeContext.clearRect(0, 0, w, h);
-        var data = universeData();
         var palette = { foreground: resolvePaint('var(--foreground)'), muted: resolvePaint('var(--muted-foreground)'), border: resolvePaint('var(--border)'), tech: resolvePaint('var(--viz-series-1)'), academic: resolvePaint('var(--viz-series-3)'), industry: resolvePaint('var(--viz-series-2)'), independent: resolvePaint('var(--viz-series-4)') };
         var groupPaint = {};
         groupKeys.forEach(function (k) { groupPaint[k] = resolvePaint(groups[k].color); });
-        var projected = data.nodes.map(function (n) { var p = projectUniverse(n); return { n: n, x: p.x, y: p.y, z: p.z, s: p.s }; }).filter(function (p) { return p.s > .2; }).sort(function (a, b) { return b.z - a.z; });
-        drawFieldTerritories(projected, groupPaint, palette, w, h);
-        universeContext.lineWidth = 1.25;
-        universeContext.strokeStyle = palette.border;
-        universeContext.globalAlpha = .72;
-        [[{ x: -300, y: 0, z: 0 }, { x: 300, y: 0, z: 0 }], [{ x: 0, y: -250, z: 0 }, { x: 0, y: 250, z: 0 }], [{ x: 0, y: 0, z: -300 }, { x: 0, y: 0, z: 300 }]].forEach(function (axis) { var a = projectUniverse(axis[0]), b = projectUniverse(axis[1]); universeContext.beginPath(); universeContext.moveTo(a.x, a.y); universeContext.lineTo(b.x, b.y); universeContext.stroke(); });
-        var axisText = ['X · remote / wearable → surface / penetrating', 'Y · exploratory → clinical / established', 'Z · family layer'];
-        universeContext.font = '600 10px ui-sans-serif, sans-serif';
-        var axisW = axisText.reduce(function (m, t) { return Math.max(m, universeContext.measureText(t).width); }, 0) + 16;
-        var axisH = axisText.length * 14 + 8;
-        universeContext.globalAlpha = .9;
-        universeContext.fillStyle = resolvePaint('var(--popover)');
-        universeContext.fillRect(8, 8, axisW, axisH);
-        universeContext.globalAlpha = .6;
-        universeContext.strokeStyle = palette.border;
-        universeContext.strokeRect(8.5, 8.5, axisW - 1, axisH - 1);
-        universeContext.globalAlpha = 1;
-        universeContext.fillStyle = palette.foreground;
-        axisText.forEach(function (t, i) { universeContext.fillText(t, 16, 26 + i * 14); });
-        universeContext.strokeStyle = palette.border;
-        universeContext.globalAlpha = .16;
-        data.edges.forEach(function (edge) { var a = projectUniverse(edge[0]), b = projectUniverse(edge[1]); if (a.s <= 0 || b.s <= 0)
-            return; universeContext.beginPath(); universeContext.moveTo(a.x, a.y); universeContext.lineTo(b.x, b.y); universeContext.stroke(); });
+        var v = visibleUniverse();
+        var data = layoutTreemap(v.techs, v.entities, w, h);
+        universeContext.lineJoin = 'round';
+        universeContext.lineCap = 'round';
+        data.families.forEach(function (f) {
+            rr(universeContext, f.x0, f.y0, f.x1 - f.x0, f.y1 - f.y0, 9);
+            universeContext.fillStyle = groupPaint[f.key];
+            universeContext.globalAlpha = .06;
+            universeContext.fill();
+            universeContext.globalAlpha = .32;
+            universeContext.lineWidth = 1.5;
+            universeContext.strokeStyle = groupPaint[f.key];
+            universeContext.stroke();
+            universeContext.globalAlpha = .9;
+            universeContext.fillStyle = groupPaint[f.key];
+            universeContext.font = '700 13px ui-sans-serif, sans-serif';
+            universeContext.textAlign = 'left';
+            universeContext.textBaseline = 'middle';
+            var fl = fitText(universeContext, f.name, f.x1 - f.x0 - 14, 13);
+            universeContext.fillText(fl, f.x0 + 9, f.y0 + 13);
+        });
         orbit.hit = [];
-        universeContext.globalAlpha = 1;
-        projected.forEach(function (p) {
-            var n = p.n, linked = n.type === 'tech' ? (technologyLinkCount[n.d.id] || 0) : 0;
-            var r = n.type === 'tech' ? Math.max(4.5, Math.min(8.5, (4.4 + Math.sqrt(linked) * .48) * p.s)) : Math.max(3.2, Math.min(5, 4 * p.s));
-            var selected = n.type === 'tech' ? (state.universeType === 'tech' && n.d.id === state.selected) : (state.universeType === 'lab' && n.d.id === state.selectedLab);
-            universeContext.fillStyle = n.type === 'tech' ? groupPaint[n.d.g] : palette[n.shape];
+        data.cells.forEach(function (c) {
+            var wc = c.x1 - c.x0, hc = c.y1 - c.y0;
+            if (wc < 6 || hc < 6)
+                return;
+            rr(universeContext, c.x0, c.y0, wc, hc, 4);
+            universeContext.fillStyle = groupPaint[c.tech.g];
+            universeContext.globalAlpha = .16;
+            universeContext.fill();
+            var selected = (state.universeType === 'tech' && c.tech.id === state.selected);
+            universeContext.globalAlpha = selected ? 1 : .42;
+            universeContext.lineWidth = selected ? 2 : 1;
+            universeContext.strokeStyle = selected ? palette.foreground : groupPaint[c.tech.g];
+            universeContext.stroke();
+            if (wc >= 44 && hc >= 24) {
+                universeContext.globalAlpha = .94;
+                universeContext.fillStyle = palette.foreground;
+                universeContext.textAlign = 'left';
+                universeContext.textBaseline = 'top';
+                var fs = Math.max(9, Math.min(12, wc / 10));
+                var label = fitText(universeContext, c.tech.n, wc - 12, fs);
+                universeContext.fillText(label, c.x0 + 6, c.y0 + 5);
+                universeContext.globalAlpha = .5;
+                universeContext.fillStyle = palette.muted;
+                universeContext.font = '600 9px ui-sans-serif, sans-serif';
+                universeContext.fillText(String(technologyLinkCount[c.tech.id] || 0) + ' orgs', c.x0 + 6, c.y0 + 6 + fs + 1);
+            }
+            orbit.hit.push({ n: { type: 'tech', d: c.tech }, x0: c.x0, y0: c.y0, x1: c.x1, y1: c.y1 });
+        });
+        data.entities.forEach(function (e) {
+            var r = 3;
+            universeContext.globalAlpha = .95;
+            universeContext.fillStyle = palette[e.shape];
             universeContext.beginPath();
-            if (n.type === 'tech')
-                universeContext.arc(p.x, p.y, r, 0, Math.PI * 2);
-            else if (n.shape === 'industry')
-                universeContext.rect(p.x - r, p.y - r, r * 2, r * 2);
-            else if (n.shape === 'academic') {
-                universeContext.moveTo(p.x, p.y - r - 1);
-                universeContext.lineTo(p.x + r + 1, p.y);
-                universeContext.lineTo(p.x, p.y + r + 1);
-                universeContext.lineTo(p.x - r - 1, p.y);
+            if (e.shape === 'industry')
+                universeContext.rect(e.x - r, e.y - r, r * 2, r * 2);
+            else if (e.shape === 'academic') {
+                universeContext.moveTo(e.x, e.y - r - 1);
+                universeContext.lineTo(e.x + r + 1, e.y);
+                universeContext.lineTo(e.x, e.y + r + 1);
+                universeContext.lineTo(e.x - r - 1, e.y);
                 universeContext.closePath();
             }
             else {
-                universeContext.moveTo(p.x, p.y - r - 1);
-                universeContext.lineTo(p.x + r + 1, p.y + r);
-                universeContext.lineTo(p.x - r - 1, p.y + r);
+                universeContext.moveTo(e.x, e.y - r - 1);
+                universeContext.lineTo(e.x + r + 1, e.y + r);
+                universeContext.lineTo(e.x - r - 1, e.y + r);
                 universeContext.closePath();
             }
             universeContext.fill();
-            if (selected) {
-                universeContext.strokeStyle = palette.foreground;
-                universeContext.lineWidth = 2;
-                universeContext.stroke();
-            }
-            orbit.hit.push({ n: n, x: p.x, y: p.y, r: Math.max(12, r + 6), z: p.z });
+            orbit.hit.push({ n: { type: 'lab', d: e.d }, x0: e.x - r - 2, y0: e.y - r - 2, x1: e.x + r + 2, y1: e.y + r + 2 });
         });
-        var focus = orbit.hover || orbit.hit.find(function (p) { return p.n.type === 'tech' ? (state.universeType === 'tech' && p.n.d.id === state.selected) : (state.universeType === 'lab' && p.n.d.id === state.selectedLab); });
-        if (focus) {
-            universeContext.font = '500 11px ui-sans-serif, sans-serif';
-            universeContext.fillStyle = palette.foreground;
+        if (orbit.hover && orbit.hover.n.type === 'tech') {
+            var c = orbit.hover;
             universeContext.globalAlpha = 1;
-            var name = focus.n.d.n.length > 38 ? focus.n.d.n.slice(0, 37) + '…' : focus.n.d.n;
-            var tx = Math.min(w - 8, focus.x + 10), anchor = tx > w - 150 ? 'right' : 'left';
-            universeContext.textAlign = anchor;
-            universeContext.fillText(name, anchor === 'right' ? focus.x - 10 : focus.x + 10, focus.y - 8);
-            universeContext.textAlign = 'left';
+            universeContext.lineWidth = 1.5;
+            universeContext.strokeStyle = palette.foreground;
+            rr(universeContext, c.x0 + 1, c.y0 + 1, c.x1 - c.x0 - 2, c.y1 - c.y0 - 2, 4);
+            universeContext.stroke();
         }
-        var legendItems = groupKeys.map(function (k) { return { label: groups[k].name, color: groupPaint[k] }; });
+        universeContext.globalAlpha = .55;
+        universeContext.fillStyle = palette.muted;
         universeContext.font = '600 10px ui-sans-serif, sans-serif';
-        var legendW = 24;
-        legendItems.forEach(function (it) { legendW += 28 + universeContext.measureText(it.label).width; });
-        var llx = Math.max(8, (w - legendW) / 2), lly = h - 34;
-        universeContext.globalAlpha = .92;
-        universeContext.fillStyle = resolvePaint('var(--popover)');
-        universeContext.fillRect(llx, lly, legendW, 26);
-        universeContext.globalAlpha = .6;
-        universeContext.strokeStyle = palette.border;
-        universeContext.strokeRect(llx + .5, lly + .5, legendW - 1, 25);
-        universeContext.globalAlpha = 1;
-        var lcx = llx + 16;
-        legendItems.forEach(function (it) {
-            universeContext.fillStyle = it.color;
-            universeContext.beginPath();
-            universeContext.arc(lcx, lly + 13, 4, 0, Math.PI * 2);
-            universeContext.fill();
-            universeContext.fillStyle = palette.foreground;
-            universeContext.fillText(it.label, lcx + 9, lly + 17);
-            lcx += 28 + universeContext.measureText(it.label).width;
-        });
+        universeContext.textAlign = 'right';
+        universeContext.textBaseline = 'alphabetic';
+        universeContext.fillText(orbit.showEntities ? 'Click a marker to open the organization · click a cell for details' : 'Click a cell for details · enable organizations to explore projects', w - 12, h - 10);
         return data;
     }
     function nearestUniverse(event) {
-        var rect = universe.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top, best = null, dist = Infinity;
-        orbit.hit.forEach(function (p) { var d = Math.hypot(p.x - x, p.y - y); if (d < p.r && d < dist) {
-            best = p;
-            dist = d;
-        } });
-        return best;
+        var rect = universe.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
+        for (var i = orbit.hit.length - 1; i >= 0; i--) {
+            var p = orbit.hit[i];
+            if (x >= p.x0 && x <= p.x1 && y >= p.y0 && y <= p.y1)
+                return p;
+        }
+        return null;
     }
     function showUniverseTip(event, p) {
         if (!p) {
@@ -1738,29 +1680,16 @@
         tooltip.style.top = Math.max(5, event.clientY - plot.top) + 'px';
         tooltip.style.opacity = '1';
     }
-    universe.addEventListener('pointerdown', function (event) { orbit.drag = true; orbit.moved = false; orbit.lastX = event.clientX; orbit.lastY = event.clientY; universe.classList.add('is-dragging'); universe.setPointerCapture(event.pointerId); });
     universe.addEventListener('pointermove', function (event) {
-        if (orbit.drag) {
-            var dx = event.clientX - orbit.lastX, dy = event.clientY - orbit.lastY;
-            if (Math.abs(dx) + Math.abs(dy) > 1)
-                orbit.moved = true;
-            orbit.ry += dx * .008;
-            orbit.rx = Math.max(-1.25, Math.min(1.25, orbit.rx + dy * .008));
-            orbit.lastX = event.clientX;
-            orbit.lastY = event.clientY;
-            orbit.hover = null;
-            hideTip();
-            drawUniverse();
-            return;
-        }
         var p = nearestUniverse(event);
+        var prevKey = orbit.hover ? orbit.hover.n.type + ':' + orbit.hover.n.d.id : null;
+        var newKey = p ? p.n.type + ':' + p.n.d.id : null;
         showUniverseTip(event, p);
-        drawUniverse();
+        if (prevKey !== newKey)
+            drawUniverse();
     });
     universe.addEventListener('pointerup', function (event) {
-        var p = !orbit.moved ? nearestUniverse(event) : null;
-        orbit.drag = false;
-        universe.classList.remove('is-dragging');
+        var p = nearestUniverse(event);
         if (p) {
             if (p.n.type === 'tech') {
                 state.universeType = 'tech';
@@ -1775,19 +1704,15 @@
             }
         }
     });
-    universe.addEventListener('pointerleave', function () { if (!orbit.drag) {
+    universe.addEventListener('pointerleave', function () { if (orbit.hover) {
         orbit.hover = null;
         hideTip();
         drawUniverse();
     } });
-    universe.addEventListener('wheel', function (event) { event.preventDefault(); orbit.zoom = Math.max(.55, Math.min(2.25, orbit.zoom * Math.exp(-event.deltaY * .001))); drawUniverse(); }, { passive: false });
     var entitiesButton = root.querySelector('#na-space-entities');
     entitiesButton.addEventListener('click', function () { orbit.showEntities = !orbit.showEntities; orbit.focus = false; entitiesButton.setAttribute('aria-pressed', String(orbit.showEntities)); entitiesButton.textContent = orbit.showEntities ? 'Hide organizations' : 'Show organizations'; focusButton.setAttribute('aria-pressed', 'false'); focusButton.textContent = 'Focus selected'; draw(); });
     var focusButton = root.querySelector('#na-space-focus');
     focusButton.addEventListener('click', function () { orbit.focus = !orbit.focus; focusButton.setAttribute('aria-pressed', String(orbit.focus)); focusButton.textContent = orbit.focus ? 'Show all' : 'Focus selected'; orbit.hover = null; hideTip(); draw(); });
-    root.querySelector('#na-space-reset').addEventListener('click', function () { orbit.rx = -.22; orbit.ry = -.58; orbit.zoom = 1; orbit.focus = false; orbit.showEntities = false; entitiesButton.setAttribute('aria-pressed', 'false'); entitiesButton.textContent = 'Show organizations'; focusButton.setAttribute('aria-pressed', 'false'); focusButton.textContent = 'Focus selected'; orbit.hover = null; hideTip(); draw(); });
-    root.querySelector('#na-space-zoom-out').addEventListener('click', function () { orbit.zoom = Math.max(.55, orbit.zoom / 1.2); drawUniverse(); });
-    root.querySelector('#na-space-zoom-in').addEventListener('click', function () { orbit.zoom = Math.min(2.25, orbit.zoom * 1.2); drawUniverse(); });
     var spaceAsk = root.querySelector('#na-space-ask');
     if (!canAskCodex)
         spaceAsk.textContent = 'Copy analysis prompt';
@@ -2148,7 +2073,7 @@
             var network = universeData();
             root.querySelector('.na-count').textContent = !orbit.showEntities && !orbit.focus ? network.technologies + ' technologies · organizations hidden' : network.entities + ' projects & organizations · ' + network.technologies + ' technologies';
             root.querySelector('#na-plot-heading').textContent = 'Neurotechnology field map';
-            root.querySelector('#na-plot-caption').textContent = root.getBoundingClientRect().width < 500 ? 'Color = family · size = mapped organizations' : 'X access · Y maturity · color family · size mapped organizations';
+            root.querySelector('#na-plot-caption').textContent = root.getBoundingClientRect().width < 500 ? 'Color = family · area = mapped organizations' : 'Color = family · cell area = mapped organizations';
             svg.selectAll('*').remove();
             root.querySelector('#na-chart').setAttribute('hidden', '');
             labBrowser.hidden = true;
