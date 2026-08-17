@@ -99,6 +99,12 @@ button, input, select { font: inherit; }
       grid-template-columns: minmax(180px, 1fr) minmax(150px, .5fr) auto auto;
       padding: 10px 0;
     }
+    @media (min-width: 761px) {
+      #neurotech-atlas-2026 .na-controls > input { grid-column: 1; }
+      #neurotech-atlas-2026 .na-controls > select { grid-column: 2; }
+      #neurotech-atlas-2026 .na-filter-toggle { grid-column: 3; }
+      #neurotech-atlas-2026 .na-view { grid-column: 4; }
+    }
     #neurotech-atlas-2026 input,
     #neurotech-atlas-2026 select,
     #neurotech-atlas-2026 button {
@@ -135,6 +141,7 @@ button, input, select { font: inherit; }
       font-weight: 700;
       min-height: 34px;
       padding: 0 8px;
+      white-space: nowrap;
     }
     #neurotech-atlas-2026 .na-view button[aria-pressed="true"],
     #neurotech-atlas-2026 .na-focus button[aria-pressed="true"] { border-bottom-color: var(--viz-series-2); }

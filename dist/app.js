@@ -1589,20 +1589,26 @@
             ctx.restore();
             ctx.save();
             ctx.fillStyle = groupPaint[k];
-            ctx.globalAlpha = .43;
+            ctx.globalAlpha = .62;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.font = (w < 520 ? '750 12px' : '750 16px') + ' ui-sans-serif, sans-serif';
             var label = groups[k].name, tw = ctx.measureText(label).width, off = offsets[k] || [0, 0];
             var lx = Math.max(tw / 2 + 12, Math.min(w - tw / 2 - 12, cx + off[0])), ly = Math.max(28, Math.min(h - 28, cy + off[1]));
+            ctx.lineJoin = 'round';
+            ctx.strokeStyle = resolvePaint('var(--background)');
+            ctx.lineWidth = 4;
+            ctx.strokeText(label, lx, ly);
             ctx.fillText(label, lx, ly);
             ctx.restore();
         });
         ctx.save();
         ctx.fillStyle = palette.muted;
-        ctx.globalAlpha = .58;
+        ctx.globalAlpha = .65;
         ctx.font = '650 10px ui-sans-serif, sans-serif';
-        ctx.fillText('DRAG TO ORBIT · SCROLL TO ZOOM', 14, 20);
+        ctx.textAlign = 'right';
+        ctx.fillText('DRAG TO ORBIT · SCROLL TO ZOOM', w - 12, 20);
+        ctx.textAlign = 'left';
         ctx.restore();
     }
     function drawUniverse() {
@@ -1686,6 +1692,28 @@
             universeContext.fillText(name, anchor === 'right' ? focus.x - 10 : focus.x + 10, focus.y - 8);
             universeContext.textAlign = 'left';
         }
+        var legendItems = groupKeys.map(function (k) { return { label: groups[k].name, color: groupPaint[k] }; });
+        universeContext.font = '600 10px ui-sans-serif, sans-serif';
+        var legendW = 24;
+        legendItems.forEach(function (it) { legendW += 28 + universeContext.measureText(it.label).width; });
+        var llx = Math.max(8, (w - legendW) / 2), lly = h - 34;
+        universeContext.globalAlpha = .92;
+        universeContext.fillStyle = resolvePaint('var(--popover)');
+        universeContext.fillRect(llx, lly, legendW, 26);
+        universeContext.globalAlpha = .6;
+        universeContext.strokeStyle = palette.border;
+        universeContext.strokeRect(llx + .5, lly + .5, legendW - 1, 25);
+        universeContext.globalAlpha = 1;
+        var lcx = llx + 16;
+        legendItems.forEach(function (it) {
+            universeContext.fillStyle = it.color;
+            universeContext.beginPath();
+            universeContext.arc(lcx, lly + 13, 4, 0, Math.PI * 2);
+            universeContext.fill();
+            universeContext.fillStyle = palette.foreground;
+            universeContext.fillText(it.label, lcx + 9, lly + 17);
+            lcx += 28 + universeContext.measureText(it.label).width;
+        });
         return data;
     }
     function nearestUniverse(event) {
