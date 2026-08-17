@@ -1018,6 +1018,8 @@ interface Window {
     var sortControl = root.querySelector('#na-sort');
     var filterToggle = root.querySelector('#na-filter-toggle');
     var filterPanel = root.querySelector('.na-filter-panel');
+    var filterHint = root.querySelector('#na-filter-hint');
+    var clearFilters = root.querySelector('#na-clear-filters');
     var papersBtn = root.querySelector('#na-papers');
     var svg = d3.select(root.querySelector('#na-chart'));
     var universe = root.querySelector('#na-universe');
@@ -1398,8 +1400,20 @@ interface Window {
       papersBtn.hidden=entities; legend.hidden=entities;
       filterPanel.hidden=!state.filtersOpen;
       filterToggle.setAttribute('aria-expanded',String(state.filtersOpen));
+      var filterInputs=entities?[region,kind]:[family,purpose,operation];
+      var activeFilterCount=filterInputs.filter(function(input){return input.value!=='all';}).length+(entities?0:groupKeys.length-state.activeGroups.size);
+      filterInputs.forEach(function(input){input.classList.toggle('is-active-filter',input.value!=='all');});
+      filterToggle.textContent=activeFilterCount?'Filters · '+activeFilterCount:'Filters';
+      clearFilters.hidden=activeFilterCount===0;
+      filterHint.textContent=state.view==='universe'?'Choosing a region or organization type automatically reveals the matching organizations.':state.view==='labs'?'Rankings update immediately when a filter changes.':'Technology filters update the plot immediately.';
       search.placeholder=entities?'Search organization, technology, place, or focus...':'Search technology, signal, purpose...';
       root.querySelector('.na-focus').style.justifyContent='flex-end';
+    }
+    function revealOrganizationsForFilter(){
+      if(state.view!=='universe')return;
+      orbit.showEntities=true;orbit.focus=false;
+      entitiesButton.setAttribute('aria-pressed','true');entitiesButton.textContent='Hide organizations';
+      focusButton.setAttribute('aria-pressed','false');focusButton.textContent='Focus selected';
     }
     function draw(){
       if(state.view==='labs'){
@@ -1433,18 +1447,25 @@ interface Window {
       if(state.view==='atlas') drawAtlas(data,w,h); else drawTimeline(w,h);
     }
     function syncView(){ Array.from<any>(root.querySelectorAll('[data-view]')).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.view===state.view));}); }
-    search.addEventListener('input',function(){state.search=search.value;state.page=0;draw();if(state.view==='labs'||state.view==='universe')renderDetail();});
-    family.addEventListener('change',function(){state.family=family.value;draw();});
-    purpose.addEventListener('change',function(){state.purpose=purpose.value;draw();});
-    operation.addEventListener('change',function(){state.operation=operation.value;draw();});
-    region.addEventListener('change',function(){state.region=region.value;state.page=0;draw();renderDetail();});
-    kind.addEventListener('change',function(){state.kind=kind.value;state.page=0;draw();renderDetail();});
+    search.addEventListener('input',function(){state.search=search.value;state.page=0;if(state.search.trim())revealOrganizationsForFilter();draw();if(state.view==='labs'||state.view==='universe')renderDetail();});
+    family.addEventListener('change',function(){state.family=family.value;syncControls();draw();});
+    purpose.addEventListener('change',function(){state.purpose=purpose.value;syncControls();draw();});
+    operation.addEventListener('change',function(){state.operation=operation.value;syncControls();draw();});
+    region.addEventListener('change',function(){state.region=region.value;state.page=0;revealOrganizationsForFilter();syncControls();draw();renderDetail();});
+    kind.addEventListener('change',function(){state.kind=kind.value;state.page=0;revealOrganizationsForFilter();syncControls();draw();renderDetail();});
     sortControl.addEventListener('change',function(){state.sort=sortControl.value;state.page=0;draw();renderDetail();});
     filterToggle.addEventListener('click',function(){state.filtersOpen=!state.filtersOpen;syncControls();});
+    clearFilters.addEventListener('click',function(){
+      state.family='all';state.purpose='all';state.operation='all';state.region='all';state.kind='all';state.page=0;
+      family.value='all';purpose.value='all';operation.value='all';region.value='all';kind.value='all';
+      state.activeGroups=new Set(groupKeys);
+      Array.from<any>(legend.querySelectorAll('[data-group]')).forEach(function(b){b.setAttribute('aria-pressed','true');});
+      syncControls();draw();if(state.view==='labs'||state.view==='universe')renderDetail();
+    });
     papersBtn.addEventListener('click',function(){state.papers=!state.papers;papersBtn.setAttribute('aria-pressed',String(state.papers));draw();});
     Array.from<any>(root.querySelectorAll('[data-view]')).forEach(function(b){b.addEventListener('click',function(){var next=b.dataset.view;var wasEntities=state.view==='labs'||state.view==='universe',willEntities=next==='labs'||next==='universe';if(wasEntities!==willEntities){state.search='';search.value='';}state.view=next;state.page=0;state.detailOpen=false;syncView();syncControls();renderDetail();draw();});});
     root.addEventListener('keydown',function(event){if(event.key==='Escape'&&state.detailOpen)closeDetail();});
-    Array.from<any>(legend.querySelectorAll('[data-group]')).forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.group;if(state.activeGroups.has(k))state.activeGroups.delete(k);else state.activeGroups.add(k);b.setAttribute('aria-pressed',String(state.activeGroups.has(k)));draw();});});
+    Array.from<any>(legend.querySelectorAll('[data-group]')).forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.group;if(state.activeGroups.has(k))state.activeGroups.delete(k);else state.activeGroups.add(k);b.setAttribute('aria-pressed',String(state.activeGroups.has(k)));syncControls();draw();});});
     var ro=new ResizeObserver(function(){draw();}); ro.observe(root.querySelector('.na-plot-wrap'));
     new MutationObserver(function(){if(state.view==='universe')drawUniverse();}).observe(document.documentElement,{attributes:true,attributeFilter:['class','style']});
     syncView(); syncControls(); renderDetail(); draw();

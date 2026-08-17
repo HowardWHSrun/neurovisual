@@ -107,7 +107,6 @@ button, input, select { font: inherit; }
     }
     #neurotech-atlas-2026 input,
     #neurotech-atlas-2026 select {
-      appearance: none;
       background: var(--na-wash);
       border: 1px solid var(--border);
       border-radius: 7px;
@@ -116,6 +115,8 @@ button, input, select { font: inherit; }
       padding: 0 10px;
       width: 100%;
     }
+    #neurotech-atlas-2026 input { appearance: none; }
+    #neurotech-atlas-2026 select { appearance: auto; cursor: pointer; }
     #neurotech-atlas-2026 input:focus,
     #neurotech-atlas-2026 select:focus { border-color: var(--viz-series-2); }
     #neurotech-atlas-2026 .na-view {
@@ -147,6 +148,30 @@ button, input, select { font: inherit; }
       padding-top: 9px;
     }
     #neurotech-atlas-2026 .na-filter-panel .na-legend { grid-column: 1 / -1; }
+    #neurotech-atlas-2026 .na-filter-meta {
+      align-items: center;
+      color: var(--na-faint);
+      display: flex;
+      font-size: 10px;
+      gap: 12px;
+      grid-column: 1 / -1;
+      justify-content: space-between;
+      line-height: 1.35;
+    }
+    #neurotech-atlas-2026 #na-clear-filters {
+      background: transparent;
+      border: 0;
+      border-bottom: 1px solid var(--border);
+      color: var(--foreground);
+      cursor: pointer;
+      flex: 0 0 auto;
+      font-size: 10px;
+      padding: 2px 0;
+    }
+    #neurotech-atlas-2026 select.is-active-filter {
+      border-color: var(--viz-series-2);
+      background: color-mix(in srgb, var(--viz-series-2) 9%, var(--na-wash));
+    }
     #neurotech-atlas-2026 .na-focus {
       align-items: center;
       display: flex;

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An interactive, evidence-linked map of neurotechnology categories, organizations, funding, workforce and clinical activity worldwide.">
   <title>Global Neurotechnology Atlas</title>
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260817-1">
 </head>
 <body>
   <main>
@@ -37,6 +37,7 @@
           <select id="na-region" aria-label="World region" hidden><option value="all">All regions</option></select>
           <select id="na-kind" aria-label="Organization type" hidden><option value="all">All organization types</option></select>
           <div class="na-legend" aria-label="Families"></div>
+          <div class="na-filter-meta"><span id="na-filter-hint"></span><button type="button" id="na-clear-filters" hidden>Clear active filters</button></div>
         </div>
       </div>
 
@@ -77,6 +78,6 @@
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="./dist/app.js"></script>
+  <script src="./dist/app.js?v=20260817-1"></script>
 </body>
 </html>
