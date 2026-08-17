@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An interactive, evidence-linked map of neurotechnology categories, organizations, funding, workforce and clinical activity worldwide.">
   <title>Global Neurotechnology Atlas</title>
-  <link rel="stylesheet" href="./styles.css?v=20260817-3">
+  <link rel="stylesheet" href="./styles.css?v=20260817-4">
 </head>
 <body>
   <main>
@@ -17,7 +17,7 @@
           <h1>Global neurotechnology atlas</h1>
           <p class="na-sub">Browse the field as a map: color marks technology families, position shows access and maturity, and node size reflects mapped organizations. Open details only when you need them.</p>
         </div>
-        <div class="na-asof">Curated through 16 Aug 2026</div>
+        <div class="na-asof">Curated through 17 Aug 2026</div>
       </div>
 
       <div class="na-controls" aria-label="Atlas filters">
@@ -30,6 +30,7 @@
           <button type="button" data-view="labs" aria-pressed="false">Rank projects & orgs</button>
           <button type="button" data-view="researchers" aria-pressed="false">Researcher trails</button>
           <button type="button" data-view="frontier" aria-pressed="false">Frontier weekly</button>
+          <button type="button" data-view="pathways" aria-pressed="false">Study &amp; careers</button>
           <button type="button" data-view="timeline" aria-pressed="false">Milestones</button>
         </div>
         <div class="na-filter-panel" hidden>
@@ -73,6 +74,7 @@
           <div class="na-lab-browser" hidden aria-label="Worldwide neurotechnology projects, organizations, laboratories and initiatives"></div>
           <div class="na-researcher-browser" hidden aria-label="Curated career and project trails for notable neuroengineering researchers"></div>
           <div class="na-frontier-browser" hidden aria-label="Weekly frontier neurotechnology papers, preprints, trials and institutional news"></div>
+          <div class="na-pathway-browser" hidden aria-label="Undergraduate programs, graduate programs, neurotechnology careers and application guidance"></div>
           <div class="na-metric-note" hidden></div>
           <div class="tooltip" role="tooltip"></div>
           <details class="na-note"><summary>Coverage note</summary><p><a href="https://www.unesco.org/en/ethics-neurotech" target="_blank" rel="noreferrer">UNESCO reports roughly 1,400 neurotech companies</a> under a broad definition. This direct-source index is a living research map, not a literal census; regional, language, stealth-company, and inactive-project gaps remain.</p></details>
@@ -82,8 +84,9 @@
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="./dist/frontier-data.js?v=20260817-3"></script>
-  <script src="./dist/researchers.js?v=20260817-3"></script>
-  <script src="./dist/app.js?v=20260817-3"></script>
+  <script src="./dist/frontier-data.js?v=20260817-4"></script>
+  <script src="./dist/researchers.js?v=20260817-4"></script>
+  <script src="./dist/pathways.js?v=20260817-4"></script>
+  <script src="./dist/app.js?v=20260817-4"></script>
 </body>
 </html>
