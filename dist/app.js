@@ -1401,12 +1401,21 @@
         g.append('g').attr('class', 'axis').attr('transform', 'translate(' + m.left + ',0)').call(d3.axisLeft(y).tickValues([0, 1, 2, 3, 4]).tickFormat(function (v) { return w < 600 ? ['Explore', 'Preclinical', 'Human', 'Deployed', 'Standard'][v] : stageLabels[v]; }));
         g.append('text').attr('class', 'axis-title').attr('data-axis', 'x').attr('x', m.left + iw / 2).attr('y', h - 5).attr('text-anchor', 'middle').text(w < 600 ? 'Access: right = closer to tissue' : 'Access route / tissue proximity · farther right = closer to tissue');
         g.append('text').attr('class', 'axis-title').attr('data-axis', 'y').attr('transform', 'translate(14,' + (m.top + ih / 2) + ') rotate(-90)').attr('text-anchor', 'middle').text(w < 600 ? 'Curated stage: up = established' : 'Translation stage (curated) · farther up = more mature');
-        var pos = data.map(function (d) {
-            var hv = hash(d.id);
-            var jx = ((hv % 101) / 100 - .5) * .22;
-            var jy = (((Math.floor(hv / 101)) % 101) / 100 - .5) * .24;
-            return { d: d, px: x(d.x + jx), py: y(d.y + jy) };
-        });
+        var pos = (function () {
+            var cells = {};
+            data.forEach(function (d) { var k = Math.round(d.x * 10) + '|' + Math.round(d.y * 10); (cells[k] = cells[k] || []).push(d); });
+            return data.map(function (d) {
+                var k = Math.round(d.x * 10) + '|' + Math.round(d.y * 10);
+                var cell = cells[k], n = cell.length, idx = cell.indexOf(d), ox = 0, oy = 0;
+                if (n > 1) {
+                    var ang = (idx / n) * Math.PI * 2 - Math.PI / 2;
+                    var rad = n <= 3 ? 0.15 : 0.24;
+                    ox = Math.cos(ang) * rad;
+                    oy = Math.sin(ang) * rad;
+                }
+                return { d: d, px: x(d.x + ox), py: y(d.y + oy) };
+            });
+        })();
         var nodes = g.selectAll('.na-node').data(pos, function (z) { return z.d.id; }).enter().append('g');
         nodes.append('circle').attr('class', 'na-hit').attr('data-chart-hit', '').attr('r', 17).attr('cx', function (z) { return z.px; }).attr('cy', function (z) { return z.py; })
             .attr('tabindex', 0).attr('role', 'button').attr('aria-label', function (z) { return z.d.n + ', ' + stage(z.d); })
@@ -1415,7 +1424,7 @@
             e.preventDefault();
             selectTech(z.d.id);
         } });
-        nodes.append('circle').attr('class', function (z) { return 'na-node' + (z.d.id === state.selected ? ' selected' : ''); }).attr('r', function (z) { return z.d.o === 'closed' ? 7.5 : 6; }).attr('cx', function (z) { return z.px; }).attr('cy', function (z) { return z.py; }).style('fill', function (z) { return color(z.d); }).attr('pointer-events', 'none');
+        nodes.append('circle').attr('class', function (z) { return 'na-node' + (z.d.id === state.selected ? ' selected' : ''); }).attr('r', function (z) { return z.d.o === 'closed' ? 7.5 : 6; }).attr('cx', function (z) { return z.px; }).attr('cy', function (z) { return z.py; }).style('fill', function (z) { return color(z.d); }).attr('stroke', 'var(--background)').attr('stroke-width', 1.5).attr('pointer-events', 'none');
         var sel = pos.find(function (z) { return z.d.id === state.selected; });
         if (sel) {
             var anchor = sel.px > m.left + iw * .55 ? 'end' : 'start';
@@ -1507,7 +1516,7 @@
             var ax = related.length ? d3.mean(related, function (x) { return (x.x - 2) * 125; }) : 0;
             var ay = related.length ? d3.mean(related, function (x) { return (2 - x.y) * 112; }) : 0;
             var az = related.length ? d3.mean(related, function (x) { return (groupKeys.indexOf(x.g) - (groupKeys.length - 1) / 2) * 72; }) : 0;
-            var hv = hash(d.id), jx = ((hv % 997) / 996 - .5) * 150, jy = (((Math.floor(hv / 997)) % 991) / 990 - .5) * 120;
+            var hv = hash(d.id), jx = ((hv % 997) / 996 - .5) * 48, jy = (((Math.floor(hv / 997)) % 991) / 990 - .5) * 36;
             var ri = Math.max(0, regions.indexOf(d.r));
             var rz = regions.length > 1 ? (ri / (regions.length - 1) - .5) * 72 : 0;
             return { key: 'e:' + d.id, type: 'lab', shape: entityType(d), d: d, x: ax + jx, y: ay + jy, z: az + rz };
@@ -1555,14 +1564,27 @@
             ctx.lineJoin = 'round';
             ctx.lineCap = 'round';
             ctx.beginPath();
-            hull.forEach(function (p, i) { if (i === 0)
+            var smooth = hull;
+            for (var pass = 0; pass < 2; pass++) {
+                var out = [];
+                for (var i = 0; i < smooth.length; i++) {
+                    var a = smooth[i], b = smooth[(i + 1) % smooth.length];
+                    out.push([a[0] * .75 + b[0] * .25, a[1] * .75 + b[1] * .25]);
+                    out.push([a[0] * .25 + b[0] * .75, a[1] * .25 + b[1] * .75]);
+                }
+                smooth = out;
+            }
+            smooth.forEach(function (p, i) { if (i === 0)
                 ctx.moveTo(p[0], p[1]);
             else
                 ctx.lineTo(p[0], p[1]); });
             ctx.closePath();
+            ctx.fillStyle = groupPaint[k];
+            ctx.globalAlpha = .06;
+            ctx.fill();
             ctx.strokeStyle = groupPaint[k];
-            ctx.globalAlpha = .22;
-            ctx.lineWidth = 1;
+            ctx.globalAlpha = .30;
+            ctx.lineWidth = 1.5;
             ctx.stroke();
             ctx.restore();
             ctx.save();
@@ -1624,7 +1646,7 @@
         universeContext.globalAlpha = 1;
         projected.forEach(function (p) {
             var n = p.n, linked = n.type === 'tech' ? (technologyLinkCount[n.d.id] || 0) : 0;
-            var r = n.type === 'tech' ? Math.max(3.8, Math.min(11, (3.7 + Math.sqrt(linked) * .92) * p.s)) : Math.max(3, 4.2 * p.s);
+            var r = n.type === 'tech' ? Math.max(4.5, Math.min(8.5, (4.4 + Math.sqrt(linked) * .48) * p.s)) : Math.max(3.2, Math.min(5, 4 * p.s));
             var selected = n.type === 'tech' ? (state.universeType === 'tech' && n.d.id === state.selected) : (state.universeType === 'lab' && n.d.id === state.selectedLab);
             universeContext.fillStyle = n.type === 'tech' ? groupPaint[n.d.g] : palette[n.shape];
             universeContext.beginPath();
