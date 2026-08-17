@@ -849,6 +849,31 @@ button, input, select { font: inherit; }
     #neurotech-atlas-2026 .na-pathway-guide ol { margin: 7px 0; max-width: 980px; padding-left: 18px; }
     #neurotech-atlas-2026 .na-pathway-guide li { margin: 4px 0; }
     #neurotech-atlas-2026 .na-pathway-note { color: var(--na-faint); font-size: 9px; line-height: 1.45; margin: 8px 2px 0; max-width: 980px; }
+    #neurotech-atlas-2026 .na-jobs-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 2px 0; }
+    #neurotech-atlas-2026 .na-jobs-tabs button { background: transparent; border: 1px solid var(--border); border-radius: 999px; color: var(--na-muted); cursor: pointer; font-size: 10px; font-weight: 600; padding: 5px 12px; }
+    #neurotech-atlas-2026 .na-jobs-tabs button span { color: var(--na-faint); font-variant-numeric: tabular-nums; }
+    #neurotech-atlas-2026 .na-jobs-tabs button[aria-pressed="true"] { background: var(--na-wash); border-color: var(--viz-series-2); color: var(--foreground); }
+    #neurotech-atlas-2026 .na-jobs-filters { align-items: flex-end; display: flex; flex-wrap: wrap; gap: 10px 14px; margin: 12px 2px; }
+    #neurotech-atlas-2026 .na-jobs-filters label { color: var(--na-muted); font-size: 9px; }
+    #neurotech-atlas-2026 .na-jobs-filters select { display: block; margin-top: 4px; min-height: 34px; min-width: 130px; }
+    #neurotech-atlas-2026 .na-jobs-filters .na-jobs-remote { align-items: center; display: flex; gap: 6px; margin-bottom: 4px; }
+    #neurotech-atlas-2026 .na-jobs-filters .na-jobs-remote input { accent-color: var(--viz-series-2); }
+    #neurotech-atlas-2026 .na-job-row { align-items: center; background: transparent; border: 0; border-bottom: 1px solid var(--border); cursor: pointer; display: grid; gap: 8px; grid-template-columns: minmax(0, 1fr) auto; min-height: 56px; padding: 8px 7px; text-align: left; width: 100%; }
+    #neurotech-atlas-2026 .na-job-row:hover,
+    #neurotech-atlas-2026 .na-job-row[aria-pressed="true"] { background: var(--na-wash); }
+    #neurotech-atlas-2026 .na-job-row[aria-pressed="true"] { box-shadow: inset 2px 0 0 var(--viz-series-2); }
+    #neurotech-atlas-2026 .na-job-row .na-job-main { min-width: 0; }
+    #neurotech-atlas-2026 .na-job-row strong { display: block; font-size: 11px; font-weight: 500; line-height: 1.3; }
+    #neurotech-atlas-2026 .na-job-row small { color: var(--na-muted); display: block; font-size: 9px; line-height: 1.35; margin-top: 2px; }
+    #neurotech-atlas-2026 .na-job-row .na-job-badges { display: flex; flex-wrap: wrap; gap: 5px; justify-content: flex-end; }
+    #neurotech-atlas-2026 .na-level,
+    #neurotech-atlas-2026 .na-remote { border-radius: 999px; font-size: 8px; font-style: normal; font-weight: 700; letter-spacing: .03em; padding: 2px 8px; text-transform: uppercase; white-space: nowrap; }
+    #neurotech-atlas-2026 .na-level { background: color-mix(in srgb, var(--foreground) 8%, transparent); color: var(--na-muted); }
+    #neurotech-atlas-2026 .na-level-intern { background: color-mix(in srgb, var(--viz-series-1) 18%, transparent); color: var(--viz-series-1); }
+    #neurotech-atlas-2026 .na-level-junior { background: color-mix(in srgb, var(--viz-series-6) 18%, transparent); color: var(--viz-series-6); }
+    #neurotech-atlas-2026 .na-level-senior { background: color-mix(in srgb, var(--viz-series-2) 18%, transparent); color: var(--viz-series-2); }
+    #neurotech-atlas-2026 .na-level-lead { background: color-mix(in srgb, var(--viz-series-4) 18%, transparent); color: var(--viz-series-4); }
+    #neurotech-atlas-2026 .na-remote { background: color-mix(in srgb, var(--viz-series-3) 16%, transparent); color: var(--viz-series-3); }
     #neurotech-atlas-2026 .na-fit-planner { border-bottom: 1px solid var(--border); min-height: 450px; padding: 21px 4px 18px; }
     #neurotech-atlas-2026 .na-fit-planner > header { max-width: 740px; }
     #neurotech-atlas-2026 .na-fit-controls { display: grid; gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 19px 0; }
