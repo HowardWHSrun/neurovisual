@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Global Neurotechnology Atlas</title>
+  <desc id="desc">A neural network arranged as a compact field map.</desc>
+  <rect width="64" height="64" rx="16" fill="#ffffff"/>
+  <path d="M14 20 28 12 45 18 52 34 44 50 27 53 13 42Z" fill="#f5f7fa" stroke="#101828" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M28 12 28 31 14 20M28 31 45 18M28 31 44 50M28 31 13 42M28 31 52 34M28 31 27 53" fill="none" stroke="#101828" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="28" cy="31" r="7" fill="#ffffff" stroke="#101828" stroke-width="3"/>
+  <circle cx="28" cy="31" r="3.2" fill="#0057b8"/>
+  <circle cx="14" cy="20" r="4.2" fill="#c2410c"/>
+  <circle cx="45" cy="18" r="4.2" fill="#087f5b"/>
+  <circle cx="52" cy="34" r="4.2" fill="#b4236b"/>
+  <circle cx="44" cy="50" r="4.2" fill="#6d28d9"/>
+  <circle cx="27" cy="53" r="4.2" fill="#007c83"/>
+  <circle cx="13" cy="42" r="4.2" fill="#0057b8"/>
+</svg>

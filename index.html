@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An interactive, evidence-linked map of neurotechnology categories, organizations, funding, workforce and clinical activity worldwide.">
   <title>Global Neurotechnology Atlas</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%232878d0'/%3E%3Ccircle cx='8' cy='8' r='3.2' fill='%23ffffff'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="./styles.css?v=20260817-17">
+  <link rel="icon" type="image/svg+xml" href="./assets/atlas-favicon.svg?v=20260819-23">
+  <link rel="apple-touch-icon" href="./assets/atlas-favicon.svg?v=20260819-23">
+  <link rel="stylesheet" href="./styles.css?v=20260819-22">
 </head>
 <body>
   <main>
@@ -18,7 +19,7 @@
           <h1>Global neurotechnology atlas</h1>
           <p class="na-sub">Browse the field as a map: color marks technology families, position shows access and maturity, and node size reflects mapped organizations. Open details only when you need them.</p>
         </div>
-        <div class="na-asof">Curated through 17 Aug 2026 · build 20260817-17</div>
+        <div class="na-asof">Curated through 17 Aug 2026 · build 20260819-22</div>
       </div>
 
       <div class="na-controls" aria-label="Atlas filters">
@@ -27,8 +28,7 @@
         <button class="na-filter-toggle" id="na-filter-toggle" type="button" aria-expanded="false">Filters</button>
         <div class="na-view" aria-label="View">
           <button type="button" data-view="atlas" aria-pressed="false">Technologies</button>
-          <button type="button" data-view="universe" aria-pressed="true">Field map</button>
-          <button type="button" data-view="labs" aria-pressed="false">Rank projects & orgs</button>
+          <button type="button" data-view="organizations" aria-pressed="true">Organization / projects</button>
           <button type="button" data-view="researchers" aria-pressed="false">Researcher trails</button>
           <button type="button" data-view="frontier" aria-pressed="false">Frontier weekly</button>
           <button type="button" data-view="pathways" aria-pressed="false">Study &amp; careers</button>
@@ -40,6 +40,7 @@
           <select id="na-operation" aria-label="Direction"><option value="all">Read + write</option><option value="read">Read</option><option value="write">Write</option><option value="closed">Closed loop</option><option value="model">Model / compute</option></select>
           <select id="na-region" aria-label="World region" hidden><option value="all">All regions</option></select>
           <select id="na-kind" aria-label="Organization type" hidden><option value="all">All organization types</option></select>
+          <select id="na-model" aria-label="Study model" hidden><option value="all">All study models</option><option value="human">Human / human data</option><option value="mixed">Human + animal</option><option value="rodent">Rodent</option><option value="primate">Non-human primate</option><option value="pig">Pig / porcine</option><option value="other-animal">Other animal</option><option value="unspecified">Model not specified</option></select>
           <div class="na-legend" aria-label="Families"></div>
           <div class="na-filter-meta"><span id="na-filter-hint"></span><button type="button" id="na-clear-filters" hidden>Clear active filters</button></div>
         </div>
@@ -56,6 +57,7 @@
         <section class="na-plot-wrap" aria-label="Interactive neuroengineering landscape">
           <div class="na-plot-title"><strong id="na-plot-heading">Neurotechnology field map</strong><span id="na-plot-caption">X access · Y maturity · color family · size mapped organizations</span></div>
           <svg id="na-chart" role="img" aria-label="Neuroengineering technologies by interface depth and translation stage"></svg>
+          <div class="na-org-ui" hidden><div class="na-org-modes" role="group" aria-label="Organization and project view"><button type="button" id="na-org-map" aria-pressed="true">Field map</button><button type="button" id="na-org-ranked" aria-pressed="false">Ranked projects</button><button type="button" id="na-org-clear" hidden>Clear selection</button></div><div class="na-map-settings" role="group" aria-label="Map display settings"><span>Size by</span><button type="button" id="na-org-weighted" aria-pressed="true">Linked organizations</button><button type="button" id="na-org-equal" aria-pressed="false">Equal cells</button></div><span class="na-org-ui-label">Start with the field map. Click a colored section or technology box to see its ranked projects.</span></div>
           <div class="na-space-ui" hidden>
             <div class="na-space-actions"><button type="button" id="na-space-entities" aria-pressed="false">Show organizations</button><button type="button" id="na-space-focus" aria-pressed="false" hidden>Focus selected</button><button type="button" id="na-space-ask">Ask about this view</button></div>
             <details class="na-space-help">
@@ -68,7 +70,7 @@
                 <span><i class="na-shape tech na-size-small"></i><i class="na-shape tech na-size-large"></i>Cell area = linked organizations</span>
               </div>
               <div class="na-tech-colors" aria-label="Technology family colors"><b>Technology family color</b><span><i class="na-family-record"></i>Record</span><span><i class="na-family-stimulate"></i>Stimulate</span><span><i class="na-family-restore"></i>Restore</span><span><i class="na-family-compute"></i>Decode</span><span><i class="na-family-regenerate"></i>Regenerate</span><span><i class="na-family-personal"></i>Personal</span></div>
-              <div class="na-axis-guide" aria-label="How to read the treemap"><span><b>FAMILIES</b><br>six colored blocks group technologies by what they do</span><span><b>CELLS</b><br>each technology is a box; area reflects its mapped organizations</span><span><b>INTERACTION</b><br>hover a cell for a summary, click to open its details</span></div>
+              <div class="na-axis-guide" aria-label="How to read the treemap"><span><b>1 · FIELD SECTIONS</b><br>colored blocks group technologies by what they do</span><span><b>2 · TECHNOLOGY BOXES</b><br>each box is a technology; larger boxes have more linked organizations</span><span><b>3 · EXPLORE</b><br>hover for an explanation, click a section or box to rank its projects</span></div>
             </details>
           </div>
           <canvas id="na-universe" class="na-universe" hidden role="img" aria-label="Neurotechnology field map as a treemap: six colored family blocks contain technology cells sized by the number of linked organizations, with organization markers shown when enabled">Interactive neurotechnology field map.</canvas>
@@ -86,10 +88,10 @@
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="./dist/frontier-data.js?v=20260817-17"></script>
-  <script src="./dist/jobs-data.js?v=20260817-17"></script>
-  <script src="./dist/researchers.js?v=20260817-17"></script>
-  <script src="./dist/pathways.js?v=20260817-17"></script>
-  <script src="./dist/app.js?v=20260817-17"></script>
+  <script src="./dist/frontier-data.js?v=20260819-22"></script>
+  <script src="./dist/jobs-data.js?v=20260819-22"></script>
+  <script src="./dist/researchers.js?v=20260819-22"></script>
+  <script src="./dist/pathways.js?v=20260819-22"></script>
+  <script src="./dist/app.js?v=20260819-22"></script>
 </body>
 </html>
