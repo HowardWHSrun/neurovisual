@@ -1459,7 +1459,9 @@ interface Window {
         entities=chosen?[chosen]:[];
       }
       var linked=new Set(); entities.forEach(function(d){d.t.forEach(function(id){linked.add(id);});});
+      /* The organization field map must only show technologies represented by at least one indexed organization. Definitions with no mapped implementation remain available in the Technologies view, but are excluded here so a click can never lead to an empty ranked-project result. */
       var techs=T.filter(function(d){
+        if(!technologyLinkCount[d.id])return false;
         if(orbit.focus&&state.universeType==='tech')return d.id===focusedTech;
         if(orbit.focus&&state.universeType==='lab')return linked.has(d.id);
         if(!q) return true;
@@ -1887,7 +1889,7 @@ interface Window {
           drawLabs(labs);
         }else{
           var network=universeData();
-          root.querySelector('.na-count').textContent=!orbit.showEntities&&!orbit.focus?network.technologies+' technologies · organizations hidden':network.entities+' projects & organizations · '+network.technologies+' technologies';
+          root.querySelector('.na-count').textContent=!orbit.showEntities&&!orbit.focus?network.technologies+' mapped technologies · organizations hidden':network.entities+' projects & organizations · '+network.technologies+' mapped technologies';
           root.querySelector('#na-plot-heading').textContent='Organization / projects · field map';
           root.querySelector('#na-plot-caption').textContent=orbit.equalSize?'Equal-size cells · color = technology family · click to open ranked projects':'Area = linked organizations · color = technology family · click to open ranked projects';
           svg.selectAll('*').remove();root.querySelector('#na-chart').setAttribute('hidden','');labBrowser.hidden=true;researcherBrowser.hidden=true;frontierBrowser.hidden=true;pathwayBrowser.hidden=true;metricNote.hidden=true;universe.hidden=false;spaceUI.hidden=false;drawUniverse();

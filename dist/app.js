@@ -1554,6 +1554,8 @@
         var linked = new Set();
         entities.forEach(function (d) { d.t.forEach(function (id) { linked.add(id); }); });
         var techs = T.filter(function (d) {
+            if (!technologyLinkCount[d.id])
+                return false;
             if (orbit.focus && state.universeType === 'tech')
                 return d.id === focusedTech;
             if (orbit.focus && state.universeType === 'lab')
@@ -2147,7 +2149,7 @@
             }
             else {
                 var network = universeData();
-                root.querySelector('.na-count').textContent = !orbit.showEntities && !orbit.focus ? network.technologies + ' technologies · organizations hidden' : network.entities + ' projects & organizations · ' + network.technologies + ' technologies';
+                root.querySelector('.na-count').textContent = !orbit.showEntities && !orbit.focus ? network.technologies + ' mapped technologies · organizations hidden' : network.entities + ' projects & organizations · ' + network.technologies + ' mapped technologies';
                 root.querySelector('#na-plot-heading').textContent = 'Organization / projects · field map';
                 root.querySelector('#na-plot-caption').textContent = orbit.equalSize ? 'Equal-size cells · color = technology family · click to open ranked projects' : 'Area = linked organizations · color = technology family · click to open ranked projects';
                 svg.selectAll('*').remove();
