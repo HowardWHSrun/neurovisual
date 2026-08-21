@@ -47,6 +47,26 @@ interface PathwayGuide {
   avoid: string;
 }
 
+interface PathwayOpportunity {
+  id: string;
+  name: string;
+  organization: string;
+  location: string;
+  region: string;
+  type: string;
+  eligibility: string;
+  eligibilityTags: string[];
+  focus: string[];
+  funding: string;
+  fundingTags: string[];
+  applicationStatus: string;
+  statusKey: string;
+  deadline: string;
+  applicationUrl: string;
+  programUrl: string;
+  summary: string;
+}
+
 const pathwayPrograms: PathwayProgram[] = [
   {
     id: "illinois-ne-bs", kind: "undergraduate", name: "BS Neural Engineering", institution: "University of Illinois Urbana-Champaign", location: "Urbana-Champaign, United States", region: "North America", degree: "BS · 128 credit hours", route: "Dedicated neural-engineering major",
@@ -303,6 +323,48 @@ const pathwayPrograms: PathwayProgram[] = [
   }
 ];
 
+const pathwayOpportunities: PathwayOpportunity[] = [
+  {
+    id: "neuromatch-computational-neuroscience", name: "Computational Neuroscience Academy", organization: "Neuromatch", location: "Online · global", region: "Global", type: "Online academy", eligibility: "Open to learners with Python, linear algebra, probability/statistics, calculus and foundational neuroscience; global applicants welcome.", eligibilityTags: ["undergraduate", "graduate", "career-switcher", "global"], focus: ["computational neuroscience", "machine learning", "dynamical systems", "research projects"], funding: "Sliding-scale tuition; scholarships and Impact Scholar support may be available by cycle.", fundingTags: ["sliding-scale", "scholarship"], applicationStatus: "Next cohort expected to open applications in February 2027", statusKey: "upcoming", deadline: "2027 cycle: to be announced", applicationUrl: "https://neuromatch.io/computational-neuroscience/", programUrl: "https://neuromatch.io/", summary: "Code-first, mentored training with collaborative research projects, teaching assistants and a global alumni network."
+  },
+  {
+    id: "neurotechx-community", name: "NeuroTechX community, NeuroTechEDU & chapters", organization: "NeuroTechX", location: "Distributed · 30+ city chapters", region: "Global", type: "Community & project network", eligibility: "Open to students, researchers, makers, engineers and curious newcomers; local chapter participation varies.", eligibilityTags: ["undergraduate", "graduate", "career-switcher", "global"], focus: ["EEG", "BCI", "hands-on projects", "networking", "career development"], funding: "Community resources and tutorials are free; events, hardware and optional courses may have separate costs.", fundingTags: ["free", "self-funded"], applicationStatus: "Open community; join or find a local chapter", statusKey: "open", deadline: "No central deadline", applicationUrl: "https://neurotechx.com/", programUrl: "https://neurotechx.com/", summary: "A practical entry point through open tutorials, city chapters, project collaboration, hacknights and a neurotech jobs ecosystem."
+  },
+  {
+    id: "openbci-learning-community", name: "OpenBCI Learning Pages & Community Projects", organization: "OpenBCI", location: "Online · global", region: "Global", type: "Open hardware learning", eligibility: "Accessible to beginners through researchers; projects can be pursued with OpenBCI-compatible hardware and software.", eligibilityTags: ["high-school", "undergraduate", "graduate", "career-switcher", "global"], focus: ["EEG", "biosensing", "BCI prototyping", "signal processing"], funding: "Learning content is free; hardware purchases are optional and typically self-funded.", fundingTags: ["free", "self-funded"], applicationStatus: "Open access · project and sponsorship opportunities vary", statusKey: "open", deadline: "No central deadline", applicationUrl: "https://docs.openbci.com/", programUrl: "https://www.openbci.com/community", summary: "Tutorials, developer documentation and community projects make it possible to build a first end-to-end neural-sensing prototype."
+  },
+  {
+    id: "brainhack-global", name: "Brainhack Global / local Brainhack events", organization: "Brainhack community", location: "Distributed · local and hybrid events", region: "Global", type: "Hackathon & open science", eligibility: "Researchers, trainees, programmers, clinicians and neuro-enthusiasts at any career stage; local events set their own requirements.", eligibilityTags: ["undergraduate", "graduate", "early-career", "global"], focus: ["open science", "neuroinformatics", "coding", "reproducibility"], funding: "Central organization is volunteer-run and does not generally fund attendees; local organizers may offer travel support.", fundingTags: ["free", "travel-support-varies"], applicationStatus: "Rolling local events · check the current event calendar", statusKey: "rolling", deadline: "Event-specific", applicationUrl: "https://brainhack.org/", programUrl: "https://brainhack.org/global2021/faq", summary: "A low-barrier way to learn by contributing to open neuroscience projects alongside people from different technical backgrounds."
+  },
+  {
+    id: "umich-netp", name: "Neural Engineering Training Program (NETP)", organization: "University of Michigan", location: "Ann Arbor, United States", region: "North America", type: "Predoctoral training program", eligibility: "U.S. citizen or permanent resident; typically 2nd–3rd year PhD students (or 1st–2nd year with a prior master's) with quantitative neural-engineering research.", eligibilityTags: ["graduate", "us-citizen-pr", "quantitative"], focus: ["neural engineering", "quantitative neuroscience", "neural interfaces", "research training"], funding: "Full tuition plus approximately 65% stipend support for one year, per the 2026–27 call.", fundingTags: ["tuition", "stipend", "funded"], applicationStatus: "2026–27 call closed · watch for the next annual cycle", statusKey: "closed", deadline: "2026 call: May 15, 2026", applicationUrl: "https://netp.engin.umich.edu/apply/", programUrl: "https://netp.engin.umich.edu/", summary: "Cross-school training for PhD researchers whose work combines rigorous quantitative methods with neural engineering questions."
+  },
+  {
+    id: "gatech-human-neuroscience-reu", name: "Human Neuroscience REU", organization: "Georgia Tech & Georgia State University", location: "Atlanta, United States", region: "North America", type: "Summer research / REU", eligibility: "Undergraduates, especially rising juniors/seniors, U.S. citizens or permanent residents; priority for students with limited access to EEG/fMRI and underrepresented groups.", eligibilityTags: ["undergraduate", "us-citizen-pr", "rising-junior-senior"], focus: ["EEG", "fMRI", "human motor control", "human neurophysiology"], funding: "$7,000 summer stipend and housing provided for a 10-week program.", fundingTags: ["stipend", "housing", "fully-funded"], applicationStatus: "2026 cycle closed · monitor the next summer call", statusKey: "closed", deadline: "2026 cycle: February 19, 2026", applicationUrl: "http://reu.neuroscience.gatech.edu/", programUrl: "http://reu.neuroscience.gatech.edu/", summary: "Hands-on human-neuroscience research in faculty labs with workshops, career guidance and a final symposium."
+  },
+  {
+    id: "uh-brain-regulatory-reu", name: "Regulatory Science for Medical Devices REU", organization: "University of Houston IUCRC BRAIN", location: "Houston + Silver Spring, United States", region: "North America", type: "Summer research / REU", eligibility: "Undergraduates who are U.S. citizens or permanent residents and meet security/residency requirements; engineering and design backgrounds are relevant.", eligibilityTags: ["undergraduate", "us-citizen-pr", "engineering"], focus: ["medical devices", "regulatory science", "human-device interaction", "neurotechnology"], funding: "$6,000 stipend; travel and housing support described for the Houston/FDA components.", fundingTags: ["stipend", "travel", "housing", "fully-funded"], applicationStatus: "2026 program page available · verify next call and deadline", statusKey: "rolling", deadline: "Next deadline: to be announced", applicationUrl: "https://reu.egr.uh.edu/regulatory-science/overview-unpublished", programUrl: "https://reu.egr.uh.edu/regulatory-science/overview-unpublished", summary: "A translational bridge into neurotechnology through device safety, regulatory evidence and human-centered engineering."
+  },
+  {
+    id: "uc-irvine-neurotech-reu", name: "NSF REU in Neurotechnology, Regenerative Medicine & Intelligent Biocomputing", organization: "UC Irvine School of Medicine with USC collaborators", location: "Irvine, United States", region: "North America", type: "Summer research / REU", eligibility: "Current undergraduate students at four-year institutions; U.S. citizens, nationals or permanent residents; relevant engineering, neuroscience, materials or programming preparation.", eligibilityTags: ["undergraduate", "us-citizen-pr", "engineering"], focus: ["microfabrication", "brain-computer interfaces", "3D neural constructs", "biofabrication"], funding: "$4,000 stipend to defray housing and travel; 10-week in-person appointment.", fundingTags: ["stipend", "travel"], applicationStatus: "2026 positions filled or closed · check for the next rolling call", statusKey: "closed", deadline: "2026 cycle: rolling until filled", applicationUrl: "https://careereducation.rochester.edu/jobs/uc-irvine-school-of-medicine-department-of-neurology-nsf-funded-reu-position-in-neurotechnology-regenerative-medicine-and-intelligent-biocomputing/", programUrl: "https://careereducation.rochester.edu/jobs/uc-irvine-school-of-medicine-department-of-neurology-nsf-funded-reu-position-in-neurotechnology-regenerative-medicine-and-intelligent-biocomputing/", summary: "Research experience at the intersection of neural interfaces, stem-cell-derived neural networks and regenerative medicine."
+  },
+  {
+    id: "ibro-sdn-ts-school", name: "Science Diplomacy, Neuroscience, Technology & Society School", organization: "IBRO–PEDECIBA", location: "Montevideo, Uruguay + hybrid", region: "Latin America", type: "Postgraduate short school", eligibility: "Broad interdisciplinary cohort: faculty, postdocs, PhD/master's/bachelor's students, MDs, policymakers, diplomats and neuroethics professionals.", eligibilityTags: ["undergraduate", "graduate", "postdoc", "policy", "global-south"], focus: ["neurotechnology governance", "neuroethics", "neurorights", "science diplomacy"], funding: "Travel, accommodation, food and local transportation covered for selected participants.", fundingTags: ["travel", "accommodation", "meals", "fully-funded"], applicationStatus: "2026 application window listed · verify live portal status", statusKey: "open", deadline: "July 31, 2026", applicationUrl: "https://ibro.org/training-opportunity/larc1_uruguay/", programUrl: "https://ibro.org/event/science-diplomacy-neuroscience-technology-and-society-school", summary: "For people who want to work on the policy, ethics and governance side of neurotechnology—not only build devices."
+  },
+  {
+    id: "ibro-schools-support", name: "IBRO Schools Support & 2026 training schools", organization: "International Brain Research Organization", location: "Global · regional schools", region: "Global", type: "Training school network", eligibility: "Students and early-career neuroscientists vary by school and region; supported schools publish their own cohort criteria.", eligibilityTags: ["undergraduate", "graduate", "early-career", "regional"], focus: ["computational neuroscience", "neurotechnology", "experimental methods", "capacity building"], funding: "Eligible participant costs can include course fees, travel, accommodation, meals and materials, depending on the school.", fundingTags: ["travel", "accommodation", "meals", "scholarship"], applicationStatus: "Rolling school-specific calls · next calendar expected around the same time next year", statusKey: "rolling", deadline: "School-specific", applicationUrl: "https://ibro.org/schools/", programUrl: "https://ibro.org/schools/", summary: "A distributed route into regional neuroscience and neurotechnology training, especially useful for applicants outside major hubs."
+  },
+  {
+    id: "nih-parent-f31", name: "NIH NRSA Individual Predoctoral Fellowship (F31)", organization: "National Institutes of Health", location: "United States / eligible research institutions", region: "North America", type: "Individual fellowship", eligibility: "Predoctoral PhD or equivalent research-degree students with a sponsor and mentored biomedical research plan; citizenship/permanent-residence rules apply.", eligibilityTags: ["graduate", "us-citizen-pr", "research-doctoral"], focus: ["neuroscience research", "neuroengineering", "dissertation training", "career development"], funding: "Stipend, tuition/fees contribution and institutional allowance; up to five years of aggregate predoctoral NRSA support.", fundingTags: ["stipend", "tuition", "funded"], applicationStatus: "Open recurring federal mechanism · institution-specific internal deadlines may be earlier", statusKey: "open", deadline: "Standard cycles: April 8, August 8 and December 8", applicationUrl: "https://grants.nih.gov/grants/guide/pa-files/PA-25-422.html", programUrl: "https://grants.nih.gov/grants/guide/pa-files/PA-25-422.html", summary: "An individual funding route for dissertation-stage neuroengineering researchers whose project fits an NIH mission."
+  },
+  {
+    id: "nsf-nrt", name: "NSF Research Traineeship (NRT)", organization: "National Science Foundation", location: "United States · participating universities", region: "North America", type: "Institutional traineeship", eligibility: "Students apply to existing university traineeships; themes, degree stage, citizenship and funding vary by local NRT program.", eligibilityTags: ["graduate", "university-specific"], focus: ["interdisciplinary research", "engineering", "quantitative neuroscience", "professional development"], funding: "Local programs may include trainee stipends, tuition support and professional-development resources; verify with the host university.", fundingTags: ["stipend-varies", "tuition-varies"], applicationStatus: "Institution-specific · search current and recruiting traineeships", statusKey: "rolling", deadline: "Institution-specific; NSF proposals are due annually in September", applicationUrl: "https://www.nsf.gov/funding/initiatives/nrt/connect", programUrl: "https://www.nsf.gov/funding/initiatives/nrt/connect", summary: "A funding umbrella rather than one central student application; use it to find interdisciplinary university traineeships with a neuroengineering angle."
+  },
+  {
+    id: "neurotech-berkeley", name: "Neurotech@Berkeley education, projects & conference", organization: "UC Berkeley student community", location: "Berkeley, United States", region: "North America", type: "Student community & project program", eligibility: "Primarily UC Berkeley students for internal recruitment; public conference and learning resources can be broader.", eligibilityTags: ["undergraduate", "graduate", "student-community"], focus: ["software", "hardware", "wetware", "consulting", "neurotechnology education"], funding: "Student participation is community-based; conference tickets, projects and travel may have separate costs or support.", fundingTags: ["free", "self-funded"], applicationStatus: "Spring 2026 recruitment closed · annual recruitment and conference cycle", statusKey: "closed", deadline: "2026 recruitment: January 29, 2026; conference: April 26, 2026", applicationUrl: "https://neurotech.berkeley.edu/", programUrl: "https://neurotech.studentorg.berkeley.edu/about.html", summary: "A student-led bridge from coursework into real software, hardware, wetware, consulting and industry conversations."
+  }
+];
+
 const pathwayRoles: PathwayRole[] = [
   {
     id: "neural-ml", name: "Neural signal / machine-learning engineer", lane: "Software & data", entry: "BS can enter applied roles; MS/PhD often preferred for research-heavy decoding", fit: ["code", "device", "translation"],
@@ -436,9 +498,10 @@ const pathwayGuides: Record<string,PathwayGuide> = {
 };
 
 const pathwayData = {
-  reviewedAt: "17 Aug 2026",
+  reviewedAt: "19 Aug 2026",
   note: "Curated, globally distributed starting points—not rankings or a complete census. Program names, prerequisites, deadlines, fees, funding and visa rules change; confirm every decision on the linked official page.",
   programs: pathwayPrograms,
+  opportunities: pathwayOpportunities,
   roles: pathwayRoles,
   guides: pathwayGuides
 };

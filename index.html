@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An interactive, evidence-linked map of neurotechnology categories, organizations, funding, workforce and clinical activity worldwide.">
   <title>Global Neurotechnology Atlas</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/atlas-favicon.svg?v=20260819-24">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png?v=20260819-24">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png?v=20260819-24">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png?v=20260819-24">
-  <link rel="stylesheet" href="./styles.css?v=20260819-22">
+  <link rel="icon" type="image/svg+xml" href="./assets/atlas-favicon.svg?v=20260821-2">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png?v=20260821-2">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16.png?v=20260821-2">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png?v=20260821-2">
+  <link rel="stylesheet" href="./styles.css?v=20260821-2">
 </head>
 <body>
   <main>
@@ -17,62 +17,85 @@
 
       <div class="na-head">
         <div>
-          <div class="na-kicker">Global neuroengineering field atlas</div>
-          <h1>Global neurotechnology atlas</h1>
-          <p class="na-sub">Browse the field as a map: color marks technology families, position shows access and maturity, and node size reflects mapped organizations. Open details only when you need them.</p>
+          <div class="na-kicker" data-i18n="kicker">Global neuroengineering field atlas</div>
+          <h1 data-i18n="title">Global neurotechnology atlas</h1>
+          <p class="na-sub" data-i18n="subtitle">Browse the field as a map: color marks technology families, position shows access and maturity, and node size reflects mapped organizations. Open details only when you need them.</p>
         </div>
-        <div class="na-asof">Curated through 17 Aug 2026 · build 20260819-22</div>
+        <div class="na-head-aside">
+          <div class="na-lang" role="group" aria-label="Language">
+            <button type="button" class="na-lang-btn" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" class="na-lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+          </div>
+          <div class="na-asof"><span data-i18n="asofPrefix">Curated through</span> 17 Aug 2026 · <span data-i18n="asofSuffix">build</span> 20260821-2</div>
+        </div>
       </div>
 
-      <div class="na-controls" aria-label="Atlas filters">
-        <input id="na-search" type="search" placeholder="Search technology, signal, purpose..." aria-label="Search atlas">
-        <select id="na-sort" aria-label="Rank projects and organizations" hidden><option value="capital">Most disclosed capital</option><option value="employees">Most workers / team members</option><option value="trials">Most registered trials</option><option value="name">Name A–Z</option></select>
-        <button class="na-filter-toggle" id="na-filter-toggle" type="button" aria-expanded="false">Filters</button>
-        <div class="na-view" aria-label="View">
-          <button type="button" data-view="atlas" aria-pressed="false">Technologies</button>
-          <button type="button" data-view="organizations" aria-pressed="true">Organization / projects</button>
-          <button type="button" data-view="researchers" aria-pressed="false">Researcher trails</button>
-          <button type="button" data-view="frontier" aria-pressed="false">Frontier weekly</button>
-          <button type="button" data-view="pathways" aria-pressed="false">Study &amp; careers</button>
-          <button type="button" data-view="timeline" aria-pressed="false">Milestones</button>
+      <div class="na-controls" aria-label="Atlas controls">
+        <div class="na-toolbar">
+          <input id="na-search" type="search" placeholder="Search technology, signal, purpose..." aria-label="Search atlas" data-i18n-ph="searchPlaceholderAtlas">
+          <select id="na-sort" aria-label="Rank projects and organizations" hidden>
+            <option value="capital" data-i18n="sortCapital">Most disclosed capital</option>
+            <option value="employees" data-i18n="sortEmployees">Most workers / team members</option>
+            <option value="trials" data-i18n="sortTrials">Most registered trials</option>
+            <option value="name" data-i18n="sortName">Name A–Z</option>
+          </select>
+          <button class="na-filter-toggle" id="na-filter-toggle" type="button" aria-expanded="false" data-i18n="filterToggle">Filters</button>
         </div>
+        <nav class="na-view" aria-label="View">
+          <button type="button" data-view="atlas" aria-pressed="false" data-i18n="viewTechnologies">Technologies</button>
+          <button type="button" data-view="organizations" aria-pressed="true" data-i18n="viewOrganizations">Organizations &amp; projects</button>
+          <button type="button" data-view="researchers" aria-pressed="false" data-i18n="viewResearchers">Researcher trails</button>
+          <button type="button" data-view="frontier" aria-pressed="false" data-i18n="viewFrontier">Frontier weekly</button>
+          <button type="button" data-view="pathways" aria-pressed="false" data-i18n="viewPathways">Study &amp; careers</button>
+          <button type="button" data-view="timeline" aria-pressed="false" data-i18n="viewMilestones">Milestones</button>
+        </nav>
         <div class="na-filter-panel" hidden>
-          <select id="na-family" aria-label="Technology family"><option value="all">All families</option></select>
-          <select id="na-purpose" aria-label="Purpose"><option value="all">All purposes</option><option value="medical">Medical</option><option value="research">Research</option><option value="personal">Personal</option></select>
-          <select id="na-operation" aria-label="Direction"><option value="all">Read + write</option><option value="read">Read</option><option value="write">Write</option><option value="closed">Closed loop</option><option value="model">Model / compute</option></select>
-          <select id="na-region" aria-label="World region" hidden><option value="all">All regions</option></select>
-          <select id="na-kind" aria-label="Organization type" hidden><option value="all">All organization types</option></select>
-          <select id="na-model" aria-label="Study model" hidden><option value="all">All study models</option><option value="human">Human / human data</option><option value="mixed">Human + animal</option><option value="rodent">Rodent</option><option value="primate">Non-human primate</option><option value="pig">Pig / porcine</option><option value="other-animal">Other animal</option><option value="unspecified">Model not specified</option></select>
+          <select id="na-family" aria-label="Technology family"><option value="all" data-i18n="familyAll">All families</option></select>
+          <select id="na-purpose" aria-label="Purpose"><option value="all" data-i18n="purposeAll">All purposes</option><option value="medical" data-i18n="purposeMedical">Medical</option><option value="research" data-i18n="purposeResearch">Research</option><option value="personal" data-i18n="purposePersonal">Personal</option></select>
+          <select id="na-operation" aria-label="Direction"><option value="all" data-i18n="operationAll">Read + write</option><option value="read" data-i18n="operationRead">Read</option><option value="write" data-i18n="operationWrite">Write</option><option value="closed" data-i18n="operationClosed">Closed loop</option><option value="model" data-i18n="operationModel">Model / compute</option></select>
+          <select id="na-region" aria-label="World region" hidden><option value="all" data-i18n="regionAll">All regions</option></select>
+          <select id="na-kind" aria-label="Organization type" hidden><option value="all" data-i18n="kindAll">All organization types</option></select>
+          <select id="na-model" aria-label="Study model" hidden><option value="all" data-i18n="modelAll">All study models</option><option value="human" data-i18n="modelHuman">Human / human data</option><option value="mixed" data-i18n="modelMixed">Human + animal</option><option value="rodent" data-i18n="modelRodent">Rodent</option><option value="primate" data-i18n="modelPrimate">Non-human primate</option><option value="pig" data-i18n="modelPig">Pig / porcine</option><option value="other-animal" data-i18n="modelOtherAnimal">Other animal</option><option value="unspecified" data-i18n="modelUnspecified">Model not specified</option></select>
           <div class="na-legend" aria-label="Families"></div>
-          <div class="na-filter-meta"><span id="na-filter-hint"></span><button type="button" id="na-clear-filters" hidden>Clear active filters</button></div>
+          <div class="na-filter-meta"><span id="na-filter-hint"></span><button type="button" id="na-clear-filters" hidden data-i18n="clearFilters">Clear active filters</button></div>
         </div>
       </div>
 
       <div class="na-focus">
-        <div>
-          <span class="na-count" aria-live="polite"></span>
-          <button type="button" id="na-papers" aria-pressed="false">Professor paper trail</button>
-        </div>
+        <span class="na-count" aria-live="polite"></span>
+        <button type="button" id="na-papers" class="na-chip" aria-pressed="false" data-i18n="paperTrail">Professor paper trail</button>
       </div>
 
       <div class="na-main">
         <section class="na-plot-wrap" aria-label="Interactive neuroengineering landscape">
-          <div class="na-plot-title"><strong id="na-plot-heading">Neurotechnology field map</strong><span id="na-plot-caption">X access · Y maturity · color family · size mapped organizations</span></div>
+          <div class="na-plot-title"><h2 id="na-plot-heading">Neurotechnology field map</h2><span id="na-plot-caption">X access · Y maturity · color family · size mapped organizations</span></div>
           <svg id="na-chart" role="img" aria-label="Neuroengineering technologies by interface depth and translation stage"></svg>
-          <div class="na-org-ui" hidden><div class="na-org-modes" role="group" aria-label="Organization and project view"><button type="button" id="na-org-map" aria-pressed="true">Field map</button><button type="button" id="na-org-ranked" aria-pressed="false">Ranked projects</button><button type="button" id="na-org-clear" hidden>Clear selection</button></div><div class="na-map-settings" role="group" aria-label="Map display settings"><span>Size by</span><button type="button" id="na-org-weighted" aria-pressed="true">Linked organizations</button><button type="button" id="na-org-equal" aria-pressed="false">Equal cells</button></div><span class="na-org-ui-label">Start with the field map. Click a colored section or technology box to see its ranked projects.</span></div>
+          <div class="na-org-ui" hidden>
+            <div class="na-org-modes" role="group" aria-label="Organization and project view">
+              <button type="button" id="na-org-map" aria-pressed="true" data-i18n="orgModeMap">Field map</button>
+              <button type="button" id="na-org-ranked" aria-pressed="false" data-i18n="orgModeRanked">Ranked projects</button>
+            </div>
+            <select id="na-org-size" class="na-org-size" aria-label="Size by">
+              <option value="weighted" data-i18n="orgWeighted">Linked organizations</option>
+              <option value="equal" data-i18n="orgEqual">Equal cells</option>
+            </select>
+            <button type="button" id="na-org-clear" class="na-org-clear" hidden data-i18n="orgClear">Clear selection</button>
+            <span class="na-org-ui-label" data-i18n="orgUiLabel">Start with the field map. Click a colored section or technology box to see its ranked projects.</span>
+          </div>
           <div class="na-space-ui" hidden>
-            <div class="na-space-actions"><button type="button" id="na-space-entities" aria-pressed="false">Show organizations</button><button type="button" id="na-space-focus" aria-pressed="false" hidden>Focus selected</button><button type="button" id="na-space-ask">Ask about this view</button></div>
+            <div class="na-space-actions"><button type="button" id="na-space-entities" aria-pressed="false" data-i18n="spaceShowEntities">Show organizations</button><button type="button" id="na-space-focus" aria-pressed="false" hidden data-i18n="spaceFocus">Focus selected</button></div>
+            <button type="button" id="na-space-ask" class="na-ghost" data-i18n="spaceAsk">Ask about this view</button>
             <details class="na-space-help">
-              <summary>Legend &amp; reading guide</summary>
+              <summary data-i18n="legendTitle">Legend &amp; reading guide</summary>
               <div class="na-space-legend" aria-label="Map node types">
-                <span><i class="na-shape tech na-key-tech"></i>Technology cell</span>
-                <span><i class="na-shape academic na-key-academic"></i>University</span>
-                <span><i class="na-shape industry na-key-industry"></i>Company</span>
-                <span><i class="na-shape independent na-key-independent"></i>Independent / public</span>
-                <span><i class="na-shape tech na-size-small"></i><i class="na-shape tech na-size-large"></i>Cell area = linked organizations</span>
+                <span><i class="na-shape tech na-key-tech"></i><span data-i18n="legendTechCell">Technology cell</span></span>
+                <span><i class="na-shape academic na-key-academic"></i><span data-i18n="legendUniversity">University</span></span>
+                <span><i class="na-shape industry na-key-industry"></i><span data-i18n="legendCompany">Company</span></span>
+                <span><i class="na-shape independent na-key-independent"></i><span data-i18n="legendIndependent">Independent / public</span></span>
+                <span><i class="na-shape tech na-size-small"></i><i class="na-shape tech na-size-large"></i><span data-i18n="legendCellArea">Cell area = linked organizations</span></span>
               </div>
-              <div class="na-tech-colors" aria-label="Technology family colors"><b>Technology family color</b><span><i class="na-family-record"></i>Record</span><span><i class="na-family-stimulate"></i>Stimulate</span><span><i class="na-family-restore"></i>Restore</span><span><i class="na-family-compute"></i>Decode</span><span><i class="na-family-regenerate"></i>Regenerate</span><span><i class="na-family-personal"></i>Personal</span></div>
-              <div class="na-axis-guide" aria-label="How to read the treemap"><span><b>1 · FIELD SECTIONS</b><br>colored blocks group technologies by what they do</span><span><b>2 · TECHNOLOGY BOXES</b><br>each box is a technology; larger boxes have more linked organizations</span><span><b>3 · EXPLORE</b><br>hover for an explanation, click a section or box to rank its projects</span></div>
+              <div class="na-tech-colors" aria-label="Technology family colors"><b data-i18n="legendFamilyColor">Technology family color</b><span><i class="na-family-record"></i><span data-i18n="familyRecord">Record</span></span><span><i class="na-family-stimulate"></i><span data-i18n="familyStimulate">Stimulate</span></span><span><i class="na-family-restore"></i><span data-i18n="familyRestore">Restore</span></span><span><i class="na-family-compute"></i><span data-i18n="familyCompute">Decode</span></span><span><i class="na-family-regenerate"></i><span data-i18n="familyRegenerate">Regenerate</span></span><span><i class="na-family-personal"></i><span data-i18n="familyPersonal">Personal</span></span></div>
+              <div class="na-axis-guide" aria-label="How to read the treemap"><span><b data-i18n="axisGuide1Title">1 · FIELD SECTIONS</b><br><span data-i18n="axisGuide1Text">colored blocks group technologies by what they do</span></span><span><b data-i18n="axisGuide2Title">2 · TECHNOLOGY BOXES</b><br><span data-i18n="axisGuide2Text">each box is a technology; larger boxes have more linked organizations</span></span><span><b data-i18n="axisGuide3Title">3 · EXPLORE</b><br><span data-i18n="axisGuide3Text">hover for an explanation, click a section or box to rank its projects</span></span></div>
             </details>
           </div>
           <canvas id="na-universe" class="na-universe" hidden role="img" aria-label="Neurotechnology field map as a treemap: six colored family blocks contain technology cells sized by the number of linked organizations, with organization markers shown when enabled">Interactive neurotechnology field map.</canvas>
@@ -83,17 +106,19 @@
           <div class="na-pathway-browser" hidden aria-label="Undergraduate programs, graduate programs, neurotechnology careers and application guidance"></div>
           <div class="na-metric-note" hidden></div>
           <div class="tooltip" role="tooltip"></div>
-          <details class="na-note"><summary>Coverage note</summary><p><a href="https://www.unesco.org/en/ethics-neurotech" target="_blank" rel="noreferrer">UNESCO reports roughly 1,400 neurotech companies</a> under a broad definition. This direct-source index is a living research map, not a literal census; regional, language, stealth-company, and inactive-project gaps remain.</p></details>
+          <details class="na-note"><summary data-i18n="coverageNoteTitle">Coverage note</summary><p data-i18n-html="coverageNoteText"><a href="https://www.unesco.org/en/ethics-neurotech" target="_blank" rel="noreferrer">UNESCO reports roughly 1,400 neurotech companies</a> under a broad definition. This direct-source index is a living research map, not a literal census; regional, language, stealth-company, and inactive-project gaps remain.</p></details>
         </section>
         <aside class="na-detail" aria-live="polite" hidden></aside>
       </div>
     </div>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
-  <script src="./dist/frontier-data.js?v=20260819-22"></script>
-  <script src="./dist/jobs-data.js?v=20260819-22"></script>
-  <script src="./dist/researchers.js?v=20260819-22"></script>
-  <script src="./dist/pathways.js?v=20260819-22"></script>
-  <script src="./dist/app.js?v=20260819-22"></script>
+  <script src="./dist/i18n.js?v=20260821-2"></script>
+  <script src="./dist/i18n-data.js?v=20260821-2"></script>
+  <script src="./dist/frontier-data.js?v=20260821-2"></script>
+  <script src="./dist/jobs-data.js?v=20260821-2"></script>
+  <script src="./dist/researchers.js?v=20260821-2"></script>
+  <script src="./dist/pathways.js?v=20260821-2"></script>
+  <script src="./dist/app.js?v=20260821-2"></script>
 </body>
 </html>
