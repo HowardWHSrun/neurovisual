@@ -5,8 +5,8 @@ import { join, dirname } from 'node:path';
 import vm from 'node:vm';
 const root=join(dirname(fileURLToPath(import.meta.url)),'..');
 const context=vm.createContext({URL,URLSearchParams});
-for(const path of ['dist/hub-utils.js','dist/hub-data.js'])vm.runInContext(await readFile(join(root,path),'utf8'),context);
-const {utils,topics,resources,paths,glossary}=vm.runInContext('({utils:hubUtils,topics:hubTopics,resources:hubResources,paths:hubLearningPaths,glossary:hubGlossary})',context);
+for(const path of ['dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js'])vm.runInContext(await readFile(join(root,path),'utf8'),context);
+const {utils,topics,resources,paths,glossary,guides,methods,checks}=vm.runInContext('({utils:hubUtils,topics:hubTopics,resources:hubResources,paths:hubLearningPaths,glossary:hubGlossary,guides:hubGuides,methods:hubMethods,checks:hubProjectChecks})',context);
 assert.equal(utils.escapeHtml('<img src=x onerror="alert(1)"> & \'x\''),'&lt;img src=x onerror=&quot;alert(1)&quot;&gt; &amp; &#39;x&#39;');
 for(const href of ['javascript:alert(1)','data:text/html,<script>alert(1)</script>','file:///etc/passwd','not a URL'])assert.equal(utils.sourceHref(href),'#');
 assert.equal(utils.sourceHref('https://example.com/?q="test"&x=1'),'https://example.com/?q=%22test%22&amp;x=1');
@@ -25,6 +25,18 @@ assert.equal(utils.sourceDate('2026-09-07'),'Sep 7, 2026');
 for(const items of [topics,resources,paths])assert.equal(new Set(items.map(x=>x.id)).size,items.length,'IDs must be unique');
 for(const resource of resources){assert(topics.some(t=>t.id===resource.topic));assert.notEqual(utils.sourceHref(resource.url),'#');assert(resource.title&&resource.description);}
 for(const path of paths){assert.equal(path.steps.length,4);for(const step of path.steps)assert(resources.some(r=>r.id===step[0]),`Missing resource ${step[0]}`);}
+for(const topic of topics){
+  const guide=guides[topic.id];assert(guide,`Missing guide ${topic.id}`);
+  assert.equal(guide.workflow.length,4);assert(guide.primer.length>=2);assert(guide.sources.length>=2);
+  for(const id of guide.related)assert(topics.some(t=>t.id===id),`Unknown related topic ${id}`);
+  for(const source of guide.sources)assert.notEqual(utils.sourceHref(source.url),'#');
+}
+for(const method of methods){assert(method.signal&&method.access&&method.strength&&method.limit);assert.notEqual(utils.sourceHref(method.source.url),'#');}
+assert.equal(new Set(methods.map(m=>m.id)).size,methods.length);
+for(const path of paths){assert(checks[path.id]?.checks.length>=3);assert(checks[path.id]?.stretch);}
+assert.equal(64*20000*16/8*3600/1e9,9.216,'Worked acquisition example');
+assert.equal((1+0)/2,0.5,'Worked balanced accuracy example');
+assert.equal(1/200*1000,5,'Worked video example');
 for(const term of glossary)assert(topics.some(t=>t.id===term[2]));
 const html=await readFile(join(root,'index.html'),'utf8');
 const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length,'Duplicate document IDs');
@@ -32,7 +44,8 @@ for(const match of html.matchAll(/(?:src|href)="(\.\/[^"?]+)(?:\?[^\"]*)?"/g))aw
 const scripts=[...html.matchAll(/<script defer src="([^"?]+)/g)].map(m=>m[1]);
 assert(scripts.indexOf('./dist/hub-utils.js')<scripts.indexOf('./dist/app.js'));
 assert(scripts.indexOf('./dist/app.js')<scripts.indexOf('./dist/hub.js'));
+assert(scripts.indexOf('./dist/hub-guides.js')<scripts.indexOf('./dist/hub.js'));
 assert(!html.includes('cdn.jsdelivr.net'),'Core rendering dependency must be local');
 const jobs=JSON.parse(await readFile(join(root,'data/jobs.json'),'utf8'));
 for(const job of jobs.jobs.filter(j=>j.source==='Curated'))assert.equal(job.postedAt,null,'Curated jobs must not have fabricated posting dates');
-console.log(`Passed: escaping and URL boundaries, search and routes, dates, ${topics.length} topics, ${resources.length} resources, ${paths.length} learning paths, ${glossary.length} terms, script order, local assets, and curated job date integrity.`);
+console.log(`Passed: escaping and URL boundaries, search and routes, dates, ${topics.length} topics, ${resources.length} resources, ${paths.length} learning paths, ${glossary.length} terms, ${methods.length} methods, complete guides and project criteria, script order, local assets, and curated job date integrity.`);

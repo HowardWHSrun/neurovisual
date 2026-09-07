@@ -4,10 +4,10 @@ Use an issue or pull request to propose a correction, a resource, or a coverage 
 
 ## Resources and topic guides
 
-Edit `src/hub-data.ts`. Each resource has a stable `id`, title, HTTPS URL, brief description, topic, type, and suggested level. Prefer official documentation, open datasets, university courses, and primary research sources. The resource should help a reader take a concrete next step.
+Edit `src/hub-data.ts` for resources, learning projects, and introductory records; edit `src/hub-guides.ts` for detailed guides and methods comparisons. Each resource has a stable `id`, title, HTTPS URL, brief description, topic, type, and suggested level. Prefer official documentation, open datasets, university courses, and primary research sources. The resource should help a reader take a concrete next step.
 
 - Use an existing topic ID or add a coherent topic guide and update related links.
-- Use `Course`, `Dataset`, `Hardware`, `Standard`, `Tool`, or `Tutorial` as the resource type.
+- Use `Course`, `Dataset`, `Hardware`, `Standard`, `Tool`, `Tutorial`, `Review`, `Guidance`, or `Directory` as the resource type.
 - Use `Beginner`, `Intermediate`, or `Advanced` as editorial guidance, not a formal prerequisite guarantee.
 - Verify the destination and describe what it actually provides. Do not imply that open documentation means all software, data, hardware, or compute is free.
 - Learning steps reference resource IDs; keep those IDs stable.

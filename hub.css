@@ -1170,3 +1170,48 @@
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         flex-direction:column;
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         gap:8px}
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       }
+.guide-introduction { max-width: 900px; margin: 38px 0; }
+.guide-introduction h2, .guide-bottom h2, .project-assessment h2, .worked-example h2 { font-size: 1.45rem; letter-spacing: -.025em; margin: 10px 0 17px; }
+.guide-introduction p { font-size: 1rem; line-height: 1.85; }
+.guide-section { margin: 35px 0; }
+.guide-tradeoffs { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; }
+.guide-tradeoffs article { background: #fff; border: 1px solid var(--hub-line); border-radius: 10px; padding: 24px; }
+.guide-tradeoffs h3 { font-size: 1.1rem; line-height: 1.4; margin: 0 0 22px; }
+.guide-tradeoffs article > div + div { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hub-line); }
+.guide-tradeoffs p { font-size: 1rem; line-height: 1.7; margin: 9px 0 0; }
+.guide-workflow { list-style: none; padding: 0; margin: 15px 0; border-top: 1px solid var(--hub-line); }
+.guide-workflow li { display: flex; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--hub-line); }
+.guide-workflow h3 { font-size: 1.1rem; margin: 0 0 8px; }
+.guide-workflow p { margin: 0; font-size: 1rem; line-height: 1.75; }
+.guide-workflow p.workflow-output { margin-top: 11px; font-size: .9rem; color: #31557e; }
+.guide-bottom { display: grid; grid-template-columns: 1.2fr 1fr; gap: 35px; margin: 35px 0; }
+.guide-bottom ul { padding-left: 20px; font-size: 1rem; color: var(--hub-muted); line-height: 1.8; }
+.guide-bottom li + li { margin-top: 12px; }
+.guide-sources { border-left: 3px solid #9ab4d5; padding-left: 25px; }
+.guide-sources ul { list-style: none; padding-left: 0; }
+.guide-sources p { font-size: .8125rem; }
+.project-assessment, .worked-example { background: #eaf0f9; border: 1px solid #d0dcef; border-radius: 10px; padding: 26px 30px; margin: 30px 0; }
+.project-assessment ul, .worked-example ol { padding-left: 22px; color: #3e5574; line-height: 1.85; }
+.project-assessment li + li, .worked-example li + li { margin-top: 10px; }
+.project-assessment p, .worked-example p { line-height: 1.8; }
+.method-notes { display: grid; grid-template-columns: 1.3fr 1fr; gap: 28px; margin: 20px 0; }
+.method-notes p { margin: 0; line-height: 1.8; }
+.method-table-wrap { overflow-x: auto; background: white; border: 1px solid var(--hub-line); border-radius: 12px; }
+.method-table { width: 100%; border-collapse: collapse; min-width: 900px; text-align: left; }
+.method-table caption { text-align: left; padding: 18px 22px; font-size: .875rem; font-weight: 600; color: #526782; }
+.method-table thead th { background: #eaf0f9; padding: 16px 18px; font-size: .8125rem; color: #3c567a; }
+.method-table tbody th, .method-table td { border-top: 1px solid var(--hub-line); padding: 22px 18px; vertical-align: top; width: 20%; font-size: .9375rem; line-height: 1.7; }
+.method-table tbody th { font-size: 1rem; }
+.method-table td { color: #536680; }
+.method-table tbody tr:hover { background: #f9fbff; }
+.method-table th small { display: block; margin-top: 10px; font-size: .75rem; font-weight: 400; color: #697991; }
+.method-questions { margin-top: 35px; max-width: 920px; }
+.method-questions h2 { font-size: 1.4rem; }
+.method-questions ol { padding-left: 22px; color: var(--hub-muted); line-height: 1.9; }
+.method-questions a { display: inline-block; margin: 10px 22px 0 0; font-size: .875rem; }
+@media (max-width: 1100px) { .guide-tradeoffs { grid-template-columns: 1fr; } .guide-bottom, .method-notes { grid-template-columns: 1fr; gap: 24px; } }
+@media (max-width: 760px) { .guide-workflow li { gap: 15px; } .guide-tradeoffs article { padding: 21px; } .project-assessment, .worked-example { padding: 22px; } }
+@media (min-width: 1650px) { .topic-grid { grid-template-columns: repeat(5,minmax(0,1fr)); } }
+@media (min-width: 1231px) and (max-width: 1649px) {
+  .topic-card:nth-last-child(-n+2) { grid-column: span 2; }
+}

@@ -6,10 +6,12 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 
 ## What is here
 
-- **Overview:** eight connected topics, with short primers and routes into the atlas.
-- **Resource library:** 22 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
-- **Learning paths:** three four-step projects: an offline EEG decoder, 3D behavior measurement, and a spiking-network simulation.
-- **Glossary:** 20 introductory definitions with links to their topic guides.
+- **Overview:** ten connected topics, with short primers and routes into the atlas.
+- **Resource library:** 41 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
+- **Learning paths:** six four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, and stimulation modeling. Each includes evaluation criteria and a stretch question.
+- **Glossary:** 40 introductory definitions with links to their topic guides.
+- **Methods comparison:** eight qualitative comparisons of electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
+- **Topic depth:** each guide includes engineering tradeoffs, a four-stage workflow, common mistakes, and primary sources, with worked examples where useful.
 - **Search:** one index spanning the guides, resources, technologies, organizations, researchers, programs, career roles, job listings, and paper snapshots.
 - **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
@@ -37,6 +39,7 @@ The original TypeScript/classic-script architecture is retained. GitHub Pages se
 | `styles.css` | Original atlas presentation and visualizations |
 | `src/hub.ts` | Hub views, resource filters, global search, and hash routing |
 | `src/hub-data.ts` | Topic guides, official resources, glossary, and learning paths |
+| `src/hub-guides.ts` | Detailed source-linked topic guides and measurement comparisons |
 | `src/hub-utils.ts` | Shared escaping, URL, search, date, and route helpers |
 | `src/app.ts` | Atlas data, filters, rankings, visualization, and navigation adapter |
 | `src/researchers.ts`, `src/pathways.ts` | Existing researcher and study/career data |
