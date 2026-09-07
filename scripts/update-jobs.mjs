@@ -66,7 +66,7 @@ function isRemote(location, workplaceType) {
 }
 
 async function fetchJson(url) {
-  const response = await fetch(url, { headers: { accept: "application/json", "user-agent": USER_AGENT } });
+  const response = await fetch(url, { signal: AbortSignal.timeout(20000), headers: { accept: "application/json", "user-agent": USER_AGENT } });
   if (!response.ok) throw new Error(`${response.status} ${response.statusText} for ${url}`);
   return response.json();
 }
@@ -105,13 +105,15 @@ async function fetchBoard(board) {
   return [];
 }
 
+let previous = { jobs: [] };
+try { previous = JSON.parse(await readFile(dataPath, "utf8")); } catch {}
 const errors = [];
 async function collectBoard(board) {
   try {
-    return await fetchBoard(board);
+    return (await fetchBoard(board)).map(job => ({ ...job, observedAt: generatedAt.toISOString().slice(0, 10), stale: false }));
   } catch (error) {
     errors.push(`${board.name}: ${error.message}`);
-    return [];
+    return (previous.jobs || []).filter(job => job.employer === board.name && job.source !== "Curated").map(job => ({ ...job, stale: true }));
   }
 }
 
@@ -123,7 +125,8 @@ const curatedJobs = curated.map((entry, index) => ({
   employer: entry.employer,
   location: entry.location,
   url: entry.url,
-  postedAt: generatedAt.toISOString().slice(0, 10),
+  postedAt: null,
+  verifiedAt: entry.verifiedAt || null,
   source: "Curated"
 }));
 
@@ -150,7 +153,7 @@ const employerBoards = {
 const snapshot = {
   generatedAt: generatedAt.toISOString(),
   cadence: "Every Monday at 07:30 UTC",
-  method: "Live postings pulled from public ATS boards plus a small curated list for companies without a public API. Levels and functions are inferred from title keywords and are approximate.",
+  method: "Dated listings from public ATS boards plus manually curated opportunities whose availability is not automatically rechecked. Failed boards retain previous rows marked stale. Source dates are distinct from retrieval dates. Levels and functions are inferred from titles and are approximate.",
   boards,
   employerBoards,
   curatedSources: ["Synchron (ADP)", "Allen Institute (careers site)"],

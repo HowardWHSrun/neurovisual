@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-09-07T13:37:43.174Z",
   "cadence": "Every Monday at 07:30 UTC",
-  "method": "Live postings pulled from public ATS boards plus a small curated list for companies without a public API. Levels and functions are inferred from title keywords and are approximate.",
+  "method": "Dated listings from public ATS boards plus manually curated opportunities whose availability is not automatically rechecked. Source dates are distinct from retrieval dates. Levels and functions are inferred from titles and are approximate.",
   "boards": [
     {
       "name": "Neuralink",
@@ -44,11 +44,12 @@
       "employer": "Allen Institute",
       "location": "Seattle, WA",
       "url": "https://alleninstitute.org/careers/jobs?jobId=09c3fea4-fb46-9a70-3fbc-bf7562ce3859",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Junior",
       "fn": "Science & Research",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-9",
@@ -56,11 +57,12 @@
       "employer": "Allen Institute",
       "location": "Seattle, WA",
       "url": "https://alleninstitute.org/careers/jobs?jobId=eaf7f3c2-59c1-8e73-7d9e-56463c4bcbe1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "kernel-48d397f4-788e-491b-a4ee-7def5ffcfce8",
@@ -72,7 +74,8 @@
       "source": "Ashby",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "kernel-76d1be4d-5940-489f-ba55-8dadb9c4d33e",
@@ -84,7 +87,8 @@
       "source": "Ashby",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "kernel-945f0f8a-39de-430b-80ab-17f4786094e4",
@@ -96,7 +100,8 @@
       "source": "Ashby",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "kernel-030c447d-f81f-4bc6-9fa6-78352a772adb",
@@ -108,7 +113,8 @@
       "source": "Ashby",
       "level": "Mid",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "motifneurotech-5346662008",
@@ -120,7 +126,8 @@
       "source": "Greenhouse",
       "level": "Lead",
       "fn": "Science & Research",
-      "remote": true
+      "remote": true,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7565469003",
@@ -132,7 +139,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6644300003",
@@ -144,7 +152,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7718856003",
@@ -156,7 +165,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7780172003",
@@ -168,7 +178,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7872639003",
@@ -180,7 +191,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7676313003",
@@ -192,7 +204,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Science & Research",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7821933003",
@@ -204,7 +217,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-5663491003",
@@ -216,7 +230,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7090489003",
@@ -228,7 +243,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7823342003",
@@ -240,7 +256,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7984011003",
@@ -252,7 +269,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7702527003",
@@ -264,7 +282,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6607398003",
@@ -276,7 +295,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7750309003",
@@ -288,7 +308,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7702524003",
@@ -300,7 +321,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7813024003",
@@ -312,7 +334,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6283663003",
@@ -324,7 +347,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6550259003",
@@ -336,7 +360,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7987219003",
@@ -348,7 +373,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6819467003",
@@ -360,7 +386,8 @@
       "source": "Greenhouse",
       "level": "Senior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7799063003",
@@ -372,7 +399,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7780708003",
@@ -384,7 +412,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7725256003",
@@ -396,7 +425,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6648992003",
@@ -408,7 +438,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6021322003",
@@ -420,7 +451,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7763021003",
@@ -432,7 +464,8 @@
       "source": "Greenhouse",
       "level": "Senior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7637700003",
@@ -444,7 +477,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7715119003",
@@ -456,7 +490,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7736276003",
@@ -468,7 +503,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-5663271003",
@@ -480,7 +516,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6594261003",
@@ -492,7 +529,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7668502003",
@@ -504,7 +542,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7666761003",
@@ -516,7 +555,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6258222003",
@@ -528,7 +568,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6340282003",
@@ -540,7 +581,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7984920003",
@@ -552,7 +594,8 @@
       "source": "Greenhouse",
       "level": "Senior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7726414003",
@@ -564,7 +607,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6304285003",
@@ -576,7 +620,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6587719003",
@@ -588,7 +633,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7751605003",
@@ -600,7 +646,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6545426003",
@@ -612,7 +659,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6514169003",
@@ -624,7 +672,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6563685003",
@@ -636,7 +685,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7720290003",
@@ -648,7 +698,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7483748003",
@@ -660,7 +711,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7571489003",
@@ -672,7 +724,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7491410003",
@@ -684,7 +737,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7772049003",
@@ -696,7 +750,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6510680003",
@@ -708,7 +763,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7497682003",
@@ -720,7 +776,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7493547003",
@@ -732,7 +789,8 @@
       "source": "Greenhouse",
       "level": "Senior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7931610003",
@@ -744,7 +802,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7983992003",
@@ -756,7 +815,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7386953003",
@@ -768,7 +828,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7813383003",
@@ -780,7 +841,8 @@
       "source": "Greenhouse",
       "level": "Senior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7808233003",
@@ -792,7 +854,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7741688003",
@@ -804,7 +867,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6576326003",
@@ -816,7 +880,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6681863003",
@@ -828,7 +893,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6594422003",
@@ -840,7 +906,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6569018003",
@@ -852,7 +919,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-5469298003",
@@ -864,7 +932,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6083322003",
@@ -876,7 +945,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-5469305003",
@@ -888,7 +958,8 @@
       "source": "Greenhouse",
       "level": "Intern",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7743087003",
@@ -900,7 +971,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6596365003",
@@ -912,7 +984,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7743089003",
@@ -924,7 +997,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6569010003",
@@ -936,7 +1010,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6353417003",
@@ -948,7 +1023,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6658884003",
@@ -960,7 +1036,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7656401003",
@@ -972,7 +1049,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7655221003",
@@ -984,7 +1062,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-4205469003",
@@ -996,7 +1075,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7753999003",
@@ -1008,7 +1088,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7763089003",
@@ -1020,7 +1101,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7979933003",
@@ -1032,7 +1114,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-6057476003",
@@ -1044,7 +1127,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Design & Product",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuralink-7820573003",
@@ -1056,7 +1140,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-5849932004",
@@ -1068,7 +1153,8 @@
       "source": "Greenhouse",
       "level": "Mid",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6112765004",
@@ -1080,7 +1166,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-5674457004",
@@ -1092,7 +1179,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6140064004",
@@ -1104,7 +1192,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6178952004",
@@ -1116,7 +1205,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6110060004",
@@ -1128,7 +1218,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6149261004",
@@ -1140,7 +1231,8 @@
       "source": "Greenhouse",
       "level": "Junior",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6117048004",
@@ -1152,7 +1244,8 @@
       "source": "Greenhouse",
       "level": "Lead",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-5995969004",
@@ -1164,7 +1257,8 @@
       "source": "Greenhouse",
       "level": "Lead",
       "fn": "Operations & Other",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "neuropace-6145888004",
@@ -1176,7 +1270,8 @@
       "source": "Greenhouse",
       "level": "Senior",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "observedAt": "2026-09-07"
     },
     {
       "id": "curated-3",
@@ -1184,11 +1279,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201592899997_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-4",
@@ -1196,11 +1292,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201592489640_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Lead",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-7",
@@ -1208,11 +1305,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201542540262_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-6",
@@ -1220,11 +1318,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201544249618_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-1",
@@ -1232,11 +1331,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201609769879_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-2",
@@ -1244,11 +1344,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201609762270_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Quality & Regulatory",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-5",
@@ -1256,11 +1357,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201546894497_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     },
     {
       "id": "curated-0",
@@ -1268,11 +1370,12 @@
       "employer": "Synchron",
       "location": "San Diego, CA",
       "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=9201627514618_1",
-      "postedAt": "2026-09-07",
+      "postedAt": null,
       "source": "Curated",
       "level": "Senior",
       "fn": "Engineering",
-      "remote": false
+      "remote": false,
+      "verifiedAt": null
     }
   ]
 }
