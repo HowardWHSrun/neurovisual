@@ -11,6 +11,8 @@ interface Window {
 
 (function () {
     var root: any = document.getElementById('neurotech-atlas-2026');
+    var hubNavigating=false;
+    var html=hubUtils.escapeHtml,sourceHref=hubUtils.sourceHref;
     var canAskCodex=!!(window.openai&&window.openai.sendFollowUpMessage);
     var aiEndpoint=(window.NEURO_ATLAS_AI_ENDPOINT||'').trim();
     async function copyText(value){
@@ -1039,6 +1041,12 @@ interface Window {
     var orgClearButton = root.querySelector('#na-org-clear');
     var orgWeightedButton = root.querySelector('#na-org-weighted');
     var orgEqualButton = root.querySelector('#na-org-equal');
+    var mapPicker=document.createElement('label');mapPicker.className='na-map-picker';mapPicker.textContent='Find projects by technology';
+    var mapSelect=document.createElement('select');mapSelect.setAttribute('aria-label','Choose a technology to list its organizations');
+    var mapPlaceholder=document.createElement('option');mapPlaceholder.value='';mapPlaceholder.textContent='Choose a technology…';mapSelect.appendChild(mapPlaceholder);
+    T.slice().sort(function(a,b){return a.n.localeCompare(b.n);}).filter(function(t){return L.some(function(d){return d.t.indexOf(t.id)>=0;});}).forEach(function(t){var option=document.createElement('option');option.value=t.id;option.textContent=t.n;mapSelect.appendChild(option);});
+    mapPicker.appendChild(mapSelect);spaceUI.appendChild(mapPicker);
+    mapSelect.addEventListener('change',function(){if(!mapSelect.value)return;state.orgTechFilter=mapSelect.value;state.orgGroupFilter='';state.orgMode='ranked';state.page=0;state.detailOpen=false;mapSelect.value='';syncControls();draw();});
     var labBrowser = root.querySelector('.na-lab-browser');
     var entityPage = root.querySelector('.na-entity-page');
     var researcherBrowser = root.querySelector('.na-researcher-browser');
@@ -1162,7 +1170,7 @@ interface Window {
       tooltip.style.opacity='1';
     }
     function hideTip(){ tooltip.style.opacity='0'; }
-    function selectTech(id){ state.selected=id; state.detailOpen=true; if(state.view==='universe')state.universeType='tech'; renderDetail(); draw(); }
+    function selectTech(id){ state.selected=id; state.detailOpen=true; if(state.view==='atlas')syncView(); if(state.view==='universe')state.universeType='tech'; renderDetail(); draw(); }
     function closeDetail(){state.detailOpen=false;detail.hidden=true;if(focusButton)focusButton.hidden=true;}
     function bindDetailClose(){var close=detail.querySelector('[data-close-detail]');if(close)close.addEventListener('click',closeDetail);}
     function formatCapital(v){
@@ -1224,9 +1232,7 @@ interface Window {
       if(!match)return '';
       try{return decodeURIComponent(match[1]);}catch(err){return '';}
     }
-    function clearEntityHash(){
-      if(location.hash.indexOf('#org/')===0)history.replaceState(null,'',location.pathname+location.search);
-    }
+    function clearEntityHash(){ /* The hub commits the next route without erasing profile history. */ }
     function openEntityPage(id,returnView,pushUrl){
       var d=L.find(function(x){return x.id===id;});
       if(!d)return;
@@ -1238,7 +1244,7 @@ interface Window {
       state.entityReturnView=returnView||state.view||'labs';
       state.detailOpen=false;
       detail.hidden=true;
-      if(pushUrl!==false&&location.hash!=='#org/'+encodeURIComponent(id))history.pushState({organization:id},'','#org/'+encodeURIComponent(id));
+      if(pushUrl!==false&&!hubNavigating)window.dispatchEvent(new CustomEvent('neuroatlas:viewchange',{detail:{hash:'#org/'+encodeURIComponent(id),internal:true}}));
       syncControls();renderDetail();draw();
     }
     function closeEntityPage(updateUrl){
@@ -1415,7 +1421,7 @@ interface Window {
         (used[row]=used[row]||[]).push({cx:cx,tw:tw});
         d._row=row; d._tw=tw; d._cx=cx;
       });
-      var gm=svg.selectAll('.na-milestone').data(milestones).enter().append('g').attr('class','na-milestone').attr('transform',function(d){return 'translate('+x(d.year)+','+mid+')';}).on('click',function(e,d){selectTech(d.id);});
+      var gm=svg.selectAll('.na-milestone').data(milestones).enter().append('g').attr('class','na-milestone').attr('tabindex',0).attr('role','button').attr('aria-label',function(d){return Math.floor(d.year)+': '+d.title;}).on('keydown',function(event,d){if(event.key==='Enter'||event.key===' '){event.preventDefault();selectTech(d.id);}}).attr('transform',function(d){return 'translate('+x(d.year)+','+mid+')';}).on('click',function(e,d){selectTech(d.id);});
       gm.append('line').attr('y1',5).attr('y2',function(d){return leaderTop+d._row*rowHeight-4;});
       gm.append('circle').attr('r',function(d){return d.id===state.selected?8:6;}).style('fill',function(d){var t=T.find(function(x){return x.id===d.id;}); return color(t);}).attr('stroke','var(--background)').attr('stroke-width',2);
       gm.append('text').attr('x',function(d){return d._cx+d._tw+9>rightEdge?-9:9;}).attr('y',function(d){return leaderTop+d._row*rowHeight;}).attr('text-anchor',function(d){return d._cx+d._tw+9>rightEdge?'end':'start';}).text(function(d){return Math.floor(d.year)+' · '+d.title;});
@@ -1449,6 +1455,7 @@ interface Window {
     function visibleUniverse(){
       var q=state.search.toLowerCase().trim();
       var availableEntities=organizationFilteredLabs();
+      var availableLinked=new Set();availableEntities.forEach(function(d){d.t.forEach(function(id){availableLinked.add(id);});});
       var entities=orbit.showEntities?availableEntities:[];
       var focusedTech=null;
       if(orbit.focus&&state.universeType==='tech'){
@@ -1464,7 +1471,7 @@ interface Window {
         if(!technologyLinkCount[d.id])return false;
         if(orbit.focus&&state.universeType==='tech')return d.id===focusedTech;
         if(orbit.focus&&state.universeType==='lab')return linked.has(d.id);
-        if(!q) return true;
+        if(!q) return (state.region==='all'&&state.kind==='all'&&state.model==='all')||availableLinked.has(d.id);
         var hay=[d.n,d.summary,d.signal,d.mechanism,d.ex.join(' ')].join(' ').toLowerCase();
         return hay.indexOf(q)>=0||linked.has(d.id);
       });
@@ -1657,6 +1664,7 @@ interface Window {
       Array.from<any>(labBrowser.querySelectorAll('[data-page]')).forEach(function(b){b.addEventListener('click',function(){state.page+=b.dataset.page==='next'?1:-1;drawLabs(data);});});
     }
     function drawResearcherTrails(data){
+      var restoreFocus=rememberFocus(researcherBrowser);
       var size=root.getBoundingClientRect().width<760?6:12;
       var pages=Math.max(1,Math.ceil(data.length/size));
       state.page=Math.max(0,Math.min(state.page,pages-1));
@@ -1692,14 +1700,20 @@ interface Window {
       Array.from<any>(researcherBrowser.querySelectorAll('[data-researcher-tech]')).forEach(function(b){b.addEventListener('click',function(){state.selected=b.dataset.researcherTech;state.view='atlas';state.search='';search.value='';state.family='all';family.value='all';state.purpose='all';purpose.value='all';state.operation='all';operation.value='all';state.activeGroups=new Set(groupKeys);state.detailOpen=true;syncView();syncControls();renderDetail();draw();});});
       var ask=researcherBrowser.querySelector('.na-researcher-ask');
       if(ask&&selected)ask.addEventListener('click',async function(){var technologyNames=selected.techIds.map(function(id){var t=T.find(function(x){return x.id===id;});return t?t.n:id;}).join(', ');await sendResearchPrompt({title:'Deepen '+selected.name+' research trail',prompt:'Research the career and project trail of '+selected.name+' at '+selected.institution+'. Verify how their neurotechnology work began, major transitions, important collaborators, flagship methods and systems, clinical or research maturity, and five notable papers. Connect the account to '+technologyNames+'. Use current primary sources, separate verified facts from inference, and flag uncertain dates or affiliations.'});});
+      restoreFocus();
     }
-    function frontierKindLabel(kind){return ({paper:'Peer-reviewed',preprint:'Preprint',trial:'Trial update',news:'Institutional news'})[kind]||kind;}
+    function frontierKindLabel(kind){return ({paper:'Indexed paper',preprint:'Preprint',trial:'Trial update',news:'Institutional news'})[kind]||kind;}
     function frontierKindColor(kind){return ({paper:'var(--positive)',preprint:'var(--negative)',trial:'var(--negative)',news:'var(--accent)'})[kind]||'var(--foreground)';}
-    function frontierDate(item){
-      if(!item.date)return 'Seen '+new Date(item.observedAt+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
-      return new Date(item.date+'T12:00:00Z').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'});
+    function frontierDate(item){return item.date?hubUtils.sourceDate(item.date):'Seen '+hubUtils.sourceDate(item.observedAt);}
+    function rememberFocus(container){
+      var active=document.activeElement;if(!active||!container.contains(active))return function(){};
+      var attrs=['data-frontier','data-frontier-kind','data-frontier-page','data-researcher','data-researcher-page','data-pathway','data-pathway-page','data-pathway-stage','data-jobs-tab','data-jobs-level','data-jobs-fn','data-jobs-employer','data-jobs-remote','data-job','data-jobs-page'];
+      var attr=attrs.find(function(key){return active.hasAttribute(key);});
+      var selector=active.id?'#'+CSS.escape(active.id):attr?'['+attr+'="'+CSS.escape(active.getAttribute(attr))+'"]':'';
+      return function(){var next=selector&&container.querySelector(selector);if(next){if(next.disabled){next=container.querySelector('.na-pager button:not(:disabled)')||container.querySelector('button');}if(next)next.focus({preventScroll:true});}};
     }
     function drawFrontier(data){
+      var restoreFocus=rememberFocus(frontierBrowser);
       var size=root.getBoundingClientRect().width<760?6:10;
       var pages=Math.max(1,Math.ceil(data.length/size));
       state.page=Math.max(0,Math.min(state.page,pages-1));
@@ -1710,25 +1724,26 @@ interface Window {
       var kinds=['all','paper','preprint','trial','news'];
       var kindNames={all:'All',paper:'Papers',preprint:'Preprints',trial:'Trials',news:'News'};
       var kindButtons=kinds.map(function(k){var count=k==='all'?(frontierSnapshot.items||[]).length:(frontierSnapshot.items||[]).filter(function(x){return x.kind===k;}).length;return '<button type="button" data-frontier-kind="'+k+'" aria-pressed="'+String(state.frontierKind===k)+'">'+kindNames[k]+' <span>'+count+'</span></button>';}).join('');
-      var list=rows.length?rows.map(function(d){return '<button type="button" class="na-frontier-row" data-frontier="'+d.id+'" aria-pressed="'+String(selected&&selected.id===d.id)+'" style="--c:'+frontierKindColor(d.kind)+'"><i></i><span><small>'+frontierKindLabel(d.kind)+' · '+d.source+'</small><strong>'+d.title+'</strong></span><time>'+frontierDate(d)+'</time></button>';}).join(''):'<p class="na-summary">No frontier items match this search and source type.</p>';
+      var list=rows.length?rows.map(function(d){return '<button type="button" class="na-frontier-row" data-frontier="'+html(d.id)+'" aria-pressed="'+String(selected&&selected.id===d.id)+'" style="--c:'+frontierKindColor(d.kind)+'"><i></i><span><small>'+html(frontierKindLabel(d.kind))+' · '+html(d.source)+'</small><strong>'+html(d.title)+'</strong></span><time>'+frontierDate(d)+'</time></button>';}).join(''):'<p class="na-summary">No frontier items match this search and source type.</p>';
       var profile='';
       if(selected){
         var topics=(selected.topics||[]).map(function(k){return groups[k]?groups[k].name:k;});
         var caution=selected.kind==='preprint'?'<p class="na-frontier-caution">This manuscript is a preprint and has not yet completed peer review.</p>':selected.kind==='trial'?'<p class="na-frontier-caution">A registry update shows study activity, not safety, efficacy, or a positive result.</p>':'';
-        profile='<article class="na-frontier-profile" style="--frontier-color:'+frontierKindColor(selected.kind)+'"><header><div><span>'+frontierKindLabel(selected.kind)+' · '+selected.source+'</span><h2>'+selected.title+'</h2><p>'+frontierDate(selected)+(selected.venue?' · '+selected.venue:'')+'</p></div></header>'+caution+
-          '<section><h3>Source summary</h3><p>'+selected.summary+'</p></section>'+
-          (selected.authors?'<section><h3>Researchers or sponsor</h3><p>'+selected.authors+'</p></section>':'')+
-          '<section><div class="na-frontier-section-title"><h3>Why it appears in this atlas</h3><span>Automated topic match</span></div><div class="na-tags">'+topics.map(function(topic){return '<span>'+topic+'</span>';}).join('')+'</div><p class="na-frontier-status">'+selected.status+'</p></section>'+
-          '<div class="na-frontier-actions"><a href="'+selected.sourceUrl+'" target="_blank" rel="noreferrer">Open original source ↗</a><button class="na-ask na-frontier-ask" type="button">'+(canAskCodex?'Ask Codex to assess this result':'Copy assessment prompt')+'</button></div></article>';
+        profile='<article class="na-frontier-profile" style="--frontier-color:'+frontierKindColor(selected.kind)+'"><header><div><span>'+html(frontierKindLabel(selected.kind))+' · '+html(selected.source)+'</span><h2>'+html(selected.title)+'</h2><p>'+frontierDate(selected)+(selected.venue?' · '+html(selected.venue):'')+'</p></div></header>'+caution+
+          '<section><h3>Source summary</h3><p>'+html(selected.summary)+'</p></section>'+
+          (selected.authors?'<section><h3>Researchers or sponsor</h3><p>'+html(selected.authors)+'</p></section>':'')+
+          '<section><div class="na-frontier-section-title"><h3>Why it appears in this atlas</h3><span>Automated topic match</span></div><div class="na-tags">'+topics.map(function(topic){return '<span>'+html(topic)+'</span>';}).join('')+'</div><p class="na-frontier-status">'+html(selected.status)+'</p></section>'+
+          '<div class="na-frontier-actions"><a href="'+sourceHref(selected.sourceUrl)+'" target="_blank" rel="noreferrer">Open original source ↗</a><button class="na-ask na-frontier-ask" type="button">'+(canAskCodex?'Ask Codex to assess this result':'Copy assessment prompt')+'</button></div></article>';
       }
       var updated=new Date(frontierSnapshot.generatedAt).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit',timeZone:'UTC',timeZoneName:'short'});
-      var sourceLinks=(frontierSnapshot.sources||[]).map(function(s){return '<li><a href="'+s.url+'" target="_blank" rel="noreferrer">'+s.name+'</a> — '+s.note+'</li>';}).join('');
-      frontierBrowser.innerHTML='<div class="na-frontier-head"><div><strong>Updated '+updated+'</strong><span>'+frontierSnapshot.cadence+' · newest first</span></div><div class="na-frontier-kinds" aria-label="Frontier source type">'+kindButtons+'</div></div><div class="na-frontier-layout"><section class="na-frontier-list">'+list+'<div class="na-pager"><span>'+(data.length?('Showing '+(start+1)+'–'+Math.min(start+size,data.length)+' of '+data.length):'Try another search or type')+'</span><div><button type="button" data-frontier-page="prev"'+(state.page===0?' disabled':'')+'>Previous</button><button type="button" data-frontier-page="next"'+(state.page>=pages-1?' disabled':'')+'>Next</button></div></div></section>'+profile+'</div><details class="na-frontier-note"><summary>Update method, sources &amp; limits</summary><p>'+frontierSnapshot.method+'</p><ul>'+sourceLinks+'</ul>'+(frontierSnapshot.errors&&frontierSnapshot.errors.length?'<p>Latest refresh fallbacks: '+frontierSnapshot.errors.join(' · ')+'</p>':'')+'</details>';
+      var sourceLinks=(frontierSnapshot.sources||[]).map(function(s){return '<li><a href="'+sourceHref(s.url)+'" target="_blank" rel="noreferrer">'+html(s.name)+'</a> — '+html(s.note)+'</li>';}).join('');
+      frontierBrowser.innerHTML=(frontierSnapshot.errors&&frontierSnapshot.errors.length?'<p class="na-refresh-notice">Some sources could not be refreshed. Previously retrieved items may be retained. '+html(frontierSnapshot.errors.join(' · '))+'</p>':'')+'<div class="na-frontier-head"><div><strong>Snapshot generated '+updated+'</strong><span>'+html(frontierSnapshot.cadence)+' · newest first</span></div><div class="na-frontier-kinds" aria-label="Frontier source type">'+kindButtons+'</div></div><div class="na-frontier-layout"><section class="na-frontier-list">'+list+'<div class="na-pager"><span>'+(data.length?('Showing '+(start+1)+'–'+Math.min(start+size,data.length)+' of '+data.length):'Try another search or type')+'</span><div><button type="button" data-frontier-page="prev"'+(state.page===0?' disabled':'')+'>Previous</button><button type="button" data-frontier-page="next"'+(state.page>=pages-1?' disabled':'')+'>Next</button></div></div></section>'+profile+'</div><details class="na-frontier-note"><summary>Update method, sources &amp; limits</summary><p>'+html(frontierSnapshot.method)+'</p><ul>'+sourceLinks+'</ul>'+(frontierSnapshot.errors&&frontierSnapshot.errors.length?'<p>Latest refresh fallbacks: '+html(frontierSnapshot.errors.join(' · '))+'</p>':'')+'</details>';
       Array.from<any>(frontierBrowser.querySelectorAll('[data-frontier-kind]')).forEach(function(b){b.addEventListener('click',function(){state.frontierKind=b.dataset.frontierKind;state.page=0;state.selectedFrontier='';draw();});});
       Array.from<any>(frontierBrowser.querySelectorAll('[data-frontier]')).forEach(function(b){b.addEventListener('click',function(){state.selectedFrontier=b.dataset.frontier;drawFrontier(data);});});
       Array.from<any>(frontierBrowser.querySelectorAll('[data-frontier-page]')).forEach(function(b){b.addEventListener('click',function(){state.page+=b.dataset.frontierPage==='next'?1:-1;var firstOnPage=data[state.page*size];if(firstOnPage)state.selectedFrontier=firstOnPage.id;drawFrontier(data);});});
       var ask=frontierBrowser.querySelector('.na-frontier-ask');
       if(ask&&selected)ask.addEventListener('click',async function(){await sendResearchPrompt({title:'Assess '+selected.title,prompt:'Assess this frontier neurotechnology item: "'+selected.title+'" ('+selected.sourceUrl+'). Identify the actual result or registry change, methods, evidence maturity, novelty relative to prior work, important limitations, conflicts or uncertainty, and which atlas technologies it connects to. Verify against the original source and current primary literature. Do not treat a preprint as peer reviewed or a trial registration as proof of efficacy.'});});
+      restoreFocus();
     }
     function pathwayGuideHtml(kind){
       var guide=pathwayData.guides[kind];
@@ -1737,6 +1752,7 @@ interface Window {
     }
     function pathwayMatchCount(item,tags){return tags.filter(function(tag){return (item.fit||[]).indexOf(tag)>=0;}).length;}
     function drawPathwayFit(stageButtons){
+      var restoreFocus=rememberFocus(pathwayBrowser);
       var tags=[state.fitWork,state.fitGoal];
       var programPool=(pathwayData.programs||[]).filter(function(d){return state.fitTraining==='jobs'||d.kind===state.fitTraining;});
       var programs=programPool.slice().sort(function(a,b){return pathwayMatchCount(b,tags)-pathwayMatchCount(a,tags)||a.name.localeCompare(b.name);}).slice(0,4);
@@ -1752,14 +1768,16 @@ interface Window {
       goal.addEventListener('change',function(){state.fitGoal=goal.value;drawPathways();});
       var ask=pathwayBrowser.querySelector('.na-fit-ask');
       if(ask)ask.addEventListener('click',async function(){await sendResearchPrompt({title:'Build my neuroengineering pathway',prompt:'Build a current, source-verified neuroengineering pathway for someone deciding about '+state.fitTraining+', preferring '+state.fitWork+' work, with a primary goal to '+state.fitGoal+'. Use the atlas pathways as starting points, but search current programs, laboratories, funding and job descriptions. Recommend a balanced shortlist, prerequisite gaps to close, three portfolio projects, a month-by-month application plan and realistic alternatives. Separate program fit from admission likelihood and flag all uncertain or cycle-specific requirements.'});});
+      restoreFocus();
     }
     function drawJobsBoard(stageButtons,jobsTabToggle){
+      var restoreFocus=rememberFocus(pathwayBrowser);
       var all=((jobsSnapshot&&jobsSnapshot.jobs)||[]);
       var jobs=filteredJobs();
       var levels=['Intern','Junior','Mid','Senior','Lead'];
       var fns=Array.from<any>(new Set(all.map(function(d){return d.fn;}))).sort();
       var employers=Array.from<any>(new Set(all.map(function(d){return d.employer;}))).sort();
-      function selOpt(value,label,current){return '<option value="'+value+'"'+(current===value?' selected':'')+'>'+label+'</option>';}
+      function selOpt(value,label,current){return '<option value="'+html(value)+'"'+(current===value?' selected':'')+'>'+html(label)+'</option>';}
       var levelOpts=selOpt('all','All levels',state.jobsLevel)+levels.map(function(v){return selOpt(v,v,state.jobsLevel);}).join('');
       var fnOpts=selOpt('all','All functions',state.jobsFn)+fns.map(function(v){return selOpt(v,v,state.jobsFn);}).join('');
       var empOpts=selOpt('all','All employers',state.jobsEmployer)+employers.map(function(v){return selOpt(v,v,state.jobsEmployer);}).join('');
@@ -1772,10 +1790,10 @@ interface Window {
       var rows=jobs.slice(start,start+size);
       var selected:any=jobs.find(function(d){return d.id===state.selectedJob;})||jobs[0];
       if(selected)state.selectedJob=selected.id;
-      var list=rows.length?rows.map(function(d){return '<button type="button" class="na-job-row" data-job="'+d.id+'" aria-pressed="'+(selected&&selected.id===d.id?'true':'false')+'"><span class="na-job-main"><strong>'+d.title+'</strong><small>'+d.employer+' · '+(d.location||(d.remote?'Remote':'Various'))+'</small></span><span class="na-job-badges"><i class="na-level na-level-'+d.level.toLowerCase()+'">'+d.level+'</i>'+(d.remote?'<i class="na-remote">Remote</i>':'')+'</span></button>';}).join(''):'<p class="na-summary">No open roles match these filters.</p>';
-      var profile=selected?'<article class="na-pathway-profile"><header><span>'+selected.employer+'</span><h2>'+selected.title+'</h2><p>'+(selected.location||'Location not listed')+' · '+selected.level+' · '+selected.fn+(selected.remote?' · Remote':'')+'</p></header><section><h3>Listing</h3><p>'+selected.source+(selected.postedAt?' · updated '+selected.postedAt:'')+'</p></section><div class="na-pathway-actions"><a class="na-apply" href="'+selected.url+'" target="_blank" rel="noreferrer">Apply now ↗</a>'+((jobsSnapshot&&jobsSnapshot.employerBoards&&jobsSnapshot.employerBoards[selected.employer])?'<a href="'+jobsSnapshot.employerBoards[selected.employer]+'" target="_blank" rel="noreferrer">All roles at '+selected.employer+' ↗</a>':'')+'</div></article>':'';
+      var list=rows.length?rows.map(function(d){return '<button type="button" class="na-job-row" data-job="'+html(d.id)+'" aria-pressed="'+(selected&&selected.id===d.id?'true':'false')+'"><span class="na-job-main"><strong>'+html(d.title)+'</strong><small>'+html(d.employer)+' · '+html(d.location||(d.remote?'Remote':'Various'))+'</small></span><span class="na-job-badges"><i class="na-level na-level-'+html(d.level.toLowerCase())+'">'+html(d.level)+'</i>'+(d.remote?'<i class="na-remote">Remote</i>':'')+'</span></button>';}).join(''):'<p class="na-summary">No listings match these filters.</p>';
+      var profile=selected?'<article class="na-pathway-profile"><header><span>'+html(selected.employer)+'</span><h2>'+html(selected.title)+'</h2><p>'+html(selected.location||'Location not listed')+' · '+html(selected.level)+' · '+html(selected.fn)+(selected.remote?' · Remote':'')+'</p></header><section><h3>Listing</h3><p>'+html(selected.source)+(selected.source==='Curated'?' · availability not rechecked':(selected.postedAt?' · source date '+html(selected.postedAt):''))+(selected.stale?' · retained after a failed refresh':'')+'</p></section><div class="na-pathway-actions"><a class="na-apply" href="'+sourceHref(selected.url)+'" target="_blank" rel="noreferrer">View original listing ↗</a>'+((jobsSnapshot&&jobsSnapshot.employerBoards&&jobsSnapshot.employerBoards[selected.employer])?'<a href="'+sourceHref(jobsSnapshot.employerBoards[selected.employer])+'" target="_blank" rel="noreferrer">All roles at '+html(selected.employer)+' ↗</a>':'')+'</div></article>':'';
       var updated=(jobsSnapshot&&jobsSnapshot.generatedAt)?new Date(jobsSnapshot.generatedAt).toLocaleString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):'recently';
-      pathwayBrowser.innerHTML='<div class="na-pathway-head"><div><strong>Open roles updated '+updated+'</strong><span>'+((jobsSnapshot&&jobsSnapshot.cadence)||'Live postings')+' · levels inferred from titles</span></div><div class="na-pathway-stages" aria-label="Study and career stage">'+stageButtons+'</div></div>'+tabs+filters+'<div class="na-pathway-layout"><section class="na-pathway-list">'+list+'<div class="na-pager"><span>'+(jobs.length?('Showing '+(start+1)+'–'+Math.min(start+size,jobs.length)+' of '+jobs.length):'Try another filter')+'</span><div><button type="button" data-jobs-page="prev"'+(state.page===0?' disabled':'')+'>Previous</button><button type="button" data-jobs-page="next"'+(state.page>=pages-1?' disabled':'')+'>Next</button></div></div></section>'+profile+'</div><p class="na-pathway-note">'+((jobsSnapshot&&jobsSnapshot.method)||'')+'</p>';
+      pathwayBrowser.innerHTML=((jobsSnapshot&&jobsSnapshot.errors&&jobsSnapshot.errors.length)?'<p class="na-refresh-notice">Some employers could not be refreshed. Check availability at the original source. '+html(jobsSnapshot.errors.join(' · '))+'</p>':'')+'<div class="na-pathway-head"><div><strong>Listings snapshot generated '+updated+'</strong><span>'+html((jobsSnapshot&&jobsSnapshot.cadence)||'Dated listings')+' · levels inferred from titles</span></div><div class="na-pathway-stages" aria-label="Study and career stage">'+stageButtons+'</div></div>'+tabs+filters+'<div class="na-pathway-layout"><section class="na-pathway-list">'+list+'<div class="na-pager"><span>'+(jobs.length?('Showing '+(start+1)+'–'+Math.min(start+size,jobs.length)+' of '+jobs.length):'Try another filter')+'</span><div><button type="button" data-jobs-page="prev"'+(state.page===0?' disabled':'')+'>Previous</button><button type="button" data-jobs-page="next"'+(state.page>=pages-1?' disabled':'')+'>Next</button></div></div></section>'+profile+'</div><p class="na-pathway-note">'+html((jobsSnapshot&&jobsSnapshot.method)||'')+'</p>';
       Array.from<any>(pathwayBrowser.querySelectorAll('[data-pathway-stage]')).forEach(function(b){b.addEventListener('click',function(){state.pathwayStage=b.dataset.pathwayStage;state.page=0;state.selectedPathway='';state.selectedJob='';state.search='';search.value='';syncControls();draw();});});
       Array.from<any>(pathwayBrowser.querySelectorAll('[data-jobs-tab]')).forEach(function(b){b.addEventListener('click',function(){state.jobsTab=b.dataset.jobsTab;state.page=0;state.selectedJob='';drawPathways();});});
       var levelSel=pathwayBrowser.querySelector('[data-jobs-level]'); if(levelSel)levelSel.addEventListener('change',function(){state.jobsLevel=levelSel.value;state.page=0;state.selectedJob='';drawPathways();});
@@ -1784,6 +1802,7 @@ interface Window {
       var remoteBox=pathwayBrowser.querySelector('[data-jobs-remote]'); if(remoteBox)remoteBox.addEventListener('change',function(){state.jobsRemote=remoteBox.checked;state.page=0;state.selectedJob='';drawPathways();});
       Array.from<any>(pathwayBrowser.querySelectorAll('[data-job]')).forEach(function(b){b.addEventListener('click',function(){state.selectedJob=b.dataset.job;drawPathways();});});
       Array.from<any>(pathwayBrowser.querySelectorAll('[data-jobs-page]')).forEach(function(b){b.addEventListener('click',function(){state.page+=b.dataset.jobsPage==='next'?1:-1;var firstOnPage=jobs[state.page*size];if(firstOnPage)state.selectedJob=firstOnPage.id;drawPathways();});});
+      restoreFocus();
     }
     function updatePathwayCount(){
       if(state.view!=='pathways')return;
@@ -1795,6 +1814,7 @@ interface Window {
       root.querySelector('#na-plot-caption').textContent='Programs, roles, fit criteria, and application playbooks';
     }
     function drawPathways(){
+      var restoreFocus=rememberFocus(pathwayBrowser);
       updatePathwayCount();
       var stageCounts={undergraduate:(pathwayData.programs||[]).filter(function(d){return d.kind==='undergraduate';}).length,graduate:(pathwayData.programs||[]).filter(function(d){return d.kind==='graduate';}).length,jobs:(pathwayData.roles||[]).length};
       var stages=['undergraduate','graduate','jobs','fit'];
@@ -1826,6 +1846,7 @@ interface Window {
       Array.from<any>(pathwayBrowser.querySelectorAll('[data-pathway-page]')).forEach(function(b){b.addEventListener('click',function(){state.page+=b.dataset.pathwayPage==='next'?1:-1;var firstOnPage=data[state.page*size];if(firstOnPage)state.selectedPathway=firstOnPage.id;drawPathways();});});
       var ask=pathwayBrowser.querySelector('.na-pathway-ask');
       if(ask&&selected)ask.addEventListener('click',async function(){var prompt=isJobs?'Create a realistic preparation and job-search plan for the role "'+selected.name+'". Verify current neurotechnology employers and job descriptions, identify the most common required skills, separate required from preferred qualifications, propose three portfolio projects and a 12-week application plan, and flag location or clinical-travel constraints.':'Assess my potential fit for '+selected.name+' at '+selected.institution+' using the official program page '+selected.programUrl+'. Verify the current application cycle, prerequisites, degree structure, funding and faculty or laboratory options. Explain who this route fits, common gaps, evidence I should build, and three comparable programs. Do not estimate admission probability without applicant-specific evidence.';await sendResearchPrompt({title:isJobs?'Plan for '+selected.name:'Assess '+selected.name,prompt:prompt});});
+      restoreFocus();
     }
     function syncControls(){
       var entities=isOrganizationView();
@@ -1858,6 +1879,7 @@ interface Window {
       focusButton.setAttribute('aria-pressed','false');focusButton.textContent='Focus selected';
     }
     function draw(){
+      if(root.hidden)return;
       entityPage.hidden=true;
       orgUI.hidden=true;
       root.querySelector('.na-focus').hidden=state.entityPage;
@@ -1946,14 +1968,18 @@ interface Window {
       svg.attr('viewBox','0 0 '+w+' '+h).attr('height',h);
       if(state.view==='atlas') drawAtlas(data,w,h); else drawTimeline(w,h);
     }
-    function syncView(){ Array.from<any>(root.querySelectorAll('[data-view]')).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.view===state.view));}); }
+    function syncView(){
+      var hash=state.entityPage?'#org/'+encodeURIComponent(state.selectedLab):state.view==='atlas'&&state.detailOpen?'#tech/'+encodeURIComponent(state.selected):'#'+state.view;
+      if(!hubNavigating&&!root.hidden&&location.hash.split('?')[0]!==hash)window.dispatchEvent(new CustomEvent('neuroatlas:viewchange',{detail:{hash:hash,view:state.view,internal:true}}));
+      Array.from<any>(root.querySelectorAll('[data-view]')).forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.view===state.view));});
+    }
     search.addEventListener('input',function(){state.search=search.value;state.page=0;if(state.search.trim()&&state.view==='organizations'&&state.orgMode==='map')orbit.showEntities=true;draw();if(isOrganizationView())renderDetail();});
     family.addEventListener('change',function(){state.family=family.value;state.page=0;syncControls();draw();});
     purpose.addEventListener('change',function(){state.purpose=purpose.value;syncControls();draw();});
     operation.addEventListener('change',function(){state.operation=operation.value;syncControls();draw();});
     region.addEventListener('change',function(){state.region=region.value;state.page=0;revealOrganizationsForFilter();syncControls();draw();renderDetail();});
     kind.addEventListener('change',function(){state.kind=kind.value;state.page=0;revealOrganizationsForFilter();syncControls();draw();renderDetail();});
-    model.addEventListener('change',function(){state.model=model.value;state.page=0;draw();renderDetail();});
+    model.addEventListener('change',function(){state.model=model.value;state.page=0;revealOrganizationsForFilter();syncControls();draw();renderDetail();});
     sortControl.addEventListener('change',function(){state.sort=sortControl.value;state.page=0;draw();renderDetail();});
     filterToggle.addEventListener('click',function(){state.filtersOpen=!state.filtersOpen;syncControls();});
     clearFilters.addEventListener('click',function(){
@@ -1964,14 +1990,43 @@ interface Window {
       syncControls();draw();if(state.view==='labs'||state.view==='universe')renderDetail();
     });
     papersBtn.addEventListener('click',function(){state.entityPage=false;clearEntityHash();state.view='researchers';state.search='';search.value='';state.page=0;state.detailOpen=false;papersBtn.setAttribute('aria-pressed','false');syncView();syncControls();renderDetail();draw();});
-    Array.from<any>(root.querySelectorAll('[data-view]')).forEach(function(b){b.addEventListener('click',function(){var next=b.dataset.view;var wasEntities=isOrganizationView(),willEntities=next==='organizations'||next==='labs'||next==='universe';var wasPeople=state.view==='researchers',willPeople=next==='researchers';var wasFrontier=state.view==='frontier',willFrontier=next==='frontier';var wasPathways=state.view==='pathways',willPathways=next==='pathways';if(wasEntities!==willEntities||wasPeople!==willPeople||wasFrontier!==willFrontier||wasPathways!==willPathways){state.search='';search.value='';}if(next==='labs'||next==='universe')next='organizations';if(next==='organizations'&&state.view!=='organizations')state.orgMode='map';state.entityPage=false;clearEntityHash();state.view=next;state.page=0;state.detailOpen=false;syncView();syncControls();renderDetail();draw();});});
+    Array.from<any>(root.querySelectorAll('[data-view]')).forEach(function(b){b.addEventListener('click',function(){window.dispatchEvent(new CustomEvent('neuroatlas:viewchange',{detail:{view:b.dataset.view}}));});});
     root.addEventListener('keydown',function(event){if(event.key==='Escape'&&state.entityPage)closeEntityPage(true);else if(event.key==='Escape'&&state.detailOpen)closeDetail();});
     Array.from<any>(legend.querySelectorAll('[data-group]')).forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.group;if(state.activeGroups.has(k))state.activeGroups.delete(k);else state.activeGroups.add(k);b.setAttribute('aria-pressed',String(state.activeGroups.has(k)));syncControls();draw();});});
-    window.addEventListener('popstate',function(){var id=entityIdFromHash(),exists=L.some(function(d){return d.id===id;});if(id&&exists){state.entityPage=true;state.selectedLab=id;state.entityTab='overview';if(state.view!=='labs'&&state.view!=='universe')state.view='labs';}else state.entityPage=false;syncView();syncControls();renderDetail();draw();});
+
     var initialEntity=entityIdFromHash();
     if(initialEntity&&L.some(function(d){return d.id===initialEntity;})){state.entityPage=true;state.selectedLab=initialEntity;state.entityReturnView='organizations';state.view='organizations';state.orgMode='ranked';}
     var lastPlotWidth=0;
     var ro=new ResizeObserver(function(entries){var width=entries[0]&&entries[0].contentRect?entries[0].contentRect.width:0;if(Math.abs(width-lastPlotWidth)>1){lastPlotWidth=width;draw();}}); ro.observe(root.querySelector('.na-plot-wrap'));
     new MutationObserver(function(){if(state.view==='organizations'&&state.orgMode==='map')drawUniverse();}).observe(document.documentElement,{attributes:true,attributeFilter:['class','style']});
+    window.neuroAtlas={
+      counts:{technologies:T.length,organizations:L.length,researchers:researchers.length},
+      records:[
+        ...T.map(function(t){return {id:t.id,title:t.n,description:t.summary,kind:'Technology',href:'#tech/'+encodeURIComponent(t.id),keywords:[t.signal,t.mechanism,t.ex.join(' ')].join(' ')};}),
+        ...L.map(function(d){return {id:d.id,title:d.n,description:d.d,kind:'Organization',href:'#org/'+encodeURIComponent(d.id),keywords:[d.inst,d.city,d.country,d.f.join(' ')].join(' ')};}),
+        ...researchers.map(function(d){return {id:d.id,title:d.name,description:d.summary,kind:'Researcher',href:'#person/'+encodeURIComponent(d.id),keywords:d.institution+' '+d.country};}),
+        ...pathwayData.programs.map(function(d){return {id:d.id,title:d.name,description:d.bestFor,kind:'Program',href:d.programUrl,keywords:[d.institution,d.location,d.focus.join(' ')].join(' ')};}),
+        ...pathwayData.roles.map(function(d){return {id:d.id,title:d.name,description:d.lane+' · '+d.entry,kind:'Career role',href:d.sourceUrl};}),
+        ...(jobsSnapshot.jobs||[]).map(function(d){return {id:d.id,title:d.title,description:d.employer+' · '+d.location+' · '+(d.source==='Curated'?'Availability not rechecked':'Dated listing; verify availability'),kind:'Job listing',href:d.url,keywords:d.fn+' '+d.level};}),
+        ...(frontierSnapshot.items||[]).map(function(d){return {id:d.id,title:d.title,description:d.source+' · '+(d.date||d.observedAt||'Date unavailable')+' · '+frontierKindLabel(d.kind),kind:'Paper / update',href:d.sourceUrl,keywords:d.summary+' '+d.authors};})
+      ],
+      navigate:function(route,id,query){
+        hubNavigating=true;
+        try{
+          state.entityPage=false;state.detailOpen=false;state.page=0;
+          state.search=query||'';search.value=state.search;
+          state.family='all';state.purpose='all';state.operation='all';state.region='all';state.kind='all';state.model='all';
+          family.value='all';purpose.value='all';operation.value='all';region.value='all';kind.value='all';model.value='all';
+          state.activeGroups=new Set(groupKeys);state.orgGroupFilter='';state.orgTechFilter='';state.filtersOpen=false;
+          Array.from<any>(legend.querySelectorAll('[data-group]')).forEach(function(b){b.setAttribute('aria-pressed','true');});
+          state.view=route==='org'?'organizations':route==='tech'?'atlas':route==='person'?'researchers':route;
+          if(state.view==='organizations')state.orgMode='ranked';
+          if(route==='org'){openEntityPage(id,'organizations',false);}
+          if(route==='tech'&&T.some(function(t){return t.id===id;})){state.selected=id;state.detailOpen=true;}
+          if(route==='person'&&researchers.some(function(d){return d.id===id;})){state.selectedResearcher=id;state.search=researchers.find(function(d){return d.id===id;}).name;search.value=state.search;}
+          syncView();syncControls();renderDetail();draw();
+        }finally{hubNavigating=false;}
+      }
+    };
     syncView(); syncControls(); renderDetail(); draw();
   })();
