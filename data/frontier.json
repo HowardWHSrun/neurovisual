@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T13:30:12.362Z",
+  "generatedAt": "2026-09-14T14:02:29.761Z",
   "cadence": "Every Monday at 07:17 UTC",
   "windowDays": 45,
   "method": "Automated topic matching followed by newest-first ordering. This is a discovery feed, not an impact or efficacy ranking.",
@@ -36,338 +36,64 @@
   "errors": [],
   "items": [
     {
-      "id": "paper-10.1016/j.tranon.2026.103016",
-      "kind": "paper",
-      "title": "Rethinking sympathetic regulation in cancer: From uniform signaling to context-dependent precision targeting.",
-      "date": "2026-09-06",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.1016/j.tranon.2026.103016",
-      "summary": "Accumulating evidence has established the sympathetic nervous system (SNS) as a critical regulator of tumor progression, making adrenergic signaling an attractive therapeutic target in oncology. Consequently, β-adrenergic blockade has been widely investigated as a strategy to inhibit cancer progression. However, recent advances in cancer neuroscience indicate that sympathetic regulation is considerably more complex than previously appreciated. Distinct adrenergic receptor subtypes, direct target cells, and tissue niches generate diverse biological outcomes, suggesting that indiscriminate inhibition of sympatheti…",
-      "authors": "Xu JY, Yi GZ.",
-      "venue": "Translational oncology",
-      "status": "Peer-reviewed / indexed",
+      "id": "trial-nct07673913",
+      "kind": "trial",
+      "title": "Relationship of Peripheral Inflammatory and Neuroprotective Biomarkers With Response to Intermittent Theta Burst Stimulation in Treatment-Resistant Depression",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
+      "source": "ClinicalTrials.gov",
+      "sourceId": "clinicaltrials",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT07673913",
+      "summary": "Treatment-resistant depression (TRD) is a major clinical challenge affecting a substantial proportion of patients with major depressive disorder who do not adequately respond to conventional antidepressant treatments. Intermittent theta burst stimulation (iTBS), a non-invasive neuromodulation technique targeting the left dorsolateral prefrontal cortex, has emerged as an effective treatment option for these patients. However, the biological mechanisms underlying treatment response remain poorly understood. This single-center, prospective, investigator-initiated clinical study aims to investigate the effects of iT…",
+      "authors": "Gulhane Training and Research Hospital",
+      "venue": "NCT07673913 · NA",
+      "status": "recruiting",
       "topics": [
         "stimulate"
       ]
     },
     {
-      "id": "paper-10.1007/s40292-026-00821-5",
-      "kind": "paper",
-      "title": "Interventional Treatment of Arterial Hypertension in The Modern Era: An Updated Review from the Young Investigator Group of the European Society of Hypertension.",
-      "date": "2026-09-06",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.1007/s40292-026-00821-5",
-      "summary": "Achievement of blood pressure targets in hypertensive patients is a challenge for clinicians despite the different classes of drugs currently available. For this reason, taking advantage of the technological progress, new interventional strategies have been proposed. Each of these approaches acts on autonomic and vascular regulation, critical components of hypertension pathophysiology with the aim to recalibrate aberrant sympathetic activation and vascular dysfunction. Renal artery denervation is the only modality currently supported by guideline recommendations in selected patients. Baroreflex activation therap…",
-      "authors": "Şener YZ, Mancusi C, Ceasovschih A, Belančić A, Menti A, Antza C, Ferrao D, Petrović J, Huart J, Lábr K, Fucile I, Vučković M, Porcnik A, Sinigoj P, Katsiki N.",
-      "venue": "High blood pressure & cardiovascular prevention : the official journal of the Italian Society of Hypertension",
-      "status": "Peer-reviewed / indexed",
+      "id": "trial-nct06511141",
+      "kind": "trial",
+      "title": "Sacral Neuromodulation for Male Overactive Bladder (MOAB)",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
+      "source": "ClinicalTrials.gov",
+      "sourceId": "clinicaltrials",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT06511141",
+      "summary": "To assess the post-market clinical outcomes of the Axonics SNM System for treatment of overactive bladder in male patients.",
+      "authors": "Axonics, Inc.",
+      "venue": "NCT06511141 · NA",
+      "status": "recruiting",
       "topics": [
         "stimulate"
       ]
     },
     {
-      "id": "paper-10.1016/j.neulet.2026.138729",
-      "kind": "paper",
-      "title": "A Drug Repurposing-Based Mechanistic study of ilepcimide against febrile seizures.",
-      "date": "2026-09-05",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.1016/j.neulet.2026.138729",
-      "summary": "Febrile seizures are the most common childhood paroxysmal neurological disorder. Although ilepcimide is used for pediatric epilepsy, its efficacy in febrile seizures remains unknown. Here, we investigated the effects and mechanisms of ilepcimide in a juvenile mouse model of febrile seizures using network pharmacology, molecular docking, brain slice electrophysiology and patch-clamp recordings of transfected cells. Ilepcimide prolonged seizure latency and reduced EEG spike-wave frequency. Network pharmacology linked its targets to glutamatergic synaptic signaling. Molecular docking further predicted that ilepcimi…",
-      "authors": "Zhang J, Zhao J, Yang L, Tian K, Cheng S, Cai Z, Dezhi K, Zhang W.",
-      "venue": "Neuroscience letters",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "record"
-      ]
-    },
-    {
-      "id": "paper-10.1016/j.ebiom.2026.106478",
-      "kind": "paper",
-      "title": "ERK-dependent hyperexcitability of BLA neurons projecting to dCA3 underlies social dysfunction in a male mouse model of fragile X syndrome.",
-      "date": "2026-09-05",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.1016/j.ebiom.2026.106478",
-      "summary": "Background Social dysfunction is a core symptom of autism spectrum disorder (ASD), including fragile X syndrome (FXS), but its underlying neural circuits and molecular mechanisms remain poorly understood. Previous studies have implicated the amygdala and hippocampus in social behaviour, yet the specific pathways and signalling events linking genetic deficits to behavioural dysfunction have not been fully delineated. Methods Using activity-dependent c-Fos mapping, fibre photometry, closed-loop optogenetics, pharmacological inhibition, and shRNA-mediated knockdown, we investigated the role of the BLA-dCA3 projecti…",
-      "authors": "Wang S, Wu X, Dong S, Zheng L, Pan L, Zhan L, Xiao H, Yang L, Wang X, Ma H, Xu H, Pan B, Wang L, Wang H.",
-      "venue": "EBioMedicine",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "restore"
-      ]
-    },
-    {
-      "id": "paper-10.1016/j.compbiomed.2026.111921",
-      "kind": "paper",
-      "title": "Brain organoids, high-density MEAs, and deep learning: A new paradigm for functional neurobiomarker discovery.",
-      "date": "2026-09-05",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.1016/j.compbiomed.2026.111921",
-      "summary": "Biomarker discovery, essential in neuroscience research, has traditionally been based on static molecular omics, which frequently reveal established pathogenesis at the network level when irreversible structural damage occurs. In this review, the paradigm shift of functional \"digital phenotyping\" is discussed, along with its implementation by combining human induced pluripotent stem cell (hiPSC)-derived brain organoids with high-density multielectrode arrays (HD-MEAs). Researchers can use advanced architecture deep learning (DL) algorithms, such as Convolutional and Graph Neural Networks, to identify predictive…",
-      "authors": "Murthy MK.",
-      "venue": "Computers in biology and medicine",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "compute",
-        "regenerate"
-      ]
-    },
-    {
-      "id": "paper-pmc-pmc13445425",
-      "kind": "paper",
-      "title": "Psychiatric Deep Brain Stimulation for Refractory Obsessive-Compulsive Disorder: Neurocircuitry, Oscillatory Biomarkers, and Network Modulation",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://europepmc.org/article/PMC/PMC13445425",
-      "summary": "Europe PMC does not provide an abstract for this record.",
-      "authors": "Scheuermann O, Jetter E, Valle D, Angelle C, Carr B.",
-      "venue": "European psychiatry : the journal of the Association of European Psychiatrists",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "paper-pmc-pmc13441628",
-      "kind": "paper",
-      "title": "Current clinical practice of deep brain stimulation (DBS) for treatment-refractory obsessive compulsive disorder (OCD): a multi-center survey of five European DBS for OCD programs",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://europepmc.org/article/PMC/PMC13441628",
-      "summary": "Europe PMC does not provide an abstract for this record.",
-      "authors": "Naesström M, Mocking R, Denys D, Schuurman R, Baldermann J, Meyer-Doll D, Polosan M, Chabardes S, Bervoets C, Heylen H, Nuttin B, Blomstedt P, Coenen V.",
-      "venue": "European psychiatry : the journal of the Association of European Psychiatrists",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "paper-pmc-pmc13444947",
-      "kind": "paper",
-      "title": "From Confinement to Autonomy: Improvement of Extreme Aggressiveness in ASD After Deep Brain Stimulation",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://europepmc.org/article/PMC/PMC13444947",
-      "summary": "Europe PMC does not provide an abstract for this record.",
-      "authors": "Barcelo P, Hernandez C, Velasquez C, Oyola K, Pinedo M, Gutierrez L, Perneth S.",
-      "venue": "European psychiatry : the journal of the Association of European Psychiatrists",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "paper-pmc-pmc13445094",
-      "kind": "paper",
-      "title": "The Evolution of Deep Brain Stimulation in Psychiatry: Historical Targets and Network Expansion",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://europepmc.org/article/PMC/PMC13445094",
-      "summary": "Europe PMC does not provide an abstract for this record.",
-      "authors": "Scheuermann O, Valle D, Jetter E, Angelle C, Carr B.",
-      "venue": "European psychiatry : the journal of the Association of European Psychiatrists",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "paper-pmc-pmc13444511",
-      "kind": "paper",
-      "title": "Rewiring the Obsessive-Compulsive Disorder Brain: Mechanisms and Clinical Implications of Deep Brain Stimulation-Induced Neuroplasticity",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://europepmc.org/article/PMC/PMC13444511",
-      "summary": "Europe PMC does not provide an abstract for this record.",
-      "authors": "Scheuermann O, Jetter E, Valle D, Angelle C, Carr B.",
-      "venue": "European psychiatry : the journal of the Association of European Psychiatrists",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "paper-10.4103/neurol-india.neurol-india-d-26-00542",
-      "kind": "paper",
-      "title": "Neural Circuit Dysfunctions in Migraine: A Stage-Specific Dynamic Perspective.",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.4103/neurol-india.neurol-india-d-26-00542",
-      "summary": "Abstract Migraine is increasingly recognized as a cyclical brain state disorder rather than an isolated vascular or nociceptive condition. Its clinical phases may reflect dynamic reorganization of interacting neural circuits involved in sensory processing, homeostasis, pain modulation, and cognition. This review aims to synthesize current evidence and propose a stage-specific neural circuit dynamic model of migraine, linking each clinical phase to distinct patterns of circuit dysfunction and recovery. A narrative review of studies published between January 2010 and December 2024 was conducted using PubMed, Web o…",
-      "authors": "Lu D, Yao M, Bu F, He P, Wang S, Xu L, Chen W, Feng Q.",
-      "venue": "Neurology India",
-      "status": "Peer-reviewed / indexed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "paper-10.1038/s41593-026-02434-6",
-      "kind": "paper",
-      "title": "Neuromodulation for restoring and amplifying brain function.",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Europe PMC",
-      "sourceId": "europe-pmc",
-      "sourceUrl": "https://doi.org/10.1038/s41593-026-02434-6",
-      "summary": "Neuromodulation aims to improve brain function by altering neural activity. While many rehabilitation strategies seek to restore normal, healthy-like dynamics, some adopt a complementary strategy, using neuromodulation to strengthen repurposed processes that support function. Here we formalize these approaches as 'restorative normalization' (RN) and 'compensatory amplification' (CA), respectively. Drawing on cognitive neurophysiology, we evaluate the following four factors that enable CA to be effective: multiple realizability, multiscale neuroplasticity, precision readiness and activity selectivity. We analyze…",
-      "authors": "Grover S, Wen W, Reinhart RMG.",
-      "venue": "Nature neuroscience",
-      "status": "Peer-reviewed / indexed",
+      "id": "trial-nct07817316",
+      "kind": "trial",
+      "title": "Effects of Neurofeedback Training and tRNS on Attentional Deficits in Patients With Acquired Brain Injury",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
+      "source": "ClinicalTrials.gov",
+      "sourceId": "clinicaltrials",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT07817316",
+      "summary": "The goal of this study is to investigate new neuromodulation therapies for attention deficits following acquired brain injury. Brain damage can affect various domains, including motor and cognitive functions. However, cognitive deficits have many consequences on the functionality and independence of patients, and attention is an essential requirement for most of daily activities. After brain damage, cognitive rehabilitation is generally the first treatment option for attention deficits. Some studies have shown that cognitive rehabilitation is sometimes not very effective.For this reason, new therapies such as ne…",
+      "authors": "Hospitales Nisa",
+      "venue": "NCT07817316 · NA",
+      "status": "recruiting",
       "topics": [
         "stimulate",
-        "restore"
-      ]
-    },
-    {
-      "id": "preprint-10.64898/2026.09.01.748503",
-      "kind": "preprint",
-      "title": "The Effect of Visual Impairment on the Controllability of a Brain-Computer Interface Using Visual Spatial Attention",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Preprint",
-      "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.09.01.748503",
-      "summary": "The primary goal of a brain-computer interface (BCI) is to enable interactions with the environment by generating control signals directly from brain activity, independent of physical movement including gaze shifts. Attentional selection of peripheral objects has been used to control a BCI but requires sufficient visual acuity to reliably recognize the target stimulus. Here, we systematically investigated the effect of different stages of visual impairment on event-related potentials (ERPs) and BCI performance while healthy participants directed covert attention to peripheral visual stimuli. We hypothesized that…",
-      "authors": "Reichert C, Schoenfeld MA, Duerschmid S.",
-      "venue": "Preprint",
-      "status": "Preprint · not peer reviewed",
-      "topics": [
-        "restore"
-      ]
-    },
-    {
-      "id": "preprint-10.64898/2026.08.31.748347",
-      "kind": "preprint",
-      "title": "α2δ-2 mediates coupling of presynaptic calcium entry to vesicle release in hippocampal parvalbumin-expressing interneurons",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "Preprint",
-      "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.08.31.748347",
-      "summary": "The α2δ family of auxiliary voltage-gated calcium channel (VGCC) subunits have critical but incompletely understood roles in brain function. Parvalbumin-positive (PV+) interneurons in the hippocampus highly express the α2δ-2 isoform, and mice lacking α2δ-2 exhibit spontaneous seizures. Thus, we examined PV+ neuron-mediated synaptic inhibition in acutely prepared brain slices from α2δ-2 knockout (KO) mice. In the inner molecular layer of the dentate gyrus, α2δ-2 KO mice demonstrated an increase in the excitation/inhibition ratio of synaptic inputs onto granule cells. We then used optogenetics to activate PV+ inte…",
-      "authors": "Ellingson AJ, Jerome EC, Gallagher AA, Schnell E.",
-      "venue": "Preprint",
-      "status": "Preprint · not peer reviewed",
-      "topics": [
-        "record"
-      ]
-    },
-    {
-      "id": "trial-nct07777419",
-      "kind": "trial",
-      "title": "Impact of Subthalamic Nucleus Deep Brain Stimulation on COGnitive and PSYchiatric Symptoms in Parkinson's Disease",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "ClinicalTrials.gov",
-      "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07777419",
-      "summary": "With this study, the investigators want to investigate how deep brain stimulation (DBS) affects various cognitive and psychiatric symptoms of Parkinson's disease (PD). In particular, they will examine whether stimulation of the left hemisphere has a different effect than stimulation of the right hemisphere on cognitive and psychiatric symptoms.",
-      "authors": "Insel Gruppe AG, University Hospital Bern",
-      "venue": "NCT07777419 · NA",
-      "status": "recruiting",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "trial-nct07260253",
-      "kind": "trial",
-      "title": "Remotely-supervised Neuromodulation in PPA",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "ClinicalTrials.gov",
-      "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07260253",
-      "summary": "The goal of this clinical trial is to learn whether home-based brain stimulation combined with virtual speech-language therapy can improve communication abilities in adults with logopenic variant primary progressive aphasia (lvPPA), a language disorder most often caused by Alzheimer's disease. The main questions the study aims to answer are: * Is combining remotely supervised transcranial direct current stimulation (tDCS) with virtual speech-language therapy feasible and acceptable for people with lvPPA? * Does this combined treatment lead to improvements in communication compared to speech-language therapy with…",
-      "authors": "Maya Henry",
-      "venue": "NCT07260253 · NA",
-      "status": "recruiting",
-      "topics": [
-        "record",
-        "stimulate"
-      ]
-    },
-    {
-      "id": "trial-nct07805200",
-      "kind": "trial",
-      "title": "Efficacy and Mechanism of Transcranial Temporal Interference Stimulation (tTIS) for Patients With Obsessive-Compulsive Disorders",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "ClinicalTrials.gov",
-      "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07805200",
-      "summary": "Targeted temporal interference stimulation (tTIS) of the nucleus accumbens (NAc) may modulate the abnormal electrophysiological activity in individuals with obsessive-compulsive disorder (OCD), thereby improving their obsessive-compulsive symptoms.",
-      "authors": "Beijing HuiLongGuan Hospital",
-      "venue": "NCT07805200 · NA",
-      "status": "recruiting",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "trial-nct01550575",
-      "kind": "trial",
-      "title": "Patient Retrospective Outcomes (PRO)",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "ClinicalTrials.gov",
-      "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT01550575",
-      "summary": "This study will evaluate de-identified (anonymous) data in subject medical charts to review the clinical outcomes of various treatment approaches in the treatment of chronic pain.",
-      "authors": "Boston Scientific Corporation",
-      "venue": "NCT01550575",
-      "status": "recruiting",
-      "topics": [
-        "record"
-      ]
-    },
-    {
-      "id": "trial-nct06577454",
-      "kind": "trial",
-      "title": "Measuring the Effects of Neurostimulation on Risky and Ambiguous Decision-Making Capacity in People With and Without Substance Use Disorder",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "ClinicalTrials.gov",
-      "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT06577454",
-      "summary": "Background: The purpose of this study is to understand how a type of brain stimulation, transcranial magnetic stimulation (TMS), may help those who use opioids such as heroin or methadone. TMS uses brief magnetic pulses to affect brain activity, and is approved by the FDA to treat some mental health problems and substance use. We will evaluate how TMS may help make it easier to make certain kinds of decisions that could help one manage their opioid use. Our findings may provide support for the use of brain stimulation as a treatment to reduce opioid use. Objective: To understand how TMS affects brain activity as…",
-      "authors": "National Institute on Drug Abuse (NIDA)",
-      "venue": "NCT06577454 · NA",
-      "status": "suspended",
-      "topics": [
-        "record",
-        "stimulate"
+        "restore",
+        "personal"
       ]
     },
     {
       "id": "trial-nct06561828",
       "kind": "trial",
       "title": "Developing Transcranial Neuromodulation Protocols for Learning and Decision-Making",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
       "source": "ClinicalTrials.gov",
       "sourceId": "clinicaltrials",
       "sourceUrl": "https://clinicaltrials.gov/study/NCT06561828",
@@ -381,108 +107,188 @@
       ]
     },
     {
-      "id": "trial-nct07805057",
+      "id": "trial-nct04650932",
       "kind": "trial",
-      "title": "Magnetic Brain Stimulation in Small Fiber Neuropathy",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
+      "title": "Dual Frequency Stimulation in Parkinson's Disease",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
       "source": "ClinicalTrials.gov",
       "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07805057",
-      "summary": "Small fiber neuropathy (SFN) is a condition in which the smallest nerve fibers are damaged. This leads to severe pain and disturbances in the body's automatic functions. As a result, quality of life is often substantially reduced. Pain is one of the main symptoms of small fiber neuropathy. Unfortunately, the effects of currently available pain medications are often disappointing and may be accompanied by unacceptable side effects. Although the smallest nerve fibers do not function properly in SFN, the brain also appears to play a role in the symptoms. Specialized brain imaging studies have shown that brain activ…",
-      "authors": "Maastricht University Medical Center",
-      "venue": "NCT07805057 · NA",
-      "status": "not yet recruiting",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT04650932",
+      "summary": "Deep brain stimulation (DBS) in the dorsal region of the subthalamic nucleus (STN) is very effective for reducing motor symptoms of Parkinson's disease (PD). Modeling studies suggest that this therapy may result in current spread into the ventral STN, causing altered cognitive processes. As a result, current stimulation parameters often lead to worsening in verbal fluency, executive function, and, particularly, cognitive control. There is evidence suggesting that low frequency oscillatory activity occurs across brain circuits important in integrating information for cognition. Preclinical studies and human recor…",
+      "authors": "University of California, Davis",
+      "venue": "NCT04650932 · NA",
+      "status": "recruiting",
       "topics": [
         "record",
         "stimulate"
       ]
     },
     {
-      "id": "trial-nct07222046",
+      "id": "trial-nct06096207",
       "kind": "trial",
-      "title": "Spinal Neurorehabilitation for Veterans With SCI",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
+      "title": "DBS for Depression",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
       "source": "ClinicalTrials.gov",
       "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07222046",
-      "summary": "Chronic spinal cord injury (SCI) is a debilitating disorder in Veterans and the broader U.S. population that does not have a cure. Veterans with severe SCI demonstrate permanent loss of sensory and motor function below their injury resulting in decreased quality of life and independence. Recently, electrical spinal neuromodulation has emerged as a potential approach to restore voluntary motor function and locomotion in persons with chronic SCI. However, spinal neuromodulation has yet to translate to clinical use due to small sample sizes in research studies and a lack of information on which patients would benef…",
-      "authors": "VA Office of Research and Development",
-      "venue": "NCT07222046 · NA",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT06096207",
+      "summary": "The goal of this clinical trial is to demonstrate the feasibility and safety of deep brain stimulation in treatment resistant depression. The main questions it aims to answer are: * Is deep brain stimulation effective in treating treatment resistant depression? * Does deep brain stimulation improve overall clinical well-being and functioning? Participants will be implanted with a deep brain stimulation device. They will then be monitored over a 5-year period by using multiple questionnaires to track their depression symptoms. The device will be turned off at certain time points, unbeknown to the participant, to…",
+      "authors": "Northwell Health",
+      "venue": "NCT06096207 · PHASE1",
       "status": "recruiting",
       "topics": [
-        "stimulate",
-        "restore"
+        "stimulate"
       ]
     },
     {
-      "id": "trial-nct07743905",
+      "id": "trial-nct07398157",
       "kind": "trial",
-      "title": "Virtual Pain Education for Spinal Cord Stimulation Patients",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
+      "title": "Simplified, Scalable, 24-hour Adaptive DBS in Parkinson's Disease",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
       "source": "ClinicalTrials.gov",
       "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07743905",
-      "summary": "Chronic pain is a leading cause of disability in the United States. When standard treatments fail, many patients develop treatment resistant pain and undergo Spinal Cord Stimulation (SCS) therapy. SCS uses an implanted device to send mild electrical currents to the spine to block pain signals before they reach the brain. However, long-term success is often limited by how a patient's nervous system and brain process chronic pain, as well as psychological factors like anxiety and excessive worrying about pain, also known as catastrophizing. To improve outcomes, this study combines SCS therapy with Pain Neuroscienc…",
-      "authors": "University of Arkansas",
-      "venue": "NCT07743905 · NA",
-      "status": "not yet recruiting",
-      "topics": [
-        "stimulate",
-        "restore"
-      ]
-    },
-    {
-      "id": "trial-nct07722130",
-      "kind": "trial",
-      "title": "Epidural Spinal Cord Stimulation for Respiratory Recovery in Cervical SCI",
-      "date": "2026-09-04",
-      "observedAt": "2026-09-07",
-      "source": "ClinicalTrials.gov",
-      "sourceId": "clinicaltrials",
-      "sourceUrl": "https://clinicaltrials.gov/study/NCT07722130",
-      "summary": "This multicenter, single-arm exploratory IIT evaluates epidural spinal cord electrical stimulation (ESCES) in 20 adults with C1-C5 SCI and respiratory failure. Participants receive ESCES plus standard care; electrodes are implanted at C3-C5 with daily individualized stimulation. Primary outcomes: Edi peak, change of Edi peak and frequency. Secondary: tidal volume, maximal inspiratory pressure, NVE, NME, diaphragm ultrasound, cough strength, 90-day ventilator-free days, ICU stay, and survival. This is the first systematic ESCES study for SCI-related respiratory failure, aiming to provide preliminary safety/effica…",
-      "authors": "Zhongda Hospital",
-      "venue": "NCT07722130 · NA",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT07398157",
+      "summary": "The purpose of this study is to test a new way to treat Parkinson's disease (PD). Subjects will be implanted with deep brain stimulator (DBS) devices and electrodes placed under the scalp. The main questions it aims to answer are: * Is there a less invasive method to collect useful brain signals? Find out if these brain signals can be related to movement and/or sleep symptoms. * How to use these brain signals to tailor adaptive deep brain stimulation settings for movement and/or sleep symptoms Researchers will compare study derived adaptive DBS settings to subject's clinically programmed continuous DBS settings…",
+      "authors": "University of California, San Francisco",
+      "venue": "NCT07398157 · NA",
       "status": "recruiting",
       "topics": [
-        "stimulate",
-        "restore"
+        "stimulate"
       ]
     },
     {
-      "id": "preprint-10.64898/2026.08.28.747863",
-      "kind": "preprint",
-      "title": "Bumetanide Strengthens Residual Brain Bladder Communication After Spinal Cord Injury",
-      "date": "2026-09-03",
-      "observedAt": "2026-09-07",
-      "source": "Preprint",
-      "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.08.28.747863",
-      "summary": "Neurogenic bladder is one of the most disabling consequences of spinal cord injury (SCI), yet it remains unclear whether residual brain bladder communication persists after injury and can be therapeutically strengthened. Here, we integrated analysis of a clinical SCI cohort with studies in a mouse model that recapitulates key features of human neurogenic bladder. SCI markedly impaired both descending and ascending limbs of the spinobulbospinal micturition reflex, reducing bladder responses evoked by stimulation of the pontine micturition center (PMC) and bladder filling-induced activation of the periaqueductal g…",
-      "authors": "LI Q, Li W, Shang J, Sandoval A, Dunn T, Kim HY, Vincent KL, Chen B.",
-      "venue": "Preprint",
-      "status": "Preprint · not peer reviewed",
+      "id": "trial-nct07335484",
+      "kind": "trial",
+      "title": "Aquarius Pilot Study to Evaluate the New Axonics Trial System",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
+      "source": "ClinicalTrials.gov",
+      "sourceId": "clinicaltrials",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT07335484",
+      "summary": "Evaluation of the new Axonics External Trial System (ETS-02) in patients with overactive bladder (OAB) and/or fecal incontinence (FI).",
+      "authors": "Axonics, Inc.",
+      "venue": "NCT07335484 · NA",
+      "status": "recruiting",
+      "topics": [
+        "record"
+      ]
+    },
+    {
+      "id": "trial-nct06518824",
+      "kind": "trial",
+      "title": "Theta Deep Brain Stimulation for Cognitive Enhancement in Parkinson's Disease",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
+      "source": "ClinicalTrials.gov",
+      "sourceId": "clinicaltrials",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT06518824",
+      "summary": "Cognitive impairment is common in Parkinson's disease. A recent study demonstrated 40% of people with PD suffer from mild cognitive impairment and \\> 80% of patients develop dementia after a disease duration of 20 years. Cognitive impairment significantly impairs quality of life and has limited treatment options. While the pathophysiology of cognitive symptoms in PD is multifactorial, one contributing factor is dysfunction in subthalamic-cortical loops. The subthalamic nucleus (STN) receives input from distributed regions of the cortex, forming partially segregated parallel networks with sensorimotor regions, as…",
+      "authors": "University of British Columbia",
+      "venue": "NCT06518824 · NA",
+      "status": "recruiting",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "trial-nct05273788",
+      "kind": "trial",
+      "title": "Thoracic Neuromodulation for Diabetic Gastroparesis",
+      "date": "2026-09-14",
+      "observedAt": "2026-09-14",
+      "source": "ClinicalTrials.gov",
+      "sourceId": "clinicaltrials",
+      "sourceUrl": "https://clinicaltrials.gov/study/NCT05273788",
+      "summary": "The global incidence of diabetes is rising. Gastroparesis is a significant complication of diabetes that results in debilitating symptoms and affects quality of life. Current treatment options for diabetic gastroparesis are limited. Significant visceral afferent neuropathy is associated with diabetic gastroparesis and sympathetic overactivity is seen in nausea, both type 1 and 2 diabetes, and diabetic complications. These dysfunctions can result from neuropathy affecting the thoracic spinal nerves that carry both general visceral afferents and preganglionic sympathetic efferents in the greater splanchnic nerve,…",
+      "authors": "Medical University of South Carolina",
+      "venue": "NCT05273788 · NA",
+      "status": "completed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "paper-10.1002/adhm.71688",
+      "kind": "paper",
+      "title": "Zwitterionic Polymer Coating Enabled Chronic Dopamine Sensing and Electrophysiology Recording in Free-Moving Mice.",
+      "date": "2026-09-13",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1002/adhm.71688",
+      "summary": "The brain's complex network relies on electrical and chemical signaling to support its normal functions. Understanding brain circuits requires simultaneously monitoring neurotransmitters and electrophysiological signals. The striatal dopamine circuits are integral to neurological processes such as reward and circadian rhythm regulation, making it highly desirable to monitor both neural activity and dopamine (DA) levels in freely behaving animals. One promising approach involves the implantation of multimodal microelectrode arrays (MEAs). However, chronic electrochemical sensing of DA in freely moving animals fac…",
+      "authors": "Wu B, Thompson C, Deakin T, Xu Y, McClung CA, Cui XT.",
+      "venue": "Advanced healthcare materials",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "record"
+      ]
+    },
+    {
+      "id": "paper-10.1016/j.brainres.2026.150546",
+      "kind": "paper",
+      "title": "Anodal high-definition tDCS over the left dorsolateral prefrontal cortex is associated with autonomic regulation and executive performance.",
+      "date": "2026-09-13",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1016/j.brainres.2026.150546",
+      "summary": "High-definition transcranial direct current stimulation (HD-tDCS) is a non-invasive neuromodulation technique increasingly investigated for its association with executive function performance. Emerging evidence indicates that prefrontal stimulation may also be associated with changes in autonomic regulation, as indexed by heart rate variability (HRV)-a physiological marker linked to adaptive cognitive control and emotional regulation. Within the Neurovisceral Integration Model, prefrontal cortical activity supports dynamic interactions between cognitive and autonomic systems, providing a theoretical framework fo…",
+      "authors": "Frau L, Bruno D, Cazzato V.",
+      "venue": "Brain research",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "paper-10.1016/j.neubiorev.2026.106972",
+      "kind": "paper",
+      "title": "The Interacting Language Network: A Framework for Neuromodulation and Clinical Translation.",
+      "date": "2026-09-13",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1016/j.neubiorev.2026.106972",
+      "summary": "Language disorders following stroke, neurodegeneration, or altered neurodevelopment markedly impair communication and quality of life. Despite advances in behavioural and neuromodulation therapies, treatment outcomes remain modest. Attempts to modulate local excitability in single brain regions have yielded limited benefits. We argue for a shift in neuromodulation for language, from interventions that target isolated regions to approaches that modulate distributed neural networks. To support this shift, we introduce the Interacting Language Network (ILN), a theoretical framework that integrates evidence for loca…",
+      "authors": "Preisig BC, Proix T, Borghesani V, Brem S, Marchesotti S, Guggisberg AG.",
+      "venue": "Neuroscience and biobehavioral reviews",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "paper-10.1016/j.jneumeth.2026.110907",
+      "kind": "paper",
+      "title": "Functional Brain Imaging and Targeted Lesion Studies Using Manganese-Enhanced MRI and Focused Ultrasound in Non-Conventional Model Species.",
+      "date": "2026-09-13",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1016/j.jneumeth.2026.110907",
+      "summary": "Linking behavior to neuroanatomy in non-conventional species is hindered by a lack of tools like stereotaxic atlases, antibodies, or transgenic lines. Traditional methods like electrophysiology or surgical lesions are often impractical for aquatic species or organisms with continuously growing brains. Consequently, neuroethology is frequently limited to a few classical models, creating a need for a versatile, non-invasive framework to map and validate brain function across diverse taxa. We present an integrated protocol combining Manganese-Enhanced MRI (MEMRI) and MR-guided High-Intensity Focused Ultrasound (HIF…",
+      "authors": "Estienne P, Pagé G, Durier T, Larrat B, Yamamoto K, Ciobanu L.",
+      "venue": "Journal of neuroscience methods",
+      "status": "Peer-reviewed / indexed",
       "topics": [
         "record",
-        "stimulate",
-        "restore",
-        "compute"
+        "stimulate"
       ]
     },
     {
-      "id": "preprint-10.21203/rs.3.rs-10392049/v1",
+      "id": "preprint-10.31234/osf.io/9pu3c_v1",
       "kind": "preprint",
-      "title": "DTI-based mesoscale connectomics detects survival-relevant white matter substructures in glioblastoma patients",
-      "date": "2026-09-03",
-      "observedAt": "2026-09-07",
+      "title": "Neural correlates and behavioral outcomes of aesthetic chills and their prosthetic augmentation",
+      "date": "2026-09-13",
+      "observedAt": "2026-09-14",
       "source": "Preprint",
       "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10392049/v1",
-      "summary": "Abstract Purpose. Glioblastoma (GB) is a highly invasive and lethal primary brain tumor, with survival affected by tumor location, clinical factors, and molecular features. White matter (WM) tracts serve as pathways for GB cell migration, but the effects of microstructural integrity within specific fiber subcomponents on overall survival (OS) remain unclear. This study aimed to determine whether correlational tractography can identify WM tract segments whose microstructural integrity correlates with OS in GB patients. Methods. Diffusion tensor imaging and clinical data from 498 GB patients in the UPENN-database…",
-      "authors": "Stadlbauer A, Oberndorfer S, Heinz G, Dörfler A, Marhold F, Schnell O, Dorostkar M, Meyer-Bäse U, Meyer-Bäse A.",
+      "sourceUrl": "https://doi.org/10.31234/osf.io/9pu3c_v1",
+      "summary": "Aesthetic chills, psychogenic shivers elicited by emotionally charged stimuli such as music, offer a neurophysiological marker bridging subjective experience and measurable physiology. Although neuroimaging has localized chills to reward and interoceptive circuits and behavioral work has linked them to prosocial outcomes, their electrophysiological signature and its relationship to psychological change remain poorly characterized, precluding comparison with phenomenologically similar states induced by other means (e.g., psychedelics). Here we recorded 64-channel electroencephalography (EEG; n = 103) during valid…",
+      "authors": "Schoeller F, Christov-Moore L, Simonian N, Zuzick S, Shi Y, Jain A, Horowitz A, Kumaravel VP, Zhang B, Johnson M, Nath M, Reggente N.",
       "venue": "Preprint",
       "status": "Preprint · not peer reviewed",
       "topics": [
@@ -490,103 +296,281 @@
       ]
     },
     {
-      "id": "preprint-10.64898/2026.09.01.745409",
+      "id": "paper-10.1159/sfn/aeuag009",
+      "kind": "paper",
+      "title": "Direct Imaging Guided Lateral Trajectory for Globus pallidus internus Deep Brain Stimulation in Dystonia: Long-term Outcomes, Sweetspot Localization, and Associated Pathways.",
+      "date": "2026-09-12",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1159/sfn/aeuag009",
+      "summary": "Introduction Globus pallidus internus (GPi) deep brain stimulation (DBS) is an established treatment for dystonia; however, clinical outcomes for the technique remain variable despite technically accurate implantation. This study examined whether direct imaging guided lateral trajectory targeting can reproducibly position the stimulation field nearer a therapeutic zone in GPi DBS to yield durable clinical benefit in the long-term. Methods We retrospectively analyzed patients with idiopathic isolated or hereditary isolated dystonia treated with bilateral GPi DBS at a single center. Clinical outcomes were assessed…",
+      "authors": "Eray HA, Bayatli E, Akbostanci MC, Savas A.",
+      "venue": "Stereotactic and functional neurosurgery",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "record",
+        "stimulate"
+      ]
+    },
+    {
+      "id": "preprint-10.64898/2026.09.10.26362783",
       "kind": "preprint",
-      "title": "Tau isoforms modulate the axon initial segment controlling axonal trafficking and neuronal excitability",
-      "date": "2026-09-02",
-      "observedAt": "2026-09-07",
+      "title": "Continuous theta-burst stimulation to a lesion network in cervical dystonia: a randomized, double-blind, sham-controlled, pilot trial",
+      "date": "2026-09-12",
+      "observedAt": "2026-09-14",
       "source": "Preprint",
       "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.09.01.745409",
-      "summary": "The axon initial segment (AIS) is a specialized neuronal compartment integrating action potential initiation with selective control of axonal trafficking. The microtubule-associated protein tau is a central regulator of cytoskeletal organization and transport, yet how distinct tau isoforms contribute to AIS development and function remains unclear. Here, we examined the role of tau isoform relative abundance in regulating AIS establishment, maturation, excitability, and transport selectivity using murine primary neurons and human induced pluripotent stem cell (hiPSC)-derived neurons combined with super-resolutio…",
-      "authors": "Arnaiz C, Escalante G, Rodriguez Donghi L, Holubiec MI, Pedroncini O, Páez Paz I, Gaguine C, Bianchelli J, Navarro J, Garcia MD, Lopez LF, Szalai AM, Marin-Burgin A, Stefani FD, Avale ME, Falzone TL.",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.10.26362783",
+      "summary": "Background: The mechanisms driving cervical dystonia remain unclear, limiting effective, non-invasive treatment development. Lesion network mapping previously localized a brain network derived from lesions causing cervical dystonia, with a network hub in the somatosensory cortex, a viable target for non-invasive brain stimulation. Objectives: We conducted a randomized, sham-controlled, crossover trial administering continuous theta-burst stimulation (cTBS) to the S1 lesion network hub, testing whether modulating this network reduces CD symptoms. Methods: Thirteen idiopathic cervical dystonia patients (57.85 ± 10…",
+      "authors": "Morrison-Ham J, Younger EFP, Ellis EG, Parsons N, Hart T, Speranza B, Dipnall L, Do M, Perellon-Alfónso R, Pecoraro PM, di Biase L, Bertram KL, Aguis PA, Morgante F, Joutsa J, Hill AT, Enticott PG, Corp DT.",
       "venue": "Preprint",
       "status": "Preprint · not peer reviewed",
       "topics": [
         "record",
+        "stimulate",
+        "personal"
+      ]
+    },
+    {
+      "id": "preprint-10.64898/2026.09.05.749619",
+      "kind": "preprint",
+      "title": "Noninvasive Focal Gene Delivery of Functional Neural Actuators to the Primate Spinal Cord using Focused Ultrasound",
+      "date": "2026-09-12",
+      "observedAt": "2026-09-14",
+      "source": "Preprint",
+      "sourceId": "preprints",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.05.749619",
+      "summary": "Pathologies of the spinal cord — from degenerative diseases to chronic pain — represent a substantial global health burden. Although surgical and pharmacological treatments for spinal cord pathologies have advanced considerably, therapies capable of addressing the cellular mechanisms underlying these conditions remain limited. Viral gene therapies present a compelling alternative, allowing for delivery of therapeutic genes that directly target the pathological processes in specific cell-types. Effective viral delivery to the spinal cord, however, remains constrained by a fundamental tradeoff between procedural i…",
+      "authors": "Corigliano MR, Guretse SS, Nosenchuck NT, Zimmermann Rollin I, Letica L, Szczupak D, Campos VP, Liang L, Noh MC, Hitchens TK, Pirondini E, Seal RP, Lin M, Schaeffer DJ.",
+      "venue": "Preprint",
+      "status": "Preprint · not peer reviewed",
+      "topics": [
+        "record",
+        "stimulate",
+        "restore"
+      ]
+    },
+    {
+      "id": "paper-10.1093/braincomms/fcag333",
+      "kind": "paper",
+      "title": "Development and application of a multi-task fusion model using susceptibility-weighted imaging-based substantia nigra and adjacent structures for prognostic prediction of subthalamic nucleus deep brain stimulation in Parkinson's disease.",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1093/braincomms/fcag333",
+      "summary": "We developed and evaluated a deep learning framework using susceptibility-weighted imaging signatures of the substantia nigra and adjacent structures to predict motor outcomes following subthalamic nucleus deep brain stimulation in Parkinson's disease. This retrospective study included patients undergoing bilateral subthalamic nucleus deep brain stimulation, and motor response was defined as the percentage improvement in the original Unified Parkinson's Disease Rating Scale Part III score from the preoperative medication-off condition to the 1-year postoperative stimulation-on/medication-off condition. Patients…",
+      "authors": "Xiong C, Wang K, Cheng E, Sun Z, Cai B, Niu C, Song B.",
+      "venue": "Brain communications",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "record",
+        "stimulate"
+      ]
+    },
+    {
+      "id": "paper-10.34133/cbsystems.0690",
+      "kind": "paper",
+      "title": "Intracortical Microstimulation in Brain-Computer Interfaces: Evoking Perception and Plasticity.",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.34133/cbsystems.0690",
+      "summary": "Intracortical microstimulation (ICMS), the activation of specific neuronal populations via microelectrodes implanted in the cortex, has emerged as a key technology for invasive brain-computer interfaces (BCIs). This article reviews the technical foundations and functional applications of ICMS within the BCI field, highlighting its diverse capabilities in both perception construction and targeted neuromodulation, while emphasizing the interface and parameter constraints that shape its long-term use. At the technical level, we analyze the evolution of ICMS microelectrode interfaces from rigid arrays to flexible, b…",
+      "authors": "Hu P, Chen C, Zang Y, Li X, Ming D.",
+      "venue": "Cyborg and bionic systems (Washington, D.C.)",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "stimulate",
+        "restore",
         "regenerate"
       ]
     },
     {
-      "id": "preprint-10.20944/preprints202609.0203.v1",
-      "kind": "preprint",
-      "title": "Review of the Dual-Axis Regulatory Framework Unifying Vagus Nerve Stimulation Mechanisms Across Central and Peripheral Disorders",
-      "date": "2026-09-02",
-      "observedAt": "2026-09-07",
-      "source": "Preprint",
-      "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.20944/preprints202609.0203.v1",
-      "summary": "Vagus nerve stimulation (VNS) is a versatile neuromodulatory modality with demonstrated efficacy across diverse central and peripheral disorders, yet a unifying mechanistic framework reconciling its central neuromodulatory and peripheral somatic actions remains elusive. This review proposes a dual‑axis regulatory paradigm centered on the nucleus of the solitary tract (NTS) as the core signal integration hub, synthesizing preclinical and clinical evidence to systematically unify VNS mechanisms across brain‑derived and systemic diseases. The ascending afferent‑dominant brain regulatory axis mediates therapeutic ef…",
-      "authors": "Xiong B, Sun J, Lin C, Yao D.",
-      "venue": "Preprint",
-      "status": "Preprint · not peer reviewed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "preprint-10.31234/osf.io/z69we_v1",
-      "kind": "preprint",
-      "title": "The locus coeruleus – norepinephrine system as a regulator of social perception",
-      "date": "2026-09-02",
-      "observedAt": "2026-09-07",
-      "source": "Preprint",
-      "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.31234/osf.io/z69we_v1",
-      "summary": "Social perception allows us to rapidly interpret others' emotions, intentions, and actions, yet the underlying neural mechanisms remain incompletely understood. Here, we propose a framework linking neuromodulatory function to large-scale networks involved in social perception. The framework centers on the locus coeruleus-norepinephrine (LC–NE) system as an orchestrator of cortical networks. We argue that social perception is optimized when moderate tonic LC activity is paired with strong phasic responses to social-emotional cues, enabling selective attention, flexible updating of expectations, and accurate inter…",
-      "authors": "Ziaei M, Jensen CBP, Hussein H, O'Callaghan C, Zerbi V, Jacobs HIL.",
-      "venue": "Preprint",
-      "status": "Preprint · not peer reviewed",
-      "topics": [
-        "stimulate"
-      ]
-    },
-    {
-      "id": "preprint-10.21203/rs.3.rs-10540712/v1",
-      "kind": "preprint",
-      "title": "Mild and Reversible Proprioception Perturbation Suggests Causal Biomechanics for Memory-Dependent Spatial Behavior in Mice",
-      "date": "2026-09-02",
-      "observedAt": "2026-09-07",
-      "source": "Preprint",
-      "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10540712/v1",
-      "summary": "Abstract The peripheral nervous system is a frontline for embodied cognition, which requires integration of peripheral and central neural processes, yet acute, mild perturbation to dissecting functional causality is hard to achieve. The peripheral involvement of cognition and its mechanisms are generally difficult to dissect usually due to the lack of reversible manipulation techniques. Long postulated as essential for path integration, proprioception is one such modality. We developed a murine experimental system to manipulate proprioceptive inputs during memory-dependent localization task in spatial virtual re…",
-      "authors": "Liu M, Chang NC, Isagan J, Lee C, Min M, Chen C, Hsu C.",
-      "venue": "Preprint",
-      "status": "Preprint · not peer reviewed",
+      "id": "paper-10.1136/jnis-2026-025329",
+      "kind": "paper",
+      "title": "A unified signal-quality assessment framework for synchronized electro-intravascular encephalography and scalp electroencephalography.",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1136/jnis-2026-025329",
+      "summary": "Background Neurointerventional electrophysiology enables minimally invasive access to near-cortical signals without craniotomy. However, a standardized and interpretable signal-quality evaluation framework for electro-intravascular encephalography (EiEG) is lacking, limiting reproducible reporting and principled comparison with conventional scalp electroencephalography (EEG). Methods We proposed a framework quantifying physiological concordance, spectral fidelity, and robustness, and validated it in an ovine EiEG model using a stent-mounted electrode deployed in the superior sagittal sinus over the motor cortex.…",
+      "authors": "Liu G, Feng F, Ma Y, Kang F, Li S, Jia H, Wang W, Du Y, Duan Y, Duan F.",
+      "venue": "Journal of neurointerventional surgery",
+      "status": "Peer-reviewed / indexed",
       "topics": [
         "record"
       ]
     },
     {
-      "id": "preprint-10.64898/2026.08.27.746330",
+      "id": "paper-10.1002/mdc3.70819",
+      "kind": "paper",
+      "title": "Delayed Generalized Dystonia After Carbon Monoxide Poisoning: Good Response to Subthalamic Nucleus Deep Brain Stimulation.",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1002/mdc3.70819",
+      "summary": "Europe PMC does not provide an abstract for this record.",
+      "authors": "Zhao M, Lu D, Yan X, Li Z, Yin F.",
+      "venue": "Movement disorders clinical practice",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "paper-10.1088/1741-2552/ae9eee",
+      "kind": "paper",
+      "title": "Brain-computer interface clinical trial design considerations and clinical outcome assessments in pivotal studies: a summary of the 11th BCI society meeting 2025 workshop.",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1088/1741-2552/ae9eee",
+      "summary": "Objective. The Brain Computer Interface (BCI) Society Meeting 2025 held a workshop in collaboration with the Implantable BCI Collaborative Community (iBCI-CC) to discuss the selection, development and validation of clinical trial outcome assessments (COAs) for pivotal studies of BCIs. The iBCI-CC Clinical Study Endpoints Workgroup aims to build consensus on a COA framework that can meet the demands of emerging iBCI trials. Approach. The workshop brought together diverse stakeholders from the iBCI-CC community and beyond, including industry, academic and government institutions to engage in pre-competitive collab…",
+      "authors": "Sawyer A, Welle CG, French J, Kelemen J, Bashford L, Kramer D, McMullen D, Franklin R, Angle MR, Herrmann D, Oxley T, Dister J, Chetty N, Radcliffe EM, Kowalczyk J, Bose R, Farooqui J, Hochberg LR.",
+      "venue": "Journal of neural engineering",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "restore"
+      ]
+    },
+    {
+      "id": "preprint-10.64898/2026.09.08.26362080",
       "kind": "preprint",
-      "title": "Spacing theta-burst stimulation enhances synaptic potentiation in the vulnerable prefrontal cortex",
-      "date": "2026-09-01",
-      "observedAt": "2026-09-07",
+      "title": "Chronic sensing during subcallosal cingulate deep brain stimulation captures ketamine-associated changes in major depressive disorder",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
       "source": "Preprint",
       "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.08.27.746330",
-      "summary": "Neuromodulation with intermittent theta-burst stimulation (iTBS) is a clinical treatment for major depression. One postulated mechanism of iTBS is to strengthen the synaptic connections which activate the prefrontal cortex to regulate mood. With ex vivo electrical stimulation and neuronal calcium imaging, we demonstrate that a common, clinical iTBS pattern (600-stimuli, ∼3-min) reliably strengthens the synaptic recruitment of the adult mouse prefrontal cortex. This synaptic potentiation, however, becomes less reliable in the depressive-like mouse model of prolonged social isolation. Examining the complex calcium…",
-      "authors": "Zolis A, Hsieh AH, Venkatesan S, Ingram R, Georgiou J, Zrenner C, Collingridge GL, Rajji TK, Lambe EK.",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.08.26362080",
+      "summary": "Ketamine and subcallosal cingulate (SCC) deep brain stimulation (DBS) have each shown antidepressant effects in treatment-resistant depression, yet how ketamine modulates SCC physiology during chronic stimulation remains poorly understood. We analyzed 5,907 hours of bilateral SCC sensing, 485 participant-triggered recordings across 193 days, 47 ketamine dosing episodes, and an in-clinic session. Across naturalistic and in-clinic recordings, ketamine was associated with a convergent bilateral shift toward 21-40 Hz fast-band activity. Post-dose snapshots showed lower aperiodic-adjusted 5-20 Hz power and higher 21-…",
+      "authors": "Sumarac S, Lawson T, Favi Bocca L, Rabin JS, Giacobbe P, Nestor S, Hamani C, Lipsman N, Milosevic L, Davidson B.",
+      "venue": "Preprint",
+      "status": "Preprint · not peer reviewed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "preprint-10.21203/rs.3.rs-10546585/v1",
+      "kind": "preprint",
+      "title": "Alteration of regional Homogeneity and its correlation with cognitive function in alcohol use disorder patients",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Preprint",
+      "sourceId": "preprints",
+      "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10546585/v1",
+      "summary": "Abstract Background Cognitive impairment is a prevalent and debilitating consequence in patients with alcohol use disorder (AUD), which significantly impedes functional recovery and increases relapse risk. However, the neural mechanisms underlying these deficits remain ambiguous. Investigating alterations in intrinsic brain function (IBF) may help identify potential targets for neuromodulation and inform strategies for cognition. This study aims to characterize the changes in IBF among AUD patients and to explore their relationship with cognitive deficits. Methods 42 patients with AUD and 43 healthy controls (HC…",
+      "authors": "Chen J, Song X, Chen T, Liu S, Zou W, Fan N.",
+      "venue": "Preprint",
+      "status": "Preprint · not peer reviewed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "preprint-10.21203/rs.3.rs-10796304/v1",
+      "kind": "preprint",
+      "title": "DualAttentionNet: A Lightweight Dual-Attention Framework for Robust Multi-Class EEG Digit Decoding",
+      "date": "2026-09-11",
+      "observedAt": "2026-09-14",
+      "source": "Preprint",
+      "sourceId": "preprints",
+      "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10796304/v1",
+      "summary": "Abstract The visual classification of a stimulus by electroencephalography (EEG) has been a significant line of investigation in Brain Computer Interface (BCI) systems. The current issue of converting EEG signals into useful cognitive representations, including digit recognition, is a difficult issue because of low signal to noise ratio, high inter trial variability and overlapping neural tracks. This paper presents a DualAttentionNet with a multi-class EEG digit classification system based on Visual MNIST. The offered model improves the traditional EEGNet model by incorporating two channel-attention blocks. The…",
+      "authors": "Islam MR, Hossain MS, Arefin MS, Ali MR, Rahimi N, Murad SA.",
       "venue": "Preprint",
       "status": "Preprint · not peer reviewed",
       "topics": [
         "record",
+        "restore"
+      ]
+    },
+    {
+      "id": "paper-10.1002/advs.77667",
+      "kind": "paper",
+      "title": "A Multi-Scale Computational Framework for Evaluating Wireless Neuromodulation Feasibility via Magnetoelectric Nanoparticles.",
+      "date": "2026-09-10",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1002/advs.77667",
+      "summary": "Magnetoelectric nanoparticles (MENPs) represent a promising approach for wireless, minimally invasive neuromodulation with submillimetre precision. This study presents a multi-scale computational framework that bridges the gap from single-nanoparticle magnetoelectric properties to tissue-level electric field distributions, establishing a digital twin approach adaptable to different experimental platforms. The framework operates across three interconnected levels. (1). At the nanoscale, a 2D axisymmetric COMSOL model characterizes individual MENP response, integrating experimental data from cobalt ferrite cores (…",
+      "authors": "Bonato M, Zhang E, Chiaramello E, Fiocchi S, Suarato G, Gantenbein V, Cancino-Fuentes N, Suarez-Perez A, Sanchez-Vives MV, Pané S, Parazzini M.",
+      "venue": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "stimulate",
+        "compute"
+      ]
+    },
+    {
+      "id": "paper-10.1038/s41592-026-03220-9",
+      "kind": "paper",
+      "title": "A wireless modular platform for neuro-behavioral recording and closed-loop manipulation in small animals.",
+      "date": "2026-09-10",
+      "observedAt": "2026-09-14",
+      "source": "Europe PMC",
+      "sourceId": "europe-pmc",
+      "sourceUrl": "https://doi.org/10.1038/s41592-026-03220-9",
+      "summary": "Investigating the neural mechanisms of social group interactions and other naturalistic behaviors in small animals remains limited by current technology. Tethered neural recording systems are incompatible with many of these behaviors, while existing wireless devices for small animals are constrained by weight, bandwidth, recording duration and the lack of closed-loop modulation capabilities. Here we overcome these limitations by developing a Wireless, Interactive, Lightweight Datalogger (WILD) with integrated flexible neural probes, optogenetics, an inertial measurement unit, an ultrasonic microphone and a head-…",
+      "authors": "Zhao Z, Chang H, Paudel P, Park J, Liu C, Aurelio MQ, Oliva A, Fernandez-Ruiz A.",
+      "venue": "Nature methods",
+      "status": "Peer-reviewed / indexed",
+      "topics": [
+        "record"
+      ]
+    },
+    {
+      "id": "preprint-10.64898/2026.09.09.750393",
+      "kind": "preprint",
+      "title": "A Bidomain Boundary Element–Cable Method for Modeling Neuronal Responses to Electric Fields",
+      "date": "2026-09-10",
+      "observedAt": "2026-09-14",
+      "source": "Preprint",
+      "sourceId": "preprints",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.09.750393",
+      "summary": "Objective Extracellular electric fields critically influence neural activity through both exogenous neuromodulation and endogenous ephaptic coupling. While conventional cable models efficiently simulate membrane dynamics, they fail to capture bidirectional, field-mediated interactions self-consistently, and fully coupled volumetric methods require computationally prohibitive 3D meshing. We present Cable-BEM, a hybrid wire-kernel bidomain boundary element method designed to resolve these limitations. Approach By analytically integrating boundary integral kernels around cylindrical neuronal compartments, Cable-BEM…",
+      "authors": "Sabino V, Walenciak AJ, Gomez LJ.",
+      "venue": "Preprint",
+      "status": "Preprint · not peer reviewed",
+      "topics": [
         "stimulate"
       ]
     },
     {
-      "id": "preprint-10.64898/2026.08.24.746788",
+      "id": "preprint-10.21203/rs.3.rs-10854075/v1",
       "kind": "preprint",
-      "title": "Layer 5 anterior cingulate cortical neurons engage dorsolateral periaqueductal gray excitatory neurons to facilitate the affective component of pain",
-      "date": "2026-09-01",
-      "observedAt": "2026-09-07",
+      "title": "Trans-Spinal Theta Burst Stimulation for Persistent Gait Dysfunction in Parkinson's Disease After Deep Brain Stimulation: A Randomized Sham-Controlled Trial",
+      "date": "2026-09-10",
+      "observedAt": "2026-09-14",
       "source": "Preprint",
       "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.08.24.746788",
-      "summary": "Pain is a conscious perceptual experience characterized by its aversive quality and consequent motivation to quench pain perception. The anterior cingulate cortex (ACC) critically contributes to the emotional dimension of pain. In both humans and rodents, ACC neural activity increases during acute and chronic pain, whereas ACC lesioning or excitability reduction decreases emotional reactivity during pain. However, the ACC is connected to many brain regions and is engaged during experiences beyond pain. Thus, it remains unclear through which circuit mechanisms the ACC shapes pain experience, and how specific thos…",
-      "authors": "Kaslow J, McCallum WM, François A, Corder G, Kremer EJ, Ritola K, Lindsay NM, Scherrer G.",
+      "sourceUrl": "https://doi.org/10.21203/rs.3.rs-10854075/v1",
+      "summary": "Abstract Introduction Axial symptoms in Parkinson’s disease (PD) are challenging to treat, even with deep brain stimulation (DBS). Trans-spinal magnetic stimulation (TsMS) has emerged as a potential neuromodulatory approach for gait and balance dysfunction Methods In this randomized, double-blind, sham-controlled trial, patients with PD and DBS received active or sham TsMS for five days. The primary outcome was gait performance measured by the Timed Up and Go (TUG) test. Secondary outcomes included balance (Balance Evaluation Systems Test, BESTest), freezing of gait, motor severity (Unified Parkinson's Disease R…",
+      "authors": "Rocha AC, Simões JS, Santos SM, Carra RB, Oliveira JR, Nunes GA, França CC, Paraguay IB, Casagrande SCB, Carvalho MJ, Martins PN, Barbosa ER, Cury RG.",
+      "venue": "Preprint",
+      "status": "Preprint · not peer reviewed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "preprint-10.64898/2026.09.04.749069",
+      "kind": "preprint",
+      "title": "Spatial transcriptomics identifies L6 corticothalamic and L6b subplate-like heterotopic neurons in an epileptogenic SLC35A2-associated brain malformation",
+      "date": "2026-09-08",
+      "observedAt": "2026-09-14",
+      "source": "Preprint",
+      "sourceId": "preprints",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.04.749069",
+      "summary": "Increased white matter (WM) heterotopic neurons are a pathological feature observed in various neurological and psychiatric disorders. Mild malformation of cortical development with oligodendroglial hyperplasia in epilepsy (MOGHE) is a drug-resistant epilepsy-associated cortical malformation characterized by increased WM heterotopic neurons and OLIG2-positive cells and frequently associated with somatic SLC35A2 mutations. However, the precise cellular identity of these heterotopic neurons remains unclear. Using imaging-based spatial transcriptomics (iST) of SLC35A2 -mutated MOGHE tissues, we found that most WM h…",
+      "authors": "Tabe NK, Miyashita S, Yagita K, Iijima K, Shimaoka K, Hosaka A, Okumiya S, Nishitani K, Komatsu K, Usukura E, Murayama K, Sano T, Takao M, Iwasaki M, Hoshino M.",
       "venue": "Preprint",
       "status": "Preprint · not peer reviewed",
       "topics": [
@@ -594,33 +578,50 @@
       ]
     },
     {
-      "id": "preprint-10.64898/2026.08.26.746438",
+      "id": "preprint-10.64898/2026.09.02.748902",
       "kind": "preprint",
-      "title": "Transcriptomic characteristics along the longitudinal axis of the hippocampus and medial entorhinal cortex across species",
-      "date": "2026-08-31",
-      "observedAt": "2026-09-07",
+      "title": "Manipulating Excitation-Inhibition Balance by Temporal Interference Brain Stimulation at Different Frequencies",
+      "date": "2026-09-08",
+      "observedAt": "2026-09-14",
       "source": "Preprint",
       "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.08.26.746438",
-      "summary": "The hippocampus (HPC) and medial entorhinal cortex (MEC) are essential for learning, memory, and spatial cognition, and both exhibit dorsoventral (longitudinal) organization across mammalian species. While prior studies have highlighted functional differences along this axis, the molecular basis and cross-species conservation of these differences remain poorly understood. Here, we employed spatial transcriptomics to generate a comprehensive molecular atlas of HPC and MEC in five species—human, tree shrew, mouse, canine, and pig—standardizing the dorsoventral axis for cross-species comparison. Using support vecto…",
-      "authors": "Cheng S, Wang Q, Feng Y, Chen C, Suri G, Liang Y, Yang Y, Gao K, Witter MP, Yang H, Lin J, Miao C.",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.02.748902",
+      "summary": "Temporal interference brain stimulation (TIBS) is a non-invasive neuromodulation approach that can reach deep brain targets by delivering two kilohertz-frequency currents through scalp electrodes, producing a low- frequency amplitude envelope where the fields intersect. Conventional deep brain stimulation suppresses its targets at 130 Hz, and TIBS studies of epilepsy have adopted the same range. However, which neurons TIBS recruits at different frequencies has never been measured. Here, we recorded from genetically defined populations in the mouse hippocampus across envelope frequencies from 10 to 130 Hz, using…",
+      "authors": "Fang Y, Chou L, Tseng Y, Chu P, Fang Y, Chen H, Liao Y, Huang C, Chiang P.",
       "venue": "Preprint",
       "status": "Preprint · not peer reviewed",
       "topics": [
-        "record"
+        "stimulate"
       ]
     },
     {
-      "id": "preprint-10.64898/2026.08.25.26361076",
+      "id": "preprint-10.64898/2026.09.02.748985",
       "kind": "preprint",
-      "title": "Multiday rhythms shape mood dynamics in depression",
-      "date": "2026-08-31",
-      "observedAt": "2026-09-07",
+      "title": "Dose-Dependent Effects of Low-Intensity Focused Ultrasound on Human Deep White Matter Tracts",
+      "date": "2026-09-08",
+      "observedAt": "2026-09-14",
       "source": "Preprint",
       "sourceId": "preprints",
-      "sourceUrl": "https://doi.org/10.64898/2026.08.25.26361076",
-      "summary": "Mood fluctuations in major depressive disorder are difficult to anticipate. The biological neural rhythms that organize mood dynamics over days to weeks remain unknown. In individuals implanted with a chronic neural sensing and stimulation device for treatment-resistant depression, we collected years-long intracranial neural recordings alongside daily mood ratings. Both mood and limbic neural activity fluctuated cyclically with multiday (multidien) periodicities of 2–34 days. An individual’s daily phase position within mood cycles tracked depression severity, distinguishing whether symptoms were rising, peaking,…",
-      "authors": "Sekar NP, Fan JM, Sellers KK, Maya DA, Tremblay-McGaw A, Becker N, Berre AL, Allawala A, Hamlat E, Sugrue LP, Rao VR, Krystal AD, Chang EF, Khambhati AN.",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.02.748985",
+      "summary": "Background Low-intensity focused ultrasound (LIFU) is emerging as a method for anatomically specific, noninvasive, and reversible neuromodulation of deep brain structures relevant to psychopathology. A key requirement for clinical translation is evidence of graded target engagement. We examined whether LIFU applied to deep white matter tracts produces dose-dependent functional connectivity changes in healthy adults. Methods In this preregistered, double-blind, randomized study, 35 healthy adults underwent LIFU targeting (80 s, 10% duty cycle, estimated ISPPA 2.26 W/cm 2 , 0.5 MHz, in a θ-burst pattern) of indivi…",
+      "authors": "Tsuchiyagaito A, Misaki M, Ren X, Clark D, Taren A, Chen CV, Ironside M, Villarreal MF, Kuplicki R, Mathew S, Paulus M, Philip NS, Guinjoan SM.",
+      "venue": "Preprint",
+      "status": "Preprint · not peer reviewed",
+      "topics": [
+        "stimulate"
+      ]
+    },
+    {
+      "id": "preprint-10.64898/2026.09.03.749087",
+      "kind": "preprint",
+      "title": "Comparable phosphene size and contrast properties, but differing detection reliability for optogenetic versus electrical stimulation of macaque V1",
+      "date": "2026-09-08",
+      "observedAt": "2026-09-14",
+      "source": "Preprint",
+      "sourceId": "preprints",
+      "sourceUrl": "https://doi.org/10.64898/2026.09.03.749087",
+      "summary": "Cortical visual prostheses aim to restore vision by stimulating primary visual cortex (V1) to evoke artificial percepts (phosphenes). Electrical stimulation has long served this purpose, and optogenetic approaches promise higher spatial resolution via cell-type specificity. Recent investigations have demonstrated localized behavioral responses to optogenetic V1 stimulation (1–3), but the applied perimetry paradigms cannot dissociate a genuine percept from a reflexive oculomotor response, leaving the perceptual character of optogenetic phosphenes unresolved. To address this gap, two macaques received optogenetic…",
+      "authors": "Liza K, Falkowska-Kisiel M, Cadena-Valencia J, Greilsamer J, Lanz F, Haag M, Bergadano A, Ghezzi D, Schmid MC.",
       "venue": "Preprint",
       "status": "Preprint · not peer reviewed",
       "topics": [
@@ -632,7 +633,7 @@
       "kind": "news",
       "title": "NIH Demystifies Vital Biomedical Tech for Congressional Staff",
       "date": "2025-08-15",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/nih-demystifies-vital-biomedical-tech-congressional-staff",
@@ -649,7 +650,7 @@
       "kind": "news",
       "title": "Innovative imaging tool could improve diagnosis and treatment of hearing loss",
       "date": "2025-08-04",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/innovative-imaging-tool-could-improve-diagnosis-treatment-hearing-loss",
@@ -666,7 +667,7 @@
       "kind": "news",
       "title": "Scientists Develop High-Performance MRI Scanner in Effort to Define Microscopic Brain Structures",
       "date": "2025-07-16",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/scientists-develop-high-performance-mri-scanner-effort-define-microscopic-brain-structures",
@@ -683,7 +684,7 @@
       "kind": "news",
       "title": "High-tech sticker can identify real human emotions",
       "date": "2025-04-22",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/high-tech-sticker-can-identify-real-human-emotions",
@@ -700,7 +701,7 @@
       "kind": "news",
       "title": "Your skin is breathing. This new wearable device can measure it.",
       "date": "2025-04-10",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/your-skin-breathing-new-wearable-device-can-measure-it",
@@ -717,7 +718,7 @@
       "kind": "news",
       "title": "AI tool can track effectiveness of multiple sclerosis treatments",
       "date": "2025-04-08",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/ai-tool-can-track-effectiveness-multiple-sclerosis-treatments",
@@ -734,7 +735,7 @@
       "kind": "news",
       "title": "Revealing capillaries and cells in living organs with ultrasound",
       "date": "2025-04-04",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/revealing-capillaries-cells-living-organs-ultrasound",
@@ -751,7 +752,7 @@
       "kind": "news",
       "title": "Decreasing the invasiveness of deep brain stimulation",
       "date": "2025-03-20",
-      "observedAt": "2026-09-07",
+      "observedAt": "2026-09-14",
       "source": "NIH NIBIB News",
       "sourceId": "nibib",
       "sourceUrl": "https://www.nibib.nih.gov/news-events/newsroom/decreasing-invasiveness-deep-brain-stimulation",
