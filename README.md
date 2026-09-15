@@ -12,7 +12,7 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 - **Glossary:** 40 introductory definitions with links to their topic guides.
 - **Methods comparison:** eight qualitative comparisons of electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
 - **Topic depth:** each guide includes engineering tradeoffs, a four-stage workflow, common mistakes, and primary sources, with worked examples where useful.
-- **Ideas notebook:** four evolving notes, six platform strategies, an interactive site/channel comparison, a bandwidth calculator, and a downloadable 20-milestone research package. Begin at [Ideas](https://howardwhsrun.github.io/neurovisual/#ideas).
+- **Ideas notebook:** four evolving notes, a six-platform visual gallery with verified YouTube embeds and original scaling diagrams, an interactive site/channel comparison, a bandwidth calculator, and a downloadable 20-milestone research package. Begin at [Ideas](https://howardwhsrun.github.io/neurovisual/#ideas).
 - **Search:** one index spanning ideas, company strategies, the guides, resources, technologies, organizations, researchers, programs, career roles, job listings, and paper snapshots.
 - **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
@@ -37,6 +37,7 @@ The original TypeScript/classic-script architecture is retained. GitHub Pages se
 | --- | --- |
 | `index.html` | Accessible navigation, global search, and retained atlas markup |
 | `data/ideas.json`, `data/neural-counts.json` | Authored research notes, company strategies, and scoped milestone evidence |
+| `src/company-media.ts`, `company-media.css` | Shared image galleries, click-to-load videos, and interface diagrams |
 | `src/ideas.ts`, `ideas.css` | Notebook, comparisons, and arithmetic controls |
 | `scripts/build-ideas.mjs`, `scripts/check-ideas.mjs` | Data generation and notebook validation |
 | `hub.css` | Responsive hub design and compatible atlas refinements |

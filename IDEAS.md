@@ -37,3 +37,12 @@ Company strategy records live in the `companies` array in `data/ideas.json`. Sep
 - `#ideas/readout-budget` — raw acquisition calculator.
 
 `scripts/build-ideas.mjs` compiles JSON into a local classic script. `src/ideas.ts` renders and binds the notebook; `ideas.css` styles it. The hub owns navigation; the atlas links organization profiles back to the corresponding counting strategy. Tests cover data integrity, rendered states, URL/focus behavior, and arithmetic with element doubles. They do not substitute for browser/layout review.
+
+## Images, diagrams, and embedded videos
+
+Each company's `visual` object holds the short name, interface route, diagram explanation, and three reading steps. The original SVG diagrams in `src/company-media.ts` are conceptual and explicitly not to scale. The `media` object records checked date, image source/credit/usage, and a verified YouTube ID/title/channel with video context.
+
+- Use an official company or research-institution video, and verify the exact ID through YouTube oEmbed and `playableInEmbed` metadata. Do not substitute a company vision video for clinical evidence. Distinguish temporary recordings, chronic trials, demonstrations, and device design.
+- Photographs require an appropriate reuse basis and source attribution. The BISC photo uses Columbia's EurekAlert media record with attribution rights. Other platforms use YouTube-hosted previews with the original official player. Company-site illustrations whose terms restrict separate reuse are not copied.
+- Keep media on the original host. Players load only when clicked, use the YouTube privacy-enhanced embed domain, and retain a direct watch link. Client-blocked frames can recover to their poster and a watch link. Remote-media availability depends on the host and viewer's browser.
+- `src/company-media.ts` and `company-media.css` supply media to the notebook and corresponding organization profiles. Updating one company record updates both views. Always retain the video-context paragraph on organization profiles.
