@@ -3098,6 +3098,19 @@
               "published": "2025-06-12"
             }
           ]
+        },
+        {
+          "date": "2026-01-28",
+          "title": "21 enrolled participants reported",
+          "text": "Neuralink reports 21 participants enrolled across its trials. Planned electrode-count expansion is prospective.",
+          "edges": [],
+          "sources": [
+            {
+              "title": "Two years of Telepathy",
+              "url": "https://neuralink.com/updates/two-years-of-telepathy/",
+              "published": "2026-01-28"
+            }
+          ]
         }
       ],
       "changes": [
@@ -4941,6 +4954,19 @@
               "title": "Paradromics Completes First Human Brain-Computer Interface (BCI) Implantation",
               "url": "https://paradromics.com/news/paradromics-completes-first-human-brain-computer-interface-bci-implantation/",
               "published": "2026-06-17"
+            }
+          ]
+        },
+        {
+          "date": "2026-09-14",
+          "title": "Speech communication reported in first long-term participant",
+          "text": "The company reports participant-selected speech and text in Connect-One. This is a first-participant announcement, not a general efficacy estimate.",
+          "edges": [],
+          "sources": [
+            {
+              "title": "Connexus speech communication update",
+              "url": "https://paradromics.com/news/paradromics-achieves-real-time-speech-connexus-brain-computer-interface/",
+              "published": "2026-09-14"
             }
           ]
         }

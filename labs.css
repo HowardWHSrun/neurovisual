@@ -314,3 +314,33 @@
 @media(prefers-reduced-motion:reduce){.lab-area-grid a{transition:none}}
 /* The mobile area selector provides the same choices without a second filter list. */
 @media(max-width:650px){.lab-area-grid{display:none}}
+
+/* A review trail keeps source dates separate from the date we read them. */
+.lab-audit,.company-status{margin:22px 0 30px;padding:24px;border:1px solid #c8d9de;border-radius:16px;background:#f2f8f8;color:#233e4b;min-width:0}
+.lab-audit-top,.company-status>header{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lab-audit .eyebrow,.company-status .eyebrow{font-size:.65rem;letter-spacing:.08em;color:#42636d}
+.lab-audit-status,.company-status-date{font-size:.72rem;color:#466674}
+.lab-audit-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:30px;margin:20px 0}
+.lab-audit h2,.company-status h2{font-size:clamp(1.12rem,2vw,1.4rem);line-height:1.4;margin:0 0 10px;letter-spacing:-.025em}
+.lab-audit p,.company-status p{font-size:.85rem;line-height:1.7;margin:7px 0}
+.lab-audit-latest{border-left:1px solid #c8d9de;padding-left:24px;display:flex;flex-direction:column;align-items:flex-start;gap:7px}
+.lab-audit-latest>span{font-size:.72rem;color:#52717c}.lab-audit-latest time{font-size:.9rem;font-weight:650}.lab-audit-latest a{font-size:.85rem;line-height:1.6}
+.lab-audit details,.company-status details{border-top:1px solid #c8d9de;padding-top:14px;margin-top:16px}
+.lab-audit summary,.company-status summary,.lab-audit-coverage summary{font-size:.82rem;font-weight:650;cursor:pointer;line-height:1.6}
+.lab-audit :is(a,summary),.company-status :is(a,summary){overflow-wrap:anywhere}.lab-audit summary:focus-visible,.company-status summary:focus-visible{outline:2px solid #2563ae;outline-offset:5px}
+.lab-audit-changes{font-size:.84rem;line-height:1.7;padding-left:20px}.lab-audit-pages{padding-left:22px}
+.lab-audit-pages li{padding:12px 0;border-bottom:1px solid #d6e2e6}.lab-audit-pages a{font-size:.84rem;font-weight:600}
+.lab-audit-pages small,.lab-source-review,.lab-school-review{display:block!important;margin-top:6px;color:#38626b;font-size:.73rem;line-height:1.5}
+.lab-audit-pages small[data-review=unavailable],.lab-source-review[data-review=unavailable],.lab-school-review[data-review=unavailable]{color:#88521e}
+.lab-audit-pages p,.lab-source-note{font-size:.77rem!important;line-height:1.6!important;margin:6px 0!important;color:#506674}
+.lab-audit .lab-audit-scope{font-size:.75rem;margin-top:16px;color:#526b75}
+.lab-audit-coverage{grid-column:1/-1;background:#f2f8f8;border:1px solid #c8d9de;border-radius:14px;padding:26px}
+.lab-audit-gaps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px;font-size:.85rem}
+.company-status-stage{display:inline-block;border:1px solid #b3cdcc;border-radius:30px;padding:5px 12px;font-size:.72rem;margin:18px 0 13px;background:#e1efeb;color:#24564e}
+.company-status .company-status-scope{padding-left:14px;border-left:3px solid #abc6c9;font-size:.8rem;color:#506674;margin-top:14px}
+.status-refs{white-space:nowrap;font-size:.73rem;font-weight:400}.status-refs a{color:#246878!important;text-decoration:none!important}
+.company-status-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:22px;margin-top:22px}.company-status-facts h3{font-size:.96rem;margin:6px 0}.company-status-facts time{font-size:.7rem;color:#526b75}
+.company-status-sources{padding-left:22px;margin-top:22px}.company-status-sources li{padding:10px 0}.company-status-sources a{font-size:.83rem;line-height:1.5}.company-status-sources small,.company-status-registry :is(span,small){display:block;font-size:.72rem;color:#526b75;line-height:1.6;margin-top:5px}.company-status-sources p,.company-status .company-status-review-scope{font-size:.74rem}
+.company-status-registry ul{padding-left:20px}.company-status-registry li{margin:16px 0}.company-status-registry a{font-size:.8rem;line-height:1.5}
+@media(max-width:640px){.lab-audit,.company-status{padding:18px;margin:18px 0 24px}.lab-audit-grid{grid-template-columns:1fr;gap:18px}.lab-audit-latest{border-left:0;border-top:1px solid #c8d9de;padding:16px 0 0}.lab-audit-gaps{grid-template-columns:1fr}.lab-audit-coverage{padding:20px}}
+#neurotech-atlas-2026 .na-registry-context{font-size:.74rem;line-height:1.65;color:#596b7b;margin:12px 0 22px;padding-left:12px;border-left:2px solid #c8d9de}

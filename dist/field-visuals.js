@@ -139,7 +139,7 @@ const FieldVisuals = (() => {
         const hay = [...profile.methods, ...profile.signals].join(' ').toLowerCase();
         const modality = /\bfmri\b|functional magnetic resonance/.test(hay) ? 'fmri' : /\bfnirs\b|near.infrared spectroscopy/.test(hay) ? 'fnirs' : /\bmeg\b|magnetoencephal/.test(hay) ? 'meg' : /\beeg\b|electroencephal/.test(hay) ? 'eeg' : /\becog\b|electrocortic/.test(hay) ? 'ecog' : /calcium imaging|calcium fluorescence/.test(hay) ? 'calcium' : /intracortical|extracellular recording|silicon probe/.test(hay) ? 'intracortical' : /pose estimation|motion capture|triangulation/.test(hay) ? 'pose' : '';
         const themeMap = { 'Neural interfaces': 'interfaces', 'Neural decoding': 'signals', 'Neuromodulation': 'stimulation', 'Neuroimaging': 'imaging', 'Rehabilitation & prosthetics': 'signals', 'Bioelectronics': 'interfaces', 'Computational neuroscience': 'computation' };
-        const topicId = themeMap[profile.themes[0]] || 'data';
+        const topicId = profile.themes[0] === 'Rehabilitation & prosthetics' && /stimulation/.test(hay) ? 'stimulation' : themeMap[profile.themes[0]] || 'data';
         const d = modality ? methodDiagram(modality) : diagram(topicId);
         const sourceRefs = modality ? [hubMethods.find(m => m.id === modality).source] : topicRefs(topicId);
         const chips = profile.signals.slice(0, 3).map(s => `<span>${e(s)}</span>`).join('');

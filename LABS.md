@@ -34,3 +34,24 @@ The diagrams are original qualitative symbols for research areas. They encode no
 ## Release validation
 
 The automated checks render every profile, resolve project references and atlas relationships, compare source data with generated assets, and exercise filtering, pagination, global search, routes, and text-input composition. Browser checks cover desktop and 390-pixel mobile layouts, search focus, empty results, Rice and university filters, topic controls, profile navigation, and links from the original atlas. The existing company-media and ideas checks remain in the full test run.
+
+## Source audit (15 September 2026)
+
+Every detailed profile has an `audit` object. Every retained claim source has a
+`review` object, with its actual access scope: `read`, `abstract-only`, or
+`unavailable`. School discovery pages use the same status vocabulary. A check date
+is not a publication date. An HTTP success is not evidence that content was read.
+Do not refresh check dates without rereading content.
+
+`audit.latest` means the newest dated source found in this review, not an exhaustive
+claim about the lab's newest work. Keep failures and alternative official pages in
+`audit.pages`; a profile may be useful while its access status is `partial`.
+The profile, atlas teaser, coverage page, and generated Markdown dossier expose
+this evidence trail. Wider atlas entries are not automatically included in it.
+
+Selected company clinical milestones live in `data/company-status.json` and are
+shown consistently in organization profiles, counting ideas, and company histories.
+Separate human use, recruitment, registry enrollment estimates, company performance
+announcements, device-specific clearance, and commercial authorization. Use the
+regulator's exact indication when a company headline is broader. Registry record
+update dates must remain separate from the snapshot fetch date.
