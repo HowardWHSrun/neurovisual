@@ -186,7 +186,7 @@
       "title": "Memory & aging",
       "question": "How do we remember and learn, and what changes with age?",
       "summary": "Explore memory mechanisms, learning across healthy aging, and tools for age-related disease research. Basic memory experiments and disease-model measurements do not establish a treatment for age-related memory loss.",
-      "imageLabId": "rice-kemere",
+      "imageLabId": "mit-boyden",
       "labLinks": [
         {
           "labId": "rice-kemere",
@@ -303,7 +303,7 @@
       "title": "Repair & recovery",
       "question": "What helps damaged nerves and circuits recover?",
       "summary": "Investigate recovery after injury and the biology that may support repair. Rehabilitation, animal experiments, and cell models answer different parts of this question.",
-      "imageLabId": "rice-luan",
+      "imageLabId": "epfl-courtine",
       "labLinks": [
         {
           "labId": "rice-luan",
@@ -419,7 +419,7 @@
       "title": "Tools that make research possible",
       "question": "How can researchers measure reliably and share what they learn?",
       "summary": "Build better recording systems, durable interfaces, imaging methods, and reusable analysis tools. These foundations enable many biological and clinical questions.",
-      "imageLabId": "rice-xie",
+      "imageLabId": "columbia-shepard",
       "labLinks": [
         {
           "labId": "rice-xie",

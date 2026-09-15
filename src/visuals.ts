@@ -89,7 +89,7 @@ const NeuroVisuals=(()=>{
   else dialog.querySelector<HTMLButtonElement>('[data-visual-close]')?.focus();
  }
  function idea(id:string){
-  const imageId:Record<string,string>={'moores-law-bci':'lab-rice-xie','density-or-coverage':'company-precision','useful-channels':'lab-rice-luan','readout-budget':'company-bisc'};
+  const imageId:Record<string,string>={'moores-law-bci':'company-blackrock','density-or-coverage':'company-precision','useful-channels':'lab-stanford-nptl','readout-budget':'company-bisc'};
   const m=items().find(m=>m.id===imageId[id]);if(!m)return '';
   const labels:Record<string,string>={'moores-law-bci':'One probe. Several different counts.','density-or-coverage':'The same number, in different places.','useful-channels':'Follow the signal all the way through.','readout-budget':'Every sample has to travel somewhere.'};
   const dots=(start:number,gap:number)=>Array.from({length:16},(_,i)=>`<circle cx="${start+i%4*gap}" cy="${55+Math.floor(i/4)*gap}" r="3.5" fill="#55b7a5"/>`).join('');

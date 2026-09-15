@@ -2,6 +2,26 @@
   "reviewed": "2026-09-15",
   "items": [
     {
+      "labId": "stanford-nptl",
+      "title": "Attempted speech becomes on-screen text",
+      "focus": "Speech decoding",
+      "kind": "photo",
+      "image": {
+        "url": "https://med.stanford.edu/news/all-news/2023/08/brain-implant-speech-als/_jcr_content/_cq_featuredimage.coreimg.80.1280.jpeg/1736929500386/willett-and-bennett.jpeg",
+        "alt": "Frank Willett at a computer beside research participant Pat Bennett, with recording traces and a speech prompt on monitors.",
+        "caption": "Frank Willett works with Pat Bennett in the Stanford speech-BCI study reported in August 2023. Implanted sensors record activity associated with attempted speech, which software converts to on-screen text.",
+        "credit": "Steve Fisch / Stanford Medicine",
+        "source": "https://med.stanford.edu/news/all-news/2023/08/brain-implant-speech-als.html"
+      },
+      "video": {
+        "id": "DaWb1ukmYHQ",
+        "title": "New hope for ALS patients to communicate | 90 Seconds w/ Lisa Kim",
+        "channel": "Stanford Medicine",
+        "source": "https://med.stanford.edu/news/all-news/2023/08/brain-implant-speech-als.html",
+        "description": "Stanford Medicine introduces the 2023 research on decoding attempted speech from implanted recordings. The experimental system displays words on a computer screen."
+      }
+    },
+    {
       "labId": "rice-luan",
       "title": "An ultraflexible electrode beside active neurons",
       "image": {
@@ -15,17 +35,21 @@
       "kind": "figure"
     },
     {
-      "labId": "rice-xie",
-      "title": "Flexible threads for long-term neural recording",
+      "labId": "epfl-courtine",
+      "title": "A brain–spine interface outdoors",
+      "focus": "Walking restoration",
+      "kind": "photo",
       "image": {
-        "url": "https://news-network.rice.edu/news/files/2020/09/0914_NEURO-2-web.jpg",
-        "alt": "Xie Laboratory illustration of flexible nanoelectronic threads for recording neurons.",
-        "caption": "An illustration accompanying the Xie lab’s work on flexible nanoelectronic threads for collecting neuronal signals over time. It is a research concept visual, not a clinical result.",
-        "credit": "Xie Laboratory / Rice University",
-        "source": "https://news.rice.edu/news/2020/gentle-probes-could-enable-massive-brain-data-collection"
-      },
-      "focus": "Flexible recording interfaces",
-      "kind": "figure"
+        "url": "https://actu.epfl.ch/image/138164/1108x622.jpg",
+        "alt": "Gert-Jan walks using a wheeled walker beside researcher Andrea Galvez, who holds a laptop near a lake.",
+        "caption": "Gert-Jan and doctoral researcher Andrea Galvez at Lake Sauvabelin in Lausanne. EPFL published this photograph with its May 2023 report on a brain–spine interface tested in one participant with spinal cord injury.",
+        "credit": "2023 EPFL / Gilles Weber",
+        "source": "https://actu.epfl.ch/news/un-paraplegique-remarche-par-la-force-de-sa-pens-6/",
+        "license": {
+          "label": "CC BY-SA 4.0",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        }
+      }
     },
     {
       "labId": "rice-robinson",
@@ -48,69 +72,16 @@
       "kind": "photo"
     },
     {
-      "labId": "rice-tringides",
-      "title": "Cells extending through microchannels",
+      "labId": "mit-boyden",
+      "title": "Neural proteins revealed by expansion microscopy",
+      "focus": "Imaging neural tissue structure",
+      "kind": "figure",
       "image": {
-        "url": "https://news.rice.edu/sites/g/files/bxs2656/files/inline-images/540%20FIG14-V2%20_0.jpeg",
-        "alt": "A series of microscopy images showing cellular projections growing through microchannels over 14 days in vitro.",
-        "caption": "Microscopy follows cellular projections extending through a microchannel device over 14 days in vitro. The Tringides lab uses such controlled environments to investigate interactions between neural and tumor cells.",
-        "credit": "Tringides Lab / Rice University",
-        "source": "https://news.rice.edu/news/2026/rices-tringides-wins-prestigious-pew-biomedical-scholar-award"
-      },
-      "video": {
-        "id": "6XNkt_jipzI",
-        "title": "Christina Tringides - Sontag Foundation \"Distinguished Scientist\"",
-        "channel": "Rice Advanced Materials Institute",
-        "source": "https://news.rice.edu/news/2025/materials-match-brain-rice-engineer-earns-sontag-foundation-distinction",
-        "description": "An institutional introduction to Tringides’ soft-materials research and the CHAMELEON project supported by the Sontag Foundation. This complements the microchannel image but concerns a separate implant-development direction. Rice credits Jeff Fitlow and Jorge Vidal for the associated media."
-      },
-      "focus": "Living neural tissue models",
-      "kind": "figure"
-    },
-    {
-      "labId": "rice-kemere",
-      "title": "Finding structure in neural population activity",
-      "image": {
-        "url": "https://rnel.rice.edu/images/research-features/GP-publicity2.png",
-        "alt": "Gaussian-process manifold research graphic displayed in the Kemere lab’s machine-learning overview.",
-        "caption": "The lab’s Gaussian-process manifold graphic accompanies research on extracting hidden structure from neural population activity. The overview does not identify a specific dataset or quantitative result for this image.",
-        "credit": "Kemere Lab / Rice University (source attribution; individual creator not named)",
-        "source": "https://rnel.rice.edu/"
-      },
-      "focus": "Neural population decoding",
-      "kind": "figure"
-    },
-    {
-      "labId": "rice-mahi",
-      "title": "Measuring wrist motion with OpenWrist",
-      "image": {
-        "url": "https://mahilab.rice.edu/sites/default/files/styles/wide/public/2025-08/DSC_0119.JPG?itok=C3QDnavL",
-        "alt": "A brace-restricted wrist undergoing assessment in the MAHI OpenWrist device.",
-        "caption": "OpenWrist is shown assessing movement with a wrist brace in place. The lab’s rehabilitation program investigates robotic and wearable measurements of human motion.",
-        "credit": "MAHI Lab / Rice University (source attribution; photographer not named)",
-        "source": "https://mahilab.rice.edu/research/human-motion-assessment-rehabilitation"
-      },
-      "focus": "Rehabilitation robotics",
-      "kind": "photo"
-    },
-    {
-      "labId": "stanford-nptl",
-      "title": "Attempted speech becomes on-screen text",
-      "focus": "Speech decoding",
-      "kind": "photo",
-      "image": {
-        "url": "https://med.stanford.edu/news/all-news/2023/08/brain-implant-speech-als/_jcr_content/_cq_featuredimage.coreimg.80.1280.jpeg/1736929500386/willett-and-bennett.jpeg",
-        "alt": "Frank Willett at a computer beside research participant Pat Bennett, with recording traces and a speech prompt on monitors.",
-        "caption": "Frank Willett works with Pat Bennett in the Stanford speech-BCI study reported in August 2023. Implanted sensors record activity associated with attempted speech, which software converts to on-screen text.",
-        "credit": "Steve Fisch / Stanford Medicine",
-        "source": "https://med.stanford.edu/news/all-news/2023/08/brain-implant-speech-als.html"
-      },
-      "video": {
-        "id": "DaWb1ukmYHQ",
-        "title": "New hope for ALS patients to communicate | 90 Seconds w/ Lisa Kim",
-        "channel": "Stanford Medicine",
-        "source": "https://med.stanford.edu/news/all-news/2023/08/brain-implant-speech-als.html",
-        "description": "Stanford Medicine introduces the 2023 research on decoding attempted speech from implanted recordings. The experimental system displays words on a computer screen."
+        "url": "https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202504/exploration_900x600.jpg?itok=ClyB4bxR",
+        "alt": "Expansion microscopy image showing colored synaptic proteins alongside neuronal processes in mouse cortex.",
+        "caption": "Expansion microscopy reveals synaptic proteins and nearby neuronal processes in mouse primary somatosensory cortex. Tissue is physically expanded for imaging; this is a view of tissue structure, not a live activity recording.",
+        "credit": "Edward Boyden / MIT",
+        "source": "https://news.mit.edu/2025/brief-history-expansion-microscopy-0423"
       }
     },
     {
@@ -134,21 +105,17 @@
       }
     },
     {
-      "labId": "epfl-courtine",
-      "title": "A brain–spine interface outdoors",
-      "focus": "Walking restoration",
-      "kind": "photo",
+      "labId": "rice-kemere",
+      "title": "Finding structure in neural population activity",
       "image": {
-        "url": "https://actu.epfl.ch/image/138164/1108x622.jpg",
-        "alt": "Gert-Jan walks using a wheeled walker beside researcher Andrea Galvez, who holds a laptop near a lake.",
-        "caption": "Gert-Jan and doctoral researcher Andrea Galvez at Lake Sauvabelin in Lausanne. EPFL published this photograph with its May 2023 report on a brain–spine interface tested in one participant with spinal cord injury.",
-        "credit": "2023 EPFL / Gilles Weber",
-        "source": "https://actu.epfl.ch/news/un-paraplegique-remarche-par-la-force-de-sa-pens-6/",
-        "license": {
-          "label": "CC BY-SA 4.0",
-          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
-        }
-      }
+        "url": "https://rnel.rice.edu/images/research-features/GP-publicity2.png",
+        "alt": "Gaussian-process manifold research graphic displayed in the Kemere lab’s machine-learning overview.",
+        "caption": "The lab’s Gaussian-process manifold graphic accompanies research on extracting hidden structure from neural population activity. The overview does not identify a specific dataset or quantitative result for this image.",
+        "credit": "Kemere Lab / Rice University (source attribution; individual creator not named)",
+        "source": "https://rnel.rice.edu/"
+      },
+      "focus": "Neural population decoding",
+      "kind": "figure"
     },
     {
       "labId": "mit-anikeeva",
@@ -166,6 +133,19 @@
           "url": "https://creativecommons.org/licenses/by-nc-nd/3.0/"
         }
       }
+    },
+    {
+      "labId": "rice-xie",
+      "title": "Flexible threads for long-term neural recording",
+      "image": {
+        "url": "https://news-network.rice.edu/news/files/2020/09/0914_NEURO-2-web.jpg",
+        "alt": "Xie Laboratory illustration of flexible nanoelectronic threads for recording neurons.",
+        "caption": "An illustration accompanying the Xie lab’s work on flexible nanoelectronic threads for collecting neuronal signals over time. It is a research concept visual, not a clinical result.",
+        "credit": "Xie Laboratory / Rice University",
+        "source": "https://news.rice.edu/news/2020/gentle-probes-could-enable-massive-brain-data-collection"
+      },
+      "focus": "Flexible recording interfaces",
+      "kind": "figure"
     },
     {
       "labId": "northwestern-rogers",
@@ -188,6 +168,26 @@
       }
     },
     {
+      "labId": "rice-tringides",
+      "title": "Cells extending through microchannels",
+      "image": {
+        "url": "https://news.rice.edu/sites/g/files/bxs2656/files/inline-images/540%20FIG14-V2%20_0.jpeg",
+        "alt": "A series of microscopy images showing cellular projections growing through microchannels over 14 days in vitro.",
+        "caption": "Microscopy follows cellular projections extending through a microchannel device over 14 days in vitro. The Tringides lab uses such controlled environments to investigate interactions between neural and tumor cells.",
+        "credit": "Tringides Lab / Rice University",
+        "source": "https://news.rice.edu/news/2026/rices-tringides-wins-prestigious-pew-biomedical-scholar-award"
+      },
+      "video": {
+        "id": "6XNkt_jipzI",
+        "title": "Christina Tringides - Sontag Foundation \"Distinguished Scientist\"",
+        "channel": "Rice Advanced Materials Institute",
+        "source": "https://news.rice.edu/news/2025/materials-match-brain-rice-engineer-earns-sontag-foundation-distinction",
+        "description": "An institutional introduction to Tringides’ soft-materials research and the CHAMELEON project supported by the Sontag Foundation. This complements the microchannel image but concerns a separate implant-development direction. Rice credits Jeff Fitlow and Jorge Vidal for the associated media."
+      },
+      "focus": "Living neural tissue models",
+      "kind": "figure"
+    },
+    {
       "labId": "columbia-shepard",
       "title": "A wireless cortical interface on one chip",
       "focus": "Wireless cortical interfaces",
@@ -199,6 +199,19 @@
         "credit": "Bioelectronic Systems Lab (BIOEE), Columbia University",
         "source": "https://bioee.ee.columbia.edu/research/electrical-brain-computer-interfaces-and-human-translation/"
       }
+    },
+    {
+      "labId": "rice-mahi",
+      "title": "Measuring wrist motion with OpenWrist",
+      "image": {
+        "url": "https://mahilab.rice.edu/sites/default/files/styles/wide/public/2025-08/DSC_0119.JPG?itok=C3QDnavL",
+        "alt": "A brace-restricted wrist undergoing assessment in the MAHI OpenWrist device.",
+        "caption": "OpenWrist is shown assessing movement with a wrist brace in place. The lab’s rehabilitation program investigates robotic and wearable measurements of human motion.",
+        "credit": "MAHI Lab / Rice University (source attribution; photographer not named)",
+        "source": "https://mahilab.rice.edu/research/human-motion-assessment-rehabilitation"
+      },
+      "focus": "Rehabilitation robotics",
+      "kind": "photo"
     }
   ]
 }

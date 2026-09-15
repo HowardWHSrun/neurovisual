@@ -104,7 +104,7 @@ const NeuroVisuals = (() => {
             dialog.querySelector('[data-visual-close]')?.focus();
     }
     function idea(id) {
-        const imageId = { 'moores-law-bci': 'lab-rice-xie', 'density-or-coverage': 'company-precision', 'useful-channels': 'lab-rice-luan', 'readout-budget': 'company-bisc' };
+        const imageId = { 'moores-law-bci': 'company-blackrock', 'density-or-coverage': 'company-precision', 'useful-channels': 'lab-stanford-nptl', 'readout-budget': 'company-bisc' };
         const m = items().find(m => m.id === imageId[id]);
         if (!m)
             return '';

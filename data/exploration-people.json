@@ -2,105 +2,136 @@
   "reviewed": "2026-09-15",
   "paths": [
     {
-      "id": "xie-zhao-training",
-      "title": "Chong Xie → Zhengtuo Zhao",
-      "summary": "Follow Zhao's PhD training in Xie's group, then open his wider research network. His doctorate was awarded by UT Austin; his later postdoctoral work included Rice.",
-      "people": ["chong-xie", "zhengtuo-zhao"],
-      "nodeIds": ["chong-xie", "zhengtuo-zhao", "ut-austin"],
-      "edgeIds": ["zhao-xie-training", "zhao-ut-phd"],
-      "imageNodeId": "zhengtuo-zhao",
-      "href": "#connections/chong-xie?view=network&edge=zhao-xie-training",
+      "id": "liu-le-floch-axoft",
+      "label": "TRAINING & COMPANY FORMATION",
+      "title": "Jia Liu → Paul Le Floch → Axoft",
+      "summary": "Follow a graduate researcher from a university lab into a company working on soft neural probes. The training and founder relationships are documented separately.",
+      "people": [
+        "jia-liu",
+        "paul-le-floch"
+      ],
+      "nodeIds": [
+        "jia-liu",
+        "paul-le-floch",
+        "axoft"
+      ],
+      "edgeIds": [
+        "lefloch-jia-training",
+        "paul-le-floch-axoft-founder"
+      ],
+      "href": "#connections/paul-le-floch?view=network&edge=lefloch-jia-training",
       "relationships": [
         {
-          "from": "zhengtuo-zhao",
-          "to": "chong-xie",
+          "from": "paul-le-floch",
+          "to": "jia-liu",
           "type": "PhD trainee in lab of",
-          "description": "Xie's alumni roster lists Zhengtuo Zhao as a PhD student in the group, with a 2015–2020 lab interval.",
-          "edgeId": "zhao-xie-training",
+          "description": "Harvard identifies Le Floch as a former graduate student in Jia Liu’s lab.",
+          "edgeId": "lefloch-jia-training",
           "source": {
-            "title": "Xie Lab — Team and alumni",
-            "url": "https://www.chongxie.net/team"
-          },
-          "limit": "The lab interval is not the doctorate's duration. The roster supports lab training; it does not independently establish sole formal dissertation supervision."
+            "title": "A long-lasting neural probe",
+            "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+          }
         },
         {
-          "from": "zhengtuo-zhao",
-          "to": "ut-austin",
-          "type": "Earned PhD at",
-          "description": "Zhao's UCAS biography dates his UT Austin biomedical engineering doctorate to September 2015–August 2019, followed by a UT Austin/Rice postdoc interval in 2019–2020.",
-          "edgeId": "zhao-ut-phd",
+          "from": "paul-le-floch",
+          "to": "axoft",
+          "type": "co-founded",
+          "description": "Harvard names Le Floch, Liu and Tianyang Ye as the founders of Axoft in 2021.",
+          "edgeId": "paul-le-floch-axoft-founder",
           "source": {
-            "title": "Zhengtuo Zhao — UCAS faculty biography",
-            "url": "https://people.ucas.ac.cn/~zhaozt"
+            "title": "Harvard SEAS — A long-lasting neural probe",
+            "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
           }
         }
       ]
     },
     {
-      "id": "xie-zhao-shared-paper",
-      "title": "One paper, different author roles",
-      "summary": "See how Zhengtuo Zhao and Chong Xie contributed to the same 2017 nanoelectronic-thread study. The paper makes their authorship roles explicit.",
-      "people": ["zhengtuo-zhao", "chong-xie"],
-      "nodeIds": ["zhengtuo-zhao", "net-2017", "chong-xie"],
-      "edgeIds": ["zhao-net-2017", "xie-net-paper"],
-      "href": "#connections/net-2017?view=network&edge=zhao-net-2017",
+      "id": "oxley-opie-synchron",
+      "title": "Thomas Oxley + Nicholas Opie → Synchron",
+      "summary": "Follow two co-founders into the endovascular interface story. Melbourne's account connects their company to university and clinical research.",
+      "people": [
+        "thomas-oxley",
+        "nicholas-opie"
+      ],
+      "nodeIds": [
+        "thomas-oxley",
+        "synchron",
+        "nicholas-opie"
+      ],
+      "edgeIds": [
+        "oxley-synchron-founded",
+        "opie-synchron-founded"
+      ],
+      "href": "#connections/synchron?view=network&edge=oxley-synchron-founded",
       "relationships": [
         {
-          "from": "zhengtuo-zhao",
-          "to": "net-2017",
-          "type": "Co-first-authored",
-          "description": "The original paper names Zhao, Lan Luan and Xiaoling Wei as equal contributors.",
-          "edgeId": "zhao-net-2017",
+          "from": "thomas-oxley",
+          "to": "synchron",
+          "type": "Co-founded",
+          "description": "The University of Melbourne credits Oxley and Opie with founding Synchron in 2012.",
+          "edgeId": "oxley-synchron-founded",
           "source": {
-            "title": "2017 NET paper — original article at UT Austin",
-            "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
-          },
-          "limit": "These are selected contributors from a larger author team. Authorship alone does not establish patent ownership or a company license."
+            "title": "University of Melbourne — Synchron commercialization story",
+            "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+          }
         },
         {
-          "from": "chong-xie",
-          "to": "net-2017",
-          "type": "Corresponding author of",
-          "description": "The same article identifies Xie as its corresponding author, with a UT Austin affiliation.",
-          "edgeId": "xie-net-paper",
+          "from": "nicholas-opie",
+          "to": "synchron",
+          "type": "Co-founded",
+          "description": "The same university account identifies Opie as a co-founder alongside Oxley.",
+          "edgeId": "opie-synchron-founded",
           "source": {
-            "title": "2017 NET paper — author and affiliation information",
-            "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
-          }
+            "title": "University of Melbourne — Synchron commercialization story",
+            "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+          },
+          "limit": "These sources document co-founders and shared research, not a mentor–trainee relationship between the two people."
         }
-      ]
+      ],
+      "label": "RESEARCH CO-FOUNDERS"
     },
     {
-      "id": "zhao-li-stairmed",
-      "title": "Zhengtuo Zhao + Xue Li → StairMed",
-      "summary": "Two researchers connect to the same company through disclosed founder roles. Follow each person to their training, papers and technology links.",
-      "people": ["zhengtuo-zhao", "xue-li"],
-      "nodeIds": ["zhengtuo-zhao", "stairmed", "xue-li"],
-      "edgeIds": ["zhao-stairmed-founder", "li-stairmed-founder"],
-      "href": "#connections/stairmed?view=network&edge=zhao-stairmed-founder",
+      "id": "lacour-neurosoft",
+      "label": "LAB SPINOUT",
+      "title": "Stéphanie Lacour → Neurosoft Bioelectronics",
+      "summary": "Connect a co-founder to a lab spinout developing soft neural interfaces. Follow the company’s origins at EPFL’s Laboratory for Soft Bioelectronic Interfaces.",
+      "people": [
+        "stephanie-lacour"
+      ],
+      "nodeIds": [
+        "stephanie-lacour",
+        "neurosoft-bio",
+        "epfl-lsbi-origin"
+      ],
+      "edgeIds": [
+        "neurosoft-bio-founder",
+        "neurosoft-bio-spinout"
+      ],
+      "href": "#connections/neurosoft-bio?view=network&edge=neurosoft-bio-founder",
       "relationships": [
         {
-          "from": "zhengtuo-zhao",
-          "to": "stairmed",
+          "from": "stephanie-lacour",
+          "to": "neurosoft-bio",
           "type": "Co-founded",
-          "description": "The 2026 human uFINE paper's competing-interest disclosure identifies Zhengtuo Zhao as a StairMed founder.",
-          "edgeId": "zhao-stairmed-founder",
+          "description": "Neurosoft’s official team page lists Lacour among its co-founders.",
+          "edgeId": "neurosoft-bio-founder",
           "source": {
-            "title": "Human uFINE study — competing interests",
-            "url": "https://www.nature.com/articles/s41467-026-71443-7"
+            "title": "Neurosoft Bioelectronics Team",
+            "url": "https://www.neurosoft-bio.com/team"
           },
-          "limit": "A founder relationship does not establish a license from the earlier NET research or equate the study device with a marketed implant."
+          "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology."
         },
         {
-          "from": "xue-li",
-          "to": "stairmed",
-          "type": "Co-founded",
-          "description": "The same disclosure identifies Xue Li as a StairMed founder alongside Zhao.",
-          "edgeId": "li-stairmed-founder",
+          "from": "neurosoft-bio",
+          "to": "epfl-lsbi-origin",
+          "type": "Spun out of LSBI",
+          "description": "EPFL identifies Neurosoft as a spinout of its Laboratory for Soft Bioelectronic Interfaces.",
+          "edgeId": "neurosoft-bio-spinout",
           "source": {
-            "title": "Human uFINE study — competing interests",
-            "url": "https://www.nature.com/articles/s41467-026-71443-7"
-          }
+            "title": "Funding from Catalyze4Life for Neurosoft Bioelectronics",
+            "url": "https://actu.epfl.ch/news/funding-from-catalyze4life-for-neurosoft-bioelectr/"
+          },
+          "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology."
         }
       ]
     },
@@ -108,9 +139,18 @@
       "id": "rapoport-two-companies",
       "title": "Benjamin Rapoport → two companies",
       "summary": "A shared founder connects Neuralink and Precision Neuroscience. Open the two documented roles to understand the connection.",
-      "people": ["benjamin-rapoport"],
-      "nodeIds": ["neuralink", "benjamin-rapoport", "precision"],
-      "edgeIds": ["rapoport-neuralink", "rapoport-precision"],
+      "people": [
+        "benjamin-rapoport"
+      ],
+      "nodeIds": [
+        "neuralink",
+        "benjamin-rapoport",
+        "precision"
+      ],
+      "edgeIds": [
+        "rapoport-neuralink",
+        "rapoport-precision"
+      ],
       "href": "#connections/benjamin-rapoport?view=network&edge=rapoport-precision",
       "relationships": [
         {
@@ -137,75 +177,114 @@
           },
           "limit": "A shared founder does not establish a corporate spinout, subsidiary relationship or technology license between the companies."
         }
-      ]
+      ],
+      "label": "SHARED FOUNDER"
     },
     {
-      "id": "oxley-opie-synchron",
-      "title": "Thomas Oxley + Nicholas Opie → Synchron",
-      "summary": "Follow two co-founders into the endovascular interface story. Melbourne's account connects their company to university and clinical research.",
-      "people": ["thomas-oxley", "nicholas-opie"],
-      "nodeIds": ["thomas-oxley", "synchron", "nicholas-opie"],
-      "edgeIds": ["oxley-synchron-founded", "opie-synchron-founded"],
-      "href": "#connections/synchron?view=network&edge=oxley-synchron-founded",
+      "id": "priori-rossi-marceglia-newronika",
+      "label": "CLINICAL & ENGINEERING COLLABORATION",
+      "title": "Priori, Rossi & Marceglia → Newronika",
+      "summary": "Explore a founding team spanning clinical research, engineering, and informatics, with roots in Milan’s university and hospital research.",
+      "people": [
+        "alberto-priori",
+        "lorenzo-rossi",
+        "sara-marceglia"
+      ],
+      "nodeIds": [
+        "alberto-priori",
+        "lorenzo-rossi",
+        "sara-marceglia",
+        "newronika"
+      ],
+      "edgeIds": [
+        "newronika-founder-priori",
+        "newronika-founder-rossi",
+        "newronika-founder-marceglia"
+      ],
+      "href": "#connections/newronika?view=network&edge=newronika-founder-priori",
       "relationships": [
         {
-          "from": "thomas-oxley",
-          "to": "synchron",
+          "from": "alberto-priori",
+          "to": "newronika",
           "type": "Co-founded",
-          "description": "The University of Melbourne credits Oxley and Opie with founding Synchron in 2012.",
-          "edgeId": "oxley-synchron-founded",
+          "description": "Newronika identifies Alberto Priori as a co-founder and neurologist at the University of Milan.",
+          "edgeId": "newronika-founder-priori",
           "source": {
-            "title": "University of Melbourne — Synchron commercialization story",
-            "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
-          }
+            "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+            "url": "https://newronika.com/about"
+          },
+          "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology."
         },
         {
-          "from": "nicholas-opie",
-          "to": "synchron",
+          "from": "lorenzo-rossi",
+          "to": "newronika",
           "type": "Co-founded",
-          "description": "The same university account identifies Opie as a co-founder alongside Oxley.",
-          "edgeId": "opie-synchron-founded",
+          "description": "Newronika identifies Lorenzo Rossi as a co-founder, CEO and CTO.",
+          "edgeId": "newronika-founder-rossi",
           "source": {
-            "title": "University of Melbourne — Synchron commercialization story",
-            "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+            "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+            "url": "https://newronika.com/about"
           },
-          "limit": "These sources document co-founders and shared research, not a mentor–trainee relationship between the two people."
+          "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology."
+        },
+        {
+          "from": "sara-marceglia",
+          "to": "newronika",
+          "type": "Co-founded",
+          "description": "Newronika identifies Sara Marceglia as a co-founder and University of Milan associate professor.",
+          "edgeId": "newronika-founder-marceglia",
+          "source": {
+            "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+            "url": "https://newronika.com/about"
+          },
+          "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology."
         }
       ]
     },
     {
-      "id": "robinson-lab-motif",
-      "title": "Jacob Robinson → Rice lab → Motif",
-      "summary": "A founder role and an explicitly documented lab spinout connect Robinson's university research to Motif. Explore the people and work behind its neuromodulation devices.",
-      "people": ["jacob-robinson"],
-      "nodeIds": ["jacob-robinson", "motif", "robinson-lab-rice"],
-      "edgeIds": ["motif-neurotech-founder", "robinson-motif-spinout"],
-      "href": "#connections/motif?view=network&edge=motif-neurotech-founder",
+      "id": "xie-zhao-training",
+      "title": "Chong Xie → Zhengtuo Zhao",
+      "summary": "Follow Zhao's PhD training in Xie's group, then open his wider research network. His doctorate was awarded by UT Austin; his later postdoctoral work included Rice.",
+      "people": [
+        "chong-xie",
+        "zhengtuo-zhao"
+      ],
+      "nodeIds": [
+        "chong-xie",
+        "zhengtuo-zhao",
+        "ut-austin"
+      ],
+      "edgeIds": [
+        "zhao-xie-training",
+        "zhao-ut-phd"
+      ],
+      "href": "#connections/chong-xie?view=network&edge=zhao-xie-training",
       "relationships": [
         {
-          "from": "jacob-robinson",
-          "to": "motif",
-          "type": "Founder of",
-          "description": "Rice identifies Robinson as a Motif founder and CEO in its January 2025 research announcement.",
-          "edgeId": "motif-neurotech-founder",
+          "from": "zhengtuo-zhao",
+          "to": "chong-xie",
+          "type": "PhD trainee in lab of",
+          "description": "Xie's alumni roster lists Zhengtuo Zhao as a PhD student in the group, with a 2015–2020 lab interval.",
+          "edgeId": "zhao-xie-training",
           "source": {
-            "title": "Rice — brain research awards and Motif's research roots",
-            "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards"
-          }
+            "title": "Xie Lab — Team and alumni",
+            "url": "https://www.chongxie.net/team"
+          },
+          "limit": "The lab interval is not the doctorate's duration. The roster supports lab training; it does not independently establish sole formal dissertation supervision."
         },
         {
-          "from": "robinson-lab-rice",
-          "to": "motif",
-          "type": "Spun out as",
-          "description": "Rice explicitly describes Motif as a startup that spun out of Robinson's Rice laboratory.",
-          "edgeId": "robinson-motif-spinout",
+          "from": "zhengtuo-zhao",
+          "to": "ut-austin",
+          "type": "Earned PhD at",
+          "description": "Zhao's UCAS biography dates his UT Austin biomedical engineering doctorate to September 2015–August 2019, followed by a UT Austin/Rice postdoc interval in 2019–2020.",
+          "edgeId": "zhao-ut-phd",
           "source": {
-            "title": "Rice — brain research awards and Motif's research roots",
-            "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards"
-          },
-          "limit": "This account establishes a lab spinout; it does not specify the terms of a technology license."
+            "title": "Zhengtuo Zhao — UCAS faculty biography",
+            "url": "https://people.ucas.ac.cn/~zhaozt"
+          }
         }
-      ]
+      ],
+      "label": "LAB TRAINING"
     }
   ]
 }

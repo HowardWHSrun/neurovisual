@@ -21,6 +21,10 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 
 Atlas records retain their original dates and limitations. Resource links were reviewed on September 7, 2026; this does not mean every atlas record was reverified that day. The site is a curated starting point, not a complete census or a clinical reference.
 
+## Editorial approach
+
+This is a general guide to the field. Choose featured images and examples for their relevance, clarity, and breadth across institutions and research areas. Personal affiliations do not determine prominence. Keep accurate lab entries and sourced relationships, use alphabetical ordering for the lab directory, and avoid presenting several examples from one research network as a survey of the field.
+
 ## People and influence
 
 Browse [People & influence](https://howardwhsrun.github.io/neurovisual/#people): 192 sourced profiles, including 143 ranked using complete OpenAlex metrics. Compare people side by side or inspect the three-step calculation. [PEOPLE.md](PEOPLE.md) documents identity checks, editorial weights, publication-year citation cohorts and refresh instructions. Missing or ambiguous author records remain unranked.
