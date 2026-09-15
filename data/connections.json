@@ -207,8 +207,8 @@
       "id": "robinson-lab-rice",
       "name": "Robinson Lab",
       "kind": "Lab",
-      "subtitle": "Rice University · neuroengineering",
       "summary": "Rice explicitly describes Motif as a startup spun out of Jacob Robinson’s lab. Its neuromodulation work includes miniature brain stimulators.",
+      "subtitle": "Rice University · neuroengineering",
       "href": "#labs/rice-robinson",
       "media": "lab-rice-robinson"
     },
@@ -216,9 +216,9 @@
       "id": "motif",
       "name": "Motif Neurotech",
       "kind": "Company",
-      "subtitle": "Miniature brain stimulation",
       "summary": "A company spun out of Robinson’s Rice lab. The cited university account concerns stimulation, with university and clinical collaborators.",
-      "href": "https://www.motifneuro.tech/",
+      "href": "#org/motif-neurotech",
+      "subtitle": "Miniature brain stimulation",
       "media": "lab-rice-robinson"
     },
     {
@@ -287,6 +287,1208 @@
       "summary": "A stent-like recording interface positioned inside a blood vessel near motor cortex. It approaches neural recording through the vasculature.",
       "href": "#tech/stentrode",
       "media": "company-synchron"
+    },
+    {
+      "id": "pins-medical",
+      "name": "PINS Medical",
+      "kind": "Company",
+      "subtitle": "Implantable neuromodulation systems",
+      "summary": "Implantable neuromodulation systems",
+      "href": "#org/pins-medical"
+    },
+    {
+      "id": "sceneray",
+      "name": "SceneRay",
+      "kind": "Company",
+      "subtitle": "DBS systems",
+      "summary": "DBS systems",
+      "href": "#org/sceneray"
+    },
+    {
+      "id": "nurotron",
+      "name": "Nurotron",
+      "kind": "Company",
+      "subtitle": "Cochlear implants and neural stimulation",
+      "summary": "Cochlear implants and neural stimulation",
+      "href": "#org/nurotron"
+    },
+    {
+      "id": "genlight-neurotech",
+      "name": "Genlight Neurotech",
+      "kind": "Company",
+      "subtitle": "Responsive stimulation and laser neurosurgery",
+      "summary": "Responsive stimulation and laser neurosurgery",
+      "href": "#org/genlight-neurotech"
+    },
+    {
+      "id": "microport-neurotech",
+      "name": "MicroPort NeuroTech / NeuroScientific",
+      "kind": "Company",
+      "subtitle": "Neurovascular devices and BCI research",
+      "summary": "Neurovascular devices and BCI research",
+      "href": "#org/microport-neurotech"
+    },
+    {
+      "id": "brain-navi",
+      "name": "Brain Navi Biotechnology",
+      "kind": "Company",
+      "subtitle": "Neurosurgical navigation robotics",
+      "summary": "Neurosurgical navigation robotics",
+      "href": "#org/brain-navi"
+    },
+    {
+      "id": "microport-scientific",
+      "name": "MicroPort Scientific",
+      "kind": "Company",
+      "subtitle": "Medical-device group",
+      "summary": "Medical-device group"
+    },
+    {
+      "id": "oymotion",
+      "name": "OYMotion",
+      "kind": "Company",
+      "subtitle": "BCI decoding and rehabilitation robotics",
+      "summary": "BCI decoding and rehabilitation robotics",
+      "href": "#org/oymotion"
+    },
+    {
+      "id": "hangzhou-nuowei",
+      "name": "Hangzhou Nuowei Medical Technology",
+      "kind": "Company",
+      "subtitle": "Company acquired by Genlight in 2021",
+      "summary": "Company acquired by Genlight in 2021"
+    },
+    {
+      "id": "luming-li",
+      "name": "Luming Li",
+      "kind": "Person",
+      "subtitle": "Tsinghua DBS research-team leader",
+      "summary": "Tsinghua DBS research-team leader"
+    },
+    {
+      "id": "yihua-ning",
+      "name": "Yihua Ning / 宁益华",
+      "kind": "Person",
+      "subtitle": "SceneRay founder",
+      "summary": "SceneRay founder"
+    },
+    {
+      "id": "fangang-zeng",
+      "name": "Fan-Gang Zeng",
+      "kind": "Person",
+      "subtitle": "UCI hearing researcher; Nurotron co-founder",
+      "summary": "UCI hearing researcher; Nurotron co-founder"
+    },
+    {
+      "id": "peng-cao",
+      "name": "Peng Cao / 曹鹏",
+      "kind": "Person",
+      "subtitle": "Genlight founder",
+      "summary": "Genlight founder"
+    },
+    {
+      "id": "jerry-chen",
+      "name": "Jerry Chieh-Hsiao Chen",
+      "kind": "Person",
+      "subtitle": "Brain Navi founder",
+      "summary": "Brain Navi founder"
+    },
+    {
+      "id": "uci",
+      "name": "University of California, Irvine",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "University of California, Irvine"
+    },
+    {
+      "id": "syracuse",
+      "name": "Syracuse University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Syracuse University"
+    },
+    {
+      "id": "shanghai-medical-college",
+      "name": "Shanghai Medical College",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Shanghai Medical College"
+    },
+    {
+      "id": "zjut",
+      "name": "Zhejiang University of Technology",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Zhejiang University of Technology"
+    },
+    {
+      "id": "stanford-taiwan-program",
+      "name": "Stanford–Taiwan Biomedical Program",
+      "kind": "Program",
+      "subtitle": "Medical-device innovation training",
+      "summary": "Program attended by Jerry Chen in 2012; not a PhD or named adviser relationship."
+    },
+    {
+      "id": "tsinghua-neuromodulation-lab",
+      "name": "National Engineering Laboratory for Neuromodulation",
+      "kind": "Lab",
+      "subtitle": "University–company–hospital collaboration",
+      "summary": "Tsinghua’s original 2019 account dates laboratory establishment to 2012 with PINS and Beijing Tiantan Hospital."
+    },
+    {
+      "id": "chaos-bci-institute",
+      "name": "Chaos Brain-Computer Research Institute",
+      "kind": "Lab",
+      "subtitle": "MicroPort research institute",
+      "summary": "Company annual report documents an institute focused on BCI technical research and interdisciplinary development."
+    },
+    {
+      "id": "pins-dbs",
+      "name": "Tsinghua–PINS DBS system",
+      "kind": "Technology",
+      "subtitle": "Implanted stimulation",
+      "summary": "Pulse generator, implanted brain leads and external programming/charging equipment developed through university–company–hospital work."
+    },
+    {
+      "id": "sceneray-aaxon",
+      "name": "Aaxon DBS systems",
+      "kind": "Technology",
+      "subtitle": "SceneRay movement-disorder platform",
+      "summary": "Four-contact nonrechargeable, four-contact rechargeable and eight-contact rechargeable generations."
+    },
+    {
+      "id": "sceneray-neurestora",
+      "name": "Neurestora DBS system",
+      "kind": "Technology",
+      "subtitle": "SceneRay psychiatric-neuromodulation platform",
+      "summary": "Dual-target stimulation development for addiction, with a separate OCD development program."
+    },
+    {
+      "id": "nurotron-cochlear",
+      "name": "Nurotron cochlear implant system",
+      "kind": "Technology",
+      "subtitle": "Auditory neural prosthesis",
+      "summary": "Sound-processing hardware and an intracochlear electrode array stimulate the auditory nerve."
+    },
+    {
+      "id": "genlight-epilcure",
+      "name": "Epilcure responsive neurostimulation",
+      "kind": "Technology",
+      "subtitle": "Genlight closed-loop implant",
+      "summary": "Intracranial EEG detection is linked to stimulation; company materials describe an epilepsy-focused system."
+    },
+    {
+      "id": "genlight-laserro",
+      "name": "LaserRO MR-monitored laser system",
+      "kind": "Technology",
+      "subtitle": "Genlight thermal neurosurgery",
+      "summary": "Laser ablation with MR monitoring; separate from electrical neural interfaces."
+    },
+    {
+      "id": "microport-stent-bci",
+      "name": "MicroPort–OYMotion interventional BCI",
+      "kind": "Technology",
+      "subtitle": "Announced joint-development program",
+      "summary": "Planned intravascular stent-electrode acquisition, decoding and rehabilitation robotics."
+    },
+    {
+      "id": "naotrac",
+      "name": "NaoTrac surgical navigation robot",
+      "kind": "Technology",
+      "subtitle": "Brain Navi instrument guidance",
+      "summary": "Image registration and robotic positioning guide surgical instruments along a planned trajectory."
+    },
+    {
+      "id": "neuropace",
+      "name": "NeuroPace",
+      "kind": "Company",
+      "subtitle": "Responsive epilepsy therapy",
+      "summary": "Company origin and engineering dossier.",
+      "href": "#org/neuropace"
+    },
+    {
+      "id": "neuroone",
+      "name": "NeuroOne Medical Technologies",
+      "kind": "Company",
+      "subtitle": "Thin-film electrodes and ablation",
+      "summary": "Company origin and engineering dossier.",
+      "href": "#org/neuroone"
+    },
+    {
+      "id": "ripple-neuro",
+      "name": "Ripple Neuro",
+      "kind": "Company",
+      "subtitle": "Neural recording and stimulation tools",
+      "summary": "Company origin and engineering dossier.",
+      "href": "#org/ripple-neuro"
+    },
+    {
+      "id": "amber-tx",
+      "name": "Amber Therapeutics",
+      "kind": "Company",
+      "subtitle": "Adaptive peripheral neuromodulation",
+      "summary": "Company origin and engineering dossier.",
+      "href": "#org/amber-tx"
+    },
+    {
+      "id": "saluda",
+      "name": "Saluda Medical",
+      "kind": "Company",
+      "subtitle": "Closed-loop spinal stimulation",
+      "summary": "Company origin and engineering dossier.",
+      "href": "#org/saluda"
+    },
+    {
+      "id": "robert-fischell",
+      "name": "Robert Fischell",
+      "kind": "Person",
+      "subtitle": "Implantable-device inventor",
+      "summary": "University biography identifies him as a NeuroPace founder.",
+      "href": "https://bioe.umd.edu/about/meet-the-fischells"
+    },
+    {
+      "id": "maryland",
+      "name": "University of Maryland",
+      "kind": "Institution",
+      "subtitle": "Founder education",
+      "summary": "Fischell earned a physics master’s degree here in 1953.",
+      "href": "https://bioe.umd.edu/about/meet-the-fischells"
+    },
+    {
+      "id": "emory",
+      "name": "Emory University",
+      "kind": "Institution",
+      "subtitle": "Historical NeuroPace license",
+      "summary": "Former licensor; current portfolio says the license is no longer held.",
+      "href": "https://ott.emory.edu/start-ups/portfolio/device.html"
+    },
+    {
+      "id": "brian-litt",
+      "name": "Brian Litt",
+      "kind": "Person",
+      "subtitle": "Academic epilepsy and neurodevice research",
+      "summary": "Reports licensing technology to NeuroPace.",
+      "href": "https://www.med.upenn.edu/apps/faculty/index.php/g324/p6213"
+    },
+    {
+      "id": "rns-system",
+      "name": "RNS System",
+      "kind": "Technology",
+      "subtitle": "Sense → detect → stimulate",
+      "summary": "Implanted brain-responsive therapy for selected focal epilepsy.",
+      "href": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=p100026"
+    },
+    {
+      "id": "justin-williams",
+      "name": "Justin Williams",
+      "kind": "Person",
+      "subtitle": "UW thin-film electrode inventor",
+      "summary": "Clinical observation and microscale fabrication led to NeuroOne technology.",
+      "href": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/"
+    },
+    {
+      "id": "charles-garell",
+      "name": "P. Charles Garell",
+      "kind": "Person",
+      "subtitle": "Clinical electrode-design collaboration",
+      "summary": "UW neurosurgeon who worked with Williams on surgical needs.",
+      "href": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/"
+    },
+    {
+      "id": "warf",
+      "name": "Wisconsin Alumni Research Foundation",
+      "kind": "Institution",
+      "subtitle": "Patent licensor",
+      "summary": "Licenses specified UW neural-probe and thin-film electrode patents to NeuroOne.",
+      "href": "https://www.warf.org/"
+    },
+    {
+      "id": "mayo",
+      "name": "Mayo Foundation for Medical Education and Research",
+      "kind": "Institution",
+      "subtitle": "Licensed know-how and development",
+      "summary": "Party to the NeuroOne thin-film license/development agreement.",
+      "href": "https://www.sec.gov/Archives/edgar/data/1500198/000114420417037533/v468812_ex10-3.htm"
+    },
+    {
+      "id": "onerf",
+      "name": "OneRF Ablation System",
+      "kind": "Technology",
+      "subtitle": "Diagnostic sEEG → thermal lesion",
+      "summary": "Reuses implanted sEEG electrodes for targeted radiofrequency lesioning.",
+      "href": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231675.pdf"
+    },
+    {
+      "id": "scott-hiatt",
+      "name": "Scott Hiatt",
+      "kind": "Person",
+      "subtitle": "Utah stimulation-hardware training",
+      "summary": "Ripple technical leader trained under Normann in neural stimulation engineering.",
+      "href": "https://rippleneuro.com/about-ripple-neuro/"
+    },
+    {
+      "id": "andrew-wilder",
+      "name": "Andrew Wilder",
+      "kind": "Person",
+      "subtitle": "Utah CS → Ripple software",
+      "summary": "Joined Ripple in 2009 after doctoral work on neuro-assistive software.",
+      "href": "https://rippleneuro.com/about-ripple-neuro/"
+    },
+    {
+      "id": "haptix",
+      "name": "DARPA HAPTIX",
+      "kind": "Program",
+      "subtitle": "Hand sensation and control",
+      "summary": "Supported development of implantable peripheral neural interfaces.",
+      "href": "https://rippleneuro.com/clinical-projects/"
+    },
+    {
+      "id": "link-r32",
+      "name": "Link R-32",
+      "kind": "Technology",
+      "subtitle": "32-channel inductively powered implant",
+      "summary": "Low-bandwidth EMG/LFP-oriented recording with customizable leads.",
+      "href": "https://rippleneuro.com/ripple-products/implantable-link-r-32/"
+    },
+    {
+      "id": "oxford",
+      "name": "University of Oxford",
+      "kind": "Institution",
+      "subtitle": "Adaptive neuromodulation research",
+      "summary": "Academic contributor to DyNeuMo and origin of Amber spinout.",
+      "href": "https://innovation.ox.ac.uk/spin-outs/amber-therapeutics/"
+    },
+    {
+      "id": "tim-denison",
+      "name": "Tim Denison",
+      "kind": "Person",
+      "subtitle": "Device engineering across industry and academia",
+      "summary": "Amber co-founder and Oxford engineering investigator.",
+      "href": "https://www.amber-tx.com/"
+    },
+    {
+      "id": "bioinduction",
+      "name": "Bioinduction",
+      "kind": "Company",
+      "subtitle": "Picostim implant engineering",
+      "summary": "Company acquired by Amber after collaboration on DyNeuMo.",
+      "href": "https://www.ox.ac.uk/news/2022-02-08-first-human-implant-closed-loop-bioelectronic-research-system"
+    },
+    {
+      "id": "picostim-dyneumo",
+      "name": "Picostim-DyNeuMo",
+      "kind": "Technology",
+      "subtitle": "Reusable adaptive-therapy research platform",
+      "summary": "Adds instrumentation and configurable algorithms to Picostim.",
+      "href": "https://ora.ox.ac.uk/objects/uuid%3A2a653834-b8ad-4db7-8e59-6de33e090999"
+    },
+    {
+      "id": "aura2",
+      "name": "AURA-2",
+      "kind": "Program",
+      "subtitle": "Investigational pudendal neuromodulation",
+      "summary": "Amber’s early human application of the platform to urinary incontinence.",
+      "href": "https://eng.ox.ac.uk/news/bioelectronic-implant-offers-an-intelligent-therapy-to-treat-incontinence"
+    },
+    {
+      "id": "nicta",
+      "name": "NICTA",
+      "kind": "Institution",
+      "subtitle": "Australian ICT research organization",
+      "summary": "Historical research organization from which Saluda emerged before Data61 formed.",
+      "href": "https://www.csiro.au/en/news/all/news/2015/august/csiro-nicta-join-forces"
+    },
+    {
+      "id": "john-parker",
+      "name": "John Parker",
+      "kind": "Person",
+      "subtitle": "ECAP sensing and Saluda founder",
+      "summary": "Led the transition from spinal sensing research to closed-loop stimulation.",
+      "href": "https://www.saludamedical.com/press-releases/saluda-medical-announces-executive-leadership-changes/"
+    },
+    {
+      "id": "spinal-ecap",
+      "name": "Spinal evoked compound action potential",
+      "kind": "Technology",
+      "subtitle": "Measure recruited neural response",
+      "summary": "Compound response to a delivered stimulation pulse, usable as a feedback signal.",
+      "href": "https://pubmed.ncbi.nlm.nih.gov/22188868/"
+    },
+    {
+      "id": "evoke",
+      "name": "Evoke SCS",
+      "kind": "Technology",
+      "subtitle": "Pulse-by-pulse spinal feedback",
+      "summary": "Rechargeable implant adjusts current to a selected neural activation target.",
+      "href": "https://www.fda.gov/medical-devices/recently-approved-devices/evoke-spinal-cord-stimulation-scs-system-p190002"
+    },
+    {
+      "id": "philip-sabes",
+      "name": "Philip Sabes",
+      "kind": "Person",
+      "subtitle": "UCSF → Neuralink",
+      "summary": "Neuroscientist whose UCSF laboratory developed robotic flexible-probe insertion.",
+      "href": "https://sabes.ucsf.edu/"
+    },
+    {
+      "id": "michael-jordan",
+      "name": "Michael I. Jordan",
+      "kind": "Person",
+      "subtitle": "MIT doctoral-lab connection",
+      "summary": "Sabes identifies Jordan’s lab as the site of his MIT PhD research.",
+      "href": "https://sabes.ucsf.edu/"
+    },
+    {
+      "id": "sabes-lab",
+      "name": "Sabes Lab at UCSF",
+      "kind": "Lab",
+      "subtitle": "Robotic flexible-probe insertion",
+      "summary": "Academic laboratory that began the sewing-machine insertion approach.",
+      "href": "https://sabes.ucsf.edu/"
+    },
+    {
+      "id": "maharbiz-lab",
+      "name": "Maharbiz Lab at UC Berkeley",
+      "kind": "Lab",
+      "subtitle": "Thin-film probe collaboration",
+      "summary": "Collaborated with the Sabes lab on the sewing-machine platform.",
+      "href": "https://www.biorxiv.org/content/10.1101/578542v1"
+    },
+    {
+      "id": "sewing-machine",
+      "name": "Sewing-machine neural insertion",
+      "kind": "Technology",
+      "subtitle": "Academic precursor • 2019 preprint",
+      "summary": "A stiff needle places independent flexible thin-film probes; demonstrated in rats.",
+      "href": "https://www.biorxiv.org/content/10.1101/578542v1"
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "kind": "Institution",
+      "subtitle": "Neural decoding intellectual property",
+      "summary": "Owner of speech-decoding IP licensed to multiple BCI companies.",
+      "href": "https://www.stanford.edu/"
+    },
+    {
+      "id": "vanessa-tolosa",
+      "name": "Vanessa Tolosa",
+      "kind": "Person",
+      "subtitle": "Thin-film fabrication across organizations",
+      "summary": "LLNL polymer-array researcher, Neuralink co-founder and 2025 Precision R&D hire.",
+      "href": "https://www.precisionneuro.io/our-vision"
+    },
+    {
+      "id": "llnl",
+      "name": "Lawrence Livermore National Laboratory",
+      "kind": "Institution",
+      "subtitle": "Thin-film materials and process engineering",
+      "summary": "Federal laboratory collaborating with Precision on implant longevity.",
+      "href": "https://www.llnl.gov/article/50836/llnl-precision-neuroscience-collaboration-aims-develop-next-generation-neural-implants"
+    },
+    {
+      "id": "precision-biomems",
+      "name": "Precision BioMEMS",
+      "kind": "Company",
+      "subtitle": "Precision’s manufacturing subsidiary",
+      "summary": "Texas MEMS foundry brought into Precision through an acquisition in 2023.",
+      "href": "https://www.precisionbiomems.io/"
+    },
+    {
+      "id": "matt-angle",
+      "name": "Matt Angle",
+      "kind": "Person",
+      "subtitle": "Paradromics founder",
+      "summary": "Founder and CEO; specific doctoral mentorship is not established by the inspected primary sources.",
+      "href": "https://paradromics.com/company/"
+    },
+    {
+      "id": "paradromics",
+      "name": "Paradromics",
+      "kind": "Company",
+      "subtitle": "Microwire arrays → packaged Connexus",
+      "summary": "Develops an implanted intracortical BCI with a separate chest transceiver.",
+      "href": "#org/paradromics",
+      "media": "company-paradromics"
+    },
+    {
+      "id": "melosh-lab",
+      "name": "Melosh Lab at Stanford",
+      "kind": "Lab",
+      "subtitle": "Microwire–CMOS collaboration",
+      "summary": "Materials and device group involved in the 2020 collaborative microwire platform.",
+      "href": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain"
+    },
+    {
+      "id": "microwire-cmos",
+      "name": "Microwire bundles coupled to CMOS",
+      "kind": "Technology",
+      "subtitle": "Collaborative precursor • 2020",
+      "summary": "Mechanically separates the tissue-facing wire geometry from silicon readout design.",
+      "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/"
+    },
+    {
+      "id": "uc-regents",
+      "name": "Regents of the University of California",
+      "kind": "Institution",
+      "subtitle": "Speech-BCI intellectual property owner",
+      "summary": "Owner of UC Davis investigators’ speech-BCI patent applications disclosed in 2025.",
+      "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/"
+    },
+    {
+      "id": "florian-solzbacher",
+      "name": "Florian Solzbacher",
+      "kind": "Person",
+      "subtitle": "Utah engineering → Blackrock",
+      "summary": "Utah professor and Blackrock co-founder focused on reliable neural-interface systems.",
+      "href": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher"
+    },
+    {
+      "id": "marcus-gerhardt",
+      "name": "Marcus Gerhardt",
+      "kind": "Person",
+      "subtitle": "Blackrock co-founder",
+      "summary": "Co-founded Blackrock with Florian Solzbacher.",
+      "href": "https://blackrockneurotech.com/our-story/"
+    },
+    {
+      "id": "cyberkinetics",
+      "name": "Cyberkinetics",
+      "kind": "Company",
+      "subtitle": "Earlier neural-interface business",
+      "summary": "Developed BrainGate and NeuroPort and sold research-business assets in 2008.",
+      "href": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408031489/v115527_8k.htm"
+    },
+    {
+      "id": "bionic-technologies",
+      "name": "Bionic Technologies",
+      "kind": "Company",
+      "subtitle": "Earlier array and acquisition supplier",
+      "summary": "Research-device business acquired by Cyberkinetics in 2002.",
+      "href": "https://www.sec.gov/Archives/edgar/data/1180253/000106299304001616/form8k.htm"
+    },
+    {
+      "id": "vascular-bionics-lab",
+      "name": "Vascular Bionics Laboratory",
+      "kind": "Lab",
+      "subtitle": "Melbourne multidisciplinary development",
+      "summary": "Research, engineering and clinical team formed by Oxley and Opie.",
+      "href": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action"
+    },
+    {
+      "id": "melbourne-bionic-eye",
+      "name": "Melbourne bionic-eye project",
+      "kind": "Program",
+      "subtitle": "Earlier neural-device experience",
+      "summary": "The project from which Opie was recruited to work on the stent-electrode system.",
+      "href": "https://pursuit.unimelb.edu.au/articles/moving-with-the-power-of-thought"
+    },
+    {
+      "id": "brown",
+      "name": "Brown University",
+      "kind": "Institution",
+      "subtitle": "Wireless transmitter research",
+      "summary": "Home of the Brown Wireless Device developed in Arto Nurmikko’s laboratory.",
+      "href": "https://www.brown.edu/news/2021-03-31/braingate-wireless"
+    },
+    {
+      "id": "ability-neuro",
+      "name": "ABILITY Neurotech",
+      "kind": "Company",
+      "summary": "Wyss Geneva spinout translating a fully implanted neural acquisition system.",
+      "href": "#org/ability-neuro",
+      "subtitle": "Wyss Geneva spinout translating a fully implanted neural acquisition system."
+    },
+    {
+      "id": "wyss-geneva-origin",
+      "name": "Wyss Center, Geneva",
+      "kind": "Institution",
+      "summary": "Origin of the ABILITY engineering and translational project.",
+      "subtitle": "Origin of the ABILITY engineering and translational project."
+    },
+    {
+      "id": "ability-wyss-platform",
+      "name": "Wyss ABILITY implant platform",
+      "kind": "Technology",
+      "summary": "Hermetically packaged electrical neural acquisition with inductive power and optical telemetry.",
+      "subtitle": "Hermetically packaged electrical neural acquisition with inductive power and optical telemetry."
+    },
+    {
+      "id": "rotem-kopel",
+      "name": "Rotem Kopel",
+      "kind": "Person",
+      "summary": "ABILITY Neurotech co-founder and CEO.",
+      "subtitle": "ABILITY Neurotech co-founder and CEO."
+    },
+    {
+      "id": "craig-cook",
+      "name": "Craig Cook",
+      "kind": "Person",
+      "summary": "ABILITY co-founder and former Wyss business-development leader.",
+      "subtitle": "ABILITY co-founder and former Wyss business-development leader."
+    },
+    {
+      "id": "ability-optical-link",
+      "name": "ABILITY optical data link",
+      "kind": "Technology",
+      "summary": "Transfers recorded electrical neural data through intact skin to a wearable receiver.",
+      "subtitle": "Transfers recorded electrical neural data through intact skin to a wearable receiver."
+    },
+    {
+      "id": "tum-ability-intraoperative",
+      "name": "TUM intraoperative ABILITY study",
+      "kind": "Program",
+      "summary": "Initial human acquisition study during tumour surgery.",
+      "subtitle": "Initial human acquisition study during tumour surgery."
+    },
+    {
+      "id": "newronika",
+      "name": "Newronika",
+      "kind": "Company",
+      "summary": "Milan spinout developing sensing-enabled adaptive DBS.",
+      "href": "#org/newronika",
+      "subtitle": "Milan spinout developing sensing-enabled adaptive DBS."
+    },
+    {
+      "id": "alberto-priori",
+      "name": "Alberto Priori",
+      "kind": "Person",
+      "summary": "Neurologist and Newronika co-founder.",
+      "subtitle": "Neurologist and Newronika co-founder."
+    },
+    {
+      "id": "lorenzo-rossi",
+      "name": "Lorenzo Rossi",
+      "kind": "Person",
+      "summary": "Engineer and Newronika co-founder.",
+      "subtitle": "Engineer and Newronika co-founder."
+    },
+    {
+      "id": "sara-marceglia",
+      "name": "Sara Marceglia",
+      "kind": "Person",
+      "summary": "Neuroengineering researcher and Newronika co-founder.",
+      "subtitle": "Neuroengineering researcher and Newronika co-founder."
+    },
+    {
+      "id": "milan-newronika-origin",
+      "name": "University of Milan / Policlinico di Milano",
+      "kind": "Institution",
+      "summary": "Academic and hospital institutions behind Newronika.",
+      "subtitle": "Academic and hospital institutions behind Newronika."
+    },
+    {
+      "id": "alphadbs",
+      "name": "AlphaDBS / αDBS",
+      "kind": "Technology",
+      "summary": "Implanted stimulation, sensing and embedded adaptive control platform.",
+      "subtitle": "Implanted stimulation, sensing and embedded adaptive control platform."
+    },
+    {
+      "id": "external-adbs-2016",
+      "name": "External adaptive DBS prototype",
+      "kind": "Technology",
+      "summary": "Portable system for feedback experiments using externalized DBS leads.",
+      "subtitle": "Portable system for feedback experiments using externalized DBS leads."
+    },
+    {
+      "id": "filterdbs-2007",
+      "name": "FilterDBS artifact-suppression system",
+      "kind": "Technology",
+      "summary": "Analog amplification/filtering to recover LFPs during stimulation.",
+      "subtitle": "Analog amplification/filtering to recover LFPs during stimulation."
+    },
+    {
+      "id": "webbiobank",
+      "name": "WebBioBank",
+      "kind": "Technology",
+      "summary": "Company neural-data storage and review platform.",
+      "subtitle": "Company neural-data storage and review platform."
+    },
+    {
+      "id": "jacob-robinson",
+      "name": "Jacob Robinson",
+      "kind": "Person",
+      "summary": "Rice neuroengineer and Motif co-founder.",
+      "subtitle": "Rice neuroengineer and Motif co-founder."
+    },
+    {
+      "id": "rice-magnetoelectric-stimulation",
+      "name": "Rice magnetoelectric stimulation platform",
+      "kind": "Technology",
+      "summary": "A film converts an externally applied magnetic field into electrical stimulation.",
+      "subtitle": "A film converts an externally applied magnetic field into electrical stimulation."
+    },
+    {
+      "id": "motif-dot",
+      "name": "DOT epidural stimulator",
+      "kind": "Technology",
+      "summary": "Digitally programmable, battery-free over-dura cortical stimulation.",
+      "subtitle": "Digitally programmable, battery-free over-dura cortical stimulation."
+    },
+    {
+      "id": "inbrain",
+      "name": "INBRAIN Neuroelectronics",
+      "kind": "Company",
+      "summary": "Graphene neurointerface spinout from the Catalan research ecosystem.",
+      "href": "#org/inbrain",
+      "subtitle": "Graphene neurointerface spinout from the Catalan research ecosystem."
+    },
+    {
+      "id": "jose-antonio-garrido",
+      "name": "Jose Antonio Garrido",
+      "kind": "Person",
+      "summary": "ICREA professor at ICN2 and INBRAIN co-founder.",
+      "subtitle": "ICREA professor at ICN2 and INBRAIN co-founder."
+    },
+    {
+      "id": "icn2-icrea-origin",
+      "name": "ICN2 / ICREA",
+      "kind": "Institution",
+      "summary": "Institutions named in INBRAIN’s spinout origin.",
+      "subtitle": "Institutions named in INBRAIN’s spinout origin."
+    },
+    {
+      "id": "inbrain-public-graphene-ip",
+      "name": "Public-institution graphene neurointerface IP",
+      "kind": "Technology",
+      "summary": "Graphene transistor arrays and associated protective/readout circuits transferred through a six-institution agreement.",
+      "subtitle": "Graphene transistor arrays and associated protective/readout circuits transferred through a six-institution agreement."
+    },
+    {
+      "id": "manchester-graphene-trial",
+      "name": "Manchester graphene-electrode feasibility study",
+      "kind": "Program",
+      "summary": "University-sponsored intraoperative investigation using INBRAIN devices.",
+      "subtitle": "University-sponsored intraoperative investigation using INBRAIN devices."
+    },
+    {
+      "id": "cortec",
+      "name": "CorTec",
+      "kind": "Company",
+      "summary": "Freiburg spinout developing a bidirectional implanted interface.",
+      "href": "#org/cortec",
+      "subtitle": "Freiburg spinout developing a bidirectional implanted interface."
+    },
+    {
+      "id": "jorn-rickert",
+      "name": "Jörn Rickert",
+      "kind": "Person",
+      "summary": "CorTec founder and early managing director.",
+      "subtitle": "CorTec founder and early managing director."
+    },
+    {
+      "id": "freiburg-cortec-origin",
+      "name": "Freiburg biology / IMTEK / University Hospital",
+      "kind": "Institution",
+      "summary": "The university identifies collaboration among these units as CorTec’s academic origin.",
+      "subtitle": "The university identifies collaboration among these units as CorTec’s academic origin."
+    },
+    {
+      "id": "thomas-stieglitz",
+      "name": "Thomas Stieglitz",
+      "kind": "Person",
+      "summary": "Freiburg biomedical microtechnology professor and CorTec founding shareholder.",
+      "subtitle": "Freiburg biomedical microtechnology professor and CorTec founding shareholder."
+    },
+    {
+      "id": "brain-interchange",
+      "name": "Brain Interchange",
+      "kind": "Technology",
+      "summary": "Implanted cortical recording and stimulation platform for adaptive intervention.",
+      "subtitle": "Implanted cortical recording and stimulation platform for adaptive intervention."
+    },
+    {
+      "id": "neurosoft-bio",
+      "name": "Neurosoft Bioelectronics",
+      "kind": "Company",
+      "summary": "EPFL spinout translating soft conformal neural interfaces.",
+      "href": "#org/neurosoft-bio",
+      "subtitle": "EPFL spinout translating soft conformal neural interfaces."
+    },
+    {
+      "id": "stephanie-lacour",
+      "name": "Stéphanie Lacour",
+      "kind": "Person",
+      "summary": "EPFL soft bioelectronics laboratory leader and Neurosoft co-founder.",
+      "subtitle": "EPFL soft bioelectronics laboratory leader and Neurosoft co-founder."
+    },
+    {
+      "id": "epfl-lsbi-origin",
+      "name": "EPFL Laboratory for Soft Bioelectronic Interfaces",
+      "kind": "Lab",
+      "summary": "Soft microfabricated interfaces and their preclinical translation.",
+      "subtitle": "Soft microfabricated interfaces and their preclinical translation."
+    },
+    {
+      "id": "soft-conformal-cortical-arrays",
+      "name": "Soft conformal cortical arrays",
+      "kind": "Technology",
+      "summary": "Thin silicone-based interfaces designed to conform to brain anatomy.",
+      "subtitle": "Thin silicone-based interfaces designed to conform to brain anatomy."
+    },
+    {
+      "id": "onward-medical",
+      "name": "ONWARD Medical",
+      "kind": "Company",
+      "summary": "Commercial translation of spinal neuromodulation with a later licensed brain-interface branch.",
+      "href": "#org/onward-medical",
+      "subtitle": "Commercial translation of spinal neuromodulation with a later licensed brain-interface branch."
+    },
+    {
+      "id": "gregoire-courtine",
+      "name": "Grégoire Courtine",
+      "kind": "Person",
+      "summary": "NeuroRestore co-leader and co-founder of ONWARD’s predecessor.",
+      "subtitle": "NeuroRestore co-leader and co-founder of ONWARD’s predecessor."
+    },
+    {
+      "id": "neurorestore",
+      "name": "NeuroRestore",
+      "kind": "Lab",
+      "summary": "EPFL–CHUV research initiative led by Courtine and Bloch.",
+      "href": "#org/neurorestore",
+      "subtitle": "EPFL–CHUV research initiative led by Courtine and Bloch."
+    },
+    {
+      "id": "wimagine",
+      "name": "WIMAGINE",
+      "kind": "Technology",
+      "summary": "CEA/Clinatec brain-signal acquisition technology licensed for ONWARD’s ARC-BCI development.",
+      "subtitle": "CEA/Clinatec brain-signal acquisition technology licensed for ONWARD’s ARC-BCI development."
+    },
+    {
+      "id": "nrt-origin",
+      "name": "NeuroRecovery Technologies",
+      "kind": "Company",
+      "summary": "Company merged with GTX medical in 2019, adding another spinal-stimulation branch.",
+      "subtitle": "Company merged with GTX medical in 2019, adding another spinal-stimulation branch."
+    },
+    {
+      "id": "clinatec",
+      "name": "CEA / Clinatec",
+      "kind": "Institution",
+      "summary": "Developer of WIMAGINE, separate from the NeuroRestore spinal-research origin.",
+      "href": "#org/clinatec",
+      "subtitle": "Developer of WIMAGINE, separate from the NeuroRestore spinal-research origin."
+    },
+    {
+      "id": "corticale",
+      "name": "Corticale",
+      "kind": "Company",
+      "summary": "IIT spinout commercializing active-pixel SiNAPS neural probes.",
+      "href": "#org/corticale",
+      "subtitle": "IIT spinout commercializing active-pixel SiNAPS neural probes."
+    },
+    {
+      "id": "luca-berdondini",
+      "name": "Luca Berdondini",
+      "kind": "Person",
+      "summary": "IIT Microtechnology for Neuroelectronics leader and Corticale co-founder.",
+      "subtitle": "IIT Microtechnology for Neuroelectronics leader and Corticale co-founder."
+    },
+    {
+      "id": "iit-microtechnology-origin",
+      "name": "IIT Microtechnology for Neuroelectronics",
+      "kind": "Lab",
+      "summary": "Academic source of SiNAPS and Corticale.",
+      "subtitle": "Academic source of SiNAPS and Corticale."
+    },
+    {
+      "id": "sinaps",
+      "name": "SiNAPS",
+      "kind": "Technology",
+      "summary": "CMOS active electrode-pixel arrays with local front-end amplification.",
+      "subtitle": "CMOS active electrode-pixel arrays with local front-end amplification."
+    },
+    {
+      "id": "corti-q",
+      "name": "Corti-Q research acquisition system",
+      "kind": "Technology",
+      "summary": "Corticale hardware and software ecosystem for SiNAPS probe acquisition.",
+      "subtitle": "Corticale hardware and software ecosystem for SiNAPS probe acquisition."
+    },
+    {
+      "id": "axoft",
+      "name": "Axoft",
+      "kind": "Company",
+      "subtitle": "Ultrasoft neural interfaces",
+      "summary": "Ultrasoft neural interfaces",
+      "href": "#org/axoft"
+    },
+    {
+      "id": "neuroxess",
+      "name": "NeuroXess",
+      "kind": "Company",
+      "subtitle": "Flexible implantable BCI",
+      "summary": "Flexible implantable BCI",
+      "href": "#org/neuroxess"
+    },
+    {
+      "id": "neuracle",
+      "name": "Neuracle",
+      "kind": "Company",
+      "subtitle": "Electrophysiology and epidural BCI",
+      "summary": "Electrophysiology and epidural BCI",
+      "href": "#org/neuracle"
+    },
+    {
+      "id": "jimed",
+      "name": "JiMED",
+      "kind": "Company",
+      "subtitle": "Osaka-origin wireless implanted BCI",
+      "summary": "Osaka-origin wireless implanted BCI",
+      "href": "#org/jimed"
+    },
+    {
+      "id": "neuralmatrix",
+      "name": "NeuralMatrix / NeuraMatrix",
+      "kind": "Company",
+      "subtitle": "Research electrophysiology and interface platforms",
+      "summary": "Research electrophysiology and interface platforms",
+      "href": "#org/neuralmatrix"
+    },
+    {
+      "id": "harvard",
+      "name": "Harvard University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Harvard University"
+    },
+    {
+      "id": "tsinghua",
+      "name": "Tsinghua University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Tsinghua University"
+    },
+    {
+      "id": "osaka-university",
+      "name": "Osaka University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Osaka University"
+    },
+    {
+      "id": "simit",
+      "name": "CAS Shanghai Institute of Microsystem and Information Technology",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "CAS Shanghai Institute of Microsystem and Information Technology"
+    },
+    {
+      "id": "paul-le-floch",
+      "name": "Paul Le Floch",
+      "kind": "Person",
+      "subtitle": "Axoft co-founder; Harvard PhD",
+      "summary": "Axoft co-founder; Harvard PhD"
+    },
+    {
+      "id": "jia-liu",
+      "name": "Jia Liu",
+      "kind": "Person",
+      "subtitle": "Academic co-founder of Axoft",
+      "summary": "Academic co-founder of Axoft"
+    },
+    {
+      "id": "tianyang-ye",
+      "name": "Tianyang Ye",
+      "kind": "Person",
+      "subtitle": "Axoft co-founder; Harvard graduate and postdoc",
+      "summary": "Axoft co-founder; Harvard graduate and postdoc"
+    },
+    {
+      "id": "hongkun-park",
+      "name": "Hongkun Park",
+      "kind": "Person",
+      "subtitle": "Harvard Park Group",
+      "summary": "Harvard Park Group"
+    },
+    {
+      "id": "tao-hu",
+      "name": "Tao Hu / Tiger H. Tao",
+      "kind": "Person",
+      "subtitle": "NeuroXess scientific founder",
+      "summary": "NeuroXess scientific founder"
+    },
+    {
+      "id": "phoenix-peng",
+      "name": "Lei Peng / Phoenix Peng",
+      "kind": "Person",
+      "subtitle": "NeuroXess co-founder",
+      "summary": "NeuroXess co-founder"
+    },
+    {
+      "id": "hong-bo",
+      "name": "Hong Bo",
+      "kind": "Person",
+      "subtitle": "Tsinghua NEO academic team leader",
+      "summary": "Tsinghua NEO academic team leader"
+    },
+    {
+      "id": "honglai-xu",
+      "name": "Honglai Xu / 胥红来",
+      "kind": "Person",
+      "subtitle": "Neuracle founder",
+      "summary": "Neuracle founder"
+    },
+    {
+      "id": "masayuki-hirata",
+      "name": "Masayuki Hirata",
+      "kind": "Person",
+      "subtitle": "Osaka BCI researcher; JiMED founder",
+      "summary": "Osaka BCI researcher; JiMED founder"
+    },
+    {
+      "id": "tao-zhou-neuramatrix",
+      "name": "Tao Zhou / 周涛",
+      "kind": "Person",
+      "subtitle": "NeuraMatrix co-founder identified in 2026",
+      "summary": "NeuraMatrix co-founder identified in 2026"
+    },
+    {
+      "id": "fluorinated-elastomer-probes",
+      "name": "Fluorinated-elastomer neural probes",
+      "kind": "Technology",
+      "subtitle": "2023 study platform",
+      "summary": "Multilayer tissue-soft probes demonstrated in mice; Harvard licensed associated technology to Axoft."
+    },
+    {
+      "id": "silk-ivi-2025",
+      "name": "Silk-enabled intraventricular interface",
+      "kind": "Technology",
+      "subtitle": "2025 preclinical study",
+      "summary": "Catheter-delivered deformable array with a silk scaffold, tested on periventricular surfaces in sheep."
+    },
+    {
+      "id": "neo-epidural",
+      "name": "NEO epidural BCI",
+      "kind": "Technology",
+      "subtitle": "Tsinghua–Neuracle system",
+      "summary": "Epidural electrodes, implanted electronics, external wireless power and decoding for assistive hand control."
+    },
+    {
+      "id": "w-herbs-2018",
+      "name": "W-HERBS wireless ECoG",
+      "kind": "Technology",
+      "subtitle": "2018 Osaka research prototype",
+      "summary": "128-channel fully implantable wireless recording device described in a research paper."
+    },
+    {
+      "id": "jimed-wibmi",
+      "name": "JiMED wiBMI",
+      "kind": "Technology",
+      "subtitle": "Clinical-development platform",
+      "summary": "Wireless cortical-surface recording system being translated into a medical device for communication."
+    },
+    {
+      "id": "neuralmatrix-nexgaia",
+      "name": "NeXGaia wireless electrophysiology",
+      "kind": "Technology",
+      "subtitle": "NeuralMatrix research product family",
+      "summary": "Animal telemetry front ends with NeXScope acquisition and analysis software."
+    },
+    {
+      "id": "science-corp",
+      "name": "Science Corporation",
+      "kind": "Company",
+      "subtitle": "Retinal and neural interfaces; PRIMA is an acquired program.",
+      "summary": "Retinal and neural interfaces; PRIMA is an acquired program.",
+      "href": "#org/science-corp"
+    },
+    {
+      "id": "daniel-palanker",
+      "name": "Daniel Palanker",
+      "kind": "Person",
+      "subtitle": "Stanford researcher behind the PRIMA photovoltaic concept.",
+      "summary": "Stanford researcher behind the PRIMA photovoltaic concept.",
+      "href": "https://profiles.stanford.edu/daniel-palanker"
+    },
+    {
+      "id": "pixium-vision",
+      "name": "Pixium Vision",
+      "kind": "Company",
+      "subtitle": "Developer of PRIMA before its transfer to Science.",
+      "summary": "Developer of PRIMA before its transfer to Science."
+    },
+    {
+      "id": "prima-retinal",
+      "name": "PRIMA photovoltaic retina",
+      "kind": "Technology",
+      "subtitle": "Subretinal photovoltaic pixels receive projected infrared images.",
+      "summary": "Subretinal photovoltaic pixels receive projected infrared images."
+    },
+    {
+      "id": "cochlear",
+      "name": "Cochlear",
+      "kind": "Company",
+      "subtitle": "Commercial multichannel cochlear implant systems.",
+      "summary": "Commercial multichannel cochlear implant systems.",
+      "href": "#org/cochlear"
+    },
+    {
+      "id": "graeme-clark",
+      "name": "Graeme Clark",
+      "kind": "Person",
+      "subtitle": "Melbourne multichannel cochlear-implant research pioneer.",
+      "summary": "Melbourne multichannel cochlear-implant research pioneer."
+    },
+    {
+      "id": "nucleus-group",
+      "name": "Nucleus Group",
+      "kind": "Company",
+      "subtitle": "Paul Trainor’s industrial group in the cochlear commercialization partnership.",
+      "summary": "Paul Trainor’s industrial group in the cochlear commercialization partnership."
+    },
+    {
+      "id": "nucleus-implant",
+      "name": "Nucleus cochlear implant",
+      "kind": "Technology",
+      "subtitle": "Multichannel electrical stimulation of the auditory pathway.",
+      "summary": "Multichannel electrical stimulation of the auditory pathway."
+    },
+    {
+      "id": "bionic-vision",
+      "name": "Bionic Vision Technologies",
+      "kind": "Company",
+      "subtitle": "Commercial translation of Australian suprachoroidal retinal-prosthesis research.",
+      "summary": "Commercial translation of Australian suprachoroidal retinal-prosthesis research.",
+      "href": "#org/bionic-vision"
+    },
+    {
+      "id": "bionic-vision-australia",
+      "name": "Bionic Vision Australia",
+      "kind": "Program",
+      "subtitle": "Multi-institution Australian retinal-prosthesis consortium.",
+      "summary": "Multi-institution Australian retinal-prosthesis consortium."
+    },
+    {
+      "id": "bionics-institute",
+      "name": "Bionics Institute",
+      "kind": "Institution",
+      "subtitle": "Australian neural prosthesis research institute.",
+      "summary": "Australian neural prosthesis research institute."
+    },
+    {
+      "id": "csiro-data61",
+      "name": "CSIRO Data61",
+      "kind": "Institution",
+      "subtitle": "Vision-processing and engineering contributor to Australian bionic-eye development.",
+      "summary": "Vision-processing and engineering contributor to Australian bionic-eye development."
+    },
+    {
+      "id": "robert-shepherd",
+      "name": "Robert Shepherd",
+      "kind": "Person",
+      "subtitle": "Bionics Institute researcher in cochlear and suprachoroidal prostheses.",
+      "summary": "Bionics Institute researcher in cochlear and suprachoroidal prostheses."
+    },
+    {
+      "id": "suprachoroidal-eye",
+      "name": "Suprachoroidal bionic eye",
+      "kind": "Technology",
+      "subtitle": "Retinal stimulation from an implant behind the retina.",
+      "summary": "Retinal stimulation from an implant behind the retina."
     }
   ],
   "edges": [
@@ -1019,6 +2221,3152 @@
         {
           "title": "Fully integrated silicon probes for high-density recording of neural activity",
           "url": "https://www.nature.com/articles/nature24636"
+        }
+      ]
+    },
+    {
+      "id": "li-pins-dbs-lead",
+      "from": "luming-li",
+      "to": "pins-dbs",
+      "label": "led academic development of",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Research described 2019-03-01",
+      "detail": "Tsinghua names Li as research-team leader and reports the first clinical implantation in November 2009.",
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        }
+      ]
+    },
+    {
+      "id": "pins-dbs-codevelopment",
+      "from": "pins-medical",
+      "to": "pins-dbs",
+      "label": "co-developed and commercialized",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2013 registration",
+      "detail": "University credits PINS among project partners; company reports DBS registration and commercial development.",
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        },
+        {
+          "title": "PINS Medical — introduction",
+          "url": "https://m.pinsmedical.com/en/col.jsp?id=103"
+        }
+      ]
+    },
+    {
+      "id": "pins-tsinghua-lab",
+      "from": "pins-medical",
+      "to": "tsinghua-neuromodulation-lab",
+      "label": "co-established with academic and hospital partners",
+      "category": "people",
+      "basis": "documented",
+      "date": "2012",
+      "detail": "Tsinghua says PINS and Beijing Tiantan Hospital participated in establishing the national engineering laboratory.",
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        }
+      ],
+      "limit": "Current company page dates a National Engineering Research Center to 2016. Institutional renaming/date relationship was not resolved."
+    },
+    {
+      "id": "ning-sceneray-founded",
+      "from": "yihua-ning",
+      "to": "sceneray",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2011",
+      "detail": "Official conference biography and company history agree on 2011 founding.",
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        },
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        }
+      ],
+      "limit": "Some park/business directories use 2009; no reconciliation with the company’s 2011 chronology was established."
+    },
+    {
+      "id": "ning-shanghai-medical-training",
+      "from": "yihua-ning",
+      "to": "shanghai-medical-college",
+      "label": "earned bachelor’s and master’s degrees at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Dates not supplied",
+      "detail": "Conference biography lists biomedical engineering and medical-science biophysics degrees.",
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        }
+      ],
+      "limit": "No named adviser, research lab or company IP-transfer relationship is established."
+    },
+    {
+      "id": "sceneray-aaxon-developed",
+      "from": "sceneray",
+      "to": "sceneray-aaxon",
+      "label": "develops and commercializes",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2016–2024 generations",
+      "detail": "Company chronology identifies nonrechargeable and rechargeable four-contact systems, followed by an eight-contact rechargeable system.",
+      "sources": [
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        },
+        {
+          "title": "SceneRay — implantable product center",
+          "url": "https://www.sceneray.com/en/Implantable_Devices/"
+        }
+      ]
+    },
+    {
+      "id": "sceneray-neurestora-developed",
+      "from": "sceneray",
+      "to": "sceneray-neurestora",
+      "label": "develops for dual-target stimulation",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Research reported 2025",
+      "detail": "Founder’s conference abstract describes NAc–ALIC dual stimulation; company chronology separates addiction and OCD programs.",
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        },
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        }
+      ],
+      "limit": "Do not infer automatic EEG-driven closed-loop control merely from the company’s BCI terminology."
+    },
+    {
+      "id": "zeng-nurotron-founded",
+      "from": "fangang-zeng",
+      "to": "nurotron",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2006; documented by 2008",
+      "detail": "UCI identifies Zeng as co-founder; company history dates establishment to 2006.",
+      "sources": [
+        {
+          "title": "Fan-Gang Zeng — UCI biography",
+          "url": "https://scholarconnect.uci.edu/fzeng"
+        },
+        {
+          "title": "Nurotron — company introduction and history",
+          "url": "https://www.nurotron.com/aboutus.html"
+        }
+      ]
+    },
+    {
+      "id": "zeng-syracuse-phd",
+      "from": "fangang-zeng",
+      "to": "syracuse",
+      "label": "earned PhD at",
+      "category": "people",
+      "basis": "documented",
+      "date": "1990",
+      "detail": "UCI biography identifies a doctorate in audiology and neuroscience at Syracuse.",
+      "sources": [
+        {
+          "title": "Fan-Gang Zeng — UCI biography",
+          "url": "https://scholarconnect.uci.edu/fzeng"
+        }
+      ]
+    },
+    {
+      "id": "uci-nurotron-translation",
+      "from": "uci",
+      "to": "nurotron",
+      "label": "supported founder’s commercialization through technology office",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2008-11-01",
+      "detail": "UCI says Zeng and partners worked with its Office of Technology Alliances to start the implant company after developing a sound-processing algorithm.",
+      "sources": [
+        {
+          "title": "From bench to business",
+          "url": "https://news.uci.edu/2008/11/01/from-bench-to-business/"
+        }
+      ],
+      "limit": "This source does not establish the terms or scope of a Nurotron license."
+    },
+    {
+      "id": "nurotron-cochlear-development",
+      "from": "nurotron",
+      "to": "nurotron-cochlear",
+      "label": "developed and manufactures",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2011 China registration",
+      "detail": "The company chronology and original technical report identify the cochlear implant system and registration history.",
+      "sources": [
+        {
+          "title": "Nurotron — company introduction and history",
+          "url": "https://www.nurotron.com/aboutus.html"
+        },
+        {
+          "title": "Development and evaluation of the Nurotron 26-electrode cochlear implant system",
+          "url": "https://www.nurotron.com/uploads/20230524/646d5aee8efed.pdf"
+        }
+      ],
+      "limit": "The paper’s 26-electrode system is not 26 independent cortical recordings; cochlear stimulation is a different interface class."
+    },
+    {
+      "id": "cao-genlight-founded",
+      "from": "peng-cao",
+      "to": "genlight-neurotech",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2020",
+      "detail": "Direct visit report identifies Cao as founder and describes his return from France to establish the company; official history confirms 2020.",
+      "sources": [
+        {
+          "title": "Hangzhou Venture Capital Association visits Genlight",
+          "url": "https://www.hzctxh.com/article/532"
+        },
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "limit": "Doctoral institution, supervisor and original laboratory were not verified."
+    },
+    {
+      "id": "genlight-acquired-nuowei",
+      "from": "genlight-neurotech",
+      "to": "hangzhou-nuowei",
+      "label": "acquired",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Official company chronology records acquisition of Hangzhou Nuowei Medical Technology.",
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "limit": "Acquisition scope and transferred patents are not disclosed on this page."
+    },
+    {
+      "id": "genlight-zjut-collaboration",
+      "from": "genlight-neurotech",
+      "to": "zjut",
+      "label": "established joint R&D center with",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2023",
+      "detail": "Genlight’s chronology records a joint R&D center after a 2022 graduate-training collaboration.",
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "limit": "This later collaboration is not proof of university spinout or founding-lab origin."
+    },
+    {
+      "id": "genlight-epilcure-development",
+      "from": "genlight-neurotech",
+      "to": "genlight-epilcure",
+      "label": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Clinical development reported from 2021",
+      "detail": "Official history records the initial implant trial; product page explains EEG-responsive stimulation.",
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        },
+        {
+          "title": "Epilcure — responsive neurostimulation",
+          "url": "https://en.genlight.com/en/epilcure"
+        }
+      ],
+      "limit": "Innovation-review admission is distinct from marketing approval; no blanket treatment efficacy claim is made."
+    },
+    {
+      "id": "genlight-laserro-development",
+      "from": "genlight-neurotech",
+      "to": "genlight-laserro",
+      "label": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "date": "First prototype 2020",
+      "detail": "Company history dates the initial LaserRO prototype; product page describes MR-monitored semiconductor laser therapy.",
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        },
+        {
+          "title": "LaserRO — MR-monitored laser therapy",
+          "url": "https://en.genlight.com/en/laser-r"
+        }
+      ],
+      "limit": "Laser ablation is a separate technology from implantable recording and stimulation."
+    },
+    {
+      "id": "microport-neurotech-spinout",
+      "from": "microport-neurotech",
+      "to": "microport-scientific",
+      "label": "spun off for separate listing from",
+      "category": "people",
+      "basis": "documented",
+      "date": "2022-07-15",
+      "detail": "Parent annual report explicitly describes the subsidiary’s spin-off and separate listing on this date.",
+      "sources": [
+        {
+          "title": "MicroPort Scientific — annual report 2023",
+          "url": "https://microport.com/assets/financial-reports/2023-ANNUAL-REPORT.pdf"
+        }
+      ],
+      "limit": "Corporate spin-off does not mean university spinout or complete ownership separation."
+    },
+    {
+      "id": "microport-chaos-institute",
+      "from": "microport-neurotech",
+      "to": "chaos-bci-institute",
+      "label": "established",
+      "category": "people",
+      "basis": "documented",
+      "date": "By end of 2025",
+      "detail": "Annual report describes the BCI institute and an interdisciplinary team building on neuro-interventional capabilities.",
+      "sources": [
+        {
+          "title": "MicroPort NeuroScientific — annual report 2025",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042703070.pdf"
+        }
+      ]
+    },
+    {
+      "id": "microport-oymotion-cooperation",
+      "from": "microport-neurotech",
+      "to": "oymotion",
+      "label": "signed BCI rehabilitation development agreement with",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2026-05-28",
+      "detail": "Partner announcement assigns MicroPort stent-electrode/delivery hardware and OYMotion decoding/robotics work.",
+      "sources": [
+        {
+          "title": "OYMotion and MicroPort NeuroScientific enter strategic cooperation",
+          "url": "https://www.oymotion.com/en/news37/474"
+        }
+      ],
+      "limit": "Agreement is a development plan, not completed clinical validation."
+    },
+    {
+      "id": "microport-stent-bci-develop",
+      "from": "microport-neurotech",
+      "to": "microport-stent-bci",
+      "label": "plans intravascular electrode and delivery hardware for",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2026-05-28",
+      "detail": "The agreement describes stent electrodes, neuro-interventional delivery tools and intracranial EEG acquisition.",
+      "sources": [
+        {
+          "title": "OYMotion and MicroPort NeuroScientific enter strategic cooperation",
+          "url": "https://www.oymotion.com/en/news37/474"
+        }
+      ],
+      "limit": "No derivation or license from Synchron’s Stentrode is established."
+    },
+    {
+      "id": "jerry-brainnavi-founded",
+      "from": "jerry-chen",
+      "to": "brain-navi",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2015",
+      "detail": "Company release and conference biography identify Jerry Chen as founder.",
+      "sources": [
+        {
+          "title": "Brain Navi announces NaoTrac FDA clearance",
+          "url": "https://brainnavi.com/zh/naotrac-fda-clearance/"
+        },
+        {
+          "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+          "url": "https://registration.uaa2025.org/user/view/1001476:51737"
+        }
+      ]
+    },
+    {
+      "id": "jerry-stanford-taiwan-training",
+      "from": "jerry-chen",
+      "to": "stanford-taiwan-program",
+      "label": "participated in",
+      "category": "people",
+      "basis": "documented",
+      "date": "2012",
+      "detail": "Official conference biography identifies his selection for the biomedical entrepreneurship program.",
+      "sources": [
+        {
+          "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+          "url": "https://registration.uaa2025.org/user/view/1001476:51737"
+        }
+      ],
+      "limit": "This is not a Stanford PhD or named laboratory mentorship claim."
+    },
+    {
+      "id": "brainnavi-naotrac-developed",
+      "from": "brain-navi",
+      "to": "naotrac",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Introduced 2018",
+      "detail": "Official chronology and FDA filing identify the robot and manufacturer.",
+      "sources": [
+        {
+          "title": "Brain Navi — company overview and history",
+          "url": "https://brainnavi.com/about/"
+        },
+        {
+          "title": "FDA K242575 — NaoTrac S clearance and device summary",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242575.pdf"
+        }
+      ],
+      "limit": "It guides instruments, including electrodes; it is not itself an implanted BCI or neural decoder."
+    },
+    {
+      "id": "fischell-neuropace",
+      "from": "robert-fischell",
+      "to": "neuropace",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "1997 incorporation; founder identified retrospectively",
+      "detail": "Maryland identifies Fischell as a founder; SEC record dates incorporation.",
+      "limit": "Not a complete founder roster.",
+      "sources": [
+        {
+          "title": "Meet the Fischells",
+          "url": "https://bioe.umd.edu/about/meet-the-fischells"
+        },
+        {
+          "title": "NeuroPace amended and restated certificate of incorporation",
+          "url": "https://www.sec.gov/Archives/edgar/data/1528287/000162828021007595/exhibit31-closing8xk.htm",
+          "published": "2021"
+        }
+      ]
+    },
+    {
+      "id": "maryland-fischell-degree",
+      "from": "maryland",
+      "to": "robert-fischell",
+      "label": "awarded physics master’s degree",
+      "category": "people",
+      "basis": "documented",
+      "date": "1953",
+      "detail": "Founder’s training is documented by the university.",
+      "limit": "Not evidence of Maryland-owned RNS technology.",
+      "sources": [
+        {
+          "title": "Meet the Fischells",
+          "url": "https://bioe.umd.edu/about/meet-the-fischells"
+        }
+      ]
+    },
+    {
+      "id": "emory-neuropace-historical-license",
+      "from": "emory",
+      "to": "neuropace",
+      "label": "formerly licensed technology to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Historical; ended by current university account",
+      "detail": "Emory’s transfer portfolio describes the former license and identifies Litt as inventor.",
+      "limit": "Explicitly no longer an active Emory license; exact start/end dates unknown.",
+      "sources": [
+        {
+          "title": "Emory technology-transfer device-company portfolio",
+          "url": "https://ott.emory.edu/start-ups/portfolio/device.html"
+        }
+      ]
+    },
+    {
+      "id": "litt-neuropace-license",
+      "from": "brian-litt",
+      "to": "neuropace",
+      "label": "contributed licensed technology",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Historical; exact date unspecified",
+      "detail": "Litt’s faculty profile reports licensing to NeuroPace.",
+      "limit": "Do not infer the patent, license institution, contract scope or present implementation from this line alone.",
+      "sources": [
+        {
+          "title": "Brian Litt — Penn faculty profile",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g324/p6213"
+        }
+      ]
+    },
+    {
+      "id": "neuropace-rns-developed",
+      "from": "neuropace",
+      "to": "rns-system",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "FDA approval 2013-11-14",
+      "detail": "The company’s implanted detector/stimulator became an approved epilepsy therapy.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "NeuroPace RNS System — FDA original PMA",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=p100026",
+          "published": "2013-11-14"
+        },
+        {
+          "title": "NeuroPace Launches Next Generation RNS System",
+          "url": "https://www.neuropace.com/press-release/neuropace-launches-next-generation-rns-system/",
+          "published": "2018-06-01"
+        }
+      ]
+    },
+    {
+      "id": "williams-garell-development",
+      "from": "justin-williams",
+      "to": "charles-garell",
+      "label": "co-developed clinical device requirements with",
+      "category": "people",
+      "basis": "documented",
+      "date": "After 2003; before 2009 university account",
+      "detail": "Repeated operating-room collaboration informed thin, conformable electrode design.",
+      "limit": "Clinical/design collaboration, not an asserted mentor relationship.",
+      "sources": [
+        {
+          "title": "Hagness, Williams selected as National Academy of Inventors Fellows",
+          "url": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+          "published": "2022"
+        }
+      ]
+    },
+    {
+      "id": "williams-neuroone-founded",
+      "from": "justin-williams",
+      "to": "neuroone",
+      "label": "co-founded around thin-film technology",
+      "category": "people",
+      "basis": "documented",
+      "date": "2009 launch in university account",
+      "detail": "UW links Williams’ technology and entrepreneurial work to NeuroOne.",
+      "limit": "Do not confuse development launch with the later public company’s legal predecessor dates.",
+      "sources": [
+        {
+          "title": "Hagness, Williams selected as National Academy of Inventors Fellows",
+          "url": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+          "published": "2022"
+        }
+      ]
+    },
+    {
+      "id": "warf-neuroone-license",
+      "from": "warf",
+      "to": "neuroone",
+      "label": "licensed neural-probe and thin-film patents to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2014-10-01; restated 2020-01-21",
+      "detail": "SEC filings describe exclusive US make/use/sell rights to specified patents.",
+      "limit": "Territory and patent scope are restricted; not all UW neural technology.",
+      "sources": [
+        {
+          "title": "NeuroOne Form 10-Q — WARF license",
+          "url": "https://www.sec.gov/Archives/edgar/data/1500198/000121390026088724/ea0301141-10q_neuro.htm",
+          "published": "2026-08"
+        }
+      ]
+    },
+    {
+      "id": "mayo-neuroone-license",
+      "from": "mayo",
+      "to": "neuroone",
+      "label": "licensed know-how and agreed development with",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2014-10-03; restated 2017-05-25",
+      "detail": "Filed agreement defines thin-film know-how, improvements and development contributions.",
+      "limit": "Contractual scope controls; do not equate a development partner with a sole inventor.",
+      "sources": [
+        {
+          "title": "Mayo–NeuroOne amended and restated license and development agreement",
+          "url": "https://www.sec.gov/Archives/edgar/data/1500198/000114420417037533/v468812_ex10-3.htm",
+          "published": "2017-05-25"
+        }
+      ]
+    },
+    {
+      "id": "neuroone-onerf-developed",
+      "from": "neuroone",
+      "to": "onerf",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "FDA clearance 2023-12-06",
+      "detail": "OneRF connects diagnostic sEEG electrodes to RF lesioning equipment and temperature accessories.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "NeuroOne OneRF Ablation System — FDA K231675",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K231675.pdf",
+          "published": "2023-12-06"
+        }
+      ]
+    },
+    {
+      "id": "hiatt-normann-training",
+      "from": "scott-hiatt",
+      "to": "richard-normann",
+      "label": "trained under in neural engineering",
+      "category": "people",
+      "basis": "documented",
+      "date": "During BS/ME at Utah; years unspecified",
+      "detail": "Company biography explicitly names Normann’s direction of Hiatt’s stimulation-hardware work.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ]
+    },
+    {
+      "id": "hiatt-ripple-engineering",
+      "from": "scott-hiatt",
+      "to": "ripple-neuro",
+      "label": "leads technical engineering at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Role on undated company biography",
+      "detail": "Technical focus includes mixed-signal recording and implantable stimulators.",
+      "limit": "Current exact tenure is not inferred from stale relative timestamps.",
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ]
+    },
+    {
+      "id": "wilder-ripple-joined",
+      "from": "andrew-wilder",
+      "to": "ripple-neuro",
+      "label": "joined as software engineer",
+      "category": "people",
+      "basis": "documented",
+      "date": "2009",
+      "detail": "Company biography dates the start and describes real-time neural visualization/stimulation software.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ]
+    },
+    {
+      "id": "haptix-ripple-development",
+      "from": "haptix",
+      "to": "ripple-neuro",
+      "label": "supported implant development by",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2015-02-09 announcement",
+      "detail": "Ripple developed myoelectric recording and selective peripheral stimulation implants within HAPTIX.",
+      "limit": "Development-stage systems; channel specifications do not imply commercial human availability.",
+      "sources": [
+        {
+          "title": "Ripple clinical projects — Neural and Myoelectric Implants",
+          "url": "https://rippleneuro.com/clinical-projects/",
+          "published": "2015-02-09"
+        }
+      ]
+    },
+    {
+      "id": "ripple-link-r32",
+      "from": "ripple-neuro",
+      "to": "link-r32",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Undated product specification",
+      "detail": "Implanted recording front end receives inductive power and transmits through the skin.",
+      "limit": "Bandwidth supports different signal classes from high-rate single-neuron systems.",
+      "sources": [
+        {
+          "title": "Link R-32 — Ripple product specification",
+          "url": "https://rippleneuro.com/ripple-products/implantable-link-r-32/"
+        }
+      ]
+    },
+    {
+      "id": "oxford-amber-spinout",
+      "from": "oxford",
+      "to": "amber-tx",
+      "label": "spun out",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "University spinout listing and company history identify the relationship.",
+      "limit": "Spinout does not disclose the precise patent license or exclusive scope.",
+      "sources": [
+        {
+          "title": "Amber Therapeutics — Oxford University Innovation spinout profile",
+          "url": "https://innovation.ox.ac.uk/spin-outs/amber-therapeutics/"
+        },
+        {
+          "title": "Amber Therapeutics — company and founder biographies",
+          "url": "https://www.amber-tx.com/"
+        }
+      ]
+    },
+    {
+      "id": "denison-amber-founded",
+      "from": "tim-denison",
+      "to": "amber-tx",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Founder roster includes Denison, Crawley, De Wachter and Knowles.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Amber Therapeutics — company and founder biographies",
+          "url": "https://www.amber-tx.com/"
+        }
+      ]
+    },
+    {
+      "id": "oxford-dyneumo-development",
+      "from": "oxford",
+      "to": "picostim-dyneumo",
+      "label": "co-developed research platform",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2022",
+      "detail": "Oxford researchers and Bioinduction added instrumentation and adaptive capabilities to Picostim.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "First-in-human implant of a closed-loop bioelectronic research system",
+          "url": "https://www.ox.ac.uk/news/2022-02-08-first-human-implant-closed-loop-bioelectronic-research-system",
+          "published": "2022-02-08"
+        },
+        {
+          "title": "DyNeuMo Mk-1: Design and pilot validation of an investigational motion-adaptive neurostimulator with integrated chronotherapy",
+          "url": "https://ora.ox.ac.uk/objects/uuid%3A2a653834-b8ad-4db7-8e59-6de33e090999",
+          "published": "2022"
+        }
+      ]
+    },
+    {
+      "id": "bioinduction-dyneumo-development",
+      "from": "bioinduction",
+      "to": "picostim-dyneumo",
+      "label": "co-developed from Picostim",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2022",
+      "detail": "The collaboration extends Bioinduction’s cranial stimulation platform for research.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "First-in-human implant of a closed-loop bioelectronic research system",
+          "url": "https://www.ox.ac.uk/news/2022-02-08-first-human-implant-closed-loop-bioelectronic-research-system",
+          "published": "2022-02-08"
+        },
+        {
+          "title": "DyNeuMo Mk-1: Design and pilot validation of an investigational motion-adaptive neurostimulator with integrated chronotherapy",
+          "url": "https://ora.ox.ac.uk/objects/uuid%3A2a653834-b8ad-4db7-8e59-6de33e090999",
+          "published": "2022"
+        }
+      ]
+    },
+    {
+      "id": "bioinduction-amber-acquired",
+      "from": "bioinduction",
+      "to": "amber-tx",
+      "label": "acquired by",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Announced 2023-09-05",
+      "detail": "Acquisition internalized platform engineering and manufacturing capability.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Amber Tx acquires Bioinduction and its Picostim DyNeuMo platform",
+          "url": "https://www.globenewswire.com/news-release/2023/09/05/2736961/0/en/Amber-Tx-acquires-Bioinduction-Limited-and-its-Picostim-DyNeuMo-platform-on-which-Amber-s-closed-loop-neuromodulation-therapy-for-mixed-urinary-incontinence-is-being-developed.html",
+          "published": "2023-09-05"
+        }
+      ]
+    },
+    {
+      "id": "amber-aura2-sponsor",
+      "from": "amber-tx",
+      "to": "aura2",
+      "label": "developed therapy tested in",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Started late 2022",
+      "detail": "The therapy applies the research system to pudendal-nerve control.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Bioelectronic implant offers an intelligent therapy to treat incontinence",
+          "url": "https://eng.ox.ac.uk/news/bioelectronic-implant-offers-an-intelligent-therapy-to-treat-incontinence",
+          "published": "2023-01-31"
+        }
+      ]
+    },
+    {
+      "id": "dyneumo-aura2-platform",
+      "from": "picostim-dyneumo",
+      "to": "aura2",
+      "label": "provided implant research platform for",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Late 2022 onward",
+      "detail": "The adaptable implant platform was configured for peripheral rather than brain stimulation.",
+      "limit": "Reusing a platform does not transfer efficacy from an MSA trial to urinary incontinence.",
+      "sources": [
+        {
+          "title": "Bioelectronic implant offers an intelligent therapy to treat incontinence",
+          "url": "https://eng.ox.ac.uk/news/bioelectronic-implant-offers-an-intelligent-therapy-to-treat-incontinence",
+          "published": "2023-01-31"
+        }
+      ]
+    },
+    {
+      "id": "nicta-saluda-spinout",
+      "from": "nicta",
+      "to": "saluda",
+      "label": "spun out",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2013-02-13 announcement",
+      "detail": "Contemporaneous government records identify NICTA’s Saluda spinout, followed by a grant account explaining its research commercialization.",
+      "limit": "Announcement date; Data61 was the later successor organization, not the name used in 2013.",
+      "sources": [
+        {
+          "title": "Opening of NICTA Techfest — Australian Prime Minister speech",
+          "url": "https://pmtranscripts.pmc.gov.au/release/transcript-19061",
+          "published": "2013-02-13"
+        },
+        {
+          "title": "EVOKE — NSW Office for Health and Medical Research funded project",
+          "url": "https://medicalresearch.nsw.gov.au/grants/projects/2013/evoke",
+          "published": "2013-08-30"
+        }
+      ]
+    },
+    {
+      "id": "parker-saluda-founded",
+      "from": "john-parker",
+      "to": "saluda",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2013 spinout; founder confirmed 2021",
+      "detail": "Company announcement names Parker as founder and describes the earlier ECAP concept.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Saluda Medical Announces Executive Leadership Changes",
+          "url": "https://www.saludamedical.com/press-releases/saluda-medical-announces-executive-leadership-changes/",
+          "published": "2021-02-12"
+        },
+        {
+          "title": "CSIRO — Our Spinouts",
+          "url": "https://www.csiro.au/en/work-with-us/industries/technology/Our-Spinouts"
+        }
+      ]
+    },
+    {
+      "id": "parker-spinal-ecap-research",
+      "from": "john-parker",
+      "to": "spinal-ecap",
+      "label": "co-demonstrated human recording of",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Online 2011; print 2012",
+      "detail": "Parker and colleagues measured compound responses during human spinal stimulation.",
+      "limit": "Do not label this invention of all ECAP recording, which has a broader history.",
+      "sources": [
+        {
+          "title": "Compound action potentials recorded in the human spinal cord during neurostimulation for pain relief",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22188868/",
+          "published": "2011-12-19"
+        }
+      ]
+    },
+    {
+      "id": "saluda-evoke-developed",
+      "from": "saluda",
+      "to": "evoke",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "FDA approval 2022-02-28",
+      "detail": "Evoke implements closed-loop control using the measured response after stimulation.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Evoke Spinal Cord Stimulation System — P190002",
+          "url": "https://www.fda.gov/medical-devices/recently-approved-devices/evoke-spinal-cord-stimulation-scs-system-p190002",
+          "published": "2022-02-28"
+        }
+      ]
+    },
+    {
+      "id": "evoke-ecap-feedback",
+      "from": "evoke",
+      "to": "spinal-ecap",
+      "label": "uses as feedback signal",
+      "category": "technology",
+      "basis": "documented",
+      "date": "FDA description 2022",
+      "detail": "Measured spinal activation guides current adjustment toward a clinician-set target.",
+      "limit": "Neural activation feedback is not a direct measurement of perceived pain.",
+      "sources": [
+        {
+          "title": "Evoke Spinal Cord Stimulation System — P190002",
+          "url": "https://www.fda.gov/medical-devices/recently-approved-devices/evoke-spinal-cord-stimulation-scs-system-p190002",
+          "published": "2022-02-28"
+        },
+        {
+          "title": "Compound action potentials recorded in the human spinal cord during neurostimulation for pain relief",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22188868/",
+          "published": "2011-12-19"
+        }
+      ]
+    },
+    {
+      "id": "nicta-saluda-patent-assignment",
+      "from": "nicta",
+      "to": "saluda",
+      "label": "assigned patent applications to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Published 2013-05-16",
+      "detail": "The official patent journal records NICTA-to-Saluda assignments, including Australian applications2009293506,2009293507 and2009293508.",
+      "limit": "Assignment publication is not an asserted contract execution date; current validity and product claim mapping were not assessed.",
+      "sources": [
+        {
+          "title": "Australian Official Journal of Patents, supplement — assignments before grant",
+          "url": "https://pericles.ipaustralia.gov.au/ols/epublish/content/olsPatentsPdfDownload?id=632",
+          "published": "2013-05-16"
+        }
+      ]
+    },
+    {
+      "id": "sabes-jordan-training",
+      "from": "philip-sabes",
+      "to": "michael-jordan",
+      "label": "did PhD research in lab of",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2000; exact years not specified",
+      "detail": "Sabes’ institutional biography explicitly identifies Jordan’s MIT lab as his doctoral research setting.",
+      "limit": "No advisor relationship is inferred from co-authorship.",
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ]
+    },
+    {
+      "id": "sabes-neuralink-founding",
+      "from": "philip-sabes",
+      "to": "neuralink",
+      "label": "helped build founding team",
+      "category": "people",
+      "basis": "documented",
+      "date": "2017 full-time transition",
+      "detail": "Sabes says he helped assemble the founding team and retired from UCSF in 2017 to join full time.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ]
+    },
+    {
+      "id": "sabes-lab-sewing",
+      "from": "sabes-lab",
+      "to": "sewing-machine",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2019",
+      "detail": "The laboratory developed robotic insertion of flexible thin-film probes with a separate stiff needle.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "The “sewing machine” for minimally invasive neural recording",
+          "url": "https://www.biorxiv.org/content/10.1101/578542v1",
+          "published": "2019-03-14"
+        },
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ]
+    },
+    {
+      "id": "maharbiz-lab-sewing",
+      "from": "maharbiz-lab",
+      "to": "sewing-machine",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2019",
+      "detail": "The Sabes laboratory explicitly identifies collaboration with the Maharbiz laboratory on this platform.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "The “sewing machine” for minimally invasive neural recording",
+          "url": "https://www.biorxiv.org/content/10.1101/578542v1",
+          "published": "2019-03-14"
+        },
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ]
+    },
+    {
+      "id": "sewing-neuralink-refinement",
+      "from": "sewing-machine",
+      "to": "neuralink",
+      "label": "approach refined by",
+      "category": "technology",
+      "basis": "documented",
+      "date": "After 2017; described by 2026",
+      "detail": "Sabes explicitly describes Neuralink as refining the insertion approach begun in his UCSF lab.",
+      "limit": "Technical continuation, not evidence of a license, exclusive ownership or identical devices.",
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ]
+    },
+    {
+      "id": "stanford-neuralink-speech-license",
+      "from": "stanford",
+      "to": "neuralink",
+      "label": "licensed speech-decoding IP to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2025-06-12",
+      "detail": "Paper disclosures name Stanford patent 12008987 and Neuralink as a licensee.",
+      "limit": "Agreement date, scope and product implementation are undisclosed; this is a later decoding link, not the origin of N1 electrodes.",
+      "sources": [
+        {
+          "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+          "published": "2025-06-12"
+        }
+      ]
+    },
+    {
+      "id": "tolosa-llnl-research",
+      "from": "vanessa-tolosa",
+      "to": "llnl",
+      "label": "led polymer-array research at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before Neuralink; exact years not specified",
+      "detail": "Precision’s hiring announcement describes Tolosa’s earlier LLNL flexible-polymer-array leadership.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ]
+    },
+    {
+      "id": "tolosa-neuralink",
+      "from": "vanessa-tolosa",
+      "to": "neuralink",
+      "label": "co-founded; led neural interfaces",
+      "category": "people",
+      "basis": "documented",
+      "date": "Historical role, before 2025",
+      "detail": "Her responsibilities included electrode microfabrication, packaging and cleanroom development.",
+      "limit": "Personnel history does not establish movement of company IP.",
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ]
+    },
+    {
+      "id": "tolosa-precision",
+      "from": "vanessa-tolosa",
+      "to": "precision",
+      "label": "joined as R&D leader",
+      "category": "people",
+      "basis": "documented",
+      "date": "2025-06-11 announcement",
+      "detail": "Precision announced Tolosa’s appointment as SVP of Research and Development.",
+      "limit": "Role is stated as announced then; current title may have expanded.",
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ]
+    },
+    {
+      "id": "llnl-precision-crada",
+      "from": "llnl",
+      "to": "precision",
+      "label": "entered implant-longevity CRADA with",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2024-02-13 announcement",
+      "detail": "A three-year formal collaboration targets longer-lived thin-film neural implants.",
+      "limit": "Planned transfer of resulting manufacturing techniques was not reported as complete.",
+      "sources": [
+        {
+          "title": "LLNL and Precision Neuroscience collaboration aims to develop next-generation neural implants",
+          "url": "https://www.llnl.gov/article/50836/llnl-precision-neuroscience-collaboration-aims-develop-next-generation-neural-implants",
+          "published": "2024-02-13"
+        }
+      ]
+    },
+    {
+      "id": "precision-biomems-acquisition",
+      "from": "precision",
+      "to": "precision-biomems",
+      "label": "owns acquired MEMS manufacturing subsidiary",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2023-10-05 announcement",
+      "detail": "The acquisition brought a Texas MEMS foundry and retained manufacturing team into Precision.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Precision Neuroscience Acquires U.S. Manufacturing Facility and Receives FDA Breakthrough Device Designation",
+          "url": "https://www.globenewswire.com/en/news-release/2023/10/5/2755458/0/en/Precision-Neuroscience-Acquires-U-S-Manufacturing-Facility-and-Receives-FDA-Breakthrough-Device-Designation.html",
+          "published": "2023-10-05"
+        }
+      ]
+    },
+    {
+      "id": "angle-paradromics-founded",
+      "from": "matt-angle",
+      "to": "paradromics",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2015",
+      "detail": "The company identifies Angle as founder and gives 2015 as its founding year.",
+      "limit": "No doctoral supervisor is inferred from later collaborative papers.",
+      "sources": [
+        {
+          "title": "Paradromics — Company",
+          "url": "https://paradromics.com/company/"
+        },
+        {
+          "title": "Paradromics Inc. — official company profile",
+          "url": "https://www.linkedin.com/company/paradromics-inc"
+        }
+      ]
+    },
+    {
+      "id": "paradromics-microwire-cmos",
+      "from": "paradromics",
+      "to": "microwire-cmos",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2020-03-20 publication",
+      "detail": "The published platform includes Paradromics researchers as part of a multi-institution collaboration.",
+      "limit": "Not evidence that Connexus uses an identical chip, or that Stanford licensed all underlying hardware to Paradromics.",
+      "sources": [
+        {
+          "title": "Bringing silicon computing power to the brain",
+          "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+          "published": "2020-03-20"
+        },
+        {
+          "title": "Massively parallel microwire arrays integrated with CMOS chips for neural recording",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/",
+          "published": "2020-03-20"
+        }
+      ]
+    },
+    {
+      "id": "melosh-microwire-cmos",
+      "from": "melosh-lab",
+      "to": "microwire-cmos",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2020-03-20 publication",
+      "detail": "Stanford reports Melosh’s group’s contribution to the separate microwire-bundle/CMOS architecture.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Bringing silicon computing power to the brain",
+          "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+          "published": "2020-03-20"
+        },
+        {
+          "title": "Massively parallel microwire arrays integrated with CMOS chips for neural recording",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/",
+          "published": "2020-03-20"
+        }
+      ]
+    },
+    {
+      "id": "uc-paradromics-speech-license",
+      "from": "uc-regents",
+      "to": "paradromics",
+      "label": "licensed speech-BCI IP to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2025-06-12",
+      "detail": "The paper identifies UC-owned speech-BCI applications including IP licensed by Paradromics.",
+      "limit": "The disclosure does not map every claim in either application to the license or establish implementation in Connexus.",
+      "sources": [
+        {
+          "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+          "published": "2025-06-12"
+        }
+      ]
+    },
+    {
+      "id": "solzbacher-blackrock-founded",
+      "from": "florian-solzbacher",
+      "to": "blackrock",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2007–2008; sources differ",
+      "detail": "Utah’s interview dates formation to 2007; Blackrock’s company history dates founding to 2008.",
+      "limit": "Do not silently resolve the one-year discrepancy.",
+      "sources": [
+        {
+          "title": "Brain Trust: A Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+          "published": "2024-07-25"
+        },
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ]
+    },
+    {
+      "id": "gerhardt-blackrock-founded",
+      "from": "marcus-gerhardt",
+      "to": "blackrock",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2008 in company account",
+      "detail": "Company history names Gerhardt and Solzbacher as the two founders.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ]
+    },
+    {
+      "id": "cyberkinetics-blackrock-assets",
+      "from": "cyberkinetics",
+      "to": "blackrock",
+      "label": "transferred research-device business to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2008-05-15",
+      "detail": "The business history identifies Blackrock as successor to the acquired research operations; contemporaneous SEC filings name I2S as purchaser.",
+      "limit": "This was a research-business asset transaction. The contemporaneous seller retained clinical IP/approvals; do not label it purchase of all BrainGate IP or the entire company.",
+      "sources": [
+        {
+          "title": "Cyberkinetics — Form 8-K, research-business disposition",
+          "url": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408031489/v115527_8k.htm",
+          "published": "2008-05-21"
+        },
+        {
+          "title": "Cyberkinetics — Form 10-Q, asset-purchase agreement terms",
+          "url": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408029874/v114541_10q.htm",
+          "published": "2008-05"
+        },
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ]
+    },
+    {
+      "id": "bionic-cyberkinetics-acquired",
+      "from": "bionic-technologies",
+      "to": "cyberkinetics",
+      "label": "acquired by",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2002",
+      "detail": "Cyberkinetics acquired the research-array supplier’s engineering team, manufacturing facilities and intellectual property.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Cyberkinetics — Form 8-K, acquired Bionic Technologies business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1180253/000106299304001616/form8k.htm",
+          "published": "2004"
+        }
+      ]
+    },
+    {
+      "id": "stanford-blackrock-speech-license",
+      "from": "stanford",
+      "to": "blackrock",
+      "label": "licensed speech-decoding IP to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2025-06-12",
+      "detail": "Stanford speech-decoding patent 12008987 is named in a paper disclosure identifying Blackrock as licensee.",
+      "limit": "The disclosure does not establish the license’s start date, exclusivity or a particular commercial decoder implementation.",
+      "sources": [
+        {
+          "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+          "published": "2025-06-12"
+        }
+      ]
+    },
+    {
+      "id": "opie-bionic-eye",
+      "from": "nicholas-opie",
+      "to": "melbourne-bionic-eye",
+      "label": "previously worked on",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2016 report",
+      "detail": "The university reports that Opie was recruited from the bionic-eye project for stent-electrode development.",
+      "limit": "Expertise movement, not evidence of retinal-device IP licensing.",
+      "sources": [
+        {
+          "title": "Moving with the power of thought",
+          "url": "https://pursuit.unimelb.edu.au/articles/moving-with-the-power-of-thought",
+          "published": "2016-02-09"
+        }
+      ]
+    },
+    {
+      "id": "oxley-vascular-lab",
+      "from": "thomas-oxley",
+      "to": "vascular-bionics-lab",
+      "label": "co-established",
+      "category": "people",
+      "basis": "documented",
+      "date": "After idea work began in 2011; before 2020",
+      "detail": "Melbourne explicitly credits Oxley and Opie with forming the laboratory after initial research funding.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        }
+      ]
+    },
+    {
+      "id": "opie-vascular-lab",
+      "from": "nicholas-opie",
+      "to": "vascular-bionics-lab",
+      "label": "co-established",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2020 report",
+      "detail": "The university identifies Opie as a co-establisher of the multidisciplinary laboratory.",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        }
+      ]
+    },
+    {
+      "id": "vascular-stentrode",
+      "from": "vascular-bionics-lab",
+      "to": "stentrode",
+      "label": "developed with clinical partners",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2016 preclinical → 2019 human implantation",
+      "detail": "The laboratory effort joined university, Royal Melbourne Hospital and Florey investigators in stent-electrode development.",
+      "limit": "A multi-institution effort; do not credit the whole invention to one laboratory or infer exclusive university licensing.",
+      "sources": [
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        },
+        {
+          "title": "Minimally invasive endovascular stent-electrode array for high-fidelity, chronic recordings of cortical neural activity",
+          "url": "https://www.nature.com/articles/nbt.3428",
+          "published": "2016-02-08"
+        }
+      ]
+    },
+    {
+      "id": "brown-blackrock-wireless-license",
+      "from": "brown",
+      "to": "blackrock",
+      "label": "licensed wireless transmitter technology to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2021-03-31",
+      "detail": "Brown explicitly reports a licensing agreement making its Brown Wireless Device available through Blackrock Microsystems.",
+      "limit": "The 2021 human configuration used an external head-mounted transmitter attached to a percutaneous connector.",
+      "sources": [
+        {
+          "title": "Researchers demonstrate first human use of high-bandwidth wireless brain-computer interface",
+          "url": "https://www.brown.edu/news/2021-03-31/braingate-wireless",
+          "published": "2021-03-31"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-spinout",
+      "from": "ability-neuro",
+      "to": "wyss-geneva-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2025-03",
+      "detail": "The project and company histories identify the Wyss-to-company transition.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "ABILITY — Wyss Center for Bio and Neuroengineering",
+          "url": "https://wysscenter.ch/project/ability/"
+        },
+        {
+          "title": "ABILITY — Our Journey",
+          "url": "https://abilityneuro.com/"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-founder-kopel",
+      "from": "rotem-kopel",
+      "to": "ability-neuro",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2025; current team identifies founder",
+      "detail": "The official team labels Kopel CEO and co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "ABILITY — Team",
+          "url": "https://abilityneuro.com/team/"
+        },
+        {
+          "title": "ABILITY — Our Journey",
+          "url": "https://abilityneuro.com/"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-founder-cook",
+      "from": "craig-cook",
+      "to": "ability-neuro",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2025",
+      "detail": "Wyss explicitly announces Cook’s co-founder role at its spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Craig Cook appointed Chief Business Officer and Co-founder at ABILITY Neurotech, the Wyss Geneva’s flagship spin-off",
+          "url": "https://wysscenter.ch/update/craig-cook-appointed-cbo/",
+          "published": "2025"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-origin-platform",
+      "from": "wyss-geneva-origin",
+      "to": "ability-wyss-platform",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Developed",
+      "date": "2018–2025 project",
+      "detail": "The institutional project records this engineering program and its spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "ABILITY — Wyss Center for Bio and Neuroengineering",
+          "url": "https://wysscenter.ch/project/ability/"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-translation",
+      "from": "ability-neuro",
+      "to": "ability-wyss-platform",
+      "type": "commercializes",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Translates implant platform",
+      "date": "2025 onward",
+      "detail": "The project evolved into ABILITY Neurotech, continuing development toward human use.",
+      "limit": "Spinout is documented; no exclusive licence terms are inferred.",
+      "sources": [
+        {
+          "title": "ABILITY — Wyss Center for Bio and Neuroengineering",
+          "url": "https://wysscenter.ch/project/ability/"
+        },
+        {
+          "title": "ABILITY — Our Journey",
+          "url": "https://abilityneuro.com/"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-optical",
+      "from": "ability-wyss-platform",
+      "to": "ability-optical-link",
+      "type": "uses",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Uses optical telemetry",
+      "date": "2022",
+      "detail": "Wyss describes a skin-crossing optical link and induction power in its implant architecture.",
+      "limit": "The sensor reads electrical signals; optical telemetry does not mean optical neural imaging or optogenetics.",
+      "sources": [
+        {
+          "title": "Wyss Center — Pushing the boundaries of implantable neuro-devices",
+          "url": "https://wysscenter.ch/wp-content/uploads/2024/03/WyssCenter_Whitepaper_ABILITY.pdf",
+          "published": "2022; later uploaded in 2024 directory"
+        }
+      ]
+    },
+    {
+      "id": "ability-neuro-clinical",
+      "from": "ability-neuro",
+      "to": "tum-ability-intraoperative",
+      "type": "clinical-collaboration",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Tests acquisition with TUM",
+      "date": "2026-07-21 announcement",
+      "detail": "The company reports initial acquisition under general anesthesia during tumour surgery, with further awake tasks planned.",
+      "limit": "Brief intraoperative acquisition does not demonstrate a chronically implanted home speech system.",
+      "sources": [
+        {
+          "title": "ABILITY Neurotech Announces First-In-Human Testing for Novel Brain-Computer Interface Technology",
+          "url": "https://abilityneuro.com/press/fih-intraop/",
+          "published": "2026-07-21"
+        }
+      ]
+    },
+    {
+      "id": "newronika-founder-priori",
+      "from": "alberto-priori",
+      "to": "newronika",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2009; founding roles verified on current company page",
+      "detail": "Official company biographies explicitly identify this co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ]
+    },
+    {
+      "id": "newronika-founder-rossi",
+      "from": "lorenzo-rossi",
+      "to": "newronika",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2009; founding roles verified on current company page",
+      "detail": "Official company biographies explicitly identify this co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ]
+    },
+    {
+      "id": "newronika-founder-marceglia",
+      "from": "sara-marceglia",
+      "to": "newronika",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2009; founding roles verified on current company page",
+      "detail": "Official company biographies explicitly identify this co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ]
+    },
+    {
+      "id": "newronika-spinout",
+      "from": "newronika",
+      "to": "milan-newronika-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2009",
+      "detail": "The hospital identifies Newronika as a spinout involving itself and the University of Milan; the company release supplies 2009.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Brevetti — Spin-off: nuove imprese per la ricerca",
+          "url": "https://www.policlinico.mi.it/technology-transfer-office/offerta"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ]
+    },
+    {
+      "id": "newronika-platform",
+      "from": "newronika",
+      "to": "alphadbs",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Develops",
+      "date": "2021 paper",
+      "detail": "The Newronika-authored technical paper describes the implanted adaptive platform and early sensing data.",
+      "limit": "This 2021 technical report does not publish the completed trial’s comparative clinical efficacy.",
+      "sources": [
+        {
+          "title": "A New Implantable Closed-Loop Clinical Neural Interface: First Application in Parkinson’s Disease",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.763235/full",
+          "published": "2021-12-07"
+        }
+      ]
+    },
+    {
+      "id": "newronika-external-line",
+      "from": "alphadbs",
+      "to": "external-adbs-2016",
+      "type": "technical-continuation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Embeds earlier feedback approach",
+      "date": "2016 → 2021",
+      "detail": "The implant paper explicitly traces its sensing and tested adaptive algorithm to earlier external devices.",
+      "limit": "Implementation continuity is documented; an external prototype and a chronic implant are different hardware systems.",
+      "sources": [
+        {
+          "title": "A New Implantable Closed-Loop Clinical Neural Interface: First Application in Parkinson’s Disease",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.763235/full",
+          "published": "2021-12-07"
+        },
+        {
+          "title": "An external portable device for adaptive deep brain stimulation (aDBS) clinical research in advanced Parkinson’s Disease",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27029510/",
+          "published": "2016-03-27 online; May2016 issue"
+        }
+      ]
+    },
+    {
+      "id": "newronika-filter-line",
+      "from": "external-adbs-2016",
+      "to": "filterdbs-2007",
+      "type": "technical-continuation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Builds on artifact-suppressed sensing",
+      "date": "2007 → 2016",
+      "detail": "The sequence moves from measuring LFPs during DBS to a portable feedback research system; the later implant paper explicitly links both external implementations to the sensing approach.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "An electronic device for artefact suppression in human local field potential recordings during deep brain stimulation",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17409484/",
+          "published": "2007-03-13 online; June2007 issue"
+        },
+        {
+          "title": "An external portable device for adaptive deep brain stimulation (aDBS) clinical research in advanced Parkinson’s Disease",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27029510/",
+          "published": "2016-03-27 online; May2016 issue"
+        },
+        {
+          "title": "A New Implantable Closed-Loop Clinical Neural Interface: First Application in Parkinson’s Disease",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.763235/full",
+          "published": "2021-12-07"
+        }
+      ]
+    },
+    {
+      "id": "newronika-data-platform",
+      "from": "alphadbs",
+      "to": "webbiobank",
+      "type": "integrates",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Integrates neural-data platform",
+      "date": "2026-07-14 announcement",
+      "detail": "The commercial-version announcement explicitly identifies WebBioBank integration.",
+      "limit": "Data review and storage are not the same as sending each real-time stimulation decision to a cloud processor.",
+      "sources": [
+        {
+          "title": "Newronika Receives CE Mark for αDBS®, Advancing Its Mission to Make Adaptive Therapy the Standard of Care",
+          "url": "https://newronika.com/news/newronika-receives-ce-mark-for-adbs-r-advancing-itsmission-to-make-adaptive-therapy-the-standard-of-care",
+          "published": "2026-07-14"
+        }
+      ]
+    },
+    {
+      "id": "motif-neurotech-founder",
+      "from": "jacob-robinson",
+      "to": "motif",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2022",
+      "detail": "Rice identifies Robinson among the founders; its 2023 review places incorporation in 2022.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "The Year in Research",
+          "url": "https://magazine.rice.edu/summer-2023/the-year-in-research",
+          "published": "2023 (summer issue)"
+        },
+        {
+          "title": "From Lab to Launch",
+          "url": "https://magazine.rice.edu/spring-2026/lab-launch",
+          "published": "2026 (spring issue)"
+        }
+      ]
+    },
+    {
+      "id": "motif-neurotech-spinout",
+      "from": "motif",
+      "to": "robinson-lab-rice",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2022; lab origin explicitly reported 2025",
+      "detail": "Rice explicitly describes Motif as a Robinson-lab spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "The Year in Research",
+          "url": "https://magazine.rice.edu/summer-2023/the-year-in-research",
+          "published": "2023 (summer issue)"
+        },
+        {
+          "title": "Rice labs tapped for brain research by UK funding agency with multimillion-dollar awards",
+          "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards",
+          "published": "2025-01-21"
+        }
+      ]
+    },
+    {
+      "id": "motif-neurotech-dot",
+      "from": "motif",
+      "to": "motif-dot",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-developed",
+      "date": "2024",
+      "detail": "Motif collaborated with Rice and clinical researchers on the miniature epidural stimulator.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Rice team demonstrates miniature brain stimulator in humans",
+          "url": "https://news.rice.edu/news/2024/rice-team-demonstrates-miniature-brain-stimulator-humans",
+          "published": "2024-04-12"
+        }
+      ]
+    },
+    {
+      "id": "motif-neurotech-platform",
+      "from": "motif-dot",
+      "to": "rice-magnetoelectric-stimulation",
+      "type": "technical-continuation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Uses magnetoelectric powering",
+      "date": "2020 → 2024",
+      "detail": "The laboratory platform and DOT both turn magnetic energy into electrical stimulation; DOT adds an epidural therapeutic form factor and digital programming.",
+      "limit": "Technical continuity is supported; the cited articles do not disclose the complete patent licence or establish clinical depression efficacy.",
+      "sources": [
+        {
+          "title": "Rice team makes tiny, magnetically powered neural stimulator",
+          "url": "https://news.rice.edu/news/2020/rice-team-makes-tiny-magnetically-powered-neural-stimulator",
+          "published": "2020"
+        },
+        {
+          "title": "Rice team demonstrates miniature brain stimulator in humans",
+          "url": "https://news.rice.edu/news/2024/rice-team-demonstrates-miniature-brain-stimulator-humans",
+          "published": "2024-04-12"
+        }
+      ]
+    },
+    {
+      "id": "inbrain-founder",
+      "from": "jose-antonio-garrido",
+      "to": "inbrain",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2019 in institutional sources",
+      "detail": "Garrido is explicitly identified as a co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "INBRAIN Neuroelectronics signs an agreement to develop neurotechnology patented by six public research institutions",
+          "url": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+          "published": "2022-03-15"
+        }
+      ]
+    },
+    {
+      "id": "inbrain-spinout",
+      "from": "inbrain",
+      "to": "icn2-icrea-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2019 / 2020 discrepancy",
+      "detail": "ICN2 identifies the company as an ICN2–ICREA spinout formed in 2019; the current company timeline labels its foundation 2020.",
+      "limit": "Both dates are preserved rather than silently selecting one.",
+      "sources": [
+        {
+          "title": "ICN2, Finalist in the 2025 ASTP Impact Awards",
+          "url": "https://icn2.cat/en/business-and-innovation/news-industry/5447-icn2-finalist-in-the-2025-astp-impact-awards",
+          "published": "2025-04-29"
+        },
+        {
+          "title": "INBRAIN Technology",
+          "url": "https://www.inbrain.tech/technology/"
+        }
+      ]
+    },
+    {
+      "id": "inbrain-ip-agreement",
+      "from": "inbrain",
+      "to": "inbrain-public-graphene-ip",
+      "type": "technology-transfer-agreement",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Agreement to exploit and develop",
+      "date": "2022-03-15 announcement",
+      "detail": "The agreement covers three patents and a trade secret co-owned across CSIC, ICN2, ICREA, CIBER-BBN, UAB and IDIBAPS.",
+      "limit": "The article establishes an agreement, not an explicit exclusive licence.",
+      "sources": [
+        {
+          "title": "INBRAIN Neuroelectronics signs an agreement to develop neurotechnology patented by six public research institutions",
+          "url": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+          "published": "2022-03-15"
+        }
+      ]
+    },
+    {
+      "id": "inbrain-clinical-device",
+      "from": "inbrain",
+      "to": "manchester-graphene-trial",
+      "type": "device-provider",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Provides investigational electrodes",
+      "date": "2024–2026",
+      "detail": "The Manchester-sponsored study uses INBRAIN graphene devices in brain-tumour surgery.",
+      "limit": "This is intraoperative feasibility, not proof of chronic Parkinson’s treatment efficacy.",
+      "sources": [
+        {
+          "title": "Patient Enrolment for First-in-Human Trial of ICN2-developed Graphene Electrodes is Completed",
+          "url": "https://www.icn2.cat/en/nanoscience-against-covid-19/covid19-news/5605-patient-enrolment-for-first-in-human-trial-of-icn2-developed-graphene-electrodes-is-completed",
+          "published": "2026-04-22"
+        }
+      ]
+    },
+    {
+      "id": "cortec-founder",
+      "from": "jorn-rickert",
+      "to": "cortec",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2010",
+      "detail": "Freiburg identifies Rickert among the company founders.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Biomoleküle kopieren, Gehirnaktivität messen",
+          "url": "https://news.vm.uni-freiburg.de/de/newsarchiv/biomolekuele-kopieren-gehirnaktivitaet-messen",
+          "published": "2015"
+        },
+        {
+          "title": "Start-ups — Faculty of Engineering, University of Freiburg",
+          "url": "https://uni-freiburg.de/tf/start-ups/"
+        }
+      ]
+    },
+    {
+      "id": "cortec-spinout",
+      "from": "cortec",
+      "to": "freiburg-cortec-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of Freiburg collaboration",
+      "date": "2010-09",
+      "detail": "The university identifies biology, biomedical microtechnology at IMTEK, and the hospital as the collaborating origin.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Start-ups — Faculty of Engineering, University of Freiburg",
+          "url": "https://uni-freiburg.de/tf/start-ups/"
+        }
+      ]
+    },
+    {
+      "id": "cortec-shareholder",
+      "from": "thomas-stieglitz",
+      "to": "cortec",
+      "type": "founding-shareholder",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Founding shareholder",
+      "date": "2010; reported 2011",
+      "detail": "The Bernstein Center explicitly identifies Stieglitz as a founding shareholder and advisory-board member.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "CorTec: University Spin-Off on its Way into the Future of Neurotechnology",
+          "url": "https://www.bcf.uni-freiburg.de/news/2011/20111115-cortec",
+          "published": "2011-11-15"
+        }
+      ]
+    },
+    {
+      "id": "cortec-platform",
+      "from": "cortec",
+      "to": "brain-interchange",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Develops",
+      "date": "2011 → 2025",
+      "detail": "CorTec’s early bidirectional-platform program progressed to a first human implant in a stroke feasibility study.",
+      "limit": "This does not establish efficacy or unrestricted commercial availability.",
+      "sources": [
+        {
+          "title": "CorTec: University Spin-Off on its Way into the Future of Neurotechnology",
+          "url": "https://www.bcf.uni-freiburg.de/news/2011/20111115-cortec",
+          "published": "2011-11-15"
+        },
+        {
+          "title": "First Human Implantation of a BCI Made in Germany",
+          "url": "https://cortec-neuro.com/news/first-human-implantation-of-a-bci-made-in-germany",
+          "published": "2025-07-29"
+        }
+      ]
+    },
+    {
+      "id": "neurosoft-bio-founder",
+      "from": "stephanie-lacour",
+      "to": "neurosoft-bio",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "Company team page; founding date not established here",
+      "detail": "The official team identifies Lacour as a co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Neurosoft Bioelectronics Team",
+          "url": "https://www.neurosoft-bio.com/team"
+        }
+      ]
+    },
+    {
+      "id": "neurosoft-bio-spinout",
+      "from": "neurosoft-bio",
+      "to": "epfl-lsbi-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of LSBI",
+      "date": "By 2020",
+      "detail": "EPFL identifies Neurosoft as an LSBI spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Funding from Catalyze4Life for Neurosoft Bioelectronics",
+          "url": "https://actu.epfl.ch/news/funding-from-catalyze4life-for-neurosoft-bioelectr/",
+          "published": "2020"
+        },
+        {
+          "title": "A promising future for soft bioelectronic interfaces",
+          "url": "https://actu.epfl.ch/news/a-promising-future-for-soft-bioelectronic-interf-3",
+          "published": "2021-03-30"
+        }
+      ]
+    },
+    {
+      "id": "neurosoft-bio-platform",
+      "from": "neurosoft-bio",
+      "to": "soft-conformal-cortical-arrays",
+      "type": "translates",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Translates soft interfaces",
+      "date": "2021",
+      "detail": "EPFL explicitly describes Neurosoft translating the laboratory’s soft-interface technology.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "A promising future for soft bioelectronic interfaces",
+          "url": "https://actu.epfl.ch/news/a-promising-future-for-soft-bioelectronic-interf-3",
+          "published": "2021-03-30"
+        }
+      ]
+    },
+    {
+      "id": "neurosoft-bio-wyss",
+      "from": "wyss-geneva-origin",
+      "to": "neurosoft-bio",
+      "type": "research-collaboration",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Supports validation and translation",
+      "date": "2021 → 2025",
+      "detail": "EPFL and the company describe Wyss support for preclinical and clinical translation.",
+      "limit": "Acceleration and validation support do not establish that Neurosoft spun out of Wyss or that Wyss owns all IP.",
+      "sources": [
+        {
+          "title": "A promising future for soft bioelectronic interfaces",
+          "url": "https://actu.epfl.ch/news/a-promising-future-for-soft-bioelectronic-interf-3",
+          "published": "2021-03-30"
+        },
+        {
+          "title": "Swiss company sets record for most electrodes in a soft and stretchable brain interface tested in a human",
+          "url": "https://www.neurosoft-bio.com/onlinepr/20250227-64electrodes",
+          "published": "2025-02-27"
+        }
+      ]
+    },
+    {
+      "id": "onward-medical-founder",
+      "from": "gregoire-courtine",
+      "to": "onward-medical",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded predecessor",
+      "date": "2014",
+      "detail": "The annual report identifies Courtine and Bloch as co-founders of the predecessor, alongside other researchers.",
+      "limit": "The two named people are not presented as the complete founder list.",
+      "sources": [
+        {
+          "title": "ONWARD Medical Annual Report 2024",
+          "url": "https://ir.onwd.com/static-files/09689b6c-28b6-4a0a-b4d5-d8ec8c4fe105",
+          "published": "2025 (FY2024 report)"
+        }
+      ]
+    },
+    {
+      "id": "onward-medical-research",
+      "from": "onward-medical",
+      "to": "neurorestore",
+      "type": "research-translation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Translates selected research",
+      "date": "Documented in FY2024 report",
+      "detail": "The company describes selection and translation of promising NeuroRestore projects.",
+      "limit": "This relationship does not mean that all ONWARD technology originated at EPFL or that every project is exclusively licensed.",
+      "sources": [
+        {
+          "title": "ONWARD Medical Annual Report 2024",
+          "url": "https://ir.onwd.com/static-files/09689b6c-28b6-4a0a-b4d5-d8ec8c4fe105",
+          "published": "2025 (FY2024 report)"
+        }
+      ]
+    },
+    {
+      "id": "onward-medical-merger",
+      "from": "nrt-origin",
+      "to": "onward-medical",
+      "type": "corporate-merger",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Merged with predecessor GTX",
+      "date": "2019-10-22",
+      "detail": "NRT and GTX medical, formerly G-Therapeutics, merged under the GTX medical name; this is ONWARD’s corporate ancestry.",
+      "limit": "The 2019 combined company was called GTX medical, not yet ONWARD; this edge uses the current company node for navigation.",
+      "sources": [
+        {
+          "title": "GTX medical BV and NeuroRecovery Technologies Inc. Merge to Create Leading Neurostimulation Company for Spinal Cord Injury",
+          "url": "https://www.gimv.com/sites/default/files/media/2019-10/20191022_English_Press-release-merger-GTX-medical-NeuroRecovery-Technologies.pdf",
+          "published": "2019-10-22"
+        }
+      ]
+    },
+    {
+      "id": "onward-medical-license",
+      "from": "onward-medical",
+      "to": "wimagine",
+      "type": "exclusive-license",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Exclusive CEA licence",
+      "date": "2024-10-15 announcement",
+      "detail": "CEA and ONWARD announce exclusive rights to develop and commercialize WIMAGINE as part of ARC-BCI.",
+      "limit": "The right concerns the named BCI technology; it is not a claim of ownership of all CEA or NeuroRestore research.",
+      "sources": [
+        {
+          "title": "ONWARD Medical Signs Agreement with CEA for Exclusive Rights to Clinatec’s WIMAGINE Brain-Computer Interface (BCI) Technology",
+          "url": "https://www.cea.fr/cea-tech/leti/english/Pages/What's-On/News/ONWARD-Medical-Signs-Agreement-with-CEA-for-Exclusive-Rights-to-Clinatec-s-WIMAGINE-Brain-Computer-Interface-%28BCI%29-Technology.aspx",
+          "published": "2024-10-17; release dated 2024-10-15"
+        }
+      ]
+    },
+    {
+      "id": "onward-medical-clinatec",
+      "from": "clinatec",
+      "to": "wimagine",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Developed",
+      "date": "Before 2024 licence",
+      "detail": "CEA identifies its Clinatec technology as the licensed WIMAGINE brain-interface component.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "ONWARD Medical Signs Agreement with CEA for Exclusive Rights to Clinatec’s WIMAGINE Brain-Computer Interface (BCI) Technology",
+          "url": "https://www.cea.fr/cea-tech/leti/english/Pages/What's-On/News/ONWARD-Medical-Signs-Agreement-with-CEA-for-Exclusive-Rights-to-Clinatec-s-WIMAGINE-Brain-Computer-Interface-%28BCI%29-Technology.aspx",
+          "published": "2024-10-17; release dated 2024-10-15"
+        }
+      ]
+    },
+    {
+      "id": "corticale-founder",
+      "from": "luca-berdondini",
+      "to": "corticale",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2021",
+      "detail": "IIT names Berdondini among four co-founders.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Corticale, the new IIT start-up to study and treat brain",
+          "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+          "published": "2021-08-04"
+        }
+      ]
+    },
+    {
+      "id": "corticale-spinout",
+      "from": "corticale",
+      "to": "iit-microtechnology-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of IIT team",
+      "date": "2021",
+      "detail": "IIT describes the startup arising from its Microtechnology for Neuroelectronics team.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sources": [
+        {
+          "title": "Corticale, the new IIT start-up to study and treat brain",
+          "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+          "published": "2021-08-04"
+        }
+      ]
+    },
+    {
+      "id": "corticale-commercializes",
+      "from": "corticale",
+      "to": "sinaps",
+      "type": "commercializes",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Commercializes SiNAPS",
+      "date": "2021 → current product listing",
+      "detail": "The IIT startup announcement and company research products identify SiNAPS as its platform.",
+      "limit": "Commercial translation is established; no exclusive licence or Neuropixels descent is inferred.",
+      "sources": [
+        {
+          "title": "Corticale, the new IIT start-up to study and treat brain",
+          "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+          "published": "2021-08-04"
+        },
+        {
+          "title": "Corticale — Research",
+          "url": "https://www.corticale.com/product"
+        }
+      ]
+    },
+    {
+      "id": "corticale-acquisition",
+      "from": "corti-q",
+      "to": "sinaps",
+      "type": "supports",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Acquires SiNAPS signals",
+      "date": "Undated product page reviewed 2026-09-15",
+      "detail": "Corti-Q integrates acquisition with company visualization and analysis tools.",
+      "limit": "The review date is not a product launch date.",
+      "sources": [
+        {
+          "title": "Corticale — Research",
+          "url": "https://www.corticale.com/product"
+        }
+      ]
+    },
+    {
+      "id": "lefloch-jia-training",
+      "from": "paul-le-floch",
+      "to": "jia-liu",
+      "label": "PhD trainee in lab of",
+      "category": "people",
+      "basis": "documented",
+      "date": "By 2021",
+      "detail": "Harvard identifies Le Floch as a former graduate student in Jia Liu’s lab.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ]
+    },
+    {
+      "id": "ye-park-training",
+      "from": "tianyang-ye",
+      "to": "hongkun-park",
+      "label": "graduate student and postdoc in lab of",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2021 founding",
+      "detail": "Harvard identifies Ye’s graduate and postdoctoral work in the Park Group.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ],
+      "limit": "The article does not give exact training dates."
+    },
+    {
+      "id": "paul-le-floch-axoft-founder",
+      "from": "paul-le-floch",
+      "to": "axoft",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Le Floch is explicitly named among the three Axoft founders.",
+      "sources": [
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ]
+    },
+    {
+      "id": "jia-liu-axoft-founder",
+      "from": "jia-liu",
+      "to": "axoft",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Liu is explicitly named among the three Axoft founders.",
+      "sources": [
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ]
+    },
+    {
+      "id": "tianyang-ye-axoft-founder",
+      "from": "tianyang-ye",
+      "to": "axoft",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Ye is explicitly named among the three Axoft founders.",
+      "sources": [
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ]
+    },
+    {
+      "id": "harvard-axoft-license",
+      "from": "harvard",
+      "to": "axoft",
+      "label": "licensed neural-probe technology to",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard says it protected IP associated with the fluorinated-elastomer probe research and licensed it to Axoft.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ],
+      "limit": "Execution date and complete patent scope are not stated."
+    },
+    {
+      "id": "stanford-axoft-fleuron-license",
+      "from": "stanford",
+      "to": "axoft",
+      "label": "licensed technology covering Fleuron to",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Announced 2025-05",
+      "detail": "Axoft’s official chronology identifies commercialization of Fleuron covered by an exclusive Stanford license.",
+      "sources": [
+        {
+          "title": "Axoft news chronology",
+          "url": "https://axoft.us/news"
+        }
+      ],
+      "limit": "Separate from the Harvard license. Full agreement and exact patent scope were not reviewed."
+    },
+    {
+      "id": "tao-neuroxess-founder",
+      "from": "tao-hu",
+      "to": "neuroxess",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Company history identifies Tao as scientific founder; the 2022 release names both co-founders.",
+      "sources": [
+        {
+          "title": "NeuroXess company history",
+          "url": "https://www.neuroxess.com/about/"
+        },
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ]
+    },
+    {
+      "id": "peng-neuroxess-founder",
+      "from": "phoenix-peng",
+      "to": "neuroxess",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "Reported 2022-01-11",
+      "detail": "The company identifies Peng as co-founder leading commercialization.",
+      "sources": [
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ]
+    },
+    {
+      "id": "tao-simit-research",
+      "from": "tao-hu",
+      "to": "simit",
+      "label": "researcher at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Reported 2022-01-11",
+      "detail": "Company release identifies Tao’s SIMIT appointment and 2020 X-Lab leadership.",
+      "sources": [
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ],
+      "limit": "An appointment is not evidence of an institutional spinout or IP license."
+    },
+    {
+      "id": "tao-silk-ivi",
+      "from": "tao-hu",
+      "to": "silk-ivi-2025",
+      "label": "corresponding author of study introducing",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2025-10-23",
+      "detail": "The paper names Tao and Zhitao Zhou as corresponding authors.",
+      "sources": [
+        {
+          "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+          "url": "https://www.nature.com/articles/s41467-025-64397-9"
+        }
+      ]
+    },
+    {
+      "id": "neuroxess-silk-ivi-hardware",
+      "from": "neuroxess",
+      "to": "silk-ivi-2025",
+      "label": "provided recording system used in",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2025-10-23",
+      "detail": "Methods identify CereCube NSP8 hardware from Neuroxess; the paper discloses founder and employee participation.",
+      "sources": [
+        {
+          "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+          "url": "https://www.nature.com/articles/s41467-025-64397-9"
+        }
+      ],
+      "limit": "The paper says future commercial use is possible; it does not establish a marketed IVI product or a license."
+    },
+    {
+      "id": "xu-neuracle-founder",
+      "from": "honglai-xu",
+      "to": "neuracle",
+      "label": "founded with other initial shareholders",
+      "category": "people",
+      "basis": "documented",
+      "date": "2011-11-18",
+      "detail": "Company filing calls Xu founder and records five initial shareholders at incorporation.",
+      "sources": [
+        {
+          "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf"
+        }
+      ],
+      "limit": "Not a sole-founder claim; incorporation agreement was dated November 16."
+    },
+    {
+      "id": "xu-tsinghua-phd",
+      "from": "honglai-xu",
+      "to": "tsinghua",
+      "label": "earned PhD at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Degree date not stated",
+      "detail": "Company filing identifies Xu’s doctorate in biomedical engineering at Tsinghua.",
+      "sources": [
+        {
+          "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf"
+        }
+      ],
+      "limit": "No named PhD supervisor is established by this source."
+    },
+    {
+      "id": "hong-neo-development",
+      "from": "hong-bo",
+      "to": "neo-epidural",
+      "label": "led academic co-development of",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Clinical prototype reported 2024-01-30",
+      "detail": "Tsinghua identifies Hong’s team as the academic developer working with Neuracle.",
+      "sources": [
+        {
+          "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+          "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm"
+        }
+      ]
+    },
+    {
+      "id": "neuracle-neo-development",
+      "from": "neuracle",
+      "to": "neo-epidural",
+      "label": "co-developed hardware and software for",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Clinical prototype reported 2024-01-30",
+      "detail": "Tsinghua explicitly names Neuracle as joint hardware/software developer.",
+      "sources": [
+        {
+          "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+          "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm"
+        }
+      ],
+      "limit": "Joint development does not establish a university license or sole laboratory origin."
+    },
+    {
+      "id": "hirata-jimed-founder",
+      "from": "masayuki-hirata",
+      "to": "jimed",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2020-03",
+      "detail": "Hirata dates incorporation to March 2020 in the founder interview; NEDO independently lists him as founder.",
+      "sources": [
+        {
+          "title": "JiMED founder and CEO interview — Series EMBARK 36",
+          "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/"
+        },
+        {
+          "title": "JiMED — NEDO startup profile",
+          "url": "https://www.nedo.go.jp/english/activities/startups/company75.html"
+        }
+      ]
+    },
+    {
+      "id": "jimed-osaka-origin",
+      "from": "jimed",
+      "to": "osaka-university",
+      "label": "originated from research at",
+      "category": "people",
+      "basis": "documented",
+      "date": "2020",
+      "detail": "University venture-fund interview explicitly describes JiMED as an Osaka University startup.",
+      "sources": [
+        {
+          "title": "JiMED founder and CEO interview — Series EMBARK 36",
+          "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/"
+        }
+      ],
+      "limit": "No licensing agreement is inferred."
+    },
+    {
+      "id": "hirata-wherbs",
+      "from": "masayuki-hirata",
+      "to": "w-herbs-2018",
+      "label": "corresponding author of study describing",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2018-07-30",
+      "detail": "Hirata is the corresponding author of the 128-channel W-HERBS study.",
+      "sources": [
+        {
+          "title": "A fully implantable wireless ECoG 128-channel recording device for human brain–machine interfaces: W-HERBS",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2018.00511/full"
+        }
+      ]
+    },
+    {
+      "id": "jimed-wibmi-development",
+      "from": "jimed",
+      "to": "jimed-wibmi",
+      "label": "develops for medical-device translation",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Documented 2025-05-22",
+      "detail": "NEDO describes wireless implantable BMI development, ALS trials and commercialization infrastructure.",
+      "sources": [
+        {
+          "title": "JiMED — NEDO startup profile",
+          "url": "https://www.nedo.go.jp/english/activities/startups/company75.html"
+        }
+      ],
+      "limit": "Do not equate the current device with the exact 2018 prototype; explicit product-level identity is unverified."
+    },
+    {
+      "id": "zhou-neuralmatrix-founder",
+      "from": "tao-zhou-neuramatrix",
+      "to": "neuralmatrix",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "Role reported 2026-03-27",
+      "detail": "Official Zhongguancun Forum identifies Zhou as co-founder and CEO of Beijing NeuraMatrix.",
+      "sources": [
+        {
+          "title": "Zhongguancun Forum Tech-Show — co-founder and CEO Tao Zhou of Beijing NeuraMatrix",
+          "url": "https://www.zgcforum.com/zh2026/news/forum/963039"
+        }
+      ],
+      "limit": "Founding date, education and earlier founding-team composition are not supplied."
+    },
+    {
+      "id": "neuralmatrix-nexgaia-products",
+      "from": "neuralmatrix",
+      "to": "neuralmatrix-nexgaia",
+      "label": "develops and offers",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Official page checked 2026-09-15",
+      "detail": "The product page describes research telemetry front ends and NeXScope software.",
+      "sources": [
+        {
+          "title": "NeXGaia series — wireless electrophysiology",
+          "url": "https://www.neuramatrix.com.cn/cn/prodnexgaia.html"
+        }
+      ],
+      "limit": "Research-product specifications do not establish an approved implantable human BCI."
+    },
+    {
+      "id": "zhao-merf-correspondence",
+      "from": "zhengtuo-zhao",
+      "to": "merf-2023",
+      "label": "corresponding author of study introducing",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2023-10-23",
+      "detail": "The paper identifies Zhao as a corresponding author of the nonhuman-primate MERF array study.",
+      "sources": [
+        {
+          "title": "An Ultraflexible Electrode Array for Large-Scale Chronic Recording in the Nonhuman Primate Brain",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202302333"
+        }
+      ]
+    },
+    {
+      "id": "li-ufine-correspondence",
+      "from": "xue-li",
+      "to": "ufine-human-2026",
+      "label": "corresponding author of human study",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2026-04-13",
+      "detail": "The paper identifies Li among corresponding authors and discloses StairMed co-founding.",
+      "sources": [
+        {
+          "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+          "url": "https://www.nature.com/articles/s41467-026-71443-7"
+        }
+      ],
+      "limit": "Temporary intraoperative human recordings are distinct from chronic implanted clinical-product validation."
+    },
+    {
+      "id": "palanker-stanford",
+      "from": "daniel-palanker",
+      "to": "stanford",
+      "label": "conducts retinal-prosthesis research at",
+      "date": "2012 publication record",
+      "detail": "Stanford’s laboratory publication list records the photovoltaic retinal-prosthesis work.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Stanford Palanker laboratory: publications",
+          "url": "https://web.stanford.edu/~palanker/List_of_publications.html"
+        }
+      ]
+    },
+    {
+      "id": "palanker-prima-origin",
+      "from": "daniel-palanker",
+      "to": "prima-retinal",
+      "label": "originated the concept behind",
+      "date": "Origin credited in 2024",
+      "detail": "Science explicitly credits Palanker at Stanford with the original PRIMA concept.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Science: welcoming Pixium Vision’s PRIMA retinal prosthesis",
+          "url": "https://science.xyz/news/pixium-vision-acquisition/",
+          "published": "2024-04-25"
+        }
+      ]
+    },
+    {
+      "id": "pixium-prima-development",
+      "from": "pixium-vision",
+      "to": "prima-retinal",
+      "label": "developed",
+      "date": "Before April 2024",
+      "detail": "Science credits the Pixium team’s development of the PRIMA prosthesis and clinical program.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Science: welcoming Pixium Vision’s PRIMA retinal prosthesis",
+          "url": "https://science.xyz/news/pixium-vision-acquisition/",
+          "published": "2024-04-25"
+        }
+      ]
+    },
+    {
+      "id": "science-pixium-assets",
+      "from": "science-corp",
+      "to": "pixium-vision",
+      "label": "agreed to acquire assets from",
+      "date": "2024-04-25",
+      "detail": "Science announced an agreement to acquire Pixium assets including its PRIMA program after court acceptance and French foreign-investment approval.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "This source announces an agreement; it does not date final transaction closing.",
+      "sources": [
+        {
+          "title": "Science: welcoming Pixium Vision’s PRIMA retinal prosthesis",
+          "url": "https://science.xyz/news/pixium-vision-acquisition/",
+          "published": "2024-04-25"
+        }
+      ]
+    },
+    {
+      "id": "science-prima-program",
+      "from": "science-corp",
+      "to": "prima-retinal",
+      "label": "continues development of",
+      "date": "2024-09-27",
+      "detail": "Science describes prioritizing PRIMA and continuing the acquired retinal-restoration program.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Science: prioritizing PRIMA and Science Eye",
+          "url": "https://science.xyz/news/prioritizing-science-eye-prima/",
+          "published": "2024-09-27"
+        }
+      ]
+    },
+    {
+      "id": "clark-melbourne-cochlear",
+      "from": "graeme-clark",
+      "to": "melbourne",
+      "label": "conducted cochlear-implant research at",
+      "date": "Research begun 1967",
+      "detail": "Cochlear’s history credits Clark’s university research and subsequent commercialization partnership.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Cochlear: proven over time",
+          "url": "https://www.cochlear.com/us/en/about-us/proven-over-time"
+        },
+        {
+          "title": "Cochlear Limited: Modern Slavery Statement 2024, our story",
+          "url": "https://assets.cochlear.com/api/public/content/1b9dbdf9214c429e817f2e2eef1ec719?v=66737e32",
+          "published": "2024"
+        }
+      ]
+    },
+    {
+      "id": "melbourne-nucleus-partnership",
+      "from": "melbourne",
+      "to": "nucleus-group",
+      "label": "partnered to commercialize cochlear research with",
+      "date": "Commercialization history; source 2024",
+      "detail": "Cochlear’s official statement describes Clark, the University of Melbourne, and Paul Trainor’s Nucleus Group working to commercialize the implant.",
+      "category": "people",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Cochlear Limited: Modern Slavery Statement 2024, our story",
+          "url": "https://assets.cochlear.com/api/public/content/1b9dbdf9214c429e817f2e2eef1ec719?v=66737e32",
+          "published": "2024"
+        }
+      ]
+    },
+    {
+      "id": "nucleus-cochlear-commercialization",
+      "from": "nucleus-group",
+      "to": "cochlear",
+      "label": "participated in the formation of",
+      "date": "Commercialization history; source 2024",
+      "detail": "The company’s official history describes the Nucleus partnership and government-funded route to Cochlear and the Nucleus 22.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "This source passage is not used to assign a precise founding date.",
+      "sources": [
+        {
+          "title": "Cochlear Limited: Modern Slavery Statement 2024, our story",
+          "url": "https://assets.cochlear.com/api/public/content/1b9dbdf9214c429e817f2e2eef1ec719?v=66737e32",
+          "published": "2024"
+        }
+      ]
+    },
+    {
+      "id": "cochlear-nucleus-implant",
+      "from": "cochlear",
+      "to": "nucleus-implant",
+      "label": "commercialized",
+      "date": "1982 first commercial recipient in company history",
+      "detail": "Cochlear identifies Graham Carrick as the first recipient of a commercial Nucleus implant in 1982.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Cochlear: proven over time",
+          "url": "https://www.cochlear.com/us/en/about-us/proven-over-time"
+        }
+      ]
+    },
+    {
+      "id": "melbourne-bva-member",
+      "from": "melbourne",
+      "to": "bionic-vision-australia",
+      "label": "was a consortium member of",
+      "date": "Reported 2017-04-04",
+      "detail": "Melbourne lists the institutional partners of the former Bionic Vision Australia consortium.",
+      "category": "people",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Melbourne welcomes expanded support for BVT",
+          "url": "https://www.unimelb.edu.au/newsroom/news/2017/april/melbourne-welcomes-expanded-support-for-bvt2",
+          "published": "2017-04-04"
+        }
+      ]
+    },
+    {
+      "id": "bionics-bva-member",
+      "from": "bionics-institute",
+      "to": "bionic-vision-australia",
+      "label": "was a consortium member of",
+      "date": "Reported 2017-04-04",
+      "detail": "The university lists the Bionics Institute as one of the consortium partners.",
+      "category": "people",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Melbourne welcomes expanded support for BVT",
+          "url": "https://www.unimelb.edu.au/newsroom/news/2017/april/melbourne-welcomes-expanded-support-for-bvt2",
+          "published": "2017-04-04"
+        }
+      ]
+    },
+    {
+      "id": "bva-bvt-commercialization",
+      "from": "bionic-vision-australia",
+      "to": "bionic-vision",
+      "label": "research was commercialized through",
+      "date": "Reported 2017-04-04",
+      "detail": "Melbourne explicitly describes BVT as the commercialization company of former BVA.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "The announcement date is not a company founding date.",
+      "sources": [
+        {
+          "title": "Melbourne welcomes expanded support for BVT",
+          "url": "https://www.unimelb.edu.au/newsroom/news/2017/april/melbourne-welcomes-expanded-support-for-bvt2",
+          "published": "2017-04-04"
+        }
+      ]
+    },
+    {
+      "id": "data61-bvt-processing",
+      "from": "csiro-data61",
+      "to": "bionic-vision",
+      "label": "developed vision-processing software for",
+      "date": "Trials 2012–2014 and 2018; reported 2022",
+      "detail": "CSIRO describes its algorithms and library converting camera images into implant stimulation patterns, and BVT’s commercialization role.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "CSIRO: vision processing for the bionic eye",
+          "url": "https://www.csiro.au/en/research/technology-space/ai/Vision-processing-for-the-bionic-eye",
+          "published": "2022-12-02"
+        }
+      ]
+    },
+    {
+      "id": "bvt-suprachoroidal",
+      "from": "bionic-vision",
+      "to": "suprachoroidal-eye",
+      "label": "develops",
+      "date": "Current company description; reviewed 2026-09-15",
+      "detail": "BVT describes an implant in the suprachoroidal space, coupled to external visual processing.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Bionic Vision Technologies: about us",
+          "url": "https://bionicvisiontech.com/about-us/"
+        }
+      ]
+    },
+    {
+      "id": "clark-shepherd-mentor",
+      "from": "graeme-clark",
+      "to": "robert-shepherd",
+      "label": "mentored",
+      "date": "Career history; undated institutional biography",
+      "detail": "Shepherd’s institutional biography explicitly names Clark as his mentor.",
+      "category": "people",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ]
+    },
+    {
+      "id": "shepherd-bionic-eye",
+      "from": "robert-shepherd",
+      "to": "suprachoroidal-eye",
+      "label": "helped develop",
+      "date": "2008–2017",
+      "detail": "Bionics Institute credits Shepherd’s work with CERA developing the suprachoroidal bionic eye and the 2012 trial.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "",
+      "sources": [
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ]
+    },
+    {
+      "id": "shepherd-cochlear-research",
+      "from": "robert-shepherd",
+      "to": "cochlear",
+      "label": "contributed research to device advances at",
+      "date": "Career history; undated institutional biography",
+      "detail": "The institute states that Shepherd’s research contributed to Cochlear’s device advances.",
+      "category": "technology",
+      "basis": "documented",
+      "limit": "Research contribution does not establish a company spinout or an IP license.",
+      "sources": [
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ]
+    },
+    {
+      "id": "harvard-fluorinated-probe-development",
+      "from": "harvard",
+      "to": "fluorinated-elastomer-probes",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard reports joint development with UT Austin, MIT and Axoft.",
+      "limit": "Collaboration does not establish sole invention or identity with every later commercial implant.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+          "published": "2024-01-26"
+        }
+      ]
+    },
+    {
+      "id": "axoft-fluorinated-probe-development",
+      "from": "axoft",
+      "to": "fluorinated-elastomer-probes",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard identifies Axoft as a collaborator developing this research platform.",
+      "limit": "Collaboration does not establish sole invention or identity with every later commercial implant.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+          "published": "2024-01-26"
+        }
+      ]
+    },
+    {
+      "id": "ut-austin-fluorinated-probe-development",
+      "from": "ut-austin",
+      "to": "fluorinated-elastomer-probes",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard’s report explicitly names UT Austin among the collaborators who developed the fluorinated-elastomer research probes.",
+      "limit": "Collaboration does not establish sole invention or identity with every later commercial implant.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+          "published": "2024-01-26"
+        }
+      ]
+    },
+    {
+      "id": "mit-fluorinated-probe-development",
+      "from": "mit",
+      "to": "fluorinated-elastomer-probes",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard’s report explicitly names MIT among the collaborators who developed the fluorinated-elastomer research probes.",
+      "limit": "Collaboration does not establish sole invention or identity with every later commercial implant.",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+          "published": "2024-01-26"
+        }
+      ]
+    },
+    {
+      "id": "melosh-lab-stanford-affiliation",
+      "from": "melosh-lab",
+      "to": "stanford",
+      "label": "conducted microwire–CMOS research at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Reported 2020-03-20",
+      "detail": "Stanford's account identifies Nicholas Melosh and his Stanford laboratory in the collaboration that coupled microwire bundles to silicon electronics.",
+      "limit": "An institutional affiliation, not evidence that Stanford licensed this electrode hardware to Paradromics. The separate speech-decoding licenses concern different intellectual property.",
+      "sourceIds": [
+        "bridge-stanford-microwire-2020"
+      ],
+      "sources": [
+        {
+          "title": "Bringing silicon computing power to the brain",
+          "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+          "published": "2020-03-20"
+        }
+      ]
+    },
+    {
+      "id": "nicta-data61-formation",
+      "from": "nicta",
+      "to": "csiro-data61",
+      "label": "combined with CSIRO digital-research teams to form",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Announced 2015-08-28",
+      "detail": "CSIRO announced that NICTA and CSIRO digital-research teams would come together in a new CSIRO entity, Data61.",
+      "limit": "This was a combination of research organizations, not a simple rename. Saluda's documented 2013 spinout was from NICTA, before Data61 formed; the link does not establish shared Saluda and bionic-eye device IP.",
+      "sourceIds": [
+        "bridge-csiro-data61-2015"
+      ],
+      "sources": [
+        {
+          "title": "CSIRO and NICTA join forces to create digital research powerhouse",
+          "url": "https://www.csiro.au/en/news/all/news/2015/august/csiro-nicta-join-forces",
+          "published": "2015-08-28"
         }
       ]
     }

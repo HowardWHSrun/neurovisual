@@ -1,0 +1,1403 @@
+{
+  "verified": "2026-09-15",
+  "scope": "Six additional Asian companies: stimulation, sensory implants, neurovascular engineering and surgical robotics. Adjacent technologies are distinguished from implantable cortical BCI. Missing origin facts remain explicit gaps.",
+  "nodes": [
+    {
+      "id": "pins-medical",
+      "name": "PINS Medical",
+      "kind": "Company",
+      "subtitle": "Implantable neuromodulation systems",
+      "summary": "Implantable neuromodulation systems",
+      "href": "#org/pins-medical"
+    },
+    {
+      "id": "sceneray",
+      "name": "SceneRay",
+      "kind": "Company",
+      "subtitle": "DBS systems",
+      "summary": "DBS systems",
+      "href": "#org/sceneray"
+    },
+    {
+      "id": "nurotron",
+      "name": "Nurotron",
+      "kind": "Company",
+      "subtitle": "Cochlear implants and neural stimulation",
+      "summary": "Cochlear implants and neural stimulation",
+      "href": "#org/nurotron"
+    },
+    {
+      "id": "genlight-neurotech",
+      "name": "Genlight Neurotech",
+      "kind": "Company",
+      "subtitle": "Responsive stimulation and laser neurosurgery",
+      "summary": "Responsive stimulation and laser neurosurgery",
+      "href": "#org/genlight-neurotech"
+    },
+    {
+      "id": "microport-neurotech",
+      "name": "MicroPort NeuroTech / NeuroScientific",
+      "kind": "Company",
+      "subtitle": "Neurovascular devices and BCI research",
+      "summary": "Neurovascular devices and BCI research",
+      "href": "#org/microport-neurotech"
+    },
+    {
+      "id": "brain-navi",
+      "name": "Brain Navi Biotechnology",
+      "kind": "Company",
+      "subtitle": "Neurosurgical navigation robotics",
+      "summary": "Neurosurgical navigation robotics",
+      "href": "#org/brain-navi"
+    },
+    {
+      "id": "microport-scientific",
+      "name": "MicroPort Scientific",
+      "kind": "Company",
+      "subtitle": "Medical-device group",
+      "summary": "Medical-device group"
+    },
+    {
+      "id": "oymotion",
+      "name": "OYMotion",
+      "kind": "Company",
+      "subtitle": "BCI decoding and rehabilitation robotics",
+      "summary": "BCI decoding and rehabilitation robotics",
+      "href": "#org/oymotion"
+    },
+    {
+      "id": "hangzhou-nuowei",
+      "name": "Hangzhou Nuowei Medical Technology",
+      "kind": "Company",
+      "subtitle": "Company acquired by Genlight in 2021",
+      "summary": "Company acquired by Genlight in 2021"
+    },
+    {
+      "id": "luming-li",
+      "name": "Luming Li",
+      "kind": "Person",
+      "subtitle": "Tsinghua DBS research-team leader",
+      "summary": "Tsinghua DBS research-team leader"
+    },
+    {
+      "id": "yihua-ning",
+      "name": "Yihua Ning / 宁益华",
+      "kind": "Person",
+      "subtitle": "SceneRay founder",
+      "summary": "SceneRay founder"
+    },
+    {
+      "id": "fangang-zeng",
+      "name": "Fan-Gang Zeng",
+      "kind": "Person",
+      "subtitle": "UCI hearing researcher; Nurotron co-founder",
+      "summary": "UCI hearing researcher; Nurotron co-founder"
+    },
+    {
+      "id": "peng-cao",
+      "name": "Peng Cao / 曹鹏",
+      "kind": "Person",
+      "subtitle": "Genlight founder",
+      "summary": "Genlight founder"
+    },
+    {
+      "id": "jerry-chen",
+      "name": "Jerry Chieh-Hsiao Chen",
+      "kind": "Person",
+      "subtitle": "Brain Navi founder",
+      "summary": "Brain Navi founder"
+    },
+    {
+      "id": "uci",
+      "name": "University of California, Irvine",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "University of California, Irvine"
+    },
+    {
+      "id": "syracuse",
+      "name": "Syracuse University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Syracuse University"
+    },
+    {
+      "id": "shanghai-medical-college",
+      "name": "Shanghai Medical College",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Shanghai Medical College"
+    },
+    {
+      "id": "zjut",
+      "name": "Zhejiang University of Technology",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Zhejiang University of Technology"
+    },
+    {
+      "id": "stanford-taiwan-program",
+      "name": "Stanford–Taiwan Biomedical Program",
+      "kind": "Program",
+      "subtitle": "Medical-device innovation training",
+      "summary": "Program attended by Jerry Chen in 2012; not a PhD or named adviser relationship."
+    },
+    {
+      "id": "tsinghua-neuromodulation-lab",
+      "name": "National Engineering Laboratory for Neuromodulation",
+      "kind": "Lab",
+      "subtitle": "University–company–hospital collaboration",
+      "summary": "Tsinghua’s original 2019 account dates laboratory establishment to 2012 with PINS and Beijing Tiantan Hospital."
+    },
+    {
+      "id": "chaos-bci-institute",
+      "name": "Chaos Brain-Computer Research Institute",
+      "kind": "Lab",
+      "subtitle": "MicroPort research institute",
+      "summary": "Company annual report documents an institute focused on BCI technical research and interdisciplinary development."
+    },
+    {
+      "id": "pins-dbs",
+      "name": "Tsinghua–PINS DBS system",
+      "kind": "Technology",
+      "subtitle": "Implanted stimulation",
+      "summary": "Pulse generator, implanted brain leads and external programming/charging equipment developed through university–company–hospital work."
+    },
+    {
+      "id": "sceneray-aaxon",
+      "name": "Aaxon DBS systems",
+      "kind": "Technology",
+      "subtitle": "SceneRay movement-disorder platform",
+      "summary": "Four-contact nonrechargeable, four-contact rechargeable and eight-contact rechargeable generations."
+    },
+    {
+      "id": "sceneray-neurestora",
+      "name": "Neurestora DBS system",
+      "kind": "Technology",
+      "subtitle": "SceneRay psychiatric-neuromodulation platform",
+      "summary": "Dual-target stimulation development for addiction, with a separate OCD development program."
+    },
+    {
+      "id": "nurotron-cochlear",
+      "name": "Nurotron cochlear implant system",
+      "kind": "Technology",
+      "subtitle": "Auditory neural prosthesis",
+      "summary": "Sound-processing hardware and an intracochlear electrode array stimulate the auditory nerve."
+    },
+    {
+      "id": "genlight-epilcure",
+      "name": "Epilcure responsive neurostimulation",
+      "kind": "Technology",
+      "subtitle": "Genlight closed-loop implant",
+      "summary": "Intracranial EEG detection is linked to stimulation; company materials describe an epilepsy-focused system."
+    },
+    {
+      "id": "genlight-laserro",
+      "name": "LaserRO MR-monitored laser system",
+      "kind": "Technology",
+      "subtitle": "Genlight thermal neurosurgery",
+      "summary": "Laser ablation with MR monitoring; separate from electrical neural interfaces."
+    },
+    {
+      "id": "microport-stent-bci",
+      "name": "MicroPort–OYMotion interventional BCI",
+      "kind": "Technology",
+      "subtitle": "Announced joint-development program",
+      "summary": "Planned intravascular stent-electrode acquisition, decoding and rehabilitation robotics."
+    },
+    {
+      "id": "naotrac",
+      "name": "NaoTrac surgical navigation robot",
+      "kind": "Technology",
+      "subtitle": "Brain Navi instrument guidance",
+      "summary": "Image registration and robotic positioning guide surgical instruments along a planned trajectory."
+    }
+  ],
+  "edges": [
+    {
+      "id": "li-pins-dbs-lead",
+      "from": "luming-li",
+      "to": "pins-dbs",
+      "label": "led academic development of",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Research described 2019-03-01",
+      "detail": "Tsinghua names Li as research-team leader and reports the first clinical implantation in November 2009.",
+      "sourceIds": [
+        "pins-tsinghua"
+      ],
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        }
+      ]
+    },
+    {
+      "id": "pins-dbs-codevelopment",
+      "from": "pins-medical",
+      "to": "pins-dbs",
+      "label": "co-developed and commercialized",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2013 registration",
+      "detail": "University credits PINS among project partners; company reports DBS registration and commercial development.",
+      "sourceIds": [
+        "pins-tsinghua",
+        "pins-company"
+      ],
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        },
+        {
+          "title": "PINS Medical — introduction",
+          "url": "https://m.pinsmedical.com/en/col.jsp?id=103"
+        }
+      ]
+    },
+    {
+      "id": "pins-tsinghua-lab",
+      "from": "pins-medical",
+      "to": "tsinghua-neuromodulation-lab",
+      "label": "co-established with academic and hospital partners",
+      "category": "people",
+      "basis": "documented",
+      "date": "2012",
+      "detail": "Tsinghua says PINS and Beijing Tiantan Hospital participated in establishing the national engineering laboratory.",
+      "sourceIds": [
+        "pins-tsinghua"
+      ],
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        }
+      ],
+      "limit": "Current company page dates a National Engineering Research Center to 2016. Institutional renaming/date relationship was not resolved."
+    },
+    {
+      "id": "ning-sceneray-founded",
+      "from": "yihua-ning",
+      "to": "sceneray",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2011",
+      "detail": "Official conference biography and company history agree on 2011 founding.",
+      "sourceIds": [
+        "sr-founder",
+        "sr-about"
+      ],
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        },
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        }
+      ],
+      "limit": "Some park/business directories use 2009; no reconciliation with the company’s 2011 chronology was established."
+    },
+    {
+      "id": "ning-shanghai-medical-training",
+      "from": "yihua-ning",
+      "to": "shanghai-medical-college",
+      "label": "earned bachelor’s and master’s degrees at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Dates not supplied",
+      "detail": "Conference biography lists biomedical engineering and medical-science biophysics degrees.",
+      "sourceIds": [
+        "sr-founder"
+      ],
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        }
+      ],
+      "limit": "No named adviser, research lab or company IP-transfer relationship is established."
+    },
+    {
+      "id": "sceneray-aaxon-developed",
+      "from": "sceneray",
+      "to": "sceneray-aaxon",
+      "label": "develops and commercializes",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2016–2024 generations",
+      "detail": "Company chronology identifies nonrechargeable and rechargeable four-contact systems, followed by an eight-contact rechargeable system.",
+      "sourceIds": [
+        "sr-about",
+        "sr-products"
+      ],
+      "sources": [
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        },
+        {
+          "title": "SceneRay — implantable product center",
+          "url": "https://www.sceneray.com/en/Implantable_Devices/"
+        }
+      ]
+    },
+    {
+      "id": "sceneray-neurestora-developed",
+      "from": "sceneray",
+      "to": "sceneray-neurestora",
+      "label": "develops for dual-target stimulation",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Research reported 2025",
+      "detail": "Founder’s conference abstract describes NAc–ALIC dual stimulation; company chronology separates addiction and OCD programs.",
+      "sourceIds": [
+        "sr-founder",
+        "sr-about"
+      ],
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        },
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        }
+      ],
+      "limit": "Do not infer automatic EEG-driven closed-loop control merely from the company’s BCI terminology."
+    },
+    {
+      "id": "zeng-nurotron-founded",
+      "from": "fangang-zeng",
+      "to": "nurotron",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2006; documented by 2008",
+      "detail": "UCI identifies Zeng as co-founder; company history dates establishment to 2006.",
+      "sourceIds": [
+        "nr-zeng",
+        "nr-company"
+      ],
+      "sources": [
+        {
+          "title": "Fan-Gang Zeng — UCI biography",
+          "url": "https://scholarconnect.uci.edu/fzeng"
+        },
+        {
+          "title": "Nurotron — company introduction and history",
+          "url": "https://www.nurotron.com/aboutus.html"
+        }
+      ]
+    },
+    {
+      "id": "zeng-syracuse-phd",
+      "from": "fangang-zeng",
+      "to": "syracuse",
+      "label": "earned PhD at",
+      "category": "people",
+      "basis": "documented",
+      "date": "1990",
+      "detail": "UCI biography identifies a doctorate in audiology and neuroscience at Syracuse.",
+      "sourceIds": [
+        "nr-zeng"
+      ],
+      "sources": [
+        {
+          "title": "Fan-Gang Zeng — UCI biography",
+          "url": "https://scholarconnect.uci.edu/fzeng"
+        }
+      ]
+    },
+    {
+      "id": "uci-nurotron-translation",
+      "from": "uci",
+      "to": "nurotron",
+      "label": "supported founder’s commercialization through technology office",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2008-11-01",
+      "detail": "UCI says Zeng and partners worked with its Office of Technology Alliances to start the implant company after developing a sound-processing algorithm.",
+      "sourceIds": [
+        "nr-uci-2008"
+      ],
+      "sources": [
+        {
+          "title": "From bench to business",
+          "url": "https://news.uci.edu/2008/11/01/from-bench-to-business/"
+        }
+      ],
+      "limit": "This source does not establish the terms or scope of a Nurotron license."
+    },
+    {
+      "id": "nurotron-cochlear-development",
+      "from": "nurotron",
+      "to": "nurotron-cochlear",
+      "label": "developed and manufactures",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2011 China registration",
+      "detail": "The company chronology and original technical report identify the cochlear implant system and registration history.",
+      "sourceIds": [
+        "nr-company",
+        "nr-paper"
+      ],
+      "sources": [
+        {
+          "title": "Nurotron — company introduction and history",
+          "url": "https://www.nurotron.com/aboutus.html"
+        },
+        {
+          "title": "Development and evaluation of the Nurotron 26-electrode cochlear implant system",
+          "url": "https://www.nurotron.com/uploads/20230524/646d5aee8efed.pdf"
+        }
+      ],
+      "limit": "The paper’s 26-electrode system is not 26 independent cortical recordings; cochlear stimulation is a different interface class."
+    },
+    {
+      "id": "cao-genlight-founded",
+      "from": "peng-cao",
+      "to": "genlight-neurotech",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2020",
+      "detail": "Direct visit report identifies Cao as founder and describes his return from France to establish the company; official history confirms 2020.",
+      "sourceIds": [
+        "gl-founder",
+        "gl-about"
+      ],
+      "sources": [
+        {
+          "title": "Hangzhou Venture Capital Association visits Genlight",
+          "url": "https://www.hzctxh.com/article/532"
+        },
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "limit": "Doctoral institution, supervisor and original laboratory were not verified."
+    },
+    {
+      "id": "genlight-acquired-nuowei",
+      "from": "genlight-neurotech",
+      "to": "hangzhou-nuowei",
+      "label": "acquired",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Official company chronology records acquisition of Hangzhou Nuowei Medical Technology.",
+      "sourceIds": [
+        "gl-about"
+      ],
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "limit": "Acquisition scope and transferred patents are not disclosed on this page."
+    },
+    {
+      "id": "genlight-zjut-collaboration",
+      "from": "genlight-neurotech",
+      "to": "zjut",
+      "label": "established joint R&D center with",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2023",
+      "detail": "Genlight’s chronology records a joint R&D center after a 2022 graduate-training collaboration.",
+      "sourceIds": [
+        "gl-about"
+      ],
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "limit": "This later collaboration is not proof of university spinout or founding-lab origin."
+    },
+    {
+      "id": "genlight-epilcure-development",
+      "from": "genlight-neurotech",
+      "to": "genlight-epilcure",
+      "label": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Clinical development reported from 2021",
+      "detail": "Official history records the initial implant trial; product page explains EEG-responsive stimulation.",
+      "sourceIds": [
+        "gl-about",
+        "gl-epilcure"
+      ],
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        },
+        {
+          "title": "Epilcure — responsive neurostimulation",
+          "url": "https://en.genlight.com/en/epilcure"
+        }
+      ],
+      "limit": "Innovation-review admission is distinct from marketing approval; no blanket treatment efficacy claim is made."
+    },
+    {
+      "id": "genlight-laserro-development",
+      "from": "genlight-neurotech",
+      "to": "genlight-laserro",
+      "label": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "date": "First prototype 2020",
+      "detail": "Company history dates the initial LaserRO prototype; product page describes MR-monitored semiconductor laser therapy.",
+      "sourceIds": [
+        "gl-about",
+        "gl-laser"
+      ],
+      "sources": [
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        },
+        {
+          "title": "LaserRO — MR-monitored laser therapy",
+          "url": "https://en.genlight.com/en/laser-r"
+        }
+      ],
+      "limit": "Laser ablation is a separate technology from implantable recording and stimulation."
+    },
+    {
+      "id": "microport-neurotech-spinout",
+      "from": "microport-neurotech",
+      "to": "microport-scientific",
+      "label": "spun off for separate listing from",
+      "category": "people",
+      "basis": "documented",
+      "date": "2022-07-15",
+      "detail": "Parent annual report explicitly describes the subsidiary’s spin-off and separate listing on this date.",
+      "sourceIds": [
+        "mp-parent-report"
+      ],
+      "sources": [
+        {
+          "title": "MicroPort Scientific — annual report 2023",
+          "url": "https://microport.com/assets/financial-reports/2023-ANNUAL-REPORT.pdf"
+        }
+      ],
+      "limit": "Corporate spin-off does not mean university spinout or complete ownership separation."
+    },
+    {
+      "id": "microport-chaos-institute",
+      "from": "microport-neurotech",
+      "to": "chaos-bci-institute",
+      "label": "established",
+      "category": "people",
+      "basis": "documented",
+      "date": "By end of 2025",
+      "detail": "Annual report describes the BCI institute and an interdisciplinary team building on neuro-interventional capabilities.",
+      "sourceIds": [
+        "mp-annual-2025"
+      ],
+      "sources": [
+        {
+          "title": "MicroPort NeuroScientific — annual report 2025",
+          "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042703070.pdf"
+        }
+      ]
+    },
+    {
+      "id": "microport-oymotion-cooperation",
+      "from": "microport-neurotech",
+      "to": "oymotion",
+      "label": "signed BCI rehabilitation development agreement with",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2026-05-28",
+      "detail": "Partner announcement assigns MicroPort stent-electrode/delivery hardware and OYMotion decoding/robotics work.",
+      "sourceIds": [
+        "mp-oymotion"
+      ],
+      "sources": [
+        {
+          "title": "OYMotion and MicroPort NeuroScientific enter strategic cooperation",
+          "url": "https://www.oymotion.com/en/news37/474"
+        }
+      ],
+      "limit": "Agreement is a development plan, not completed clinical validation."
+    },
+    {
+      "id": "microport-stent-bci-develop",
+      "from": "microport-neurotech",
+      "to": "microport-stent-bci",
+      "label": "plans intravascular electrode and delivery hardware for",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2026-05-28",
+      "detail": "The agreement describes stent electrodes, neuro-interventional delivery tools and intracranial EEG acquisition.",
+      "sourceIds": [
+        "mp-oymotion"
+      ],
+      "sources": [
+        {
+          "title": "OYMotion and MicroPort NeuroScientific enter strategic cooperation",
+          "url": "https://www.oymotion.com/en/news37/474"
+        }
+      ],
+      "limit": "No derivation or license from Synchron’s Stentrode is established."
+    },
+    {
+      "id": "jerry-brainnavi-founded",
+      "from": "jerry-chen",
+      "to": "brain-navi",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2015",
+      "detail": "Company release and conference biography identify Jerry Chen as founder.",
+      "sourceIds": [
+        "bn-founder",
+        "bn-congress"
+      ],
+      "sources": [
+        {
+          "title": "Brain Navi announces NaoTrac FDA clearance",
+          "url": "https://brainnavi.com/zh/naotrac-fda-clearance/"
+        },
+        {
+          "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+          "url": "https://registration.uaa2025.org/user/view/1001476:51737"
+        }
+      ]
+    },
+    {
+      "id": "jerry-stanford-taiwan-training",
+      "from": "jerry-chen",
+      "to": "stanford-taiwan-program",
+      "label": "participated in",
+      "category": "people",
+      "basis": "documented",
+      "date": "2012",
+      "detail": "Official conference biography identifies his selection for the biomedical entrepreneurship program.",
+      "sourceIds": [
+        "bn-congress"
+      ],
+      "sources": [
+        {
+          "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+          "url": "https://registration.uaa2025.org/user/view/1001476:51737"
+        }
+      ],
+      "limit": "This is not a Stanford PhD or named laboratory mentorship claim."
+    },
+    {
+      "id": "brainnavi-naotrac-developed",
+      "from": "brain-navi",
+      "to": "naotrac",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Introduced 2018",
+      "detail": "Official chronology and FDA filing identify the robot and manufacturer.",
+      "sourceIds": [
+        "bn-about",
+        "bn-fda"
+      ],
+      "sources": [
+        {
+          "title": "Brain Navi — company overview and history",
+          "url": "https://brainnavi.com/about/"
+        },
+        {
+          "title": "FDA K242575 — NaoTrac S clearance and device summary",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242575.pdf"
+        }
+      ],
+      "limit": "It guides instruments, including electrodes; it is not itself an implanted BCI or neural decoder."
+    }
+  ],
+  "companyDossiers": [
+    {
+      "companyId": "pins-medical",
+      "name": "PINS Medical",
+      "origin": {
+        "detail": "Founded in 2008. The primary university record links its DBS work to Luming Li’s Tsinghua team and clinical hospital partners. It documents co-development, rather than a simple sole-inventor story.",
+        "refs": [
+          "pins-company",
+          "pins-tsinghua"
+        ]
+      },
+      "precursor": {
+        "detail": "The program combined electronics, hermetic packaging, leads, software and clinical neurosurgery; its first reported human DBS implantation occurred in November 2009.",
+        "refs": [
+          "pins-tsinghua"
+        ]
+      },
+      "companyChanges": {
+        "detail": "PINS took this system into commercial DBS and expanded to VNS, spinal-cord and sacral stimulation. Current company descriptions include sensing and adaptive control, whose status must be checked product by product.",
+        "refs": [
+          "pins-company"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2008",
+          "title": "Company established",
+          "detail": "PINS dates its inception to 2008.",
+          "refs": [
+            "pins-company"
+          ]
+        },
+        {
+          "date": "2009-11",
+          "title": "First clinical DBS implantation",
+          "detail": "Tsinghua reports the first clinical operation in its research program.",
+          "refs": [
+            "pins-tsinghua"
+          ]
+        },
+        {
+          "date": "2012",
+          "title": "National engineering laboratory",
+          "detail": "Tsinghua, PINS and Beijing Tiantan Hospital established a joint laboratory.",
+          "refs": [
+            "pins-tsinghua"
+          ]
+        },
+        {
+          "date": "2013",
+          "title": "DBS registration",
+          "detail": "University and company describe domestic DBS registration.",
+          "refs": [
+            "pins-company"
+          ]
+        },
+        {
+          "date": "2016",
+          "title": "CE certification reported",
+          "detail": "Tsinghua reports CE certification for the system family and subsequent overseas implants.",
+          "refs": [
+            "pins-tsinghua"
+          ]
+        }
+      ],
+      "limits": [
+        "A specific executed university technology-license agreement and complete personal founding team were not verified.",
+        "Do not collapse 2012 national-laboratory establishment and the company’s 2016 research-center date; the institution/date relationship remains unresolved.",
+        "Electrode contacts, pulse-generator channels and recorded neuron counts are different metrics."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "pins-dbs-codevelopment",
+        "pins-tsinghua-lab"
+      ]
+    },
+    {
+      "companyId": "sceneray",
+      "name": "SceneRay",
+      "origin": {
+        "detail": "Yihua Ning’s official conference biography dates his founding of SceneRay to 2011 and identifies training at Shanghai Medical College. His earlier career spans medical-device engineering and management.",
+        "refs": [
+          "sr-founder"
+        ]
+      },
+      "precursor": {
+        "detail": "The documented technical base is implantable DBS. The founder’s research presentation describes a dual-target NAc–ALIC stimulation program for opioid addiction.",
+        "refs": [
+          "sr-founder"
+        ]
+      },
+      "companyChanges": {
+        "detail": "SceneRay’s Aaxon product history adds rechargeable designs and an eight-contact generation; Neurestora develops psychiatric indications. These changes concern stimulation architecture and use, not evidence of growing neural-recording bandwidth.",
+        "refs": [
+          "sr-products",
+          "sr-about"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2011",
+          "title": "Founding",
+          "detail": "Company chronology and founder biography agree on 2011.",
+          "refs": [
+            "sr-about",
+            "sr-founder"
+          ]
+        },
+        {
+          "date": "2016",
+          "title": "Nonrechargeable Aaxon",
+          "detail": "Company reports launch of four-contact DBS and remote-control products.",
+          "refs": [
+            "sr-about"
+          ]
+        },
+        {
+          "date": "2019",
+          "title": "Rechargeable Aaxon",
+          "detail": "Company reports its four-contact rechargeable generation.",
+          "refs": [
+            "sr-about"
+          ]
+        },
+        {
+          "date": "2024",
+          "title": "Eight-contact Aaxon",
+          "detail": "Company reports an eight-contact rechargeable DBS launch.",
+          "refs": [
+            "sr-about"
+          ]
+        },
+        {
+          "date": "2025-12-16",
+          "title": "Addiction indication milestone",
+          "detail": "Company announces a Class III registration certificate for its addiction DBS system.",
+          "refs": [
+            "sr-approval-2025"
+          ]
+        }
+      ],
+      "limits": [
+        "No original university lab or IP-transfer agreement was verified.",
+        "Do not promote the sponsor’s internally inconsistent trial counts in its conference abstract into efficacy estimates.",
+        "BCI branding alone does not demonstrate sensing-driven adaptive DBS.",
+        "A government industrial-park report uses 2009 for its start, while company and founder sources use 2011; relationship remains unresolved."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "ning-sceneray-founded",
+        "sceneray-aaxon-developed",
+        "sceneray-neurestora-developed"
+      ]
+    },
+    {
+      "companyId": "nurotron",
+      "name": "Nurotron",
+      "origin": {
+        "detail": "Nurotron was established in 2006 with Hangzhou and California operations. UCI identifies Fan-Gang Zeng as a co-founder and reports that the founders worked with its technology office on commercialization.",
+        "refs": [
+          "nr-company",
+          "nr-uci-2008"
+        ]
+      },
+      "precursor": {
+        "detail": "Zeng’s auditory research included sound-processing algorithms. The original device report explains cochlear stimulation hardware and technical verification, with collaborators from UCI, UCSF, UCLA, Chinese institutions and the company.",
+        "refs": [
+          "nr-paper"
+        ]
+      },
+      "companyChanges": {
+        "detail": "The company translated that work into manufactured cochlear implant and external speech-processor systems. Its broader portfolio descriptions mention retinal and other stimulation directions, whose status should be kept separate from the established cochlear product.",
+        "refs": [
+          "nr-english"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2006",
+          "title": "Company and US research operation",
+          "detail": "Company histories date establishment to 2006.",
+          "refs": [
+            "nr-company",
+            "nr-english"
+          ]
+        },
+        {
+          "date": "2008-11-01",
+          "title": "University translation account",
+          "detail": "UCI describes Zeng and partners forming the company with technology-office assistance.",
+          "refs": [
+            "nr-uci-2008"
+          ]
+        },
+        {
+          "date": "2011",
+          "title": "China registration",
+          "detail": "Company history records implant and Venus speech-processor registration for patients aged six and older.",
+          "refs": [
+            "nr-company"
+          ]
+        },
+        {
+          "date": "2012",
+          "title": "CE marking",
+          "detail": "Original technical report records European marking.",
+          "refs": [
+            "nr-paper"
+          ]
+        },
+        {
+          "date": "2015-04",
+          "title": "Technical report in journal issue",
+          "detail": "Hearing Research publishes the system-development evaluation; the article-in-press version appeared in 2014.",
+          "refs": [
+            "nr-uci-publications",
+            "nr-paper"
+          ]
+        }
+      ],
+      "limits": [
+        "Cochlear electrodes stimulate the auditory nerve; their count is not directly comparable to intracortical BCI recording channels.",
+        "University commercialization assistance is documented; exact licensing scope and all founder roles were not verified.",
+        "Do not treat every product category on the company’s broad About page as equally clinically validated."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "zeng-nurotron-founded",
+        "uci-nurotron-translation",
+        "nurotron-cochlear-development"
+      ]
+    },
+    {
+      "companyId": "genlight-neurotech",
+      "name": "Genlight Neurotech",
+      "origin": {
+        "detail": "Official history dates Genlight’s establishment to Hangzhou in 2020. A direct organizer report of a company visit names Peng Cao as founder and describes his return from France.",
+        "refs": [
+          "gl-about",
+          "gl-founder"
+        ]
+      },
+      "precursor": {
+        "detail": "A named founding laboratory or licensed precursor was not established. The company documents a 2021 acquisition of Hangzhou Nuowei and subsequent ZJUT training and R&D collaborations.",
+        "refs": [
+          "gl-about"
+        ]
+      },
+      "companyChanges": {
+        "detail": "The company develops distinct platforms: Epilcure couples intracranial EEG sensing to responsive stimulation; LaserRO uses MR monitoring for laser ablation. The shared neurosurgical setting does not make these the same interface technology.",
+        "refs": [
+          "gl-epilcure",
+          "gl-laser"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2020",
+          "title": "Founding and laser prototype",
+          "detail": "Company dates incorporation and first LaserRO prototype to 2020.",
+          "refs": [
+            "gl-about"
+          ]
+        },
+        {
+          "date": "2021",
+          "title": "Acquisition and Epilcure clinical development",
+          "detail": "History records Nuowei acquisition, first implantation trial and multicenter trial launch.",
+          "refs": [
+            "gl-about"
+          ]
+        },
+        {
+          "date": "2022",
+          "title": "Epilcure innovation-review entry",
+          "detail": "Company reports admission to the innovative-device review process and initial LaserRO clinical work.",
+          "refs": [
+            "gl-about"
+          ]
+        },
+        {
+          "date": "2023",
+          "title": "University collaboration and laser review",
+          "detail": "Company reports a ZJUT joint R&D center and LaserRO special-review admission.",
+          "refs": [
+            "gl-about"
+          ]
+        }
+      ],
+      "limits": [
+        "The reviewed sources do not establish Cao’s doctoral institution/adviser or an original university IP license.",
+        "A 2021 acquisition is documented, but its transferred assets and patent lineage are unspecified.",
+        "Fast-track designation, clinical study and marketing approval are separate stages; approval was not established by these pages."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "cao-genlight-founded",
+        "genlight-acquired-nuowei",
+        "genlight-zjut-collaboration",
+        "genlight-epilcure-development",
+        "genlight-laserro-development"
+      ]
+    },
+    {
+      "companyId": "microport-neurotech",
+      "name": "MicroPort NeuroTech / NeuroScientific",
+      "origin": {
+        "detail": "Founded in 2012 within a corporate medical-device lineage; parent filings document the 2022 separate listing. Its mature business is neurovascular intervention, rather than a university-origin cortical electrode platform.",
+        "refs": [
+          "mp-ir",
+          "mp-parent-report"
+        ]
+      },
+      "precursor": {
+        "detail": "The company annual report identifies braiding/coiling, stent processing, balloons and catheters as established design/manufacturing capabilities. These provide an explicit engineering base for later BCI exploration.",
+        "refs": [
+          "mp-annual-2025"
+        ]
+      },
+      "companyChanges": {
+        "detail": "Its new BCI direction adds an internal research institute and a 2026 OYMotion collaboration. MicroPort plans vascular electrode/delivery hardware; OYMotion plans decoding and rehabilitation robotics. Clinical studies are prospective in the agreement.",
+        "refs": [
+          "mp-annual-2025",
+          "mp-oymotion"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2012",
+          "title": "Company founded",
+          "detail": "Current investor introduction dates establishment to 2012.",
+          "refs": [
+            "mp-ir"
+          ]
+        },
+        {
+          "date": "2022-07-15",
+          "title": "Corporate spin-off and listing",
+          "detail": "Parent filing and company IR document separate Hong Kong listing.",
+          "refs": [
+            "mp-parent-report",
+            "mp-ir"
+          ]
+        },
+        {
+          "date": "By end of 2025",
+          "title": "BCI research institute",
+          "detail": "Annual report documents establishment of the Chaos Brain-Computer Research Institute.",
+          "refs": [
+            "mp-annual-2025"
+          ]
+        },
+        {
+          "date": "2026-05-28",
+          "title": "Interventional BCI partnership",
+          "detail": "OYMotion’s June 9 release describes the signed joint-development agreement.",
+          "refs": [
+            "mp-oymotion"
+          ]
+        }
+      ],
+      "limits": [
+        "No Synchron/Stentrode license, inventor training link, or direct technology inheritance was verified.",
+        "The stent-electrode BCI is an announced development program, distinct from marketed stroke devices.",
+        "DBS and peripheral-interface tags were not supported by the reviewed current product or partnership sources.",
+        "Named individual founding laboratory and adviser links were not established."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "microport-neurotech-spinout",
+        "microport-chaos-institute",
+        "microport-oymotion-cooperation",
+        "microport-stent-bci-develop"
+      ]
+    },
+    {
+      "companyId": "brain-navi",
+      "name": "Brain Navi Biotechnology",
+      "origin": {
+        "detail": "Jerry Chen founded Brain Navi in Taiwan in 2015. His official conference biography records participation in the Stanford–Taiwan Biomedical Program in 2012, a medical-device innovation-training link.",
+        "refs": [
+          "bn-founder",
+          "bn-congress"
+        ]
+      },
+      "precursor": {
+        "detail": "NaoTrac’s technical basis combines image registration, machine vision and robotic instrument positioning. A specific academic precursor or licensed university invention was not verified.",
+        "refs": [
+          "bn-product"
+        ]
+      },
+      "companyChanges": {
+        "detail": "The company brought the navigation system from an early human procedure into a cleared stereotaxic guidance product. It supports electrode placement among other surgical tasks, which makes it enabling surgical infrastructure for neurotechnology.",
+        "refs": [
+          "bn-about",
+          "bn-fda"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2012",
+          "title": "Innovation training",
+          "detail": "Chen participated in the Stanford–Taiwan Biomedical Program.",
+          "refs": [
+            "bn-congress"
+          ]
+        },
+        {
+          "date": "2015",
+          "title": "Company founded",
+          "detail": "Founder and company histories identify the founding year.",
+          "refs": [
+            "bn-founder",
+            "bn-about"
+          ]
+        },
+        {
+          "date": "2018-11-07",
+          "title": "First human procedure",
+          "detail": "Company chronology dates the first NaoTrac human case.",
+          "refs": [
+            "bn-about"
+          ]
+        },
+        {
+          "date": "2021",
+          "title": "European CE milestone",
+          "detail": "Company history reports CE marking.",
+          "refs": [
+            "bn-about"
+          ]
+        },
+        {
+          "date": "2025-05-23",
+          "title": "US clearance",
+          "detail": "FDA K242575 clears NaoTrac S as a Class II stereotaxic guiding surgical device.",
+          "refs": [
+            "bn-fda"
+          ]
+        }
+      ],
+      "limits": [
+        "The robot is not itself an implanted electrode array or BCI decoder.",
+        "Stanford–Taiwan program participation does not establish a Stanford doctorate, adviser relationship or university IP license.",
+        "ROSA ONE is named as an FDA predicate, which does not prove copied technology or licensing.",
+        "Use FDA’s May 23 decision date; some company-distributed releases give a different May date."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "jerry-brainnavi-founded",
+        "brainnavi-naotrac-developed"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "pins-company",
+      "title": "PINS Medical — introduction",
+      "url": "https://m.pinsmedical.com/en/col.jsp?id=103",
+      "kind": "Company",
+      "note": "Company states 2008 inception and distinguishes commercial 4S DBS/VNS/SCS/SNM products from pipeline programs. Its 2016 center date differs from Tsinghua’s 2012 national-laboratory account; do not silently merge them."
+    },
+    {
+      "id": "pins-tsinghua",
+      "title": "Luming Li and the brain-pacemaker research team",
+      "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm",
+      "kind": "University",
+      "published": "2019-03-01",
+      "note": "Original university article, written by Li Jing; not the newspaper reprints elsewhere on the site."
+    },
+    {
+      "id": "sr-about",
+      "title": "SceneRay — company history",
+      "url": "https://www.sceneray.com/en/about",
+      "kind": "Company"
+    },
+    {
+      "id": "sr-founder",
+      "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+      "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf",
+      "kind": "Official conference",
+      "published": "2025",
+      "note": "Page 11: Yihua Ning biography states education, industry background and 2011 founding. Direct PDF retrieval and extraction succeeded. Abstract has inconsistent trial denominators; no efficacy estimates reused."
+    },
+    {
+      "id": "sr-products",
+      "title": "SceneRay — implantable product center",
+      "url": "https://www.sceneray.com/en/Implantable_Devices/",
+      "kind": "Company",
+      "note": "Inspected official product center; confirms Aaxon four/eight-contact systems and Neurestora hardware. Launch years are separately documented in company history."
+    },
+    {
+      "id": "nr-company",
+      "title": "Nurotron — company introduction and history",
+      "url": "https://www.nurotron.com/aboutus.html",
+      "kind": "Company"
+    },
+    {
+      "id": "nr-english",
+      "title": "Nurotron — About us",
+      "url": "https://en.nurotron.com/about-us/",
+      "kind": "Company"
+    },
+    {
+      "id": "nr-zeng",
+      "title": "Fan-Gang Zeng — UCI biography",
+      "url": "https://scholarconnect.uci.edu/fzeng",
+      "kind": "University"
+    },
+    {
+      "id": "nr-uci-2008",
+      "title": "From bench to business",
+      "url": "https://news.uci.edu/2008/11/01/from-bench-to-business/",
+      "kind": "University",
+      "published": "2008-11-01",
+      "note": "University reports the founder’s work with UCI Office of Technology Alliances; does not provide an executed license agreement or patent schedule."
+    },
+    {
+      "id": "nr-paper",
+      "title": "Development and evaluation of the Nurotron 26-electrode cochlear implant system",
+      "url": "https://www.nurotron.com/uploads/20230524/646d5aee8efed.pdf",
+      "kind": "Paper",
+      "published": "2014",
+      "note": "Company-hosted original author manuscript/article-in-press; final journal issue Hearing Research 322 (April 2015), pp188–199, confirmed on UCI publications profile."
+    },
+    {
+      "id": "nr-uci-publications",
+      "title": "Fan-Gang Zeng — UCI publications",
+      "url": "https://profiles.icts.uci.edu/fan-gang.zeng",
+      "kind": "University"
+    },
+    {
+      "id": "gl-about",
+      "title": "Genlight Neurotech — About us",
+      "url": "https://en.genlight.com/en/aboutus",
+      "kind": "Company"
+    },
+    {
+      "id": "gl-epilcure",
+      "title": "Epilcure — responsive neurostimulation",
+      "url": "https://en.genlight.com/en/epilcure",
+      "kind": "Company"
+    },
+    {
+      "id": "gl-laser",
+      "title": "LaserRO — MR-monitored laser therapy",
+      "url": "https://en.genlight.com/en/laser-r",
+      "kind": "Company"
+    },
+    {
+      "id": "gl-founder",
+      "title": "Hangzhou Venture Capital Association visits Genlight",
+      "url": "https://www.hzctxh.com/article/532",
+      "kind": "Direct event report",
+      "published": "2023-08-14",
+      "note": "Organizer’s report of its August 10 company visit identifies Peng Cao as founder and quotes his account of creating the company in 2020."
+    },
+    {
+      "id": "gl-zjut",
+      "title": "ZJUT neurosurgical-navigation roundtable",
+      "url": "https://ie.zjut.edu.cn/jsp/news.jsp?neId=17630",
+      "kind": "University",
+      "published": "2024-01-17",
+      "note": "Original university event report identifies Genlight chairman Cao Peng; does not identify a founding laboratory."
+    },
+    {
+      "id": "mp-ir",
+      "title": "MicroPort NeuroTech — investor relations company introduction",
+      "url": "https://ir.microportneurosci.com/",
+      "kind": "Company"
+    },
+    {
+      "id": "mp-parent-report",
+      "title": "MicroPort Scientific — annual report 2023",
+      "url": "https://microport.com/assets/financial-reports/2023-ANNUAL-REPORT.pdf",
+      "kind": "Company filing",
+      "published": "2024",
+      "note": "Report of Directors, materials procurement agreement: explicitly records spin-off and separate listing July 15, 2022. Read indexed excerpt; direct web body timed out."
+    },
+    {
+      "id": "mp-annual-2025",
+      "title": "MicroPort NeuroScientific — annual report 2025",
+      "url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0427/2026042703070.pdf",
+      "kind": "Company filing",
+      "published": "2026-04-27",
+      "note": "PDF retrieved and read. Printed pp12,29: research expansion and Chaos Brain-Computer Research Institute; mature platforms include braiding/coiling, stent processing, balloons and catheters."
+    },
+    {
+      "id": "mp-oymotion",
+      "title": "OYMotion and MicroPort NeuroScientific enter strategic cooperation",
+      "url": "https://www.oymotion.com/en/news37/474",
+      "kind": "Company",
+      "published": "2026-06-09",
+      "note": "Announcement describes agreement signed May 28, 2026; development and clinical verification are plans, not completed results."
+    },
+    {
+      "id": "bn-about",
+      "title": "Brain Navi — company overview and history",
+      "url": "https://brainnavi.com/about/",
+      "kind": "Company"
+    },
+    {
+      "id": "bn-founder",
+      "title": "Brain Navi announces NaoTrac FDA clearance",
+      "url": "https://brainnavi.com/zh/naotrac-fda-clearance/",
+      "kind": "Company",
+      "published": "2025-06",
+      "note": "Company release identifies Jerry Chen as founder in 2015. For exact FDA decision date use regulator, May 23, rather than media variants."
+    },
+    {
+      "id": "bn-congress",
+      "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+      "url": "https://registration.uaa2025.org/user/view/1001476:51737",
+      "kind": "Official conference",
+      "published": "2025",
+      "note": "Speaker biography documents 2012 Stanford–Taiwan Biomedical Program and 2015 founding; FDA-review sentence is stale relative to regulator record."
+    },
+    {
+      "id": "bn-product",
+      "title": "NaoTrac — surgical navigation robot",
+      "url": "https://brainnavi.com/naotrac-the-surgical-navigation-robot/",
+      "kind": "Company"
+    },
+    {
+      "id": "bn-fda",
+      "title": "FDA K242575 — NaoTrac S clearance and device summary",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242575.pdf",
+      "kind": "Regulator",
+      "published": "2025-05-23",
+      "note": "Letter and indications establish Class II stereotaxic guiding device, not a neural implant. Predicate ROSA ONE is regulatory comparison, not proof of licensed technical descent."
+    },
+    {
+      "id": "sr-approval-2025",
+      "title": "SceneRay reports addiction-system registration",
+      "url": "https://www.sceneray.com/en/qydt/230.html",
+      "kind": "Company",
+      "published": "2025-12-16"
+    }
+  ],
+  "coverageCorrections": [
+    {
+      "companyId": "microport-neurotech",
+      "supported": "Neurovascular intervention; planned intravascular BCI collaboration with OYMotion.",
+      "unsupportedInReviewedSources": [
+        "DBS product",
+        "Peripheral neural interface product",
+        "Synchron Stentrode technical descent"
+      ],
+      "refs": [
+        "mp-ir",
+        "mp-annual-2025",
+        "mp-oymotion"
+      ]
+    },
+    {
+      "companyId": "brain-navi",
+      "supported": "Stereotaxic robotic guidance, including guidance of stimulation/recording electrodes.",
+      "unsupportedInReviewedSources": [
+        "Implanted neural interface manufacturer",
+        "Neural decoder"
+      ],
+      "refs": [
+        "bn-fda"
+      ]
+    },
+    {
+      "companyId": "sceneray",
+      "supported": "Implantable DBS; dual-target addiction stimulation.",
+      "unsupportedInReviewedSources": [
+        "EEG-responsive closed-loop stimulation inferred solely from BCI branding"
+      ],
+      "refs": [
+        "sr-about",
+        "sr-founder"
+      ]
+    }
+  ]
+}

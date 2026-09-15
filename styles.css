@@ -19,7 +19,7 @@
   background: var(--background);
 }
 
-html { min-width: 320px; background: var(--background); }
+html { min-width: 0; background: var(--background); }
 *, *::before, *::after { box-sizing: border-box; }
 body {
   margin: 0;

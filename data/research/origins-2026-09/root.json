@@ -1,0 +1,805 @@
+{
+  "reviewed": "2026-09-15",
+  "nodes": [
+    {
+      "id": "science-corp",
+      "name": "Science Corporation",
+      "kind": "Company",
+      "subtitle": "Retinal and neural interfaces; PRIMA is an acquired program.",
+      "summary": "Retinal and neural interfaces; PRIMA is an acquired program.",
+      "href": "#org/science-corp"
+    },
+    {
+      "id": "daniel-palanker",
+      "name": "Daniel Palanker",
+      "kind": "Person",
+      "subtitle": "Stanford researcher behind the PRIMA photovoltaic concept.",
+      "summary": "Stanford researcher behind the PRIMA photovoltaic concept.",
+      "href": "https://profiles.stanford.edu/daniel-palanker"
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "kind": "Institution",
+      "subtitle": "University research and technology translation.",
+      "summary": "University research and technology translation."
+    },
+    {
+      "id": "pixium-vision",
+      "name": "Pixium Vision",
+      "kind": "Company",
+      "subtitle": "Developer of PRIMA before its transfer to Science.",
+      "summary": "Developer of PRIMA before its transfer to Science."
+    },
+    {
+      "id": "prima-retinal",
+      "name": "PRIMA photovoltaic retina",
+      "kind": "Technology",
+      "subtitle": "Subretinal photovoltaic pixels receive projected infrared images.",
+      "summary": "Subretinal photovoltaic pixels receive projected infrared images."
+    },
+    {
+      "id": "cochlear",
+      "name": "Cochlear",
+      "kind": "Company",
+      "subtitle": "Commercial multichannel cochlear implant systems.",
+      "summary": "Commercial multichannel cochlear implant systems.",
+      "href": "#org/cochlear"
+    },
+    {
+      "id": "graeme-clark",
+      "name": "Graeme Clark",
+      "kind": "Person",
+      "subtitle": "Melbourne multichannel cochlear-implant research pioneer.",
+      "summary": "Melbourne multichannel cochlear-implant research pioneer."
+    },
+    {
+      "id": "melbourne",
+      "name": "University of Melbourne",
+      "kind": "Institution",
+      "subtitle": "Australian university with cochlear and endovascular interface research.",
+      "summary": "Australian university with cochlear and endovascular interface research."
+    },
+    {
+      "id": "nucleus-group",
+      "name": "Nucleus Group",
+      "kind": "Company",
+      "subtitle": "Paul Trainor’s industrial group in the cochlear commercialization partnership.",
+      "summary": "Paul Trainor’s industrial group in the cochlear commercialization partnership."
+    },
+    {
+      "id": "nucleus-implant",
+      "name": "Nucleus cochlear implant",
+      "kind": "Technology",
+      "subtitle": "Multichannel electrical stimulation of the auditory pathway.",
+      "summary": "Multichannel electrical stimulation of the auditory pathway."
+    },
+    {
+      "id": "bionic-vision",
+      "name": "Bionic Vision Technologies",
+      "kind": "Company",
+      "subtitle": "Commercial translation of Australian suprachoroidal retinal-prosthesis research.",
+      "summary": "Commercial translation of Australian suprachoroidal retinal-prosthesis research.",
+      "href": "#org/bionic-vision"
+    },
+    {
+      "id": "bionic-vision-australia",
+      "name": "Bionic Vision Australia",
+      "kind": "Program",
+      "subtitle": "Multi-institution Australian retinal-prosthesis consortium.",
+      "summary": "Multi-institution Australian retinal-prosthesis consortium."
+    },
+    {
+      "id": "bionics-institute",
+      "name": "Bionics Institute",
+      "kind": "Institution",
+      "subtitle": "Australian neural prosthesis research institute.",
+      "summary": "Australian neural prosthesis research institute."
+    },
+    {
+      "id": "csiro-data61",
+      "name": "CSIRO Data61",
+      "kind": "Institution",
+      "subtitle": "Vision-processing and engineering contributor to Australian bionic-eye development.",
+      "summary": "Vision-processing and engineering contributor to Australian bionic-eye development."
+    },
+    {
+      "id": "robert-shepherd",
+      "name": "Robert Shepherd",
+      "kind": "Person",
+      "subtitle": "Bionics Institute researcher in cochlear and suprachoroidal prostheses.",
+      "summary": "Bionics Institute researcher in cochlear and suprachoroidal prostheses."
+    },
+    {
+      "id": "suprachoroidal-eye",
+      "name": "Suprachoroidal bionic eye",
+      "kind": "Technology",
+      "subtitle": "Retinal stimulation from an implant behind the retina.",
+      "summary": "Retinal stimulation from an implant behind the retina."
+    }
+  ],
+  "edges": [
+    {
+      "id": "palanker-stanford",
+      "from": "daniel-palanker",
+      "to": "stanford",
+      "label": "conducts retinal-prosthesis research at",
+      "date": "2012 publication record",
+      "detail": "Stanford’s laboratory publication list records the photovoltaic retinal-prosthesis work.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "palanker-papers"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "palanker-prima-origin",
+      "from": "daniel-palanker",
+      "to": "prima-retinal",
+      "label": "originated the concept behind",
+      "date": "Origin credited in 2024",
+      "detail": "Science explicitly credits Palanker at Stanford with the original PRIMA concept.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "sc-acquire"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "pixium-prima-development",
+      "from": "pixium-vision",
+      "to": "prima-retinal",
+      "label": "developed",
+      "date": "Before April 2024",
+      "detail": "Science credits the Pixium team’s development of the PRIMA prosthesis and clinical program.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "sc-acquire"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "science-pixium-assets",
+      "from": "science-corp",
+      "to": "pixium-vision",
+      "label": "agreed to acquire assets from",
+      "date": "2024-04-25",
+      "detail": "Science announced an agreement to acquire Pixium assets including its PRIMA program after court acceptance and French foreign-investment approval.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "sc-acquire"
+      ],
+      "limit": "This source announces an agreement; it does not date final transaction closing."
+    },
+    {
+      "id": "science-prima-program",
+      "from": "science-corp",
+      "to": "prima-retinal",
+      "label": "continues development of",
+      "date": "2024-09-27",
+      "detail": "Science describes prioritizing PRIMA and continuing the acquired retinal-restoration program.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "sc-priority"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "clark-melbourne-cochlear",
+      "from": "graeme-clark",
+      "to": "melbourne",
+      "label": "conducted cochlear-implant research at",
+      "date": "Research begun 1967",
+      "detail": "Cochlear’s history credits Clark’s university research and subsequent commercialization partnership.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "co-history",
+        "co-partnership"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "melbourne-nucleus-partnership",
+      "from": "melbourne",
+      "to": "nucleus-group",
+      "label": "partnered to commercialize cochlear research with",
+      "date": "Commercialization history; source 2024",
+      "detail": "Cochlear’s official statement describes Clark, the University of Melbourne, and Paul Trainor’s Nucleus Group working to commercialize the implant.",
+      "category": "people",
+      "basis": "documented",
+      "sourceIds": [
+        "co-partnership"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "nucleus-cochlear-commercialization",
+      "from": "nucleus-group",
+      "to": "cochlear",
+      "label": "participated in the formation of",
+      "date": "Commercialization history; source 2024",
+      "detail": "The company’s official history describes the Nucleus partnership and government-funded route to Cochlear and the Nucleus 22.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "co-partnership"
+      ],
+      "limit": "This source passage is not used to assign a precise founding date."
+    },
+    {
+      "id": "cochlear-nucleus-implant",
+      "from": "cochlear",
+      "to": "nucleus-implant",
+      "label": "commercialized",
+      "date": "1982 first commercial recipient in company history",
+      "detail": "Cochlear identifies Graham Carrick as the first recipient of a commercial Nucleus implant in 1982.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "co-history"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "melbourne-bva-member",
+      "from": "melbourne",
+      "to": "bionic-vision-australia",
+      "label": "was a consortium member of",
+      "date": "Reported 2017-04-04",
+      "detail": "Melbourne lists the institutional partners of the former Bionic Vision Australia consortium.",
+      "category": "people",
+      "basis": "documented",
+      "sourceIds": [
+        "bvt-melbourne"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "bionics-bva-member",
+      "from": "bionics-institute",
+      "to": "bionic-vision-australia",
+      "label": "was a consortium member of",
+      "date": "Reported 2017-04-04",
+      "detail": "The university lists the Bionics Institute as one of the consortium partners.",
+      "category": "people",
+      "basis": "documented",
+      "sourceIds": [
+        "bvt-melbourne"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "bva-bvt-commercialization",
+      "from": "bionic-vision-australia",
+      "to": "bionic-vision",
+      "label": "research was commercialized through",
+      "date": "Reported 2017-04-04",
+      "detail": "Melbourne explicitly describes BVT as the commercialization company of former BVA.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "bvt-melbourne"
+      ],
+      "limit": "The announcement date is not a company founding date."
+    },
+    {
+      "id": "data61-bvt-processing",
+      "from": "csiro-data61",
+      "to": "bionic-vision",
+      "label": "developed vision-processing software for",
+      "date": "Trials 2012–2014 and 2018; reported 2022",
+      "detail": "CSIRO describes its algorithms and library converting camera images into implant stimulation patterns, and BVT’s commercialization role.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "bvt-csiro"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "bvt-suprachoroidal",
+      "from": "bionic-vision",
+      "to": "suprachoroidal-eye",
+      "label": "develops",
+      "date": "Current company description; reviewed 2026-09-15",
+      "detail": "BVT describes an implant in the suprachoroidal space, coupled to external visual processing.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "bvt-company"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "clark-shepherd-mentor",
+      "from": "graeme-clark",
+      "to": "robert-shepherd",
+      "label": "mentored",
+      "date": "Career history; undated institutional biography",
+      "detail": "Shepherd’s institutional biography explicitly names Clark as his mentor.",
+      "category": "people",
+      "basis": "documented",
+      "sourceIds": [
+        "shepherd-bio"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "shepherd-bionic-eye",
+      "from": "robert-shepherd",
+      "to": "suprachoroidal-eye",
+      "label": "helped develop",
+      "date": "2008–2017",
+      "detail": "Bionics Institute credits Shepherd’s work with CERA developing the suprachoroidal bionic eye and the 2012 trial.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "shepherd-bio"
+      ],
+      "limit": ""
+    },
+    {
+      "id": "shepherd-cochlear-research",
+      "from": "robert-shepherd",
+      "to": "cochlear",
+      "label": "contributed research to device advances at",
+      "date": "Career history; undated institutional biography",
+      "detail": "The institute states that Shepherd’s research contributed to Cochlear’s device advances.",
+      "category": "technology",
+      "basis": "documented",
+      "sourceIds": [
+        "shepherd-bio"
+      ],
+      "limit": "Research contribution does not establish a company spinout or an IP license."
+    }
+  ],
+  "companyDossiers": [
+    {
+      "id": "science-corp",
+      "nodeId": "science-corp",
+      "name": "Science Corporation",
+      "summary": "PRIMA traces a route from Stanford photovoltaic research through Pixium Vision to an acquired program at Science.",
+      "stages": [
+        {
+          "title": "A photovoltaic retina",
+          "text": "Palanker’s Stanford research investigated converting projected light into electrical stimulation at the retina. The lab lists high-density photovoltaic prosthesis work in 2012.",
+          "nodes": [
+            "daniel-palanker",
+            "stanford"
+          ],
+          "edges": [
+            "palanker-stanford",
+            "palanker-prima-origin"
+          ],
+          "sourceIds": [
+            "palanker-papers",
+            "sc-acquire"
+          ]
+        },
+        {
+          "title": "Pixium develops; Science acquires",
+          "text": "Pixium developed PRIMA. Science’s April 2024 announcement describes an agreement to acquire Pixium assets and ongoing clinical programs.",
+          "nodes": [
+            "pixium-vision",
+            "science-corp"
+          ],
+          "edges": [
+            "pixium-prima-development",
+            "science-pixium-assets"
+          ],
+          "sourceIds": [
+            "sc-acquire"
+          ]
+        },
+        {
+          "title": "Projected images become retinal stimulation",
+          "text": "PRIMA combines a subretinal photovoltaic implant with infrared-projecting glasses. Science’s separate Science Eye optogenetic program has a different technical origin.",
+          "nodes": [
+            "prima-retinal",
+            "science-corp"
+          ],
+          "edges": [
+            "science-prima-program"
+          ],
+          "sourceIds": [
+            "sc-acquire",
+            "sc-priority"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2012",
+          "title": "Photovoltaic research publications",
+          "text": "Stanford’s bibliography records high-density photovoltaic retinal prosthesis and fabrication studies.",
+          "edges": [
+            "palanker-stanford"
+          ],
+          "sourceIds": [
+            "palanker-papers"
+          ]
+        },
+        {
+          "date": "2021",
+          "title": "Science founded",
+          "text": "The company’s later Series C announcement dates its founding to 2021.",
+          "edges": [],
+          "sourceIds": [
+            "sc-founded"
+          ]
+        },
+        {
+          "date": "2024-04-25",
+          "title": "Pixium asset agreement",
+          "text": "Science announces the PRIMA asset acquisition agreement.",
+          "edges": [
+            "science-pixium-assets"
+          ],
+          "sourceIds": [
+            "sc-acquire"
+          ]
+        },
+        {
+          "date": "2024-09-27",
+          "title": "PRIMA becomes the near-term priority",
+          "text": "Science explains its prioritization of PRIMA alongside its separate Science Eye program.",
+          "edges": [
+            "science-prima-program"
+          ],
+          "sourceIds": [
+            "sc-priority"
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "title": "Acquiring a program changes the history",
+          "text": "The company’s founding date and the acquired device’s research lineage are different timelines. Retinal pixels stimulate tissue; they are not counts of independently recorded neurons.",
+          "edges": [],
+          "sourceIds": [
+            "sc-acquire",
+            "sc-priority"
+          ]
+        }
+      ],
+      "gaps": [
+        "The agreement announcement does not establish an exact transaction closing date.",
+        "This is the PRIMA branch of Science’s history; it does not assign the same ancestry to Science Eye, Biohybrid, or every Science platform."
+      ],
+      "edgeIds": [
+        "palanker-stanford",
+        "palanker-prima-origin",
+        "pixium-prima-development",
+        "science-pixium-assets",
+        "science-prima-program"
+      ],
+      "sourceIds": [
+        "sc-acquire",
+        "sc-priority",
+        "palanker-papers",
+        "sc-founded"
+      ]
+    },
+    {
+      "id": "cochlear",
+      "nodeId": "cochlear",
+      "name": "Cochlear",
+      "summary": "A university research program became an industrial partnership and a commercial multichannel hearing implant.",
+      "stages": [
+        {
+          "title": "Clark’s Melbourne research",
+          "text": "Cochlear dates Graeme Clark’s research to 1967 and its first research recipient to 1978.",
+          "nodes": [
+            "graeme-clark",
+            "melbourne"
+          ],
+          "edges": [
+            "clark-melbourne-cochlear"
+          ],
+          "sourceIds": [
+            "co-history"
+          ]
+        },
+        {
+          "title": "An industrial partnership",
+          "text": "Clark, Melbourne and Paul Trainor’s Nucleus Group collaborated to commercialize the research, with Australian government support.",
+          "nodes": [
+            "melbourne",
+            "nucleus-group",
+            "cochlear"
+          ],
+          "edges": [
+            "melbourne-nucleus-partnership",
+            "nucleus-cochlear-commercialization"
+          ],
+          "sourceIds": [
+            "co-partnership"
+          ]
+        },
+        {
+          "title": "A multichannel hearing system",
+          "text": "The commercial Nucleus device followed the research implant. Its electrode array delivers patterned auditory stimulation.",
+          "nodes": [
+            "cochlear",
+            "nucleus-implant"
+          ],
+          "edges": [
+            "cochlear-nucleus-implant"
+          ],
+          "sourceIds": [
+            "co-history"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "1967",
+          "title": "Research begins",
+          "text": "Cochlear’s milestone history dates Clark’s early research to this year.",
+          "edges": [
+            "clark-melbourne-cochlear"
+          ],
+          "sourceIds": [
+            "co-history"
+          ]
+        },
+        {
+          "date": "1978",
+          "title": "Research recipient",
+          "text": "The company identifies Rod Saunders as its first research implant recipient.",
+          "edges": [],
+          "sourceIds": [
+            "co-history"
+          ]
+        },
+        {
+          "date": "1982",
+          "title": "Commercial recipient",
+          "text": "Graham Carrick receives the first commercial Nucleus implant in the company’s timeline.",
+          "edges": [
+            "cochlear-nucleus-implant"
+          ],
+          "sourceIds": [
+            "co-history"
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "title": "Stimulation is the channel function",
+          "text": "Cochlear channels deliver auditory information. They belong to a different engineering comparison from intracortical recording channels or sorted neurons.",
+          "edges": [],
+          "sourceIds": [
+            "co-history"
+          ]
+        }
+      ],
+      "gaps": [
+        "These are milestones in Cochlear’s own history, not claims to resolve every competing worldwide cochlear-implant priority.",
+        "The source passage used for the industrial partnership does not fix its exact starting date."
+      ],
+      "edgeIds": [
+        "clark-melbourne-cochlear",
+        "melbourne-nucleus-partnership",
+        "nucleus-cochlear-commercialization",
+        "cochlear-nucleus-implant"
+      ],
+      "sourceIds": [
+        "co-history",
+        "co-partnership"
+      ]
+    },
+    {
+      "id": "bionic-vision",
+      "nodeId": "bionic-vision",
+      "name": "Bionic Vision Technologies",
+      "summary": "A multi-institution Australian bionic-eye program connects retinal hardware, vision software, and a cochlear-research lineage.",
+      "stages": [
+        {
+          "title": "A consortium, not a single lab",
+          "text": "BVA brought together Melbourne, UNSW, Western Sydney, the Bionics Institute, CERA, NICTA and clinical partners. Shepherd’s history also links this work to Clark’s mentoring.",
+          "nodes": [
+            "bionic-vision-australia",
+            "melbourne",
+            "bionics-institute",
+            "robert-shepherd"
+          ],
+          "edges": [
+            "melbourne-bva-member",
+            "bionics-bva-member",
+            "clark-shepherd-mentor"
+          ],
+          "sourceIds": [
+            "bvt-melbourne",
+            "shepherd-bio"
+          ]
+        },
+        {
+          "title": "Research moves into BVT",
+          "text": "Melbourne identifies BVT as BVA’s commercialization company. CSIRO describes supplying vision algorithms and software alongside the implant development.",
+          "nodes": [
+            "bionic-vision",
+            "csiro-data61"
+          ],
+          "edges": [
+            "bva-bvt-commercialization",
+            "data61-bvt-processing"
+          ],
+          "sourceIds": [
+            "bvt-melbourne",
+            "bvt-csiro"
+          ]
+        },
+        {
+          "title": "A suprachoroidal system",
+          "text": "External camera images are processed into retinal stimulation patterns. The implant’s behind-retina position differs from PRIMA’s subretinal photovoltaic arrangement.",
+          "nodes": [
+            "suprachoroidal-eye",
+            "bionic-vision"
+          ],
+          "edges": [
+            "bvt-suprachoroidal"
+          ],
+          "sourceIds": [
+            "bvt-company",
+            "bvt-csiro"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2008–2017",
+          "title": "Suprachoroidal research program",
+          "text": "Shepherd’s biography dates collaborative development with CERA to this period.",
+          "edges": [
+            "shepherd-bionic-eye"
+          ],
+          "sourceIds": [
+            "shepherd-bio"
+          ]
+        },
+        {
+          "date": "2012–2014",
+          "title": "First trial recipients",
+          "text": "CSIRO reports three recipients in the initial bionic-eye trial.",
+          "edges": [],
+          "sourceIds": [
+            "bvt-csiro"
+          ]
+        },
+        {
+          "date": "2017-04-04",
+          "title": "Commercialization support",
+          "text": "Melbourne describes BVT as the commercialization company of former BVA.",
+          "edges": [
+            "bva-bvt-commercialization"
+          ],
+          "sourceIds": [
+            "bvt-melbourne"
+          ]
+        },
+        {
+          "date": "2018",
+          "title": "Further recipients",
+          "text": "CSIRO reports four additional recipients, with image-processing work continuing alongside the implant.",
+          "edges": [],
+          "sourceIds": [
+            "bvt-csiro"
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "title": "Software and implantation site both matter",
+          "text": "Turning images into useful stimulation patterns is a separate engineering task from adding electrodes. This path combines visual processing with a particular surgical location.",
+          "edges": [
+            "data61-bvt-processing",
+            "bvt-suprachoroidal"
+          ],
+          "sourceIds": [
+            "bvt-csiro",
+            "bvt-company"
+          ]
+        }
+      ],
+      "gaps": [
+        "The 2017 commercialization announcement does not establish BVT’s incorporation date.",
+        "Historical projected launch dates in the 2022 CSIRO page are not treated as verified current market availability."
+      ],
+      "edgeIds": [
+        "melbourne-bva-member",
+        "bionics-bva-member",
+        "bva-bvt-commercialization",
+        "data61-bvt-processing",
+        "bvt-suprachoroidal",
+        "clark-shepherd-mentor",
+        "shepherd-bionic-eye",
+        "shepherd-cochlear-research"
+      ],
+      "sourceIds": [
+        "bvt-melbourne",
+        "bvt-csiro",
+        "bvt-company",
+        "shepherd-bio"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "sc-acquire",
+      "title": "Science: welcoming Pixium Vision’s PRIMA retinal prosthesis",
+      "url": "https://science.xyz/news/pixium-vision-acquisition/",
+      "published": "2024-04-25",
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "sc-priority",
+      "title": "Science: prioritizing PRIMA and Science Eye",
+      "url": "https://science.xyz/news/prioritizing-science-eye-prima/",
+      "published": "2024-09-27",
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "palanker-papers",
+      "title": "Stanford Palanker laboratory: publications",
+      "url": "https://web.stanford.edu/~palanker/List_of_publications.html",
+      "published": null,
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "sc-founded",
+      "title": "Science Corporation: Series C announcement",
+      "url": "https://science.xyz/news/series-c/",
+      "published": "2026-03",
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "co-history",
+      "title": "Cochlear: proven over time",
+      "url": "https://www.cochlear.com/us/en/about-us/proven-over-time",
+      "published": null,
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "co-partnership",
+      "title": "Cochlear Limited: Modern Slavery Statement 2024, our story",
+      "url": "https://assets.cochlear.com/api/public/content/1b9dbdf9214c429e817f2e2eef1ec719?v=66737e32",
+      "published": "2024",
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "bvt-melbourne",
+      "title": "Melbourne welcomes expanded support for BVT",
+      "url": "https://www.unimelb.edu.au/newsroom/news/2017/april/melbourne-welcomes-expanded-support-for-bvt2",
+      "published": "2017-04-04",
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "bvt-csiro",
+      "title": "CSIRO: vision processing for the bionic eye",
+      "url": "https://www.csiro.au/en/research/technology-space/ai/Vision-processing-for-the-bionic-eye",
+      "published": "2022-12-02",
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "bvt-company",
+      "title": "Bionic Vision Technologies: about us",
+      "url": "https://bionicvisiontech.com/about-us/",
+      "published": null,
+      "kind": "Primary institution or company"
+    },
+    {
+      "id": "shepherd-bio",
+      "title": "Bionics Institute: Professor Robert Shepherd AM",
+      "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/",
+      "published": null,
+      "kind": "Primary institution or company"
+    }
+  ]
+}

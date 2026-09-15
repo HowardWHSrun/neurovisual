@@ -1,0 +1,2365 @@
+{
+  "reviewed": "2026-09-15",
+  "scope": "Five core invasive BCI companies; selected documented relationships, not complete inventor or founder lists. Dates distinguish events from publication of evidence.",
+  "nodes": [
+    {
+      "id": "neuralink",
+      "name": "Neuralink",
+      "kind": "Company",
+      "subtitle": "BCI company · founded 2016",
+      "summary": "A BCI company that counts Rapoport among its co-founders. The shared person is the documented connection to Precision.",
+      "href": "#org/neuralink",
+      "media": "company-neuralink",
+      "existing": true
+    },
+    {
+      "id": "precision",
+      "name": "Precision Neuroscience",
+      "kind": "Company",
+      "subtitle": "Cortical-surface interfaces",
+      "summary": "Rapoport is a co-founder. Its thin-film cortical arrays offer another route to recording at the brain surface.",
+      "href": "#org/precision-neuroscience",
+      "media": "company-precision",
+      "existing": true
+    },
+    {
+      "id": "blackrock",
+      "name": "Blackrock Neurotech",
+      "kind": "Company",
+      "subtitle": "Manufacturer · 2008",
+      "summary": "Blackrock Microsystems, now Blackrock Neurotech, appears as a manufacturer in the BrainGate device history and later experimental methods.",
+      "href": "#org/blackrock-neurotech",
+      "media": "company-blackrock",
+      "existing": true
+    },
+    {
+      "id": "synchron",
+      "name": "Synchron",
+      "kind": "Company",
+      "subtitle": "Endovascular BCI",
+      "summary": "A company co-founded by Thomas Oxley and Nicholas Opie in 2012, with Stentrode developed through a multi-institution collaboration.",
+      "href": "#org/synchron",
+      "media": "company-synchron",
+      "existing": true
+    },
+    {
+      "id": "mit",
+      "name": "MIT",
+      "kind": "Institution",
+      "subtitle": "Electrical engineering & computer science",
+      "summary": "Rapoport earned his EECS PhD at MIT in 2011. This educational link is separate from his later company founding roles.",
+      "href": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant",
+      "existing": true
+    },
+    {
+      "id": "benjamin-rapoport",
+      "name": "Benjamin Rapoport",
+      "kind": "Person",
+      "subtitle": "Neurosurgeon · electrical engineer",
+      "summary": "Neurosurgeon and electrical engineer; MIT EECS PhD 2011, Harvard/HST MD 2013. Precision co-founder and Chief Science Officer.",
+      "href": "https://www.precisionneuro.io/our-vision",
+      "existing": true
+    },
+    {
+      "id": "utah",
+      "name": "University of Utah",
+      "kind": "Institution",
+      "subtitle": "Neural-interface research & licensing",
+      "summary": "The institution where Normann developed the Utah Array. University accounts separately document technology licensed to Blackrock.",
+      "href": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "existing": true
+    },
+    {
+      "id": "richard-normann",
+      "name": "Richard Normann",
+      "kind": "Person",
+      "subtitle": "Utah Array development",
+      "summary": "University of Utah professor emeritus credited with development of the Utah Electrode Array.",
+      "href": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "existing": true
+    },
+    {
+      "id": "utah-array",
+      "name": "Utah intracortical array",
+      "kind": "Technology",
+      "subtitle": "Device family · 1992",
+      "summary": "The selected University of Utah paper describes a glass-isolated 10 × 10 bed of 100 silicon needles. Later human systems use specific wired configurations.",
+      "href": "#tech/utah",
+      "media": "company-blackrock",
+      "existing": true
+    },
+    {
+      "id": "braingate2",
+      "name": "BrainGate2 research program",
+      "kind": "Program",
+      "subtitle": "Research program · 2009",
+      "summary": "Academic continuation of BrainGate research. A 2012 study demonstrated robotic reach and grasp using implanted motor-cortex recordings.",
+      "href": "https://www.braingate.org/about-braingate/",
+      "media": "lab-stanford-nptl",
+      "existing": true
+    },
+    {
+      "id": "melbourne",
+      "name": "University of Melbourne",
+      "kind": "Institution",
+      "subtitle": "Multi-institution Stentrode development",
+      "summary": "University investigators developed Stentrode with Synchron, Royal Melbourne Hospital, the Florey Institute and Monash collaborators.",
+      "href": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts",
+      "existing": true
+    },
+    {
+      "id": "thomas-oxley",
+      "name": "Thomas Oxley",
+      "kind": "Person",
+      "subtitle": "Neurologist · Synchron co-founder",
+      "summary": "University of Melbourne researcher and Synchron co-founder; Nicholas Opie is also explicitly identified as co-founder.",
+      "href": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts",
+      "existing": true
+    },
+    {
+      "id": "nicholas-opie",
+      "name": "Nicholas Opie",
+      "kind": "Person",
+      "subtitle": "Engineer · Synchron co-founder",
+      "summary": "An engineer and Synchron co-founder named alongside Thomas Oxley in Melbourne’s commercialization account.",
+      "href": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts",
+      "existing": true
+    },
+    {
+      "id": "stentrode",
+      "name": "Stentrode",
+      "kind": "Technology",
+      "subtitle": "Endovascular neural recording",
+      "summary": "A stent-like recording interface positioned inside a blood vessel near motor cortex. It approaches neural recording through the vasculature.",
+      "href": "#tech/stentrode",
+      "media": "company-synchron",
+      "existing": true
+    },
+    {
+      "id": "precision-thinfilm",
+      "name": "Precision thin-film cortical arrays",
+      "kind": "Technology",
+      "subtitle": "Research platform · 2025",
+      "summary": "Flexible subdural thin films connect through cables to external headstages. The paper evaluates implantation, neural recording, decoding, and stimulation.",
+      "href": "#tech/layer7",
+      "media": "company-precision",
+      "existing": true
+    },
+    {
+      "id": "philip-sabes",
+      "name": "Philip Sabes",
+      "kind": "Person",
+      "subtitle": "UCSF → Neuralink",
+      "summary": "Neuroscientist whose UCSF laboratory developed robotic flexible-probe insertion.",
+      "href": "https://sabes.ucsf.edu/",
+      "existing": false
+    },
+    {
+      "id": "michael-jordan",
+      "name": "Michael I. Jordan",
+      "kind": "Person",
+      "subtitle": "MIT doctoral-lab connection",
+      "summary": "Sabes identifies Jordan’s lab as the site of his MIT PhD research.",
+      "href": "https://sabes.ucsf.edu/",
+      "existing": false
+    },
+    {
+      "id": "sabes-lab",
+      "name": "Sabes Lab at UCSF",
+      "kind": "Lab",
+      "subtitle": "Robotic flexible-probe insertion",
+      "summary": "Academic laboratory that began the sewing-machine insertion approach.",
+      "href": "https://sabes.ucsf.edu/",
+      "existing": false
+    },
+    {
+      "id": "maharbiz-lab",
+      "name": "Maharbiz Lab at UC Berkeley",
+      "kind": "Lab",
+      "subtitle": "Thin-film probe collaboration",
+      "summary": "Collaborated with the Sabes lab on the sewing-machine platform.",
+      "href": "https://www.biorxiv.org/content/10.1101/578542v1",
+      "existing": false
+    },
+    {
+      "id": "sewing-machine",
+      "name": "Sewing-machine neural insertion",
+      "kind": "Technology",
+      "subtitle": "Academic precursor • 2019 preprint",
+      "summary": "A stiff needle places independent flexible thin-film probes; demonstrated in rats.",
+      "href": "https://www.biorxiv.org/content/10.1101/578542v1",
+      "existing": false
+    },
+    {
+      "id": "stanford",
+      "name": "Stanford University",
+      "kind": "Institution",
+      "subtitle": "Neural decoding intellectual property",
+      "summary": "Owner of speech-decoding IP licensed to multiple BCI companies.",
+      "href": "https://www.stanford.edu/",
+      "existing": false
+    },
+    {
+      "id": "vanessa-tolosa",
+      "name": "Vanessa Tolosa",
+      "kind": "Person",
+      "subtitle": "Thin-film fabrication across organizations",
+      "summary": "LLNL polymer-array researcher, Neuralink co-founder and 2025 Precision R&D hire.",
+      "href": "https://www.precisionneuro.io/our-vision",
+      "existing": false
+    },
+    {
+      "id": "llnl",
+      "name": "Lawrence Livermore National Laboratory",
+      "kind": "Institution",
+      "subtitle": "Thin-film materials and process engineering",
+      "summary": "Federal laboratory collaborating with Precision on implant longevity.",
+      "href": "https://www.llnl.gov/article/50836/llnl-precision-neuroscience-collaboration-aims-develop-next-generation-neural-implants",
+      "existing": false
+    },
+    {
+      "id": "precision-biomems",
+      "name": "Precision BioMEMS",
+      "kind": "Company",
+      "subtitle": "Precision’s manufacturing subsidiary",
+      "summary": "Texas MEMS foundry brought into Precision through an acquisition in 2023.",
+      "href": "https://www.precisionbiomems.io/",
+      "existing": false
+    },
+    {
+      "id": "matt-angle",
+      "name": "Matt Angle",
+      "kind": "Person",
+      "subtitle": "Paradromics founder",
+      "summary": "Founder and CEO; specific doctoral mentorship is not established by the inspected primary sources.",
+      "href": "https://paradromics.com/company/",
+      "existing": false
+    },
+    {
+      "id": "paradromics",
+      "name": "Paradromics",
+      "kind": "Company",
+      "subtitle": "Microwire arrays → packaged Connexus",
+      "summary": "Develops an implanted intracortical BCI with a separate chest transceiver.",
+      "href": "#org/paradromics",
+      "existing": false
+    },
+    {
+      "id": "melosh-lab",
+      "name": "Melosh Lab at Stanford",
+      "kind": "Lab",
+      "subtitle": "Microwire–CMOS collaboration",
+      "summary": "Materials and device group involved in the 2020 collaborative microwire platform.",
+      "href": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+      "existing": false
+    },
+    {
+      "id": "microwire-cmos",
+      "name": "Microwire bundles coupled to CMOS",
+      "kind": "Technology",
+      "subtitle": "Collaborative precursor • 2020",
+      "summary": "Mechanically separates the tissue-facing wire geometry from silicon readout design.",
+      "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/",
+      "existing": false
+    },
+    {
+      "id": "uc-regents",
+      "name": "Regents of the University of California",
+      "kind": "Institution",
+      "subtitle": "Speech-BCI intellectual property owner",
+      "summary": "Owner of UC Davis investigators’ speech-BCI patent applications disclosed in 2025.",
+      "href": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+      "existing": false
+    },
+    {
+      "id": "florian-solzbacher",
+      "name": "Florian Solzbacher",
+      "kind": "Person",
+      "subtitle": "Utah engineering → Blackrock",
+      "summary": "Utah professor and Blackrock co-founder focused on reliable neural-interface systems.",
+      "href": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "existing": false
+    },
+    {
+      "id": "marcus-gerhardt",
+      "name": "Marcus Gerhardt",
+      "kind": "Person",
+      "subtitle": "Blackrock co-founder",
+      "summary": "Co-founded Blackrock with Florian Solzbacher.",
+      "href": "https://blackrockneurotech.com/our-story/",
+      "existing": false
+    },
+    {
+      "id": "cyberkinetics",
+      "name": "Cyberkinetics",
+      "kind": "Company",
+      "subtitle": "Earlier neural-interface business",
+      "summary": "Developed BrainGate and NeuroPort and sold research-business assets in 2008.",
+      "href": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408031489/v115527_8k.htm",
+      "existing": false
+    },
+    {
+      "id": "bionic-technologies",
+      "name": "Bionic Technologies",
+      "kind": "Company",
+      "subtitle": "Earlier array and acquisition supplier",
+      "summary": "Research-device business acquired by Cyberkinetics in 2002.",
+      "href": "https://www.sec.gov/Archives/edgar/data/1180253/000106299304001616/form8k.htm",
+      "existing": false
+    },
+    {
+      "id": "vascular-bionics-lab",
+      "name": "Vascular Bionics Laboratory",
+      "kind": "Lab",
+      "subtitle": "Melbourne multidisciplinary development",
+      "summary": "Research, engineering and clinical team formed by Oxley and Opie.",
+      "href": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+      "existing": false
+    },
+    {
+      "id": "melbourne-bionic-eye",
+      "name": "Melbourne bionic-eye project",
+      "kind": "Program",
+      "subtitle": "Earlier neural-device experience",
+      "summary": "The project from which Opie was recruited to work on the stent-electrode system.",
+      "href": "https://pursuit.unimelb.edu.au/articles/moving-with-the-power-of-thought",
+      "existing": false
+    },
+    {
+      "id": "brown",
+      "name": "Brown University",
+      "kind": "Institution",
+      "subtitle": "Wireless transmitter research",
+      "summary": "Home of the Brown Wireless Device developed in Arto Nurmikko’s laboratory.",
+      "href": "https://www.brown.edu/news/2021-03-31/braingate-wireless",
+      "existing": false
+    }
+  ],
+  "edges": [
+    {
+      "id": "sabes-jordan-training",
+      "from": "philip-sabes",
+      "to": "michael-jordan",
+      "label": "did PhD research in lab of",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2000; exact years not specified",
+      "detail": "Sabes’ institutional biography explicitly identifies Jordan’s MIT lab as his doctoral research setting.",
+      "limit": "No advisor relationship is inferred from co-authorship.",
+      "sourceIds": [
+        "sabes"
+      ],
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "sabes-neuralink-founding",
+      "from": "philip-sabes",
+      "to": "neuralink",
+      "label": "helped build founding team",
+      "category": "people",
+      "basis": "documented",
+      "date": "2017 full-time transition",
+      "detail": "Sabes says he helped assemble the founding team and retired from UCSF in 2017 to join full time.",
+      "limit": "",
+      "sourceIds": [
+        "sabes"
+      ],
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "sabes-lab-sewing",
+      "from": "sabes-lab",
+      "to": "sewing-machine",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2019",
+      "detail": "The laboratory developed robotic insertion of flexible thin-film probes with a separate stiff needle.",
+      "limit": "",
+      "sourceIds": [
+        "sewing",
+        "sabes"
+      ],
+      "sources": [
+        {
+          "title": "The “sewing machine” for minimally invasive neural recording",
+          "url": "https://www.biorxiv.org/content/10.1101/578542v1",
+          "published": "2019-03-14"
+        },
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "maharbiz-lab-sewing",
+      "from": "maharbiz-lab",
+      "to": "sewing-machine",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2019",
+      "detail": "The Sabes laboratory explicitly identifies collaboration with the Maharbiz laboratory on this platform.",
+      "limit": "",
+      "sourceIds": [
+        "sewing",
+        "sabes"
+      ],
+      "sources": [
+        {
+          "title": "The “sewing machine” for minimally invasive neural recording",
+          "url": "https://www.biorxiv.org/content/10.1101/578542v1",
+          "published": "2019-03-14"
+        },
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "sewing-neuralink-refinement",
+      "from": "sewing-machine",
+      "to": "neuralink",
+      "label": "approach refined by",
+      "category": "technology",
+      "basis": "documented",
+      "date": "After 2017; described by 2026",
+      "detail": "Sabes explicitly describes Neuralink as refining the insertion approach begun in his UCSF lab.",
+      "limit": "Technical continuation, not evidence of a license, exclusive ownership or identical devices.",
+      "sourceIds": [
+        "sabes"
+      ],
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "stanford-neuralink-speech-license",
+      "from": "stanford",
+      "to": "neuralink",
+      "label": "licensed speech-decoding IP to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2025-06-12",
+      "detail": "Paper disclosures name Stanford patent 12008987 and Neuralink as a licensee.",
+      "limit": "Agreement date, scope and product implementation are undisclosed; this is a later decoding link, not the origin of N1 electrodes.",
+      "sourceIds": [
+        "speechlicense"
+      ],
+      "sources": [
+        {
+          "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+          "published": "2025-06-12"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "tolosa-llnl-research",
+      "from": "vanessa-tolosa",
+      "to": "llnl",
+      "label": "led polymer-array research at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before Neuralink; exact years not specified",
+      "detail": "Precision’s hiring announcement describes Tolosa’s earlier LLNL flexible-polymer-array leadership.",
+      "limit": "",
+      "sourceIds": [
+        "tolosa"
+      ],
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "tolosa-neuralink",
+      "from": "vanessa-tolosa",
+      "to": "neuralink",
+      "label": "co-founded; led neural interfaces",
+      "category": "people",
+      "basis": "documented",
+      "date": "Historical role, before 2025",
+      "detail": "Her responsibilities included electrode microfabrication, packaging and cleanroom development.",
+      "limit": "Personnel history does not establish movement of company IP.",
+      "sourceIds": [
+        "tolosa"
+      ],
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "tolosa-precision",
+      "from": "vanessa-tolosa",
+      "to": "precision",
+      "label": "joined as R&D leader",
+      "category": "people",
+      "basis": "documented",
+      "date": "2025-06-11 announcement",
+      "detail": "Precision announced Tolosa’s appointment as SVP of Research and Development.",
+      "limit": "Role is stated as announced then; current title may have expanded.",
+      "sourceIds": [
+        "tolosa"
+      ],
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "llnl-precision-crada",
+      "from": "llnl",
+      "to": "precision",
+      "label": "entered implant-longevity CRADA with",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2024-02-13 announcement",
+      "detail": "A three-year formal collaboration targets longer-lived thin-film neural implants.",
+      "limit": "Planned transfer of resulting manufacturing techniques was not reported as complete.",
+      "sourceIds": [
+        "llnl"
+      ],
+      "sources": [
+        {
+          "title": "LLNL and Precision Neuroscience collaboration aims to develop next-generation neural implants",
+          "url": "https://www.llnl.gov/article/50836/llnl-precision-neuroscience-collaboration-aims-develop-next-generation-neural-implants",
+          "published": "2024-02-13"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "precision-biomems-acquisition",
+      "from": "precision",
+      "to": "precision-biomems",
+      "label": "owns acquired MEMS manufacturing subsidiary",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2023-10-05 announcement",
+      "detail": "The acquisition brought a Texas MEMS foundry and retained manufacturing team into Precision.",
+      "limit": "",
+      "sourceIds": [
+        "biomems"
+      ],
+      "sources": [
+        {
+          "title": "Precision Neuroscience Acquires U.S. Manufacturing Facility and Receives FDA Breakthrough Device Designation",
+          "url": "https://www.globenewswire.com/en/news-release/2023/10/5/2755458/0/en/Precision-Neuroscience-Acquires-U-S-Manufacturing-Facility-and-Receives-FDA-Breakthrough-Device-Designation.html",
+          "published": "2023-10-05"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "angle-paradromics-founded",
+      "from": "matt-angle",
+      "to": "paradromics",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2015",
+      "detail": "The company identifies Angle as founder and gives 2015 as its founding year.",
+      "limit": "No doctoral supervisor is inferred from later collaborative papers.",
+      "sourceIds": [
+        "pdcompany",
+        "pdfounding"
+      ],
+      "sources": [
+        {
+          "title": "Paradromics — Company",
+          "url": "https://paradromics.com/company/",
+          "published": null
+        },
+        {
+          "title": "Paradromics Inc. — official company profile",
+          "url": "https://www.linkedin.com/company/paradromics-inc",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "paradromics-microwire-cmos",
+      "from": "paradromics",
+      "to": "microwire-cmos",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2020-03-20 publication",
+      "detail": "The published platform includes Paradromics researchers as part of a multi-institution collaboration.",
+      "limit": "Not evidence that Connexus uses an identical chip, or that Stanford licensed all underlying hardware to Paradromics.",
+      "sourceIds": [
+        "microwire",
+        "microwirepaper"
+      ],
+      "sources": [
+        {
+          "title": "Bringing silicon computing power to the brain",
+          "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+          "published": "2020-03-20"
+        },
+        {
+          "title": "Massively parallel microwire arrays integrated with CMOS chips for neural recording",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/",
+          "published": "2020-03-20"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "melosh-microwire-cmos",
+      "from": "melosh-lab",
+      "to": "microwire-cmos",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2020-03-20 publication",
+      "detail": "Stanford reports Melosh’s group’s contribution to the separate microwire-bundle/CMOS architecture.",
+      "limit": "",
+      "sourceIds": [
+        "microwire",
+        "microwirepaper"
+      ],
+      "sources": [
+        {
+          "title": "Bringing silicon computing power to the brain",
+          "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+          "published": "2020-03-20"
+        },
+        {
+          "title": "Massively parallel microwire arrays integrated with CMOS chips for neural recording",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/",
+          "published": "2020-03-20"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "uc-paradromics-speech-license",
+      "from": "uc-regents",
+      "to": "paradromics",
+      "label": "licensed speech-BCI IP to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2025-06-12",
+      "detail": "The paper identifies UC-owned speech-BCI applications including IP licensed by Paradromics.",
+      "limit": "The disclosure does not map every claim in either application to the license or establish implementation in Connexus.",
+      "sourceIds": [
+        "speechlicense"
+      ],
+      "sources": [
+        {
+          "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+          "published": "2025-06-12"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "solzbacher-blackrock-founded",
+      "from": "florian-solzbacher",
+      "to": "blackrock",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2007–2008; sources differ",
+      "detail": "Utah’s interview dates formation to 2007; Blackrock’s company history dates founding to 2008.",
+      "limit": "Do not silently resolve the one-year discrepancy.",
+      "sourceIds": [
+        "utahhistory",
+        "blackrockstory"
+      ],
+      "sources": [
+        {
+          "title": "Brain Trust: A Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+          "published": "2024-07-25"
+        },
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "gerhardt-blackrock-founded",
+      "from": "marcus-gerhardt",
+      "to": "blackrock",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2008 in company account",
+      "detail": "Company history names Gerhardt and Solzbacher as the two founders.",
+      "limit": "",
+      "sourceIds": [
+        "blackrockstory"
+      ],
+      "sources": [
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "cyberkinetics-blackrock-assets",
+      "from": "cyberkinetics",
+      "to": "blackrock",
+      "label": "transferred research-device business to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2008-05-15",
+      "detail": "The business history identifies Blackrock as successor to the acquired research operations; contemporaneous SEC filings name I2S as purchaser.",
+      "limit": "This was a research-business asset transaction. The contemporaneous seller retained clinical IP/approvals; do not label it purchase of all BrainGate IP or the entire company.",
+      "sourceIds": [
+        "cybersec",
+        "cyberterms",
+        "blackrockstory"
+      ],
+      "sources": [
+        {
+          "title": "Cyberkinetics — Form 8-K, research-business disposition",
+          "url": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408031489/v115527_8k.htm",
+          "published": "2008-05-21"
+        },
+        {
+          "title": "Cyberkinetics — Form 10-Q, asset-purchase agreement terms",
+          "url": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408029874/v114541_10q.htm",
+          "published": "2008-05"
+        },
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/",
+          "published": null
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "bionic-cyberkinetics-acquired",
+      "from": "bionic-technologies",
+      "to": "cyberkinetics",
+      "label": "acquired by",
+      "category": "translation",
+      "basis": "documented",
+      "date": "2002",
+      "detail": "Cyberkinetics acquired the research-array supplier’s engineering team, manufacturing facilities and intellectual property.",
+      "limit": "",
+      "sourceIds": [
+        "bionicsec"
+      ],
+      "sources": [
+        {
+          "title": "Cyberkinetics — Form 8-K, acquired Bionic Technologies business",
+          "url": "https://www.sec.gov/Archives/edgar/data/1180253/000106299304001616/form8k.htm",
+          "published": "2004"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "stanford-blackrock-speech-license",
+      "from": "stanford",
+      "to": "blackrock",
+      "label": "licensed speech-decoding IP to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2025-06-12",
+      "detail": "Stanford speech-decoding patent 12008987 is named in a paper disclosure identifying Blackrock as licensee.",
+      "limit": "The disclosure does not establish the license’s start date, exclusivity or a particular commercial decoder implementation.",
+      "sourceIds": [
+        "speechlicense"
+      ],
+      "sources": [
+        {
+          "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+          "published": "2025-06-12"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "opie-bionic-eye",
+      "from": "nicholas-opie",
+      "to": "melbourne-bionic-eye",
+      "label": "previously worked on",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2016 report",
+      "detail": "The university reports that Opie was recruited from the bionic-eye project for stent-electrode development.",
+      "limit": "Expertise movement, not evidence of retinal-device IP licensing.",
+      "sourceIds": [
+        "sync2016"
+      ],
+      "sources": [
+        {
+          "title": "Moving with the power of thought",
+          "url": "https://pursuit.unimelb.edu.au/articles/moving-with-the-power-of-thought",
+          "published": "2016-02-09"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "oxley-vascular-lab",
+      "from": "thomas-oxley",
+      "to": "vascular-bionics-lab",
+      "label": "co-established",
+      "category": "people",
+      "basis": "documented",
+      "date": "After idea work began in 2011; before 2020",
+      "detail": "Melbourne explicitly credits Oxley and Opie with forming the laboratory after initial research funding.",
+      "limit": "",
+      "sourceIds": [
+        "sync2020"
+      ],
+      "sources": [
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "opie-vascular-lab",
+      "from": "nicholas-opie",
+      "to": "vascular-bionics-lab",
+      "label": "co-established",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2020 report",
+      "detail": "The university identifies Opie as a co-establisher of the multidisciplinary laboratory.",
+      "limit": "",
+      "sourceIds": [
+        "sync2020"
+      ],
+      "sources": [
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "vascular-stentrode",
+      "from": "vascular-bionics-lab",
+      "to": "stentrode",
+      "label": "developed with clinical partners",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2016 preclinical → 2019 human implantation",
+      "detail": "The laboratory effort joined university, Royal Melbourne Hospital and Florey investigators in stent-electrode development.",
+      "limit": "A multi-institution effort; do not credit the whole invention to one laboratory or infer exclusive university licensing.",
+      "sourceIds": [
+        "sync2020",
+        "stentpaper"
+      ],
+      "sources": [
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        },
+        {
+          "title": "Minimally invasive endovascular stent-electrode array for high-fidelity, chronic recordings of cortical neural activity",
+          "url": "https://www.nature.com/articles/nbt.3428",
+          "published": "2016-02-08"
+        }
+      ],
+      "isNew": true
+    },
+    {
+      "id": "mit-rapoport-phd",
+      "from": "mit",
+      "to": "benjamin-rapoport",
+      "label": "awarded EECS PhD",
+      "category": "people",
+      "basis": "documented",
+      "date": "2011",
+      "detail": "HST identifies Rapoport as EECS PhD 2011 and MD 2013; Precision independently identifies his electrical engineering and computer science PhD as from MIT.",
+      "limit": "This is a degree relationship. It does not identify a thesis supervisor or establish that either company is an MIT spinout.",
+      "sources": [
+        {
+          "title": "Inside the Operating Room: Doctors Test a Revolutionary Brain-Computer Implant",
+          "url": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant"
+        },
+        {
+          "title": "Our Vision — Precision Neuroscience",
+          "url": "https://www.precisionneuro.io/our-vision"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "rapoport-neuralink",
+      "from": "benjamin-rapoport",
+      "to": "neuralink",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2016",
+      "detail": "HST and Precision explicitly identify Rapoport as a Neuralink co-founder; the official Neuralink company profile gives 2016 as its founding year.",
+      "limit": "Year combines the company founding date with the independently documented co-founder role; it is not a precise appointment date. A founding role is historical and does not imply current employment.",
+      "sources": [
+        {
+          "title": "Inside the Operating Room: Doctors Test a Revolutionary Brain-Computer Implant",
+          "url": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant"
+        },
+        {
+          "title": "Our Vision — Precision Neuroscience",
+          "url": "https://www.precisionneuro.io/our-vision"
+        },
+        {
+          "title": "Neuralink — official company profile",
+          "url": "https://www.linkedin.com/company/neuralink/"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "rapoport-precision",
+      "from": "benjamin-rapoport",
+      "to": "precision",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "Founding date undated",
+      "detail": "Both HST and Precision identify Rapoport as Precision Neuroscience co-founder and Chief Science Officer.",
+      "limit": "The shared founder links Precision and Neuralink through a person. It does not show that Precision is a Neuralink corporate subsidiary, technology licensee, or legal spinout.",
+      "sources": [
+        {
+          "title": "Inside the Operating Room: Doctors Test a Revolutionary Brain-Computer Implant",
+          "url": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant"
+        },
+        {
+          "title": "Our Vision — Precision Neuroscience",
+          "url": "https://www.precisionneuro.io/our-vision"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "normann-utah-development",
+      "from": "richard-normann",
+      "to": "utah",
+      "label": "developed Utah Array at",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Late 1980s–mid-1990s",
+      "detail": "Utah’s 2024 history credits Richard Normann with developing the Utah Electrode Array at the University of Utah, beginning in the late 1980s through the mid-1990s.",
+      "limit": "The source gives a broad development period, not one invention date. The arrow encodes where development occurred; it does not assert that Normann founded Blackrock.",
+      "sources": [
+        {
+          "title": "Brain Trust: a Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "utah-blackrock-license",
+      "from": "utah",
+      "to": "blackrock",
+      "label": "licensed neural-interface technology to",
+      "category": "technology",
+      "basis": "documented",
+      "date": "License documented by May 2021",
+      "detail": "Utah’s history says the startup formed in 2007 and then licensed technology from the university. Its 2021 engineering article separately confirms that university-patented technologies are licensed and commercialized by Blackrock.",
+      "limit": "The precise agreement date and patent inventory are not specified. The 2024 article uses today’s Blackrock Neurotech name retrospectively; older records use Blackrock Microsystems. Licensing is distinct from acquiring the university or its lab.",
+      "sources": [
+        {
+          "title": "Brain Trust: a Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher"
+        },
+        {
+          "title": "Blackrock Gets New Funding",
+          "url": "https://www.ece.utah.edu/2021/05/26/blackrock-gets-new-funding/"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "blackrock-manufactures-utah",
+      "from": "blackrock",
+      "to": "utah-array",
+      "label": "manufactures Utah-array products",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Undated product page",
+      "detail": "Blackrock's product page identifies the Utah Array as an array manufactured by Blackrock Neurotech.",
+      "limit": "Use this source for the manufacturer relationship only. Its headline and FAQ mix 96- and 128-electrode configurations; its regulatory wording should not be reused as evidence of approval.",
+      "sources": [
+        {
+          "title": "Utah Array, Electrodes | Products | Blackrock Neurotech",
+          "url": "https://blackrockneurotech.com/products/utah-array/"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "bg2-uses-blackrock",
+      "from": "braingate2",
+      "to": "blackrock",
+      "label": "uses Blackrock arrays and acquisition",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Published 2012-05-16",
+      "detail": "The study's Methods identify a 96-channel Blackrock array in participant T2 and Cerebus Central acquisition software from Blackrock Microsystems.",
+      "limit": "A study-specific hardware relationship; BrainGate2 is an academic research program, not another name for Blackrock.",
+      "sources": [
+        {
+          "title": "Reach and grasp by people with tetraplegia using a neurally controlled robotic arm",
+          "url": "https://www.nature.com/articles/nature11076"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "oxley-synchron-founded",
+      "from": "thomas-oxley",
+      "to": "synchron",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2012",
+      "detail": "The University of Melbourne commercialization case study states that Thomas Oxley and Nicholas Opie founded Synchron in 2012.",
+      "limit": "Oxley was not the only founder: the supporting evidence explicitly credits Opie too. Showing one selected founder is not a complete founding roster.",
+      "sources": [
+        {
+          "title": "Synchron: Giving people with severe paralysis the power to communicate using their thoughts",
+          "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "opie-synchron-founded",
+      "from": "nicholas-opie",
+      "to": "synchron",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2012",
+      "detail": "Melbourne credits Nicholas Opie and Thomas Oxley with founding Synchron in 2012.",
+      "sources": [
+        {
+          "title": "Synchron: Giving people with severe paralysis the power to communicate using their thoughts",
+          "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "melbourne-synchron-development",
+      "from": "melbourne",
+      "to": "synchron",
+      "label": "co-developed Stentrode with",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Early development · start undated",
+      "detail": "Melbourne describes the early partnership that established a university laboratory while the company was being formed. A second university account names Melbourne, Royal Melbourne Hospital, Florey, Monash and Synchron as developers of Stentrode.",
+      "limit": "This is a collaborative R&D link with a direction chosen for graph display. It is not evidence of a university-to-company patent license or exclusive university ownership; several institutions contributed.",
+      "sources": [
+        {
+          "title": "Synchron: Giving people with severe paralysis the power to communicate using their thoughts",
+          "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+        },
+        {
+          "title": "Synchron secures $52 million to launch US clinical trials of implantable brain device to help severely paralysed patients",
+          "url": "https://about.unimelb.edu.au/news-resources/awards-and-achievements/research-grants-funding/synchron-secures-%2452-million-to-launch-us-clinical-trials-of-implantable-brain-device-to-help-severely-paralysed-patients"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "synchron-stentrode",
+      "from": "synchron",
+      "to": "stentrode",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported Oct 2024",
+      "detail": "Melbourne’s account identifies Synchron’s Stentrode and the university, hospital and institute collaboration behind its early development.",
+      "limit": "This is a collaborative development relationship, not a claim of sole institutional or company invention.",
+      "sources": [
+        {
+          "title": "Synchron: Giving people with severe paralysis the power to communicate using their thoughts",
+          "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "precision-array-development",
+      "from": "precision",
+      "to": "precision-thinfilm",
+      "label": "developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Published Oct 2025",
+      "detail": "Precision-affiliated researchers report the design, fabrication and evaluation of flexible cortical microelectrode arrays in the cited paper.",
+      "limit": "This link names the development organization; the paper’s animal, cadaver and intraoperative human evidence have distinct scopes.",
+      "sources": [
+        {
+          "title": "Minimally invasive implantation of scalable high-density cortical microelectrode arrays for multimodal neural decoding and stimulation",
+          "url": "https://www.nature.com/articles/s41551-025-01501-w"
+        }
+      ],
+      "isNew": false
+    },
+    {
+      "id": "brown-blackrock-wireless-license",
+      "from": "brown",
+      "to": "blackrock",
+      "label": "licensed wireless transmitter technology to",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Disclosed 2021-03-31",
+      "detail": "Brown explicitly reports a licensing agreement making its Brown Wireless Device available through Blackrock Microsystems.",
+      "limit": "The 2021 human configuration used an external head-mounted transmitter attached to a percutaneous connector.",
+      "sourceIds": [
+        "brownwireless"
+      ],
+      "sources": [
+        {
+          "title": "Researchers demonstrate first human use of high-bandwidth wireless brain-computer interface",
+          "url": "https://www.brown.edu/news/2021-03-31/braingate-wireless",
+          "published": "2021-03-31"
+        }
+      ],
+      "isNew": true
+    }
+  ],
+  "companyDossiers": [
+    {
+      "id": "neuralink",
+      "companyProfileId": "neuralink",
+      "nodeId": "neuralink",
+      "name": "Neuralink",
+      "family": "Intracortical flexible threads",
+      "summary": "A laboratory insertion method became a company-built implant, robot, microfabrication process and wireless system. Later decoding licenses form a separate university connection.",
+      "stages": [
+        {
+          "title": "Research roots",
+          "text": "Philip Sabes brought neural-systems research and a UCSF–Berkeley flexible-probe insertion collaboration. The 2019 sewing-machine preprint documents its animal-stage mechanism.",
+          "nodes": [
+            "philip-sabes",
+            "sabes-lab",
+            "maharbiz-lab",
+            "sewing-machine"
+          ],
+          "edges": [
+            "sabes-lab-sewing",
+            "maharbiz-lab-sewing"
+          ],
+          "sourceIds": [
+            "sabes",
+            "sewing"
+          ]
+        },
+        {
+          "title": "Translation",
+          "text": "Sabes joined Neuralink full time in 2017; the lab explicitly says the company refined its approach. Rapoport was also a co-founder. Stanford later licensed speech-decoding IP to Neuralink.",
+          "nodes": [
+            "neuralink",
+            "philip-sabes",
+            "benjamin-rapoport",
+            "stanford"
+          ],
+          "edges": [
+            "sabes-neuralink-founding",
+            "sewing-neuralink-refinement",
+            "rapoport-neuralink",
+            "stanford-neuralink-speech-license"
+          ],
+          "sourceIds": [
+            "sabes",
+            "rapoport",
+            "speechlicense"
+          ]
+        },
+        {
+          "title": "Interface built",
+          "text": "The 2019 research platform paired independently inserted flexible threads with custom amplifiers, digitization and USB readout. The 2024 N1 design integrates a wireless implant and surgical robot.",
+          "nodes": [
+            "neuralink",
+            "sewing-machine"
+          ],
+          "edges": [
+            "sewing-neuralink-refinement"
+          ],
+          "sourceIds": [
+            "nl2019",
+            "nl2024"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2017",
+          "title": "Academic-to-company transition",
+          "text": "Sabes left his UCSF role for full-time Neuralink work.",
+          "sourceIds": [
+            "sabes"
+          ],
+          "edges": [
+            "sabes-neuralink-founding"
+          ]
+        },
+        {
+          "date": "2019-03-14",
+          "title": "Academic insertion precursor published",
+          "text": "The sewing-machine preprint describes flexible probes placed with a separate stiff insertion needle in rats.",
+          "sourceIds": [
+            "sewing"
+          ],
+          "edges": [
+            "sabes-lab-sewing"
+          ]
+        },
+        {
+          "date": "2019-10-31",
+          "title": "Integrated research platform",
+          "text": "Neuralink published its 3,072-channel maximum research configuration, with 96 threads carrying 32 electrodes each.",
+          "sourceIds": [
+            "nl2019"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2024-04-12",
+          "title": "Human N1 engineering update",
+          "text": "The company describes a 1,024-electrode implant on 64 threads, wireless readout and R1 placement.",
+          "sourceIds": [
+            "nl2024"
+          ],
+          "edges": []
+        },
+        {
+          "date": "By 2025-06-12",
+          "title": "Stanford speech-decoding license disclosed",
+          "text": "A published paper lists Neuralink among Stanford’s licensees.",
+          "sourceIds": [
+            "speechlicense"
+          ],
+          "edges": [
+            "stanford-neuralink-speech-license"
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "title": "Insertion becomes a manufacturing-and-surgery system",
+          "text": "Flexible electrodes require placement tooling, vision, packaging and quality control; electrode count alone omits these company engineering changes.",
+          "sourceIds": [
+            "nl2019",
+            "nl2024"
+          ]
+        },
+        {
+          "title": "Research maximum is not a human product progression",
+          "text": "The 2019 3,072-channel rodent/USB system and 2024 1,024-electrode human N1 are different configurations; the lower N1 count is not evidence of a failed doubling law.",
+          "sourceIds": [
+            "nl2019",
+            "nl2024"
+          ]
+        }
+      ],
+      "gaps": [
+        "No academic hardware license agreement was established for the sewing-machine link.",
+        "A Stanford decoding license does not establish that a specific published decoder runs in the N1.",
+        "This is a selected technical founder history, not a complete founder roster."
+      ],
+      "edgeIds": [
+        "sabes-jordan-training",
+        "sabes-neuralink-founding",
+        "sabes-lab-sewing",
+        "maharbiz-lab-sewing",
+        "sewing-neuralink-refinement",
+        "rapoport-neuralink",
+        "stanford-neuralink-speech-license",
+        "tolosa-neuralink"
+      ],
+      "sourceIds": [
+        "sabes",
+        "sewing",
+        "nl2019",
+        "nl2024",
+        "rapoport",
+        "speechlicense",
+        "tolosa"
+      ]
+    },
+    {
+      "id": "precision-neuroscience",
+      "companyProfileId": "precision-neuroscience",
+      "nodeId": "precision",
+      "name": "Precision Neuroscience",
+      "family": "Thin-film cortical-surface arrays",
+      "summary": "Precision combines founder experience in implanted BCIs with surface-array engineering, its own foundry and a national-laboratory longevity collaboration.",
+      "stages": [
+        {
+          "title": "Research roots",
+          "text": "Rapoport’s MIT engineering/medical training and earlier Neuralink co-founding are documented personnel links. The array design paper separately shows a 529-site research design used to choose dimensions for the nominal 1,024-channel version.",
+          "nodes": [
+            "benjamin-rapoport",
+            "mit",
+            "precision-thinfilm"
+          ],
+          "edges": [
+            "mit-rapoport-phd",
+            "rapoport-precision"
+          ],
+          "sourceIds": [
+            "rapoport",
+            "precisionpaper"
+          ]
+        },
+        {
+          "title": "Translation",
+          "text": "Precision was founded in 2021. It acquired a MEMS foundry through Precision BioMEMS in 2023, entered a three-year LLNL longevity CRADA in 2024, and hired Tolosa in 2025.",
+          "nodes": [
+            "precision",
+            "precision-biomems",
+            "llnl",
+            "vanessa-tolosa"
+          ],
+          "edges": [
+            "precision-biomems-acquisition",
+            "llnl-precision-crada",
+            "tolosa-precision"
+          ],
+          "sourceIds": [
+            "llnl",
+            "biomems",
+            "tolosa"
+          ]
+        },
+        {
+          "title": "Interface built",
+          "text": "Flexible arrays record across the cortical surface. Density and modular area coverage are separate scaling mechanisms. The paper’s micro-slit delivery evidence is animal/cadaver work; human results are intraoperative.",
+          "nodes": [
+            "precision",
+            "precision-thinfilm"
+          ],
+          "edges": [
+            "precision-array-development"
+          ],
+          "sourceIds": [
+            "precisionpaper"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2021",
+          "title": "Company founded",
+          "text": "LLNL’s collaboration announcement dates Precision’s start to 2021.",
+          "sourceIds": [
+            "llnl"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2023-10-05",
+          "title": "Manufacturing acquired",
+          "text": "A Texas foundry becomes an internal fabrication capability through Precision BioMEMS.",
+          "sourceIds": [
+            "biomems"
+          ],
+          "edges": [
+            "precision-biomems-acquisition"
+          ]
+        },
+        {
+          "date": "2024-02-13",
+          "title": "Longevity collaboration",
+          "text": "LLNL and Precision announce a three-year CRADA.",
+          "sourceIds": [
+            "llnl"
+          ],
+          "edges": [
+            "llnl-precision-crada"
+          ]
+        },
+        {
+          "date": "2024-04",
+          "title": "Four-array intraoperative recording",
+          "text": "Company reports 4,096 electrodes across four arrays; announcement followed on May 28.",
+          "sourceIds": [
+            "precision4096"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2025-03-30",
+          "title": "Temporary-array clearance",
+          "text": "Layer 7-T clearance covers use for less than 30 days.",
+          "sourceIds": [
+            "precisionfda"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2025-10-02",
+          "title": "Design and implantation paper",
+          "text": "Published work details array geometry, modularity, preclinical insertion and a five-patient intraoperative pilot.",
+          "sourceIds": [
+            "precisionpaper"
+          ],
+          "edges": []
+        }
+      ],
+      "changes": [
+        {
+          "title": "Own the fabrication process",
+          "text": "The acquired foundry adds control of MEMS production and iteration; this is a concrete organizational change rather than a larger electrode count.",
+          "sourceIds": [
+            "biomems"
+          ]
+        },
+        {
+          "title": "Choose density with physiology and manufacturing",
+          "text": "The development arrays varied electrode sizes; the design was selected using impedance, manufacturing reliability and signal correlations.",
+          "sourceIds": [
+            "precisionpaper"
+          ]
+        },
+        {
+          "title": "Engineer longer life",
+          "text": "The LLNL program addresses thin-film longevity; manufacturing transfer of resulting methods was announced as intended.",
+          "sourceIds": [
+            "llnl"
+          ]
+        }
+      ],
+      "gaps": [
+        "Shared founders or hires do not prove that Neuralink technology was transferred to Precision.",
+        "Temporary Layer 7-T clearance is not authorization of a fully implanted chronic wireless BCI.",
+        "The nominal 1,024 design includes reference and stimulation-optimized sites; it is not 1,024 independently isolated neurons."
+      ],
+      "edgeIds": [
+        "rapoport-precision",
+        "mit-rapoport-phd",
+        "precision-array-development",
+        "precision-biomems-acquisition",
+        "llnl-precision-crada",
+        "tolosa-llnl-research",
+        "tolosa-neuralink",
+        "tolosa-precision"
+      ],
+      "sourceIds": [
+        "rapoport",
+        "precision-vision",
+        "biomems",
+        "llnl",
+        "tolosa",
+        "precisionpaper",
+        "precisionfda",
+        "precision4096"
+      ]
+    },
+    {
+      "id": "paradromics",
+      "companyProfileId": "paradromics",
+      "nodeId": "paradromics",
+      "name": "Paradromics",
+      "family": "Microwire modules with implanted transceiver",
+      "summary": "Paradromics’ origin story connects a collaborative microwire/CMOS platform to company packaging and later licensed speech-BCI IP; these are different kinds of relationship.",
+      "stages": [
+        {
+          "title": "Research roots",
+          "text": "Angle founded the company in 2015. A 2020 collaboration involving Paradromics and Melosh’s Stanford group separated flexible microwire bundles from dense silicon readout chips.",
+          "nodes": [
+            "matt-angle",
+            "paradromics",
+            "melosh-lab",
+            "microwire-cmos"
+          ],
+          "edges": [
+            "angle-paradromics-founded",
+            "paradromics-microwire-cmos",
+            "melosh-microwire-cmos"
+          ],
+          "sourceIds": [
+            "pdfounding",
+            "pdcompany",
+            "microwire",
+            "microwirepaper"
+          ]
+        },
+        {
+          "title": "Translation",
+          "text": "The collaboration is documented by a paper and university account. Separately, a 2025 disclosure identifies UC-owned speech-BCI IP licensed by Paradromics. Neither fact establishes a Stanford hardware spinout.",
+          "nodes": [
+            "paradromics",
+            "uc-regents"
+          ],
+          "edges": [
+            "paradromics-microwire-cmos",
+            "uc-paradromics-speech-license"
+          ],
+          "sourceIds": [
+            "microwirepaper",
+            "speechlicense"
+          ]
+        },
+        {
+          "title": "Interface built",
+          "text": "Connexus packages 421 microelectrodes in a brain module connected to a chest transceiver. The company describes inductive power and optical communication across the skin.",
+          "nodes": [
+            "paradromics"
+          ],
+          "edges": [],
+          "sourceIds": [
+            "connexus"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2015",
+          "title": "Company founded",
+          "text": "Official company profile dates the start of Angle’s company.",
+          "sourceIds": [
+            "pdfounding"
+          ],
+          "edges": [
+            "angle-paradromics-founded"
+          ]
+        },
+        {
+          "date": "2020-03-20",
+          "title": "Microwire–CMOS platform published",
+          "text": "A multi-institution paper demonstrates the architecture in preclinical recording.",
+          "sourceIds": [
+            "microwire",
+            "microwirepaper"
+          ],
+          "edges": [
+            "paradromics-microwire-cmos"
+          ]
+        },
+        {
+          "date": "2025",
+          "title": "Temporary human recording milestone",
+          "text": "The company’s history and 2026 announcement distinguish earlier temporary recording from its later chronic implant.",
+          "sourceIds": [
+            "pdcompany",
+            "pdhuman"
+          ],
+          "edges": []
+        },
+        {
+          "date": "By 2025-06-12",
+          "title": "Speech-BCI license disclosed",
+          "text": "UC Regents patent applications include IP licensed by Paradromics.",
+          "sourceIds": [
+            "speechlicense"
+          ],
+          "edges": [
+            "uc-paradromics-speech-license"
+          ]
+        },
+        {
+          "date": "2025-11-20",
+          "title": "Connect-One study authorized",
+          "text": "Company announces FDA authorization for its investigational clinical study.",
+          "sourceIds": [
+            "pdide"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2026-06-17",
+          "title": "Chronic implant announced",
+          "text": "Company reports the first chronic Connect-One implantation at the University of Michigan.",
+          "sourceIds": [
+            "pdhuman"
+          ],
+          "edges": []
+        }
+      ],
+      "changes": [
+        {
+          "title": "Separate sensing from readout geometry",
+          "text": "The precursor’s wire-bundle/CMOS connection lets tissue-facing mechanics and silicon electronics be designed separately.",
+          "sourceIds": [
+            "microwirepaper"
+          ]
+        },
+        {
+          "title": "Turn a recording architecture into an implant system",
+          "text": "Connexus adds implanted packaging, lead routing, chest transceiver and wireless power/data; these carry different constraints from benchtop channel capacity.",
+          "sourceIds": [
+            "connexus"
+          ]
+        }
+      ],
+      "gaps": [
+        "Angle’s exact doctoral/postdoctoral mentorship was not established by the inspected primary sources; no mentor edge is asserted.",
+        "Co-authorship and joint development do not establish an exclusive Stanford hardware license.",
+        "The speech-IP disclosure leaves agreement terms and Connexus implementation unspecified.",
+        "Do not equate the 2025 temporary human experiment with the 2026 chronic trial implant."
+      ],
+      "edgeIds": [
+        "angle-paradromics-founded",
+        "paradromics-microwire-cmos",
+        "melosh-microwire-cmos",
+        "uc-paradromics-speech-license"
+      ],
+      "sourceIds": [
+        "pdfounding",
+        "pdcompany",
+        "microwire",
+        "microwirepaper",
+        "speechlicense",
+        "connexus",
+        "pdide",
+        "pdhuman"
+      ]
+    },
+    {
+      "id": "blackrock-neurotech",
+      "companyProfileId": "blackrock-neurotech",
+      "nodeId": "blackrock",
+      "name": "Blackrock Neurotech",
+      "family": "Utah-array hardware and acquisition systems",
+      "summary": "Blackrock inherits a long university and supplier lineage, then adds manufacturing, acquisition hardware and translational systems. Its corporate history is separate from BrainGate’s academic clinical program.",
+      "stages": [
+        {
+          "title": "Research roots",
+          "text": "Normann’s Utah Array preceded the company. Solzbacher’s Utah work addressed reliability and manufacturability. The earlier Bionic Technologies supplier business was acquired by Cyberkinetics in 2002.",
+          "nodes": [
+            "utah",
+            "richard-normann",
+            "utah-array",
+            "florian-solzbacher",
+            "bionic-technologies",
+            "cyberkinetics"
+          ],
+          "edges": [
+            "normann-utah-development",
+            "bionic-cyberkinetics-acquired"
+          ],
+          "sourceIds": [
+            "utahhistory",
+            "bionicsec"
+          ]
+        },
+        {
+          "title": "Translation",
+          "text": "Solzbacher and Gerhardt founded Blackrock around 2007–2008. Its history links the company to Cyberkinetics’ research business; SEC records specify the transferred assets and research license. Utah technology was also licensed.",
+          "nodes": [
+            "blackrock",
+            "cyberkinetics",
+            "florian-solzbacher",
+            "marcus-gerhardt",
+            "utah"
+          ],
+          "edges": [
+            "solzbacher-blackrock-founded",
+            "gerhardt-blackrock-founded",
+            "cyberkinetics-blackrock-assets",
+            "utah-blackrock-license"
+          ],
+          "sourceIds": [
+            "utahhistory",
+            "blackrockstory",
+            "cybersec",
+            "cyberterms"
+          ]
+        },
+        {
+          "title": "Interface built",
+          "text": "Blackrock supplies arrays and acquisition systems used by academic teams. Wireless home-use research commercialized a Brown transmitter; a later Stanford speech-IP license represents a decoder connection.",
+          "nodes": [
+            "blackrock",
+            "braingate2",
+            "utah-array",
+            "stanford",
+            "brown"
+          ],
+          "edges": [
+            "blackrock-manufactures-utah",
+            "bg2-uses-blackrock",
+            "stanford-blackrock-speech-license",
+            "brown-blackrock-wireless-license"
+          ],
+          "sourceIds": [
+            "neuroport",
+            "brownwireless",
+            "speechlicense"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "Late 1980s–1990s",
+          "title": "Utah Array development",
+          "text": "Normann’s silicon-array work predates Blackrock.",
+          "sourceIds": [
+            "utahhistory"
+          ],
+          "edges": [
+            "normann-utah-development"
+          ]
+        },
+        {
+          "date": "2002",
+          "title": "Bionic business acquired",
+          "text": "Cyberkinetics gained research-device staff, manufacturing and IP.",
+          "sourceIds": [
+            "bionicsec"
+          ],
+          "edges": [
+            "bionic-cyberkinetics-acquired"
+          ]
+        },
+        {
+          "date": "2007–2008",
+          "title": "Blackrock formed",
+          "text": "Utah’s interview says 2007; the company dates founding to 2008.",
+          "sourceIds": [
+            "utahhistory",
+            "blackrockstory"
+          ],
+          "edges": [
+            "solzbacher-blackrock-founded",
+            "gerhardt-blackrock-founded"
+          ]
+        },
+        {
+          "date": "2008-05-15",
+          "title": "Research-business assets transferred",
+          "text": "Contemporaneous filings record the transaction, while distinguishing retained clinical IP.",
+          "sourceIds": [
+            "cybersec",
+            "cyberterms"
+          ],
+          "edges": [
+            "cyberkinetics-blackrock-assets"
+          ]
+        },
+        {
+          "date": "2021-03-31",
+          "title": "Wireless home-use study reported",
+          "text": "Brown describes a commercialized transmitter used with existing percutaneous array connectors.",
+          "sourceIds": [
+            "brownwireless"
+          ],
+          "edges": [
+            "brown-blackrock-wireless-license"
+          ]
+        },
+        {
+          "date": "By 2025-06-12",
+          "title": "Speech-decoding license disclosed",
+          "text": "Stanford’s license to Blackrock appears in a published paper’s disclosures.",
+          "sourceIds": [
+            "speechlicense"
+          ],
+          "edges": [
+            "stanford-blackrock-speech-license"
+          ]
+        }
+      ],
+      "changes": [
+        {
+          "title": "Reliability and production are part of scaling",
+          "text": "Solzbacher’s account stresses manufacturability, stable materials and complete acquisition systems, rather than simply adding silicon needles.",
+          "sourceIds": [
+            "utahhistory"
+          ]
+        },
+        {
+          "title": "Electrode arrays and readout are separate products",
+          "text": "NeuroPort acquisition capacity can exceed the wired contacts in a single implant. A study’s implanted sites, acquired channels and selected decoder inputs need separate labels.",
+          "sourceIds": [
+            "neuroport"
+          ]
+        },
+        {
+          "title": "Wireless has more than one meaning",
+          "text": "The Brown transmitter used in this research attaches outside the skin to a connector; that is not equivalent to a fully implanted package.",
+          "sourceIds": [
+            "brownwireless"
+          ]
+        }
+      ],
+      "gaps": [
+        "The 2007/2008 founding discrepancy remains visible.",
+        "Do not label the 2008 transaction as purchase of all Cyberkinetics or all BrainGate clinical IP.",
+        "BrainGate2 is an academic research program, not another name for Blackrock.",
+        "A research hardware supplier’s device count is not a complete commercial BCI performance measure."
+      ],
+      "edgeIds": [
+        "normann-utah-development",
+        "utah-blackrock-license",
+        "blackrock-manufactures-utah",
+        "bg2-uses-blackrock",
+        "solzbacher-blackrock-founded",
+        "gerhardt-blackrock-founded",
+        "bionic-cyberkinetics-acquired",
+        "cyberkinetics-blackrock-assets",
+        "stanford-blackrock-speech-license",
+        "brown-blackrock-wireless-license"
+      ],
+      "sourceIds": [
+        "utahhistory",
+        "blackrockstory",
+        "bionicsec",
+        "cybersec",
+        "cyberterms",
+        "neuroport",
+        "brownwireless",
+        "speechlicense"
+      ]
+    },
+    {
+      "id": "synchron",
+      "companyProfileId": "synchron",
+      "nodeId": "synchron",
+      "name": "Synchron",
+      "family": "Endovascular stent-electrode BCI",
+      "summary": "Synchron grew from Melbourne’s multidisciplinary endovascular research into a company-built digital-control system; its principal scaling choice is the access route, not a large electrode count.",
+      "stages": [
+        {
+          "title": "Research roots",
+          "text": "Oxley explored the idea during doctoral work in 2011. He and Opie formed the Vascular Bionics Laboratory; Opie brought experience from a bionic-eye project.",
+          "nodes": [
+            "thomas-oxley",
+            "nicholas-opie",
+            "vascular-bionics-lab",
+            "melbourne-bionic-eye"
+          ],
+          "edges": [
+            "oxley-vascular-lab",
+            "opie-vascular-lab",
+            "opie-bionic-eye"
+          ],
+          "sourceIds": [
+            "sync2020",
+            "sync2016"
+          ]
+        },
+        {
+          "title": "Translation",
+          "text": "Synchron was founded in 2012 as a commercial vehicle. University, Royal Melbourne Hospital, Florey and company contributors co-developed Stentrode.",
+          "nodes": [
+            "synchron",
+            "melbourne",
+            "vascular-bionics-lab",
+            "stentrode"
+          ],
+          "edges": [
+            "oxley-synchron-founded",
+            "opie-synchron-founded",
+            "melbourne-synchron-development",
+            "vascular-stentrode"
+          ],
+          "sourceIds": [
+            "melbournecase",
+            "sync2020"
+          ]
+        },
+        {
+          "title": "Interface built",
+          "text": "Electrodes on a stent acquire cortical signals from a blood vessel. The human system routes signals to an implanted chest unit and an external receiver; early digital control combined neural clicking with eye tracking.",
+          "nodes": [
+            "synchron",
+            "stentrode"
+          ],
+          "edges": [
+            "synchron-stentrode"
+          ],
+          "sourceIds": [
+            "sync2020",
+            "switch"
+          ]
+        }
+      ],
+      "timeline": [
+        {
+          "date": "2011",
+          "title": "Doctoral idea explored",
+          "text": "Oxley begins investigating the endovascular route as a Melbourne PhD student.",
+          "sourceIds": [
+            "sync2020"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2012",
+          "title": "Company formed",
+          "text": "The university commercialization case dates Synchron’s founding to 2012.",
+          "sourceIds": [
+            "melbournecase"
+          ],
+          "edges": [
+            "oxley-synchron-founded",
+            "opie-synchron-founded"
+          ]
+        },
+        {
+          "date": "2016-02-08",
+          "title": "Preclinical stent-electrode paper",
+          "text": "Sheep experiments establish the early endovascular recording platform.",
+          "sourceIds": [
+            "stentpaper"
+          ],
+          "edges": [
+            "vascular-stentrode"
+          ]
+        },
+        {
+          "date": "2019-08",
+          "title": "First human implant in early cohort",
+          "text": "Melbourne’s subsequent report dates one of the first two implants to August 2019.",
+          "sourceIds": [
+            "sync2020"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2020-10-28",
+          "title": "First-two-user report",
+          "text": "Participants used a 16-sensor system for home digital control with eye tracking.",
+          "sourceIds": [
+            "sync2020"
+          ],
+          "edges": []
+        },
+        {
+          "date": "2023-01-09",
+          "title": "SWITCH safety follow-up",
+          "text": "A four-participant study reports 12-month follow-up of the fully implanted endovascular system.",
+          "sourceIds": [
+            "switch"
+          ],
+          "edges": []
+        }
+      ],
+      "changes": [
+        {
+          "title": "Make vascular delivery the access strategy",
+          "text": "The stent scaffold carries electrodes through a catheter-accessible route near motor cortex. It changes where signals are sampled and the surgical workflow.",
+          "sourceIds": [
+            "sync2016",
+            "stentpaper"
+          ]
+        },
+        {
+          "title": "Translate a signal into a useful click",
+          "text": "The early interface used a small command set with eye-tracking software; this separates practical access from free-form speech or continuous multidimensional motor decoding.",
+          "sourceIds": [
+            "sync2020"
+          ]
+        },
+        {
+          "title": "Move from animal recording to implanted daily-use components",
+          "text": "The human system adds subcutaneous lead routing, chest electronics and external receiving/control equipment.",
+          "sourceIds": [
+            "sync2020",
+            "switch"
+          ]
+        }
+      ],
+      "gaps": [
+        "No exclusive university-to-company license contract was located in these sources; co-development is the supported label.",
+        "The bionic-eye link is Opie’s experience, not evidence of retinal-patent transfer.",
+        "A 16-contact endovascular array does not measure the same signals or coverage as 16 penetrating intracortical contacts.",
+        "The four-person SWITCH result is a small clinical study, not proof of indefinite vascular or device durability."
+      ],
+      "edgeIds": [
+        "opie-bionic-eye",
+        "oxley-vascular-lab",
+        "opie-vascular-lab",
+        "vascular-stentrode",
+        "oxley-synchron-founded",
+        "opie-synchron-founded",
+        "melbourne-synchron-development",
+        "synchron-stentrode"
+      ],
+      "sourceIds": [
+        "sync2016",
+        "sync2020",
+        "melbournecase",
+        "stentpaper",
+        "switch"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "sabes",
+      "title": "Philip Sabes — UCSF laboratory and career history",
+      "url": "https://sabes.ucsf.edu/",
+      "published": null,
+      "kind": "University laboratory",
+      "reviewed": "2026-09-15",
+      "evidence": "Sabes describes MIT doctoral research in Michael Jordan’s lab, UCSF lab leadership, joining Neuralink full time in 2017, and Neuralink refining his lab’s sewing-machine approach.",
+      "limit": "Undated first-person institutional biography; not an IP license document."
+    },
+    {
+      "id": "sewing",
+      "title": "The “sewing machine” for minimally invasive neural recording",
+      "url": "https://www.biorxiv.org/content/10.1101/578542v1",
+      "published": "2019-03-14",
+      "kind": "Preprint",
+      "reviewed": "2026-09-15",
+      "evidence": "Hanson, Diaz-Botia, Kharazia, Maharbiz and Sabes describe robotic insertion of separate flexible thin-film probes with a stiff needle and rat recordings.",
+      "limit": "Preprint; animal demonstration, not human clinical validation."
+    },
+    {
+      "id": "nl2019",
+      "title": "An Integrated Brain-Machine Interface Platform With Thousands of Channels",
+      "url": "https://www.jmir.org/2019/10/E16194",
+      "published": "2019-10-31",
+      "kind": "Primary paper",
+      "reviewed": "2026-09-15",
+      "evidence": "Neuralink reports robot-inserted flexible threads, custom readout electronics, 1,536- and 3,072-channel research systems, and USB-C recording in rodents."
+    },
+    {
+      "id": "nl2024",
+      "title": "PRIME Study Progress Update",
+      "url": "https://neuralink.com/updates/prime-study-progress-update/",
+      "published": "2024-04-12",
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Company describes the 1,024-electrode, 64-thread N1 implant, R1 robot, wireless system and in-house fabrication/testing.",
+      "limit": "Company progress report; numbers concern the human N1 design, not the 2019 research system."
+    },
+    {
+      "id": "rapoport",
+      "title": "Inside the operating room: Doctors test a revolutionary brain-computer implant",
+      "url": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant",
+      "published": "2024-04-12",
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "MIT reports Rapoport’s EECS PhD in 2011 and MD in 2013, and identifies him as co-founder of Neuralink and Precision.",
+      "limit": "Alumnus biography; does not establish transfer of MIT or Neuralink IP to Precision."
+    },
+    {
+      "id": "precision-vision",
+      "title": "Precision Neuroscience — Our vision",
+      "url": "https://www.precisionneuro.io/our-vision",
+      "published": null,
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Leadership biographies identify Benjamin Rapoport and Michael Mager as co-founders and describe technical leaders’ prior roles."
+    },
+    {
+      "id": "llnl",
+      "title": "LLNL and Precision Neuroscience collaboration aims to develop next-generation neural implants",
+      "url": "https://www.llnl.gov/article/50836/llnl-precision-neuroscience-collaboration-aims-develop-next-generation-neural-implants",
+      "published": "2024-02-13",
+      "kind": "National laboratory",
+      "reviewed": "2026-09-15",
+      "evidence": "A three-year CRADA targets thin-film implant longevity; Precision intends to transfer resulting methods to Precision BioMEMS. The article dates Precision’s founding to 2021.",
+      "limit": "Manufacturing transfer is an intention, not evidence it has been completed."
+    },
+    {
+      "id": "tolosa",
+      "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+      "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+      "published": "2025-06-11",
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Tolosa joins as SVP of R&D after LLNL polymer-array work, Neuralink co-founding and leadership of neural-interface fabrication, and Meta wearable work.",
+      "limit": "Historical employment is not an IP transfer."
+    },
+    {
+      "id": "biomems",
+      "title": "Precision Neuroscience Acquires U.S. Manufacturing Facility and Receives FDA Breakthrough Device Designation",
+      "url": "https://www.globenewswire.com/en/news-release/2023/10/5/2755458/0/en/Precision-Neuroscience-Acquires-U-S-Manufacturing-Facility-and-Receives-FDA-Breakthrough-Device-Designation.html",
+      "published": "2023-10-05",
+      "kind": "Company release",
+      "reviewed": "2026-09-15",
+      "evidence": "Precision acquired a Texas MEMS foundry through wholly owned Precision BioMEMS and retained the manufacturing team."
+    },
+    {
+      "id": "precisionpaper",
+      "title": "Minimally invasive implantation of scalable high-density cortical microelectrode arrays for multimodal neural decoding and stimulation",
+      "url": "https://www.nature.com/articles/s41551-025-01501-w",
+      "published": "2025-10-02",
+      "kind": "Primary paper",
+      "reviewed": "2026-09-15",
+      "evidence": "The paper documents 529-site development arrays and a nominal 1,024-channel design, modular cortical coverage, animal/cadaver micro-slit insertion, and a five-patient intraoperative pilot.",
+      "limit": "Human chronic reversibility was not demonstrated. Nominal 1,024 comprises 977 recording-sized, 42 stimulation-optimized and five reference electrodes."
+    },
+    {
+      "id": "precisionfda",
+      "title": "FDA K242618 — Layer 7-T cortical interface",
+      "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242618.pdf",
+      "published": "2025-03-30",
+      "kind": "Regulator",
+      "reviewed": "2026-09-15",
+      "evidence": "Clearance covers the Layer 7-T electrode array for temporary use lasting less than 30 days.",
+      "limit": "Not market authorization for a complete chronic wireless BCI."
+    },
+    {
+      "id": "precision4096",
+      "title": "Precision Neuroscience Announces World Record for Number of Electrodes Placed On Human Brain",
+      "url": "https://www.globenewswire.com/en/news-release/2024/05/28/2889069/0/en/Precision-Neuroscience-Announces-World-Record-for-Number-of-Electrodes-Placed-On-Human-Brain.html",
+      "published": "2024-05-28",
+      "kind": "Company release",
+      "reviewed": "2026-09-15",
+      "evidence": "Four 1,024-electrode arrays were used for intraoperative recording in April 2024.",
+      "limit": "Company-reported acute placement/recording; not 4,096 chronic single-neuron channels."
+    },
+    {
+      "id": "pdcompany",
+      "title": "Paradromics — Company",
+      "url": "https://paradromics.com/company/",
+      "published": null,
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Names Matt Angle as founder and CEO; company history includes Austin expansion, preclinical Connexus work, and human milestones.",
+      "limit": "The current company page does not specify Angle’s doctoral or postdoctoral mentors."
+    },
+    {
+      "id": "pdfounding",
+      "title": "Paradromics Inc. — official company profile",
+      "url": "https://www.linkedin.com/company/paradromics-inc",
+      "published": null,
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "The official company profile dates founding to 2015 and identifies founder Matt Angle."
+    },
+    {
+      "id": "microwire",
+      "title": "Bringing silicon computing power to the brain",
+      "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+      "published": "2020-03-20",
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "Stanford reports microwire bundles contacting CMOS chips and identifies Stanford, Paradromics, the Francis Crick Institute, UCL and ETH collaborators.",
+      "limit": "A collaborative preclinical platform; not proof of a hardware license or identical Connexus implementation."
+    },
+    {
+      "id": "microwirepaper",
+      "title": "Massively parallel microwire arrays integrated with CMOS chips for neural recording",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7083623/",
+      "published": "2020-03-20",
+      "kind": "Primary paper",
+      "reviewed": "2026-09-15",
+      "evidence": "Obaid and colleagues separate the microwire bundle from CMOS readout; Angle and Melosh are co-authors.",
+      "limit": "Co-authorship supports collaboration, not a mentor relationship."
+    },
+    {
+      "id": "speechlicense",
+      "title": "An instantaneous voice-synthesis neuroprosthesis — author manuscript",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12369848/",
+      "published": "2025-06-12",
+      "kind": "Primary paper",
+      "reviewed": "2026-09-15",
+      "evidence": "Competing interests identify Stanford speech-decoding patent 12008987 as licensed to Blackrock and Neuralink, and UC Regents speech-BCI applications 63/461,507 and 63/450,317 as including IP licensed by Paradromics.",
+      "limit": "Exact license dates, exclusivity, contract terms and incorporation into shipping company products are not disclosed. Source is a published paper disclosure, not the agreements."
+    },
+    {
+      "id": "connexus",
+      "title": "Paradromics — Connexus",
+      "url": "https://paradromics.com/connexus/",
+      "published": null,
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Describes the 421-microelectrode brain module, implanted lead and chest transceiver, inductive power and optical data transmission.",
+      "limit": "A design description; intended long service life is not observed decade-long human durability."
+    },
+    {
+      "id": "pdide",
+      "title": "Paradromics Receives FDA Approval for the Connect-One Clinical Study with the Connexus Brain-Computer Interface",
+      "url": "https://paradromics.com/news/paradromics-receives-fda-approval-for-the-connect-one-clinical-study-with-the-connexus-brain-computer-interface/",
+      "published": "2025-11-20",
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Announces authorization of the investigational Connect-One study.",
+      "limit": "Study authorization is not commercial marketing approval."
+    },
+    {
+      "id": "pdhuman",
+      "title": "Paradromics Completes First Human Brain-Computer Interface (BCI) Implantation",
+      "url": "https://paradromics.com/news/paradromics-completes-first-human-brain-computer-interface-bci-implantation/",
+      "published": "2026-06-17",
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Reports the first chronic Connect-One implantation at the University of Michigan; distinguishes the temporary 2025 recording milestone.",
+      "limit": "Announcement date; exact procedure date is not supplied here."
+    },
+    {
+      "id": "utahhistory",
+      "title": "Brain Trust: A Q&A with Florian Solzbacher",
+      "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "published": "2024-07-25",
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "Describes Normann’s Utah Array, Solzbacher joining Utah in 2004 and engineering improvements; dates company formation to 2007 and subsequent Utah licensing.",
+      "limit": "Formation year conflicts with Blackrock’s own 2008 account; retain the discrepancy."
+    },
+    {
+      "id": "blackrockstory",
+      "title": "Blackrock Neurotech — Our story",
+      "url": "https://blackrockneurotech.com/our-story/",
+      "published": null,
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Names Solzbacher and Gerhardt as founders in 2008 and describes acquisition from Cyberkinetics.",
+      "limit": "The company summary says “acquires Cyberkinetics”; contemporaneous SEC documents specify a research-business asset transaction and retained clinical IP."
+    },
+    {
+      "id": "cybersec",
+      "title": "Cyberkinetics — Form 8-K, research-business disposition",
+      "url": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408031489/v115527_8k.htm",
+      "published": "2008-05-21",
+      "kind": "SEC filing",
+      "reviewed": "2026-09-15",
+      "evidence": "Reports the May 15, 2008 disposition of research-business assets to I2S Micro Implantable Systems Inc."
+    },
+    {
+      "id": "cyberterms",
+      "title": "Cyberkinetics — Form 10-Q, asset-purchase agreement terms",
+      "url": "https://www.sec.gov/Archives/edgar/data/1180253/000114420408029874/v114541_10q.htm",
+      "published": "2008-05",
+      "kind": "SEC filing",
+      "reviewed": "2026-09-15",
+      "evidence": "Describes research inventory, fixed assets, engineering subcontracts and a research-products license; Cyberkinetics retained clinical neural-interface IP and approvals, including BrainGate and NeuroPort.",
+      "limit": "This filing describes transaction terms; read with the later closing report."
+    },
+    {
+      "id": "bionicsec",
+      "title": "Cyberkinetics — Form 8-K, acquired Bionic Technologies business",
+      "url": "https://www.sec.gov/Archives/edgar/data/1180253/000106299304001616/form8k.htm",
+      "published": "2004",
+      "kind": "SEC filing",
+      "reviewed": "2026-09-15",
+      "evidence": "Describes its 2002 Bionic Technologies acquisition, bringing engineering staff, manufacturing facilities and IP; continuing BIONIC recording-array and acquisition products.",
+      "limit": "The same filing uses both “late 2002” and “August 2002”; retain year precision."
+    },
+    {
+      "id": "neuroport",
+      "title": "Blackrock — NeuroPort data acquisition",
+      "url": "https://blackrockneurotech.com/products/neuroport/",
+      "published": null,
+      "kind": "Company",
+      "reviewed": "2026-09-15",
+      "evidence": "Describes configurable neural-signal acquisition, real-time closed-loop use and up to 512 recording channels.",
+      "limit": "Acquisition capacity is not the number of contacts in every implanted Utah array."
+    },
+    {
+      "id": "brownwireless",
+      "title": "Researchers demonstrate first human use of high-bandwidth wireless brain-computer interface",
+      "url": "https://www.brown.edu/news/2021-03-31/braingate-wireless",
+      "published": "2021-03-31",
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "Brown reports wireless home-use research using the Brown Wireless Device, commercialized by Blackrock.",
+      "limit": "Wireless transmitter mounts on percutaneous connectors; not a fully implanted N1-like package."
+    },
+    {
+      "id": "melbournecase",
+      "title": "Giving people with severe paralysis the power to communicate using their thoughts",
+      "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts",
+      "published": null,
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "University commercialization case identifies Synchron, founded in 2012, as the commercial vehicle for Stentrode development with Melbourne partners."
+    },
+    {
+      "id": "sync2016",
+      "title": "Moving with the power of thought",
+      "url": "https://pursuit.unimelb.edu.au/articles/moving-with-the-power-of-thought",
+      "published": "2016-02-09",
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "Reports recruitment of Nicholas Opie from the bionic-eye project and engineering of electrodes onto a collapsible nitinol stent.",
+      "limit": "Bionic-eye work is a personnel-expertise link, not evidence of transferred retinal-device IP."
+    },
+    {
+      "id": "sync2020",
+      "title": "Translating thought into action",
+      "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+      "published": "2020-10-28",
+      "kind": "University",
+      "reviewed": "2026-09-15",
+      "evidence": "Oxley explored the idea as a Melbourne PhD student in 2011; he and Opie formed the Vascular Bionics Laboratory. The article describes 16 sensors and first two human users with eye-tracking-assisted digital control.",
+      "limit": "Do not repeat the article’s speculative permanent lifetime claim or treat its 2025 approval forecast as achieved."
+    },
+    {
+      "id": "stentpaper",
+      "title": "Minimally invasive endovascular stent-electrode array for high-fidelity, chronic recordings of cortical neural activity",
+      "url": "https://www.nature.com/articles/nbt.3428",
+      "published": "2016-02-08",
+      "kind": "Primary paper",
+      "reviewed": "2026-09-15",
+      "evidence": "Oxley and colleagues report endovascular cortical recording in a preclinical sheep model.",
+      "limit": "This is preclinical evidence; publication precedes human use."
+    },
+    {
+      "id": "switch",
+      "title": "Assessment of safety of a fully implanted endovascular brain-computer interface for severe paralysis in four patients: SWITCH study",
+      "url": "https://ora.ox.ac.uk/objects/uuid%3A64aa8604-2f4a-48f1-add2-328883b165ea/files/r37720d55t",
+      "published": "2023-01-09",
+      "kind": "Primary paper",
+      "reviewed": "2026-09-15",
+      "evidence": "Four implanted participants were followed for 12 months in the SWITCH safety study.",
+      "limit": "Small single-arm study, including the early participants; not a market authorization or an independent large replication."
+    }
+  ],
+  "counts": {
+    "companyDossiers": 5,
+    "newEdges": 25,
+    "reusedEdges": 12,
+    "sources": 32
+  }
+}

@@ -1,0 +1,1332 @@
+{
+  "verified": "2026-09-15",
+  "scope": "Six company origins; only new graph edges. Existing Zhao/NET/MERF/uFINE edges remain in the canonical graph. Dates identify the event when known, otherwise explicitly the reporting date.",
+  "nodes": [
+    {
+      "id": "axoft",
+      "name": "Axoft",
+      "kind": "Company",
+      "subtitle": "Ultrasoft neural interfaces",
+      "summary": "Ultrasoft neural interfaces",
+      "href": "#org/axoft"
+    },
+    {
+      "id": "neuroxess",
+      "name": "NeuroXess",
+      "kind": "Company",
+      "subtitle": "Flexible implantable BCI",
+      "summary": "Flexible implantable BCI",
+      "href": "#org/neuroxess"
+    },
+    {
+      "id": "neuracle",
+      "name": "Neuracle",
+      "kind": "Company",
+      "subtitle": "Electrophysiology and epidural BCI",
+      "summary": "Electrophysiology and epidural BCI",
+      "href": "#org/neuracle"
+    },
+    {
+      "id": "jimed",
+      "name": "JiMED",
+      "kind": "Company",
+      "subtitle": "Osaka-origin wireless implanted BCI",
+      "summary": "Osaka-origin wireless implanted BCI",
+      "href": "#org/jimed"
+    },
+    {
+      "id": "neuralmatrix",
+      "name": "NeuralMatrix / NeuraMatrix",
+      "kind": "Company",
+      "subtitle": "Research electrophysiology and interface platforms",
+      "summary": "Research electrophysiology and interface platforms",
+      "href": "#org/neuralmatrix"
+    },
+    {
+      "id": "harvard",
+      "name": "Harvard University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Harvard University"
+    },
+    {
+      "id": "stanford-university",
+      "name": "Stanford University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Stanford University"
+    },
+    {
+      "id": "tsinghua",
+      "name": "Tsinghua University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Tsinghua University"
+    },
+    {
+      "id": "osaka-university",
+      "name": "Osaka University",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "Osaka University"
+    },
+    {
+      "id": "simit",
+      "name": "CAS Shanghai Institute of Microsystem and Information Technology",
+      "kind": "Institution",
+      "subtitle": "Academic institution",
+      "summary": "CAS Shanghai Institute of Microsystem and Information Technology"
+    },
+    {
+      "id": "paul-le-floch",
+      "name": "Paul Le Floch",
+      "kind": "Person",
+      "subtitle": "Axoft co-founder; Harvard PhD",
+      "summary": "Axoft co-founder; Harvard PhD"
+    },
+    {
+      "id": "jia-liu",
+      "name": "Jia Liu",
+      "kind": "Person",
+      "subtitle": "Academic co-founder of Axoft",
+      "summary": "Academic co-founder of Axoft"
+    },
+    {
+      "id": "tianyang-ye",
+      "name": "Tianyang Ye",
+      "kind": "Person",
+      "subtitle": "Axoft co-founder; Harvard graduate and postdoc",
+      "summary": "Axoft co-founder; Harvard graduate and postdoc"
+    },
+    {
+      "id": "hongkun-park",
+      "name": "Hongkun Park",
+      "kind": "Person",
+      "subtitle": "Harvard Park Group",
+      "summary": "Harvard Park Group"
+    },
+    {
+      "id": "tao-hu",
+      "name": "Tao Hu / Tiger H. Tao",
+      "kind": "Person",
+      "subtitle": "NeuroXess scientific founder",
+      "summary": "NeuroXess scientific founder"
+    },
+    {
+      "id": "phoenix-peng",
+      "name": "Lei Peng / Phoenix Peng",
+      "kind": "Person",
+      "subtitle": "NeuroXess co-founder",
+      "summary": "NeuroXess co-founder"
+    },
+    {
+      "id": "hong-bo",
+      "name": "Hong Bo",
+      "kind": "Person",
+      "subtitle": "Tsinghua NEO academic team leader",
+      "summary": "Tsinghua NEO academic team leader"
+    },
+    {
+      "id": "honglai-xu",
+      "name": "Honglai Xu / 胥红来",
+      "kind": "Person",
+      "subtitle": "Neuracle founder",
+      "summary": "Neuracle founder"
+    },
+    {
+      "id": "masayuki-hirata",
+      "name": "Masayuki Hirata",
+      "kind": "Person",
+      "subtitle": "Osaka BCI researcher; JiMED founder",
+      "summary": "Osaka BCI researcher; JiMED founder"
+    },
+    {
+      "id": "tao-zhou-neuramatrix",
+      "name": "Tao Zhou / 周涛",
+      "kind": "Person",
+      "subtitle": "NeuraMatrix co-founder identified in 2026",
+      "summary": "NeuraMatrix co-founder identified in 2026"
+    },
+    {
+      "id": "fluorinated-elastomer-probes",
+      "name": "Fluorinated-elastomer neural probes",
+      "kind": "Technology",
+      "subtitle": "2023 study platform",
+      "summary": "Multilayer tissue-soft probes demonstrated in mice; Harvard licensed associated technology to Axoft."
+    },
+    {
+      "id": "silk-ivi-2025",
+      "name": "Silk-enabled intraventricular interface",
+      "kind": "Technology",
+      "subtitle": "2025 preclinical study",
+      "summary": "Catheter-delivered deformable array with a silk scaffold, tested on periventricular surfaces in sheep."
+    },
+    {
+      "id": "neo-epidural",
+      "name": "NEO epidural BCI",
+      "kind": "Technology",
+      "subtitle": "Tsinghua–Neuracle system",
+      "summary": "Epidural electrodes, implanted electronics, external wireless power and decoding for assistive hand control."
+    },
+    {
+      "id": "w-herbs-2018",
+      "name": "W-HERBS wireless ECoG",
+      "kind": "Technology",
+      "subtitle": "2018 Osaka research prototype",
+      "summary": "128-channel fully implantable wireless recording device described in a research paper."
+    },
+    {
+      "id": "jimed-wibmi",
+      "name": "JiMED wiBMI",
+      "kind": "Technology",
+      "subtitle": "Clinical-development platform",
+      "summary": "Wireless cortical-surface recording system being translated into a medical device for communication."
+    },
+    {
+      "id": "neuralmatrix-nexgaia",
+      "name": "NeXGaia wireless electrophysiology",
+      "kind": "Technology",
+      "subtitle": "NeuralMatrix research product family",
+      "summary": "Animal telemetry front ends with NeXScope acquisition and analysis software."
+    }
+  ],
+  "edges": [
+    {
+      "id": "lefloch-jia-training",
+      "from": "paul-le-floch",
+      "to": "jia-liu",
+      "label": "PhD trainee in lab of",
+      "category": "people",
+      "basis": "documented",
+      "date": "By 2021",
+      "detail": "Harvard identifies Le Floch as a former graduate student in Jia Liu’s lab.",
+      "sourceIds": [
+        "ax-harvard-2024"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ]
+    },
+    {
+      "id": "ye-park-training",
+      "from": "tianyang-ye",
+      "to": "hongkun-park",
+      "label": "graduate student and postdoc in lab of",
+      "category": "people",
+      "basis": "documented",
+      "date": "Before 2021 founding",
+      "detail": "Harvard identifies Ye’s graduate and postdoctoral work in the Park Group.",
+      "sourceIds": [
+        "ax-harvard-2024"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ],
+      "limit": "The article does not give exact training dates."
+    },
+    {
+      "id": "paul-le-floch-axoft-founder",
+      "from": "paul-le-floch",
+      "to": "axoft",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Le Floch is explicitly named among the three Axoft founders.",
+      "sourceIds": [
+        "ax-harvard-2021"
+      ],
+      "sources": [
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ]
+    },
+    {
+      "id": "jia-liu-axoft-founder",
+      "from": "jia-liu",
+      "to": "axoft",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Liu is explicitly named among the three Axoft founders.",
+      "sourceIds": [
+        "ax-harvard-2021"
+      ],
+      "sources": [
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ]
+    },
+    {
+      "id": "tianyang-ye-axoft-founder",
+      "from": "tianyang-ye",
+      "to": "axoft",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Ye is explicitly named among the three Axoft founders.",
+      "sourceIds": [
+        "ax-harvard-2021"
+      ],
+      "sources": [
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ]
+    },
+    {
+      "id": "harvard-axoft-license",
+      "from": "harvard",
+      "to": "axoft",
+      "label": "licensed neural-probe technology to",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard says it protected IP associated with the fluorinated-elastomer probe research and licensed it to Axoft.",
+      "sourceIds": [
+        "ax-harvard-2024"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ],
+      "limit": "Execution date and complete patent scope are not stated."
+    },
+    {
+      "id": "stanford-axoft-fleuron-license",
+      "from": "stanford-university",
+      "to": "axoft",
+      "label": "licensed technology covering Fleuron to",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Announced 2025-05",
+      "detail": "Axoft’s official chronology identifies commercialization of Fleuron covered by an exclusive Stanford license.",
+      "sourceIds": [
+        "ax-news"
+      ],
+      "sources": [
+        {
+          "title": "Axoft news chronology",
+          "url": "https://axoft.us/news"
+        }
+      ],
+      "limit": "Separate from the Harvard license. Full agreement and exact patent scope were not reviewed."
+    },
+    {
+      "id": "tao-neuroxess-founder",
+      "from": "tao-hu",
+      "to": "neuroxess",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2021",
+      "detail": "Company history identifies Tao as scientific founder; the 2022 release names both co-founders.",
+      "sourceIds": [
+        "nx-about",
+        "nx-founders"
+      ],
+      "sources": [
+        {
+          "title": "NeuroXess company history",
+          "url": "https://www.neuroxess.com/about/"
+        },
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ]
+    },
+    {
+      "id": "peng-neuroxess-founder",
+      "from": "phoenix-peng",
+      "to": "neuroxess",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "Reported 2022-01-11",
+      "detail": "The company identifies Peng as co-founder leading commercialization.",
+      "sourceIds": [
+        "nx-founders"
+      ],
+      "sources": [
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ]
+    },
+    {
+      "id": "tao-simit-research",
+      "from": "tao-hu",
+      "to": "simit",
+      "label": "researcher at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Reported 2022-01-11",
+      "detail": "Company release identifies Tao’s SIMIT appointment and 2020 X-Lab leadership.",
+      "sourceIds": [
+        "nx-founders"
+      ],
+      "sources": [
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ],
+      "limit": "An appointment is not evidence of an institutional spinout or IP license."
+    },
+    {
+      "id": "tao-silk-ivi",
+      "from": "tao-hu",
+      "to": "silk-ivi-2025",
+      "label": "corresponding author of study introducing",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2025-10-23",
+      "detail": "The paper names Tao and Zhitao Zhou as corresponding authors.",
+      "sourceIds": [
+        "nx-ivi"
+      ],
+      "sources": [
+        {
+          "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+          "url": "https://www.nature.com/articles/s41467-025-64397-9"
+        }
+      ]
+    },
+    {
+      "id": "neuroxess-silk-ivi-hardware",
+      "from": "neuroxess",
+      "to": "silk-ivi-2025",
+      "label": "provided recording system used in",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2025-10-23",
+      "detail": "Methods identify CereCube NSP8 hardware from Neuroxess; the paper discloses founder and employee participation.",
+      "sourceIds": [
+        "nx-ivi"
+      ],
+      "sources": [
+        {
+          "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+          "url": "https://www.nature.com/articles/s41467-025-64397-9"
+        }
+      ],
+      "limit": "The paper says future commercial use is possible; it does not establish a marketed IVI product or a license."
+    },
+    {
+      "id": "xu-neuracle-founder",
+      "from": "honglai-xu",
+      "to": "neuracle",
+      "label": "founded with other initial shareholders",
+      "category": "people",
+      "basis": "documented",
+      "date": "2011-11-18",
+      "detail": "Company filing calls Xu founder and records five initial shareholders at incorporation.",
+      "sourceIds": [
+        "nc-filing"
+      ],
+      "sources": [
+        {
+          "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf"
+        }
+      ],
+      "limit": "Not a sole-founder claim; incorporation agreement was dated November 16."
+    },
+    {
+      "id": "xu-tsinghua-phd",
+      "from": "honglai-xu",
+      "to": "tsinghua",
+      "label": "earned PhD at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Degree date not stated",
+      "detail": "Company filing identifies Xu’s doctorate in biomedical engineering at Tsinghua.",
+      "sourceIds": [
+        "nc-filing"
+      ],
+      "sources": [
+        {
+          "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf"
+        }
+      ],
+      "limit": "No named PhD supervisor is established by this source."
+    },
+    {
+      "id": "hong-neo-development",
+      "from": "hong-bo",
+      "to": "neo-epidural",
+      "label": "led academic co-development of",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Clinical prototype reported 2024-01-30",
+      "detail": "Tsinghua identifies Hong’s team as the academic developer working with Neuracle.",
+      "sourceIds": [
+        "nc-tsinghua-2024"
+      ],
+      "sources": [
+        {
+          "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+          "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm"
+        }
+      ]
+    },
+    {
+      "id": "neuracle-neo-development",
+      "from": "neuracle",
+      "to": "neo-epidural",
+      "label": "co-developed hardware and software for",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Clinical prototype reported 2024-01-30",
+      "detail": "Tsinghua explicitly names Neuracle as joint hardware/software developer.",
+      "sourceIds": [
+        "nc-tsinghua-2024"
+      ],
+      "sources": [
+        {
+          "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+          "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm"
+        }
+      ],
+      "limit": "Joint development does not establish a university license or sole laboratory origin."
+    },
+    {
+      "id": "hirata-jimed-founder",
+      "from": "masayuki-hirata",
+      "to": "jimed",
+      "label": "founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "2020-03",
+      "detail": "Hirata dates incorporation to March 2020 in the founder interview; NEDO independently lists him as founder.",
+      "sourceIds": [
+        "jm-founder",
+        "jm-nedo"
+      ],
+      "sources": [
+        {
+          "title": "JiMED founder and CEO interview — Series EMBARK 36",
+          "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/"
+        },
+        {
+          "title": "JiMED — NEDO startup profile",
+          "url": "https://www.nedo.go.jp/english/activities/startups/company75.html"
+        }
+      ]
+    },
+    {
+      "id": "jimed-osaka-origin",
+      "from": "jimed",
+      "to": "osaka-university",
+      "label": "originated from research at",
+      "category": "people",
+      "basis": "documented",
+      "date": "2020",
+      "detail": "University venture-fund interview explicitly describes JiMED as an Osaka University startup.",
+      "sourceIds": [
+        "jm-founder"
+      ],
+      "sources": [
+        {
+          "title": "JiMED founder and CEO interview — Series EMBARK 36",
+          "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/"
+        }
+      ],
+      "limit": "No licensing agreement is inferred."
+    },
+    {
+      "id": "hirata-wherbs",
+      "from": "masayuki-hirata",
+      "to": "w-herbs-2018",
+      "label": "corresponding author of study describing",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2018-07-30",
+      "detail": "Hirata is the corresponding author of the 128-channel W-HERBS study.",
+      "sourceIds": [
+        "jm-paper"
+      ],
+      "sources": [
+        {
+          "title": "A fully implantable wireless ECoG 128-channel recording device for human brain–machine interfaces: W-HERBS",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2018.00511/full"
+        }
+      ]
+    },
+    {
+      "id": "jimed-wibmi-development",
+      "from": "jimed",
+      "to": "jimed-wibmi",
+      "label": "develops for medical-device translation",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Documented 2025-05-22",
+      "detail": "NEDO describes wireless implantable BMI development, ALS trials and commercialization infrastructure.",
+      "sourceIds": [
+        "jm-nedo"
+      ],
+      "sources": [
+        {
+          "title": "JiMED — NEDO startup profile",
+          "url": "https://www.nedo.go.jp/english/activities/startups/company75.html"
+        }
+      ],
+      "limit": "Do not equate the current device with the exact 2018 prototype; explicit product-level identity is unverified."
+    },
+    {
+      "id": "zhou-neuralmatrix-founder",
+      "from": "tao-zhou-neuramatrix",
+      "to": "neuralmatrix",
+      "label": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "date": "Role reported 2026-03-27",
+      "detail": "Official Zhongguancun Forum identifies Zhou as co-founder and CEO of Beijing NeuraMatrix.",
+      "sourceIds": [
+        "nm-forum"
+      ],
+      "sources": [
+        {
+          "title": "Zhongguancun Forum Tech-Show — co-founder and CEO Tao Zhou of Beijing NeuraMatrix",
+          "url": "https://www.zgcforum.com/zh2026/news/forum/963039"
+        }
+      ],
+      "limit": "Founding date, education and earlier founding-team composition are not supplied."
+    },
+    {
+      "id": "neuralmatrix-nexgaia-products",
+      "from": "neuralmatrix",
+      "to": "neuralmatrix-nexgaia",
+      "label": "develops and offers",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Official page checked 2026-09-15",
+      "detail": "The product page describes research telemetry front ends and NeXScope software.",
+      "sourceIds": [
+        "nm-nexgaia"
+      ],
+      "sources": [
+        {
+          "title": "NeXGaia series — wireless electrophysiology",
+          "url": "https://www.neuramatrix.com.cn/cn/prodnexgaia.html"
+        }
+      ],
+      "limit": "Research-product specifications do not establish an approved implantable human BCI."
+    },
+    {
+      "id": "zhao-merf-correspondence",
+      "from": "zhengtuo-zhao",
+      "to": "merf-2023",
+      "label": "corresponding author of study introducing",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2023-10-23",
+      "detail": "The paper identifies Zhao as a corresponding author of the nonhuman-primate MERF array study.",
+      "sourceIds": [
+        "merf-2023"
+      ],
+      "sources": [
+        {
+          "title": "An Ultraflexible Electrode Array for Large-Scale Chronic Recording in the Nonhuman Primate Brain",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202302333"
+        }
+      ]
+    },
+    {
+      "id": "li-ufine-correspondence",
+      "from": "xue-li",
+      "to": "ufine-human-2026",
+      "label": "corresponding author of human study",
+      "category": "technology",
+      "basis": "documented",
+      "date": "2026-04-13",
+      "detail": "The paper identifies Li among corresponding authors and discloses StairMed co-founding.",
+      "sourceIds": [
+        "ufine-2026"
+      ],
+      "sources": [
+        {
+          "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+          "url": "https://www.nature.com/articles/s41467-026-71443-7"
+        }
+      ],
+      "limit": "Temporary intraoperative human recordings are distinct from chronic implanted clinical-product validation."
+    }
+  ],
+  "companyDossiers": [
+    {
+      "companyId": "axoft",
+      "name": "Axoft",
+      "origin": {
+        "detail": "Founded in 2021 by Paul Le Floch, Jia Liu and Tianyang Ye. Le Floch trained in Liu’s lab; Ye was a Harvard Park Group graduate student and postdoc.",
+        "refs": [
+          "ax-harvard-2021",
+          "ax-harvard-2024"
+        ]
+      },
+      "precursor": {
+        "detail": "Fluorinated-elastomer probes combine soft encapsulation and stacked electrodes. The 2023 paper reports months-long mouse recordings; this is a research platform developed across the company’s early years.",
+        "refs": [
+          "ax-paper-2023"
+        ]
+      },
+      "companyChanges": {
+        "detail": "Axoft is translating protected Harvard probe research toward manufactured implants and commercially supplied Fleuron materials. Its chronology separately identifies a Stanford license covering Fleuron.",
+        "refs": [
+          "ax-otd-2025",
+          "ax-news"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2021",
+          "title": "Company founded",
+          "detail": "Three Harvard-linked founders establish Axoft.",
+          "refs": [
+            "ax-harvard-2021"
+          ]
+        },
+        {
+          "date": "2023-12-22",
+          "title": "Fluorinated-elastomer study",
+          "detail": "Paper demonstrates multilayer soft probes in mouse brain and spinal cord.",
+          "refs": [
+            "ax-paper-2023"
+          ]
+        },
+        {
+          "date": "2024-01-26",
+          "title": "Harvard license confirmed",
+          "detail": "University reports associated research IP licensed to Axoft.",
+          "refs": [
+            "ax-harvard-2024"
+          ]
+        },
+        {
+          "date": "2025-05",
+          "title": "Fleuron commercialization",
+          "detail": "Company announces materials commercialization with a Stanford exclusive license.",
+          "refs": [
+            "ax-news"
+          ]
+        },
+        {
+          "date": "2025-08-14",
+          "title": "Early human use reported",
+          "detail": "Harvard OTD reports initial Panama cases; this is early translation, not broad efficacy evidence.",
+          "refs": [
+            "ax-otd-2025"
+          ]
+        }
+      ],
+      "limits": [
+        "Do not identify Zhigang Suo as a co-founder; the reviewed Harvard sources name three other people.",
+        "Harvard and Stanford agreements have different documented descriptions; their patent scopes cannot be collapsed.",
+        "A stated ambition to double electrode counts is not evidence that counts have historically doubled."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "lefloch-jia-training",
+        "ye-park-training",
+        "paul-le-floch-axoft-founder",
+        "jia-liu-axoft-founder",
+        "tianyang-ye-axoft-founder",
+        "harvard-axoft-license",
+        "stanford-axoft-fleuron-license"
+      ]
+    },
+    {
+      "companyId": "neuroxess",
+      "name": "NeuroXess",
+      "origin": {
+        "detail": "Tao Hu (Tiger H. Tao) and Lei Peng (Phoenix Peng) are named co-founders. Tao brought a SIMIT research background; Peng led the commercial team.",
+        "refs": [
+          "nx-founders"
+        ]
+      },
+      "precursor": {
+        "detail": "Academic work includes silk-enabled flexible interfaces. The 2025 intraventricular paper integrates a deformable array and silk scaffold and uses Neuroxess acquisition hardware.",
+        "refs": [
+          "nx-ivi"
+        ]
+      },
+      "companyChanges": {
+        "detail": "Company development brings flexible electrodes, electronics and decoding into research and implantable BCI systems. Its chronology reports progression from product launch to clinical studies.",
+        "refs": [
+          "nx-about"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2021-10",
+          "title": "Shanghai entity incorporated",
+          "detail": "Company overview uses 2021 founding; the chronology identifies Shanghai registration in October.",
+          "refs": [
+            "nx-about"
+          ]
+        },
+        {
+          "date": "2022-01-11",
+          "title": "Founding team documented",
+          "detail": "Company release names scientific and commercial co-founders.",
+          "refs": [
+            "nx-founders"
+          ]
+        },
+        {
+          "date": "2022-09",
+          "title": "First implantable BCI product released",
+          "detail": "Company-reported product milestone.",
+          "refs": [
+            "nx-about"
+          ]
+        },
+        {
+          "date": "2024-08",
+          "title": "Motor decoding clinical study",
+          "detail": "Company reports its first real-time motor-decoding clinical trial.",
+          "refs": [
+            "nx-about"
+          ]
+        },
+        {
+          "date": "2025-10-23",
+          "title": "Silk intraventricular study",
+          "detail": "Paper reports four-week recordings in parkinsonian sheep and discloses company involvement.",
+          "refs": [
+            "nx-ivi"
+          ]
+        }
+      ],
+      "limits": [
+        "The intraventricular interface is a preclinical study, not evidence of the company’s clinical implant architecture.",
+        "No SIMIT-to-company license was established.",
+        "Clinical milestones from the company chronology are attributed reports; their superlatives were omitted.",
+        "Company chronology also lists a Jiangxi entity in 2019; avoid presenting every entity as founded on one date."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "tao-neuroxess-founder",
+        "peng-neuroxess-founder",
+        "tao-simit-research",
+        "tao-silk-ivi",
+        "neuroxess-silk-ivi-hardware"
+      ]
+    },
+    {
+      "companyId": "neuracle",
+      "name": "Neuracle",
+      "origin": {
+        "detail": "The company filing identifies Honglai Xu as founder and records incorporation in Changzhou on November 18, 2011, with five initial shareholders. Xu holds a Tsinghua biomedical-engineering PhD.",
+        "refs": [
+          "nc-filing"
+        ]
+      },
+      "precursor": {
+        "detail": "Tsinghua’s Hong Bo and Gao Xiaorong teams collaborated with Neuracle on electrophysiology and BCI equipment. Its amplifier work predates the clinical NEO system.",
+        "refs": [
+          "nc-instruments"
+        ]
+      },
+      "companyChanges": {
+        "detail": "NEO joins epidural recording, implanted electronics, external wireless power and decoding with an assistive pneumatic glove. Tsinghua explicitly documents joint hardware/software development.",
+        "refs": [
+          "nc-tsinghua-2024"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2011-11-18",
+          "title": "Company incorporated",
+          "detail": "Filing records the initial company and shareholders.",
+          "refs": [
+            "nc-filing"
+          ]
+        },
+        {
+          "date": "2020",
+          "title": "High-channel amplifier registered",
+          "detail": "Tsinghua reports registration of the company’s high-channel EEG amplifier.",
+          "refs": [
+            "nc-instruments"
+          ]
+        },
+        {
+          "date": "2023-10-24",
+          "title": "First NEO clinical implantation",
+          "detail": "Xuanwu Hospital performed the reported first clinical implantation.",
+          "refs": [
+            "nc-tsinghua-2024"
+          ]
+        },
+        {
+          "date": "2023-12-19",
+          "title": "Second NEO implantation",
+          "detail": "Tsinghua reports a second participant at Beijing Tiantan Hospital.",
+          "refs": [
+            "nc-tsinghua-2024"
+          ]
+        },
+        {
+          "date": "2026-03-13",
+          "title": "Hand-function system approval announced",
+          "detail": "Regulator approved Neuracle’s implantable BCI hand-function compensation system for defined cervical spinal-cord injury patients.",
+          "refs": [
+            "nc-regulator"
+          ]
+        }
+      ],
+      "limits": [
+        "NEO is epidural; it does not penetrate brain tissue, although surgical implantation is invasive.",
+        "No named PhD adviser for Xu or specific university licensing agreement was verified.",
+        "Do not confuse Neuracle with NeuralMatrix/NeuraMatrix.",
+        "The 2024 department overview includes a stale preclinical paragraph; use the dated clinical report and regulator for stage."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "xu-neuracle-founder",
+        "xu-tsinghua-phd",
+        "hong-neo-development",
+        "neuracle-neo-development"
+      ]
+    },
+    {
+      "companyId": "jimed",
+      "name": "JiMED",
+      "origin": {
+        "detail": "Masayuki Hirata founded JiMED in March 2020 to advance Osaka University implantable BCI research into a business. The founder interview explicitly describes this university origin.",
+        "refs": [
+          "jm-founder"
+        ]
+      },
+      "precursor": {
+        "detail": "Hirata’s academic program developed wireless cortical-surface recording. The 2018 W-HERBS paper describes a 128-channel implantable ECoG prototype.",
+        "refs": [
+          "jm-paper",
+          "jm-lab"
+        ]
+      },
+      "companyChanges": {
+        "detail": "JiMED’s work moves toward a regulated wireless medical device, including company-sponsored ALS studies and commercialization infrastructure. The exact relationship between the current hardware and W-HERBS revisions remains unverified.",
+        "refs": [
+          "jm-nedo"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2018-07-30",
+          "title": "W-HERBS research report",
+          "detail": "Osaka collaborators publish the 128-channel wireless ECoG device.",
+          "refs": [
+            "jm-paper"
+          ]
+        },
+        {
+          "date": "2020-03",
+          "title": "JiMED founded",
+          "detail": "Hirata dates incorporation to March 2020.",
+          "refs": [
+            "jm-founder"
+          ]
+        },
+        {
+          "date": "2024–2025",
+          "title": "NEDO translation project",
+          "detail": "Program supports device development and ALS clinical-trial preparation.",
+          "refs": [
+            "jm-nedo"
+          ]
+        },
+        {
+          "date": "2026-04",
+          "title": "Trial notification submitted",
+          "detail": "CEO’s May 2026 interview reports submission in April and targets initial surgery within 2026.",
+          "refs": [
+            "jm-founder"
+          ]
+        }
+      ],
+      "limits": [
+        "A filed trial notification is not a completed trial or marketing approval.",
+        "No exclusive Osaka license or unchanged W-HERBS product architecture was verified."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "hirata-jimed-founder",
+        "jimed-osaka-origin",
+        "hirata-wherbs",
+        "jimed-wibmi-development"
+      ]
+    },
+    {
+      "companyId": "neuralmatrix",
+      "name": "NeuralMatrix / NeuraMatrix",
+      "origin": {
+        "detail": "The official 2026 Zhongguancun Forum identifies Tao Zhou as co-founder and CEO. The inspected company About page supplies no dated founding history, original lab or IP-transfer details.",
+        "refs": [
+          "nm-forum",
+          "nm-about"
+        ]
+      },
+      "precursor": {
+        "detail": "A named academic precursor was not verified. Current official technology pages describe sensing, custom electronics, wireless transmission and feedback-control capabilities.",
+        "refs": [
+          "nm-tech"
+        ]
+      },
+      "companyChanges": {
+        "detail": "NeXGaia packages animal telemetry and online acquisition/analysis software. Other official product families span wearable tools and a clinical implant development direction; these are separate product categories.",
+        "refs": [
+          "nm-nexgaia",
+          "nm-products"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2026-03-27",
+          "title": "Co-founder identified by event organizer",
+          "detail": "Official forum names Tao Zhou as co-founder and CEO.",
+          "refs": [
+            "nm-forum"
+          ]
+        },
+        {
+          "date": "2026-07-04",
+          "title": "Tsinghua summer-school device contribution",
+          "detail": "University’s July 16 report thanks NeuraMatrix for wearable devices.",
+          "refs": [
+            "nm-tsinghua"
+          ]
+        },
+        {
+          "date": "Checked 2026-09-15; page undated",
+          "title": "Research product family documented",
+          "detail": "Official NeXGaia page offers three telemetry configurations and NeXScope software; this is an observation date, not launch date.",
+          "refs": [
+            "nm-nexgaia"
+          ]
+        }
+      ],
+      "limits": [
+        "Early origin remains an evidence gap: no source-backed founding date, original lab, adviser or licensing edge was found in inspected primary pages.",
+        "The Tsinghua contribution concerns wearable teaching devices; it cannot establish an implant spinout.",
+        "Do not attribute Neuracle’s NEO system to this company.",
+        "Undated product pages are not chronological launch milestones."
+      ],
+      "existingEdgeIds": [],
+      "newEdgeIds": [
+        "zhou-neuralmatrix-founder",
+        "neuralmatrix-nexgaia-products"
+      ]
+    },
+    {
+      "companyId": "stairmed",
+      "name": "StairMed",
+      "origin": {
+        "detail": "Zhengtuo Zhao and Xue Li are disclosed co-founders. The existing graph records their training in Chong Xie’s group; Zhao’s PhD institution was UT Austin, followed by a UT Austin/Rice postdoc interval.",
+        "refs": [
+          "zhao-ucas",
+          "ufine-2026"
+        ]
+      },
+      "precursor": {
+        "detail": "The documented scientific sequence runs from NET to MERF to human uFINE through explicitly described fabrication adaptations. These are scientific method relationships.",
+        "refs": [
+          "net-2017",
+          "merf-2023",
+          "ufine-2026"
+        ]
+      },
+      "companyChanges": {
+        "detail": "The uFINE paper documents StairMed recording hardware used with the human research system. Company founding and hardware participation support a translation story, while licensing and full commercial product identity remain unestablished.",
+        "refs": [
+          "stairmed-about",
+          "ufine-2026"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2017-02-15",
+          "title": "NET foundation",
+          "detail": "Zhao co-first-authored the foundational ultraflexible-thread study.",
+          "refs": [
+            "net-2017"
+          ]
+        },
+        {
+          "date": "2021-08",
+          "title": "Company founded",
+          "detail": "StairMed’s introduction gives August 2021.",
+          "refs": [
+            "stairmed-about"
+          ]
+        },
+        {
+          "date": "2023-10-23",
+          "title": "MERF in nonhuman primates",
+          "detail": "Zhao is corresponding author of the large-scale chronic recording array study.",
+          "refs": [
+            "merf-2023"
+          ]
+        },
+        {
+          "date": "2026-04-13",
+          "title": "Human uFINE publication",
+          "detail": "Li and Zhao are among corresponding authors of the temporary intraoperative human-recording study.",
+          "refs": [
+            "ufine-2026"
+          ]
+        }
+      ],
+      "limits": [
+        "Do not label Zhao a Rice PhD graduate.",
+        "Do not infer NET licensing from shared authors or fabrication continuity.",
+        "Acute human uFINE recordings are not chronic performance evidence for a marketed StairMed implant."
+      ],
+      "existingEdgeIds": [
+        "zhao-ut-phd",
+        "zhao-xie-training",
+        "zhao-rice-postdoc",
+        "zhao-stairmed-founder",
+        "li-xie-training",
+        "li-stairmed-founder",
+        "zhao-net-2017",
+        "net-to-merf",
+        "merf-to-ufine",
+        "stairmed-ufine-hardware"
+      ],
+      "newEdgeIds": [
+        "zhao-merf-correspondence",
+        "li-ufine-correspondence"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ax-harvard-2021",
+      "title": "Alumni profile: Paul Le Floch, PhD 2021",
+      "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21",
+      "kind": "University",
+      "published": "2021-12-16"
+    },
+    {
+      "id": "ax-harvard-2024",
+      "title": "A long-lasting neural probe",
+      "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "kind": "University",
+      "published": "2024-01-26"
+    },
+    {
+      "id": "ax-paper-2023",
+      "title": "3D spatiotemporally scalable in vivo neural probes based on fluorinated elastomers",
+      "url": "https://www.nature.com/articles/s41565-023-01545-6",
+      "kind": "Paper",
+      "published": "2023-12-22"
+    },
+    {
+      "id": "ax-otd-2025",
+      "title": "Soft, safer brain implants",
+      "url": "https://otd.harvard.edu/news/soft-safer-brain-implants/",
+      "kind": "University",
+      "published": "2025-08-14"
+    },
+    {
+      "id": "ax-news",
+      "title": "Axoft news chronology",
+      "url": "https://axoft.us/news",
+      "kind": "Company",
+      "note": "Company page explicitly lists May 2025 announcement of a Stanford exclusive license covering Fleuron. Linked BusinessWire body timed out; exact patent scope not reviewed."
+    },
+    {
+      "id": "nx-about",
+      "title": "NeuroXess company history",
+      "url": "https://www.neuroxess.com/about/",
+      "kind": "Company",
+      "note": "Current overview says founded 2021; entity chronology separately lists Jiangxi 2019 and Shanghai October 2021."
+    },
+    {
+      "id": "nx-founders",
+      "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+      "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/",
+      "kind": "Company",
+      "published": "2022-01-11",
+      "note": "Original company release read through indexed text; direct requests intermittently reset."
+    },
+    {
+      "id": "nx-ivi",
+      "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+      "url": "https://www.nature.com/articles/s41467-025-64397-9",
+      "kind": "Paper",
+      "published": "2025-10-23",
+      "note": "Author affiliations, correspondence, competing interests and data acquisition methods explicitly identify Neuroxess and Tiger H. Tao."
+    },
+    {
+      "id": "nc-tsinghua-2024",
+      "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+      "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm",
+      "kind": "University",
+      "published": "2024-01-30"
+    },
+    {
+      "id": "nc-instruments",
+      "title": "Medical instruments — Tsinghua Biomedical Engineering",
+      "url": "https://bme.tsinghua.edu.cn/info/1052/1227.htm",
+      "kind": "University",
+      "published": "2024-11-14",
+      "note": "Historical amplifier description useful; paragraph describing NEO as preclinical is stale relative to university January 2024 clinical report."
+    },
+    {
+      "id": "nc-filing",
+      "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+      "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf",
+      "kind": "Company filing",
+      "published": "2026-06-11",
+      "note": "Company-authored filing hosted by Shanghai Stock Exchange. PDF pages 40 (printed 1-1-39) incorporation, 218 (printed 1-1-217) founder and degree; downloaded and text-extracted successfully after web fetch timed out."
+    },
+    {
+      "id": "nc-regulator",
+      "title": "Approval of implantable BCI hand motor-function compensation system",
+      "url": "https://yjj.sh.gov.cn/zjyw/20260313/04985a5fbe284e9c806ff5f370cb00b2.html",
+      "kind": "Regulator",
+      "published": "2026-03-13",
+      "note": "Shanghai drug regulator reproduces NMPA announcement and links original. Approval limited to specified cervical spinal-cord injury patients."
+    },
+    {
+      "id": "jm-founder",
+      "title": "JiMED founder and CEO interview — Series EMBARK 36",
+      "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/",
+      "kind": "University venture fund",
+      "published": "2026-05",
+      "note": "Interview dated May 2026. Hirata gives March 2020 incorporation; Nakamura says trial notification submitted April 2026 and first surgeries targeted within 2026."
+    },
+    {
+      "id": "jm-nedo",
+      "title": "JiMED — NEDO startup profile",
+      "url": "https://www.nedo.go.jp/english/activities/startups/company75.html",
+      "kind": "Government",
+      "published": "2025-05-22",
+      "note": "Company information stated as of March 2025."
+    },
+    {
+      "id": "jm-paper",
+      "title": "A fully implantable wireless ECoG 128-channel recording device for human brain–machine interfaces: W-HERBS",
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2018.00511/full",
+      "kind": "Paper",
+      "published": "2018-07-30"
+    },
+    {
+      "id": "jm-lab",
+      "title": "Osaka Neurological Diagnosis and Restoration — research projects",
+      "url": "https://www.med.osaka-u.ac.jp/pub/ndr/en/project/",
+      "kind": "Lab"
+    },
+    {
+      "id": "jm-news",
+      "title": "Osaka Neurological Diagnosis and Restoration — news",
+      "url": "https://www.med.osaka-u.ac.jp/pub/ndr/en/news-en/",
+      "kind": "Lab",
+      "note": "2026 notices describe JiMED clinical-trial preparations; do not treat planned implantation as completed clinical outcome."
+    },
+    {
+      "id": "nm-about",
+      "title": "Neural Matrix — About",
+      "url": "https://www.neuramatrix.com.cn/cn/about.html",
+      "kind": "Company",
+      "note": "Inspected official page does not provide incorporation, founding team chronology, named original academic lab or IP-transfer history."
+    },
+    {
+      "id": "nm-tech",
+      "title": "Neural Matrix — Technology",
+      "url": "https://www.neuramatrix.com.cn/cn/technology.html",
+      "kind": "Company"
+    },
+    {
+      "id": "nm-products",
+      "title": "Neural Matrix — Product families",
+      "url": "https://www.neuramatrix.com.cn/cn/products.html",
+      "kind": "Company"
+    },
+    {
+      "id": "nm-nexgaia",
+      "title": "NeXGaia series — wireless electrophysiology",
+      "url": "https://www.neuramatrix.com.cn/cn/prodnexgaia.html",
+      "kind": "Company"
+    },
+    {
+      "id": "nm-forum",
+      "title": "Zhongguancun Forum Tech-Show — co-founder and CEO Tao Zhou of Beijing NeuraMatrix",
+      "url": "https://www.zgcforum.com/zh2026/news/forum/963039",
+      "kind": "Official event",
+      "published": "2026-03-27",
+      "note": "Organizer page title explicitly identifies 周涛 as co-founder and CEO; no founding date or education is supplied."
+    },
+    {
+      "id": "nm-tsinghua",
+      "title": "Tsinghua EE 2026 Summer School concludes successfully",
+      "url": "https://www.ee.tsinghua.edu.cn/en/info/1132/2578.htm",
+      "kind": "University",
+      "published": "2026-07-16"
+    },
+    {
+      "id": "zhao-ucas",
+      "title": "Zhengtuo Zhao — UCAS faculty biography",
+      "url": "https://people.ucas.ac.cn/~zhaozt",
+      "kind": "University",
+      "locator": "Education; Work experience",
+      "note": "Author-maintained institutional biography; doctorate and combined UT Austin/Rice postdoc dates."
+    },
+    {
+      "id": "stairmed-about",
+      "title": "StairMed Introduction",
+      "url": "https://stairmed.com/en/jietijianjie.html",
+      "kind": "Company",
+      "locator": "Company introduction: established August 2021"
+    },
+    {
+      "id": "net-2017",
+      "title": "Ultraflexible nanoelectronic probes form reliable, glial scar-free neural integration",
+      "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf",
+      "doi": "10.1126/sciadv.1601966",
+      "kind": "Paper",
+      "published": "2017-02-15",
+      "locator": "Page 1: author list, equal-contribution note, affiliations and date"
+    },
+    {
+      "id": "merf-2023",
+      "title": "An Ultraflexible Electrode Array for Large-Scale Chronic Recording in the Nonhuman Primate Brain",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202302333",
+      "doi": "10.1002/advs.202302333",
+      "kind": "Paper",
+      "published": "2023-10-23",
+      "locator": "Experimental Section: Design, Fabrication, and Assembly; reference 17",
+      "note": "Zhengtuo Zhao is a corresponding author."
+    },
+    {
+      "id": "ufine-2026",
+      "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+      "url": "https://www.nature.com/articles/s41467-026-71443-7",
+      "doi": "10.1038/s41467-026-71443-7",
+      "kind": "Paper",
+      "published": "2026-04-13",
+      "locator": "Methods: Design and fabrication, Assembly, Preoperative preparation; reference 30; Competing interests"
+    }
+  ]
+}

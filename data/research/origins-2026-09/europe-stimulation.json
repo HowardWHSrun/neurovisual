@@ -1,0 +1,1678 @@
+{
+  "reviewed": "2026-09-15",
+  "scope": "Six selected company-origin dossiers; corporate relationships and technical development are distinguished. This is not a complete IP or founder census.",
+  "nodes": [
+    {
+      "id": "motif-neurotech",
+      "name": "Motif Neurotech",
+      "kind": "Company",
+      "summary": "Rice spinout translating magnetoelectric neural stimulation.",
+      "sourceIds": [
+        "motif-mesh2025"
+      ],
+      "atlasId": "motif-neurotech",
+      "href": "#org/motif-neurotech"
+    },
+    {
+      "id": "jacob-robinson",
+      "name": "Jacob Robinson",
+      "kind": "Person",
+      "summary": "Rice neuroengineer and Motif co-founder.",
+      "sourceIds": [
+        "motif-founders"
+      ]
+    },
+    {
+      "id": "rice-robinson-origin",
+      "name": "Robinson laboratory, Rice University",
+      "kind": "Lab",
+      "summary": "Academic origin of Motif and miniature magnetoelectric stimulation.",
+      "sourceIds": [
+        "motif-me2020",
+        "motif-mesh2025"
+      ]
+    },
+    {
+      "id": "rice-magnetoelectric-stimulation",
+      "name": "Rice magnetoelectric stimulation platform",
+      "kind": "Technology",
+      "summary": "A film converts an externally applied magnetic field into electrical stimulation.",
+      "sourceIds": [
+        "motif-me2020"
+      ]
+    },
+    {
+      "id": "motif-dot",
+      "name": "DOT epidural stimulator",
+      "kind": "Technology",
+      "summary": "Digitally programmable, battery-free over-dura cortical stimulation.",
+      "sourceIds": [
+        "motif-dot2024"
+      ]
+    },
+    {
+      "id": "inbrain",
+      "name": "INBRAIN Neuroelectronics",
+      "kind": "Company",
+      "summary": "Graphene neurointerface spinout from the Catalan research ecosystem.",
+      "sourceIds": [
+        "inbrain-icn2025"
+      ],
+      "atlasId": "inbrain",
+      "href": "#org/inbrain"
+    },
+    {
+      "id": "jose-antonio-garrido",
+      "name": "Jose Antonio Garrido",
+      "kind": "Person",
+      "summary": "ICREA professor at ICN2 and INBRAIN co-founder.",
+      "sourceIds": [
+        "inbrain-ip2022"
+      ]
+    },
+    {
+      "id": "icn2-icrea-origin",
+      "name": "ICN2 / ICREA",
+      "kind": "Institution",
+      "summary": "Institutions named in INBRAIN’s spinout origin.",
+      "sourceIds": [
+        "inbrain-icn2025"
+      ]
+    },
+    {
+      "id": "inbrain-public-graphene-ip",
+      "name": "Public-institution graphene neurointerface IP",
+      "kind": "Technology",
+      "summary": "Graphene transistor arrays and associated protective/readout circuits transferred through a six-institution agreement.",
+      "sourceIds": [
+        "inbrain-ip2022"
+      ]
+    },
+    {
+      "id": "manchester-graphene-trial",
+      "name": "Manchester graphene-electrode feasibility study",
+      "kind": "Program",
+      "summary": "University-sponsored intraoperative investigation using INBRAIN devices.",
+      "sourceIds": [
+        "inbrain-trial2026"
+      ]
+    },
+    {
+      "id": "cortec",
+      "name": "CorTec",
+      "kind": "Company",
+      "summary": "Freiburg spinout developing a bidirectional implanted interface.",
+      "sourceIds": [
+        "cortec-freiburg"
+      ],
+      "atlasId": "cortec",
+      "href": "#org/cortec"
+    },
+    {
+      "id": "jorn-rickert",
+      "name": "Jörn Rickert",
+      "kind": "Person",
+      "summary": "CorTec founder and early managing director.",
+      "sourceIds": [
+        "cortec-founders",
+        "cortec-2011"
+      ]
+    },
+    {
+      "id": "freiburg-cortec-origin",
+      "name": "Freiburg biology / IMTEK / University Hospital",
+      "kind": "Institution",
+      "summary": "The university identifies collaboration among these units as CorTec’s academic origin.",
+      "sourceIds": [
+        "cortec-freiburg"
+      ]
+    },
+    {
+      "id": "thomas-stieglitz",
+      "name": "Thomas Stieglitz",
+      "kind": "Person",
+      "summary": "Freiburg biomedical microtechnology professor and CorTec founding shareholder.",
+      "sourceIds": [
+        "cortec-2011"
+      ]
+    },
+    {
+      "id": "brain-interchange",
+      "name": "Brain Interchange",
+      "kind": "Technology",
+      "summary": "Implanted cortical recording and stimulation platform for adaptive intervention.",
+      "sourceIds": [
+        "cortec-2011",
+        "cortec-human2025"
+      ]
+    },
+    {
+      "id": "neurosoft-bio",
+      "name": "Neurosoft Bioelectronics",
+      "kind": "Company",
+      "summary": "EPFL spinout translating soft conformal neural interfaces.",
+      "sourceIds": [
+        "neurosoft-2021"
+      ],
+      "atlasId": "neurosoft-bio",
+      "href": "#org/neurosoft-bio"
+    },
+    {
+      "id": "stephanie-lacour",
+      "name": "Stéphanie Lacour",
+      "kind": "Person",
+      "summary": "EPFL soft bioelectronics laboratory leader and Neurosoft co-founder.",
+      "sourceIds": [
+        "neurosoft-team",
+        "neurosoft-2021"
+      ]
+    },
+    {
+      "id": "epfl-lsbi-origin",
+      "name": "EPFL Laboratory for Soft Bioelectronic Interfaces",
+      "kind": "Lab",
+      "summary": "Soft microfabricated interfaces and their preclinical translation.",
+      "sourceIds": [
+        "neurosoft-2021"
+      ]
+    },
+    {
+      "id": "soft-conformal-cortical-arrays",
+      "name": "Soft conformal cortical arrays",
+      "kind": "Technology",
+      "summary": "Thin silicone-based interfaces designed to conform to brain anatomy.",
+      "sourceIds": [
+        "neurosoft-2021"
+      ]
+    },
+    {
+      "id": "wyss-geneva-origin",
+      "name": "Wyss Center, Geneva",
+      "kind": "Institution",
+      "summary": "Supports validation and translation of Neurosoft interfaces.",
+      "sourceIds": [
+        "neurosoft-2021",
+        "neurosoft-2025"
+      ]
+    },
+    {
+      "id": "onward-medical",
+      "name": "ONWARD Medical",
+      "kind": "Company",
+      "summary": "Commercial translation of spinal neuromodulation with a later licensed brain-interface branch.",
+      "sourceIds": [
+        "onward-annual2024",
+        "onward-cea2024"
+      ],
+      "atlasId": "onward-medical",
+      "href": "#org/onward-medical"
+    },
+    {
+      "id": "gregoire-courtine",
+      "name": "Grégoire Courtine",
+      "kind": "Person",
+      "summary": "NeuroRestore co-leader and co-founder of ONWARD’s predecessor.",
+      "sourceIds": [
+        "onward-annual2024"
+      ]
+    },
+    {
+      "id": "neurorestore",
+      "name": "NeuroRestore",
+      "kind": "Lab",
+      "summary": "EPFL–CHUV research initiative led by Courtine and Bloch.",
+      "sourceIds": [
+        "onward-annual2024"
+      ],
+      "atlasId": "neurorestore",
+      "href": "#org/neurorestore"
+    },
+    {
+      "id": "wimagine",
+      "name": "WIMAGINE",
+      "kind": "Technology",
+      "summary": "CEA/Clinatec brain-signal acquisition technology licensed for ONWARD’s ARC-BCI development.",
+      "sourceIds": [
+        "onward-cea2024"
+      ]
+    },
+    {
+      "id": "nrt-origin",
+      "name": "NeuroRecovery Technologies",
+      "kind": "Company",
+      "summary": "Company merged with GTX medical in 2019, adding another spinal-stimulation branch.",
+      "sourceIds": [
+        "onward-merger2019"
+      ]
+    },
+    {
+      "id": "clinatec",
+      "name": "CEA / Clinatec",
+      "kind": "Institution",
+      "summary": "Developer of WIMAGINE, separate from the NeuroRestore spinal-research origin.",
+      "sourceIds": [
+        "onward-cea2024"
+      ],
+      "atlasId": "clinatec",
+      "href": "#org/clinatec"
+    },
+    {
+      "id": "corticale",
+      "name": "Corticale",
+      "kind": "Company",
+      "summary": "IIT spinout commercializing active-pixel SiNAPS neural probes.",
+      "sourceIds": [
+        "corticale-iit2021"
+      ],
+      "atlasId": "corticale",
+      "href": "#org/corticale"
+    },
+    {
+      "id": "luca-berdondini",
+      "name": "Luca Berdondini",
+      "kind": "Person",
+      "summary": "IIT Microtechnology for Neuroelectronics leader and Corticale co-founder.",
+      "sourceIds": [
+        "corticale-iit2021"
+      ]
+    },
+    {
+      "id": "iit-microtechnology-origin",
+      "name": "IIT Microtechnology for Neuroelectronics",
+      "kind": "Lab",
+      "summary": "Academic source of SiNAPS and Corticale.",
+      "sourceIds": [
+        "corticale-iit2021"
+      ]
+    },
+    {
+      "id": "sinaps",
+      "name": "SiNAPS",
+      "kind": "Technology",
+      "summary": "CMOS active electrode-pixel arrays with local front-end amplification.",
+      "sourceIds": [
+        "sinaps2019"
+      ]
+    },
+    {
+      "id": "corti-q",
+      "name": "Corti-Q research acquisition system",
+      "kind": "Technology",
+      "summary": "Corticale hardware and software ecosystem for SiNAPS probe acquisition.",
+      "sourceIds": [
+        "corticale-product"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "motif-neurotech-founder",
+      "from": "jacob-robinson",
+      "to": "motif-neurotech",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2022",
+      "detail": "Rice identifies Robinson among the founders; its 2023 review places incorporation in 2022.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "motif-incorporated",
+        "motif-founders"
+      ]
+    },
+    {
+      "id": "motif-neurotech-spinout",
+      "from": "motif-neurotech",
+      "to": "rice-robinson-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2022; lab origin explicitly reported 2025",
+      "detail": "Rice explicitly describes Motif as a Robinson-lab spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "motif-incorporated",
+        "motif-mesh2025"
+      ]
+    },
+    {
+      "id": "motif-neurotech-dot",
+      "from": "motif-neurotech",
+      "to": "motif-dot",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-developed",
+      "date": "2024",
+      "detail": "Motif collaborated with Rice and clinical researchers on the miniature epidural stimulator.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "motif-dot2024"
+      ]
+    },
+    {
+      "id": "motif-neurotech-platform",
+      "from": "motif-dot",
+      "to": "rice-magnetoelectric-stimulation",
+      "type": "technical-continuation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Uses magnetoelectric powering",
+      "date": "2020 → 2024",
+      "detail": "The laboratory platform and DOT both turn magnetic energy into electrical stimulation; DOT adds an epidural therapeutic form factor and digital programming.",
+      "limit": "Technical continuity is supported; the cited articles do not disclose the complete patent licence or establish clinical depression efficacy.",
+      "sourceIds": [
+        "motif-me2020",
+        "motif-dot2024"
+      ]
+    },
+    {
+      "id": "inbrain-founder",
+      "from": "jose-antonio-garrido",
+      "to": "inbrain",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2019 in institutional sources",
+      "detail": "Garrido is explicitly identified as a co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "inbrain-ip2022"
+      ]
+    },
+    {
+      "id": "inbrain-spinout",
+      "from": "inbrain",
+      "to": "icn2-icrea-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2019 / 2020 discrepancy",
+      "detail": "ICN2 identifies the company as an ICN2–ICREA spinout formed in 2019; the current company timeline labels its foundation 2020.",
+      "limit": "Both dates are preserved rather than silently selecting one.",
+      "sourceIds": [
+        "inbrain-icn2025",
+        "inbrain-timeline"
+      ]
+    },
+    {
+      "id": "inbrain-ip-agreement",
+      "from": "inbrain",
+      "to": "inbrain-public-graphene-ip",
+      "type": "technology-transfer-agreement",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Agreement to exploit and develop",
+      "date": "2022-03-15 announcement",
+      "detail": "The agreement covers three patents and a trade secret co-owned across CSIC, ICN2, ICREA, CIBER-BBN, UAB and IDIBAPS.",
+      "limit": "The article establishes an agreement, not an explicit exclusive licence.",
+      "sourceIds": [
+        "inbrain-ip2022"
+      ]
+    },
+    {
+      "id": "inbrain-clinical-device",
+      "from": "inbrain",
+      "to": "manchester-graphene-trial",
+      "type": "device-provider",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Provides investigational electrodes",
+      "date": "2024–2026",
+      "detail": "The Manchester-sponsored study uses INBRAIN graphene devices in brain-tumour surgery.",
+      "limit": "This is intraoperative feasibility, not proof of chronic Parkinson’s treatment efficacy.",
+      "sourceIds": [
+        "inbrain-trial2026"
+      ]
+    },
+    {
+      "id": "cortec-founder",
+      "from": "jorn-rickert",
+      "to": "cortec",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2010",
+      "detail": "Freiburg identifies Rickert among the company founders.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "cortec-founders",
+        "cortec-freiburg"
+      ]
+    },
+    {
+      "id": "cortec-spinout",
+      "from": "cortec",
+      "to": "freiburg-cortec-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of Freiburg collaboration",
+      "date": "2010-09",
+      "detail": "The university identifies biology, biomedical microtechnology at IMTEK, and the hospital as the collaborating origin.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "cortec-freiburg"
+      ]
+    },
+    {
+      "id": "cortec-shareholder",
+      "from": "thomas-stieglitz",
+      "to": "cortec",
+      "type": "founding-shareholder",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Founding shareholder",
+      "date": "2010; reported 2011",
+      "detail": "The Bernstein Center explicitly identifies Stieglitz as a founding shareholder and advisory-board member.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "cortec-2011"
+      ]
+    },
+    {
+      "id": "cortec-platform",
+      "from": "cortec",
+      "to": "brain-interchange",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Develops",
+      "date": "2011 → 2025",
+      "detail": "CorTec’s early bidirectional-platform program progressed to a first human implant in a stroke feasibility study.",
+      "limit": "This does not establish efficacy or unrestricted commercial availability.",
+      "sourceIds": [
+        "cortec-2011",
+        "cortec-human2025"
+      ]
+    },
+    {
+      "id": "neurosoft-bio-founder",
+      "from": "stephanie-lacour",
+      "to": "neurosoft-bio",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "Company team page; founding date not established here",
+      "detail": "The official team identifies Lacour as a co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "neurosoft-team"
+      ]
+    },
+    {
+      "id": "neurosoft-bio-spinout",
+      "from": "neurosoft-bio",
+      "to": "epfl-lsbi-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of LSBI",
+      "date": "By 2020",
+      "detail": "EPFL identifies Neurosoft as an LSBI spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "neurosoft-2020",
+        "neurosoft-2021"
+      ]
+    },
+    {
+      "id": "neurosoft-bio-platform",
+      "from": "neurosoft-bio",
+      "to": "soft-conformal-cortical-arrays",
+      "type": "translates",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Translates soft interfaces",
+      "date": "2021",
+      "detail": "EPFL explicitly describes Neurosoft translating the laboratory’s soft-interface technology.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "neurosoft-2021"
+      ]
+    },
+    {
+      "id": "neurosoft-bio-wyss",
+      "from": "wyss-geneva-origin",
+      "to": "neurosoft-bio",
+      "type": "research-collaboration",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Supports validation and translation",
+      "date": "2021 → 2025",
+      "detail": "EPFL and the company describe Wyss support for preclinical and clinical translation.",
+      "limit": "Acceleration and validation support do not establish that Neurosoft spun out of Wyss or that Wyss owns all IP.",
+      "sourceIds": [
+        "neurosoft-2021",
+        "neurosoft-2025"
+      ]
+    },
+    {
+      "id": "onward-medical-founder",
+      "from": "gregoire-courtine",
+      "to": "onward-medical",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded predecessor",
+      "date": "2014",
+      "detail": "The annual report identifies Courtine and Bloch as co-founders of the predecessor, alongside other researchers.",
+      "limit": "The two named people are not presented as the complete founder list.",
+      "sourceIds": [
+        "onward-annual2024"
+      ]
+    },
+    {
+      "id": "onward-medical-research",
+      "from": "onward-medical",
+      "to": "neurorestore",
+      "type": "research-translation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Translates selected research",
+      "date": "Documented in FY2024 report",
+      "detail": "The company describes selection and translation of promising NeuroRestore projects.",
+      "limit": "This relationship does not mean that all ONWARD technology originated at EPFL or that every project is exclusively licensed.",
+      "sourceIds": [
+        "onward-annual2024"
+      ]
+    },
+    {
+      "id": "onward-medical-merger",
+      "from": "nrt-origin",
+      "to": "onward-medical",
+      "type": "corporate-merger",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Merged with predecessor GTX",
+      "date": "2019-10-22",
+      "detail": "NRT and GTX medical, formerly G-Therapeutics, merged under the GTX medical name; this is ONWARD’s corporate ancestry.",
+      "limit": "The 2019 combined company was called GTX medical, not yet ONWARD; this edge uses the current company node for navigation.",
+      "sourceIds": [
+        "onward-merger2019"
+      ]
+    },
+    {
+      "id": "onward-medical-license",
+      "from": "onward-medical",
+      "to": "wimagine",
+      "type": "exclusive-license",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Exclusive CEA licence",
+      "date": "2024-10-15 announcement",
+      "detail": "CEA and ONWARD announce exclusive rights to develop and commercialize WIMAGINE as part of ARC-BCI.",
+      "limit": "The right concerns the named BCI technology; it is not a claim of ownership of all CEA or NeuroRestore research.",
+      "sourceIds": [
+        "onward-cea2024"
+      ]
+    },
+    {
+      "id": "onward-medical-clinatec",
+      "from": "clinatec",
+      "to": "wimagine",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Developed",
+      "date": "Before 2024 licence",
+      "detail": "CEA identifies its Clinatec technology as the licensed WIMAGINE brain-interface component.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "onward-cea2024"
+      ]
+    },
+    {
+      "id": "corticale-founder",
+      "from": "luca-berdondini",
+      "to": "corticale",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2021",
+      "detail": "IIT names Berdondini among four co-founders.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "corticale-iit2021"
+      ]
+    },
+    {
+      "id": "corticale-spinout",
+      "from": "corticale",
+      "to": "iit-microtechnology-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of IIT team",
+      "date": "2021",
+      "detail": "IIT describes the startup arising from its Microtechnology for Neuroelectronics team.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "corticale-iit2021"
+      ]
+    },
+    {
+      "id": "corticale-commercializes",
+      "from": "corticale",
+      "to": "sinaps",
+      "type": "commercializes",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Commercializes SiNAPS",
+      "date": "2021 → current product listing",
+      "detail": "The IIT startup announcement and company research products identify SiNAPS as its platform.",
+      "limit": "Commercial translation is established; no exclusive licence or Neuropixels descent is inferred.",
+      "sourceIds": [
+        "corticale-iit2021",
+        "corticale-product"
+      ]
+    },
+    {
+      "id": "corticale-acquisition",
+      "from": "corti-q",
+      "to": "sinaps",
+      "type": "supports",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Acquires SiNAPS signals",
+      "date": "Undated product page reviewed 2026-09-15",
+      "detail": "Corti-Q integrates acquisition with company visualization and analysis tools.",
+      "limit": "The review date is not a product launch date.",
+      "sourceIds": [
+        "corticale-product"
+      ]
+    }
+  ],
+  "companyDossiers": [
+    {
+      "id": "motif-neurotech",
+      "companyNode": "motif-neurotech",
+      "name": "Motif Neurotech",
+      "atlasId": "motif-neurotech",
+      "origin": {
+        "detail": "Incorporated in 2022 to commercialize Rice research; Rice later explicitly identifies the Robinson laboratory as its origin.",
+        "sourceIds": [
+          "motif-incorporated",
+          "motif-mesh2025"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Jacob Robinson",
+          "role": "co-founder",
+          "sourceIds": [
+            "motif-founders"
+          ]
+        },
+        {
+          "name": "Kaiyuan Yang",
+          "role": "co-founder",
+          "sourceIds": [
+            "motif-founders"
+          ]
+        },
+        {
+          "name": "Sunil Sheth",
+          "role": "co-founder",
+          "sourceIds": [
+            "motif-founders"
+          ]
+        },
+        {
+          "name": "Sameer Sheth",
+          "role": "co-founder",
+          "sourceIds": [
+            "motif-founders"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "Rice Robinson laboratory; collaborative circuit and clinical expertise accompanied translation.",
+          "sourceIds": [
+            "motif-mesh2025",
+            "motif-dot2024"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "A miniature magnetoelectric film platform demonstrated electrical neural stimulation in awake rodents in 2020.",
+        "sourceIds": [
+          "motif-me2020"
+        ]
+      },
+      "whatChanged": {
+        "detail": "The development path moves from a laboratory wireless stimulator to a programmable epidural device and a company pursuing therapeutic systems.",
+        "sourceIds": [
+          "motif-me2020",
+          "motif-dot2024"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2020",
+          "title": "Magnetoelectric stimulation in rodents",
+          "detail": "Rice reports a miniature magnetically powered electrical stimulator.",
+          "stage": "preclinical",
+          "dateBasis": "publication year",
+          "sourceIds": [
+            "motif-me2020"
+          ]
+        },
+        {
+          "date": "2022",
+          "title": "Company incorporation",
+          "detail": "Rice lists Motif among startups incorporated that year.",
+          "stage": "corporate",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "motif-incorporated"
+          ]
+        },
+        {
+          "date": "2024-04-12",
+          "title": "DOT human feasibility report",
+          "detail": "Temporary motor-cortex stimulation elicited movement; a separate pig study examined longer implantation.",
+          "stage": "acute human feasibility and preclinical",
+          "dateBasis": "publication",
+          "sourceIds": [
+            "motif-dot2024"
+          ]
+        },
+        {
+          "date": "2025-01-21",
+          "title": "BrainMesh research program",
+          "detail": "Rice and Motif participate in a funded distributed skull-implant research program with additional partners.",
+          "stage": "program aim",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "motif-mesh2025"
+          ]
+        }
+      ],
+      "limits": [
+        "Motor responses in a feasibility procedure do not demonstrate antidepressant efficacy.",
+        "DOT is an epidural stimulator, not a NET intracortical recording probe.",
+        "Founder names are verified; the Rice magazine’s grouped affiliation wording is not used to assign every clinician a Rice faculty appointment."
+      ],
+      "sourceIds": [
+        "motif-incorporated",
+        "motif-founders",
+        "motif-me2020",
+        "motif-dot2024",
+        "motif-mesh2025"
+      ],
+      "edgeIds": [
+        "motif-neurotech-founder",
+        "motif-neurotech-spinout",
+        "motif-neurotech-dot",
+        "motif-neurotech-platform"
+      ]
+    },
+    {
+      "id": "inbrain",
+      "companyNode": "inbrain",
+      "name": "INBRAIN Neuroelectronics",
+      "atlasId": "inbrain",
+      "origin": {
+        "detail": "ICN2 reports an ICN2–ICREA spinout created in 2019; the company’s own timeline labels foundation 2020.",
+        "sourceIds": [
+          "inbrain-icn2025",
+          "inbrain-timeline"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Carolina Aguilar",
+          "role": "co-founder",
+          "sourceIds": [
+            "inbrain-team"
+          ]
+        },
+        {
+          "name": "Jose Antonio Garrido",
+          "role": "co-founder",
+          "sourceIds": [
+            "inbrain-icn2025"
+          ]
+        },
+        {
+          "name": "Kostas Kostarelos",
+          "role": "co-founder",
+          "sourceIds": [
+            "inbrain-team",
+            "inbrain-icn2025"
+          ]
+        },
+        {
+          "name": "Antòn Guimerà",
+          "role": "co-founder",
+          "sourceIds": [
+            "inbrain-team"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "ICN2 and ICREA are the stated spinout institutions; IMB-CNM/CSIC researchers and a wider public IP consortium contribute additional technology.",
+          "sourceIds": [
+            "inbrain-icn2025",
+            "inbrain-ip2022"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "Graphene transistor cortical arrays and readout circuitry provide access to electrical signals including very slow components.",
+        "sourceIds": [
+          "inbrain-ip2022"
+        ]
+      },
+      "whatChanged": {
+        "detail": "The company combines academic graphene interfaces with manufacturing, readout systems and intraoperative clinical validation.",
+        "sourceIds": [
+          "inbrain-ip2022",
+          "inbrain-trial2026"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2019–2020",
+          "title": "Formation dates differ",
+          "detail": "Institutional sources give 2019; the current corporate timeline gives 2020.",
+          "stage": "corporate",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "inbrain-icn2025",
+            "inbrain-timeline"
+          ]
+        },
+        {
+          "date": "2022-03-15",
+          "title": "Public IP transfer agreement",
+          "detail": "An exploitation and development agreement links six institutional co-owners to company translation.",
+          "stage": "technology transfer",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "inbrain-ip2022"
+          ]
+        },
+        {
+          "date": "2024",
+          "title": "First-in-human study begins",
+          "detail": "Graphene electrodes enter an intraoperative Manchester-sponsored investigation.",
+          "stage": "human feasibility",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "inbrain-trial2026"
+          ]
+        },
+        {
+          "date": "2026-04-22",
+          "title": "Enrollment completion reported",
+          "detail": "ICN2 reports completion of enrollment in that first-in-human study.",
+          "stage": "human feasibility",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "inbrain-trial2026"
+          ]
+        }
+      ],
+      "limits": [
+        "The date discrepancy remains unresolved.",
+        "Graphene transistors and graphene stimulation electrodes are related material approaches, not interchangeable device specifications.",
+        "No NET descent, mentor relationship, exclusivity, or established chronic therapeutic benefit is inferred."
+      ],
+      "sourceIds": [
+        "inbrain-ip2022",
+        "inbrain-icn2025",
+        "inbrain-team",
+        "inbrain-timeline",
+        "inbrain-trial2026"
+      ],
+      "edgeIds": [
+        "inbrain-founder",
+        "inbrain-spinout",
+        "inbrain-ip-agreement",
+        "inbrain-clinical-device"
+      ]
+    },
+    {
+      "id": "cortec",
+      "companyNode": "cortec",
+      "name": "CorTec",
+      "atlasId": "cortec",
+      "origin": {
+        "detail": "Founded in September 2010 as a University of Freiburg spinout spanning biological, microengineering and hospital collaborators.",
+        "sourceIds": [
+          "cortec-freiburg"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Jörn Rickert",
+          "role": "co-founder",
+          "sourceIds": [
+            "cortec-founders"
+          ]
+        },
+        {
+          "name": "Martin Schüttler",
+          "role": "co-founder",
+          "sourceIds": [
+            "cortec-founders"
+          ]
+        },
+        {
+          "name": "Thomas Stieglitz",
+          "role": "co-founder",
+          "sourceIds": [
+            "cortec-founders"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "Freiburg biology, IMTEK biomedical microtechnology and the University Hospital are the institutionally documented roots.",
+          "sourceIds": [
+            "cortec-freiburg"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "Early Brain Interchange work combined brain-activity measurement with electrical stimulation in an integrated platform.",
+        "sourceIds": [
+          "cortec-2011"
+        ]
+      },
+      "whatChanged": {
+        "detail": "The academic interface program matured into an implanted bidirectional system tested for stroke rehabilitation; the same investigational hardware was later used for computer control.",
+        "sourceIds": [
+          "cortec-human2025",
+          "cortec-control2026"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2010-09",
+          "title": "University spinout founded",
+          "detail": "CorTec is formed in Freiburg.",
+          "stage": "corporate",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "cortec-freiburg"
+          ]
+        },
+        {
+          "date": "2011-11-15",
+          "title": "Early platform and funding report",
+          "detail": "The Bernstein Center describes the recording/stimulation platform and university participants.",
+          "stage": "research platform",
+          "dateBasis": "publication",
+          "sourceIds": [
+            "cortec-2011"
+          ]
+        },
+        {
+          "date": "2025-07",
+          "title": "First Brain Interchange human implantation",
+          "detail": "Company reports implantation at Harborview/UW in a stroke early-feasibility study.",
+          "stage": "human feasibility",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "cortec-human2025"
+          ]
+        },
+        {
+          "date": "2026-04-29",
+          "title": "Same implant used for computer control",
+          "detail": "Company reports computer interaction in the initial participant using the implanted interface.",
+          "stage": "company-reported human feasibility",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "cortec-control2026"
+          ]
+        }
+      ],
+      "limits": [
+        "The inspected evidence supports Rickert, Schüttler and Stieglitz; no Rüttgen origin or mentor link was verified.",
+        "Computer control and stroke rehabilitation are distinct endpoints.",
+        "The 2026 report is a company report from an early-feasibility context, not a controlled therapeutic result."
+      ],
+      "sourceIds": [
+        "cortec-freiburg",
+        "cortec-2011",
+        "cortec-founders",
+        "cortec-human2025",
+        "cortec-control2026"
+      ],
+      "edgeIds": [
+        "cortec-founder",
+        "cortec-spinout",
+        "cortec-shareholder",
+        "cortec-platform"
+      ]
+    },
+    {
+      "id": "neurosoft-bio",
+      "companyNode": "neurosoft-bio",
+      "name": "Neurosoft Bioelectronics",
+      "atlasId": "neurosoft-bio",
+      "origin": {
+        "detail": "An EPFL LSBI spinout documented by 2020; its team combines laboratory materials expertise with engineering and translational development.",
+        "sourceIds": [
+          "neurosoft-2020",
+          "neurosoft-team"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Nicolas Vachicouras",
+          "role": "co-founder",
+          "sourceIds": [
+            "neurosoft-team"
+          ]
+        },
+        {
+          "name": "Ludovic Serex",
+          "role": "co-founder",
+          "sourceIds": [
+            "neurosoft-team"
+          ]
+        },
+        {
+          "name": "Florian Fallegger",
+          "role": "co-founder",
+          "sourceIds": [
+            "neurosoft-team"
+          ]
+        },
+        {
+          "name": "Stéphanie Lacour",
+          "role": "co-founder",
+          "sourceIds": [
+            "neurosoft-team"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "Lacour’s LSBI supplies the soft-interface research origin; Wyss Geneva supports translation.",
+          "sourceIds": [
+            "neurosoft-2021"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "Thin silicone membranes, patterned conductors and electrodes are designed to follow brain-surface geometry while accommodating surgical handling and imaging.",
+        "sourceIds": [
+          "neurosoft-2021"
+        ]
+      },
+      "whatChanged": {
+        "detail": "The work expands from soft-array fabrication and minipig validation to surgical recording studies and separate minimally invasive deployment research.",
+        "sourceIds": [
+          "neurosoft-2021",
+          "neurosoft-2023",
+          "neurosoft-2025"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2020",
+          "title": "EPFL spinout receives translational support",
+          "detail": "Catalyze4Life funds the LSBI spinout.",
+          "stage": "corporate / translation",
+          "dateBasis": "publication year",
+          "sourceIds": [
+            "neurosoft-2020"
+          ]
+        },
+        {
+          "date": "2021-03-30",
+          "title": "Soft-interface preclinical integration",
+          "detail": "EPFL describes MRI compatibility, surgical handling and minipig recordings with Clinatec.",
+          "stage": "preclinical",
+          "dateBasis": "publication",
+          "sourceIds": [
+            "neurosoft-2021"
+          ]
+        },
+        {
+          "date": "2023-05-11",
+          "title": "Deployable electrode research",
+          "detail": "An EPFL soft-robotic eversion array is tested in a minipig; Neurosoft is named for clinical transfer.",
+          "stage": "preclinical / translation aim",
+          "dateBasis": "publication",
+          "sourceIds": [
+            "neurosoft-2023"
+          ]
+        },
+        {
+          "date": "2025-02-27",
+          "title": "Intraoperative human recording report",
+          "detail": "Neurosoft reports use of a 64-channel stretchable interface during epilepsy surgery in two initial participants.",
+          "stage": "human feasibility",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "neurosoft-2025"
+          ]
+        }
+      ],
+      "limits": [
+        "Exact incorporation date was not established from the inspected primary sources; “by 2020” is deliberate.",
+        "The 2023 deployable research array is not assumed identical to the 2025 intraoperative device.",
+        "The human report does not establish chronic tinnitus treatment efficacy or justify its marketing superlative."
+      ],
+      "sourceIds": [
+        "neurosoft-team",
+        "neurosoft-2020",
+        "neurosoft-2021",
+        "neurosoft-2023",
+        "neurosoft-2025"
+      ],
+      "edgeIds": [
+        "neurosoft-bio-founder",
+        "neurosoft-bio-spinout",
+        "neurosoft-bio-platform",
+        "neurosoft-bio-wyss"
+      ]
+    },
+    {
+      "id": "onward-medical",
+      "companyNode": "onward-medical",
+      "name": "ONWARD Medical",
+      "atlasId": "onward-medical",
+      "origin": {
+        "detail": "Courtine and Bloch co-founded the predecessor in 2014 with other researchers. Its history also includes the 2019 GTX–NRT merger.",
+        "sourceIds": [
+          "onward-annual2024",
+          "onward-merger2019"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Grégoire Courtine",
+          "role": "co-founder",
+          "sourceIds": [
+            "onward-annual2024"
+          ]
+        },
+        {
+          "name": "Jocelyne Bloch",
+          "role": "co-founder",
+          "sourceIds": [
+            "onward-annual2024"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "NeuroRestore at EPFL/CHUV is an ongoing research-translation source. NRT adds a distinct corporate and spinal-stimulation branch.",
+          "sourceIds": [
+            "onward-annual2024",
+            "onward-merger2019"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "Spinal stimulation seeks to recruit preserved spinal circuitry; brain–spine research adds brain-signal decoding to control stimulation.",
+        "sourceIds": [
+          "onward-merger2019",
+          "onward-bsi2023"
+        ]
+      },
+      "whatChanged": {
+        "detail": "Commercial development spans spinal neuromodulation, while the 2024 CEA licence adds a separately developed implanted brain-signal technology for ARC-BCI.",
+        "sourceIds": [
+          "onward-cea2024"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2014",
+          "title": "Predecessor co-founded",
+          "detail": "Courtine, Bloch and other researchers establish the predecessor described in ONWARD’s annual report.",
+          "stage": "corporate",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "onward-annual2024"
+          ]
+        },
+        {
+          "date": "2019-10-22",
+          "title": "GTX and NRT merger",
+          "detail": "The combined company takes the GTX medical name, joining complementary spinal-stimulation programs.",
+          "stage": "corporate merger",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "onward-merger2019"
+          ]
+        },
+        {
+          "date": "2023-05-24",
+          "title": "Brain–spine interface publication",
+          "detail": "A digital bridge between cortical signals and spinal stimulation supports walking in one participant.",
+          "stage": "human research proof of concept",
+          "dateBasis": "publication",
+          "sourceIds": [
+            "onward-bsi2023"
+          ]
+        },
+        {
+          "date": "2024-10-15",
+          "title": "WIMAGINE exclusive licence announced",
+          "detail": "ONWARD obtains rights from CEA for an ARC-BCI development branch.",
+          "stage": "technology licence",
+          "dateBasis": "release date; CEA page published October 17",
+          "sourceIds": [
+            "onward-cea2024"
+          ]
+        }
+      ],
+      "limits": [
+        "Courtine and Bloch are verified co-founders, not an asserted complete list.",
+        "The 2023 study is a research system; it is not labelled here as proof that all implanted hardware was an ONWARD commercial product.",
+        "NeuroRestore and CEA/Clinatec are separate contributors. The clinical paper does not establish generalized recovery for every spinal-cord injury."
+      ],
+      "sourceIds": [
+        "onward-annual2024",
+        "onward-merger2019",
+        "onward-bsi2023",
+        "onward-cea2024"
+      ],
+      "edgeIds": [
+        "onward-medical-founder",
+        "onward-medical-research",
+        "onward-medical-merger",
+        "onward-medical-license",
+        "onward-medical-clinatec"
+      ]
+    },
+    {
+      "id": "corticale",
+      "companyNode": "corticale",
+      "name": "Corticale",
+      "atlasId": "corticale",
+      "origin": {
+        "detail": "IIT announced Corticale in August 2021 as a startup from Berdondini’s Microtechnology for Neuroelectronics team.",
+        "sourceIds": [
+          "corticale-iit2021"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Giuseppe Santella",
+          "role": "co-founder",
+          "sourceIds": [
+            "corticale-iit2021"
+          ]
+        },
+        {
+          "name": "Fabio Boi",
+          "role": "co-founder",
+          "sourceIds": [
+            "corticale-iit2021"
+          ]
+        },
+        {
+          "name": "Gian Nicola Angotzi",
+          "role": "co-founder",
+          "sourceIds": [
+            "corticale-iit2021"
+          ]
+        },
+        {
+          "name": "Luca Berdondini",
+          "role": "co-founder",
+          "sourceIds": [
+            "corticale-iit2021"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "IIT’s Microtechnology for Neuroelectronics team developed the SiNAPS active-pixel recording architecture.",
+          "sourceIds": [
+            "corticale-iit2021",
+            "sinaps2019"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "SiNAPS integrates a small amplification front end under each electrode-pixel. The original paper demonstrated a fabricated 512-pixel single shank; its broader architecture supported scaling.",
+        "sourceIds": [
+          "sinaps2019"
+        ]
+      },
+      "whatChanged": {
+        "detail": "The research ASIC architecture becomes a supported probe/headstage/acquisition/software ecosystem; later multishank research expands simultaneous spatial coverage.",
+        "sourceIds": [
+          "corticale-product",
+          "sinaps2025"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2018-10-19 / 2019-02-01",
+          "title": "Original SiNAPS paper",
+          "detail": "Online publication precedes the 2019 issue; the demonstrated single-shank probe has 512 electrode-pixels.",
+          "stage": "preclinical research",
+          "dateBasis": "online / issue publication dates",
+          "sourceIds": [
+            "sinaps2019"
+          ]
+        },
+        {
+          "date": "2021-08-04",
+          "title": "IIT startup announcement",
+          "detail": "IIT announces the four-founder company and its research commercialization plan.",
+          "stage": "corporate",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "corticale-iit2021"
+          ]
+        },
+        {
+          "date": "2025-02-27",
+          "title": "Eight-shank SiNAPS paper",
+          "detail": "The paper demonstrates recording from all 1,024 electrodes at 20 kHz per channel in behaving mice.",
+          "stage": "preclinical research",
+          "dateBasis": "online publication",
+          "sourceIds": [
+            "sinaps2025"
+          ]
+        },
+        {
+          "date": "2026-09-15",
+          "title": "Corti-Q ecosystem documented",
+          "detail": "The undated company page lists acquisition, visualization and analysis tools supporting SiNAPS.",
+          "stage": "research product listing",
+          "dateBasis": "review date, not launch date",
+          "sourceIds": [
+            "corticale-product"
+          ]
+        }
+      ],
+      "limits": [
+        "The original paper’s fabricated 512-pixel example must not be relabelled a demonstrated 1,024-channel implant.",
+        "The 2025 1,024-channel result is a mouse research platform, not human clinical availability.",
+        "Shared CMOS fabrication with Neuropixels does not establish historical descent."
+      ],
+      "sourceIds": [
+        "corticale-iit2021",
+        "sinaps2019",
+        "sinaps2025",
+        "corticale-product"
+      ],
+      "edgeIds": [
+        "corticale-founder",
+        "corticale-spinout",
+        "corticale-commercializes",
+        "corticale-acquisition"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "motif-incorporated",
+      "title": "The Year in Research",
+      "url": "https://magazine.rice.edu/summer-2023/the-year-in-research",
+      "kind": "University",
+      "published": "2023 (summer issue)",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "motif-founders",
+      "title": "From Lab to Launch",
+      "url": "https://magazine.rice.edu/spring-2026/lab-launch",
+      "kind": "University",
+      "published": "2026 (spring issue)",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "motif-me2020",
+      "title": "Rice team makes tiny, magnetically powered neural stimulator",
+      "url": "https://news.rice.edu/news/2020/rice-team-makes-tiny-magnetically-powered-neural-stimulator",
+      "kind": "University",
+      "published": "2020",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "motif-dot2024",
+      "title": "Rice team demonstrates miniature brain stimulator in humans",
+      "url": "https://news.rice.edu/news/2024/rice-team-demonstrates-miniature-brain-stimulator-humans",
+      "kind": "University",
+      "published": "2024-04-12",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "motif-mesh2025",
+      "title": "Rice labs tapped for brain research by UK funding agency with multimillion-dollar awards",
+      "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards",
+      "kind": "University",
+      "published": "2025-01-21",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "inbrain-ip2022",
+      "title": "INBRAIN Neuroelectronics signs an agreement to develop neurotechnology patented by six public research institutions",
+      "url": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+      "kind": "Institution",
+      "published": "2022-03-15",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "inbrain-icn2025",
+      "title": "ICN2, Finalist in the 2025 ASTP Impact Awards",
+      "url": "https://icn2.cat/en/business-and-innovation/news-industry/5447-icn2-finalist-in-the-2025-astp-impact-awards",
+      "kind": "Institution",
+      "published": "2025-04-29",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "inbrain-team",
+      "title": "INBRAIN Team",
+      "url": "https://www.inbrain.tech/inbrain-team/",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "inbrain-timeline",
+      "title": "INBRAIN Technology",
+      "url": "https://www.inbrain.tech/technology/",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "inbrain-trial2026",
+      "title": "Patient Enrolment for First-in-Human Trial of ICN2-developed Graphene Electrodes is Completed",
+      "url": "https://www.icn2.cat/en/nanoscience-against-covid-19/covid19-news/5605-patient-enrolment-for-first-in-human-trial-of-icn2-developed-graphene-electrodes-is-completed",
+      "kind": "Institution",
+      "published": "2026-04-22",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "cortec-freiburg",
+      "title": "Start-ups — Faculty of Engineering, University of Freiburg",
+      "url": "https://uni-freiburg.de/tf/start-ups/",
+      "kind": "University",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "cortec-2011",
+      "title": "CorTec: University Spin-Off on its Way into the Future of Neurotechnology",
+      "url": "https://www.bcf.uni-freiburg.de/news/2011/20111115-cortec",
+      "kind": "University",
+      "published": "2011-11-15",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "cortec-founders",
+      "title": "Biomoleküle kopieren, Gehirnaktivität messen",
+      "url": "https://news.vm.uni-freiburg.de/de/newsarchiv/biomolekuele-kopieren-gehirnaktivitaet-messen",
+      "kind": "University",
+      "published": "2015",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "cortec-human2025",
+      "title": "First Human Implantation of a BCI Made in Germany",
+      "url": "https://cortec-neuro.com/news/first-human-implantation-of-a-bci-made-in-germany",
+      "kind": "Company",
+      "published": "2025-07-29",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "cortec-control2026",
+      "title": "Brain Interchange stroke patient computer mind control",
+      "url": "https://cortec-neuro.com/news/brain-interchange-stroke-patient-computer-mind-control",
+      "kind": "Company",
+      "published": "2026-04-29",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "neurosoft-team",
+      "title": "Neurosoft Bioelectronics Team",
+      "url": "https://www.neurosoft-bio.com/team",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "neurosoft-2020",
+      "title": "Funding from Catalyze4Life for Neurosoft Bioelectronics",
+      "url": "https://actu.epfl.ch/news/funding-from-catalyze4life-for-neurosoft-bioelectr/",
+      "kind": "University",
+      "published": "2020",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "neurosoft-2021",
+      "title": "A promising future for soft bioelectronic interfaces",
+      "url": "https://actu.epfl.ch/news/a-promising-future-for-soft-bioelectronic-interf-3",
+      "kind": "University",
+      "published": "2021-03-30",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "neurosoft-2023",
+      "title": "Des électrodes déployables pour une chirurgie crânienne peu invasive",
+      "url": "https://actu.epfl.ch/news/des-electrodes-deployables-pour-une-chirurgie-cr-6/",
+      "kind": "University",
+      "published": "2023-05-11",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "neurosoft-2025",
+      "title": "Swiss company sets record for most electrodes in a soft and stretchable brain interface tested in a human",
+      "url": "https://www.neurosoft-bio.com/onlinepr/20250227-64electrodes",
+      "kind": "Company",
+      "published": "2025-02-27",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "onward-annual2024",
+      "title": "ONWARD Medical Annual Report 2024",
+      "url": "https://ir.onwd.com/static-files/09689b6c-28b6-4a0a-b4d5-d8ec8c4fe105",
+      "kind": "Company report",
+      "published": "2025 (FY2024 report)",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "onward-merger2019",
+      "title": "GTX medical BV and NeuroRecovery Technologies Inc. Merge to Create Leading Neurostimulation Company for Spinal Cord Injury",
+      "url": "https://www.gimv.com/sites/default/files/media/2019-10/20191022_English_Press-release-merger-GTX-medical-NeuroRecovery-Technologies.pdf",
+      "kind": "Transaction-party release",
+      "published": "2019-10-22",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "onward-bsi2023",
+      "title": "Walking naturally after spinal cord injury using a brain–spine interface",
+      "url": "https://www.nature.com/articles/s41586-023-06094-5",
+      "kind": "Paper",
+      "published": "2023-05-24",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "onward-cea2024",
+      "title": "ONWARD Medical Signs Agreement with CEA for Exclusive Rights to Clinatec’s WIMAGINE Brain-Computer Interface (BCI) Technology",
+      "url": "https://www.cea.fr/cea-tech/leti/english/Pages/What's-On/News/ONWARD-Medical-Signs-Agreement-with-CEA-for-Exclusive-Rights-to-Clinatec-s-WIMAGINE-Brain-Computer-Interface-%28BCI%29-Technology.aspx",
+      "kind": "Institution",
+      "published": "2024-10-17; release dated 2024-10-15",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "corticale-iit2021",
+      "title": "Corticale, the new IIT start-up to study and treat brain",
+      "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+      "kind": "Institution",
+      "published": "2021-08-04",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "sinaps2019",
+      "title": "SiNAPS: An implantable active pixel sensor CMOS-probe for simultaneous large-scale neural recordings",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30466053/",
+      "kind": "Paper",
+      "published": "2018-10-19 online; 2019-02-01 issue",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "sinaps2025",
+      "title": "Multi-Shank 1024 Channels Active SiNAPS Probe for Large Multi-Regional Topographical Electrophysiological Mapping of Neural Dynamics",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12021112/",
+      "kind": "Paper",
+      "published": "2025-02-27 online; April 2025 issue",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "corticale-product",
+      "title": "Corticale — Research",
+      "url": "https://www.corticale.com/product",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    }
+  ],
+  "integrationNotes": [
+    "Do not create NET-descent edges from broad atlas technology tags for Motif, INBRAIN or Neurosoft.",
+    "An acquisition, spinout, technical continuation, and a shared method are different relationships. Dates below distinguish publication, corporate event, and review of an undated product page.",
+    "Only the CEA–ONWARD source below explicitly establishes an exclusive licence. INBRAIN establishes an exploitation/development agreement without an exclusivity claim."
+  ]
+}

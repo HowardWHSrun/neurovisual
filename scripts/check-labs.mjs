@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 const root=new URL('../',import.meta.url),read=p=>readFile(new URL(p,root),'utf8');
 const data=JSON.parse(await read('data/labs.json'));
 const ctx=vm.createContext({URL,URLSearchParams,console});
-for(const file of ['hub-utils','hub-data','hub-guides','ideas-data','company-media','labs-data','visuals-data','visuals','connections-data','connections','field-visuals','labs'])vm.runInContext(await read('dist/'+file+'.js'),ctx);
+for(const file of ['hub-utils','hub-data','hub-guides','ideas-data','company-media','labs-data','visuals-data','visuals','connections-data','connections','origins-data','connection-network','origins','field-visuals','labs'])vm.runInContext(await read('dist/'+file+'.js'),ctx);
 const api=vm.runInContext('NeuroLabs',ctx);
 assert.equal(JSON.stringify(vm.runInContext('neuroLabsData',ctx)),JSON.stringify(data));
 assert(data.labs.length>=60,'Substantive detailed coverage');

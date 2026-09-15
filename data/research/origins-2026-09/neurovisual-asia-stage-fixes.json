@@ -1,0 +1,452 @@
+{
+  "axoft": {
+    "summary": "Harvard-trained founders turned soft-probe research into Axoft in 2021. Documented Harvard and Stanford licenses cover separately described technologies.",
+    "stages": [
+      {
+        "nodes": [
+          "harvard",
+          "fluorinated-elastomer-probes"
+        ],
+        "edges": [
+          "harvard-fluorinated-probe-development",
+          "axoft-fluorinated-probe-development"
+        ]
+      },
+      {
+        "nodes": [
+          "paul-le-floch",
+          "jia-liu",
+          "tianyang-ye",
+          "hongkun-park"
+        ],
+        "edges": [
+          "lefloch-jia-training",
+          "ye-park-training",
+          "paul-le-floch-axoft-founder",
+          "jia-liu-axoft-founder",
+          "tianyang-ye-axoft-founder"
+        ]
+      },
+      {
+        "nodes": [
+          "harvard",
+          "stanford",
+          "fluorinated-elastomer-probes"
+        ],
+        "edges": [
+          "harvard-axoft-license",
+          "stanford-axoft-fleuron-license",
+          "axoft-fluorinated-probe-development"
+        ]
+      }
+    ],
+    "additionalEdgeIds": [
+      "harvard-fluorinated-probe-development",
+      "axoft-fluorinated-probe-development"
+    ],
+    "titleCorrection": {
+      "stage": 1,
+      "title": "Harvard-trained founders",
+      "reason": "Current stage title mentions the separate Stanford license, which is documented in stage 3 rather than this founder stage."
+    },
+    "sourceAdditions": [
+      {
+        "stage": 0,
+        "title": "A long-lasting neural probe",
+        "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+        "published": "2024-01-26",
+        "reason": "Explicitly identifies Harvard, UT Austin, MIT and Axoft as collaborators developing the fluorinated-elastomer research platform."
+      }
+    ]
+  },
+  "brain-navi": {
+    "summary": "Jerry Chen founded Brain Navi in 2015. Its NaoTrac robot guides surgical instruments, including electrodes; it is surgical infrastructure rather than an implanted BCI.",
+    "stages": [
+      {
+        "nodes": [
+          "naotrac"
+        ],
+        "edges": [
+          "brainnavi-naotrac-developed"
+        ]
+      },
+      {
+        "nodes": [
+          "jerry-chen",
+          "stanford-taiwan-program"
+        ],
+        "edges": [
+          "jerry-brainnavi-founded",
+          "jerry-stanford-taiwan-training"
+        ]
+      },
+      {
+        "nodes": [
+          "naotrac"
+        ],
+        "edges": [
+          "brainnavi-naotrac-developed"
+        ]
+      }
+    ],
+    "additionalEdgeIds": [
+      "jerry-stanford-taiwan-training"
+    ]
+  },
+  "genlight-neurotech": {
+    "summary": "Founded by Peng Cao in 2020, Genlight develops responsive epilepsy stimulation and MR-monitored laser surgery, with later acquisition and university collaborations.",
+    "stages": [
+      {
+        "nodes": [
+          "hangzhou-nuowei",
+          "zjut"
+        ],
+        "edges": [
+          "genlight-acquired-nuowei",
+          "genlight-zjut-collaboration"
+        ]
+      },
+      {
+        "nodes": [
+          "peng-cao"
+        ],
+        "edges": [
+          "cao-genlight-founded"
+        ]
+      },
+      {
+        "nodes": [
+          "genlight-epilcure",
+          "genlight-laserro"
+        ],
+        "edges": [
+          "genlight-epilcure-development",
+          "genlight-laserro-development"
+        ]
+      }
+    ]
+  },
+  "jimed": {
+    "summary": "Masayuki Hirata founded JiMED in 2020 to translate Osaka University’s wireless cortical-surface BCI research into a medical device.",
+    "stages": [
+      {
+        "nodes": [
+          "masayuki-hirata",
+          "w-herbs-2018"
+        ],
+        "edges": [
+          "hirata-wherbs"
+        ]
+      },
+      {
+        "nodes": [
+          "masayuki-hirata",
+          "osaka-university"
+        ],
+        "edges": [
+          "hirata-jimed-founder",
+          "jimed-osaka-origin"
+        ]
+      },
+      {
+        "nodes": [
+          "jimed-wibmi"
+        ],
+        "edges": [
+          "jimed-wibmi-development"
+        ]
+      }
+    ]
+  },
+  "microport-neurotech": {
+    "summary": "MicroPort’s established neurovascular business entered a planned stent-electrode BCI collaboration with OYMotion in May 2026.",
+    "stages": [
+      {
+        "nodes": [],
+        "edges": []
+      },
+      {
+        "nodes": [
+          "microport-scientific"
+        ],
+        "edges": [
+          "microport-neurotech-spinout"
+        ]
+      },
+      {
+        "nodes": [
+          "chaos-bci-institute",
+          "oymotion",
+          "microport-stent-bci"
+        ],
+        "edges": [
+          "microport-chaos-institute",
+          "microport-oymotion-cooperation",
+          "microport-stent-bci-develop"
+        ]
+      }
+    ]
+  },
+  "neuracle": {
+    "summary": "Founded in 2011 by Honglai Xu with other initial shareholders, Neuracle co-developed the NEO epidural BCI with Hong Bo’s Tsinghua team.",
+    "stages": [
+      {
+        "nodes": [],
+        "edges": []
+      },
+      {
+        "nodes": [
+          "honglai-xu",
+          "tsinghua"
+        ],
+        "edges": [
+          "xu-neuracle-founder",
+          "xu-tsinghua-phd"
+        ]
+      },
+      {
+        "nodes": [
+          "hong-bo",
+          "neo-epidural"
+        ],
+        "edges": [
+          "hong-neo-development",
+          "neuracle-neo-development"
+        ]
+      }
+    ]
+  },
+  "neuralmatrix": {
+    "summary": "NeuraMatrix documents Tao Zhou’s co-founder role and wireless electrophysiology products. Its founding date and original academic lineage remain unverified.",
+    "stages": [
+      {
+        "nodes": [],
+        "edges": []
+      },
+      {
+        "nodes": [
+          "tao-zhou-neuramatrix"
+        ],
+        "edges": [
+          "zhou-neuralmatrix-founder"
+        ]
+      },
+      {
+        "nodes": [
+          "neuralmatrix-nexgaia"
+        ],
+        "edges": [
+          "neuralmatrix-nexgaia-products"
+        ]
+      }
+    ]
+  },
+  "neuroxess": {
+    "summary": "Tao Hu and Lei Peng co-founded NeuroXess. A silk-interface study documents company hardware participation without establishing a marketed intraventricular implant.",
+    "stages": [
+      {
+        "nodes": [
+          "tao-hu",
+          "silk-ivi-2025"
+        ],
+        "edges": [
+          "tao-silk-ivi",
+          "neuroxess-silk-ivi-hardware"
+        ]
+      },
+      {
+        "nodes": [
+          "tao-hu",
+          "phoenix-peng",
+          "simit"
+        ],
+        "edges": [
+          "tao-neuroxess-founder",
+          "peng-neuroxess-founder",
+          "tao-simit-research"
+        ]
+      },
+      {
+        "nodes": [],
+        "edges": []
+      }
+    ],
+    "titleCorrection": {
+      "stage": 1,
+      "title": "Scientific and commercial founders",
+      "reason": "The inspected source establishes scientific and commercial founder roles; the current phrase two technical founders asserts a technical role for Peng that this source does not establish."
+    }
+  },
+  "nurotron": {
+    "summary": "Fan-Gang Zeng and partners established Nurotron in 2006, supported by UCI commercialization assistance, to develop cochlear-implant technology.",
+    "stages": [
+      {
+        "nodes": [
+          "nurotron-cochlear",
+          "uci"
+        ],
+        "edges": [
+          "nurotron-cochlear-development",
+          "uci-nurotron-translation"
+        ]
+      },
+      {
+        "nodes": [
+          "fangang-zeng",
+          "uci"
+        ],
+        "edges": [
+          "zeng-nurotron-founded",
+          "uci-nurotron-translation"
+        ]
+      },
+      {
+        "nodes": [
+          "nurotron-cochlear"
+        ],
+        "edges": [
+          "nurotron-cochlear-development"
+        ]
+      }
+    ],
+    "sourceAdditions": [
+      {
+        "stage": 0,
+        "title": "From bench to business",
+        "url": "https://news.uci.edu/2008/11/01/from-bench-to-business/",
+        "published": "2008-11-01",
+        "reason": "Direct primary evidence for the sound-processing algorithm and commercialization assistance mentioned in the research background."
+      }
+    ]
+  },
+  "pins-medical": {
+    "summary": "Founded in 2008, PINS commercialized DBS through collaboration with Luming Li’s Tsinghua team and clinical partners.",
+    "stages": [
+      {
+        "nodes": [
+          "luming-li",
+          "pins-dbs"
+        ],
+        "edges": [
+          "li-pins-dbs-lead",
+          "pins-dbs-codevelopment"
+        ]
+      },
+      {
+        "nodes": [
+          "luming-li",
+          "pins-dbs",
+          "tsinghua-neuromodulation-lab"
+        ],
+        "edges": [
+          "li-pins-dbs-lead",
+          "pins-dbs-codevelopment",
+          "pins-tsinghua-lab"
+        ]
+      },
+      {
+        "nodes": [
+          "pins-dbs"
+        ],
+        "edges": [
+          "pins-dbs-codevelopment"
+        ]
+      }
+    ],
+    "additionalEdgeIds": [
+      "li-pins-dbs-lead"
+    ]
+  },
+  "sceneray": {
+    "summary": "Yihua Ning founded SceneRay in 2011. Its DBS history spans rechargeable systems, eight-contact designs and dual-target psychiatric stimulation.",
+    "stages": [
+      {
+        "nodes": [
+          "sceneray-neurestora"
+        ],
+        "edges": [
+          "sceneray-neurestora-developed"
+        ]
+      },
+      {
+        "nodes": [
+          "yihua-ning",
+          "shanghai-medical-college"
+        ],
+        "edges": [
+          "ning-sceneray-founded",
+          "ning-shanghai-medical-training"
+        ]
+      },
+      {
+        "nodes": [
+          "sceneray-aaxon",
+          "sceneray-neurestora"
+        ],
+        "edges": [
+          "sceneray-aaxon-developed",
+          "sceneray-neurestora-developed"
+        ]
+      }
+    ],
+    "additionalEdgeIds": [
+      "ning-shanghai-medical-training"
+    ]
+  },
+  "stairmed": {
+    "summary": "Zhengtuo Zhao and Xue Li co-founded StairMed after work in Chong Xie’s group. Papers document the NET–MERF–uFINE method sequence and StairMed recording hardware.",
+    "stages": [
+      {
+        "nodes": [
+          "net-2017",
+          "merf-2023",
+          "ufine-human-2026",
+          "zhengtuo-zhao"
+        ],
+        "edges": [
+          "net-to-merf",
+          "merf-to-ufine",
+          "zhao-net-2017"
+        ]
+      },
+      {
+        "nodes": [
+          "zhengtuo-zhao",
+          "xue-li",
+          "ut-austin",
+          "chong-xie",
+          "rice-university"
+        ],
+        "edges": [
+          "zhao-stairmed-founder",
+          "li-stairmed-founder",
+          "zhao-ut-phd",
+          "zhao-xie-training",
+          "zhao-rice-postdoc",
+          "li-xie-training"
+        ]
+      },
+      {
+        "nodes": [
+          "zhengtuo-zhao",
+          "merf-2023",
+          "xue-li",
+          "ufine-human-2026"
+        ],
+        "edges": [
+          "zhao-merf-correspondence",
+          "li-ufine-correspondence",
+          "stairmed-ufine-hardware"
+        ]
+      }
+    ],
+    "sourceAdditions": [
+      {
+        "stage": 1,
+        "title": "Chong Xie laboratory — Team / Alumni",
+        "url": "https://www.chongxie.net/team",
+        "reason": "Stage text explicitly discusses both founders’ Xie-group training; the current direct sources are UCAS biography and uFINE paper."
+      }
+    ]
+  }
+}

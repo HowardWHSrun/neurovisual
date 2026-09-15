@@ -1,0 +1,832 @@
+{
+  "reviewed": "2026-09-15",
+  "scope": "Two additional selected implanted-interface company-origin dossiers: ABILITY Neurotech and Newronika. Founder lists are verified subsets, not a corporate registry census.",
+  "nodes": [
+    {
+      "id": "ability-neuro",
+      "name": "ABILITY Neurotech",
+      "kind": "Company",
+      "summary": "Wyss Geneva spinout translating a fully implanted neural acquisition system.",
+      "sourceIds": [
+        "ability-project",
+        "ability-company-history"
+      ],
+      "atlasId": "ability-neuro",
+      "href": "#org/ability-neuro"
+    },
+    {
+      "id": "wyss-geneva-origin",
+      "name": "Wyss Center, Geneva",
+      "kind": "Institution",
+      "summary": "Origin of the ABILITY engineering and translational project.",
+      "sourceIds": [
+        "ability-project"
+      ]
+    },
+    {
+      "id": "ability-wyss-platform",
+      "name": "Wyss ABILITY implant platform",
+      "kind": "Technology",
+      "summary": "Hermetically packaged electrical neural acquisition with inductive power and optical telemetry.",
+      "sourceIds": [
+        "ability-whitepaper2022"
+      ]
+    },
+    {
+      "id": "rotem-kopel",
+      "name": "Rotem Kopel",
+      "kind": "Person",
+      "summary": "ABILITY Neurotech co-founder and CEO.",
+      "sourceIds": [
+        "ability-team"
+      ]
+    },
+    {
+      "id": "craig-cook",
+      "name": "Craig Cook",
+      "kind": "Person",
+      "summary": "ABILITY co-founder and former Wyss business-development leader.",
+      "sourceIds": [
+        "ability-cook2025"
+      ]
+    },
+    {
+      "id": "ability-optical-link",
+      "name": "ABILITY optical data link",
+      "kind": "Technology",
+      "summary": "Transfers recorded electrical neural data through intact skin to a wearable receiver.",
+      "sourceIds": [
+        "ability-whitepaper2022"
+      ]
+    },
+    {
+      "id": "tum-ability-intraoperative",
+      "name": "TUM intraoperative ABILITY study",
+      "kind": "Program",
+      "summary": "Initial human acquisition study during tumour surgery.",
+      "sourceIds": [
+        "ability-fih2026"
+      ]
+    },
+    {
+      "id": "newronika",
+      "name": "Newronika",
+      "kind": "Company",
+      "summary": "Milan spinout developing sensing-enabled adaptive DBS.",
+      "sourceIds": [
+        "newronika-about",
+        "newronika-hospital"
+      ],
+      "atlasId": "newronika",
+      "href": "#org/newronika"
+    },
+    {
+      "id": "alberto-priori",
+      "name": "Alberto Priori",
+      "kind": "Person",
+      "summary": "Neurologist and Newronika co-founder.",
+      "sourceIds": [
+        "newronika-about"
+      ]
+    },
+    {
+      "id": "lorenzo-rossi",
+      "name": "Lorenzo Rossi",
+      "kind": "Person",
+      "summary": "Engineer and Newronika co-founder.",
+      "sourceIds": [
+        "newronika-about"
+      ]
+    },
+    {
+      "id": "sara-marceglia",
+      "name": "Sara Marceglia",
+      "kind": "Person",
+      "summary": "Neuroengineering researcher and Newronika co-founder.",
+      "sourceIds": [
+        "newronika-about"
+      ]
+    },
+    {
+      "id": "milan-newronika-origin",
+      "name": "University of Milan / Policlinico di Milano",
+      "kind": "Institution",
+      "summary": "Academic and hospital institutions behind Newronika.",
+      "sourceIds": [
+        "newronika-hospital"
+      ]
+    },
+    {
+      "id": "alphadbs",
+      "name": "AlphaDBS / αDBS",
+      "kind": "Technology",
+      "summary": "Implanted stimulation, sensing and embedded adaptive control platform.",
+      "sourceIds": [
+        "newronika-implant2021"
+      ]
+    },
+    {
+      "id": "external-adbs-2016",
+      "name": "External adaptive DBS prototype",
+      "kind": "Technology",
+      "summary": "Portable system for feedback experiments using externalized DBS leads.",
+      "sourceIds": [
+        "newronika-external2016"
+      ]
+    },
+    {
+      "id": "filterdbs-2007",
+      "name": "FilterDBS artifact-suppression system",
+      "kind": "Technology",
+      "summary": "Analog amplification/filtering to recover LFPs during stimulation.",
+      "sourceIds": [
+        "newronika-filter2007"
+      ]
+    },
+    {
+      "id": "webbiobank",
+      "name": "WebBioBank",
+      "kind": "Technology",
+      "summary": "Company neural-data storage and review platform.",
+      "sourceIds": [
+        "newronika-platform-current"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "ability-neuro-spinout",
+      "from": "ability-neuro",
+      "to": "wyss-geneva-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2025-03",
+      "detail": "The project and company histories identify the Wyss-to-company transition.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "ability-project",
+        "ability-company-history"
+      ]
+    },
+    {
+      "id": "ability-neuro-founder-kopel",
+      "from": "rotem-kopel",
+      "to": "ability-neuro",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2025; current team identifies founder",
+      "detail": "The official team labels Kopel CEO and co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "ability-team",
+        "ability-company-history"
+      ]
+    },
+    {
+      "id": "ability-neuro-founder-cook",
+      "from": "craig-cook",
+      "to": "ability-neuro",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2025",
+      "detail": "Wyss explicitly announces Cook’s co-founder role at its spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "ability-cook2025"
+      ]
+    },
+    {
+      "id": "ability-neuro-origin-platform",
+      "from": "wyss-geneva-origin",
+      "to": "ability-wyss-platform",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Developed",
+      "date": "2018–2025 project",
+      "detail": "The institutional project records this engineering program and its spinout.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "ability-project"
+      ]
+    },
+    {
+      "id": "ability-neuro-translation",
+      "from": "ability-neuro",
+      "to": "ability-wyss-platform",
+      "type": "commercializes",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Translates implant platform",
+      "date": "2025 onward",
+      "detail": "The project evolved into ABILITY Neurotech, continuing development toward human use.",
+      "limit": "Spinout is documented; no exclusive licence terms are inferred.",
+      "sourceIds": [
+        "ability-project",
+        "ability-company-history"
+      ]
+    },
+    {
+      "id": "ability-neuro-optical",
+      "from": "ability-wyss-platform",
+      "to": "ability-optical-link",
+      "type": "uses",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Uses optical telemetry",
+      "date": "2022",
+      "detail": "Wyss describes a skin-crossing optical link and induction power in its implant architecture.",
+      "limit": "The sensor reads electrical signals; optical telemetry does not mean optical neural imaging or optogenetics.",
+      "sourceIds": [
+        "ability-whitepaper2022"
+      ]
+    },
+    {
+      "id": "ability-neuro-clinical",
+      "from": "ability-neuro",
+      "to": "tum-ability-intraoperative",
+      "type": "clinical-collaboration",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Tests acquisition with TUM",
+      "date": "2026-07-21 announcement",
+      "detail": "The company reports initial acquisition under general anesthesia during tumour surgery, with further awake tasks planned.",
+      "limit": "Brief intraoperative acquisition does not demonstrate a chronically implanted home speech system.",
+      "sourceIds": [
+        "ability-fih2026"
+      ]
+    },
+    {
+      "id": "newronika-founder-priori",
+      "from": "alberto-priori",
+      "to": "newronika",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2009; founding roles verified on current company page",
+      "detail": "Official company biographies explicitly identify this co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "newronika-about",
+        "newronika-formation2009"
+      ]
+    },
+    {
+      "id": "newronika-founder-rossi",
+      "from": "lorenzo-rossi",
+      "to": "newronika",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2009; founding roles verified on current company page",
+      "detail": "Official company biographies explicitly identify this co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "newronika-about",
+        "newronika-formation2009"
+      ]
+    },
+    {
+      "id": "newronika-founder-marceglia",
+      "from": "sara-marceglia",
+      "to": "newronika",
+      "type": "co-founded",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Co-founded",
+      "date": "2009; founding roles verified on current company page",
+      "detail": "Official company biographies explicitly identify this co-founder.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "newronika-about",
+        "newronika-formation2009"
+      ]
+    },
+    {
+      "id": "newronika-spinout",
+      "from": "newronika",
+      "to": "milan-newronika-origin",
+      "type": "spinout",
+      "category": "people",
+      "basis": "documented",
+      "directed": true,
+      "label": "Spun out of",
+      "date": "2009",
+      "detail": "The hospital identifies Newronika as a spinout involving itself and the University of Milan; the company release supplies 2009.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "newronika-hospital",
+        "newronika-formation2009"
+      ]
+    },
+    {
+      "id": "newronika-platform",
+      "from": "newronika",
+      "to": "alphadbs",
+      "type": "develops",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Develops",
+      "date": "2021 paper",
+      "detail": "The Newronika-authored technical paper describes the implanted adaptive platform and early sensing data.",
+      "limit": "This 2021 technical report does not publish the completed trial’s comparative clinical efficacy.",
+      "sourceIds": [
+        "newronika-implant2021"
+      ]
+    },
+    {
+      "id": "newronika-external-line",
+      "from": "alphadbs",
+      "to": "external-adbs-2016",
+      "type": "technical-continuation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Embeds earlier feedback approach",
+      "date": "2016 → 2021",
+      "detail": "The implant paper explicitly traces its sensing and tested adaptive algorithm to earlier external devices.",
+      "limit": "Implementation continuity is documented; an external prototype and a chronic implant are different hardware systems.",
+      "sourceIds": [
+        "newronika-implant2021",
+        "newronika-external2016"
+      ]
+    },
+    {
+      "id": "newronika-filter-line",
+      "from": "external-adbs-2016",
+      "to": "filterdbs-2007",
+      "type": "technical-continuation",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Builds on artifact-suppressed sensing",
+      "date": "2007 → 2016",
+      "detail": "The sequence moves from measuring LFPs during DBS to a portable feedback research system; the later implant paper explicitly links both external implementations to the sensing approach.",
+      "limit": "The relationship is limited to the role described; it does not imply ownership of all related technology.",
+      "sourceIds": [
+        "newronika-filter2007",
+        "newronika-external2016",
+        "newronika-implant2021"
+      ]
+    },
+    {
+      "id": "newronika-data-platform",
+      "from": "alphadbs",
+      "to": "webbiobank",
+      "type": "integrates",
+      "category": "technology",
+      "basis": "documented",
+      "directed": true,
+      "label": "Integrates neural-data platform",
+      "date": "2026-07-14 announcement",
+      "detail": "The commercial-version announcement explicitly identifies WebBioBank integration.",
+      "limit": "Data review and storage are not the same as sending each real-time stimulation decision to a cloud processor.",
+      "sourceIds": [
+        "newronika-ce2026"
+      ]
+    }
+  ],
+  "companyDossiers": [
+    {
+      "id": "ability-neuro",
+      "companyNode": "ability-neuro",
+      "name": "ABILITY Neurotech",
+      "atlasId": "ability-neuro",
+      "origin": {
+        "detail": "The Wyss project ran from 2018 to 2025 and spun out as a company in March2025. The company separately credits John Donoghue’s earlier Wyss-era vision; this is not a statement that he founded the company.",
+        "sourceIds": [
+          "ability-project",
+          "ability-company-history"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Rotem Kopel",
+          "role": "co-founder",
+          "sourceIds": [
+            "ability-team"
+          ]
+        },
+        {
+          "name": "Craig Cook",
+          "role": "co-founder",
+          "sourceIds": [
+            "ability-team"
+          ]
+        },
+        {
+          "name": "David Ibáñez Soria",
+          "role": "co-founder",
+          "sourceIds": [
+            "ability-team"
+          ]
+        },
+        {
+          "name": "Arnau Espinosa",
+          "role": "co-founder",
+          "sourceIds": [
+            "ability-team"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "Wyss Center, Geneva, supplied the engineering program; its partners included clinical, university and industrial groups.",
+          "sourceIds": [
+            "ability-project"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "The 2022 platform packaged neural amplification, hermetic feedthroughs, induction power and optical data transmission; it accepted either microelectrode arrays or ECoG grids.",
+        "sourceIds": [
+          "ability-whitepaper2022"
+        ]
+      },
+      "whatChanged": {
+        "detail": "Company translation emphasizes an ECoG speech application and an integrated implant–wearable–decoder system. Surface sensing is a selected application of the platform, not proof of intracortical-array descent.",
+        "sourceIds": [
+          "ability-implant",
+          "ability-company-history"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2018–2025",
+          "title": "Wyss ABILITY program",
+          "detail": "The institutional project page records the research program and company transition.",
+          "stage": "research platform",
+          "dateBasis": "institutional project timeframe",
+          "sourceIds": [
+            "ability-project"
+          ]
+        },
+        {
+          "date": "2022",
+          "title": "Preclinical MEA and ECoG acquisition",
+          "detail": "Wyss reports separate sheep studies using penetrating arrays and surface grids with optical telemetry.",
+          "stage": "preclinical",
+          "dateBasis": "meeting report year",
+          "sourceIds": [
+            "ability-preclinical2022"
+          ]
+        },
+        {
+          "date": "2025-03",
+          "title": "Company spinout",
+          "detail": "ABILITY Neurotech becomes the independent translation company.",
+          "stage": "corporate",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "ability-company-history"
+          ]
+        },
+        {
+          "date": "2026-07-21",
+          "title": "First human acquisition announced",
+          "detail": "Initial intraoperative signal acquisition at TUM is performed under general anesthesia.",
+          "stage": "acute human feasibility",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "ability-fih2026"
+          ]
+        }
+      ],
+      "limits": [
+        "This is a verified subset of founders. Historical reports name Jonas Zimmermann, but the current inspected company team no longer lists him; no current role is assigned.",
+        "The earlier wired locked-in communication case cited by Wyss is not treated here as a clinical trial of the wireless ABILITY implant.",
+        "The July2026 acquisition report and future chronic implantation plans are distinct.",
+        "The company lists 128channels, 2kS/s ECoG configuration with higher configurable sampling, and50Mbps link capacity; these are specifications, not a claim of 128neurons or achieved speech performance."
+      ],
+      "sourceIds": [
+        "ability-project",
+        "ability-preclinical2022",
+        "ability-whitepaper2022",
+        "ability-company-history",
+        "ability-team",
+        "ability-cook2025",
+        "ability-implant",
+        "ability-fih2026"
+      ],
+      "edgeIds": [
+        "ability-neuro-spinout",
+        "ability-neuro-founder-kopel",
+        "ability-neuro-founder-cook",
+        "ability-neuro-origin-platform",
+        "ability-neuro-translation",
+        "ability-neuro-optical",
+        "ability-neuro-clinical"
+      ]
+    },
+    {
+      "id": "newronika",
+      "companyNode": "newronika",
+      "name": "Newronika",
+      "atlasId": "newronika",
+      "origin": {
+        "detail": "Founded in2009 by a multidisciplinary team led by Priori, with the University of Milan and Policlinico as participating research institutions.",
+        "sourceIds": [
+          "newronika-formation2009",
+          "newronika-hospital"
+        ]
+      },
+      "founders": [
+        {
+          "name": "Alberto Priori",
+          "role": "co-founder",
+          "sourceIds": [
+            "newronika-about"
+          ]
+        },
+        {
+          "name": "Lorenzo Rossi",
+          "role": "co-founder",
+          "sourceIds": [
+            "newronika-about"
+          ]
+        },
+        {
+          "name": "Sara Marceglia",
+          "role": "co-founder",
+          "sourceIds": [
+            "newronika-about"
+          ]
+        },
+        {
+          "name": "Paolo Rampini",
+          "role": "co-founder",
+          "sourceIds": [
+            "newronika-implant2021"
+          ]
+        }
+      ],
+      "labRoots": [
+        {
+          "detail": "University of Milan and Policlinico neurophysiology/neurotechnology teams supplied clinical and engineering roots.",
+          "sourceIds": [
+            "newronika-hospital",
+            "newronika-filter2007"
+          ]
+        }
+      ],
+      "precursor": {
+        "detail": "FilterDBS addressed stimulation artifacts that obscure small local field potentials; a later portable external system enabled LFP-feedback experiments.",
+        "sourceIds": [
+          "newronika-filter2007",
+          "newronika-external2016"
+        ]
+      },
+      "whatChanged": {
+        "detail": "AlphaDBS moves sensing and the feedback algorithm into the implanted pulse generator. Later development adds a clinician-facing data platform and commercial adaptive-system packaging.",
+        "sourceIds": [
+          "newronika-implant2021",
+          "newronika-ce2026"
+        ]
+      },
+      "milestones": [
+        {
+          "date": "2007-03-13",
+          "title": "FilterDBS publication",
+          "detail": "Researchers demonstrate LFP recording during stimulation using an external artifact-suppression system.",
+          "stage": "bench and human technical research",
+          "dateBasis": "online publication",
+          "sourceIds": [
+            "newronika-filter2007"
+          ]
+        },
+        {
+          "date": "2009",
+          "title": "Company founded",
+          "detail": "Primary company release identifies a multidisciplinary team with university and hospital participation.",
+          "stage": "corporate",
+          "dateBasis": "event reported by source",
+          "sourceIds": [
+            "newronika-formation2009"
+          ]
+        },
+        {
+          "date": "2016-03-27",
+          "title": "Portable adaptive DBS prototype",
+          "detail": "An external device combines stimulation and LFP sensing for clinical feedback research.",
+          "stage": "bench and human feasibility",
+          "dateBasis": "online publication",
+          "sourceIds": [
+            "newronika-external2016"
+          ]
+        },
+        {
+          "date": "2021-12-07",
+          "title": "Implant architecture published",
+          "detail": "The implant paper reports sensing data from the first three participants; comparative clinical outcomes remain for the ongoing trial.",
+          "stage": "human technical feasibility",
+          "dateBasis": "publication",
+          "sourceIds": [
+            "newronika-implant2021"
+          ]
+        },
+        {
+          "date": "2026-07-14",
+          "title": "Updated adaptive version and data integration",
+          "detail": "Company announces a CE-marked commercial version integrated with WebBioBank.",
+          "stage": "company-reported regulatory / product milestone",
+          "dateBasis": "announcement",
+          "sourceIds": [
+            "newronika-ce2026"
+          ]
+        }
+      ],
+      "limits": [
+        "The founder list is a verified subset: current roles do not establish all original founders.",
+        "The2021 report’s sixteen stimulation contacts must not be confused with its two differential sensing channels.",
+        "The controller described in2021 runs in implant firmware; cloud data management does not imply cloud-based real-time control.",
+        "The2022 paper is a trial protocol, not an outcome report.",
+        "Company-reported2026 certification is a version-specific milestone; the independent certificate was not inspected and US FDA approval is not claimed.",
+        "A current company landing page labels its pilot comparison results pending publication; those marketing percentages are not used here."
+      ],
+      "sourceIds": [
+        "newronika-about",
+        "newronika-formation2009",
+        "newronika-hospital",
+        "newronika-filter2007",
+        "newronika-external2016",
+        "newronika-implant2021",
+        "newronika-protocol2022",
+        "newronika-ce2026",
+        "newronika-platform-current"
+      ],
+      "edgeIds": [
+        "newronika-founder-priori",
+        "newronika-founder-rossi",
+        "newronika-founder-marceglia",
+        "newronika-spinout",
+        "newronika-platform",
+        "newronika-external-line",
+        "newronika-filter-line",
+        "newronika-data-platform"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ability-project",
+      "title": "ABILITY — Wyss Center for Bio and Neuroengineering",
+      "url": "https://wysscenter.ch/project/ability/",
+      "kind": "Institution",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-preclinical2022",
+      "title": "Latest neural signals recorded with ABILITY brain-computer interface and new details of the system presented at Society for Neuroscience meeting",
+      "url": "https://wysscenter.ch/update/latest-neural-signals-recorded-with-ability-brain-computer-interface-and-new-details-of-the-system-presented-at-society-for-neuroscience-meeting/",
+      "kind": "Institution",
+      "published": "2022 (Society for Neuroscience meeting report)",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-whitepaper2022",
+      "title": "Wyss Center — Pushing the boundaries of implantable neuro-devices",
+      "url": "https://wysscenter.ch/wp-content/uploads/2024/03/WyssCenter_Whitepaper_ABILITY.pdf",
+      "kind": "Institution",
+      "published": "2022; later uploaded in 2024 directory",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-company-history",
+      "title": "ABILITY — Our Journey",
+      "url": "https://abilityneuro.com/",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-team",
+      "title": "ABILITY — Team",
+      "url": "https://abilityneuro.com/team/",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-cook2025",
+      "title": "Craig Cook appointed Chief Business Officer and Co-founder at ABILITY Neurotech, the Wyss Geneva’s flagship spin-off",
+      "url": "https://wysscenter.ch/update/craig-cook-appointed-cbo/",
+      "kind": "Institution",
+      "published": "2025",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-implant",
+      "title": "ABILITY — The Implant",
+      "url": "https://abilityneuro.com/technology/implant/",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "ability-fih2026",
+      "title": "ABILITY Neurotech Announces First-In-Human Testing for Novel Brain-Computer Interface Technology",
+      "url": "https://abilityneuro.com/press/fih-intraop/",
+      "kind": "Company",
+      "published": "2026-07-21",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-about",
+      "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+      "url": "https://newronika.com/about",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-formation2009",
+      "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+      "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+      "kind": "Investor / company release",
+      "published": "2023-03-10 page; release dated 2023-03-08",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-hospital",
+      "title": "Brevetti — Spin-off: nuove imprese per la ricerca",
+      "url": "https://www.policlinico.mi.it/technology-transfer-office/offerta",
+      "kind": "Institution",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-filter2007",
+      "title": "An electronic device for artefact suppression in human local field potential recordings during deep brain stimulation",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17409484/",
+      "kind": "Paper",
+      "published": "2007-03-13 online; June2007 issue",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-external2016",
+      "title": "An external portable device for adaptive deep brain stimulation (aDBS) clinical research in advanced Parkinson’s Disease",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27029510/",
+      "kind": "Paper",
+      "published": "2016-03-27 online; May2016 issue",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-implant2021",
+      "title": "A New Implantable Closed-Loop Clinical Neural Interface: First Application in Parkinson’s Disease",
+      "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2021.763235/full",
+      "kind": "Paper",
+      "published": "2021-12-07",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-protocol2022",
+      "title": "Double-blind cross-over pilot trial protocol to evaluate the safety and preliminary efficacy of long-term adaptive deep brain stimulation in patients with Parkinson’s disease",
+      "url": "https://bmjopen.bmj.com/content/12/1/e049955",
+      "kind": "Paper",
+      "published": "2022-01-03",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-ce2026",
+      "title": "Newronika Receives CE Mark for αDBS®, Advancing Its Mission to Make Adaptive Therapy the Standard of Care",
+      "url": "https://newronika.com/news/newronika-receives-ce-mark-for-adbs-r-advancing-itsmission-to-make-adaptive-therapy-the-standard-of-care",
+      "kind": "Company",
+      "published": "2026-07-14",
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    },
+    {
+      "id": "newronika-platform-current",
+      "title": "Newronika — Adaptive Deep Brain Stimulation Technology",
+      "url": "https://newronika.com/",
+      "kind": "Company",
+      "published": null,
+      "inspected": "Primary source content inspected; reviewed 2026-09-15"
+    }
+  ],
+  "integrationNotes": [
+    "ABILITY’s preclinical Utah-array compatibility is not a corporate Blackrock/BrainGate spinout or licence. Its current speech implant uses ECoG.",
+    "ABILITY’s July2026 first-human announcement concerns intraoperative signal acquisition; do not turn it into a completed chronic speech-restoration trial.",
+    "For Newronika, stimulation contacts, differential sensing channels, signal sampling and stored spectral summaries are different quantities.",
+    "The 2021 AlphaDBS paper describes conventional DBS/sensing CE marking; the 2026 announcement concerns a later adaptive commercial version. Neither implies US FDA approval."
+  ]
+}

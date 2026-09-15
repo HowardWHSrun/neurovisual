@@ -1,5 +1,12 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
 const root=new URL('../',import.meta.url);
-const data=JSON.parse(await readFile(new URL('data/connections.json',root),'utf8'));
-await writeFile(new URL('dist/connections-data.js',root),'var neuroConnectionsData = '+JSON.stringify(data).replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029')+';\n');
-console.log(`Connections: ${data.nodes.length} entries, ${data.edges.length} relationships.`);
+const read=async path=>JSON.parse(await readFile(new URL(path,root),'utf8'));
+const emit=async(name,data)=>writeFile(new URL(`dist/${name}.js`,root),'var '+(name==='connections-data'?'neuroConnectionsData':'neuroOriginsData')+' = '+JSON.stringify(data).replace(/\u2028/g,'\\u2028').replace(/\u2029/g,'\\u2029')+';\n');
+const data=await read('data/connections.json'),origins=await read('data/company-origins.json');
+const papers=await read('data/connection-papers.json');
+await emit('connections-data',data);
+await emit('origins-data',{...origins,papers:papers.papers});
+await mkdir(new URL('downloads/',root),{recursive:true});
+const graph={formatVersion:'1.0',generatedBy:'Neurovisual',targetCyVersion:'3.34.3',data:{reviewed:data.reviewed,description:'Curated primary-source relationships. Comparison edges are undirected and do not establish descent.'},elements:{nodes:data.nodes.map(n=>({data:{id:n.id,label:n.name,kind:n.kind,summary:n.summary,url:n.href||''}})),edges:data.edges.map(x=>({data:{id:'edge-'+x.id,edgeId:x.id,source:x.from,target:x.to,label:x.label,basis:x.basis,date:x.date,detail:x.detail,limit:x.limit||'',sources:x.sources}}))}};
+await writeFile(new URL('downloads/connections.cy.json',root),JSON.stringify(graph,null,2)+'\n');
+console.log(`Origins: ${origins.companies.length} company histories; connections: ${data.nodes.length} entries, ${data.edges.length} relationships; ${papers.papers.length} Crossref records.`);

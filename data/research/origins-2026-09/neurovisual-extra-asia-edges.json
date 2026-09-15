@@ -1,0 +1,58 @@
+{
+  "verified": "2026-09-15",
+  "nodes": [],
+  "edges": [
+    {
+      "id": "harvard-fluorinated-probe-development",
+      "from": "harvard",
+      "to": "fluorinated-elastomer-probes",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard reports joint development with UT Austin, MIT and Axoft.",
+      "limit": "Collaboration does not establish sole invention or identity with every later commercial implant.",
+      "sourceIds": [
+        "axoft-probe-harvard-2024"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+          "published": "2024-01-26"
+        }
+      ]
+    },
+    {
+      "id": "axoft-fluorinated-probe-development",
+      "from": "axoft",
+      "to": "fluorinated-elastomer-probes",
+      "label": "co-developed",
+      "category": "technology",
+      "basis": "documented",
+      "date": "Reported 2024-01-26",
+      "detail": "Harvard identifies Axoft as a collaborator developing this research platform.",
+      "limit": "Collaboration does not establish sole invention or identity with every later commercial implant.",
+      "sourceIds": [
+        "axoft-probe-harvard-2024"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+          "published": "2024-01-26"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "axoft-probe-harvard-2024",
+      "title": "A long-lasting neural probe",
+      "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "kind": "University",
+      "published": "2024-01-26"
+    }
+  ],
+  "note": "Connects the previously isolated fluorinated-elastomer research-platform node. Institutional and company collaboration is explicit; these edges do not assert exclusive invention or equate every later Axoft implant with the 2023 research device."
+}

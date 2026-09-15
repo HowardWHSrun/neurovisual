@@ -194,8 +194,9 @@
                 NeuroConnections.bind(content, id, params, (hash, focusId) => { history.pushState(null, '', hash); render(); if (focusId)
                     document.getElementById(focusId)?.focus({ preventScroll: true });
                 else {
-                    document.getElementById('cn-network-title')?.setAttribute('tabindex', '-1');
-                    document.getElementById('cn-network-title')?.focus({ preventScroll: true });
+                    const heading = content.querySelector('.or-page h1');
+                    heading?.setAttribute('tabindex', '-1');
+                    heading?.focus({ preventScroll: true });
                 } });
         }
         if (route !== 'ideas')

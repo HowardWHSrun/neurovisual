@@ -165,7 +165,7 @@ interface Window { neuroAtlas?: { records: HubRecord[]; counts: { technologies: 
       bindFilters(params);
       if(route==='ideas')NeuroIdeas.bind(content,id,params);
       if(route==='labs')NeuroLabs.bind(content,id,params,updateHash);
-      if(route==='connections')NeuroConnections.bind(content,id,params,(hash,focusId)=>{history.pushState(null,'',hash);render();if(focusId)document.getElementById(focusId)?.focus({preventScroll:true});else{document.getElementById('cn-network-title')?.setAttribute('tabindex','-1');document.getElementById('cn-network-title')?.focus({preventScroll:true});}});
+      if(route==='connections')NeuroConnections.bind(content,id,params,(hash,focusId)=>{history.pushState(null,'',hash);render();if(focusId)document.getElementById(focusId)?.focus({preventScroll:true});else{const heading=content.querySelector<HTMLElement>('.or-page h1');heading?.setAttribute('tabindex','-1');heading?.focus({preventScroll:true});}});
     }
     if(route!=='ideas')NeuroVisuals.bind(isAtlas?atlas:content);
     closeMenu();

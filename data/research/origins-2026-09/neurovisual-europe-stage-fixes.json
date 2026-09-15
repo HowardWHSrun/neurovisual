@@ -1,0 +1,329 @@
+{
+  "ability-neuro": {
+    "stages": [
+      {
+        "nodes": [
+          "wyss-geneva-origin",
+          "ability-wyss-platform",
+          "ability-optical-link"
+        ],
+        "edges": [
+          "ability-neuro-origin-platform",
+          "ability-neuro-optical"
+        ]
+      },
+      {
+        "nodes": [
+          "ability-neuro",
+          "wyss-geneva-origin",
+          "rotem-kopel",
+          "craig-cook"
+        ],
+        "edges": [
+          "ability-neuro-spinout",
+          "ability-neuro-founder-kopel",
+          "ability-neuro-founder-cook"
+        ]
+      },
+      {
+        "nodes": [
+          "ability-neuro",
+          "ability-wyss-platform",
+          "ability-optical-link"
+        ],
+        "edges": [
+          "ability-neuro-translation",
+          "ability-neuro-optical"
+        ]
+      }
+    ],
+    "notes": [
+      "The interface stage should not link co-founding or spinout statements as its technology evidence. Keep the original implant specification sources.",
+      "John Donoghue remains contextual early vision, not an asserted company co-founder."
+    ]
+  },
+  "cortec": {
+    "stages": [
+      {
+        "nodes": [
+          "freiburg-cortec-origin",
+          "brain-interchange"
+        ],
+        "edges": [
+          "cortec-spinout",
+          "cortec-platform"
+        ]
+      },
+      {
+        "nodes": [
+          "cortec",
+          "jorn-rickert",
+          "thomas-stieglitz",
+          "freiburg-cortec-origin"
+        ],
+        "edges": [
+          "cortec-founder",
+          "cortec-shareholder",
+          "cortec-spinout"
+        ]
+      },
+      {
+        "nodes": [
+          "cortec",
+          "brain-interchange"
+        ],
+        "edges": [
+          "cortec-platform"
+        ]
+      }
+    ],
+    "notes": [
+      "Move Rickert founding and Stieglitz founding-shareholder evidence into the formation stage."
+    ]
+  },
+  "corticale": {
+    "stages": [
+      {
+        "nodes": [
+          "iit-microtechnology-origin",
+          "sinaps"
+        ],
+        "edges": []
+      },
+      {
+        "nodes": [
+          "corticale",
+          "luca-berdondini",
+          "iit-microtechnology-origin"
+        ],
+        "edges": [
+          "corticale-founder",
+          "corticale-spinout"
+        ]
+      },
+      {
+        "nodes": [
+          "corticale",
+          "sinaps",
+          "corti-q"
+        ],
+        "edges": [
+          "corticale-commercializes",
+          "corticale-acquisition"
+        ]
+      }
+    ],
+    "notes": [
+      "Stage1 intentionally has no graph-edge button: the preserved primary IIT/original-paper source links substantiate the academic architecture. Existing edges describe corporate formation or commercialization, not an IIT-to-SiNAPS development relationship.",
+      "Do not relabel a co-founder edge as evidence for the 512-pixel recording architecture."
+    ]
+  },
+  "inbrain": {
+    "stages": [
+      {
+        "nodes": [
+          "icn2-icrea-origin",
+          "inbrain-public-graphene-ip"
+        ],
+        "edges": [
+          "inbrain-spinout",
+          "inbrain-ip-agreement"
+        ]
+      },
+      {
+        "nodes": [
+          "inbrain",
+          "jose-antonio-garrido",
+          "icn2-icrea-origin",
+          "inbrain-public-graphene-ip"
+        ],
+        "edges": [
+          "inbrain-founder",
+          "inbrain-spinout",
+          "inbrain-ip-agreement"
+        ]
+      },
+      {
+        "nodes": [
+          "inbrain",
+          "inbrain-public-graphene-ip",
+          "manchester-graphene-trial"
+        ],
+        "edges": [
+          "inbrain-ip-agreement",
+          "inbrain-clinical-device"
+        ],
+        "title": "Graphene interfaces enter human studies"
+      }
+    ],
+    "notes": [
+      "Remove founder evidence from the interface stage.",
+      "Suggested third-stage title avoids implying that the cited Manchester intraoperative recording study demonstrates graphene stimulation therapy. Preserve the original recording/manufacturing/validation prose."
+    ]
+  },
+  "motif-neurotech": {
+    "stages": [
+      {
+        "nodes": [
+          "robinson-lab-rice",
+          "rice-magnetoelectric-stimulation"
+        ],
+        "edges": []
+      },
+      {
+        "nodes": [
+          "motif",
+          "jacob-robinson",
+          "robinson-lab-rice"
+        ],
+        "edges": [
+          "motif-neurotech-founder",
+          "motif-neurotech-spinout"
+        ]
+      },
+      {
+        "nodes": [
+          "motif",
+          "motif-dot",
+          "rice-magnetoelectric-stimulation"
+        ],
+        "edges": [
+          "motif-neurotech-dot",
+          "motif-neurotech-platform"
+        ]
+      }
+    ],
+    "notes": [
+      "Stage1 intentionally relies on its preserved original2020 Rice article and lab-origin sources; there is no direct lab-to-magnetoelectric-platform graph edge in this dossier.",
+      "Move DOT co-development and DOT powering evidence to the built-interface stage, rather than treating a2024 DOT relationship as the2020 rodent result."
+    ]
+  },
+  "neurosoft-bio": {
+    "stages": [
+      {
+        "nodes": [
+          "epfl-lsbi-origin",
+          "soft-conformal-cortical-arrays",
+          "wyss-geneva-origin"
+        ],
+        "edges": [
+          "neurosoft-bio-platform",
+          "neurosoft-bio-wyss"
+        ]
+      },
+      {
+        "nodes": [
+          "neurosoft-bio",
+          "stephanie-lacour",
+          "epfl-lsbi-origin"
+        ],
+        "edges": [
+          "neurosoft-bio-founder",
+          "neurosoft-bio-spinout"
+        ]
+      },
+      {
+        "nodes": [
+          "neurosoft-bio",
+          "soft-conformal-cortical-arrays",
+          "wyss-geneva-origin"
+        ],
+        "edges": [
+          "neurosoft-bio-platform",
+          "neurosoft-bio-wyss"
+        ]
+      }
+    ],
+    "notes": [
+      "Retain the original stage sources for material fabrication and the separate deployable-array study. Do not imply that the spinout edge establishes their technical performance."
+    ]
+  },
+  "newronika": {
+    "stages": [
+      {
+        "nodes": [
+          "milan-newronika-origin",
+          "filterdbs-2007",
+          "external-adbs-2016"
+        ],
+        "edges": [
+          "newronika-filter-line"
+        ]
+      },
+      {
+        "nodes": [
+          "newronika",
+          "alberto-priori",
+          "lorenzo-rossi",
+          "sara-marceglia",
+          "milan-newronika-origin"
+        ],
+        "edges": [
+          "newronika-founder-priori",
+          "newronika-founder-rossi",
+          "newronika-founder-marceglia",
+          "newronika-spinout"
+        ]
+      },
+      {
+        "nodes": [
+          "newronika",
+          "alphadbs",
+          "external-adbs-2016",
+          "webbiobank"
+        ],
+        "edges": [
+          "newronika-platform",
+          "newronika-external-line",
+          "newronika-data-platform"
+        ]
+      }
+    ],
+    "notes": [
+      "The roots stage should show the2007 filter and2016 external system, not the2021 AlphaDBS implant.",
+      "The interface stage explicitly mentions later data-platform development, so include the WebBioBank integration edge and node."
+    ]
+  },
+  "onward-medical": {
+    "stages": [
+      {
+        "nodes": [
+          "neurorestore",
+          "nrt-origin",
+          "onward-medical"
+        ],
+        "edges": [
+          "onward-medical-research",
+          "onward-medical-merger"
+        ]
+      },
+      {
+        "nodes": [
+          "onward-medical",
+          "gregoire-courtine",
+          "nrt-origin"
+        ],
+        "edges": [
+          "onward-medical-founder",
+          "onward-medical-merger"
+        ],
+        "title": "Founding and corporate consolidation"
+      },
+      {
+        "nodes": [
+          "onward-medical",
+          "clinatec",
+          "wimagine"
+        ],
+        "edges": [
+          "onward-medical-license",
+          "onward-medical-clinatec"
+        ]
+      }
+    ],
+    "notes": [
+      "Second-stage title currently promises CEA licensing although its text covers2014 founding and2019 merger. Suggested title matches that preserved text; licensing stays in stage3.",
+      "Do not use the Courtine co-founder edge as technical evidence for spinal circuitry recruitment."
+    ]
+  }
+}

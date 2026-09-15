@@ -1,23 +1,28 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import vm from 'node:vm';
 
 const root = new URL('../', import.meta.url);
 const read = path => readFile(new URL(path, root), 'utf8');
-const data = JSON.parse(await read('data/connections.json'));
+const graph = JSON.parse(await read('data/connections.json'));
+const origins = JSON.parse(await read('data/company-origins.json'));
+const bibliography = JSON.parse(await read('data/connection-papers.json'));
 const context = vm.createContext({ URL, URLSearchParams });
-for (const name of ['hub-utils', 'ideas-data', 'company-media', 'labs-data', 'visuals-data', 'visuals', 'connections-data', 'connections']) {
-  vm.runInContext(await read(`dist/${name}.js`), context, { filename: `dist/${name}.js` });
-}
+const modules = ['hub-utils', 'ideas-data', 'company-media', 'labs-data', 'visuals-data', 'visuals', 'connections-data', 'connections', 'origins-data', 'connection-network', 'origins'];
+for (const name of modules) vm.runInContext(await read(`dist/${name}.js`), context, { filename: `dist/${name}.js` });
 const api = vm.runInContext('NeuroConnections', context);
+const network = vm.runInContext('ConnectionNetwork', context);
+const evidence = vm.runInContext('ConnectionEvidence', context);
 const escape = vm.runInContext('hubUtils.escapeHtml', context);
-assert.equal(JSON.stringify(vm.runInContext('neuroConnectionsData', context)), JSON.stringify(data), 'Rebuild connection data before testing');
-assert.match(data.reviewed, /^\d{4}-\d{2}-\d{2}$/);
+const plain = value => JSON.parse(JSON.stringify(value));
+assert(JSON.stringify(vm.runInContext('neuroConnectionsData', context)) === JSON.stringify(graph), 'Rebuild graph data before testing');
+assert(JSON.stringify(vm.runInContext('neuroOriginsData', context)) === JSON.stringify({ ...origins, papers: bibliography.papers }), 'Rebuild company origins and bibliography before testing');
 const required = (record, fields, label) => fields.forEach(key => {
   assert.equal(typeof record[key], 'string', `${label}: ${key} is text`);
   assert(record[key].trim(), `${label}: ${key} is nonempty`);
 });
 const unique = (values, label) => assert.equal(new Set(values).size, values.length, `${label}: unique IDs`);
+const list = (values, label, populated = true) => assert(Array.isArray(values) && (!populated || values.length), `${label}: ${populated ? 'populated ' : ''}array`);
 const secureUrl = (value, label) => {
   const url = new URL(value);
   assert.equal(url.protocol, 'https:', `${label}: HTTPS source`);
@@ -26,211 +31,296 @@ const secureUrl = (value, label) => {
 const route = (value, label) => value.startsWith('#')
   ? assert.match(value, /^#[a-z][a-z0-9-]*(?:[/?][^<>"'\s]*)?$/, `${label}: safe internal route`)
   : secureUrl(value, label);
-
-for (const key of ['nodes', 'edges', 'stories']) {
-  assert(Array.isArray(data[key]) && data[key].length, `${key}: populated collection`);
-  unique(data[key].map(x => x.id), key);
-  data[key].forEach(x => assert.match(x.id, /^[a-z0-9][a-z0-9_-]*$/, `${key}: stable ID`));
+function sources(items, label, populated = true) {
+  list(items, label, populated);
+  for (const source of items) {
+    required(source, ['title', 'url'], label);
+    secureUrl(source.url, label);
+    if (source.published !== undefined) required(source, ['published'], label);
+  }
 }
-const nodes = new Map(data.nodes.map(n => [n.id, n]));
-const edges = new Map(data.edges.map(x => [x.id, x]));
+function collection(items, label, populated = true) {
+  list(items, label, populated); unique(items.map(x => x.id), label);
+  for (const x of items) assert.match(x.id, /^[a-z0-9][a-z0-9_-]*$/, `${label}: stable ID`);
+}
+for (const data of [graph, origins]) assert.match(data.reviewed, /^\d{4}-\d{2}-\d{2}$/, 'Explicit evidence review date');
+collection(graph.nodes, 'Graph nodes'); collection(graph.edges, 'Graph edges');
+const nodes = new Map(graph.nodes.map(n => [n.id, n]));
+const edges = new Map(graph.edges.map(x => [x.id, x]));
 const media = new Set(vm.runInContext('NeuroVisuals.items()', context).map(x => x.id));
-const kinds = new Set(['Person', 'Lab', 'Company', 'Technology', 'Institution', 'Program']);
-const expectedEdges = (id, lens = 'all') => data.edges.filter(x => (x.from === id || x.to === id) && (lens === 'all' || x.category === lens));
-for (const n of data.nodes) {
+for (const n of graph.nodes) {
   required(n, ['name', 'subtitle', 'summary'], n.id);
-  assert(kinds.has(n.kind), `${n.id}: known node kind`);
-  assert(expectedEdges(n.id).length, `${n.id}: no isolated node`);
+  assert(['Person', 'Lab', 'Company', 'Technology', 'Institution', 'Program'].includes(n.kind), `${n.id}: known kind`);
+  assert(graph.edges.some(x => x.from === n.id || x.to === n.id), `${n.id}: no isolated graph entry`);
   if (n.href) route(n.href, n.id);
-  if (n.aliases) { assert(Array.isArray(n.aliases)); n.aliases.forEach(h => route(h, n.id)); }
+  if (n.aliases) { list(n.aliases, `${n.id} aliases`, false); n.aliases.forEach(h => route(h, n.id)); }
   if (n.media) assert(media.has(n.media), `${n.id}: existing credited visual ${n.media}`);
 }
-for (const x of data.edges) {
+for (const x of graph.edges) {
   required(x, ['from', 'to', 'label', 'date', 'detail'], x.id);
-  assert(nodes.has(x.from) && nodes.has(x.to), `${x.id}: both endpoints exist`);
-  assert.notEqual(x.from, x.to, `${x.id}: meaningful distinct endpoints`);
-  assert(['people', 'technology'].includes(x.category), `${x.id}: known lens`);
+  assert(nodes.has(x.from) && nodes.has(x.to), `${x.id}: known endpoints`);
+  assert.notEqual(x.from, x.to, `${x.id}: distinct endpoints`);
+  assert(['people', 'technology', 'translation'].includes(x.category), `${x.id}: known relationship category`);
   assert(['documented', 'comparison'].includes(x.basis), `${x.id}: explicit evidence basis`);
-  assert(Array.isArray(x.sources) && x.sources.length, `${x.id}: relationship has evidence`);
-  for (const s of x.sources) { required(s, ['title', 'url'], x.id); secureUrl(s.url, x.id); }
+  sources(x.sources, x.id);
   if (x.basis === 'comparison') {
-    assert.equal(x.category, 'technology', `${x.id}: editorial comparison is technical`);
-    assert.notEqual(x.directed, true, `${x.id}: comparison is not directed`);
-    assert(!/\b(?:co-?founded|mentored|trained with|licensed from|spun out|successor of|descended from)\b/i.test(x.label), `${x.id}: comparison label must not claim lineage`);
+    assert.equal(x.category, 'technology', `${x.id}: comparison is technical`);
+    assert.notEqual(x.directed, true, `${x.id}: comparison does not claim direction`);
+    assert(!/\b(?:co-?founded|mentored|trained with|licensed from|spun out|successor of|descended from)\b/i.test(x.label), `${x.id}: comparison label does not claim descent`);
   }
 }
-for (const s of data.stories) {
-  required(s, ['title', 'deck', 'focus'], s.id);
-  assert(Array.isArray(s.trail) && s.trail.length > 1, `${s.id}: a multi-entry story`);
-  assert(Array.isArray(s.edges) && s.edges.length, `${s.id}: story has relationships`);
-  unique(s.trail, `${s.id} trail`); unique(s.edges, `${s.id} edges`);
-  s.trail.forEach(id => assert(nodes.has(id), `${s.id}: known trail node ${id}`));
-  assert(s.trail.includes(s.focus), `${s.id}: focus belongs to trail`);
-  const selected = s.edges.map(id => { assert(edges.has(id), `${s.id}: known relationship ${id}`); return edges.get(id); });
-  selected.forEach(x => assert(s.trail.includes(x.from) && s.trail.includes(x.to), `${s.id}: relationship endpoints belong to the story`));
-  assert(selected[0].from === s.focus || selected[0].to === s.focus, `${s.id}: story's first evidence is visible at its focus`);
-  const reached = new Set([s.focus]);
-  for (let size = -1; size !== reached.size;) {
-    size = reached.size;
-    selected.forEach(x => { if (reached.has(x.from) || reached.has(x.to)) { reached.add(x.from); reached.add(x.to); } });
+// Legacy curated trails remain exportable even though the new UI uses dossiers.
+if (graph.stories) {
+  collection(graph.stories, 'Story trails', false);
+  for (const s of graph.stories) {
+    required(s, ['title', 'deck', 'focus'], s.id);
+    list(s.trail, `${s.id} trail`); list(s.edges, `${s.id} edges`);
+    unique(s.trail, `${s.id} trail`); unique(s.edges, `${s.id} edges`);
+    assert(s.trail.includes(s.focus), `${s.id}: focus belongs to trail`);
+    s.trail.forEach(id => assert(nodes.has(id), `${s.id}: known trail node ${id}`));
+    const selected = s.edges.map(id => { assert(edges.has(id), `${s.id}: known edge ${id}`); return edges.get(id); });
+    selected.forEach(x => assert(s.trail.includes(x.from) && s.trail.includes(x.to), `${s.id}: endpoints belong to trail`));
+    const reached = new Set([s.focus]);
+    for (let size = -1; size !== reached.size;) {
+      size = reached.size;
+      selected.forEach(x => { if (reached.has(x.from) || reached.has(x.to)) { reached.add(x.from); reached.add(x.to); } });
+    }
+    assert(s.trail.every(id => reached.has(id)), `${s.id}: trail is connected`);
   }
-  assert(s.trail.every(id => reached.has(id)), `${s.id}: story is a connected subgraph, not unrelated names`);
+}
+collection(origins.companies, 'Company dossiers'); collection(origins.inventory, 'Coverage inventory'); collection(origins.families, 'Technology families');
+const companies = new Map(origins.companies.map(c => [c.id, c]));
+const inventory = new Map(origins.inventory.map(c => [c.id, c]));
+const families = new Map(origins.families.map(f => [f.id, f]));
+unique(origins.companies.map(c => c.nodeId), 'Company graph mappings');
+for (const f of origins.families) required(f, ['name', 'description'], f.id);
+for (const c of origins.inventory) { required(c, ['name', 'scope', 'url'], c.id); secureUrl(c.url, c.id); }
+function refs(ids, map, label) {
+  list(ids, label, false); unique(ids, label);
+  ids.forEach(id => assert(map.has(id), `${label}: known reference ${id}`));
+}
+for (const c of origins.companies) {
+  required(c, ['nodeId', 'name', 'family', 'summary'], c.id);
+  assert(inventory.has(c.id), `${c.id}: appears in coverage inventory`);
+  assert.equal(nodes.get(c.nodeId)?.kind, 'Company', `${c.id}: mapped company node`);
+  assert(families.has(c.family), `${c.id}: known technology family`);
+  refs(c.edgeIds, edges, `${c.id} dossier edges`); assert(c.edgeIds.length, `${c.id}: documented relationships`);
+  assert.equal(c.stages?.length, 3, `${c.id}: research roots, translation and interface stages`);
+  list(c.timeline, `${c.id} timeline`); list(c.changes, `${c.id} engineering changes`); list(c.gaps, `${c.id} gaps`, false);
+  c.gaps.forEach(gap => assert(typeof gap === 'string' && gap.trim(), `${c.id}: readable evidence gap`));
+  if (c.sources) sources(c.sources, `${c.id} original sources`, false);
+  for (const [kind, items] of [['stage', c.stages], ['milestone', c.timeline], ['change', c.changes]]) {
+    for (const [i, item] of items.entries()) {
+      const label = `${c.id} ${kind} ${i + 1}`;
+      required(item, ['title', 'text', ...(kind === 'milestone' ? ['date'] : [])], label);
+      refs(item.edges, edges, label);
+      item.edges.forEach(id => assert(c.edgeIds.includes(id), `${label}: reference belongs to dossier edge list`));
+      if (kind === 'stage') refs(item.nodes, nodes, `${label} nodes`);
+      if (item.sources) sources(item.sources, `${label} sources`, false);
+      assert(item.edges.length || item.sources?.length, `${label}: directly cited or linked source evidence`);
+    }
+  }
+}
+unique(bibliography.papers.map(p => p.doi), 'Bibliographic DOI records');
+for (const paper of bibliography.papers) {
+  required(paper, ['doi', 'title', 'url'], 'Bibliographic paper'); secureUrl(paper.url, paper.doi);
+  assert(Number.isInteger(paper.year), `${paper.doi}: publication year`);
+  list(paper.references, `${paper.doi} bibliographic references`, false);
+}
+
+// Verify graph selection independently of the renderer. Paths can traverse a
+// documented relationship backwards, but each edge retains its source/object.
+const allowed = comparisons => graph.edges.filter(x => comparisons || x.basis === 'documented');
+function adjacency(comparisons) {
+  const a = new Map(graph.nodes.map(n => [n.id, []]));
+  for (const x of allowed(comparisons)) { a.get(x.from).push([x.to, x.id]); a.get(x.to).push([x.from, x.id]); }
+  return a;
+}
+function distances(start, comparisons) {
+  const a = adjacency(comparisons), result = new Map([[start, 0]]), queue = [start];
+  for (let i = 0; i < queue.length; i++) for (const [next] of a.get(queue[i]) || []) if (!result.has(next)) { result.set(next, result.get(queue[i]) + 1); queue.push(next); }
+  return result;
+}
+const sorted = values => [...values].sort();
+let pathsChecked = 0;
+function checkPath(from, to, comparisons) {
+  const result = plain(network.shortest(from, to, comparisons)), distance = distances(from, comparisons).get(to);
+  pathsChecked++;
+  if (distance === undefined) { assert.equal(result, null, `${from}/${to}: disconnected path`); return; }
+  assert(result, `${from}/${to}: reachable path exists`);
+  assert.equal(result.edges.length, distance, `${from}/${to}: shortest number of steps`);
+  assert.equal(result.nodes.length, result.edges.length + 1);
+  assert.equal(result.nodes[0], from); assert.equal(result.nodes.at(-1), to);
+  unique(result.nodes, 'Shortest path nodes'); unique(result.edges, 'Shortest path edges');
+  result.edges.forEach((id, i) => {
+    const x = edges.get(id), pair = result.nodes.slice(i, i + 2);
+    assert(x && pair.includes(x.from) && pair.includes(x.to), `${id}: consecutive path endpoints`);
+    assert(comparisons || x.basis === 'documented', `${id}: comparison requires opt-in`);
+  });
+}
+for (const comparisons of [false, true]) {
+  const params = new URLSearchParams(comparisons ? { comparisons: 'yes' } : {});
+  const all = plain(network.subset('', params));
+  assert.equal(all.mode, 'all'); assert.deepEqual(sorted(all.nodes), sorted(nodes.keys()));
+  assert.deepEqual(sorted(all.edges), sorted(allowed(comparisons).map(x => x.id)));
+  for (const n of graph.nodes) {
+    const dist = distances(n.id, comparisons), near = new Set([...dist].filter(([, steps]) => steps <= 2).map(([id]) => id));
+    const set = plain(network.subset(n.id, params));
+    assert.equal(set.mode, 'nearby'); assert.deepEqual(sorted(set.nodes), sorted(near), `${n.id}: exact two-step neighborhood`);
+    assert.deepEqual(sorted(set.edges), sorted(allowed(comparisons).filter(x => near.has(x.from) && near.has(x.to)).map(x => x.id)), `${n.id}: induced neighborhood relationships`);
+    const full = plain(network.subset(n.id, new URLSearchParams({ ...Object.fromEntries(params), scope: 'all' })));
+    assert.deepEqual(sorted(full.edges), sorted(all.edges), `${n.id}: whole-network scope`);
+    const farthest = [...dist].sort((a, b) => b[1] - a[1])[0][0];
+    checkPath(n.id, farthest, comparisons); checkPath(n.id, n.id, comparisons);
+    const missing = graph.nodes.find(x => !dist.has(x.id)); if (missing) checkPath(n.id, missing.id, comparisons);
+    const target = farthest;
+    const pathSet = plain(network.subset(n.id, new URLSearchParams({ ...Object.fromEntries(params), to: target })));
+    assert.equal(pathSet.mode, 'path'); assert.deepEqual(pathSet.path, plain(network.shortest(n.id, target, comparisons)));
+    assert.deepEqual(pathSet.nodes, pathSet.path.nodes); assert.deepEqual(pathSet.edges, pathSet.path.edges);
+  }
+}
+for (const x of graph.edges) { checkPath(x.from, x.to, false); checkPath(x.to, x.from, true); }
+assert.equal(network.shortest('missing-node', graph.nodes[0].id), null, 'Unknown start has no path');
+assert.equal(network.shortest(graph.nodes[0].id, 'missing-node'), null, 'Unknown destination has no path');
+const elementData = plain(network.elements([...nodes.keys()], [...edges.keys()])).map(x => x.data);
+unique(elementData.map(x => x.id), 'Cytoscape node/edge IDs share one namespace');
+assert.equal(elementData.length, nodes.size + edges.size);
+for (const x of graph.edges) {
+  const el = elementData.find(v => v.edgeId === x.id);
+  assert(el, `${x.id}: graph element`); assert.equal(el.source, x.from); assert.equal(el.target, x.to); assert.equal(el.basis, x.basis);
+  assert.deepEqual(el.sources, x.sources, `${x.id}: exportable element retains its evidence`);
 }
 
 const attributes = html => Object.fromEntries([...html.matchAll(/([\w-]+)="([^"]*)"/g)].map(m => [m[1], m[2]]));
-const tags = (html, tag) => [...html.matchAll(new RegExp(`<${tag}\\b([^>]*)>`, 'g'))].map(m => attributes(m[1]));
-const edgeButtons = html => tags(html, 'button').filter(a => a['data-cn-edge']);
-const ids = html => [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+const tags = (html, tag = '[a-zA-Z][\\w:-]*') => [...html.matchAll(new RegExp(`<${tag}\\b([^>]*)>`, 'g'))].map(m => attributes(m[1]));
+const attrValues = (html, name) => tags(html).filter(a => a[name]).map(a => a[name]);
 let rendered = 0;
-function checkPage(html, label) {
+const downloads = new Set();
+function page(html, label) {
   rendered++;
-  assert(!/\bundefined\b|\bNaN\b|\[object Object\]/.test(html), `${label}: complete rendered values`);
-  unique(ids(html), `${label} DOM`);
-  assert(!html.includes('<iframe'), `${label}: media starts as an image, not autoplay`);
+  assert(!/\bNaN\b|\[object Object\]|>undefined</.test(html), `${label}: complete rendered values`);
+  unique(attrValues(html, 'id'), `${label}: unique DOM IDs`);
+  assert(!/<iframe\b/.test(html), `${label}: media does not autoplay`);
   for (const a of tags(html, 'a')) {
     assert(a.href, `${label}: link destination`);
+    assert(!/^(?:javascript|data):/i.test(a.href), `${label}: safe link protocol`);
     if (a.target === '_blank') assert(/noopener/.test(a.rel || ''), `${label}: external link isolation`);
+    if (a.href.startsWith('./')) downloads.add(a.href.split('?')[0]);
   }
+  for (const id of attrValues(html, 'data-or-evidence')) assert(edges.has(id), `${label}: evidence button resolves`);
+  for (const id of attrValues(html, 'data-or-network-edge')) assert(edges.has(id), `${label}: network evidence resolves`);
+  return html;
 }
-for (const n of data.nodes) {
-  for (const lens of ['all', 'people', 'technology']) {
-    const expected = expectedEdges(n.id, lens).map(x => x.id).sort();
-    const renders = ['map', 'list'].map(view => {
-      const params = new URLSearchParams({ lens, view, edge: 'unknown-relationship' });
-      const html = api.render(n.id, params); checkPage(html, `${n.id}/${lens}/${view}`);
-      const buttons = edgeButtons(html);
-      assert.deepEqual(buttons.map(a => a['data-cn-edge']).sort(), expected, `${n.id}/${lens}/${view}: exactly the incident edges`);
-      assert.equal(buttons.filter(a => a['aria-pressed'] === 'true').length, expected.length ? 1 : 0, `${n.id}/${lens}/${view}: one selected evidence item`);
-      const s = api.state(n.id, params);
-      assert.equal(s.current.id, n.id); assert.equal(s.lens, lens); assert.equal(s.list, view === 'list');
-      assert.equal(s.selected?.id, expectedEdges(n.id, lens)[0]?.id, 'Unknown edge falls back within the active lens');
-      const control = html.match(/<select id="cn-lens"[^>]*>([\s\S]*?)<\/select>/)?.[1] || '';
-      assert(control.includes(`value="${lens}" selected`), 'Lens control reflects rendered membership');
-      assert.equal(html.includes('id="cn-map"'), view === 'map', 'Map/list switch changes the actual view');
-      if (!expected.length) assert(html.includes('No links in this lens.'), 'Empty lens has an actionable explanation');
-      return buttons.map(a => a['data-cn-edge']).sort();
-    });
-    assert.deepEqual(renders[0], renders[1], `${n.id}/${lens}: map and readable list agree`);
+function checkNetwork(id = '', params = new URLSearchParams()) {
+  const html = page(network.render(id, params), `network/${id}/${params}`), set = plain(network.subset(id, params));
+  assert.deepEqual(attrValues(html, 'data-or-network-edge'), set.edges, 'Readable list exactly matches graph/path subset and ordering');
+  assert(html.includes('role="status"'), 'Network counts are announced');
+  assert(html.includes('equivalent relationship list'), 'Canvas points to keyboard-readable alternative');
+  for (const block of html.matchAll(/<li>([\s\S]*?)<\/li>/g)) {
+    const id = attrValues(block[1], 'data-or-network-edge')[0];
+    if (id && edges.get(id).basis === 'comparison') assert(/technical comparison/i.test(block[1]), `${id}: readable list visibly labels comparison`);
   }
+  return html;
 }
-for (const x of data.edges) {
-  // Inspect evidence from both ends, including comparisons reached backwards.
-  for (const id of [x.from, x.to]) {
-    const html = api.render(id, new URLSearchParams({ edge: x.id, lens: x.category }));
-    checkPage(html, `${x.id}/${id}`);
-    assert.equal(edgeButtons(html).find(a => a['aria-pressed'] === 'true')?.['data-cn-edge'], x.id);
-    assert(html.includes(escape(x.detail)), `${x.id}: selected evidence is shown`);
-    if (x.limit) assert(html.includes(escape(x.limit)), `${x.id}: keep the evidence limit`);
-    if (x.basis === 'comparison') {
-      assert(html.includes('TECHNICAL COMPARISON'), `${x.id}: visible editorial classification`);
-      const button = html.match(new RegExp(`<button[^>]*data-cn-edge="${x.id}"[^>]*>([\\s\\S]*?)<\\/button>`))?.[0] || '';
-      assert(button.includes('cn-comparison') && button.includes('↔') && !button.includes('→'), `${x.id}: no lineage arrow on comparison button`);
+page(api.render(), 'Default directory');
+for (const view of ['origins', 'families', 'network', 'coverage']) {
+  const html = page(api.render('', new URLSearchParams({ view })), view);
+  assert(html.includes(`data-or-view="${view}"`), `${view}: route selects actual view`);
+  assert.equal(tags(html, 'a').filter(x => x['aria-current'] === 'page').length, 1, `${view}: one active view tab`);
+}
+for (const c of origins.companies) {
+  assert.equal(api.company(c.id).nodeId, c.nodeId); assert.equal(api.company(c.nodeId).id, c.id);
+  for (const id of new Set([c.id, c.nodeId])) {
+    const html = page(api.render(id), `company/${id}`);
+    assert(html.includes('data-or-view="origins"') && html.includes(escape(c.name)), `${id}: company defaults to its origin story`);
+    for (const item of [...c.stages, ...c.timeline, ...c.changes]) {
+      assert(html.includes(escape(item.title)), `${id}: keep title ${item.title}`);
+      assert(html.includes(escape(item.text)), `${id}: retain evidence narrative`);
     }
+    c.gaps.forEach(gap => assert(html.includes(escape(gap)), `${id}: preserve uncertainty`));
+    assert.equal(tags(html, 'article').filter(x => x.class === 'or-stage').length, 3, `${id}: three rendered stages`);
+    const buttons = new Set(attrValues(html, 'data-or-evidence'));
+    c.edgeIds.forEach(edge => assert(buttons.has(edge), `${id}: dossier relationship remains inspectable`));
   }
 }
-for (const s of data.stories) {
-  const params = new URLSearchParams({ story: s.id, edge: s.edges[0] });
-  const html = api.render(s.focus, params); checkPage(html, `story/${s.id}`);
-  assert.equal(api.state(s.focus, params).story.id, s.id);
-  assert.equal(api.state(s.focus, new URLSearchParams({ story: s.id })).selected.id, s.edges[0], `${s.id}: entering the story selects its first evidence`);
-  assert(html.includes(escape(s.deck)), `${s.id}: story context retained`);
-  s.trail.forEach(id => assert(html.includes(escape(nodes.get(id).name)), `${s.id}: every trail entry is rendered`));
+const cardIds = html => tags(html, 'a').filter(a => (a.class || '').split(' ').includes('or-company-card')).map(a => decodeURIComponent(a.href.split('/')[1].split('?')[0]));
+for (const f of origins.families) {
+  const html = page(api.render('', new URLSearchParams({ family: f.id })), `directory/${f.id}`);
+  assert.deepEqual(sorted(cardIds(html)), sorted(origins.companies.filter(c => c.family === f.id).map(c => c.id)), `${f.id}: exact directory membership`);
 }
-checkPage(api.render(), 'default route');
-assert.equal(api.state('', new URLSearchParams()).current.id, data.stories[0].focus);
-const first = data.nodes[0].id;
-const invalid = new URLSearchParams({ lens: 'invalid', view: 'invalid', story: 'invalid', edge: 'invalid' });
-assert.equal(api.state(first, invalid).lens, 'all'); assert.equal(api.state(first, invalid).list, false);
-assert.equal(api.state(first, invalid).story, null);
-checkPage(api.render(first, invalid), 'unknown query values');
-const missing = api.render('<img src=x onerror=alert(1)>', new URLSearchParams({ story: data.stories[0].id }));
-assert(missing.includes('Connection not found.') && !missing.includes('onerror='), 'Invalid routes show a safe not-found state');
-checkPage(missing, 'unknown entry');
+assert(cardIds(api.render('', new URLSearchParams({q:'Michael I. Jordan'}))).includes('neuralink'), 'Company search includes people in referenced relationships');
+const absentQuery = 'no-such-company-9d92bfa5';
+assert.equal(cardIds(page(api.render('', new URLSearchParams({ q: absentQuery })), 'Empty query')).length, 0);
 assert.equal(api.teaser('#unmapped-profile'), '', 'Unmapped profiles have no misleading teaser');
-const records = Array.from(api.records()); unique(records.map(x => x.id), 'Search');
-assert.equal(records.length, data.nodes.length);
-records.forEach(r => assert(nodes.has(decodeURIComponent(r.href.split('/')[1])), 'Search targets a mapped entry'));
+for (const n of graph.nodes) {
+  checkNetwork(n.id); checkNetwork(n.id, new URLSearchParams({ comparisons: 'yes' }));
+  if (n.href) {
+    const teaser = page(api.teaser(n.href), `teaser/${n.id}`);
+    assert(teaser.includes('cn-teaser'), `${n.id}: linked profile has a teaser`);
+  }
+}
+checkNetwork('', new URLSearchParams({ comparisons: 'yes' }));
+for (const x of graph.edges) {
+  const html = page(evidence.evidence(x), `evidence/${x.id}`);
+  assert(html.includes(escape(x.detail)), `${x.id}: complete evidence`);
+  if (x.limit) assert(html.includes(escape(x.limit)), `${x.id}: preserve the evidence limit`);
+  assert(html.includes(x.basis === 'comparison' ? 'TECHNICAL COMPARISON' : 'DOCUMENTED CONNECTION'));
+}
+const malicious = '<img src=x onerror=alert(1)>';
+for (const view of ['origins', 'families', 'network', 'coverage', 'invalid']) {
+  const html = page(api.render(malicious, new URLSearchParams({ view, q: malicious, family: malicious, to: malicious, edge: malicious })), `Invalid route/${view}`);
+  assert(!html.includes('<img src=x') && !/<[^>]*\sonerror=/.test(html), 'Route/query text cannot inject HTML');
+}
+assert(api.render(malicious, new URLSearchParams({ view: 'origins' })).includes('Company history not found.'), 'Missing company returns not found');
+const invalid = page(api.render('', new URLSearchParams({ view: 'invalid' })), 'Unknown view');
+assert(invalid.includes('data-or-view="origins"'), 'Unknown view falls back to directory');
+const records = plain(api.records()); unique(records.map(r => r.id), 'Search records');
+assert.equal(records.length, nodes.size, 'Every graph entry is searchable');
+for (const r of records) {
+  required(r, ['id', 'title', 'description', 'kind', 'href'], r.id);
+  const [path, query] = r.href.split('?'), id = decodeURIComponent(path.split('/')[1]), view = new URLSearchParams(query).get('view');
+  assert(companies.has(id) || nodes.has(id), `${r.id}: searchable destination exists`);
+  assert(['origins', 'network'].includes(view), `${r.id}: correct search route type`);
+}
+page(api.spotlight(), 'Overview spotlight');
+for (const path of downloads) await access(new URL(path, root));
 
-// DOM doubles exercise the actual bind/draw controller, including SVG markers,
-// direction, URL state, keyboard modifier behavior, and observer cleanup. They
-// deliberately do not assert browser layout or pixel appearance.
-const makeElement = (attrs = {}) => ({
-  attrs: { ...attrs }, dataset: Object.fromEntries(Object.entries(attrs).filter(([k]) => k.startsWith('data-')).map(([k, v]) => [k.slice(5).replace(/-([a-z])/g, (_, c) => c.toUpperCase()), v])),
-  events: {}, innerHTML: '', focused: false,
-  addEventListener(type, fn) { this.events[type] = fn; },
-  getAttribute(key) { return this.attrs[key]; }, setAttribute(key, value) { this.attrs[key] = value; },
-  focus() { this.focused = true; }, scrollIntoView(options) { this.scrolled = options; }
-});
-let mobile = false, lastHistory = '', lastNavigation = '', observers = [];
-context.window = { matchMedia: query => ({ matches: query.includes('max-width') && mobile }) };
-context.history = { pushState: (_a, _b, href) => { lastHistory = href; } };
-context.ResizeObserver = class {
-  constructor(fn) { this.callback = fn; this.disconnected = false; observers.push(this); }
-  observe() {} disconnect() { this.disconnected = true; }
+// Capture the real Cytoscape configuration without browser geometry. This
+// verifies semantic arrow styles and data, not rendering pixels or SVG paths.
+const controls = new Map();
+const control = id => controls.get(id) || controls.set(id, { innerHTML: '', clientWidth: 800, clientHeight: 600, addEventListener() {}, querySelector() { return control('detail-button'); } }).get(id);
+const container = { querySelector: control, querySelectorAll: () => [] };
+let config, destroyed = 0;
+context.cytoscape = options => {
+  config = options;
+  const style = { selector() { return this; }, style() { return this; }, update() {} };
+  return { style: () => style, on() {}, destroy() { destroyed++; } };
 };
-function mounted(id, params = new URLSearchParams()) {
-  const html = api.render(id, params), buttons = edgeButtons(html).map(makeElement);
-  const links = tags(html, 'a').filter(a => Object.hasOwn(a, 'data-cn-nav') || /#connections\//.test(a.href)).map(makeElement);
-  const views = tags(html, 'button').filter(a => a['data-cn-view']).map(makeElement);
-  const paths = makeElement(), center = makeElement();
-  center.getBoundingClientRect = () => ({ left: 400, right: 600, top: 80, height: 100 });
-  const branches = tags(html, 'div').filter(a => a['data-cn-branch']).map((a, i) => {
-    const branch = makeElement(a), b = makeElement();
-    b.getBoundingClientRect = () => ({ left: a['data-side'] === 'left' ? 20 : 800, right: a['data-side'] === 'left' ? 220 : 1000, top: 40 + 120 * i, height: 90 });
-    branch.querySelector = selector => selector === '.cn-node' ? b : buttons.find(x => x.dataset.cnEdge === a['data-cn-branch']);
-    return branch;
-  });
-  const map = makeElement(); map.getBoundingClientRect = () => ({ left: 0, top: 0 });
-  map.querySelectorAll = () => branches;
-  const elements = { '#cn-controls': makeElement(), '#cn-node-select': makeElement(), '#cn-lens': makeElement(), '#cn-evidence-slot': makeElement(), '#cn-evidence': makeElement(), '#cn-map': html.includes('id="cn-map"') ? map : null, '[data-cn-center]': center, '#cn-wire-paths': paths };
-  const container = {
-    querySelector: selector => elements[selector] || null,
-    querySelectorAll: selector => selector === '[data-cn-nav]' ? links : selector === '[data-cn-view]' ? views : selector === '[data-cn-edge]' ? buttons : []
-  };
-  api.bind(container, id, params, hash => { lastNavigation = hash; });
-  return { container, elements, buttons, links, views, paths, branches };
-}
-for (const n of data.nodes) {
-  const m = mounted(n.id);
-  const drawn = tags(m.paths.innerHTML, 'path');
-  assert.equal(drawn.length, m.branches.length, `${n.id}: one wire per visible relationship`);
-  drawn.forEach((path, i) => {
-    const x = edges.get(m.branches[i].dataset.cnBranch), comparison = x.basis === 'comparison';
-    assert.equal(Boolean(path['marker-end']), !comparison, `${x.id}: comparisons never have arrowheads`);
-    assert.equal((path.class || '').includes('cn-dashed'), comparison, `${x.id}: comparisons use dashed wires`);
-    if (!comparison) {
-      const branch = m.branches[i], incoming = x.to === n.id, left = branch.dataset.side === 'left';
-      assert.equal(branch.dataset.direction, incoming ? 'in' : 'out', `${x.id}: documented edge retains subject/object direction`);
-      const coordinates = path.d.match(/-?\d+(?:\.\d+)?/g).map(Number);
-      assert.equal(coordinates.at(-2), incoming ? (left ? 400 : 600) : (left ? 220 : 800), `${x.id}: arrow terminates on the object node's facing edge`);
-    }
-    assert(!/NaN|undefined/.test(path.d), `${x.id}: finite wire coordinates`);
-  });
-}
-let m = mounted(first, new URLSearchParams({ lens: 'all', view: 'map', story: data.stories[0].id }));
-const comparison = data.edges.find(x => x.basis === 'comparison');
-assert(comparison, 'Include an explicit technical comparison in this graph');
-m = mounted(comparison.to);
-const button = m.buttons.find(b => b.dataset.cnEdge === comparison.id); button.events.click();
-assert(lastHistory.includes(`edge=${comparison.id}`), 'Evidence selection updates URL');
-assert(m.elements['#cn-evidence-slot'].innerHTML.includes('TECHNICAL COMPARISON'));
-assert(m.elements['#cn-evidence'].focused, 'New evidence receives focus');
-assert.equal(m.elements['#cn-evidence'].scrolled?.block, 'start', 'Selected evidence is scrolled into view');
-assert.equal(m.buttons.filter(b => b.attrs['aria-pressed'] === 'true').length, 1);
-m.elements['#cn-lens'].events.change({ target: { value: 'technology' } });
-assert(lastNavigation.includes('lens=technology') && !lastNavigation.includes('edge='), 'Lens changes reset stale evidence');
-m.views.find(b => b.dataset.cnView === 'list').events.click();
-assert(lastNavigation.includes('view=list'), 'Display control navigates to readable list');
-m.elements['#cn-node-select'].events.change({ target: { value: first } });
-assert(lastNavigation.startsWith(`#connections/${first}`) && !lastNavigation.includes('edge='), 'Entry changes reset stale evidence');
-let prevented = false; lastNavigation = '';
-m.links[0].events.click({ metaKey: true, preventDefault() { prevented = true; } });
-assert(!prevented && !lastNavigation, 'Modified link clicks retain native browser behavior');
-m.links[0].events.click({ preventDefault() { prevented = true; } });
-assert(prevented && lastNavigation, 'Plain connection links navigate within the workspace');
-mobile = true; m = mounted(first); assert.equal(m.paths.innerHTML, '', 'Small viewports omit desktop connector geometry');
-const observer = observers.at(-1); api.close(); assert(observer.disconnected, 'Leaving connections disconnects its observer');
-assert(observers.every(o => o.disconnected), 'Repeated mounting does not retain old observers');
+network.bind(container, '', new URLSearchParams({ comparisons: 'yes' }), () => {}, () => {});
+assert(config, 'Actual network controller initializes Cytoscape');
+assert.deepEqual(plain(config.elements), plain(network.elements([...nodes.keys()], [...edges.keys()])), 'Renderer receives the exact selected graph');
+const normalStyle = config.style.find(x => x.selector === 'edge').style;
+const comparisonStyle = config.style.find(x => x.selector === 'edge[basis="comparison"]').style;
+assert.equal(normalStyle['target-arrow-shape'], 'triangle', 'Documented edge arrow follows stored from/to');
+assert.equal(comparisonStyle['target-arrow-shape'], 'none', 'Comparison has no target arrow');
+assert.equal(comparisonStyle['line-style'], 'dashed', 'Comparison has a distinct line pattern');
+assert(!comparisonStyle['source-arrow-shape'] || comparisonStyle['source-arrow-shape'] === 'none', 'Comparison has no reverse arrow');
+network.close(); assert.equal(destroyed, 1, 'Leaving the network destroys its graph instance');
 
-console.log(`Connections checks passed: ${data.nodes.length} entries, ${data.edges.length} sourced relationships, ${data.stories.length} connected stories, and ${rendered} rendered states.`);
-console.log('Passed: map/list lens parity, safe invalid routes, source/media references, DOM IDs, evidence selection and focus, navigation, undirected comparison wires, and observer cleanup.');
+const index = await read('index.html');
+const scripts = [...index.matchAll(/<script\b[^>]*\bsrc="([^"?]+)/g)].map(m => m[1]);
+unique(scripts, 'Loaded script paths');
+for (const [before, after] of [
+  ['hub-utils', 'connections'], ['visuals-data', 'visuals'], ['visuals', 'origins'],
+  ['connections-data', 'connections'], ['connections-data', 'connection-network'],
+  ['connections', 'origins'], ['origins-data', 'connection-network'], ['origins-data', 'origins'],
+  ['connection-network', 'origins'], ['origins', 'app'], ['origins', 'hub']
+]) {
+  const a = scripts.indexOf(`./dist/${before}.js`), b = scripts.indexOf(`./dist/${after}.js`);
+  assert(a >= 0 && b >= 0 && a < b, `${before} loads before ${after}`);
+}
+const cytoscapeScript = scripts.findIndex(path => /cytoscape/i.test(path));
+assert(cytoscapeScript >= 0 && cytoscapeScript < scripts.indexOf('./dist/connection-network.js'), 'Cytoscape library is loaded before network initialization');
+assert(index.includes('data-route="connections"'), 'Connections is reachable from the workspace navigation');
+console.log(`Origins checks passed: ${origins.companies.length} dossiers, ${origins.inventory.length} inventory entries, ${nodes.size} graph nodes, ${edges.size} relationships, ${pathsChecked} path cases, ${rendered} rendered states.`);
+console.log('Passed: source integrity, three-stage evidence, directory membership, exact network subsets, shortest paths, undirected comparisons, safe routes, full narrative rendering, export links, search mappings, graph cleanup, and script order.');

@@ -35,3 +35,7 @@ All six company image URLs and the institutional image sources were checked agai
 ## People in the connection map
 
 `data/connections.json` can include an institutional portrait on a person node, with the same `VisualImage` fields. `NeuroVisuals.items()` adds it to the People gallery and the native image viewer; `media: person-<node-id>` references it in the connection context panel. Zhao’s portrait remains hosted on his UCAS faculty profile. A source credit does not establish a reuse license or identify a photographer. Preserve the original image and its provenance.
+
+## Origin stories and network (15 September 2026)
+
+Origin pages reuse existing credited device images where available. Other entries use simple interface schematics labeled as such; these are not representations of a particular commercial device. Company histories remain linked to the full atlas and visual library. Cytoscape shapes identify entity types, not logos. No remote media is copied into the repository for this feature.

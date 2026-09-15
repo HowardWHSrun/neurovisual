@@ -1,0 +1,65 @@
+{
+  "reviewed": "2026-09-15",
+  "note": "Two bridges drawn only from already inspected primary institutional sources. Both endpoints already exist in connections.json. These institutional links connect separate documented components without claiming company-to-company descent or an IP transfer.",
+  "nodes": [],
+  "edges": [
+    {
+      "id": "melosh-lab-stanford-affiliation",
+      "from": "melosh-lab",
+      "to": "stanford",
+      "label": "conducted microwire–CMOS research at",
+      "category": "people",
+      "basis": "documented",
+      "date": "Reported 2020-03-20",
+      "detail": "Stanford's account identifies Nicholas Melosh and his Stanford laboratory in the collaboration that coupled microwire bundles to silicon electronics.",
+      "limit": "An institutional affiliation, not evidence that Stanford licensed this electrode hardware to Paradromics. The separate speech-decoding licenses concern different intellectual property.",
+      "sourceIds": ["bridge-stanford-microwire-2020"],
+      "sources": [
+        {
+          "title": "Bringing silicon computing power to the brain",
+          "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+          "published": "2020-03-20"
+        }
+      ]
+    },
+    {
+      "id": "nicta-data61-formation",
+      "from": "nicta",
+      "to": "csiro-data61",
+      "label": "combined with CSIRO digital-research teams to form",
+      "category": "translation",
+      "basis": "documented",
+      "date": "Announced 2015-08-28",
+      "detail": "CSIRO announced that NICTA and CSIRO digital-research teams would come together in a new CSIRO entity, Data61.",
+      "limit": "This was a combination of research organizations, not a simple rename. Saluda's documented 2013 spinout was from NICTA, before Data61 formed; the link does not establish shared Saluda and bionic-eye device IP.",
+      "sourceIds": ["bridge-csiro-data61-2015"],
+      "sources": [
+        {
+          "title": "CSIRO and NICTA join forces to create digital research powerhouse",
+          "url": "https://www.csiro.au/en/news/all/news/2015/august/csiro-nicta-join-forces",
+          "published": "2015-08-28"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "bridge-stanford-microwire-2020",
+      "title": "Bringing silicon computing power to the brain",
+      "url": "https://news.stanford.edu/stories/2020/03/bringing-silicon-computing-power-brain",
+      "published": "2020-03-20",
+      "kind": "University",
+      "evidence": "Official Stanford research account identifies Melosh's Stanford research group and the Paradromics collaboration.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "bridge-csiro-data61-2015",
+      "title": "CSIRO and NICTA join forces to create digital research powerhouse",
+      "url": "https://www.csiro.au/en/news/all/news/2015/august/csiro-nicta-join-forces",
+      "published": "2015-08-28",
+      "kind": "Institution",
+      "evidence": "Contemporaneous CSIRO announcement describes the combination of NICTA and CSIRO digital-research teams into Data61.",
+      "reviewed": "2026-09-15"
+    }
+  ]
+}
