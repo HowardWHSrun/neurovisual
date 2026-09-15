@@ -1,0 +1,58 @@
+// NeuroAI is connected to the existing field guide, resources and learning paths.
+// Individual source dates remain in the curated project/resource snapshot.
+hubTopics.push({id:'neuroai',title:'NeuroAI & brain models',eyebrow:'DISCOVER',description:'AI for understanding brains, brains as a guide to AI, and the tools connecting maps, models and behavior.',question:'What can a model teach us about a brain—and how would we test it?',concepts:['Anatomy, activity and behavior are different kinds of evidence','Model assumptions, sensory inputs and output controllers','Held-out prediction, perturbation and simpler baselines'],atlasQuery:'model',color:'#355f98'});
+hubResources.push(...neuroAIData.resources);
+hubGlossary.push(
+ ['NeuroAI','Research connecting artificial intelligence and neuroscience: using AI to study nervous systems and using biological findings to develop or evaluate AI.','neuroai'],
+ ['Connectome','A map of anatomical connections in a specified nervous-system sample. A connectome has a specimen, coverage and reconstruction uncertainty; it does not directly measure all functional dynamics.','neuroai'],
+ ['Brain emulation','An attempt to reproduce aspects of biological neural computation in a computational system. Its fidelity depends on model assumptions and tests, not only the number of modeled neurons.','neuroai'],
+ ['Embodied model','A model coupled to a body and an environment, often simulated, through sensory inputs and motor outputs. The body controller and sensory encoding are part of the system.','neuroai'],
+ ['Neural foundation model','A model pretrained on neural or brain-related data and adapted to multiple prediction tasks. Generalization must be tested across the claimed subjects, sessions and tasks.','neuroai'],
+ ['Reward signal','Feedback used by a learning rule to favor some outcomes. In a simulation, a variable called dopamine is a modeling choice rather than a measurement of a biological reward state.','neuroai'],
+ ['In-silico experiment','An experiment performed in a computational model. Its result describes that model under the tested assumptions.','neuroai'],
+ ['Organoid','A laboratory-grown three-dimensional cell culture with some tissue-like organization. A neural organoid is not equivalent to a complete brain.','neuroai'],
+ ['Weighted connection','A model edge with a numerical weight. It can summarize several anatomical synapses, so a weighted-edge count and a synapse count may differ.','neuroai']
+);
+hubGuides.neuroai={
+ primer:[
+  'NeuroAI connects two directions of research. AI can help reconstruct cells from images, discover structure in recordings and predict neural responses. Neuroscience can supply mechanisms, learning problems and biological benchmarks for AI.',
+  'A brain map, a neural model, an embodied agent and a living cell culture are different starting points. To understand an exciting demonstration, identify its biological data, model assumptions, task interface and validation. The NeuroAI project collection follows that chain for each example.'
+ ],
+ tradeoffs:[
+  {choice:'Anatomical detail',benefit:'A measured wiring graph constrains which cells can directly interact.',cost:'Weights, dynamics, missing regions and plasticity still require measurements or assumptions.'},
+  {choice:'Predictive performance',benefit:'A learned representation can support useful decoding or generalization.',cost:'High accuracy alone does not identify the biological mechanism or reproduce an individual brain.'},
+  {choice:'Embodiment and feedback',benefit:'A model can interact with an environment and reveal the consequences of its choices.',cost:'The sensory encoder, controller, training process and reward rule can strongly shape the result.'}
+ ],
+ workflow:[
+  {title:'Name the question',action:'Specify whether you are predicting activity, explaining a circuit, reproducing behavior or learning an unfamiliar task.',output:'One testable question and an explicit endpoint.'},
+  {title:'Trace the ingredients',action:'Record the dataset release and distinguish measured anatomy or activity from fitted parameters and assumed rules.',output:'A map of data, model, task interface and provenance.'},
+  {title:'Define a fair test',action:'Choose held-out sessions, animals or time blocks appropriate to the claim. Add a simple baseline and a mechanism-specific control.',output:'A frozen split, comparison conditions and evaluation metric.'},
+  {title:'Inspect what survives',action:'Report uncertainty, failed conditions and sensitivity to parameters. Decide which conclusions are about the model and which have biological support.',output:'A reproducible result with a clearly bounded interpretation.'}
+ ],
+ pitfalls:[
+  'Calling a simulated circuit a living animal, or assuming a neural cell culture is an intact brain.',
+  'Treating a whole-map label as proof that every region, synapse or physiological property is available.',
+  'Equating model size, a compelling video, or a novel task with demonstrated biological fidelity.',
+  'Evaluating on data that influenced fitting, controller design or the choice of a successful example.',
+  'Treating a company goal such as mind uploading as an achieved scientific result.'
+ ],
+ sources:[{title:'Neuromatch NeuroAI course',url:'https://neuroai.neuromatch.io/'},{title:'FlyWire whole-brain connectome',url:'https://www.nature.com/articles/s41586-024-07558-y'},{title:'A Drosophila computational brain model',url:'https://www.nature.com/articles/s41586-024-07763-9'}],
+ related:['computation','imaging','signals','data','behavior']
+};
+hubLearningPaths.push(
+ {id:'connectome',title:'Follow a connection through a fly brain',description:'Use a real connectome viewer to understand what a neural wiring map contains.',prerequisites:'No coding required for the starting exploration; check the viewer’s account and access requirements.',outcome:'A short circuit notebook with neuron IDs, source links, connection counts and explicit limits.',steps:[
+  ['flywire-codex','Identify the dataset','Select the male CNS (MCNS v1.0) dataset in Codex. Record its specimen, release and brain-plus-nerve-cord coverage before comparing counts.'],
+  ['flywire-codex','Choose one neuron','Find an annotated neuron or cell type, inspect its morphology and record its identifier and annotation provenance.'],
+  ['flywire-codex','Follow its partners','Inspect input and output partners. Distinguish the number of partner neurons from the number of synapses connecting them.'],
+  ['neuprint','Write a bounded circuit claim','Select male-cns:v1.0 in neuPrint to compare the same specimen and release. Check identifier conventions and edge thresholds before comparing partners. State what anatomy suggests and what still needs functional measurements.']
+ ]},
+ {id:'neuroai',title:'Test a neural representation',description:'Use a published CEBRA example to learn how a useful embedding differs from an explanation of the brain.',prerequisites:'Python, arrays and basic machine learning; the project documentation specifies compute requirements.',outcome:'A reproducible notebook with a simple baseline, an embedding model and a held-out evaluation.',steps:[
+  ['neuroai-course','Choose a prediction question','Review neural representations and model evaluation. Define a target and decide whether you want to generalize across trials, time or sessions.'],
+  ['cebra','Reproduce a small example','Use an official demo with its example dataset and documented settings. Record labels, preprocessing, software versions and split choices.'],
+  ['cebra','Compare with a baseline','Compare the learned representation with a simpler representation using the same training data and decoder. Keep test data outside fitting and model selection.'],
+  ['cebra','Test the interpretation','Evaluate held-out prediction and repeat across seeds. Add a label-shuffle or time-shift control appropriate to the data; avoid interpreting a visually appealing embedding as proof of mechanism.']
+ ]}
+);
+hubProjectChecks.connectome={checks:['Record specimen, release, neuron IDs and the original viewer links.','Keep synapses, distinct partners and modeled weights as separate quantities.','Separate anatomical observations from claims about dynamics, learning or behavior.'],stretch:'Compare a homologous cell type across two documented releases or specimens and explain annotation and coverage differences.'};
+hubProjectChecks.neuroai={checks:['Fit preprocessing, embeddings and hyperparameters using training data only.','Use the same held-out samples and downstream evaluation for the learned model and baseline.','Report uncertainty across appropriate trials or sessions, and inspect a negative control.'],stretch:'Test transfer to another session while keeping the final test set untouched; compare the result with within-session performance.'};
+for(const id of ['computation','imaging','data'])if(!hubGuides[id].related.includes('neuroai'))hubGuides[id].related.push('neuroai');

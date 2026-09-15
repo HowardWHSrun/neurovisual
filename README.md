@@ -1,6 +1,6 @@
 # Neurovisual
 
-A neuroengineering reference hub connecting field overviews, learning resources, and the Global Neurotechnology Atlas.
+A visual field guide to understanding the brain: neuroengineering, NeuroAI, practical tools, learning paths, research connections, and evolving ideas.
 
 Public site: https://howardwhsrun.github.io/neurovisual/
 
@@ -8,18 +8,19 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 
 - **Start here:** a photography-led introduction, a beginner route, and four ways into the research: companies/labs, problems, people/connections, and countries. Navigation keeps the detailed reference sections in expandable groups.
 - **Explore the field:** eight source-linked problem groups and six starter relationship stories. Country guides connect mapped labs and companies; combine problem and country filters, then open the exact profile or original source.
-- **Topic guides:** ten topics grouped by the questions they answer, with visual introductions and expandable workflows, examples, sources, and tools. Use Expand all details for a full read.
-- **Resource library:** 41 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
-- **Learning paths:** six four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, and stimulation modeling. Each includes evaluation criteria and a stretch question.
-- **Glossary:** 40 introductory definitions with links to their topic guides.
+- **NeuroAI:** sourced project guides spanning connectomics, brain models and emulation, AI inspired by biology, and living neural computing. Follow the four-step Map → Model → Act → Test explanation, then open tools or learning paths. See [NEUROAI.md](NEUROAI.md).
+- **Topic guides:** eleven topics grouped by the questions they answer, with visual introductions and expandable workflows, examples, sources, and tools. Use Expand all details for a full read.
+- **Resource library:** 53 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
+- **Learning paths:** eight four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, stimulation modeling, connectome exploration, and neural representation evaluation. Each includes evaluation criteria and a stretch question.
+- **Glossary:** 49 introductory definitions with links to their topic guides.
 - **Methods comparison:** a two-method comparison bench with direct links from search, plus the full reference for eight electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
 - **Topic depth:** each guide includes engineering tradeoffs, a four-stage workflow, common mistakes, and primary sources, with worked examples where useful.
-- **Ideas notebook:** four evolving notes, a six-platform visual gallery with verified YouTube embeds and original scaling diagrams, an interactive site/channel comparison, a bandwidth calculator, and a downloadable 20-milestone research package. Begin at [Ideas](https://howardwhsrun.github.io/neurovisual/#ideas).
+- **Ideas notebook:** six evolving notes, a six-platform visual gallery with verified YouTube embeds and original scaling diagrams, an interactive site/channel comparison, a bandwidth calculator, and a downloadable 20-milestone research package. Begin at [Ideas](https://howardwhsrun.github.io/neurovisual/#ideas).
 - **Research labs:** detailed project-level profiles, institutional discovery directories, and field-specific progress measures across seven regions. Start at [Research labs](https://howardwhsrun.github.io/neurovisual/#labs); see [LABS.md](LABS.md) to extend the evidence.
 - **Search:** a compact, on-demand dialog with result previews across lab projects, ideas, companies, guides, resources, and the atlas. Open it with Search, `/`, or Cmd/Ctrl+K; typing preserves the current page and Escape closes it. The results page has its own refinement field.
 - **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
-Atlas records retain their original dates and limitations. Resource links were reviewed on September 7, 2026; this does not mean every atlas record was reverified that day. The site is a curated starting point, not a complete census or a clinical reference.
+Atlas records retain their original dates and limitations. The core resource collection was reviewed on September 7, 2026; new NeuroAI entries show their September 15 review dates; this does not mean every atlas record was reverified that day. The site is a curated starting point, not a complete census or a clinical reference.
 
 ## Editorial approach
 
@@ -47,6 +48,7 @@ The original TypeScript/classic-script architecture is retained. GitHub Pages se
 | File | Purpose |
 | --- | --- |
 | `index.html`, `organization.css`, `guide-reading.css` | Navy navigation, research photography, beginner home page, topic directory, and expandable reading |
+| `data/neuroai.json`, `src/neuroai*.ts`, `neuroai.css` | NeuroAI dossiers, visual explanation, glossary and practical learning integration |
 | `src/explore.ts`, `explore.css`, `data/exploration*.json` | Four exploration views, problem/country combinations, and evidence-linked people stories |
 | `scripts/build-explore.mjs`, `scripts/check-explore.mjs` | Generate exploration data and check references, filters, geography, rendering, and navigation |
 | `workspace.css` | On-demand search, catalog, dictionary, learning, and comparison layouts |

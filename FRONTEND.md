@@ -60,7 +60,7 @@ See `VISUAL-PLAN.md` for the route-by-route revision checklist. `pnpm test` vali
 - `data/exploration-people.json` supplies short entry stories using existing graph IDs, relationship types, and exact sources. Graph edge direction is preserved. Training, co-authorship, collaboration, and founding are kept distinct.
 - `scripts/build-explore.mjs` generates `dist/exploration-data.js`. Load this and `dist/explore.js` before the hub router. `window.neuroAtlas.organizations` exposes the existing named country fields for company discovery; no country is inferred from text search.
 - Country guides include exact mapped lab and company locations. Counts measure collection coverage. Global and European Union entries appear separately as work across countries. Long lists initially show eight entries with the rest in native disclosures.
-- Home and exploration images retain their research captions and original sources. The home microscopy is a Rice mouse-brain image; photographs and experimental figures are kept distinct from explanation diagrams.
+- Home and exploration images retain their research captions and original sources. The home microscopy shows expansion-microscopy research from MIT; photographs and experimental figures are kept distinct from explanation diagrams.
 - Explore navigation pushes history and moves focus to the main content. Changing the country selector keeps focus on the replacement selector. Ordinary modified clicks remain native.
 
 ## People and focused explanations (15 September 2026)
@@ -69,3 +69,13 @@ See `VISUAL-PLAN.md` for the route-by-route revision checklist. `pnpm test` vali
 - `#people?view=compare` places two people side by side; `#people?view=method` explains matching, metrics and weighted percentiles using a real example. Unknown identities and missing metrics never become fabricated zero scores.
 - `src/visuals.ts` now presents four focused sections: device pictures, labs, people, and neural counts. The illustrative 32-site /8-channel /6-unit journey has one active step, visible context and direct controls.
 - `people.css` adapts the ranked table to compact cards on phones. Native forms, focus restoration and result-page links support keyboard browsing.
+
+## NeuroAI and brain models (15 September 2026)
+
+- `#neuroai` adds a project collection, detailed source trails, and separate explanation and learning views. `neuroai.css` gives these views a shared visual language with layouts appropriate to their function.
+- `data/neuroai.json` holds reviewed evidence and credited media. Its resources join the main resource library; project records join global search. `src/neuroai-learning.ts` adds a guide, glossary terms and two practical paths.
+- The explanation has four native buttons with one active layer. Stage changes push history and restore focus; project filters submit explicitly and keep search focus. Controls are compact and remain in normal document flow.
+- Original research images have source captions. Code-native diagrams describe the system and do not claim to show experimental results. YouTube players use the existing click-to-load behavior and are cleared on route changes.
+- See `NEUROAI.md` for scope, evidence standards and extension instructions.
+
+NeuroAI release verification: full `pnpm test` and `pnpm check` passed. Browser checks covered the project collection, source-linked dossiers, the four explanation layers, filtered search/focus and browser back, plus 390- and 320-pixel phone layouts. Original images were checked against their source pages; tall publication figures use contained, uncropped bounds and an original-image link. This browser blocked the YouTube embed, and the poster/direct-link fallback recovered correctly. Research software was not executed.

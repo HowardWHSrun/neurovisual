@@ -1,4 +1,4 @@
-interface HubResource { id: string; title: string; url: string; description: string; topic: string; type: string; level: string; }
+interface HubResource { reviewed?: string; id: string; title: string; url: string; description: string; topic: string; type: string; level: string; }
 interface HubTopic { id: string; title: string; eyebrow: string; description: string; question: string; concepts: string[]; atlasQuery: string; color: string; }
 const hubTopics: HubTopic[] = [
   { id: 'interfaces', title: 'Neural interfaces', eyebrow: 'CONNECT', description: 'Electrodes, acquisition electronics, materials, and the interface with living tissue.', question: 'How do we record useful signals without losing stability over time?', concepts: ['Electrode impedance and noise', 'Biocompatibility and chronic stability', 'Bandwidth, power, and telemetry'], atlasQuery: 'electrode', color: '#155bc5' },

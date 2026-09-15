@@ -105,6 +105,7 @@ const FieldVisuals = (() => {
   function diagram(id:string):Diagram {
     if(id==='interfaces'||id==='signals')return signalDiagram(id);
     if(id==='bci'||id==='stimulation')return loopDiagram(id==='stimulation');
+    if(id==='neuroai')return {title:'Map → model → action → test',description:'Anatomy, assumed dynamics, a task interface and independent validation are separate layers of a NeuroAI system.',art:NeuroAI.art('models')};
     if(id==='computation')return modelDiagram();
     if(id==='behavior')return {title:'Two views can recover a third dimension',description:'Match keypoints across calibrated, synchronized cameras. Reprojection checks compare the reconstruction with the original images.',art:poseArt()};
     if(id==='imaging')return imagingDiagram();
@@ -115,7 +116,7 @@ const FieldVisuals = (() => {
   function learning(id:string) {
     const path=hubLearningPaths.find(p=>p.id===id);
     if(!path)return '';
-    const topicId:Record<string,string>={eeg:'signals',spikes:'interfaces',motion:'behavior',model:'computation',calcium:'imaging','stimulation-model':'stimulation'};
+    const topicId:Record<string,string>={eeg:'signals',spikes:'interfaces',motion:'behavior',model:'computation',calcium:'imaging','stimulation-model':'stimulation',neuroai:'neuroai',connectome:'neuroai'};
     const d=diagram(topicId[id]||'data');
     const steps=`<ol class="fv-roadmap">${path.steps.map(([resource,title],i)=>{
       const r=hubResources.find(r=>r.id===resource);

@@ -166,6 +166,85 @@
           "change": "The calculator is arithmetic for hypothetical acquisition settings, not a device power model or an information-rate estimate."
         }
       ]
+    },
+    {
+      "id": "fly-circuit-learning",
+      "title": "Can a fly circuit learn a new objective?",
+      "status": "Open hypothesis",
+      "theme": "NeuroAI & learning",
+      "question": "What would show that feedback improves a connectome-based model on an unfamiliar task?",
+      "summary": "Use the fly Bitcoin demo as a starting question about simulated reward, model plasticity and fair evaluation.",
+      "observation": "Alex Wormuth describes a fly-brain Bitcoin experiment. The linked Stonkfly repository implements a computational model using a MaleCNS graph, task inputs, a fixed buy/sell/hold readout and modeled dopamine feedback. The repository says profitable learning has not been demonstrated.",
+      "interpretation": "A new task can probe how a biological wiring scaffold interacts with a designed input mapping, output rule and plasticity rule. Improvement could come from any of these layers; the wiring alone does not identify the cause.",
+      "test": "Use recorded inputs and simulated money. Freeze a held-out time period before tuning. Compare the intact model with disabled reward, shuffled reward, disabled plasticity and a simple fixed or randomized readout under the same transaction-cost assumptions. Repeat across seeds and inspect whether the proposed synapses change as predicted.",
+      "revision": "Evidence for task learning would strengthen if reward-dependent improvement persists on unseen data and disappears under mechanism-specific controls. If a simple controller or shuffled circuit performs similarly, the circuit-specific interpretation should be revised.",
+      "updated": "2026-09-15",
+      "sources": [
+        {
+          "title": "Alex Wormuth’s original public demonstration",
+          "url": "https://x.com/wormuth/status/2098012107652391357"
+        },
+        {
+          "title": "Stonkfly: implementation, model choices and validation limits",
+          "url": "https://github.com/nftechie/stonkfly"
+        },
+        {
+          "title": "Google Research: male fruit-fly connectome",
+          "url": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/"
+        }
+      ],
+      "related": [
+        "connectome-to-model"
+      ],
+      "organizations": [
+        "janelia"
+      ],
+      "history": [
+        {
+          "date": "2026-09-15",
+          "change": "Added as a model-learning question, separating the personal demonstration from established performance."
+        }
+      ]
+    },
+    {
+      "id": "connectome-to-model",
+      "title": "Does a bigger brain map make a better model?",
+      "status": "Open hypothesis",
+      "theme": "NeuroAI & neural scaling",
+      "question": "When does additional anatomical detail improve prediction rather than only increase model size?",
+      "summary": "Connect neuron and synapse counting to model fidelity, dataset coverage and held-out validation.",
+      "observation": "FlyWire, the male-fly CNS map and MICrONS provide different anatomical and functional datasets. Computational models add dynamics, parameters and task interfaces to these resources. Neurons, anatomical synapses and aggregated weighted edges are different counting units.",
+      "interpretation": "Anatomical detail is a useful constraint, but its value depends on the question. A smaller circuit with relevant physiological measurements may answer a defined task better than a larger graph with uncertain dynamics. This is a research hypothesis, not a universal rule.",
+      "test": "Compare nested or deliberately simplified models using the same dataset, input conditions and held-out target. Change one source of detail at a time: wiring, cell types, weights, dynamics or plasticity. Report predictive gain, parameter sensitivity and computational cost separately.",
+      "revision": "A scaling claim becomes stronger if extra measured detail consistently improves unseen predictions across suitable tasks or specimens. If the effect vanishes after controlling for controller training or parameter count, model size alone is an inadequate explanation.",
+      "updated": "2026-09-15",
+      "sources": [
+        {
+          "title": "FlyWire whole-brain connectome",
+          "url": "https://www.nature.com/articles/s41586-024-07558-y"
+        },
+        {
+          "title": "Male fruit-fly central nervous system connectome",
+          "url": "https://doi.org/10.1016/j.cell.2026.08.015"
+        },
+        {
+          "title": "MICrONS functional connectomics",
+          "url": "https://www.nature.com/articles/s41586-025-08790-w"
+        }
+      ],
+      "related": [
+        "moores-law-bci",
+        "fly-circuit-learning"
+      ],
+      "organizations": [
+        "janelia"
+      ],
+      "history": [
+        {
+          "date": "2026-09-15",
+          "change": "Extended the counting notebook from recording hardware to anatomical maps and predictive models."
+        }
+      ]
     }
   ],
   "companies": [

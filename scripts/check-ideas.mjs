@@ -7,7 +7,7 @@ const read = path => readFile(new URL(path, root), 'utf8');
 const ideas = JSON.parse(await read('data/ideas.json'));
 const counts = JSON.parse(await read('data/neural-counts.json'));
 const context = vm.createContext({URL, URLSearchParams});
-for (const path of ['dist/hub-utils.js','dist/ideas-data.js','dist/company-media.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/connections-data.js','dist/connections.js','dist/origins-data.js','dist/connection-network.js','dist/origins.js','dist/ideas.js']) vm.runInContext(await read(path), context);
+for (const path of ['dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/ideas-data.js','dist/company-media.js','dist/neuroai-data.js','dist/neuroai-learning.js','dist/neuroai.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/connections-data.js','dist/connections.js','dist/origins-data.js','dist/connection-network.js','dist/origins.js','dist/ideas.js']) vm.runInContext(await read(path), context);
 const api = vm.runInContext('NeuroIdeas', context);
 assert.equal(JSON.stringify(vm.runInContext('neuroIdeasData', context)), JSON.stringify({...ideas, counts}), 'Rebuild after editing source data');
 const atlas = await read('src/app.ts');
@@ -58,7 +58,7 @@ assert.equal(api.records().length,ideas.ideas.length+ideas.companies.length);
 const index=await read('index.html');
 const scripts=[...index.matchAll(/<script defer src="([^"?]+)/g)].map(m=>m[1]);
 for(const [a,b] of [['hub-utils','ideas'],['ideas-data','company-media'],['company-media','ideas'],['ideas','app'],['app','hub'],['i18n','app']]) assert(scripts.indexOf('./dist/'+a+'.js')<scripts.indexOf('./dist/'+b+'.js'));
-const legacyNavRoutes=['overview','connections','visuals','resources','learn','glossary','methods','ideas','labs','atlas','organizations','researchers','frontier','pathways','timeline'];
+const legacyNavRoutes=['overview','connections','visuals','neuroai','resources','learn','glossary','methods','ideas','labs','atlas','organizations','researchers','frontier','pathways','timeline'];
 for(const route of [...legacyNavRoutes,'topics','explore']) assert(index.includes(`data-route="${route}"`),`Keep navigation to ${route}`);
 for(const key of ['purposeAll','operationAll','axisGuide1Text','axisGuide2Text','axisGuide3Text']) assert(index.includes('data-i18n="'+key+'"'),`Preserve atlas label ${key}`);
 
@@ -99,7 +99,7 @@ assert(container.querySelector('#idea-budget-result').textContent.startsWith('En
 // Run the actual hub router against lightweight shell elements to check that
 // notebook routes and search coexist with the retained atlas adapter.
 const hubContext=vm.createContext({URL,URLSearchParams,document:{readyState:'loading',documentElement:{setAttribute(){}},addEventListener(){}}});
-for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/connections-data.js','dist/connections.js','dist/origins-data.js','dist/connection-network.js','dist/origins.js','dist/field-visuals.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js','dist/exploration-data.js','dist/explore.js','dist/people-data.js','dist/people.js']) vm.runInContext(await read(path),hubContext);
+for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/connections-data.js','dist/connections.js','dist/origins-data.js','dist/connection-network.js','dist/origins.js','dist/field-visuals.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/neuroai-data.js','dist/neuroai-learning.js','dist/neuroai.js','dist/ideas.js','dist/exploration-data.js','dist/explore.js','dist/people-data.js','dist/people.js']) vm.runInContext(await read(path),hubContext);
 const strings=vm.runInContext('I18N.strings',hubContext);
 for(const m of atlas.matchAll(/I18N\.t\('([^']+)'\)/g)) assert(strings[m[1]]?.en && strings[m[1]]?.zh,`Missing bilingual key ${m[1]}`);
 for(const m of index.matchAll(/data-i18n(?:-aria|-ph|-html)?="([^"]+)"/g)) assert(strings[m[1]],`Missing static translation ${m[1]}`);
@@ -148,6 +148,15 @@ assert(hubContent.innerHTML.includes('https://'),'Topic detail retains source li
 for(const [hash,expected] of [['#ideas/moores-law-bci?section=counts&metric=channels','384'],['#ideas/moores-law-bci?section=companies&company=synchron','Synchron'],['#search?q=Moore','kind=Idea'],['#search?q=Paradromics','Company scaling'],['#ideas/missing','IDEA NOT FOUND'],['#labs/rice-tringides','hydroMEA'],['#labs?view=schools','University of Zurich'],['#labs?view=progress','lab-progress-table'],['#search?q=hydroMEA','Research lab'],['#labs/missing','profile not found']]){
   hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);assert(!hubContent.hidden && atlasContent.hidden);
 }
+for(const [hash,expected,detail] of [['#neuroai','Start with the question.',false],['#neuroai/cebra','Follow the source trail.',true],['#neuroai?view=explain&stage=2','LAYER 3 / 4',false],['#neuroai?view=learn','A practical toolkit',false],['#neuroai/missing','Project not found.',true]]){
+  hubContext.location.hash=hash;windowEvents.hashchange();
+  assert(hubContent.innerHTML.includes(expected),hash);assert(!hubContent.hidden && atlasContent.hidden);
+  assertNavigation('neuroai','neuroai',detail);
+}
+for(const [hash,expected] of [['#topic/neuroai','Explore sourced NeuroAI projects'],['#learn/neuroai','Test a neural representation'],['#learn/connectome','Follow a connection through a fly brain'],['#resources?topic=neuroai','CEBRA'],['#search?q=NeuroAI','NeuroAI project'],['#ideas/fly-circuit-learning','href="#neuroai/stonkfly"'],['#ideas/connectome-to-model','href="#neuroai/male-cns"']]){
+  hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);
+}
+console.log('Passed: NeuroAI project, explanation and learning routes, search records, resource/topic integration, and notebook bridges.');
 // On-demand search must preserve the page until a result or submit is chosen.
 hubContext.location.hash='#methods';windowEvents.hashchange();
 assert(hubContent.innerHTML.includes('method-compare') && hubContent.innerHTML.includes('BOLD fMRI'));

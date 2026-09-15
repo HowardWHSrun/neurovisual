@@ -102,6 +102,8 @@ const FieldVisuals = (() => {
             return signalDiagram(id);
         if (id === 'bci' || id === 'stimulation')
             return loopDiagram(id === 'stimulation');
+        if (id === 'neuroai')
+            return { title: 'Map → model → action → test', description: 'Anatomy, assumed dynamics, a task interface and independent validation are separate layers of a NeuroAI system.', art: NeuroAI.art('models') };
         if (id === 'computation')
             return modelDiagram();
         if (id === 'behavior')
@@ -117,7 +119,7 @@ const FieldVisuals = (() => {
         const path = hubLearningPaths.find(p => p.id === id);
         if (!path)
             return '';
-        const topicId = { eeg: 'signals', spikes: 'interfaces', motion: 'behavior', model: 'computation', calcium: 'imaging', 'stimulation-model': 'stimulation' };
+        const topicId = { eeg: 'signals', spikes: 'interfaces', motion: 'behavior', model: 'computation', calcium: 'imaging', 'stimulation-model': 'stimulation', neuroai: 'neuroai', connectome: 'neuroai' };
         const d = diagram(topicId[id] || 'data');
         const steps = `<ol class="fv-roadmap">${path.steps.map(([resource, title], i) => {
             const r = hubResources.find(r => r.id === resource);

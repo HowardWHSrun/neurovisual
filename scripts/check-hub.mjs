@@ -5,7 +5,7 @@ import { join, dirname } from 'node:path';
 import vm from 'node:vm';
 const root=join(dirname(fileURLToPath(import.meta.url)),'..');
 const context=vm.createContext({URL,URLSearchParams});
-for(const path of ['dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js'])vm.runInContext(await readFile(join(root,path),'utf8'),context);
+for(const path of ['dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/neuroai-data.js','dist/neuroai-learning.js'])vm.runInContext(await readFile(join(root,path),'utf8'),context);
 const {utils,topics,resources,paths,glossary,guides,methods,checks}=vm.runInContext('({utils:hubUtils,topics:hubTopics,resources:hubResources,paths:hubLearningPaths,glossary:hubGlossary,guides:hubGuides,methods:hubMethods,checks:hubProjectChecks})',context);
 assert.equal(utils.escapeHtml('<img src=x onerror="alert(1)"> & \'x\''),'&lt;img src=x onerror=&quot;alert(1)&quot;&gt; &amp; &#39;x&#39;');
 for(const href of ['javascript:alert(1)','data:text/html,<script>alert(1)</script>','file:///etc/passwd','not a URL'])assert.equal(utils.sourceHref(href),'#');
@@ -45,6 +45,10 @@ const scripts=[...html.matchAll(/<script defer src="([^"?]+)/g)].map(m=>m[1]);
 assert(scripts.indexOf('./dist/hub-utils.js')<scripts.indexOf('./dist/app.js'));
 assert(scripts.indexOf('./dist/app.js')<scripts.indexOf('./dist/hub.js'));
 assert(scripts.indexOf('./dist/hub-guides.js')<scripts.indexOf('./dist/hub.js'));
+for(const [before,after] of [['hub-data','neuroai-learning'],['hub-guides','neuroai-learning'],['neuroai-data','neuroai-learning'],['neuroai-data','neuroai'],['company-media','neuroai'],['neuroai-learning','hub'],['neuroai','hub']]){
+  const a=scripts.indexOf('./dist/'+before+'.js'),b=scripts.indexOf('./dist/'+after+'.js');
+  assert(a>=0 && b>=0 && a<b,`${before} must load before ${after}`);
+}
 assert(!html.includes('cdn.jsdelivr.net'),'Core rendering dependency must be local');
 const jobs=JSON.parse(await readFile(join(root,'data/jobs.json'),'utf8'));
 for(const job of jobs.jobs.filter(j=>j.source==='Curated'))assert.equal(job.postedAt,null,'Curated jobs must not have fabricated posting dates');
