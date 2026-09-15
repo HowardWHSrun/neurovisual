@@ -102,21 +102,35 @@ for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/h
 const strings=vm.runInContext('I18N.strings',hubContext);
 for(const m of atlas.matchAll(/I18N\.t\('([^']+)'\)/g)) assert(strings[m[1]]?.en && strings[m[1]]?.zh,`Missing bilingual key ${m[1]}`);
 for(const m of index.matchAll(/data-i18n(?:-aria|-ph|-html)?="([^"]+)"/g)) assert(strings[m[1]],`Missing static translation ${m[1]}`);
-function shell(id){return {id,value:'',hidden:false,innerHTML:'',textContent:'',events:{},dataset:{},classList:{remove(){},contains(){return false;}},setAttribute(){},removeAttribute(){},focus(){},addEventListener(t,fn){this.events[t]=fn;},querySelector(){return null;},querySelectorAll(){return [];}};}
-const shellIds=['hub-content','neurotech-atlas-2026','global-search','site-sidebar','mobile-menu','main-content','global-search-form','atlas-view-title','atlas-view-description'];
+function shell(id){return {id,value:'',hidden:false,innerHTML:'',textContent:'',open:false,events:{},dataset:{},classList:{add(){},remove(){},contains(){return false;}},showModal(){this.open=true;},close(){this.open=false;this.events.close?.();},setAttribute(){},removeAttribute(){},focus(){},addEventListener(t,fn){this.events[t]=fn;},querySelector(){return null;},querySelectorAll(){return [];}};}
+const shellIds=['hub-content','neurotech-atlas-2026','global-search','site-sidebar','mobile-menu','main-content','global-search-form','atlas-view-title','atlas-view-description','workspace-page','workspace-section','search-dialog','search-open','search-close','search-status','search-suggestions'];
 const shellElements=Object.fromEntries(shellIds.map(id=>[id,shell(id)]));
 const nav=[...index.matchAll(/data-route="([^"]+)"/g)].map(m=>({...shell(m[1]),dataset:{route:m[1]}}));
-const windowEvents={},navigated=[];
+const windowEvents={},documentEvents={},navigated=[];
 hubContext.location={hash:'#ideas'};
 hubContext.history={replaceState(_a,_b,hash){hubContext.location.hash=hash;},pushState(_a,_b,hash){hubContext.location.hash=hash;}};
 hubContext.window={neuroAtlas:{records:[{id:'neuralink',title:'Neuralink',description:'Organization',kind:'Organization',href:'#org/neuralink'}],counts:{technologies:1,organizations:1,researchers:1},navigate(...args){navigated.push(args);}},addEventListener(type,fn){windowEvents[type]=fn;},scrollTo(){}};
-hubContext.document={getElementById:id=>shellElements[id]||null,querySelector:()=>shell('skip-link'),querySelectorAll:()=>nav,addEventListener(){}};
+hubContext.document={body:shell('body'),getElementById:id=>shellElements[id]||null,querySelector:()=>shell('skip-link'),querySelectorAll:()=>nav,addEventListener(type,fn){documentEvents[type]=fn;}};
 vm.runInContext(await read('dist/hub.js'),hubContext);
 const hubContent=shellElements['hub-content'],atlasContent=shellElements['neurotech-atlas-2026'];
 assert(hubContent.innerHTML.includes('Big ideas, made testable.'));assert(atlasContent.hidden);
-for(const [hash,expected] of [['#ideas/moores-law-bci?section=counts&metric=channels','384'],['#ideas/moores-law-bci?section=companies&company=synchron','Synchron'],['#search?q=Moore','kind=Idea'],['#search?q=Paradromics','Company scaling'],['#ideas/missing','IDEA NOT FOUND'],['#labs/rice-tringides','hydroMEA'],['#labs?view=schools','University of Zurich'],['#labs?view=progress','PROGRESS TO TRACK'],['#search?q=hydroMEA','Research lab'],['#labs/missing','profile not found']]){
+for(const [hash,expected] of [['#ideas/moores-law-bci?section=counts&metric=channels','384'],['#ideas/moores-law-bci?section=companies&company=synchron','Synchron'],['#search?q=Moore','kind=Idea'],['#search?q=Paradromics','Company scaling'],['#ideas/missing','IDEA NOT FOUND'],['#labs/rice-tringides','hydroMEA'],['#labs?view=schools','University of Zurich'],['#labs?view=progress','lab-progress-table'],['#search?q=hydroMEA','Research lab'],['#labs/missing','profile not found']]){
   hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);assert(!hubContent.hidden && atlasContent.hidden);
 }
+// On-demand search must preserve the page until a result or submit is chosen.
+hubContext.location.hash='#methods';windowEvents.hashchange();
+assert(hubContent.innerHTML.includes('method-compare') && hubContent.innerHTML.includes('BOLD fMRI'));
+shellElements['search-open'].events.click();assert(shellElements['search-dialog'].open);
+shellElements['global-search'].value='hydroMEA';shellElements['global-search'].events.input({isComposing:false});
+assert.equal(hubContext.location.hash,'#methods');assert(shellElements['search-suggestions'].innerHTML.includes('Tringides'));
+assert.equal(shellElements['search-status'].textContent,'1 match');
+documentEvents.keydown({key:'Escape',target:{tagName:'INPUT'},preventDefault(){}});assert(!shellElements['search-dialog'].open);
+documentEvents.keydown({key:'/',target:{tagName:'MAIN'},preventDefault(){}});assert(shellElements['search-dialog'].open);
+shellElements['global-search'].events.compositionstart();documentEvents.keydown({key:'Escape',isComposing:true,target:{tagName:'INPUT'},preventDefault(){}});assert(shellElements['search-dialog'].open);shellElements['global-search'].value='never-render-during-ime';shellElements['global-search'].events.input({isComposing:true});assert(!shellElements['search-suggestions'].innerHTML.includes('No matches yet'));
+shellElements['global-search'].value='hydroMEA';shellElements['global-search'].events.compositionend();
+shellElements['global-search-form'].events.submit({preventDefault(){}});assert.equal(hubContext.location.hash,'#search?q=hydroMEA');assert(!shellElements['search-dialog'].open);
+for(const [hash,expected] of [['#search?q=Calcium+imaging','methods?left=calcium'],['#methods?left=fmri','EEG'],['#resources?type=Dataset','resource-shortcuts'],['#learn','learning-preview'],['#glossary?letter=E','glossary-alphabet'],['#methods?left=ecog&right=intracortical','Intracortical electrodes']]){hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);}
+console.log('Passed: on-demand search, keyboard dismissal, IME safety, submit navigation, and purpose-specific section routes.');
 hubContext.location.hash='#org/neuralink';windowEvents.hashchange();assert.equal(navigated.at(-1)[1],'neuralink');assert(hubContent.hidden && !atlasContent.hidden);
 
 const media=vm.runInContext('NeuroMedia',context);

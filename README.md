@@ -10,11 +10,11 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 - **Resource library:** 41 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
 - **Learning paths:** six four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, and stimulation modeling. Each includes evaluation criteria and a stretch question.
 - **Glossary:** 40 introductory definitions with links to their topic guides.
-- **Methods comparison:** eight qualitative comparisons of electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
+- **Methods comparison:** a two-method comparison bench with direct links from search, plus the full reference for eight electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
 - **Topic depth:** each guide includes engineering tradeoffs, a four-stage workflow, common mistakes, and primary sources, with worked examples where useful.
 - **Ideas notebook:** four evolving notes, a six-platform visual gallery with verified YouTube embeds and original scaling diagrams, an interactive site/channel comparison, a bandwidth calculator, and a downloadable 20-milestone research package. Begin at [Ideas](https://howardwhsrun.github.io/neurovisual/#ideas).
 - **Research labs:** detailed project-level profiles, institutional discovery directories, and field-specific progress measures across seven regions. Start at [Research labs](https://howardwhsrun.github.io/neurovisual/#labs); see [LABS.md](LABS.md) to extend the evidence.
-- **Search:** one index spanning lab projects, ideas, company strategies, the guides, resources, technologies, organizations, researchers, programs, career roles, job listings, and paper snapshots.
+- **Search:** a compact, on-demand dialog with result previews across lab projects, ideas, companies, guides, resources, and the atlas. Open it with Search, `/`, or Cmd/Ctrl+K; typing preserves the current page and Escape closes it. The results page has its own refinement field.
 - **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
 Atlas records retain their original dates and limitations. Resource links were reviewed on September 7, 2026; this does not mean every atlas record was reverified that day. The site is a curated starting point, not a complete census or a clinical reference.
@@ -36,7 +36,8 @@ The original TypeScript/classic-script architecture is retained. GitHub Pages se
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Accessible navigation, global search, and retained atlas markup |
+| `index.html`, `workspace.css` | Compact navigation, on-demand search, catalog, dictionary, learning, and comparison layouts |
+| `atlas-experience.css` | Map space, researcher/paper reading panes, career controls, and chronology styles |
 | `data/ideas.json`, `data/neural-counts.json` | Authored research notes, company strategies, and scoped milestone evidence |
 | `data/labs.json`, `src/labs.ts`, `labs.css` | Detailed lab profiles, university directories, filters, and progress measures |
 | `scripts/build-labs.mjs`, `scripts/check-labs.mjs` | Generate data/dossier and validate lab evidence, relationships, and rendering |

@@ -2,6 +2,8 @@
     const content = document.getElementById('hub-content');
     const atlas = document.getElementById('neurotech-atlas-2026');
     const search = document.getElementById('global-search');
+    const searchDialog = document.getElementById('search-dialog');
+    const searchTrigger = document.getElementById('search-open');
     const sidebar = document.getElementById('site-sidebar');
     const menu = document.getElementById('mobile-menu');
     const main = document.getElementById('main-content');
@@ -35,8 +37,7 @@
         const starters = ['neuromatch', 'mne', 'deeplabcut'].map(id => resourceCard(hubResources.find(r => r.id === id))).join('');
         return pageHead('YOUR FIELD GUIDE', 'Neuroengineering, connected.', 'Understand the field. Find the right tools. Follow the people and ideas moving it forward.', `<a class="button-primary" href="#resources">Explore resources <span aria-hidden="true">↗</span></a>`)
             + `<div class="overview-bar"><span>From neural signals<br><strong>to useful systems.</strong></span><div class="overview-stats">${stats}</div><a href="#about">How this is curated ↗</a></div>
-    <section class="idea-home-entry"><div><span class="eyebrow">THE IDEAS NOTEBOOK</span><h2>How does neuroengineering scale?</h2><p>Follow the electrode-count question, compare company strategies, and develop the next experiment.</p></div><a class="button-primary" href="#ideas">Explore evolving ideas ↗</a></section>
-    <section class="lab-home-entry"><div><span class="eyebrow">INSIDE THE RESEARCH LABS</span><h2>Who builds what, and how?</h2><p>Explore ${neuroLabsData.labs.length} detailed lab profiles: investigators, projects, methods, study context, and the measures that matter.</p></div><a class="button-primary" href="#labs">Explore research labs ↗</a></section>
+    <div class="overview-destinations"><a class="overview-notebook" href="#ideas"><span class="eyebrow">THE OPEN NOTEBOOK</span><div class="overview-spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h2>Observe. Question.<br>Build an idea.</h2><p>Explore the electrode-count question and compare the systems being built.</p><strong>Open the notebook <span aria-hidden="true">↗</span></strong></a><a class="overview-labs" href="#labs"><span class="eyebrow">THE RESEARCH DIRECTORY</span><div class="overview-lab-number">${neuroLabsData.labs.length}<span>lab profiles</span></div><h2>Go inside the work.</h2><p>Find investigators, instruments, projects, and evidence across neuroengineering.</p><strong>Explore research labs <span aria-hidden="true">↗</span></strong></a></div>
     <section aria-labelledby="topics-heading"><div class="section-heading"><div><span class="eyebrow">FIND YOUR DIRECTION</span><h2 id="topics-heading">Explore the field</h2></div><span>${hubTopics.length} connected areas</span></div><div class="topic-grid">${hubTopics.map(topicCard).join('')}</div></section>
     <section class="overview-bottom"><div><div class="section-heading"><div><span class="eyebrow">MAKE IT PRACTICAL</span><h2>Start with a question</h2></div></div><div class="question-list"><a href="#methods"><span>Which measurement fits my research question?<small>Compare signals, access, strengths, and limitations</small></span><span aria-hidden="true">↗</span></a><a href="#learn/eeg"><span>How do I build my first neural decoder?<small>EEG → preprocessing → held-out evaluation</small></span><span aria-hidden="true">↗</span></a><a href="#learn/motion"><span>How do I measure behavior in 3D?<small>Video → keypoints → calibrated trajectories</small></span><span aria-hidden="true">↗</span></a><a href="#organizations"><span>Who is working on a particular technology?<small>Explore laboratories, companies, and public projects</small></span><span aria-hidden="true">↗</span></a></div></div><aside class="field-note"><span class="eyebrow">READING THE FIELD</span><h2>Follow the evidence.</h2><p>A compelling demonstration, a registered trial, and a deployed device answer different questions. Follow each record to its source and check the date, study model, and limitations.</p><a href="#frontier">Explore papers &amp; updates ↗</a></aside></section>
     <section><div class="section-heading"><div><span class="eyebrow">A GOOD PLACE TO BEGIN</span><h2>Open resources, real practice</h2></div><a href="#resources?level=Beginner">All beginner resources ↗</a></div><div class="resource-grid three">${starters}</div></section>`;
@@ -46,7 +47,10 @@
         const filtered = hubResources.filter(r => (!topic || r.topic === topic) && (!type || r.type === type) && (!level || r.level === level) && matches([r.title, r.description, r.type, r.level, topicById(r.topic)?.title].join(' '), query));
         const opts = (items, selected) => items.map(x => `<option value="${e(x)}"${selected === x ? ' selected' : ''}>${e(x)}</option>`).join('');
         return pageHead('CURATED REFERENCES', 'Resource library', 'Official documentation, open tools, datasets, and courses. Each link takes you to the original source.')
-            + `<form class="resource-filters" id="resource-filters" role="search"><label class="filter-query">Search resources<input id="resource-query" name="q" type="search" value="${e(query)}" placeholder="Try EEG, Python, 3D, or datasets"></label><label>Topic<select id="resource-topic" name="topic"><option value="">All topics</option>${hubTopics.map(t => `<option value="${t.id}"${topic === t.id ? ' selected' : ''}>${e(t.title)}</option>`).join('')}</select></label><label>Type<select id="resource-type" name="type"><option value="">All types</option>${opts([...new Set(hubResources.map(r => r.type))].sort(), type)}</select></label><label>Level<select id="resource-level" name="level"><option value="">All levels</option>${opts(['Beginner', 'Intermediate', 'Advanced'], level)}</select></label></form>
+            + `<nav class="resource-shortcuts" aria-label="Resource categories">${[['', 'All resources'], ['Tool', 'Tools'], ['Dataset', 'Datasets'], ['Course', 'Courses'], ['Hardware', 'Hardware']].map(([value, label]) => { const next = new URLSearchParams(params); if (value)
+                next.set('type', value);
+            else
+                next.delete('type'); return `<a href="#resources${next.size ? '?' + e(next.toString()) : ''}"${type === value ? ' aria-current="true"' : ''}>${label}<span>${hubResources.filter(r => !value || r.type === value).length}</span></a>`; }).join('')}</nav><form class="resource-filters" id="resource-filters" role="search"><label class="filter-query">Search resources<input id="resource-query" name="q" type="search" value="${e(query)}" placeholder="Try EEG, Python, 3D, or datasets"></label><label>Topic<select id="resource-topic" name="topic"><option value="">All topics</option>${hubTopics.map(t => `<option value="${t.id}"${topic === t.id ? ' selected' : ''}>${e(t.title)}</option>`).join('')}</select></label><label>Type<select id="resource-type" name="type"><option value="">All types</option>${opts([...new Set(hubResources.map(r => r.type))].sort(), type)}</select></label><label>Level<select id="resource-level" name="level"><option value="">All levels</option>${opts(['Beginner', 'Intermediate', 'Advanced'], level)}</select></label></form>
       <div class="results-line"><p role="status">${filtered.length} of ${hubResources.length} resources</p>${query || topic || type || level ? '<a href="#resources">Clear filters</a>' : '<span>Resource links reviewed 7 Sep 2026</span>'}</div>
       <div class="resource-grid">${filtered.length ? filtered.map(resourceCard).join('') : '<div class="hub-empty"><h2>No resources match these filters.</h2><p>Try a broader term or choose another topic.</p><a href="#resources">Show all resources</a></div>'}</div><p class="page-note">Levels are suggested starting points; beginner resources may assume Python or undergraduate science. Check each project’s installation instructions, access terms, and dataset license.</p>`;
     }
@@ -73,9 +77,13 @@
     ${guideDetails(id)}
     <div class="section-heading"><h2>Tools &amp; references</h2><span>${resources.length} official resources</span></div><div class="resource-grid">${resources.map(resourceCard).join('')}</div><div class="section-heading"><h2>Connected areas</h2><a href="#learn">Learning paths ↗</a></div><div class="related-topics">${related.map(id => topicById(id)).filter(Boolean).map(t => `<a href="${topicLink(t.id)}">${e(t.title)} ↗</a>`).join('')}</div>`;
     }
-    function methodsPage() {
+    function methodsPage(params) {
+        const left = hubMethods.find(m => m.id === params.get('left')) || hubMethods[0];
+        const right = hubMethods.find(m => m.id === params.get('right')) || hubMethods.find(m => m.id === (left.id === 'fmri' ? 'eeg' : 'fmri'));
+        const methodOptions = (chosen) => hubMethods.map(m => `<option value="${m.id}"${m.id === chosen ? ' selected' : ''}>${e(m.name)}</option>`).join('');
+        const dimensions = [['signal', 'Measured signal'], ['access', 'Typical access'], ['strength', 'Useful strength'], ['limit', 'Main limitation']];
         return pageHead('MATCH THE METHOD TO THE QUESTION', 'What does each method measure?', 'Compare the measurement first, then the engineering constraints. There is no single best method across all spatial scales, timescales, and research questions.')
-            + `<div class="method-notes"><p><strong>Electrical, hemodynamic, and calcium signals are different measurements.</strong> An indirect signal can be useful without being a direct readout of spikes. Pose video measures behavior.</p><p>Access descriptions are typical contexts. Suitability depends on the specific implementation, study population, and research setting.</p></div><div class="method-table-wrap" role="region" aria-label="Measurement methods comparison; scroll horizontally to see all columns" tabindex="0"><table class="method-table"><caption>Qualitative comparison of ${hubMethods.length} measurement methods</caption><thead><tr><th scope="col">Method</th><th scope="col">Measured signal</th><th scope="col">Typical access</th><th scope="col">Useful strength</th><th scope="col">Main limitation</th></tr></thead><tbody>${hubMethods.map(m => `<tr><th scope="row"><a href="${url(m.source.url)}" target="_blank" rel="noopener noreferrer">${e(m.name)} ↗</a><small>${e(m.source.title)}</small></th><td>${e(m.signal)}</td><td>${e(m.access)}</td><td>${e(m.strength)}</td><td>${e(m.limit)}</td></tr>`).join('')}</tbody></table></div><section class="method-questions"><h2>Before choosing a method</h2><ol><li>Define the biological variable and the claim you need to test.</li><li>Decide which temporal, spatial, behavioral, or population scales matter.</li><li>Account for artifacts, access, calibration, synchronization, and the available expertise.</li><li>Choose a validation strategy that could reveal when the method is misleading you.</li></ol><a href="#topic/interfaces">Neural interfaces guide ↗</a><a href="#topic/imaging">Imaging guide ↗</a><a href="#topic/translation">Translation &amp; evidence ↗</a></section>`;
+            + `<form id="method-compare" class="method-compare-controls"><div><span class="eyebrow">COMPARISON BENCH</span><h2>Put two methods side by side.</h2></div><label>First method<select id="method-left" name="left">${methodOptions(left.id)}</select></label><span class="method-versus" aria-hidden="true">↔</span><label>Second method<select id="method-right" name="right">${methodOptions(right.id)}</select></label></form><div class="method-duo-wrap"><table class="method-duo"><caption class="sr-only">${e(left.name)} and ${e(right.name)}: measurement and engineering tradeoffs</caption><thead><tr><th scope="col">Compare</th><th scope="col">${e(left.name)}</th><th scope="col">${e(right.name)}</th></tr></thead><tbody>${dimensions.map(([key, label]) => `<tr><th scope="row">${label}</th><td>${e(String(left[key]))}</td><td>${e(String(right[key]))}</td></tr>`).join('')}<tr><th scope="row">Read the source</th>${[left, right].map(m => `<td><a href="${url(m.source.url)}" target="_blank" rel="noopener noreferrer">${e(m.source.title)} ↗</a></td>`).join('')}</tr></tbody></table></div><div class="method-notes"><p><strong>Electrical, hemodynamic, and calcium signals are different measurements.</strong> An indirect signal can be useful without being a direct readout of spikes. Pose video measures behavior.</p><p>Access descriptions are typical contexts. Suitability depends on the specific implementation, study population, and research setting.</p></div><details class="method-full"><summary>Browse all ${hubMethods.length} methods in the reference table <span aria-hidden="true">+</span></summary><div class="method-table-wrap" role="region" aria-label="Measurement methods comparison; scroll horizontally to see all columns" tabindex="0"><table class="method-table"><caption>Qualitative comparison of ${hubMethods.length} measurement methods</caption><thead><tr><th scope="col">Method</th><th scope="col">Measured signal</th><th scope="col">Typical access</th><th scope="col">Useful strength</th><th scope="col">Main limitation</th></tr></thead><tbody>${hubMethods.map(m => `<tr><th scope="row"><a href="${url(m.source.url)}" target="_blank" rel="noopener noreferrer">${e(m.name)} ↗</a><small>${e(m.source.title)}</small></th><td>${e(m.signal)}</td><td>${e(m.access)}</td><td>${e(m.strength)}</td><td>${e(m.limit)}</td></tr>`).join('')}</tbody></table></div></details><section class="method-questions"><h2>Before choosing a method</h2><ol><li>Define the biological variable and the claim you need to test.</li><li>Decide which temporal, spatial, behavioral, or population scales matter.</li><li>Account for artifacts, access, calibration, synchronization, and the available expertise.</li><li>Choose a validation strategy that could reveal when the method is misleading you.</li></ol><a href="#topic/interfaces">Neural interfaces guide ↗</a><a href="#topic/imaging">Imaging guide ↗</a><a href="#topic/translation">Translation &amp; evidence ↗</a></section>`;
     }
     function learnPage(id) {
         if (id) {
@@ -87,13 +95,17 @@
                 + `<div class="path-context"><div><span class="eyebrow">BEFORE YOU START</span><p>${e(path.prerequisites)}</p></div><div><span class="eyebrow">WHAT YOU WILL MAKE</span><p>${e(path.outcome)}</p></div></div><ol class="learning-steps">${path.steps.map((s, i) => `<li><span class="step-number">0${i + 1}</span><div><span class="eyebrow">STEP ${i + 1}</span><h2>${e(s[1])}</h2><p>${e(s[2])}</p>${external(hubResources.find(r => r.id === s[0]), 'Open ' + hubResources.find(r => r.id === s[0]).title)}</div></li>`).join('')}</ol>${assessment ? `<section class="project-assessment"><span class="eyebrow">CHECK YOUR WORK</span><h2>What a solid result includes</h2><ul>${assessment.checks.map(c => `<li>${e(c)}</li>`).join('')}</ul><p><strong>Stretch question:</strong> ${e(assessment.stretch)}</p></section>` : ''}<p class="page-note">These are editorial learning sequences, not accredited courses. Use research and example data; the outcomes are educational projects.</p>`;
         }
         return pageHead('LEARN BY DOING', 'A path from curiosity to practice.', 'Choose one concrete project. Build the background you need as you go.')
-            + `<div class="learning-grid">${hubLearningPaths.map((p, i) => `<article class="learning-card"><span class="learning-index">0${i + 1}</span><span class="eyebrow">4 STEPS · PROJECT BASED</span><h2><a href="#learn/${p.id}">${e(p.title)}</a></h2><p>${e(p.description)}</p><div><span class="eyebrow">YOU WILL MAKE</span><p>${e(p.outcome)}</p></div><a class="button-primary" href="#learn/${p.id}">Open learning path ↗</a></article>`).join('')}</div><div class="learning-support"><h2>Looking for a degree or a research role?</h2><p>Compare programs, explore role types, and investigate the people doing work that interests you.</p><a href="#pathways">Study &amp; careers ↗</a><a href="#researchers">Researcher trails ↗</a></div>`;
+            + `<div class="learning-grid">${hubLearningPaths.map((p, i) => `<article class="learning-card"><span class="learning-index">0${i + 1}</span><span class="eyebrow">4 STEPS · PROJECT BASED</span><h2><a href="#learn/${p.id}">${e(p.title)}</a></h2><p>${e(p.description)}</p><div><span class="eyebrow">YOU WILL MAKE</span><p>${e(p.outcome)}</p></div><ol class="learning-preview" aria-label="Path sequence">${p.steps.map(s => `<li>${e(s[1])}</li>`).join('')}</ol><a class="button-primary" href="#learn/${p.id}">Open learning path ↗</a></article>`).join('')}</div><div class="learning-support"><h2>Looking for a degree or a research role?</h2><p>Compare programs, explore role types, and investigate the people doing work that interests you.</p><a href="#pathways">Study &amp; careers ↗</a><a href="#researchers">Researcher trails ↗</a></div>`;
     }
     function glossaryPage(params) {
-        const q = params.get('q') || '', topic = params.get('topic') || '';
-        const terms = hubGlossary.filter(t => (!topic || t[2] === topic) && matches(t[0] + ' ' + t[1], q)).sort((a, b) => a[0].localeCompare(b[0]));
+        const q = params.get('q') || '', topic = params.get('topic') || '', letter = params.get('letter') || '';
+        const letters = [...new Set(hubGlossary.map(t => t[0][0].toUpperCase()))].sort();
+        const terms = hubGlossary.filter(t => (!topic || t[2] === topic) && (!letter || t[0][0].toUpperCase() === letter) && matches(t[0] + ' ' + t[1], q)).sort((a, b) => a[0].localeCompare(b[0]));
         return pageHead('PLAIN-LANGUAGE REFERENCE', 'Glossary', 'Short working definitions to help you read across the field.')
-            + `<form id="glossary-filter" class="glossary-filter" role="search"><label for="glossary-query">Find a term</label><input id="glossary-query" type="search" placeholder="EEG, closed loop, spike sorting…" value="${e(q)}"></form><div class="results-line"><p role="status">${terms.length} terms${topicById(topic) ? ' in ' + e(topicById(topic).title) : ''}</p><a href="#glossary">Show all terms</a></div><dl class="glossary-list">${terms.map(t => `<div><dt>${e(t[0])}</dt><dd>${e(t[1])}<a href="${topicLink(t[2])}">Explore ${e(topicById(t[2]).title.toLowerCase())} ↗</a></dd></div>`).join('') || '<div><dt>No matching terms</dt><dd>Try a shorter term or clear your filters.</dd></div>'}</dl><p class="page-note">Definitions are introductory summaries. Topic pages link to official documentation for greater depth.</p>`;
+            + `<nav class="glossary-alphabet" aria-label="Glossary letters">${['', ...letters].map(l => { const p = new URLSearchParams(params); if (l)
+                p.set('letter', l);
+            else
+                p.delete('letter'); return `<a href="#glossary${p.size ? '?' + e(p.toString()) : ''}"${letter === l ? ' aria-current="true"' : ''} aria-label="${l ? 'Terms beginning with ' + l : 'All letters'}">${l || 'All'}</a>`; }).join('')}</nav><form id="glossary-filter" class="glossary-filter" role="search"><label for="glossary-query">Find a term</label><input id="glossary-query" type="search" placeholder="EEG, closed loop, spike sorting…" value="${e(q)}"></form><div class="results-line"><p role="status">${terms.length} terms${topicById(topic) ? ' in ' + e(topicById(topic).title) : ''}</p><a href="#glossary">Show all terms</a></div><dl class="glossary-list">${terms.map(t => `<div><dt>${e(t[0])}</dt><dd>${e(t[1])}<a href="${topicLink(t[2])}">Explore ${e(topicById(t[2]).title.toLowerCase())} ↗</a></dd></div>`).join('') || '<div><dt>No matching terms</dt><dd>Try a shorter term or clear your filters.</dd></div>'}</dl><p class="page-note">Definitions are introductory summaries. Topic pages link to official documentation for greater depth.</p>`;
     }
     const matches = hubUtils.matches;
     function searchRecords() {
@@ -101,7 +113,7 @@
             ...NeuroIdeas.records(),
             ...NeuroLabs.records(),
             ...hubTopics.map(t => ({ id: t.id, title: t.title, description: t.description, kind: 'Topic', href: topicLink(t.id), keywords: t.concepts.join(' ') + ' ' + JSON.stringify(hubGuides[t.id] || {}) })),
-            ...hubMethods.map(m => ({ id: m.id, title: m.name + ' measurement', description: m.signal, kind: 'Method', href: '#methods', keywords: m.strength + ' ' + m.limit + ' ' + m.access })),
+            ...hubMethods.map(m => ({ id: m.id, title: m.name + ' measurement', description: m.signal, kind: 'Method', href: '#methods?left=' + encodeURIComponent(m.id), keywords: m.strength + ' ' + m.limit + ' ' + m.access })),
             ...hubResources.map(r => ({ id: r.id, title: r.title, description: r.description, kind: 'Resource', href: r.url, keywords: topicById(r.topic).title + ' ' + r.type })),
             ...hubLearningPaths.map(p => ({ id: p.id, title: p.title, description: p.description, kind: 'Learning path', href: '#learn/' + p.id })),
             ...hubGlossary.map(t => ({ id: t[0], title: t[0], description: t[1], kind: 'Glossary', href: '#glossary?q=' + encodeURIComponent(t[0]) })),
@@ -117,7 +129,7 @@
         const kinds = [...new Set(all.map(r => r.kind))];
         const link = (k, p = 1) => '#search?' + new URLSearchParams({ q, ...(k ? { kind: k } : {}), ...(p > 1 ? { page: String(p) } : {}) }).toString();
         return pageHead('SEARCH THE WHOLE HUB', q ? 'Results for “' + q + '”' : 'What would you like to explore?', 'Search detailed lab projects, investigators, ideas, company scaling strategies, topics, resources, technologies, organizations, researchers, programs, career roles, job listings, and paper snapshots.')
-            + `<div class="search-kinds" aria-label="Result type"><a href="${e(link(''))}"${!kind ? ' aria-current="true"' : ''}>All <span>${all.length}</span></a>${kinds.map(k => `<a href="${e(link(k))}"${kind === k ? ' aria-current="true"' : ''}>${e(k)} <span>${all.filter(r => r.kind === k).length}</span></a>`).join('')}</div><p class="results-line" role="status">${filtered.length} results${filtered.length ? ' · showing ' + ((page - 1) * 30 + 1) + '–' + Math.min(page * 30, filtered.length) : ''}</p><div class="search-results">${displayed.map(r => `<article><span class="eyebrow">${e(r.kind)}</span><h2><a href="${r.href.startsWith('#') ? e(r.href) : url(r.href)}"${r.href.startsWith('#') ? '' : ' target="_blank" rel="noopener noreferrer"'}>${e(r.title)} <span aria-hidden="true">↗</span></a></h2><p>${e(r.description)}</p></article>`).join('') || `<div class="hub-empty"><h2>${q ? 'No matches found.' : 'Start with a topic or a question.'}</h2><p>Try “EEG”, “Stanford”, “spike sorting”, or “3D”.</p><a href="#resources">Browse the resource library</a></div>`}</div>${filtered.length > 30 ? `<nav class="search-pager" aria-label="Search pages">${page > 1 ? `<a href="${e(link(kind, page - 1))}">← Previous</a>` : '<span></span>'}<span>Page ${page} of ${Math.ceil(filtered.length / 30)}</span>${page * 30 < filtered.length ? `<a href="${e(link(kind, page + 1))}">Next →</a>` : '<span></span>'}</nav>` : ''}`;
+            + `<form id="results-search-form" class="results-search-form" role="search"><label class="sr-only" for="results-query">Refine search</label><input id="results-query" type="search" value="${e(q)}" placeholder="Search across Neurovisual"><button type="submit">Search</button></form><div class="search-kinds" aria-label="Result type"><a href="${e(link(''))}"${!kind ? ' aria-current="true"' : ''}>All <span>${all.length}</span></a>${kinds.map(k => `<a href="${e(link(k))}"${kind === k ? ' aria-current="true"' : ''}>${e(k)} <span>${all.filter(r => r.kind === k).length}</span></a>`).join('')}</div><p class="results-line" role="status">${filtered.length} results${filtered.length ? ' · showing ' + ((page - 1) * 30 + 1) + '–' + Math.min(page * 30, filtered.length) : ''}</p><div class="search-results">${displayed.map(r => `<article><span class="eyebrow">${e(r.kind)}</span><h2><a href="${r.href.startsWith('#') ? e(r.href) : url(r.href)}"${r.href.startsWith('#') ? '' : ' target="_blank" rel="noopener noreferrer"'}>${e(r.title)} <span aria-hidden="true">↗</span></a></h2><p>${e(r.description)}</p></article>`).join('') || `<div class="hub-empty"><h2>${q ? 'No matches found.' : 'Start with a topic or a question.'}</h2><p>Try “EEG”, “Stanford”, “spike sorting”, or “3D”.</p><a href="#resources">Browse the resource library</a></div>`}</div>${filtered.length > 30 ? `<nav class="search-pager" aria-label="Search pages">${page > 1 ? `<a href="${e(link(kind, page - 1))}">← Previous</a>` : '<span></span>'}<span>Page ${page} of ${Math.ceil(filtered.length / 30)}</span>${page * 30 < filtered.length ? `<a href="${e(link(kind, page + 1))}">Next →</a>` : '<span></span>'}</nav>` : ''}`;
     }
     function snapshotDate(value) { const d = new Date(String(value)); return Number.isNaN(d.getTime()) ? 'Unavailable' : d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }); }
     function aboutPage() {
@@ -126,6 +138,12 @@
     }
     function notFound() { return pageHead('PAGE NOT FOUND', 'This destination is not in the hub.', 'The link may have changed. You can return to the overview or search the field.') + '<a class="button-primary" href="#overview">Back to overview</a>'; }
     function parseRoute() { return hubUtils.parseRoute(location.hash === '#main-content' ? '#overview' : location.hash); }
+    function setWorkspace(view, detail = false) {
+        document.body.dataset.view = view;
+        document.body.dataset.detail = String(detail);
+        document.getElementById('workspace-page').textContent = labels[view] || 'Neurovisual';
+        document.getElementById('workspace-section').textContent = descriptions[view] ? 'Atlas' : view === 'ideas' ? 'Notebook' : view === 'labs' ? 'Research' : 'Field guide';
+    }
     function closeMenu() { sidebar.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation'); }
     function render(focusMain = false) {
         const { route, id, params } = parseRoute();
@@ -141,10 +159,7 @@
         else
             a.removeAttribute('aria-current'); });
         document.title = (labels[atlasRoute] || 'Neuroengineering') + ' — Neurovisual';
-        if (route === 'search')
-            search.value = params.get('q') || '';
-        else
-            search.value = '';
+        setWorkspace(atlasRoute, !!id);
         if (missingRecord) {
             atlas.hidden = true;
             content.hidden = false;
@@ -162,7 +177,7 @@
             }
         }
         else {
-            content.innerHTML = route === 'labs' ? NeuroLabs.render(id, params) : route === 'ideas' ? NeuroIdeas.render(id, params) : route === 'overview' ? overview() : route === 'methods' ? methodsPage() : route === 'resources' ? resourcePage(params) : route === 'topic' ? topicPage(id) : route === 'learn' ? learnPage(id) : route === 'glossary' ? glossaryPage(params) : route === 'search' ? searchPage(params) : route === 'about' ? aboutPage() : notFound();
+            content.innerHTML = route === 'labs' ? NeuroLabs.render(id, params) : route === 'ideas' ? NeuroIdeas.render(id, params) : route === 'overview' ? overview() : route === 'methods' ? methodsPage(params) : route === 'resources' ? resourcePage(params) : route === 'topic' ? topicPage(id) : route === 'learn' ? learnPage(id) : route === 'glossary' ? glossaryPage(params) : route === 'search' ? searchPage(params) : route === 'about' ? aboutPage() : notFound();
             bindFilters(params);
             if (route === 'ideas')
                 NeuroIdeas.bind(content, id, params);
@@ -183,13 +198,16 @@
     }
     function updateHash(hash) { history.replaceState(null, '', hash); render(); }
     function bindFilters(params) {
+        const liveInput = (input, update) => { let composing = false; input.addEventListener('compositionstart', () => { composing = true; }); input.addEventListener('compositionend', () => { composing = false; update(); }); input.addEventListener('input', (event) => { if (!composing && !event.isComposing)
+            update(); }); };
         const form = document.getElementById('resource-filters');
         if (form) {
             const update = () => { const p = new URLSearchParams(); new FormData(form).forEach((v, k) => { if (String(v).trim())
                 p.set(k, String(v)); }); updateHash('#resources' + (p.size ? '?' + p.toString() : '')); };
             form.addEventListener('submit', ev => { ev.preventDefault(); update(); });
-            form.addEventListener('change', update);
-            document.getElementById('resource-query').addEventListener('input', update);
+            form.addEventListener('change', event => { if (event.target.tagName === 'SELECT')
+                update(); });
+            liveInput(document.getElementById('resource-query'), update);
         }
         const glossary = document.getElementById('glossary-filter');
         if (glossary) {
@@ -198,20 +216,64 @@
             else
                 p.delete('q'); updateHash('#glossary' + (p.size ? '?' + p.toString() : '')); };
             glossary.addEventListener('submit', ev => { ev.preventDefault(); update(); });
-            document.getElementById('glossary-query').addEventListener('input', update);
+            liveInput(document.getElementById('glossary-query'), update);
         }
+        const compare = document.getElementById('method-compare');
+        if (compare)
+            compare.addEventListener('change', () => { const p = new URLSearchParams(); new FormData(compare).forEach((v, k) => p.set(k, String(v))); updateHash('#methods?' + p.toString()); });
+        const results = document.getElementById('results-search-form');
+        if (results)
+            results.addEventListener('submit', event => { event.preventDefault(); const q = document.getElementById('results-query').value.trim(); location.hash = '#search' + (q ? '?q=' + encodeURIComponent(q) : ''); });
     }
     document.querySelector('.skip-link').addEventListener('click', ev => { ev.preventDefault(); main.focus(); });
-    document.getElementById('global-search-form').addEventListener('submit', ev => { ev.preventDefault(); const hash = '#search?q=' + encodeURIComponent(search.value.trim()); if (location.hash === hash)
+    let searchReturnFocus = null, restoreSearchFocus = true, searchComposing = false;
+    function searchPreview() {
+        const q = search.value.trim();
+        const hits = q ? searchRecords().filter(r => matches(r.title + ' ' + r.description + ' ' + (r.keywords || ''), q)).sort((a, b) => Number(b.title.toLowerCase().includes(q.toLowerCase())) - Number(a.title.toLowerCase().includes(q.toLowerCase()))) : [];
+        document.getElementById('search-status').textContent = q ? `${hits.length} ${hits.length === 1 ? 'match' : 'matches'}${hits.length > 6 ? ' · first 6 shown' : ''}` : 'Jump into a section, or search the whole field.';
+        document.getElementById('search-suggestions').innerHTML = q ? (hits.slice(0, 6).map(r => `<a href="${r.href.startsWith('#') ? e(r.href) : url(r.href)}"${r.href.startsWith('#') ? '' : ' target="_blank" rel="noopener noreferrer"'}><span>${e(r.kind)}</span><strong>${e(r.title)}</strong><i aria-hidden="true">↗</i></a>`).join('') || '<p class="search-no-results">No matches yet. Try a shorter term, a lab name, or a method.</p>') : `<div class="search-quick-links"><a href="#labs"><span>Research</span><strong>Find a lab ↗</strong></a><a href="#ideas"><span>Notebook</span><strong>Explore ideas ↗</strong></a><a href="#resources"><span>Library</span><strong>Find a tool ↗</strong></a><a href="#methods"><span>Workbench</span><strong>Compare methods ↗</strong></a></div>`;
+    }
+    function openSearch() { if (searchDialog.open)
+        return; closeMenu(); searchReturnFocus = document.activeElement; restoreSearchFocus = true; const { route, params } = parseRoute(); search.value = route === 'search' ? params.get('q') || '' : ''; searchPreview(); searchDialog.showModal(); document.body.classList.add('search-open'); searchTrigger.setAttribute('aria-expanded', 'true'); search.focus(); }
+    function closeSearch(restore = true) { restoreSearchFocus = restore; if (searchDialog.open)
+        searchDialog.close(); }
+    function submitSearch() { const q = search.value.trim(); closeSearch(false); const hash = '#search' + (q ? '?q=' + encodeURIComponent(q) : ''); if (location.hash === hash)
         render(true);
     else
-        location.hash = hash; });
-    search.addEventListener('input', () => { const q = search.value; updateHash(q ? '#search?q=' + encodeURIComponent(q) : '#overview'); });
+        location.hash = hash; }
+    searchTrigger.addEventListener('click', openSearch);
+    document.getElementById('search-close').addEventListener('click', () => closeSearch());
+    searchDialog.addEventListener('close', () => { document.body.classList.remove('search-open'); searchTrigger.setAttribute('aria-expanded', 'false'); if (restoreSearchFocus)
+        searchReturnFocus?.focus({ preventScroll: true }); });
+    searchDialog.addEventListener('cancel', event => { if (searchComposing)
+        event.preventDefault(); });
+    searchDialog.addEventListener('click', event => { if (event.target === searchDialog)
+        closeSearch();
+    else {
+        const link = event.target.closest('a');
+        if (link)
+            closeSearch(!link.getAttribute('href')?.startsWith('#') || event.metaKey || event.ctrlKey || event.shiftKey);
+    } });
+    document.getElementById('global-search-form').addEventListener('submit', ev => { ev.preventDefault(); if (!searchComposing)
+        submitSearch(); });
+    search.addEventListener('compositionstart', () => { searchComposing = true; });
+    search.addEventListener('compositionend', () => { searchComposing = false; searchPreview(); });
+    search.addEventListener('input', (event) => { if (!searchComposing && !event.isComposing)
+        searchPreview(); });
     menu.addEventListener('click', () => { const open = sidebar.classList.toggle('is-open'); menu.setAttribute('aria-expanded', String(open)); menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation'); if (open)
         sidebar.querySelector('a')?.focus(); });
-    document.addEventListener('keydown', ev => { const target = ev.target; if (ev.key === '/' && !ev.ctrlKey && !ev.metaKey && !/INPUT|TEXTAREA|SELECT/.test(target.tagName) && !target.isContentEditable) {
+    document.addEventListener('keydown', ev => { const target = ev.target; if (ev.key === 'Escape' && searchDialog.open) {
+        if (searchComposing || ev.isComposing)
+            return;
         ev.preventDefault();
-        search.focus();
+        closeSearch();
+        return;
+    } if (ev.key === '/' && !ev.ctrlKey && !ev.metaKey && !/INPUT|TEXTAREA|SELECT/.test(target.tagName) && !target.isContentEditable) {
+        ev.preventDefault();
+        openSearch();
+    } if ((ev.metaKey || ev.ctrlKey) && ev.key.toLowerCase() === 'k') {
+        ev.preventDefault();
+        openSearch();
     } if (ev.key === 'Escape' && sidebar.classList.contains('is-open')) {
         closeMenu();
         menu.focus();
@@ -236,6 +298,7 @@
         document.getElementById('atlas-view-title').textContent = labels[view] || 'Explore the field';
         document.getElementById('atlas-view-description').textContent = descriptions[view] || '';
         document.title = (labels[view] || 'Neuroengineering') + ' — Neurovisual';
+        setWorkspace(view, ['org', 'tech', 'person'].includes(route));
     });
     render();
 })();

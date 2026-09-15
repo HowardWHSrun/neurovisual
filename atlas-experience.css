@@ -1,0 +1,709 @@
+/* Route-specific workspaces. Load after styles.css and hub.css.
+   SVG and canvas dimensions stay under app.ts control. */
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="researchers"], [data-view="frontier"], [data-view="pathways"], [data-view="timeline"]) #neurotech-atlas-2026 .na-main {
+  padding-inline: 0;
+}
+
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="timeline"]) #neurotech-atlas-2026 .na-plot-wrap {
+  padding: 0;
+  border-radius: 10px;
+}
+
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="timeline"]) #neurotech-atlas-2026 .na-plot-title {
+  gap: 8px 24px;
+  margin: 0;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--na-line);
+}
+
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="timeline"]) #neurotech-atlas-2026 .na-plot-title strong {
+  font-size: .875rem;
+}
+
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="timeline"]) #neurotech-atlas-2026 .na-plot-title > span {
+  color: var(--na-muted);
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+body:is([data-view="atlas"], [data-view="organizations"]) #neurotech-atlas-2026 .na-map-picker {
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 12px 18px;
+  font-size: .8125rem;
+}
+
+body:is([data-view="atlas"], [data-view="organizations"]) #neurotech-atlas-2026 .na-map-picker select {
+  min-width: min(100%, 200px);
+}
+
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="timeline"]) #neurotech-atlas-2026 .na-note {
+  margin: 0;
+  padding: 12px 18px;
+  border-top: 1px solid var(--na-line);
+  color: var(--na-muted);
+  font-size: .75rem;
+  line-height: 1.6;
+}
+
+/* Organization map controls share one clear control strip. */
+body[data-view="organizations"] #neurotech-atlas-2026 .na-org-ui {
+  gap: 8px 14px;
+  padding: 10px 18px;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-org-modes {
+  max-width: 100%;
+  flex-wrap: wrap;
+  border-radius: 6px;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-org-modes button {
+  min-height: 42px;
+  padding-inline: 12px;
+  font-size: .75rem;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-map-settings {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+  color: var(--na-muted);
+  font-size: .75rem;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-org-size {
+  max-width: 100%;
+  font-size: .75rem;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-org-ui-label {
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-space-ui {
+  padding: 8px 18px;
+  background: #f7f9fc;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-space-actions {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-space-actions button {
+  min-height: 42px;
+  font-size: .75rem;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-space-help summary {
+  width: fit-content;
+  padding-block: 8px;
+  cursor: pointer;
+  font-size: .75rem;
+  color: var(--na-muted);
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-space-help[open] {
+  padding-bottom: 6px;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-universe {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-browser,
+body[data-view="organizations"] #neurotech-atlas-2026 .na-metric-note {
+  margin-inline: 18px;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row {
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .85fr) minmax(0, .65fr);
+  gap: 12px 24px;
+  padding: 16px 10px;
+  border-radius: 0;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row strong {
+  color: var(--foreground);
+  font-size: .9375rem;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row[aria-pressed="true"] {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-row-metric b {
+  font-size: .9375rem;
+}
+
+body[data-view="organizations"] #neurotech-atlas-2026 .na-metric-note {
+  margin-block: 14px;
+  font-size: .75rem;
+  line-height: 1.6;
+}
+
+body[data-view="organizations"][data-detail="true"] #neurotech-atlas-2026 .na-entity-page-inner {
+  min-height: 0;
+  padding: 20px 22px 26px;
+}
+
+/* Lists and reading panes: reduce nested framing and keep metadata legible. */
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 .na-plot-wrap {
+  min-height: 0;
+  padding: 0;
+  border-radius: 10px;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 .na-plot-title {
+  gap: 8px 20px;
+  margin: 0;
+  padding: 13px 18px;
+  border-bottom: 1px solid var(--na-line);
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 .na-plot-title strong {
+  font-size: .875rem;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-browser, .na-frontier-browser, .na-pathway-browser) {
+  min-height: 0;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-overview, .na-frontier-head, .na-pathway-head) {
+  align-items: center;
+  gap: 12px 24px;
+  padding: 14px 18px;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-overview, .na-frontier-head, .na-pathway-head) > div:first-child > strong {
+  font-size: .9375rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-overview, .na-frontier-head, .na-pathway-head) > div:first-child > span {
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-layout, .na-frontier-layout, .na-pathway-layout) {
+  min-height: 0;
+  border: 0;
+  border-top: 1px solid var(--na-line);
+  border-radius: 0;
+  overflow: visible;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-roster, .na-frontier-list, .na-pathway-list) {
+  padding: 12px;
+  background: #fbfcfe;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) {
+  padding: 22px 26px;
+  overflow-wrap: anywhere;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) header h2 {
+  max-width: 32ch;
+  font-size: clamp(1.35rem, 2.2vw, 1.8rem);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) p {
+  max-width: 70ch;
+  font-size: .9375rem;
+  line-height: 1.65;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) header p {
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) section h3 {
+  font-size: .75rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-row, .na-frontier-row, .na-pathway-row, .na-opportunity-row, .na-job-row) {
+  padding: 12px 10px;
+  border-radius: 0;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-row, .na-frontier-row, .na-pathway-row, .na-opportunity-row, .na-job-row) strong {
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 .na-pager {
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 14px 2px 2px;
+}
+
+body:is([data-view="organizations"], [data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 .na-pager span {
+  font-size: .6875rem;
+  line-height: 1.4;
+}
+
+body:is([data-view="organizations"], [data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 .na-pager button {
+  min-height: 42px;
+  font-size: .75rem;
+}
+
+body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-note, .na-frontier-note, .na-pathway-note, .na-pathway-guide, .na-note) {
+  margin: 0;
+  padding: 12px 18px;
+  border-top: 1px solid var(--na-line);
+  color: var(--na-muted);
+  font-size: .75rem;
+  line-height: 1.6;
+}
+
+/* Researcher trails: roster, chronology, and sources remain distinct. */
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-layout {
+  grid-template-columns: minmax(250px, .72fr) minmax(0, 1.65fr);
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary {
+  gap: 6px 12px;
+  max-width: 540px;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary span {
+  font-size: .6875rem;
+  white-space: normal;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-toolbar {
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border-bottom: 0;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls {
+  flex: 1 1 auto;
+  gap: 10px;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls label {
+  min-width: 0;
+  flex: 1 1 150px;
+  color: var(--na-muted);
+  font-size: .6875rem;
+  letter-spacing: .02em;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls select {
+  width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  font-size: .8125rem;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-toolbar-note,
+body[data-view="researchers"] #neurotech-atlas-2026 :is(.na-researcher-roster-title, .na-researcher-section-title) span {
+  font-size: .6875rem;
+  line-height: 1.5;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-title {
+  padding: 2px 10px 10px;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row small {
+  margin-top: 3px;
+  font-size: .6875rem;
+  line-height: 1.5;
+  white-space: normal;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row time {
+  align-self: start;
+  padding-top: 3px;
+  font-size: .6875rem;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-start {
+  padding: 12px 14px;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 :is(.na-researcher-family, .na-researcher-start > span) {
+  font-size: .6875rem;
+  line-height: 1.5;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event {
+  grid-template-columns: 48px minmax(0, 1fr);
+  padding-block: 9px;
+  border-bottom: 1px solid var(--na-line);
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event time {
+  padding-top: 2px;
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event h4 {
+  font-size: .8125rem;
+  line-height: 1.45;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event p {
+  margin-block: 4px 6px;
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+body[data-view="researchers"] #neurotech-atlas-2026 :is(.na-researcher-event a, .na-researcher-sources a) {
+  font-size: .75rem;
+  line-height: 1.6;
+  text-underline-offset: 3px;
+}
+
+/* Paper updates: persistent source and date cues alongside readable titles. */
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-layout {
+  grid-template-columns: minmax(280px, .9fr) minmax(0, 1.35fr);
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-kinds,
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-stages {
+  gap: 4px 14px;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-kinds button,
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-stages button {
+  min-height: 42px;
+  font-size: .75rem;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-row {
+  grid-template-columns: 7px minmax(0, 1fr);
+  gap: 5px 8px;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-row small {
+  font-size: .6875rem;
+  line-height: 1.5;
+  letter-spacing: .025em;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-row time {
+  grid-column: 2;
+  font-size: .6875rem;
+  line-height: 1.4;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-profile header > span {
+  font-size: .6875rem;
+  line-height: 1.5;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-caution {
+  padding: 10px 12px;
+  font-size: .8125rem;
+  line-height: 1.6;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-actions {
+  align-items: center;
+  gap: 8px 18px;
+}
+
+body[data-view="frontier"] #neurotech-atlas-2026 .na-frontier-actions a {
+  padding-block: 8px;
+  font-size: .8125rem;
+  text-underline-offset: 3px;
+}
+
+/* Career workbench: wrap long employers and offer usable filter widths. */
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-layout {
+  grid-template-columns: minmax(300px, .9fr) minmax(0, 1.35fr);
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-opportunity-filters {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 16px 18px;
+  border-bottom: 0;
+  background: #fbfcfe;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-jobs-tabs {
+  gap: 8px;
+  margin: 14px 18px 0;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-jobs-tabs button {
+  min-height: 42px;
+  font-size: .75rem;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-jobs-filters {
+  gap: 12px;
+  margin: 0;
+  padding: 14px 18px;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-jobs-filters > label {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 :is(.na-opportunity-filters, .na-jobs-filters, .na-fit-controls) label {
+  color: var(--na-muted);
+  font-size: .75rem;
+  line-height: 1.4;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 :is(.na-opportunity-filters, .na-jobs-filters, .na-fit-controls) select {
+  min-width: 0;
+  width: 100%;
+  min-height: 42px;
+  font-size: .8125rem;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-jobs-filters .na-jobs-remote {
+  min-height: 42px;
+  margin: 0;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-job-row {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 7px;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-job-row .na-job-badges {
+  justify-content: flex-start;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 :is(.na-job-row small, .na-pathway-row em, .na-opportunity-row em, .na-fit-result small) {
+  font-size: .75rem;
+  line-height: 1.5;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 :is(.na-pathway-row small, .na-opportunity-row small, .na-level, .na-remote, .na-pathway-profile header > span) {
+  font-size: .6875rem;
+  line-height: 1.5;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-actions {
+  align-items: center;
+  gap: 10px 18px;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-actions a {
+  font-size: .8125rem;
+  line-height: 1.5;
+  text-underline-offset: 3px;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-actions .na-apply {
+  min-height: 42px;
+  white-space: normal;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-fit-planner {
+  min-height: 0;
+  padding: 20px 18px;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-fit-planner > header p {
+  font-size: .875rem;
+  line-height: 1.6;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-pathway-section-title h3 {
+  font-size: .8125rem;
+  line-height: 1.5;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-fit-result {
+  padding: 12px 4px;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-fit-result strong {
+  font-size: .875rem;
+  line-height: 1.45;
+}
+
+body[data-view="pathways"] #neurotech-atlas-2026 .na-fit-result em {
+  font-size: .6875rem;
+  line-height: 1.4;
+}
+
+/* Timeline labels use JS collision calculations; only their leaders change. */
+body[data-view="timeline"] #neurotech-atlas-2026 .na-milestone line {
+  stroke: #abb8ca;
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-milestone {
+  cursor: pointer;
+}
+
+/* Keep keyboard focus visible inside each interactive workspace. */
+body:is([data-view="atlas"], [data-view="organizations"], [data-view="researchers"], [data-view="frontier"], [data-view="pathways"], [data-view="timeline"]) #neurotech-atlas-2026 .na-main :is(button, select, a, summary):focus-visible {
+  outline: 2px solid #195acc;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1000px) {
+  body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-overview, .na-frontier-head, .na-pathway-head) {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary {
+    justify-content: flex-start;
+  }
+
+  body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-layout, .na-frontier-layout, .na-pathway-layout) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-roster, .na-frontier-list, .na-pathway-list) {
+    padding: 10px;
+    border-right: 0;
+    border-bottom: 1px solid var(--na-line);
+  }
+
+  body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-overview, .na-frontier-head, .na-pathway-head, .na-researcher-toolbar) {
+    padding: 12px 14px;
+  }
+
+  body:is([data-view="researchers"], [data-view="frontier"], [data-view="pathways"]) #neurotech-atlas-2026 :is(.na-researcher-profile, .na-frontier-profile, .na-pathway-profile) {
+    padding: 20px 14px;
+  }
+
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls {
+    width: 100%;
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row {
+    grid-template-columns: minmax(0, 1fr) minmax(110px, .55fr);
+    gap: 8px 14px;
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row > span:first-child {
+    grid-column: 1 / -1;
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 .na-row-metric {
+    margin-top: 0;
+    text-align: right;
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 :is(.na-org-ui, .na-space-ui) {
+    padding-inline: 14px;
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 :is(.na-lab-browser, .na-metric-note) {
+    margin-inline: 8px;
+  }
+
+  body[data-view="organizations"][data-detail="true"] #neurotech-atlas-2026 .na-entity-page-inner {
+    padding: 16px 14px 22px;
+  }
+
+  body[data-view="pathways"] #neurotech-atlas-2026 .na-opportunity-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 14px;
+  }
+
+  body[data-view="pathways"] #neurotech-atlas-2026 :is(.na-fit-controls, .na-fit-grid) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-view="pathways"] #neurotech-atlas-2026 .na-fit-grid {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  body[data-view="pathways"] #neurotech-atlas-2026 .na-opportunity-filters {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 .na-lab-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 .na-row-metric {
+    text-align: left;
+  }
+
+  body[data-view="organizations"] #neurotech-atlas-2026 .na-org-modes button {
+    padding-inline: 8px;
+    white-space: normal;
+  }
+
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header {
+    flex-wrap: wrap;
+  }
+}
+
+/* Chronological sequence: full titles wrap; vertical gaps are not a time scale. */
+body[data-view="timeline"] #neurotech-atlas-2026 #na-chart {
+  min-height: 0;
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-note,
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-year {
+  fill: var(--na-muted);
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-year {
+  font-variant-numeric: tabular-nums;
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-card {
+  fill: transparent;
+  stroke: transparent;
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-entry:hover .na-timeline-card,
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-entry[aria-pressed="true"] .na-timeline-card {
+  fill: var(--na-wash);
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-entry:focus-visible {
+  outline: none;
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-entry:focus-visible .na-timeline-card {
+  fill: var(--na-wash);
+  stroke: #195acc;
+  stroke-width: 2px;
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-technology {
+  fill: var(--na-muted);
+}
+
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-entry:hover .na-timeline-title,
+body[data-view="timeline"] #neurotech-atlas-2026 .na-timeline-entry:focus-visible .na-timeline-title {
+  text-decoration: underline;
+}
