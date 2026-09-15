@@ -1,5 +1,7 @@
 (function () {
     var root = document.getElementById('neurotech-atlas-2026');
+    var hubNavigating = false;
+    var html = hubUtils.escapeHtml, sourceHref = hubUtils.sourceHref;
     var canAskCodex = !!(window.openai && window.openai.sendFollowUpMessage);
     var aiEndpoint = (window.NEURO_ATLAS_AI_ENDPOINT || '').trim();
     async function copyText(value) {
@@ -68,7 +70,7 @@
         n1: { label: 'Neuralink PRIME trial NCT06429735', url: 'https://clinicaltrials.gov/study/NCT06429735' },
         stentrode: { label: 'Stentrode SWITCH study (JAMA Neurology, 2023)', url: 'https://pubmed.ncbi.nlm.nih.gov/36622685/' },
         layer7: { label: 'FDA 510(k) K242618 - Layer 7-T', url: 'https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=K242618' },
-        connexus: { label: 'Paradromics Connect-One IDE announcement', url: 'https://paradromics.com/news/paradromics-receives-fda-approval-for-the-connect-one-clinical-study-with-the-connexus-brain-computer-interface/' },
+        connexus: { label: 'Paradromics first chronic trial implant announcement, June 2026', url: 'https://paradromics.com/news/paradromics-completes-first-human-brain-computer-interface-bci-implantation/' },
         brainoware: { label: 'Brain organoid reservoir computing (Nature Electronics, 2023)', url: 'https://www.nature.com/articles/s41928-023-01069-w' },
         resorb: { label: 'Bioresorbable opto-electronic implant (Nature Communications, 2024)', url: 'https://www.nature.com/articles/s41467-024-45803-0' },
         consumer: { label: 'Wearable EEG benchmark (2025)', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12779824/' },
@@ -100,13 +102,13 @@
         { id: 'seeg', n: 'sEEG depth electrodes', g: 'record', o: 'read', x: 3.6, y: 4, i: ['medical', 'research'], signal: 'Local field potentials and multiunit activity', res: 'mm contacts along deep trajectories', temp: 'millisecond', duration: 'days to weeks clinically', summary: 'Stereotactic depth electrodes sample distributed cortical and subcortical networks in patients with epilepsy.', mechanism: 'Linear macro- or micro-contacts record intracranial potentials along minimally targeted trajectories.', standing: 'Established clinical diagnostic method; also a major human neuroscience platform.', promise: 'Access to deep structures with lower craniotomy burden than grids.', limit: 'Sparse spatial sampling, hemorrhage risk and short clinical windows.', ex: ['seizure localization', 'human memory studies'], s: ['bmiRules'], p: ['p1', 'p8'] },
         { id: 'utah', n: 'Utah microelectrode array', g: 'record', o: 'read', x: 4, y: 2.4, i: ['medical', 'research'], signal: 'Spikes and local fields', res: '~100 penetrating contacts', temp: 'sub-ms', duration: 'months to years, variable yield', summary: 'A foundational penetrating human BCI platform for cursor, robotic-arm, speech and sensory-feedback experiments.', mechanism: 'A fixed bed of silicon needles records extracellular spikes and field potentials from a compact cortical patch.', standing: 'Long-running human feasibility platform; no broadly marketed implanted BCI yet.', promise: 'High-bandwidth access to population spiking.', limit: 'Craniotomy, tissue response, connector burden and long-term unit instability.', ex: ['BrainGate', 'intracortical speech BCI'], s: ['willett', 'fdaBci'], p: ['p2', 'p8'] },
         { id: 'silicon', n: 'Michigan-style silicon probes', g: 'record', o: 'read', x: 4, y: 2, i: ['research'], signal: 'Spikes and LFP along a shank', res: 'tens of micrometers', temp: 'sub-ms', duration: 'acute to chronic', summary: 'Planar shanks distribute many sites through cortical depth and underpin modern laminar electrophysiology.', mechanism: 'Lithographic electrode sites sample extracellular potentials along one or more penetrating shafts.', standing: 'Research workhorse with continuing materials and packaging innovation.', promise: 'Precise laminar geometry and scalable microfabrication.', limit: 'Mechanical mismatch, micromotion and chronic glial response.', ex: ['NeuroNexus', 'laminar probes'], s: ['nih'], p: ['p1', 'p2', 'p8'] },
-        { id: 'neuropixels', n: 'Neuropixels 1.0 / 2.0', g: 'record', o: 'read', x: 4, y: 2.4, i: ['research'], signal: 'Hundreds of simultaneous spike channels', res: 'dense sites across multiple regions', temp: '30 kHz-class sampling', duration: 'weeks to months', summary: 'Integrated silicon probes transformed large-scale electrophysiology by recording hundreds of neurons across brain regions on one shank.', mechanism: 'On-shank amplification, multiplexing and dense selectable sites turn a thin probe into a high-channel-count recording system.', standing: 'Broadly adopted in animal research; human intraoperative research is emerging.', promise: 'Large-scale, precisely registered spiking data.', limit: 'Rigid penetrating geometry and heavy data/curation burden.', ex: ['Neuropixels 2.0', 'human Neuropixels'], s: ['np2'], p: ['p8', 'p10'] },
+        { id: 'neuropixels', n: 'Neuropixels 1.0 / 2.0', g: 'record', o: 'read', x: 4, y: 2.4, i: ['research'], signal: 'Hundreds of simultaneous spike channels', res: 'dense sites across multiple regions', temp: '30 kHz-class sampling', duration: 'weeks to months', summary: 'Integrated silicon probes transformed large-scale electrophysiology by recording hundreds of neurons across brain regions on one shank.', mechanism: 'Dense selectable sites and switches sit along the shank; amplification and digitization in the probe base support hundreds of simultaneous recording channels.', standing: 'Broadly adopted in animal research; human intraoperative research is emerging.', promise: 'Large-scale, precisely registered spiking data.', limit: 'Rigid penetrating geometry and heavy data/curation burden.', ex: ['Neuropixels 2.0', 'human Neuropixels'], s: ['np2'], p: ['p8', 'p10'] },
         { id: 'net', n: 'Ultraflexible NET arrays', g: 'record', o: 'read', x: 4, y: 1.4, i: ['research'], signal: 'Stable spikes and LFP', res: 'cellular-scale flexible threads', temp: 'sub-ms', duration: 'months in rodents', summary: 'Subcellular, ultraflexible probes aim to match tissue mechanics and preserve stable access to the same neurons over long periods.', mechanism: 'Thin polymer-metal threads reduce bending stiffness, surgical footprint and chronic strain at the brain-device interface.', standing: 'Strong chronic rodent evidence; human translation remains ahead.', promise: 'Longitudinal identity tracking and dense 3D circuit mapping.', limit: 'Insertion, interconnects, scaling and regulatory translation.', ex: ['NET-10', 'modular 1,024-channel NET'], s: ['nih'], p: ['p3', 'p4', 'p7', 'p8'] },
         { id: 'mesh', n: 'Mesh and syringe-injectable electronics', g: 'record', o: 'read', x: 4, y: 1.2, i: ['research'], signal: 'Spikes / field potentials', res: 'distributed cellular mesh', temp: 'millisecond', duration: 'chronic animal studies', summary: 'Macroporous electronics seek seamless three-dimensional integration by letting cells, vessels and processes occupy the device volume.', mechanism: 'Ultra-soft open meshes are injected or implanted and unfold within neural tissue.', standing: 'Preclinical research platform.', promise: 'Tissue-like mechanics and distributed coverage.', limit: 'Precise deployment, packaging, retrieval and scale.', ex: ['syringe-injectable mesh electronics'], s: ['nih'], p: ['p8'] },
         { id: 'stentrode', n: 'Endovascular Stentrode BCI', g: 'record', o: 'read', x: 2.5, y: 2.5, i: ['medical'], signal: 'Motor-cortex field potentials', res: 'vascular macro-contacts', temp: 'millisecond', duration: '12+ month human studies', summary: 'An electrode-bearing stent records motor intent from a cerebral vein, avoiding open-brain implantation.', mechanism: 'A catheter delivers the array through the jugular vein into a vessel adjacent to motor cortex; a subcutaneous unit transmits signals.', standing: 'Human early-feasibility studies; investigational.', promise: 'Lower surgical burden and fully implanted home use.', limit: 'Lower spatial bandwidth than penetrating arrays, vascular anatomy and antithrombotic management.', ex: ['SWITCH', 'COMMAND / INTENT'], s: ['stentrode', 'fdaBci'], p: ['p8'] },
         { id: 'layer7', n: 'Layer 7 cortical interface', g: 'record', o: 'read', x: 3.1, y: 3, i: ['medical', 'research'], signal: 'High-density surface potentials', res: 'thin-film micro-ECoG', temp: 'millisecond', duration: 'temporary clinical recording clearance', summary: 'A very thin, high-density cortical surface array designed for minimally disruptive placement and broad local coverage.', mechanism: 'A flexible film conforms to cortex and records or stimulates through hundreds of surface microcontacts.', standing: 'Layer 7-T received FDA 510(k) clearance in 2025 for temporary recording, monitoring and stimulation; chronic BCI work remains investigational.', promise: 'High-density cortical mapping without penetrating tissue.', limit: 'Cranial access, chronic packaging and surface-only physiology.', ex: ['Precision Neuroscience Layer 7-T'], s: ['layer7', 'fdaBci'], p: ['p8'] },
         { id: 'n1', n: 'N1 flexible-thread BCI', g: 'record', o: 'read', x: 4, y: 2.2, i: ['medical'], signal: 'Intracortical population activity', res: 'distributed flexible threads', temp: 'millisecond', duration: 'multi-year trial follow-up', summary: 'A robotically implanted, wireless BCI designed for computer control by people with paralysis.', mechanism: 'A surgical robot places many fine electrode threads while an implanted electronics package digitizes and streams neural data.', standing: 'PRIME early-feasibility trial is recruiting; investigational with no posted pivotal results.', promise: 'Fully implanted high-channel-count device control.', limit: 'Surgery, long-term thread performance, evidence scale and upgrade/explant pathways.', ex: ['Neuralink PRIME', 'CONVOY'], s: ['n1', 'fdaBci'], p: ['p8'] },
-        { id: 'connexus', n: 'Connexus penetrating BCI', g: 'record', o: 'read', x: 4, y: 2, i: ['medical'], signal: 'High-rate single-neuron activity', res: '421 penetrating microelectrodes', temp: 'millisecond', duration: 'designed for chronic use', summary: 'A high-data-rate, fully implanted cortical interface targeting speech restoration and computer control.', mechanism: 'A compact penetrating array, subcutaneous electronics and decoding stack convert cortical spikes into communication outputs.', standing: 'FDA IDE granted for the Connect-One early-feasibility study; clinical study launch announced for 2026.', promise: 'High-bandwidth speech decoding from a compact implant.', limit: 'Penetrating-array durability, surgery and limited human evidence so far.', ex: ['Paradromics Connexus', 'Connect-One'], s: ['connexus', 'fdaBci'], p: ['p8'] },
+        { id: 'connexus', n: 'Connexus penetrating BCI', g: 'record', o: 'read', x: 4, y: 2, i: ['medical'], signal: 'High-rate single-neuron activity', res: '421 penetrating microelectrodes', temp: 'millisecond', duration: 'designed for chronic use', summary: 'A high-data-rate, fully implanted cortical interface targeting speech restoration and computer control.', mechanism: 'A compact penetrating array, subcutaneous electronics and decoding stack convert cortical spikes into communication outputs.', standing: 'The company announced the first chronic Connect-One human trial implant on June 17, 2026. The participant-specific electrode count is not established here.', promise: 'High-bandwidth speech decoding from a compact implant.', limit: 'Penetrating-array durability, surgery and limited human evidence so far.', ex: ['Paradromics Connexus', 'Connect-One'], s: ['connexus', 'fdaBci'], p: ['p8'] },
         { id: 'calcium', n: 'Calcium imaging / GCaMP', g: 'record', o: 'read', x: 3.7, y: 1.4, i: ['research'], signal: 'Calcium transients as activity proxy', res: 'cellular to mesoscale', temp: 'tens of ms to seconds', duration: 'minutes to months', summary: 'Genetically encoded calcium indicators make large, cell-identified populations optically visible across repeated experiments.', mechanism: 'Activity-dependent intracellular calcium changes modulate fluorescence measured through microscopes, fibers or miniscopes.', standing: 'Transformative animal-research standard; generally not a human functional interface.', promise: 'Cell-type specificity, spatial identity and huge populations.', limit: 'Indirect and slower than voltage; optical access, photophysics and genetic delivery.', ex: ['two-photon imaging', 'miniscopes', 'mesoscopes'], s: ['meso', 'nih'], p: ['p4'] },
         { id: 'voltage', n: 'Genetically encoded voltage imaging', g: 'record', o: 'read', x: 3.8, y: 1.2, i: ['research'], signal: 'Membrane voltage', res: 'single cells / compartments', temp: 'millisecond', duration: 'minutes to chronic expression', summary: 'GEVIs optically report spikes and subthreshold voltage with genetic specificity, narrowing the gap between electrophysiology and imaging.', mechanism: 'Engineered fluorescent proteins change brightness or spectrum with membrane potential.', standing: 'Rapidly improving preclinical research technology.', promise: 'Voltage-speed optical recording with cell-type targeting.', limit: 'Photon budget, photobleaching, scattering and gene delivery.', ex: ['ASAP4', 'far-red GEVIs'], s: ['gevi', 'nih'], p: [] },
         { id: 'neurotransmitter', n: 'Fluorescent neurotransmitter sensors', g: 'record', o: 'read', x: 3.7, y: 1.3, i: ['research'], signal: 'Glutamate, dopamine, acetylcholine and peptides', res: 'synaptic to mesoscale', temp: 'ms to seconds', duration: 'chronic expression', summary: 'Molecular probes turn chemical signaling into optical movies instead of inferring it from electrical activity alone.', mechanism: 'Engineered receptor- or binding-protein sensors change fluorescence when a target transmitter binds.', standing: 'Broad preclinical adoption with continual sensor engineering.', promise: 'Cellular chemical dynamics during behavior.', limit: 'Kinetics, affinity, expression perturbation and optical access.', ex: ['iGluSnFR', 'dLight', 'GRAB sensors'], s: ['nih'], p: [] },
@@ -281,7 +283,7 @@
         { "id": "neuralink", "n": "Neuralink", "inst": "Neuralink Corp.", "city": "Fremont", "country": "United States", "r": "North America", "k": "Startup", "f": ["implantable BCI", "robotic electrode insertion", "motor decoding"], "t": ["n1", "motorbci", "decoder", "speechspike"], "u": "https://neuralink.com/", "d": "Develops a fully implantable wireless cortical interface with flexible electrode threads and a surgical insertion robot for computer control and communication." },
         { "id": "synchron", "n": "Synchron", "inst": "Synchron Inc.", "city": "Brooklyn", "country": "United States", "r": "North America", "k": "Startup", "f": ["endovascular BCI", "assistive communication", "motor decoding"], "t": ["stentrode", "motorbci", "decoder"], "u": "https://synchron.com/", "d": "Develops the Stentrode endovascular brain-computer interface for digital device control by people with severe paralysis." },
         { "id": "precision-neuroscience", "n": "Precision Neuroscience", "inst": "Precision Neuroscience Corp.", "city": "New York", "country": "United States", "r": "North America", "k": "Startup", "f": ["cortical surface interface", "high-density ECoG", "motor decoding"], "t": ["layer7", "ecog", "motorbci", "decoder"], "u": "https://precisionneuro.io/", "d": "Develops a thin high-density cortical surface array intended to record neural activity through a minimally invasive cranial procedure." },
-        { "id": "paradromics", "n": "Paradromics", "inst": "Paradromics Inc.", "city": "Austin", "country": "United States", "r": "North America", "k": "Startup", "f": ["intracortical BCI", "speech restoration", "high-bandwidth recording"], "t": ["utah", "motorbci", "speechspike", "decoder"], "u": "https://paradromics.com/", "d": "Develops a high-data-rate intracortical interface focused on restoring communication and computer access." },
+        { "id": "paradromics", "n": "Paradromics", "inst": "Paradromics Inc.", "city": "Austin", "country": "United States", "r": "North America", "k": "Startup", "f": ["intracortical BCI", "speech restoration", "high-bandwidth recording"], "t": ["connexus", "motorbci", "speechspike", "decoder"], "u": "https://paradromics.com/", "d": "Develops a high-data-rate intracortical interface focused on restoring communication and computer access." },
         { "id": "blackrock-neurotech", "n": "Blackrock Neurotech", "inst": "Blackrock Neurotech", "city": "Salt Lake City", "country": "United States", "r": "North America", "k": "Company", "f": ["intracortical arrays", "research neural systems", "clinical BCI"], "t": ["utah", "motorbci", "sensorybci", "spikesort"], "u": "https://blackrockneurotech.com/", "d": "Commercializes Utah-array neural recording and stimulation systems used in neuroscience laboratories and long-running human BCI studies." },
         { "id": "science-corp", "n": "Science Corporation", "inst": "Science Corporation", "city": "Alameda", "country": "United States", "r": "North America", "k": "Startup", "f": ["visual neuroprostheses", "neural interfaces", "bioelectronics"], "t": ["retinal", "net", "sensorybci"], "u": "https://science.xyz/", "d": "Develops neural-interface technologies including the Prima retinal prosthesis program and research tools for brain interfacing." },
         { "id": "motif-neurotech", "n": "Motif Neurotech", "inst": "Motif Neurotech", "city": "Houston", "country": "United States", "r": "North America", "k": "Startup", "f": ["therapeutic BCI", "mental health", "miniature implants"], "t": ["net", "adbs", "cldepression"], "u": "https://motifneuro.tech/", "d": "Develops a minimally invasive therapeutic brain-computer interface for sensing and modulating circuits implicated in mental-health disorders." },
@@ -753,8 +755,8 @@
         "neuralink": { "why": "Neuralink is included for its work across implantable BCI, robotic electrode insertion, and motor decoding. Its distinctive value is pursuing a communication or device-access pathway for people who cannot reliably use speech or movement.", "methods": "Develops a fully implantable wireless cortical interface with flexible electrode threads and a surgical insertion robot for computer control and communication. The linked technology anchors are N1 flexible-thread BCI, Motor BCI for cursor and robotics, Adaptive neural decoders, and Intracortical speech neuroprosthesis. The atlas groups the operating approach under implantable BCI, robotic electrode insertion, and motor decoding; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Neuralink — official website" },
         "synchron": { "why": "Synchron is included for its work across endovascular BCI, assistive communication, and motor decoding. Its distinctive value is pursuing a communication or device-access pathway for people who cannot reliably use speech or movement.", "methods": "Develops the Stentrode endovascular brain-computer interface for digital device control by people with severe paralysis. The linked technology anchors are Endovascular Stentrode BCI, Motor BCI for cursor and robotics, and Adaptive neural decoders. The atlas groups the operating approach under endovascular BCI, assistive communication, and motor decoding; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Synchron — official website" },
         "precision-neuroscience": { "why": "Precision Neuroscience is included for its work across cortical surface interface, high-density ECoG, and motor decoding. Its distinctive role is moving direct brain signals toward a usable neural-to-device interface while trading off bandwidth, surgical burden, stability, and home usability.", "methods": "Develops a thin high-density cortical surface array intended to record neural activity through a minimally invasive cranial procedure. The linked technology anchors are Layer 7 cortical interface, ECoG / cortical surface arrays, Motor BCI for cursor and robotics, and Adaptive neural decoders. The atlas groups the operating approach under cortical surface interface, high-density ECoG, and motor decoding; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Precision Neuroscience — official website" },
-        "paradromics": { "why": "Paradromics is included for its work across intracortical BCI, speech restoration, and high-bandwidth recording. Its distinctive value is pursuing a communication or device-access pathway for people who cannot reliably use speech or movement.", "methods": "Develops a high-data-rate intracortical interface focused on restoring communication and computer access. The linked technology anchors are Utah microelectrode array, Motor BCI for cursor and robotics, Intracortical speech neuroprosthesis, and Adaptive neural decoders. The atlas groups the operating approach under intracortical BCI, speech restoration, and high-bandwidth recording; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Paradromics — official website" },
-        "blackrock-neurotech": { "why": "Blackrock Neurotech is included for its work across intracortical arrays, research neural systems, and clinical BCI. Its role is translating a defined stimulation target and dosing workflow into a practical neuromodulation platform for therapy or investigation.", "methods": "Commercializes Utah-array neural recording and stimulation systems used in neuroscience laboratories and long-running human BCI studies. The linked technology anchors are Utah microelectrode array, Motor BCI for cursor and robotics, Cortical sensory feedback BCI, and Automated spike sorting. The atlas groups the operating approach under intracortical arrays, research neural systems, and clinical BCI; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Blackrock Neurotech — official website" },
+        "paradromics": { "why": "Paradromics is included for its work across intracortical BCI, speech restoration, and high-bandwidth recording. Its distinctive value is pursuing a communication or device-access pathway for people who cannot reliably use speech or movement.", "methods": "Develops a high-data-rate intracortical interface focused on restoring communication and computer access. The linked technology anchors are Connexus penetrating BCI, Motor BCI for cursor and robotics, Intracortical speech neuroprosthesis, and Adaptive neural decoders. The atlas groups the operating approach under intracortical BCI, speech restoration, and high-bandwidth recording; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Paradromics — official website" },
+        "blackrock-neurotech": { "why": "Blackrock Neurotech is included for its work across intracortical arrays, research neural systems, and clinical BCI. It supplies neural recording and stimulation arrays and acquisition systems used in research and human BCI studies.", "methods": "Commercializes Utah-array neural recording and stimulation systems used in neuroscience laboratories and long-running human BCI studies. The linked technology anchors are Utah microelectrode array, Motor BCI for cursor and robotics, Cortical sensory feedback BCI, and Automated spike sorting. The atlas groups the operating approach under intracortical arrays, research neural systems, and clinical BCI; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Blackrock Neurotech — official website" },
         "science-corp": { "why": "Science Corporation is included for its work across visual neuroprostheses, neural interfaces, and bioelectronics. Its distinctive value is replacing or bypassing a damaged sensory pathway with an engineered route from external information to neural activity.", "methods": "Develops neural-interface technologies including the Prima retinal prosthesis program and research tools for brain interfacing. The linked technology anchors are Retinal prostheses, Ultraflexible NET arrays, and Cortical sensory feedback BCI. The atlas groups the operating approach under visual neuroprostheses, neural interfaces, and bioelectronics; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Science Corporation — official website" },
         "motif-neurotech": { "why": "Motif Neurotech is included for its work across therapeutic BCI, mental health, and miniature implants. Its role is translating a defined stimulation target and dosing workflow into a practical neuromodulation platform for therapy or investigation.", "methods": "Develops a minimally invasive therapeutic brain-computer interface for sensing and modulating circuits implicated in mental-health disorders. The linked technology anchors are Ultraflexible NET arrays, Adaptive deep brain stimulation, and Closed-loop depression neuromodulation. The atlas groups the operating approach under therapeutic BCI, mental health, and miniature implants; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Motif Neurotech — official website" },
         "axoft": { "why": "Axoft is included for its work across ultrasoft implants, bidirectional interfaces, and brain foundation models. Its distinctive value is turning complex neural or neuroimaging data into features, maps, or outputs that can support research and decision workflows.", "methods": "Develops bioinspired ultrasoft high-density neural implants and software for long-term bidirectional communication with the brain. The linked technology anchors are Ultraflexible NET arrays, Michigan-style silicon probes, and Adaptive neural decoders. The atlas groups the operating approach under ultrasoft implants, bidirectional interfaces, and brain foundation models; these links show the adjacent sensing, stimulation, decoding, rehabilitation, or computing methods rather than implying that every linked method is one product.", "evidenceLabel": "Axoft — official website" },
@@ -1074,6 +1076,20 @@
     var orgRankedButton = root.querySelector('#na-org-ranked');
     var orgClearButton = root.querySelector('#na-org-clear');
     var orgSizeSelect = root.querySelector('#na-org-size');
+    var mapPicker = document.createElement('label');
+    mapPicker.className = 'na-map-picker';
+    mapPicker.textContent = 'Find projects by technology';
+    var mapSelect = document.createElement('select');
+    mapSelect.setAttribute('aria-label', 'Choose a technology to list its organizations');
+    var mapPlaceholder = document.createElement('option');
+    mapPlaceholder.value = '';
+    mapPlaceholder.textContent = 'Choose a technology…';
+    mapSelect.appendChild(mapPlaceholder);
+    T.slice().sort(function (a, b) { return a.n.localeCompare(b.n); }).filter(function (t) { return L.some(function (d) { return d.t.indexOf(t.id) >= 0; }); }).forEach(function (t) { var option = document.createElement('option'); option.value = t.id; option.textContent = t.n; mapSelect.appendChild(option); });
+    mapPicker.appendChild(mapSelect);
+    spaceUI.appendChild(mapPicker);
+    mapSelect.addEventListener('change', function () { if (!mapSelect.value)
+        return; state.orgTechFilter = mapSelect.value; state.orgGroupFilter = ''; state.orgMode = 'ranked'; state.page = 0; state.detailOpen = false; mapSelect.value = ''; syncControls(); draw(); });
     var labBrowser = root.querySelector('.na-lab-browser');
     var entityPage = root.querySelector('.na-entity-page');
     var researcherBrowser = root.querySelector('.na-researcher-browser');
@@ -1230,10 +1246,11 @@
         tooltip.style.opacity = '1';
     }
     function hideTip() { tooltip.style.opacity = '0'; }
-    function selectTech(id) { state.selected = id; state.detailOpen = true; if (state.view === 'universe')
+    function selectTech(id) { state.selected = id; state.detailOpen = true; if (state.view === 'atlas')
+        syncView(); if (state.view === 'universe')
         state.universeType = 'tech'; renderDetail(); draw(); }
     function closeDetail() { state.detailOpen = false; detail.hidden = true; if (focusButton)
-        focusButton.hidden = true; }
+        focusButton.hidden = true; syncView(); }
     function bindDetailClose() { var close = detail.querySelector('[data-close-detail]'); if (close)
         close.addEventListener('click', closeDetail); }
     function formatCapital(v) {
@@ -1318,10 +1335,7 @@
             return '';
         }
     }
-    function clearEntityHash() {
-        if (location.hash.indexOf('#org/') === 0)
-            history.replaceState(null, '', location.pathname + location.search);
-    }
+    function clearEntityHash() { }
     function openEntityPage(id, returnView, pushUrl) {
         var d = L.find(function (x) { return x.id === id; });
         if (!d)
@@ -1334,8 +1348,8 @@
         state.entityReturnView = returnView || state.view || 'labs';
         state.detailOpen = false;
         detail.hidden = true;
-        if (pushUrl !== false && location.hash !== '#org/' + encodeURIComponent(id))
-            history.pushState({ organization: id }, '', '#org/' + encodeURIComponent(id));
+        if (pushUrl !== false && !hubNavigating)
+            window.dispatchEvent(new CustomEvent('neuroatlas:viewchange', { detail: { hash: '#org/' + encodeURIComponent(id), internal: true } }));
         syncControls();
         renderDetail();
         draw();
@@ -1399,6 +1413,9 @@
         var aiPanel = state.entityAiOpen ? '<section class="na-entity-ai" aria-label="AI research workspace"><header><div><span>' + I18N.t('aiWorkspace') + '</span><h3>' + I18N.t('aiChooseTask') + '</h3></div><button type="button" data-entity-ai-close aria-label="' + I18N.t('closeAI') + '">×</button></header><div class="na-entity-ai-modes" aria-label="AI prompt type">' + aiModeButtons + '</div><label for="na-entity-ai-prompt">' + I18N.t('aiPromptLabel') + '</label><textarea id="na-entity-ai-prompt" rows="8">' + safePrompt + '</textarea><div class="na-entity-ai-actions">' + aiRunControl + '<button type="button" data-entity-ai-copy>' + I18N.t('aiCopyPrompt') + '</button></div><p class="na-entity-ai-privacy">' + I18N.t('aiPrivacy') + '</p><div class="na-entity-ai-status" aria-live="polite"></div><pre class="na-entity-ai-output" hidden></pre></section>' : '';
         entityPage.style.setProperty('--entity-color', entityType(d) === 'industry' ? 'var(--viz-series-2)' : entityType(d) === 'academic' ? 'var(--viz-series-3)' : 'var(--viz-series-4)');
         entityPage.innerHTML = '<article class="na-entity-page-inner"><button type="button" class="na-entity-back" data-entity-back>← ' + backLabel + '</button><header class="na-entity-hero"><div><span>' + __region(d.r) + ' · ' + __kind(d.k) + '</span><h2>' + __ln(d) + '</h2><p>' + __lf(d, 'inst') + ' · ' + __lf(d, 'city') + ', ' + __country(d.country) + '</p></div><a href="' + d.u + '" target="_blank" rel="noreferrer">' + I18N.t('officialSite') + ' ↗</a></header><p class="na-entity-summary">' + __ld(d) + '</p><div class="na-entity-metrics" aria-label="Organization metrics"><div><span>' + I18N.t('disclosedCapital') + '</span><strong>' + formatCapital(metric.capital) + '</strong><em>' + asOf(metric.capitalAsOf) + '</em></div><div><span>' + I18N.t('workersTeam') + '</span><strong>' + formatPeople(metric.employees) + '</strong><em>' + asOf(metric.employeesAsOf) + '</em></div><div><span>' + I18N.t('registeredTrials') + '</span><strong>' + formatTrials(metric.trials) + '</strong><em>' + asOf(metric.trialsAsOf) + '</em></div></div><nav class="na-entity-tabs" aria-label="Organization profile sections">' + tabButtons + '</nav>' + panel + aiPanel + '<footer class="na-entity-footer"><button class="na-ask na-entity-ai-toggle" type="button" aria-expanded="' + String(state.entityAiOpen) + '">' + (state.entityAiOpen ? I18N.t('aiHide') : I18N.t('aiToggle')) + '</button><span>' + I18N.t('oneLayer') + '</span></footer></article>';
+        var countingCompany = NeuroIdeas.companyForOrg(d.id);
+        if (countingCompany)
+            entityPage.querySelector('.na-entity-summary').insertAdjacentHTML('afterend', '<p class="idea-profile-link"><a href="#ideas/moores-law-bci?section=companies&amp;company=' + countingCompany.id + '">' + (I18N.lang === 'zh' ? '探索电极数量的扩展策略' : 'Explore the electrode-count strategy') + ' ↗</a></p>');
         entityPage.querySelector('[data-entity-back]').addEventListener('click', function () { closeEntityPage(true); });
         Array.from(entityPage.querySelectorAll('[data-entity-tab]')).forEach(function (b) { b.addEventListener('click', function () { state.entityTab = b.dataset.entityTab; drawEntityPage(); }); });
         Array.from(entityPage.querySelectorAll('[data-entity-tech]')).forEach(function (b) { b.addEventListener('click', function () { state.entityPage = false; clearEntityHash(); state.view = 'atlas'; state.selected = b.dataset.entityTech; state.detailOpen = true; syncView(); syncControls(); renderDetail(); draw(); }); });
@@ -1621,6 +1638,8 @@
     function visibleUniverse() {
         var q = state.search.toLowerCase().trim();
         var availableEntities = organizationFilteredLabs();
+        var availableLinked = new Set();
+        availableEntities.forEach(function (d) { d.t.forEach(function (id) { availableLinked.add(id); }); });
         var entities = orbit.showEntities ? availableEntities : [];
         var focusedTech = null;
         if (orbit.focus && state.universeType === 'tech') {
@@ -1641,7 +1660,7 @@
             if (orbit.focus && state.universeType === 'lab')
                 return linked.has(d.id);
             if (!q)
-                return true;
+                return (state.region === 'all' && state.kind === 'all' && state.model === 'all') || availableLinked.has(d.id);
             var hay = [d.n, d.summary, d.signal, d.mechanism, d.ex.join(' ')].join(' ').toLowerCase();
             return hay.indexOf(q) >= 0 || linked.has(d.id);
         });
@@ -1927,6 +1946,7 @@
         var sortOptions = '<option value="timeline"' + (state.researcherSort === 'timeline' ? ' selected' : '') + '>' + I18N.t('timelineOrder') + '</option><option value="name"' + (state.researcherSort === 'name' ? ' selected' : '') + '>' + I18N.t('sortName') + '</option><option value="region"' + (state.researcherSort === 'region' ? ' selected' : '') + '>' + I18N.t('sortRegion') + '</option><option value="field"' + (state.researcherSort === 'field' ? ' selected' : '') + '>' + I18N.t('sortFieldFamily') + '</option>';
         var rosterControls = '<div class="na-researcher-controls"><label>' + I18N.t('researcherRegion') + '<select data-researcher-region><option value="all">' + I18N.t('allRegions') + '</option>' + regions.map(function (v) { return '<option value="' + v + '"' + (state.region === v ? ' selected' : '') + '>' + __region(v) + '</option>'; }).join('') + '</select></label><label>' + I18N.t('researcherSort') + '<select data-researcher-sort>' + sortOptions + '</select></label></div>';
         var familySummary = groupKeys.map(function (k) { var n = data.filter(function (d) { return d.group === k; }).length; return n ? '<span style="--c:' + groups[k].color + '"><i></i>' + groups[k].name + ' · ' + n + '</span>' : ''; }).filter(Boolean).join('');
+        var restoreFocus = rememberFocus(researcherBrowser);
         var size = root.getBoundingClientRect().width < 760 ? 6 : 12;
         var pages = Math.max(1, Math.ceil(data.length / size));
         state.page = Math.max(0, Math.min(state.page, pages - 1));
@@ -1971,15 +1991,28 @@
         var ask = researcherBrowser.querySelector('.na-researcher-ask');
         if (ask && selected)
             ask.addEventListener('click', async function () { var technologyNames = selected.techIds.map(function (id) { var t = T.find(function (x) { return x.id === id; }); return t ? t.n : id; }).join(', '); await sendResearchPrompt({ title: 'Deepen ' + selected.name + ' research trail', prompt: 'Research the career and project trail of ' + selected.name + ' at ' + selected.institution + '. Verify how their neurotechnology work began, major transitions, important collaborators, flagship methods and systems, clinical or research maturity, and five notable papers. Connect the account to ' + technologyNames + '. Use current primary sources, separate verified facts from inference, and flag uncertain dates or affiliations.' }); });
+        restoreFocus();
     }
     function frontierKindLabel(kind) { return __fk(kind); }
     function frontierKindColor(kind) { return ({ paper: 'var(--positive)', preprint: 'var(--negative)', trial: 'var(--negative)', news: 'var(--accent)' })[kind] || 'var(--foreground)'; }
-    function frontierDate(item) {
-        if (!item.date)
-            return 'Seen ' + new Date(item.observedAt + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
-        return new Date(item.date + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' });
+    function frontierDate(item) { return item.date ? hubUtils.sourceDate(item.date) : 'Seen ' + hubUtils.sourceDate(item.observedAt); }
+    function rememberFocus(container) {
+        var active = document.activeElement;
+        if (!active || !container.contains(active))
+            return function () { };
+        var attrs = ['data-frontier', 'data-frontier-kind', 'data-frontier-page', 'data-researcher', 'data-researcher-page', 'data-pathway', 'data-pathway-page', 'data-pathway-stage', 'data-jobs-tab', 'data-jobs-level', 'data-jobs-fn', 'data-jobs-employer', 'data-jobs-remote', 'data-job', 'data-jobs-page'];
+        var attr = attrs.find(function (key) { return active.hasAttribute(key); });
+        var selector = active.id ? '#' + CSS.escape(active.id) : attr ? '[' + attr + '="' + CSS.escape(active.getAttribute(attr)) + '"]' : '';
+        return function () { var next = selector && container.querySelector(selector); if (next) {
+            if (next.disabled) {
+                next = container.querySelector('.na-pager button:not(:disabled)') || container.querySelector('button');
+            }
+            if (next)
+                next.focus({ preventScroll: true });
+        } };
     }
     function drawFrontier(data) {
+        var restoreFocus = rememberFocus(frontierBrowser);
         var size = root.getBoundingClientRect().width < 760 ? 6 : 10;
         var pages = Math.max(1, Math.ceil(data.length / size));
         state.page = Math.max(0, Math.min(state.page, pages - 1));
@@ -1991,20 +2024,20 @@
         var kinds = ['all', 'paper', 'preprint', 'trial', 'news'];
         var kindNames = { all: I18N.t('frontierAll'), paper: I18N.t('frontierPapers'), preprint: I18N.t('frontierPreprints'), trial: I18N.t('frontierTrials'), news: I18N.t('frontierNewsPl') };
         var kindButtons = kinds.map(function (k) { var count = k === 'all' ? (frontierSnapshot.items || []).length : (frontierSnapshot.items || []).filter(function (x) { return x.kind === k; }).length; return '<button type="button" data-frontier-kind="' + k + '" aria-pressed="' + String(state.frontierKind === k) + '">' + kindNames[k] + ' <span>' + count + '</span></button>'; }).join('');
-        var list = rows.length ? rows.map(function (d) { return '<button type="button" class="na-frontier-row" data-frontier="' + d.id + '" aria-pressed="' + String(selected && selected.id === d.id) + '" style="--c:' + frontierKindColor(d.kind) + '"><i></i><span><small>' + frontierKindLabel(d.kind) + ' · ' + d.source + '</small><strong>' + d.title + '</strong></span><time>' + frontierDate(d) + '</time></button>'; }).join('') : '<p class="na-summary">' + I18N.t('noFrontierItems') + '</p>';
+        var list = rows.length ? rows.map(function (d) { return '<button type="button" class="na-frontier-row" data-frontier="' + html(d.id) + '" aria-pressed="' + String(selected && selected.id === d.id) + '" style="--c:' + frontierKindColor(d.kind) + '"><i></i><span><small>' + html(frontierKindLabel(d.kind)) + ' · ' + html(d.source) + '</small><strong>' + html(d.title) + '</strong></span><time>' + frontierDate(d) + '</time></button>'; }).join('') : '<p class="na-summary">' + html(I18N.t('noFrontierItems')) + '</p>';
         var profile = '';
         if (selected) {
             var topics = (selected.topics || []).map(function (k) { return groups[k] ? groups[k].name : k; });
-            var caution = selected.kind === 'preprint' ? '<p class="na-frontier-caution">' + I18N.t('preprintCaution') + '</p>' : selected.kind === 'trial' ? '<p class="na-frontier-caution">' + I18N.t('trialCaution') + '</p>' : '';
-            profile = '<article class="na-frontier-profile" style="--frontier-color:' + frontierKindColor(selected.kind) + '"><header><div><span>' + frontierKindLabel(selected.kind) + ' · ' + selected.source + '</span><h2>' + selected.title + '</h2><p>' + frontierDate(selected) + (selected.venue ? ' · ' + selected.venue : '') + '</p></div></header>' + caution +
-                '<section><h3>' + I18N.t('sourceSummary') + '</h3><p>' + selected.summary + '</p></section>' +
-                (selected.authors ? '<section><h3>' + I18N.t('researchersOrSponsor') + '</h3><p>' + selected.authors + '</p></section>' : '') +
-                '<section><div class="na-frontier-section-title"><h3>' + I18N.t('whyInAtlas') + '</h3><span>' + I18N.t('automatedTopic') + '</span></div><div class="na-tags">' + topics.map(function (topic) { return '<span>' + topic + '</span>'; }).join('') + '</div><p class="na-frontier-status">' + selected.status + '</p></section>' +
-                '<div class="na-frontier-actions"><a href="' + selected.sourceUrl + '" target="_blank" rel="noreferrer">' + I18N.t('openOriginal') + ' ↗</a><button class="na-ask na-frontier-ask" type="button">' + (canAskCodex ? I18N.t('askAssess') : I18N.t('askCopyAssess')) + '</button></div></article>';
+            var caution = selected.kind === 'preprint' ? '<p class="na-frontier-caution">' + html(I18N.t('preprintCaution')) + '</p>' : selected.kind === 'trial' ? '<p class="na-frontier-caution">' + html(I18N.t('trialCaution')) + '</p>' : '';
+            profile = '<article class="na-frontier-profile" style="--frontier-color:' + frontierKindColor(selected.kind) + '"><header><div><span>' + html(frontierKindLabel(selected.kind)) + ' · ' + html(selected.source) + '</span><h2>' + html(selected.title) + '</h2><p>' + frontierDate(selected) + (selected.venue ? ' · ' + html(selected.venue) : '') + '</p></div></header>' + caution +
+                '<section><h3>' + html(I18N.t('sourceSummary')) + '</h3><p>' + html(selected.summary) + '</p></section>' +
+                (selected.authors ? '<section><h3>' + html(I18N.t('researchersOrSponsor')) + '</h3><p>' + html(selected.authors) + '</p></section>' : '') +
+                '<section><div class="na-frontier-section-title"><h3>' + html(I18N.t('whyInAtlas')) + '</h3><span>' + html(I18N.t('automatedTopic')) + '</span></div><div class="na-tags">' + topics.map(function (topic) { return '<span>' + html(topic) + '</span>'; }).join('') + '</div><p class="na-frontier-status">' + html(selected.status) + '</p></section>' +
+                '<div class="na-frontier-actions"><a href="' + sourceHref(selected.sourceUrl) + '" target="_blank" rel="noreferrer">' + html(I18N.t('openOriginal')) + ' ↗</a><button class="na-ask na-frontier-ask" type="button">' + (canAskCodex ? html(I18N.t('askAssess')) : html(I18N.t('askCopyAssess'))) + '</button></div></article>';
         }
         var updated = new Date(frontierSnapshot.generatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', timeZone: 'UTC', timeZoneName: 'short' });
-        var sourceLinks = (frontierSnapshot.sources || []).map(function (s) { return '<li><a href="' + s.url + '" target="_blank" rel="noreferrer">' + s.name + '</a> — ' + s.note + '</li>'; }).join('');
-        frontierBrowser.innerHTML = '<div class="na-frontier-head"><div><strong>' + I18N.t('updatedAt') + ' ' + updated + '</strong><span>' + frontierSnapshot.cadence + ' · ' + I18N.t('newestFirst') + '</span></div><div class="na-frontier-kinds" aria-label="Frontier source type">' + kindButtons + '</div></div><div class="na-frontier-layout"><section class="na-frontier-list">' + list + '<div class="na-pager"><span>' + (data.length ? (I18N.t('showing') + ' ' + (start + 1) + '–' + Math.min(start + size, data.length) + ' ' + I18N.t('of') + ' ' + data.length) : I18N.t('tryAnotherType')) + '</span><div><button type="button" data-frontier-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + I18N.t('previous') + '</button><button type="button" data-frontier-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + I18N.t('next') + '</button></div></div></section>' + profile + '</div><details class="na-frontier-note"><summary>' + I18N.t('updateMethodSources') + '</summary><p>' + frontierSnapshot.method + '</p><ul>' + sourceLinks + '</ul>' + (frontierSnapshot.errors && frontierSnapshot.errors.length ? '<p>' + I18N.t('latestRefreshFallbacks') + frontierSnapshot.errors.join(' · ') + '</p>' : '') + '</details>';
+        var sourceLinks = (frontierSnapshot.sources || []).map(function (s) { return '<li><a href="' + sourceHref(s.url) + '" target="_blank" rel="noreferrer">' + html(s.name) + '</a> — ' + html(s.note) + '</li>'; }).join('');
+        frontierBrowser.innerHTML = (frontierSnapshot.errors && frontierSnapshot.errors.length ? '<p class="na-refresh-notice">' + html(I18N.t('sourceRefreshNotice')) + html(frontierSnapshot.errors.join(' · ')) + '</p>' : '') + '<div class="na-frontier-head"><div><strong>' + html(I18N.t('snapshotGenerated')) + updated + '</strong><span>' + html(frontierSnapshot.cadence) + ' · ' + html(I18N.t('newestFirst')) + '</span></div><div class="na-frontier-kinds" aria-label="Frontier source type">' + kindButtons + '</div></div><div class="na-frontier-layout"><section class="na-frontier-list">' + list + '<div class="na-pager"><span>' + (data.length ? (html(I18N.t('showingSpace')) + (start + 1) + '–' + Math.min(start + size, data.length) + html(I18N.t('ofSpace')) + data.length) : html(I18N.t('tryAnotherType'))) + '</span><div><button type="button" data-frontier-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + html(I18N.t('previous')) + '</button><button type="button" data-frontier-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + html(I18N.t('next')) + '</button></div></div></section>' + profile + '</div><details class="na-frontier-note"><summary>' + html(I18N.t('updateMethodSources')) + '</summary><p>' + html(frontierSnapshot.method) + '</p><ul>' + sourceLinks + '</ul>' + (frontierSnapshot.errors && frontierSnapshot.errors.length ? '<p>' + html(I18N.t('latestRefreshFallbacks')) + html(frontierSnapshot.errors.join(' · ')) + '</p>' : '') + '</details>';
         Array.from(frontierBrowser.querySelectorAll('[data-frontier-kind]')).forEach(function (b) { b.addEventListener('click', function () { state.frontierKind = b.dataset.frontierKind; state.page = 0; state.selectedFrontier = ''; draw(); }); });
         Array.from(frontierBrowser.querySelectorAll('[data-frontier]')).forEach(function (b) { b.addEventListener('click', function () { state.selectedFrontier = b.dataset.frontier; drawFrontier(data); }); });
         Array.from(frontierBrowser.querySelectorAll('[data-frontier-page]')).forEach(function (b) { b.addEventListener('click', function () { state.page += b.dataset.frontierPage === 'next' ? 1 : -1; var firstOnPage = data[state.page * size]; if (firstOnPage)
@@ -2012,6 +2045,7 @@
         var ask = frontierBrowser.querySelector('.na-frontier-ask');
         if (ask && selected)
             ask.addEventListener('click', async function () { await sendResearchPrompt({ title: 'Assess ' + selected.title, prompt: 'Assess this frontier neurotechnology item: "' + selected.title + '" (' + selected.sourceUrl + '). Identify the actual result or registry change, methods, evidence maturity, novelty relative to prior work, important limitations, conflicts or uncertainty, and which atlas technologies it connects to. Verify against the original source and current primary literature. Do not treat a preprint as peer reviewed or a trial registration as proof of efficacy.' }); });
+        restoreFocus();
     }
     function pathwayGuideHtml(kind) {
         var guide = pathwayData.guides[kind];
@@ -2041,6 +2075,7 @@
         Array.from(pathwayBrowser.querySelectorAll('[data-opportunity-page]')).forEach(function (b) { b.addEventListener('click', function () { state.page += b.dataset.opportunityPage === 'next' ? 1 : -1; drawOpportunities(stageButtons); }); });
     }
     function drawPathwayFit(stageButtons) {
+        var restoreFocus = rememberFocus(pathwayBrowser);
         var tags = [state.fitWork, state.fitGoal];
         var programPool = (pathwayData.programs || []).filter(function (d) { return state.fitTraining === 'jobs' || d.kind === state.fitTraining; });
         var programs = programPool.slice().sort(function (a, b) { return pathwayMatchCount(b, tags) - pathwayMatchCount(a, tags) || a.name.localeCompare(b.name); }).slice(0, 4);
@@ -2057,14 +2092,16 @@
         var ask = pathwayBrowser.querySelector('.na-fit-ask');
         if (ask)
             ask.addEventListener('click', async function () { await sendResearchPrompt({ title: 'Build my neuroengineering pathway', prompt: 'Build a current, source-verified neuroengineering pathway for someone deciding about ' + state.fitTraining + ', preferring ' + state.fitWork + ' work, with a primary goal to ' + state.fitGoal + '. Use the atlas pathways as starting points, but search current programs, laboratories, funding and job descriptions. Recommend a balanced shortlist, prerequisite gaps to close, three portfolio projects, a month-by-month application plan and realistic alternatives. Separate program fit from admission likelihood and flag all uncertain or cycle-specific requirements.' }); });
+        restoreFocus();
     }
     function drawJobsBoard(stageButtons, jobsTabToggle) {
+        var restoreFocus = rememberFocus(pathwayBrowser);
         var all = ((jobsSnapshot && jobsSnapshot.jobs) || []);
         var jobs = filteredJobs();
         var levels = ['Intern', 'Junior', 'Mid', 'Senior', 'Lead'];
         var fns = Array.from(new Set(all.map(function (d) { return d.fn; }))).sort();
         var employers = Array.from(new Set(all.map(function (d) { return d.employer; }))).sort();
-        function selOpt(value, label, current) { return '<option value="' + value + '"' + (current === value ? ' selected' : '') + '>' + label + '</option>'; }
+        function selOpt(value, label, current) { return '<option value="' + html(value) + '"' + (current === value ? ' selected' : '') + '>' + html(label) + '</option>'; }
         var levelOpts = selOpt('all', I18N.t('allLevels'), state.jobsLevel) + levels.map(function (v) { return selOpt(v, v, state.jobsLevel); }).join('');
         var fnOpts = selOpt('all', I18N.t('allFunctions'), state.jobsFn) + fns.map(function (v) { return selOpt(v, v, state.jobsFn); }).join('');
         var empOpts = selOpt('all', I18N.t('allEmployers'), state.jobsEmployer) + employers.map(function (v) { return selOpt(v, v, state.jobsEmployer); }).join('');
@@ -2078,10 +2115,10 @@
         var selected = jobs.find(function (d) { return d.id === state.selectedJob; }) || jobs[0];
         if (selected)
             state.selectedJob = selected.id;
-        var list = rows.length ? rows.map(function (d) { return '<button type="button" class="na-job-row" data-job="' + d.id + '" aria-pressed="' + (selected && selected.id === d.id ? 'true' : 'false') + '"><span class="na-job-main"><strong>' + d.title + '</strong><small>' + d.employer + ' · ' + (d.location || (d.remote ? I18N.t('remote') : I18N.t('various'))) + '</small></span><span class="na-job-badges"><i class="na-level na-level-' + d.level.toLowerCase() + '">' + d.level + '</i>' + (d.remote ? '<i class="na-remote">' + I18N.t('remote') + '</i>' : '') + '</span></button>'; }).join('') : '<p class="na-summary">' + I18N.t('noOpenRoles') + '</p>';
-        var profile = selected ? '<article class="na-pathway-profile"><header><span>' + selected.employer + '</span><h2>' + selected.title + '</h2><p>' + (selected.location || I18N.t('locationNotListed')) + ' · ' + selected.level + ' · ' + selected.fn + (selected.remote ? ' · ' + I18N.t('remote') : '') + '</p></header><section><h3>' + I18N.t('listing') + '</h3><p>' + selected.source + (selected.postedAt ? ' · ' + I18N.t('updatedWord') + ' ' + selected.postedAt : '') + '</p></section><div class="na-pathway-actions"><a class="na-apply" href="' + selected.url + '" target="_blank" rel="noreferrer">' + I18N.t('applyNowPl') + ' ↗</a>' + ((jobsSnapshot && jobsSnapshot.employerBoards && jobsSnapshot.employerBoards[selected.employer]) ? '<a href="' + jobsSnapshot.employerBoards[selected.employer] + '" target="_blank" rel="noreferrer">' + I18N.t('allRolesAt') + ' ' + selected.employer + ' ↗</a>' : '') + '</div></article>' : '';
-        var updated = (jobsSnapshot && jobsSnapshot.generatedAt) ? new Date(jobsSnapshot.generatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : 'recently';
-        pathwayBrowser.innerHTML = '<div class="na-pathway-head"><div><strong>' + I18N.t('openRolesUpdated') + ' ' + updated + '</strong><span>' + ((jobsSnapshot && jobsSnapshot.cadence) || I18N.t('livePostings')) + ' · ' + I18N.t('levelsInferred') + '</span></div><div class="na-pathway-stages" aria-label="' + I18N.t('studyCareerStage') + '">' + stageButtons + '</div></div>' + tabs + filters + '<div class="na-pathway-layout"><section class="na-pathway-list">' + list + '<div class="na-pager"><span>' + (jobs.length ? (I18N.t('showing') + ' ' + (start + 1) + '–' + Math.min(start + size, jobs.length) + ' ' + I18N.t('of') + ' ' + jobs.length) : I18N.t('tryAnotherFilter')) + '</span><div><button type="button" data-jobs-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + I18N.t('previous') + '</button><button type="button" data-jobs-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + I18N.t('next') + '</button></div></div></section>' + profile + '</div><p class="na-pathway-note">' + ((jobsSnapshot && jobsSnapshot.method) || '') + '</p>';
+        var list = rows.length ? rows.map(function (d) { return '<button type="button" class="na-job-row" data-job="' + html(d.id) + '" aria-pressed="' + (selected && selected.id === d.id ? 'true' : 'false') + '"><span class="na-job-main"><strong>' + html(d.title) + '</strong><small>' + html(d.employer) + ' · ' + html(d.location || (d.remote ? I18N.t('remote') : I18N.t('various'))) + '</small></span><span class="na-job-badges"><i class="na-level na-level-' + html(d.level.toLowerCase()) + '">' + html(d.level) + '</i>' + (d.remote ? '<i class="na-remote">' + html(I18N.t('remote')) + '</i>' : '') + '</span></button>'; }).join('') : '<p class="na-summary">' + html(I18N.t('noDatedListings')) + '</p>';
+        var profile = selected ? '<article class="na-pathway-profile"><header><span>' + html(selected.employer) + '</span><h2>' + html(selected.title) + '</h2><p>' + html(selected.location || I18N.t('locationNotListed')) + ' · ' + html(selected.level) + ' · ' + html(selected.fn) + (selected.remote ? html(I18N.t('remoteSuffix')) : '') + '</p></header><section><h3>' + html(I18N.t('listing')) + '</h3><p>' + html(selected.source) + (selected.source === 'Curated' ? html(I18N.t('curatedAvailability')) : (selected.postedAt ? html(I18N.t('sourceDatePrefix')) + html(selected.postedAt) : '')) + (selected.stale ? html(I18N.t('retainedStale')) : '') + '</p></section><div class="na-pathway-actions"><a class="na-apply" href="' + sourceHref(selected.url) + '" target="_blank" rel="noreferrer">' + html(I18N.t('viewOriginalListing')) + ' ↗</a>' + ((jobsSnapshot && jobsSnapshot.employerBoards && jobsSnapshot.employerBoards[selected.employer]) ? '<a href="' + sourceHref(jobsSnapshot.employerBoards[selected.employer]) + '" target="_blank" rel="noreferrer">' + html(I18N.t('allRolesAtSpace')) + html(selected.employer) + ' ↗</a>' : '') + '</div></article>' : '';
+        var updated = (jobsSnapshot && jobsSnapshot.generatedAt) ? new Date(jobsSnapshot.generatedAt).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : html(I18N.t('dateUnavailable'));
+        pathwayBrowser.innerHTML = ((jobsSnapshot && jobsSnapshot.errors && jobsSnapshot.errors.length) ? '<p class="na-refresh-notice">' + html(I18N.t('employerRefreshNotice')) + html(jobsSnapshot.errors.join(' · ')) + '</p>' : '') + '<div class="na-pathway-head"><div><strong>' + html(I18N.t('listingsGenerated')) + updated + '</strong><span>' + html((jobsSnapshot && jobsSnapshot.cadence) || I18N.t('datedListings')) + ' · ' + html(I18N.t('levelsInferred')) + '</span></div><div class="na-pathway-stages" aria-label="' + html(I18N.t('studyCareerStage')) + '">' + stageButtons + '</div></div>' + tabs + filters + '<div class="na-pathway-layout"><section class="na-pathway-list">' + list + '<div class="na-pager"><span>' + (jobs.length ? (html(I18N.t('showingSpace')) + (start + 1) + '–' + Math.min(start + size, jobs.length) + html(I18N.t('ofSpace')) + jobs.length) : html(I18N.t('tryAnotherFilter'))) + '</span><div><button type="button" data-jobs-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + html(I18N.t('previous')) + '</button><button type="button" data-jobs-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + html(I18N.t('next')) + '</button></div></div></section>' + profile + '</div><p class="na-pathway-note">' + html((jobsSnapshot && jobsSnapshot.method) || '') + '</p>';
         Array.from(pathwayBrowser.querySelectorAll('[data-pathway-stage]')).forEach(function (b) { b.addEventListener('click', function () { state.pathwayStage = b.dataset.pathwayStage; state.page = 0; state.selectedPathway = ''; state.selectedJob = ''; state.search = ''; search.value = ''; syncControls(); draw(); }); });
         Array.from(pathwayBrowser.querySelectorAll('[data-jobs-tab]')).forEach(function (b) { b.addEventListener('click', function () { state.jobsTab = b.dataset.jobsTab; state.page = 0; state.selectedJob = ''; drawPathways(); }); });
         var levelSel = pathwayBrowser.querySelector('[data-jobs-level]');
@@ -2099,6 +2136,7 @@
         Array.from(pathwayBrowser.querySelectorAll('[data-job]')).forEach(function (b) { b.addEventListener('click', function () { state.selectedJob = b.dataset.job; drawPathways(); }); });
         Array.from(pathwayBrowser.querySelectorAll('[data-jobs-page]')).forEach(function (b) { b.addEventListener('click', function () { state.page += b.dataset.jobsPage === 'next' ? 1 : -1; var firstOnPage = jobs[state.page * size]; if (firstOnPage)
             state.selectedJob = firstOnPage.id; drawPathways(); }); });
+        restoreFocus();
     }
     function updatePathwayCount() {
         if (state.view !== 'pathways')
@@ -2106,11 +2144,12 @@
         var jobsOpen = state.pathwayStage === 'jobs' && state.jobsTab === 'open';
         var pathwayCount = jobsOpen ? filteredJobs().length : state.pathwayStage === 'jobs' ? filteredPathwayRoles().length : state.pathwayStage === 'opportunities' ? filteredPathwayOpportunities().length : state.pathwayStage === 'fit' ? 3 : filteredPathwayPrograms(state.pathwayStage).length;
         var pathwayTotal = jobsOpen ? (((jobsSnapshot && jobsSnapshot.jobs) || []).length) : state.pathwayStage === 'jobs' ? (pathwayData.roles || []).length : state.pathwayStage === 'opportunities' ? (pathwayData.opportunities || []).length : state.pathwayStage === 'fit' ? 3 : (pathwayData.programs || []).filter(function (d) { return d.kind === state.pathwayStage; }).length;
-        root.querySelector('.na-count').textContent = state.pathwayStage === 'fit' ? I18N.t('threeChoicesShape') : pathwayCount + ' ' + I18N.t('of') + ' ' + pathwayTotal + ' ' + (jobsOpen ? I18N.t('openRoles') : state.pathwayStage === 'jobs' ? I18N.t('careerLanes') : state.pathwayStage === 'opportunities' ? I18N.t('programsInitiatives') : I18N.t('programsWord'));
+        root.querySelector('.na-count').textContent = state.pathwayStage === 'fit' ? I18N.t('threeChoicesShape') : pathwayCount + ' ' + I18N.t('of') + ' ' + pathwayTotal + ' ' + (jobsOpen ? I18N.t('datedListings') : state.pathwayStage === 'jobs' ? I18N.t('careerLanes') : state.pathwayStage === 'opportunities' ? I18N.t('programsInitiatives') : I18N.t('programsWord'));
         root.querySelector('#na-plot-heading').textContent = I18N.t('studyCareerPathways');
         root.querySelector('#na-plot-caption').textContent = I18N.t('pathwayCaption');
     }
     function drawPathways() {
+        var restoreFocus = rememberFocus(pathwayBrowser);
         updatePathwayCount();
         var stageCounts = { undergraduate: (pathwayData.programs || []).filter(function (d) { return d.kind === 'undergraduate'; }).length, graduate: (pathwayData.programs || []).filter(function (d) { return d.kind === 'graduate'; }).length, opportunities: (pathwayData.opportunities || []).length, jobs: (pathwayData.roles || []).length };
         var stages = ['undergraduate', 'graduate', 'opportunities', 'jobs', 'fit'];
@@ -2156,6 +2195,7 @@
         var ask = pathwayBrowser.querySelector('.na-pathway-ask');
         if (ask && selected)
             ask.addEventListener('click', async function () { var prompt = isJobs ? 'Create a realistic preparation and job-search plan for the role "' + selected.name + '". Verify current neurotechnology employers and job descriptions, identify the most common required skills, separate required from preferred qualifications, propose three portfolio projects and a 12-week application plan, and flag location or clinical-travel constraints.' : 'Assess my potential fit for ' + selected.name + ' at ' + selected.institution + ' using the official program page ' + selected.programUrl + '. Verify the current application cycle, prerequisites, degree structure, funding and faculty or laboratory options. Explain who this route fits, common gaps, evidence I should build, and three comparable programs. Do not estimate admission probability without applicant-specific evidence.'; await sendResearchPrompt({ title: isJobs ? 'Plan for ' + selected.name : 'Assess ' + selected.name, prompt: prompt }); });
+        restoreFocus();
     }
     function syncControls() {
         var entities = isOrganizationView();
@@ -2208,6 +2248,8 @@
         focusButton.textContent = I18N.t('spaceFocus');
     }
     function draw() {
+        if (root.hidden)
+            return;
         entityPage.hidden = true;
         orgUI.hidden = true;
         root.querySelector('.na-focus').hidden = state.entityPage;
@@ -2353,7 +2395,12 @@
         else
             drawTimeline(w, h);
     }
-    function syncView() { Array.from(root.querySelectorAll('[data-view]')).forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.view === state.view)); }); }
+    function syncView() {
+        var hash = state.entityPage ? '#org/' + encodeURIComponent(state.selectedLab) : state.view === 'atlas' && state.detailOpen ? '#tech/' + encodeURIComponent(state.selected) : '#' + state.view;
+        if (!hubNavigating && !root.hidden && location.hash.split('?')[0] !== hash)
+            window.dispatchEvent(new CustomEvent('neuroatlas:viewchange', { detail: { hash: hash, view: state.view, internal: true } }));
+        Array.from(root.querySelectorAll('[data-view]')).forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.view === state.view)); });
+    }
     search.addEventListener('input', function () { state.search = search.value; state.page = 0; if (state.search.trim() && state.view === 'organizations' && state.orgMode === 'map')
         revealOrganizationsForFilter(); draw(); if (isOrganizationView())
         renderDetail(); });
@@ -2387,12 +2434,7 @@
             renderDetail();
     });
     papersBtn.addEventListener('click', function () { state.entityPage = false; clearEntityHash(); state.view = 'researchers'; state.search = ''; search.value = ''; state.page = 0; state.detailOpen = false; papersBtn.setAttribute('aria-pressed', 'false'); syncView(); syncControls(); renderDetail(); draw(); });
-    Array.from(root.querySelectorAll('[data-view]')).forEach(function (b) { b.addEventListener('click', function () { var next = b.dataset.view; var wasEntities = isOrganizationView(), willEntities = next === 'organizations' || next === 'labs' || next === 'universe'; var wasPeople = state.view === 'researchers', willPeople = next === 'researchers'; var wasFrontier = state.view === 'frontier', willFrontier = next === 'frontier'; var wasPathways = state.view === 'pathways', willPathways = next === 'pathways'; if (wasEntities !== willEntities || wasPeople !== willPeople || wasFrontier !== willFrontier || wasPathways !== willPathways) {
-        state.search = '';
-        search.value = '';
-    } if (next === 'labs' || next === 'universe')
-        next = 'organizations'; if (next === 'organizations' && state.view !== 'organizations')
-        state.orgMode = 'map'; state.entityPage = false; clearEntityHash(); state.view = next; state.page = 0; state.detailOpen = false; syncView(); syncControls(); renderDetail(); draw(); }); });
+    Array.from(root.querySelectorAll('[data-view]')).forEach(function (b) { b.addEventListener('click', function () { window.dispatchEvent(new CustomEvent('neuroatlas:viewchange', { detail: { view: b.dataset.view } })); }); });
     root.addEventListener('keydown', function (event) { if (event.key === 'Escape' && state.entityPage)
         closeEntityPage(true);
     else if (event.key === 'Escape' && state.detailOpen)
@@ -2401,15 +2443,6 @@
         state.activeGroups.delete(k);
     else
         state.activeGroups.add(k); b.setAttribute('aria-pressed', String(state.activeGroups.has(k))); syncControls(); draw(); }); });
-    window.addEventListener('popstate', function () { var id = entityIdFromHash(), exists = L.some(function (d) { return d.id === id; }); if (id && exists) {
-        state.entityPage = true;
-        state.selectedLab = id;
-        state.entityTab = 'overview';
-        state.view = 'organizations';
-        state.orgMode = 'ranked';
-    }
-    else
-        state.entityPage = false; syncView(); syncControls(); renderDetail(); draw(); });
     var initialEntity = entityIdFromHash();
     if (initialEntity && L.some(function (d) { return d.id === initialEntity; })) {
         state.entityPage = true;
@@ -2428,6 +2461,67 @@
         drawUniverse(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'style'] });
     __applyLang();
     document.addEventListener('na-i18n', function () { __applyLang(); syncView(); syncControls(); renderDetail(); draw(); });
+    window.neuroAtlas = {
+        counts: { technologies: T.length, organizations: L.length, researchers: researchers.length },
+        records: [
+            ...T.map(function (t) { return { id: t.id, title: t.n, description: t.summary, kind: 'Technology', href: '#tech/' + encodeURIComponent(t.id), keywords: [t.signal, t.mechanism, t.ex.join(' ')].join(' ') }; }),
+            ...L.map(function (d) { return { id: d.id, title: d.n, description: d.d, kind: 'Organization', href: '#org/' + encodeURIComponent(d.id), keywords: [d.inst, d.city, d.country, d.f.join(' ')].join(' ') }; }),
+            ...researchers.map(function (d) { return { id: d.id, title: d.name, description: d.summary, kind: 'Researcher', href: '#person/' + encodeURIComponent(d.id), keywords: d.institution + ' ' + d.country }; }),
+            ...pathwayData.programs.map(function (d) { return { id: d.id, title: d.name, description: d.bestFor, kind: 'Program', href: d.programUrl, keywords: [d.institution, d.location, d.focus.join(' ')].join(' ') }; }),
+            ...pathwayData.roles.map(function (d) { return { id: d.id, title: d.name, description: d.lane + ' · ' + d.entry, kind: 'Career role', href: d.sourceUrl }; }),
+            ...(jobsSnapshot.jobs || []).map(function (d) { return { id: d.id, title: d.title, description: d.employer + ' · ' + d.location + ' · ' + (d.source === 'Curated' ? 'Availability not rechecked' : 'Dated listing; verify availability'), kind: 'Job listing', href: d.url, keywords: d.fn + ' ' + d.level }; }),
+            ...(frontierSnapshot.items || []).map(function (d) { return { id: d.id, title: d.title, description: d.source + ' · ' + (d.date || d.observedAt || 'Date unavailable') + ' · ' + frontierKindLabel(d.kind), kind: 'Paper / update', href: d.sourceUrl, keywords: d.summary + ' ' + d.authors }; })
+        ],
+        navigate: function (route, id, query) {
+            hubNavigating = true;
+            try {
+                state.entityPage = false;
+                state.detailOpen = false;
+                state.page = 0;
+                state.search = query || '';
+                search.value = state.search;
+                state.family = 'all';
+                state.purpose = 'all';
+                state.operation = 'all';
+                state.region = 'all';
+                state.kind = 'all';
+                state.model = 'all';
+                family.value = 'all';
+                purpose.value = 'all';
+                operation.value = 'all';
+                region.value = 'all';
+                kind.value = 'all';
+                model.value = 'all';
+                state.activeGroups = new Set(groupKeys);
+                state.orgGroupFilter = '';
+                state.orgTechFilter = '';
+                state.filtersOpen = false;
+                Array.from(legend.querySelectorAll('[data-group]')).forEach(function (b) { b.setAttribute('aria-pressed', 'true'); });
+                state.view = route === 'org' ? 'organizations' : route === 'tech' ? 'atlas' : route === 'person' ? 'researchers' : route;
+                if (state.view === 'organizations')
+                    state.orgMode = 'ranked';
+                if (route === 'org') {
+                    openEntityPage(id, 'organizations', false);
+                }
+                if (route === 'tech' && T.some(function (t) { return t.id === id; })) {
+                    state.selected = id;
+                    state.detailOpen = true;
+                }
+                if (route === 'person' && researchers.some(function (d) { return d.id === id; })) {
+                    state.selectedResearcher = id;
+                    state.search = researchers.find(function (d) { return d.id === id; }).name;
+                    search.value = state.search;
+                }
+                syncView();
+                syncControls();
+                renderDetail();
+                draw();
+            }
+            finally {
+                hubNavigating = false;
+            }
+        }
+    };
     syncView();
     syncControls();
     renderDetail();

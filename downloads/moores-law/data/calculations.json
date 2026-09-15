@@ -1,0 +1,83 @@
+{
+  "cutoff": "2026-09-15",
+  "scenarios": [
+    {
+      "doubling_years": 3,
+      "annual_growth_percent": 25.99210498948732,
+      "relative_growth_after_12_years": 16.0
+    },
+    {
+      "doubling_years": 7.4,
+      "annual_growth_percent": 9.81956753527815,
+      "relative_growth_after_12_years": 3.0772072694610273
+    }
+  ],
+  "comparisons": {
+    "np1_to_ultra_sites": {
+      "first_id": "np1_2017",
+      "last_id": "np_ultra_2025",
+      "metric": "sites",
+      "first_value": 960,
+      "last_value": 6144,
+      "elapsed_rounded_years": 8,
+      "ratio": 6.4,
+      "endpoint_equivalent_doubling_years": 2.9872237503135772,
+      "interpretation": "Descriptive endpoints only; no exponential fit. Rounded publication years unless named availability comparison."
+    },
+    "np1_to_ultra_channels": {
+      "first_id": "np1_2017",
+      "last_id": "np_ultra_2025",
+      "metric": "simultaneous_channels",
+      "first_value": 384,
+      "last_value": 384,
+      "elapsed_rounded_years": 8,
+      "ratio": 1.0,
+      "endpoint_equivalent_doubling_years": null,
+      "interpretation": "Descriptive endpoints only; no exponential fit. Rounded publication years unless named availability comparison."
+    },
+    "np1_to_np2_single_sites": {
+      "first_id": "np1_2017",
+      "last_id": "np2_single_2021",
+      "metric": "sites",
+      "first_value": 960,
+      "last_value": 1280,
+      "elapsed_rounded_years": 4,
+      "ratio": 1.3333333333333333,
+      "endpoint_equivalent_doubling_years": 9.637683358612838,
+      "interpretation": "Descriptive endpoints only; no exponential fit. Rounded publication years unless named availability comparison."
+    },
+    "np1_to_np2_four_sites": {
+      "first_id": "np1_2017",
+      "last_id": "np2_four_2021",
+      "metric": "sites",
+      "first_value": 960,
+      "last_value": 5120,
+      "elapsed_rounded_years": 4,
+      "ratio": 5.333333333333333,
+      "endpoint_equivalent_doubling_years": 1.6562889815145492,
+      "interpretation": "Descriptive endpoints only; no exponential fit. Rounded publication years unless named availability comparison."
+    },
+    "np1_to_quad_preprint_channels": {
+      "first_id": "np1_2017",
+      "last_id": "np_quad_2026",
+      "metric": "simultaneous_channels",
+      "first_value": 384,
+      "last_value": 1536,
+      "elapsed_rounded_years": 9,
+      "ratio": 4.0,
+      "endpoint_equivalent_doubling_years": 4.5,
+      "interpretation": "Descriptive endpoints only; no exponential fit. Rounded publication years unless named availability comparison."
+    },
+    "np1_to_quad_availability_channels": {
+      "first_id": "np1_2017",
+      "last_id": "np_quad_2026",
+      "metric": "simultaneous_channels",
+      "first_value": 384,
+      "last_value": 1536,
+      "elapsed_rounded_years": 8,
+      "ratio": 4.0,
+      "endpoint_equivalent_doubling_years": 4.0,
+      "interpretation": "Descriptive endpoints only; no exponential fit. Rounded publication years unless named availability comparison."
+    }
+  }
+}

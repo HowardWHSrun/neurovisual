@@ -1,0 +1,315 @@
+{
+  "reviewed": "2026-09-15",
+  "editorial_note": "Evidence is sourced. Interpretations and proposed tests are research notes developed with AI assistance, not company roadmaps.",
+  "ideas": [
+    {
+      "id": "moores-law-bci",
+      "title": "A Moore’s law for brain interfaces?",
+      "status": "Evidence review",
+      "theme": "Neural scaling",
+      "question": "Are we doubling electrodes, recording channels, or useful information?",
+      "summary": "The apparent doubling rate changes with the thing being counted. Follow the same hardware from physical sites to simultaneous signals.",
+      "observation": "A lab can move from a few probes to thousands of channels. The counting unit often changes along the way: thread, array, assembled implant, or acquisition system.",
+      "interpretation": "The Neuropixels 2017-to-2025 site comparison gives an endpoint-equivalent doubling time of 2.99 years. Its simultaneous channels remain 384. That supports a specific site-count observation, not a universal three-year law.",
+      "test": "Build separate dated series for the same interface, species, implant duration, and denominator. Compare sites per probe, concurrent channels per subject, and usable channels at a fixed implant age.",
+      "revision": "Initial evidence review. A universal three-year doubling cadence and the exact local lab history remain unverified.",
+      "sources": [
+        {
+          "title": "Jun et al. · 2017",
+          "url": "https://doi.org/10.1038/nature24636"
+        },
+        {
+          "title": "Ye et al. · 2025",
+          "url": "https://doi.org/10.1016/j.neuron.2025.08.030"
+        },
+        {
+          "title": "Stevenson & Kording · 2011",
+          "url": "https://doi.org/10.1038/nn.2731"
+        }
+      ],
+      "related": [
+        "density-or-coverage",
+        "useful-channels",
+        "readout-budget"
+      ],
+      "organizations": [
+        "neuralink",
+        "blackrock-neurotech",
+        "precision-neuroscience",
+        "paradromics",
+        "synchron",
+        "luan"
+      ],
+      "updated": "2026-09-15",
+      "history": [
+        {
+          "date": "2026-09-15",
+          "change": "Initial evidence review. A universal three-year doubling cadence and the exact local lab history remain unverified."
+        }
+      ]
+    },
+    {
+      "id": "density-or-coverage",
+      "title": "Where should the next electrode go?",
+      "status": "Open hypothesis",
+      "theme": "Density & coverage",
+      "question": "Does sampling more densely beat sampling a larger region?",
+      "summary": "Adding contacts to one array and adding another array are different experiments. The value of the next contact may depend more on location than on the total.",
+      "observation": "Precision’s four-array demonstration increased covered surface area. BrainGate speech work also shows that different implanted regions contribute differently to a decoder.",
+      "interpretation": "Working hypothesis: the best expansion route is task dependent. Local density may reveal richer signal structure; wider coverage may capture information missing from the original region.",
+      "test": "Retrain decoders on equal-sized subsets: dense local contacts, sparse wide coverage, and a spatially balanced control. Use repeated subsets, matched training data, and held-out days. Report geometry and signal quality.",
+      "revision": "Proposed comparison, not a demonstrated preference for either architecture.",
+      "sources": [
+        {
+          "title": "Company four-array announcement · 2024",
+          "url": "https://www.globenewswire.com/en/news-release/2024/05/28/2889069/0/en/Precision-Neuroscience-Announces-World-Record-for-Number-of-Electrodes-Placed-On-Human-Brain.html"
+        },
+        {
+          "title": "Willett et al. · 2023",
+          "url": "https://doi.org/10.1038/s41586-023-06377-x"
+        },
+        {
+          "title": "Precision array design · 2025",
+          "url": "https://doi.org/10.1038/s41551-025-01501-w"
+        }
+      ],
+      "related": [
+        "moores-law-bci",
+        "useful-channels"
+      ],
+      "organizations": [
+        "precision-neuroscience",
+        "blackrock-neurotech",
+        "paradromics"
+      ],
+      "updated": "2026-09-15",
+      "history": [
+        {
+          "date": "2026-09-15",
+          "change": "Proposed comparison, not a demonstrated preference for either architecture."
+        }
+      ]
+    },
+    {
+      "id": "useful-channels",
+      "title": "Count what stays useful",
+      "status": "Open hypothesis",
+      "theme": "Long-term access",
+      "question": "What if electrode count rises faster than stable neural access?",
+      "summary": "Place a dated usable-channel count beside every nominal count. Long-term retention and the decoder’s actual inputs deserve their own history.",
+      "observation": "A physical contact, a recording connection, a concurrent channel, and a decoder input are not interchangeable. In one 2023 speech study, 256 implanted electrodes supplied 128 electrodes used by the principal decoder.",
+      "interpretation": "Working hypothesis: a count measured at a fixed implant age will explain practical progress better than the largest number fabricated. Usability still needs a predeclared quality criterion.",
+      "test": "Record implanted, connected, concurrently acquired, quality-passing, and decoder-used counts at fixed follow-up intervals. Keep single-unit identity, task accuracy, latency, and independent-use duration separate.",
+      "revision": "Proposed measurement framework. No unreported retention fractions are estimated.",
+      "sources": [
+        {
+          "title": "Willett et al. · 2023",
+          "url": "https://doi.org/10.1038/s41586-023-06377-x"
+        },
+        {
+          "title": "Zhao et al. · online 2022",
+          "url": "https://doi.org/10.1038/s41551-022-00941-y"
+        },
+        {
+          "title": "SWITCH clinical study · 2023",
+          "url": "https://doi.org/10.1001/jamaneurol.2022.4847"
+        }
+      ],
+      "related": [
+        "moores-law-bci",
+        "density-or-coverage"
+      ],
+      "organizations": [
+        "neuralink",
+        "synchron",
+        "blackrock-neurotech",
+        "luan"
+      ],
+      "updated": "2026-09-15",
+      "history": [
+        {
+          "date": "2026-09-15",
+          "change": "Proposed measurement framework. No unreported retention fractions are estimated."
+        }
+      ]
+    },
+    {
+      "id": "readout-budget",
+      "title": "More sites—or more readout?",
+      "status": "Open hypothesis",
+      "theme": "Electronics & information",
+      "question": "When is selecting good sites more valuable than recording all of them?",
+      "summary": "A large array can contain far more sites than the electronics read simultaneously. More silicon contacts do not automatically mean more concurrent data.",
+      "observation": "BISC has 65,536 selectable sites and up to 1,024 concurrent channels at 8.475 kS/s; its alternative mode records 256 at 33.9 kS/s.",
+      "interpretation": "Working hypothesis: site selection can increase useful access within a fixed channel budget. Some tasks may instead require broader simultaneous sampling; switching among sites is not an equivalent measurement.",
+      "test": "Compare fixed and training-selected subsets at the same channel and sampling budgets, then evaluate on held-out sessions. Report raw data rate, wireless power, selection overhead, and task performance.",
+      "revision": "The calculator is arithmetic for hypothetical acquisition settings, not a device power model or an information-rate estimate.",
+      "sources": [
+        {
+          "title": "Jung et al. · 2025",
+          "url": "https://doi.org/10.1038/s41928-025-01509-9"
+        },
+        {
+          "title": "Rice 5,376-channel platform · 2026",
+          "url": "https://doi.org/10.1038/s44385-026-00103-8"
+        }
+      ],
+      "related": [
+        "moores-law-bci",
+        "useful-channels"
+      ],
+      "organizations": [],
+      "updated": "2026-09-15",
+      "history": [
+        {
+          "date": "2026-09-15",
+          "change": "The calculator is arithmetic for hypothetical acquisition settings, not a device power model or an information-rate estimate."
+        }
+      ]
+    }
+  ],
+  "companies": [
+    {
+      "id": "neuralink",
+      "org": "neuralink",
+      "name": "Neuralink",
+      "mechanism": "Threads + contacts per thread",
+      "headline": "Scale the whole implantation process",
+      "count": "1,024 sites / 64 threads",
+      "context": "N1 nominal specification · human implant architecture",
+      "evidence": "The 2019 wired rat platform used up to 96 threads × 32 contacts. N1 specifies 64 × 16. These are different research and clinical configurations.",
+      "thought": "More contacts on an existing thread and more inserted threads can both raise the total. The latter also changes anatomical coverage and placement workload.",
+      "bottleneck": "Investigate insertion throughput, placement yield, wireless data/power, and signal retention together. This is our engineering interpretation, not a ranking of the company’s current bottlenecks.",
+      "question": "At the same contact count, do more threads improve held-out decoding enough to justify the additional insertions?",
+      "sources": [
+        {
+          "title": "2019 platform paper",
+          "url": "https://doi.org/10.2196/16194"
+        },
+        {
+          "title": "PRIME device specification",
+          "url": "https://neuralink.com/pdfs/PRIME-Study-Brochure.pdf"
+        }
+      ]
+    },
+    {
+      "id": "blackrock",
+      "org": "blackrock-neurotech",
+      "name": "Blackrock / BrainGate",
+      "mechanism": "Multiple arrays + placement",
+      "headline": "Ask where the next array belongs",
+      "count": "256 implanted → 128 decoded",
+      "context": "One 2023 speech study · not a product-wide yield",
+      "evidence": "That participant had four 64-contact arrays. The main speech decoder used two premotor arrays; the other regions were weakly informative for this task.",
+      "thought": "Replication increases contacts without shrinking each array. Placement decides whether those extra contacts carry useful task information.",
+      "bottleneck": "Coverage, connected channels, and quality must be measured separately. More implanted contacts cannot be assumed to produce the same number of useful inputs.",
+      "question": "Would an equal-sized decoder benefit more from adjacent arrays or from sampling another relevant region?",
+      "sources": [
+        {
+          "title": "Willett et al. · 2023",
+          "url": "https://doi.org/10.1038/s41586-023-06377-x"
+        },
+        {
+          "title": "Four-array speech study · 2024",
+          "url": "https://doi.org/10.1056/NEJMoa2314132"
+        }
+      ]
+    },
+    {
+      "id": "precision",
+      "org": "precision-neuroscience",
+      "name": "Precision Neuroscience",
+      "mechanism": "Surface tiling + density",
+      "headline": "Separate wider coverage from tighter spacing",
+      "count": "4 arrays × 1,024 = 4,096",
+      "context": "Company-reported April 2024 intraoperative streaming",
+      "evidence": "Four arrays expanded surface coverage. The 2025 design’s nominal 1,024 sites include 977 recording-sized contacts, 42 stimulation-optimized contacts, and five references.",
+      "thought": "A surface platform has two growth directions: tile more cortex or decrease contact spacing. Their value may differ by task and signal band.",
+      "bottleneck": "Determine how much neighboring signals overlap and what extra regions contribute. Layer 7-T clearance is for a passive array used for less than 30 days; it does not establish a chronic wireless BCI.",
+      "question": "With contact count fixed, does a larger, more sparsely sampled area outperform a smaller dense patch?",
+      "sources": [
+        {
+          "title": "Company four-array announcement · 2024",
+          "url": "https://www.globenewswire.com/en/news-release/2024/05/28/2889069/0/en/Precision-Neuroscience-Announces-World-Record-for-Number-of-Electrodes-Placed-On-Human-Brain.html"
+        },
+        {
+          "title": "2025 design paper",
+          "url": "https://doi.org/10.1038/s41551-025-01501-w"
+        },
+        {
+          "title": "FDA Layer 7-T record",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242618.pdf"
+        }
+      ]
+    },
+    {
+      "id": "paradromics",
+      "org": "paradromics",
+      "name": "Paradromics",
+      "mechanism": "Density + cortical modules",
+      "headline": "Find the marginal value of another contact",
+      "count": "421 electrodes per module",
+      "context": "Connexus specification · participant-specific electrode count not established",
+      "evidence": "The company’s electrode-dropping analysis used 420 contacts. Its underlying SONIC benchmark studied sound decoding in sheep; the first chronic human trial implant was announced in June 2026.",
+      "thought": "Denser local sampling and adding another module are both hypotheses worth testing. An improving subsampling curve does not prove the performance of a denser future device.",
+      "bottleneck": "Measure local redundancy, long-term retention, and transfer from animal sensory benchmarks to human intended communication. The nominal 421 / analyzed 420 difference is not explained here.",
+      "question": "Do added nearby contacts help as much as a spatially separated group, and does that pattern transfer to human speech?",
+      "sources": [
+        {
+          "title": "Connexus specification",
+          "url": "https://paradromics.com/connexus/"
+        },
+        {
+          "title": "Company electrode analysis · Jan 2026",
+          "url": "https://paradromics.com/blog/paradromics-sfn-part-2/"
+        },
+        {
+          "title": "SONIC preprint · 2025",
+          "url": "https://doi.org/10.1101/2025.09.30.679683"
+        },
+        {
+          "title": "First chronic trial implant · June 2026",
+          "url": "https://paradromics.com/news/paradromics-completes-first-human-brain-computer-interface-bci-implantation/"
+        }
+      ]
+    },
+    {
+      "id": "synchron",
+      "org": "synchron",
+      "name": "Synchron",
+      "mechanism": "Access + reliable control",
+      "headline": "Track useful control beside electrode count",
+      "count": "16 endovascular electrodes",
+      "context": "SWITCH study · 12-month human follow-up",
+      "evidence": "The Stentrode study recorded through a brain blood vessel. It evaluated switch actions, including eye-tracking-assisted interaction and a BCI-only scanning task.",
+      "thought": "Reliable selection, less calibration, and independent use can improve without a larger headline count. The cited study establishes no count-expansion roadmap.",
+      "bottleneck": "Vascular placement and overlapping signals may shape the value of more contacts. That remains a measurement question, not a conclusion drawn from the small count.",
+      "question": "How does neural-only accuracy and selection time change as usable contacts are added, with assistance reported separately?",
+      "sources": [
+        {
+          "title": "SWITCH clinical study · 2023",
+          "url": "https://doi.org/10.1001/jamaneurol.2022.4847"
+        }
+      ]
+    },
+    {
+      "id": "bisc",
+      "org": "",
+      "name": "BISC · research platform",
+      "mechanism": "Selectable sites + concurrent readout",
+      "headline": "Use the sites already available",
+      "count": "65,536 sites / 1,024 channels",
+      "context": "Academic surface device · pig and nonhuman-primate evidence",
+      "evidence": "A selectable subset is recorded concurrently: 1,024 channels at 8.475 kS/s or 256 at 33.9 kS/s. The full array is not read out at once.",
+      "thought": "Fabricating more potential sensing locations and widening readout are distinct routes. Selecting good locations may help within a fixed electronic budget.",
+      "bottleneck": "Test selection quality, temporal coverage, wireless resources, and the cost of switching. More selectable sites do not guarantee more task information.",
+      "question": "Does a training-selected subset outperform a fixed subset at the same channel budget on unseen sessions?",
+      "sources": [
+        {
+          "title": "Jung et al. · 2025",
+          "url": "https://doi.org/10.1038/s41928-025-01509-9"
+        }
+      ]
+    }
+  ]
+}

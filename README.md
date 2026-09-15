@@ -1,22 +1,68 @@
-# Global Neurotechnology Atlas
+# Neurovisual
 
-Interactive atlas of 86 neurotechnology categories and 399 projects, laboratories, companies, public programs, and open-science efforts worldwide.
+A neuroengineering reference hub connecting field overviews, learning resources, and the Global Neurotechnology Atlas.
 
-The quantitative ranking browser compares disclosed capital or program funding, reported workforce or team size, and directly sponsored interventional trials. Every displayed figure includes its scope, date, uncertainty, and source; unavailable figures remain explicitly undisclosed.
+Public site: https://howardwhsrun.github.io/neurovisual/
 
-The interface uses progressive disclosure: the default 3D field map starts with six color-coded technology territories, organization nodes and filters are optional layers, ranking rows show only the active metric, and each organization opens in its own layered in-app profile. X shows interface depth, Y shows research-to-clinical maturity, Z separates technology-family layers, and technology-node size reflects the number of mapped organizations.
+## What is here
 
-Organization profiles include an optional AI research workspace with editable quick-brief, deep-research, and comparison prompts. In Codex it can hand the task directly to the host; on the static public site it copies the prepared prompt and opens ChatGPT. A deployment can enable in-page generation by defining `window.NEURO_ATLAS_AI_ENDPOINT` as a secure server endpoint that accepts `POST { prompt, entity }` and returns `{ output_text }`, `{ text }`, `{ answer }`, or plain text. Keep provider API keys on that server—never in `index.html`, browser JavaScript, or repository files.
+- **Overview:** ten connected topics, with short primers and routes into the atlas.
+- **Resource library:** 41 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
+- **Learning paths:** six four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, and stimulation modeling. Each includes evaluation criteria and a stretch question.
+- **Glossary:** 40 introductory definitions with links to their topic guides.
+- **Methods comparison:** eight qualitative comparisons of electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
+- **Topic depth:** each guide includes engineering tradeoffs, a four-stage workflow, common mistakes, and primary sources, with worked examples where useful.
+- **Ideas notebook:** four evolving notes, six platform strategies, an interactive site/channel comparison, a bandwidth calculator, and a downloadable 20-milestone research package. Begin at [Ideas](https://howardwhsrun.github.io/neurovisual/#ideas).
+- **Search:** one index spanning ideas, company strategies, the guides, resources, technologies, organizations, researchers, programs, career roles, job listings, and paper snapshots.
+- **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
-The map-first interaction is informed by the spatial taxonomy pattern used by [O-DATAMAP](https://o-datamap.oall.com/), adapted for neurotechnology rather than copying its branding or content.
+Atlas records retain their original dates and limitations. Resource links were reviewed on September 7, 2026; this does not mean every atlas record was reverified that day. The site is a curated starting point, not a complete census or a clinical reference.
 
-Live site: https://howardwhsrun.github.io/neurovisual/
+## Develop and validate
 
-The application is now separated into maintainable web sources:
+```sh
+pnpm install --frozen-lockfile
+pnpm build
+pnpm check
+pnpm test
+```
 
-- `index.html` contains semantic page structure.
-- `styles.css` contains the responsive visual system and map presentation.
-- `src/app.ts` contains the typed atlas data, state, filtering, ranking, canvas rendering, and interactions.
-- `dist/app.js` is the browser-ready JavaScript generated from TypeScript.
+The original TypeScript/classic-script architecture is retained. GitHub Pages serves the repository root; compiled `dist/*.js` files must be committed with source changes. No backend or API key is required. All core rendering assets, including D3 7.9.0, are local. Third-party resource links open at their original sites.
 
-Run `pnpm install` and `pnpm build` after changing the TypeScript source. The compiled script is emitted as a classic browser script so both GitHub Pages and direct `file://` opening work. GitHub Pages publishes the static site from the root of the `main` branch.
+`pnpm test` compiles the application and checks HTML escaping, allowed URL schemes, route parsing, search matching, date handling, content relationships, script order, asset paths, and curated job-date integrity, notebook evidence relationships, selected rendered states, and notebook controls using element doubles. It is not a browser or visual test.
+
+## Source layout
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | Accessible navigation, global search, and retained atlas markup |
+| `data/ideas.json`, `data/neural-counts.json` | Authored research notes, company strategies, and scoped milestone evidence |
+| `src/ideas.ts`, `ideas.css` | Notebook, comparisons, and arithmetic controls |
+| `scripts/build-ideas.mjs`, `scripts/check-ideas.mjs` | Data generation and notebook validation |
+| `hub.css` | Responsive hub design and compatible atlas refinements |
+| `styles.css` | Original atlas presentation and visualizations |
+| `src/hub.ts` | Hub views, resource filters, global search, and hash routing |
+| `src/hub-data.ts` | Topic guides, official resources, glossary, and learning paths |
+| `src/hub-guides.ts` | Detailed source-linked topic guides and measurement comparisons |
+| `src/hub-utils.ts` | Shared escaping, URL, search, date, and route helpers |
+| `src/app.ts` | Atlas data, filters, rankings, visualization, and navigation adapter |
+| `src/researchers.ts`, `src/pathways.ts` | Existing researcher and study/career data |
+| `data/`, `dist/*-data.js` | Dated frontier and job snapshots |
+| `scripts/check-hub.mjs` | Content and integration checks |
+
+Hash routes work beneath `/neurovisual/` and do not require server rewrites. Existing `#org/<id>` URLs are preserved. Technologies use `#tech/<id>`; researchers use `#person/<id>`. Atlas-local interactions update the shell without reinitializing their selection or filters.
+
+## Updating content
+
+See [IDEAS.md](IDEAS.md) to add an observation or revise the count evidence. See [CONTRIBUTING.md](CONTRIBUTING.md) for the resource schema and source standards.
+
+```sh
+pnpm frontier:update
+pnpm jobs:update
+```
+
+Scheduled refresh workflows are retained. Snapshot generation time is distinct from source publication or verification time. A failed job-board refresh retains previous rows marked stale; manually curated roles do not receive invented posting dates. Check original listings before applying.
+
+Organization profiles retain the optional AI research workspace. On this public static site it prepares prompts for use in ChatGPT. A deployment can set `window.NEURO_ATLAS_AI_ENDPOINT` to a secure server endpoint accepting `POST { prompt, entity }`. Keep provider keys on the server, never in public HTML or JavaScript.
+
+D3 is distributed under the ISC license; see `assets/D3-LICENSE`.
