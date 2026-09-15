@@ -98,7 +98,7 @@ assert(container.querySelector('#idea-budget-result').textContent.startsWith('En
 // Run the actual hub router against lightweight shell elements to check that
 // notebook routes and search coexist with the retained atlas adapter.
 const hubContext=vm.createContext({URL,URLSearchParams,document:{readyState:'loading',documentElement:{setAttribute(){}},addEventListener(){}}});
-for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js']) vm.runInContext(await read(path),hubContext);
+for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js']) vm.runInContext(await read(path),hubContext);
 const strings=vm.runInContext('I18N.strings',hubContext);
 for(const m of atlas.matchAll(/I18N\.t\('([^']+)'\)/g)) assert(strings[m[1]]?.en && strings[m[1]]?.zh,`Missing bilingual key ${m[1]}`);
 for(const m of index.matchAll(/data-i18n(?:-aria|-ph|-html)?="([^"]+)"/g)) assert(strings[m[1]],`Missing static translation ${m[1]}`);
@@ -114,7 +114,7 @@ hubContext.document={getElementById:id=>shellElements[id]||null,querySelector:()
 vm.runInContext(await read('dist/hub.js'),hubContext);
 const hubContent=shellElements['hub-content'],atlasContent=shellElements['neurotech-atlas-2026'];
 assert(hubContent.innerHTML.includes('Big ideas, made testable.'));assert(atlasContent.hidden);
-for(const [hash,expected] of [['#ideas/moores-law-bci?section=counts&metric=channels','384'],['#ideas/moores-law-bci?section=companies&company=synchron','Synchron'],['#search?q=Moore','kind=Idea'],['#search?q=Paradromics','Company scaling'],['#ideas/missing','IDEA NOT FOUND']]){
+for(const [hash,expected] of [['#ideas/moores-law-bci?section=counts&metric=channels','384'],['#ideas/moores-law-bci?section=companies&company=synchron','Synchron'],['#search?q=Moore','kind=Idea'],['#search?q=Paradromics','Company scaling'],['#ideas/missing','IDEA NOT FOUND'],['#labs/rice-tringides','hydroMEA'],['#labs?view=schools','University of Zurich'],['#labs?view=progress','PROGRESS TO TRACK'],['#search?q=hydroMEA','Research lab'],['#labs/missing','profile not found']]){
   hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);assert(!hubContent.hidden && atlasContent.hidden);
 }
 hubContext.location.hash='#org/neuralink';windowEvents.hashchange();assert.equal(navigated.at(-1)[1],'neuralink');assert(hubContent.hidden && !atlasContent.hidden);
