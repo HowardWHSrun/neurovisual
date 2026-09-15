@@ -60,15 +60,16 @@ const NeuroMedia = (() => {
     return `<section class="nv-gallery"><div class="section-heading"><div><span class="eyebrow">MEET THE INTERFACES</span><h2>Six approaches. Different tradeoffs.</h2></div><a href="${companyUrl('neuralink')}">Explore the visual guide ↗</a></div><div class="nv-gallery-grid">${companies.map((c:any)=>`<a class="nv-gallery-card" href="${companyUrl(c.id)}">${image(c,true)}<span><strong>${e(c.visual?.name||c.name)}</strong><small>${e(c.visual?.route||c.mechanism)}</small></span><i aria-hidden="true">↗</i></a>`).join('')}</div></section>`;
   }
   function profile(c:any) {
-    return `<section class="nv-profile-media" aria-label="${e(c.name)} images and video"><div class="nv-profile-top">${photo(c)}${c.media?.image?.kind==='photo'?video(c):mechanism(c)}</div><div class="nv-profile-context"><strong>${e(c.media?.video?.title||'Video context')}</strong><p>${e(c.media?.video?.description||'')}</p></div><a class="nv-profile-cta" href="${companyUrl(c.id)}">${e(c.visual?.title||c.headline)} <span>Explore the visual count guide ↗</span></a></section>`;
+    return `<section class="nv-profile-media" aria-label="${e(c.name)} images and video"><div class="nv-profile-top">${mechanism(c)}${video(c)}</div><div class="nv-profile-context"><strong>${e(c.media?.video?.title||'Video context')}</strong><p>${e(c.media?.video?.description||'')}</p></div><a class="nv-profile-cta" href="${companyUrl(c.id)}">${e(c.visual?.title||c.headline)} <span>Explore the visual count guide ↗</span></a></section>`;
   }
   function bind(container:HTMLElement) {
     container.querySelectorAll<HTMLImageElement>('[data-neuro-image]').forEach(img=>{
+      if(img.dataset.neuroBound)return;img.dataset.neuroBound='true';
       const failed=()=>{img.hidden=true;img.parentElement?.classList.add('nv-image-unavailable');};
       img.addEventListener('error',failed,{once:true});
       if(img.complete && img.naturalWidth===0)failed();
     });
-    container.querySelectorAll<HTMLButtonElement>('[data-neuro-video]').forEach(button=>button.addEventListener('click',()=>{
+    container.querySelectorAll<HTMLButtonElement>('[data-neuro-video]').forEach(button=>{if(button.dataset.neuroBound)return;button.dataset.neuroBound='true';button.addEventListener('click',()=>{
       const id=button.dataset.neuroVideo||'';
       if(!/^[\w-]{11}$/.test(id))return;
       const frame=document.createElement('iframe');
@@ -94,7 +95,17 @@ const NeuroMedia = (() => {
         host.insertAdjacentElement('afterend',status);
         if(hadFocus)button.focus();
       },8000);
-    }));
+    });});
   }
-  return {diagram,image,photo,video,watchNotes,mechanism,gallery,profile,bind,tone};
+  function resetPlayers(container:HTMLElement) {
+    container.querySelectorAll<HTMLIFrameElement>('.nv-video-frame iframe').forEach(frame=>{
+      const id=frame.src.match(/embed\/([\w-]{11})/)?.[1];if(!id)return;
+      const host=frame.parentElement!,holder=document.createElement('div');
+      holder.innerHTML=player({media:{video:{id,title:frame.title}}});
+      frame.replaceWith(holder.firstElementChild!.firstElementChild!);
+      host.nextElementSibling?.classList.contains('nv-player-status')&&host.nextElementSibling.remove();
+      bind(host);
+    });
+  }
+  return {diagram,image,photo,video,watchNotes,mechanism,gallery,profile,bind,resetPlayers,tone};
 })();

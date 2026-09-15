@@ -1,0 +1,98 @@
+const NeuroVisuals = (() => {
+    const e = hubUtils.escapeHtml, u = hubUtils.sourceHref;
+    const play = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg>';
+    function items() {
+        return [...neuroIdeasData.companies.map((c) => ({ id: 'company-' + c.id, title: c.visual?.name || c.name, owner: c.name, group: 'companies', image: c.media.image, video: c.media.video, focus: c.thought, kind: c.media.image.kind, href: '#ideas/moores-law-bci?section=companies&company=' + c.id })),
+            ...neuroVisualData.items.map(m => { const l = neuroLabsData.labs.find(l => l.id === m.labId); return { id: 'lab-' + m.labId, title: m.title, owner: l.name + ' · ' + l.institution, group: 'labs', image: m.image, video: m.video, focus: m.focus, kind: m.kind, href: '#labs/' + m.labId }; })];
+    }
+    function picture(m, priority = false) { return `<div class="visual-image"><span class="visual-image-missing">Image unavailable here.<br>Open the credited source below.</span><img data-visual-image src="${u(m.image.url)}" alt="${e(m.image.alt)}" loading="${priority ? 'eager' : 'lazy'}" decoding="async"></div>`; }
+    function thumb(m, priority = false) { return `<button class="visual-enlarge" type="button" data-visual-open="${e(m.id)}" aria-label="Enlarge image: ${e(m.title)}">${picture(m, priority)}<span class="visual-enlarge-label" aria-hidden="true">View image <b>⤢</b></span></button>`; }
+    function credit(m) { return `<figcaption class="visual-credit"><span>${e(m.image.caption)}</span><a href="${u(m.image.source)}" target="_blank" rel="noopener noreferrer">${e(m.image.credit)} ↗</a>${m.image.license ? `<a href="${u(m.image.license.url)}" target="_blank" rel="noopener noreferrer">${e(m.image.license.label)} · image unmodified ↗</a>` : ''}</figcaption>`; }
+    function card(m) { return `<article class="visual-card"><figure>${thumb(m)}${credit(m)}</figure><div class="visual-card-copy"><span class="visual-owner">${e(m.owner)}</span><h2><a href="${e(m.href)}">${e(m.title)} <span aria-hidden="true">↗</span></a></h2><p>${e(m.focus)}</p><div class="visual-card-actions"><a href="${e(m.href)}">Explore the research →</a>${m.video ? `<button type="button" class="visual-watch" data-visual-open="${e(m.id)}" data-visual-mode="video">${play} Watch film</button>` : ''}</div></div></article>`; }
+    function spotlight() {
+        const all = items(), first = all.find(m => m.id === 'company-bisc'), second = all.find(m => m.group === 'labs') || all[0];
+        return `<section class="visual-spotlight" aria-labelledby="visual-spotlight-title"><div class="visual-spotlight-copy"><span class="eyebrow">THE VISUAL FIELD GUIDE</span><h2 id="visual-spotlight-title">See the engineering.<br>Follow the idea.</h2><p>Devices up close, research in action, and the people making it happen.</p><a href="#visuals">Explore pictures &amp; films <span aria-hidden="true">↗</span></a></div><a class="visual-spotlight-photo" href="#visuals?group=companies">${picture(first, true)}<span><small>DEVICE CLOSE-UP</small><strong>${e(first.title)} ↗</strong></span></a><a class="visual-spotlight-photo visual-spotlight-second" href="#visuals?group=labs">${picture(second, true)}<span><small>INSIDE THE LABS</small><strong>${e(second.title)} ↗</strong></span></a></section>`;
+    }
+    function labCard(id) { const m = items().find(m => m.id === 'lab-' + id); return m ? `<div class="lab-card-visual"><a class="lab-card-photo" href="#labs/${e(id)}">${picture(m)}<span>Research close-up <b aria-hidden="true">↗</b></span></a><a class="lab-card-photo-credit" href="${u(m.image.source)}" target="_blank" rel="noopener noreferrer">${e(m.image.credit)} ↗</a>${m.image.license ? `<a class="lab-card-photo-credit" href="${u(m.image.license.url)}" target="_blank" rel="noopener noreferrer">${e(m.image.license.label)} ↗</a>` : ''}</div>` : ''; }
+    function labFeature(id) { const m = items().find(m => m.id === 'lab-' + id); return m ? `<section class="visual-lab-feature" id="lab-profile-visuals" tabindex="-1" aria-label="Research images and film"><figure>${thumb(m, true)}${credit(m)}</figure><div class="visual-lab-caption"><span class="eyebrow">RESEARCH IN VIEW</span><h2>${e(m.title)}</h2><p>${e(m.focus)}</p>${m.video ? `<div class="visual-media">${NeuroMedia.video({ media: { video: m.video } })}</div>` : `<a href="${u(m.image.source)}" target="_blank" rel="noopener noreferrer">Read the institutional story ↗</a>`}<a class="visual-all-link" href="#visuals?group=labs">More research pictures &amp; films →</a></div></section>` : ''; }
+    function labBanner() { return `<a class="visual-lab-banner" href="#visuals?group=labs"><span>${play}<strong>Explore the research visually</strong><small>Device photographs, experiments, and university films</small></span><b aria-hidden="true">↗</b></a>`; }
+    function explainer() { return `<section class="visual-count-story" aria-labelledby="count-story-title"><header><span class="eyebrow">AN INTERACTIVE EXPLANATION</span><h2 id="count-story-title">What are we counting?</h2><p>Follow one imaginary probe from its physical contacts to the neurons identified in its recordings.</p></header><div class="visual-count-layout"><div class="visual-count-stage"><div class="visual-count-art" id="visual-count-art"></div><p>Illustrative example · not a product specification or experimental recording</p></div><div class="visual-count-reader"><div class="visual-count-steps" role="group" aria-label="Explore the three different counts">${['Physical sites', 'Readout channels', 'Identified units'].map((t, i) => `<button type="button" data-count-step="${i}" aria-pressed="${i === 0}"><b>0${i + 1}</b>${t}</button>`).join('')}</div><div id="visual-count-copy" role="status" aria-live="polite"></div><button id="visual-count-bank" type="button" hidden>Switch the selected contacts ↻</button><a href="#ideas/moores-law-bci?section=counts">Explore the measured historical counts →</a></div></div></section>`; }
+    function render(params = new URLSearchParams()) {
+        const all = items(), group = ['companies', 'labs', 'explainers'].includes(params.get('group') || '') ? params.get('group') : 'all';
+        const selected = all.filter(m => group === 'all' || m.group === group);
+        return `<div class="visual-page"><header class="visual-page-head"><div><span class="eyebrow">PICTURES · FILMS · EXPLANATIONS</span><h1>Neuroengineering,<br><em>in view.</em></h1><p>Get close to the interfaces. Watch the demonstrations. Open a picture to see the detail behind the claim.</p></div><div class="visual-page-index"><span>${all.length}<small>visual stories</small></span><span>${all.filter(m => m.video).length}<small>films to explore</small></span></div></header><nav class="visual-tabs" aria-label="Visual gallery categories">${[['all', 'Everything'], ['companies', 'Devices & companies'], ['labs', 'Inside the labs'], ['explainers', 'Visual explanations']].map(([key, label]) => `<a href="#visuals${key === 'all' ? '' : '?group=' + key}"${key === group ? ' aria-current="page"' : ''}>${label}${key === 'companies' || key === 'labs' ? `<span>${all.filter(m => m.group === key).length}</span>` : ''}</a>`).join('')}</nav>${group === 'explainers' ? explainer() : `<div class="visual-gallery-heading"><p>${group === 'labs' ? 'Research photographs and figures from universities and lab source pages.' : group === 'companies' ? 'Different interfaces, different ways of reaching the nervous system.' : 'A closer look at devices, experiments, and demonstrations.'}</p><span>Click any picture to enlarge</span></div><div class="visual-grid">${selected.map(card).join('')}</div><a class="visual-explainer-link" href="#visuals?group=explainers"><span><small>TRY THE INTERACTIVE EXPLANATION</small><strong>Sites, channels, neurons. What changes when you count differently?</strong></span><b aria-hidden="true">↗</b></a>`}<p class="visual-source-note">Images retain their source credits; device renders and research figures are labeled in the captions. These selected stories connect to the broader research directory. Videos load from YouTube only when you press play.</p></div>`;
+    }
+    function countFrame(step, bank) {
+        const selected = Array.from({ length: 8 }, (_, i) => i + bank * 8), accent = '#67dcca', faint = '#405b6b';
+        const sites = Array.from({ length: 32 }, (_, i) => { const x = 46 + (i % 4) * 32, y = 46 + Math.floor(i / 4) * 30, on = step === 0 || selected.includes(i); return `<circle cx="${x}" cy="${y}" r="7" fill="${on ? accent : faint}"/>`; }).join('');
+        const wires = selected.map((site, i) => `<path d="M ${46 + site % 4 * 32} ${46 + Math.floor(site / 4) * 30} H ${195 + i * 5} V ${65 + i * 24} H 300" fill="none" stroke="${accent}" stroke-width="1" opacity=".45"/>`).join('');
+        const traces = Array.from({ length: 8 }, (_, i) => `<path d="M 304 ${65 + i * 24} h 8 l 3 -4 3 10 3 -18 3 16 3 -4 h 20" stroke="${accent}" fill="none"/>`).join('');
+        const units = Array.from({ length: 6 }, (_, i) => `<circle cx="${253 + i % 3 * 48}" cy="${121 + Math.floor(i / 3) * 55}" r="14" fill="${['#67dcca', '#e7b886', '#b9b1f5'][i % 3]}"/><text x="${253 + i % 3 * 48}" y="${126 + Math.floor(i / 3) * 55}" text-anchor="middle" fill="#142b3c" font-size="14" font-weight="700">${i + 1}</text>`).join('');
+        return `<svg viewBox="0 0 400 330" role="img" aria-label="${step === 0 ? '32 physical electrode sites on one illustrative probe' : step === 1 ? '8 of the 32 sites connected to 8 simultaneous readout channels' : '6 illustrative identified units; unit count is not determined by the electrode count'}"><rect x="25" y="22" width="137" height="280" rx="24" fill="#263f50" stroke="#567282"/>${sites}${step === 1 ? wires + traces : step === 2 ? units : '<text x="258" y="153" text-anchor="middle" fill="#67dcca" font-size="68" font-weight="700">32</text><text x="258" y="183" text-anchor="middle" fill="#bbcdd5" font-size="15">physical sites</text>'}<text x="94" y="324" text-anchor="middle" fill="#bbcdd5" font-size="13">One probe</text>${step === 1 ? '<text x="276" y="291" text-anchor="middle" fill="#bbcdd5" font-size="13">8 simultaneous channels</text>' : step === 2 ? '<text x="285" y="231" text-anchor="middle" fill="#bbcdd5" font-size="13">6 example units</text>' : ''}</svg>`;
+    }
+    function bind(container) {
+        container.querySelectorAll('[data-visual-image]').forEach(img => { if (img.dataset.visualBound)
+            return; img.dataset.visualBound = 'true'; const fail = () => { img.hidden = true; img.parentElement?.classList.add('visual-image-failed'); }; img.addEventListener('error', fail, { once: true }); if (img.complete && !img.naturalWidth)
+            fail(); });
+        container.querySelectorAll('.visual-media').forEach(node => NeuroMedia.bind(node));
+        container.querySelectorAll('[data-visual-open]').forEach(button => { if (button.dataset.visualBound)
+            return; button.dataset.visualBound = 'true'; button.addEventListener('click', () => open(button.dataset.visualOpen, button.dataset.visualMode === 'video', button)); });
+        const stage = container.querySelector('#visual-count-art');
+        if (!stage)
+            return;
+        let step = 0, bank = 0;
+        const copy = container.querySelector('#visual-count-copy'), switcher = container.querySelector('#visual-count-bank');
+        const steps = container.querySelectorAll('[data-count-step]');
+        const update = () => { stage.innerHTML = countFrame(step, bank); copy.innerHTML = [`<strong>32 sites</strong><h3>The physical contacts.</h3><p>Count the places where the probe can pick up an electrical signal. More sites can offer more positions to sample.</p>`, `<strong>8 channels</strong><h3>What can be read at once?</h3><p>This example selects 8 of the 32 sites at a time. Switch the contact group: the sampled positions change, but the simultaneous channel count stays at 8.</p>`, `<strong>6 example units</strong><h3>What did the analysis identify?</h3><p>Spike sorting can identify putative neurons from recorded waveforms. This made-up result is 6 units. The count could be smaller or larger than the channel count and depends on signal quality and analysis.</p>`][step]; switcher.hidden = step !== 1; steps.forEach(b => b.setAttribute('aria-pressed', String(Number(b.dataset.countStep) === step))); };
+        steps.forEach(b => b.addEventListener('click', () => { step = Number(b.dataset.countStep); update(); }));
+        switcher.addEventListener('click', () => { bank = (bank + 1) % 4; update(); });
+        update();
+    }
+    let returnFocus = null, dialogBound = false;
+    function close() { const dialog = document.getElementById('visual-lightbox'); if (dialog?.open)
+        dialog.close(); }
+    function open(id, watch, trigger) {
+        const m = items().find(m => m.id === id), dialog = document.getElementById('visual-lightbox');
+        if (!m || !dialog)
+            return;
+        returnFocus = trigger;
+        if (!dialogBound) {
+            dialog.querySelector('[data-visual-close]').addEventListener('click', close);
+            dialog.addEventListener('click', event => { if (event.target === dialog)
+                close(); });
+            dialog.addEventListener('close', () => { dialog.querySelector('#visual-lightbox-content').innerHTML = ''; document.body.classList.remove('visual-open'); if (returnFocus?.isConnected)
+                returnFocus.focus({ preventScroll: true }); });
+            dialogBound = true;
+        }
+        const body = dialog.querySelector('#visual-lightbox-content');
+        const video = Boolean(watch && m.video);
+        dialog.querySelector('#visual-lightbox-title').textContent = m.title;
+        body.innerHTML = `${video ? `<div class="visual-lightbox-video">${NeuroMedia.video({ media: { video: m.video } })}</div>` : `<figure>${picture(m, true)}${credit(m)}</figure>`}<div class="visual-lightbox-caption"><span>${e(m.owner)}</span><p>${e(m.focus)}</p>${m.group === 'labs' ? `<p>${e(neuroLabsData.labs.find(l => 'lab-' + l.id === m.id).summary)}</p>` : ''}<div><a href="${e(m.href)}" data-visual-follow>Explore the research →</a>${m.video ? `<button type="button" data-visual-toggle>${video ? 'View research image' : 'Watch the film'}</button>` : ''}</div></div>`;
+        body.querySelector('[data-visual-toggle]')?.addEventListener('click', () => open(id, !video, trigger));
+        body.querySelector('[data-visual-follow]')?.addEventListener('click', close);
+        bind(body);
+        if (video)
+            NeuroMedia.bind(body);
+        if (!dialog.open)
+            dialog.showModal();
+        document.body.classList.add('visual-open');
+        if (video)
+            body.querySelector('[data-neuro-video]')?.focus();
+        else
+            dialog.querySelector('[data-visual-close]')?.focus();
+    }
+    function idea(id) {
+        const imageId = { 'moores-law-bci': 'lab-rice-xie', 'density-or-coverage': 'company-precision', 'useful-channels': 'lab-rice-luan', 'readout-budget': 'company-bisc' };
+        const m = items().find(m => m.id === imageId[id]);
+        if (!m)
+            return '';
+        const labels = { 'moores-law-bci': 'One probe. Several different counts.', 'density-or-coverage': 'The same number, in different places.', 'useful-channels': 'Follow the signal all the way through.', 'readout-budget': 'Every sample has to travel somewhere.' };
+        const dots = (start, gap) => Array.from({ length: 16 }, (_, i) => `<circle cx="${start + i % 4 * gap}" cy="${55 + Math.floor(i / 4) * gap}" r="3.5" fill="#55b7a5"/>`).join('');
+        const rows = id === 'density-or-coverage' ? `<rect x="30" y="26" width="135" height="140" rx="16" fill="#244c59"/><rect x="205" y="26" width="135" height="140" rx="16" fill="#244c59"/>${dots(68, 12)}${dots(227, 30)}<text x="98" y="195" text-anchor="middle">16 dense contacts</text><text x="273" y="195" text-anchor="middle">16 spread contacts</text>` :
+            id === 'moores-law-bci' ? `<g>${Array.from({ length: 3 }, (_, i) => `<rect x="${22 + i * 118}" y="35" width="104" height="114" rx="12" fill="#244c59"/><text x="${74 + i * 118}" y="89" text-anchor="middle" font-size="33" fill="#8cdfcb">${[32, 8, 6][i]}</text><text x="${74 + i * 118}" y="122" text-anchor="middle">${['sites', 'channels', 'units'][i]}</text>`).join('')}</g><text x="190" y="182" text-anchor="middle">Different measurements of one example</text>` :
+                (id === 'useful-channels' ? ['Implanted', 'Recorded', 'Quality checked', 'Decoder input'] : ['Contacts', 'Digitize', 'Transmit', 'Store']).map((label, i) => `<rect x="${14 + i * 93}" y="53" width="81" height="74" rx="9" fill="#244c59"/><text x="${54 + i * 93}" y="94" text-anchor="middle" font-size="${label.length > 10 ? 9 : 11}">${label}</text>${i < 3 ? `<path d="M ${98 + i * 93} 90 h 8 m -4 -4 4 4 -4 4" stroke="#8cdfcb" fill="none"/>` : ''}`).join('');
+        return `<aside class="idea-visual-aside"><figure>${thumb(m, true)}${credit(m)}</figure><div class="idea-concept"><span>EXPLANATORY DIAGRAM</span><h2>${e(labels[id])}</h2><svg viewBox="0 0 390 220" role="img" aria-label="${e(labels[id])}" fill="#cfe4e7" font-family="inherit" font-size="12">${rows}</svg><p>${id === 'moores-law-bci' ? 'Illustrative numbers, not a product specification.' : id === 'density-or-coverage' ? 'Illustrative geometry. Neither arrangement is assumed to perform better.' : id === 'useful-channels' ? 'Report each stage separately and repeat at fixed follow-up times.' : 'A conceptual data path. Storage demand follows channels × sample rate × bit depth.'}</p>${id === 'moores-law-bci' ? '<a href="#visuals?group=explainers">Try selecting different contacts →</a>' : ''}</div></aside>`;
+    }
+    function records() { return items().map(m => ({ id: m.id, title: m.title, description: m.focus, kind: 'Visual story', href: m.href, keywords: m.owner + ' picture image video film' })); }
+    return { items, render, spotlight, labCard, labFeature, labBanner, bind, close, records, countFrame, idea, explainer, credit, picture };
+})();

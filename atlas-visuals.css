@@ -1,0 +1,51 @@
+/* Visuals belong beside the record they explain. Scoped to avoid atlas charts. */
+#neurotech-atlas-2026 .av-context-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,235px),1fr));gap:22px;align-items:start;margin:22px 0;min-width:0}
+#neurotech-atlas-2026 .av-context-visual,#neurotech-atlas-2026 .av-context-copy{min-width:0;margin:0}
+#neurotech-atlas-2026 .av-context-visual>.fv-figure{margin:0}
+#neurotech-atlas-2026 .av-context-copy{align-self:center}
+#neurotech-atlas-2026 .av-visual{--av-accent:#34748a;margin:0;border:1px solid #d3e0e7;border-radius:9px;overflow:hidden;background:#f5f9fb;color:#28465b;min-width:0}
+#neurotech-atlas-2026 .av-art{background:#eaf3f7;padding:12px;color:var(--av-accent);overflow:hidden}
+#neurotech-atlas-2026 .av-art svg{display:block;width:100%;height:auto;max-height:255px}
+#neurotech-atlas-2026 .av-dot{fill:currentColor;stroke:#edf5f8;stroke-width:1}
+#neurotech-atlas-2026 .av-wash{fill:currentColor;fill-opacity:.08;stroke-opacity:.35}
+#neurotech-atlas-2026 .av-device{fill:#fff;fill-opacity:.85}
+#neurotech-atlas-2026 .av-dashed{stroke-dasharray:4 5;opacity:.65}
+#neurotech-atlas-2026 .av-arrow{opacity:.7}
+#neurotech-atlas-2026 .av-stages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));background:#fff;border-block:1px solid #dae5ea}
+#neurotech-atlas-2026 .av-stages span{min-width:0;text-align:center;padding:10px 7px;font-size:10px;line-height:1.45;color:#395d72;overflow-wrap:anywhere}
+#neurotech-atlas-2026 .av-stages span+span{border-left:1px solid #e2eaf0}
+#neurotech-atlas-2026 .av-stages b{display:block;font-size:9px;letter-spacing:.06em;color:#7392a1;margin-bottom:3px}
+#neurotech-atlas-2026 .av-visual figcaption{display:block;padding:14px 15px;background:none;border:0;margin:0}
+#neurotech-atlas-2026 .av-visual figcaption>small{display:block;font-size:9px;line-height:1.5;letter-spacing:.07em;color:#6a7f8b;margin-bottom:7px}
+#neurotech-atlas-2026 .av-visual figcaption>strong{display:block;font-size:14px;line-height:1.4;color:#274e62;font-weight:650;overflow-wrap:anywhere}
+#neurotech-atlas-2026 .av-visual figcaption>p{font-size:11px;line-height:1.7;margin:8px 0 10px;max-width:none;color:#586f7e}
+#neurotech-atlas-2026 .av-visual figcaption>a{display:block;font-size:10px;line-height:1.6;color:#2a697e;overflow-wrap:anywhere}
+#neurotech-atlas-2026 .av-photo-open{display:block;position:relative;width:100%;border:0;padding:0;background:#edf2f4;border-radius:0;cursor:zoom-in;overflow:hidden}
+#neurotech-atlas-2026 .av-image{display:grid;position:relative;place-items:center;aspect-ratio:4/3;width:100%;overflow:hidden;color:#6a7f89}
+#neurotech-atlas-2026 .av-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#edf2f4;z-index:1}
+#neurotech-atlas-2026 .av-image img[hidden]{display:none}
+#neurotech-atlas-2026 .av-image-fallback{visibility:hidden;font-size:11px;padding:25px;line-height:1.6;text-align:center}
+#neurotech-atlas-2026 .av-image.visual-image-failed .av-image-fallback{visibility:visible}
+#neurotech-atlas-2026 .av-enlarge{position:absolute;bottom:9px;right:9px;z-index:2;padding:6px 9px;border-radius:4px;background:#173d4bed;color:white;font-size:10px;line-height:1.4}
+#neurotech-atlas-2026 .av-watch{display:block;border:1px solid #b8ced8;background:#eaf4f7;color:#275e73;padding:8px 11px;border-radius:5px;font-size:11px;line-height:1.4;margin:11px 0 0;cursor:pointer}
+#neurotech-atlas-2026 .av-watch:hover{background:#dbeef3}
+#neurotech-atlas-2026 .av-visual :is(a,button):focus-visible{outline:2px solid #247a9b;outline-offset:3px}
+#neurotech-atlas-2026 .av-company .av-art{background:#153443}
+#neurotech-atlas-2026 .av-company .nv-diagram{margin:0}
+#neurotech-atlas-2026 .na-detail .av-context-pair{grid-template-columns:1fr;gap:15px}
+#neurotech-atlas-2026 .na-detail .av-art svg{max-height:210px}
+#neurotech-atlas-2026 .na-entity-page .av-context-pair{grid-template-columns:minmax(230px,.8fr) minmax(0,1.2fr);gap:28px}
+#neurotech-atlas-2026 .na-entity-page .av-visual{max-width:480px}
+#neurotech-atlas-2026 .na-entity-page .av-context-copy{padding:0;border:0}
+@media(max-width:760px){
+ #neurotech-atlas-2026 .av-context-pair,#neurotech-atlas-2026 .na-entity-page .av-context-pair{grid-template-columns:1fr;gap:17px;margin:19px 0}
+ #neurotech-atlas-2026 .av-art svg{max-height:220px}
+ #neurotech-atlas-2026 .av-visual figcaption>p{font-size:12px}
+ #neurotech-atlas-2026 .av-visual figcaption>a{font-size:11px}
+ #neurotech-atlas-2026 .av-watch{min-height:42px}
+ #neurotech-atlas-2026 .av-visual{max-width:560px}
+}
+@media print{#neurotech-atlas-2026 .av-visual{break-inside:avoid}#neurotech-atlas-2026 .av-enlarge,#neurotech-atlas-2026 .av-watch{display:none}}
+/* The atlas chart has a large minimum height; inline diagrams do not. */
+#neurotech-atlas-2026 .av-art svg,#neurotech-atlas-2026 .av-context-visual .fv-svg{min-height:0;height:auto;max-height:255px}
+#neurotech-atlas-2026 .na-detail .av-art svg,#neurotech-atlas-2026 .na-detail .fv-svg{max-height:220px}

@@ -218,14 +218,15 @@
           ]
         },
         "image": {
-          "kind": "video-preview",
-          "url": "https://i.ytimg.com/vi/QJdgHXyJh7M/hqdefault.jpg",
-          "alt": "Neuralink Overview, Fall 2025 — official video preview",
-          "caption": "Official video preview · 2025-12-03",
+          "kind": "illustration",
+          "url": "https://cdn.buttercms.com/HsyAIkHURhOFMwmjO16q",
+          "alt": "Neuralink exploded illustration showing the N1 implant enclosure, electronics, battery and electrode threads.",
+          "caption": "Exploded view of the N1 implant and its components. Company illustration, April 2024.",
           "credit": "Neuralink",
-          "source": "https://www.youtube.com/watch?v=QJdgHXyJh7M",
-          "usage": "YouTube-hosted preview used with its official embedded video. No website product imagery is copied."
-        }
+          "source": "https://neuralink.com/updates/prime-study-progress-update/",
+          "usage": "No explicit reuse license was stated on the inspected source page; company attribution does not itself establish permission."
+        },
+        "reviewed": "2026-09-15"
       }
     },
     {
@@ -277,14 +278,15 @@
           ]
         },
         "image": {
-          "kind": "video-preview",
-          "url": "https://i.ytimg.com/vi/eW0jn7jAe1w/hqdefault.jpg",
-          "alt": "A mind controlled masterpiece: James Johnson creates art in Photoshop with BCI — official video preview",
-          "caption": "Official video preview · 2023-04-05",
-          "credit": "Blackrock Neurotech",
-          "source": "https://www.youtube.com/watch?v=eW0jn7jAe1w",
-          "usage": "YouTube-hosted preview used with its official embedded video. No website product imagery is copied."
-        }
+          "kind": "photo",
+          "url": "https://blackrockneurotech.com/wp-content/uploads/2023/04/Utah-Array-NeuroPort-2.jpg",
+          "alt": "A close-up of a Utah-style penetrating microelectrode array, with a bundle of gold-colored wires extending from one side.",
+          "caption": "Blackrock’s Utah array: a close-up of the projecting microelectrodes and wire bundle.",
+          "credit": "Utah Array © Blackrock Neurotech",
+          "source": "https://blackrockneurotech.com/products/utah-array/",
+          "usage": "Blackrock publishes a customer publication protocol for official images, with attribution and modification limits. The inspected protocol does not establish an unrestricted public reuse license for this product-page image."
+        },
+        "reviewed": "2026-09-15"
       }
     },
     {
@@ -340,14 +342,15 @@
           ]
         },
         "image": {
-          "kind": "video-preview",
-          "url": "https://i.ytimg.com/vi/5V108D7Tn5A/hqdefault.jpg",
-          "alt": "Precision Neuroscience - Intro to Layer 7 — official video preview",
-          "caption": "Official video preview · 2026-07-09",
+          "kind": "photo",
+          "url": "https://cdn.sanity.io/images/883wn8od/production/96ea077496e582d81cfe1fc625be0c896087fd65-1176x1148.jpg?fm=webp&q=75&w=1176",
+          "alt": "White-gloved fingers hold a thin golden Layer 7 cortical electrode array with fine patterned traces.",
+          "caption": "The flexible Layer 7 cortical electrode array, held between gloved fingers. Precision Neuroscience, April 2025.",
           "credit": "Precision Neuroscience",
-          "source": "https://www.youtube.com/watch?v=5V108D7Tn5A",
-          "usage": "YouTube-hosted preview used with its official embedded video. No website product imagery is copied."
-        }
+          "source": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-receives-fda-clearance-for-high-resolution-cortical-electrode-array",
+          "usage": "No explicit reuse license was stated on the inspected source page; company attribution does not itself establish permission."
+        },
+        "reviewed": "2026-09-15"
       }
     },
     {
@@ -407,14 +410,15 @@
           ]
         },
         "image": {
-          "kind": "video-preview",
-          "url": "https://i.ytimg.com/vi/s_-PG3BtDQ8/hqdefault.jpg",
-          "alt": "Brain-computer interfaces: first in-human recording with new, high-capacity device — official video preview",
-          "caption": "Official video preview · 2025-06-02",
-          "credit": "Michigan Medicine",
-          "source": "https://www.youtube.com/watch?v=s_-PG3BtDQ8",
-          "usage": "YouTube-hosted preview used with its official embedded video. No website product imagery is copied."
-        }
+          "kind": "photo",
+          "url": "https://paradromics.com/wp-content/themes/paradromics/img/connexus/Hand-with-Product.png",
+          "alt": "A hand holds the small circular Connexus brain interface between thumb and forefinger, with its lead extending down.",
+          "caption": "The Connexus brain interface held between two fingers; its lead connects to the rest of the implanted system.",
+          "credit": "Paradromics",
+          "source": "https://paradromics.com/connexus/",
+          "usage": "No explicit reuse license was stated on the inspected source page; company attribution does not itself establish permission."
+        },
+        "reviewed": "2026-09-15"
       }
     },
     {
@@ -461,14 +465,15 @@
           ]
         },
         "image": {
-          "kind": "video-preview",
-          "url": "https://i.ytimg.com/vi/c-_OVgQ5q7k/hqdefault.jpg",
-          "alt": "Rodney uses The Force to feed his dog | Synchron BCI + NVIDIA Holoscan + Apple Vision Pro — official video preview",
-          "caption": "Official video preview · demonstration",
-          "credit": "Synchron BCI",
-          "source": "https://www.youtube.com/watch?v=c-_OVgQ5q7k",
-          "usage": "YouTube-hosted preview used with its official embedded video. No website product imagery is copied."
-        }
+          "kind": "photo",
+          "url": "https://cdn.sanity.io/images/e828r2sn/production/5cfebc7a8c391f90bfffba4ffd35cc02d654c82a-2400x1600.jpg?w=1600&q=85&auto=format",
+          "alt": "Magnified close-up of a circular Stentrode electrode attached to the thin metal struts of the stent.",
+          "caption": "A magnified Stentrode electrode and supporting stent struts. This close-up shows one part of the array.",
+          "credit": "Synchron",
+          "source": "https://synchron.com/research",
+          "usage": "No explicit reuse license was stated on the inspected source page; company attribution does not itself establish permission."
+        },
+        "reviewed": "2026-09-15"
       }
     },
     {

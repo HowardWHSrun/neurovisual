@@ -1,0 +1,114 @@
+/* Original field-guide diagrams; all styles stay inside fv-* components. */
+.fv-figure {
+  --fv-accent: #197d85;
+  margin: 0;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #dbe3e8;
+  border-radius: 12px;
+  background: #fff;
+}
+.fv-art {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  padding: 14px 10px 2px;
+  background: linear-gradient(145deg, #f4f8f8, #f7f9fc);
+}
+.fv-svg {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  overflow: visible;
+  font-family: inherit;
+}
+.fv-svg text { fill: #233d4a; font-size: 15px; font-weight: 550; }
+.fv-svg .fv-muted { fill: #526774; font-size: 13px; font-weight: 400; }
+.fv-svg .fv-line { fill: none; stroke: #91a8b3; stroke-width: 1.7; }
+.fv-svg .fv-arrow path { fill: #718e9b; }
+.fv-svg .fv-arrow line { stroke: #718e9b; }
+.fv-svg .fv-box rect { fill: #fff; stroke: #c1d0d7; stroke-width: 1.3; }
+.fv-svg .fv-box text { font-size: 14px; }
+.fv-svg .fv-dot { fill: #197d85; stroke: #fff; stroke-width: 1.5; }
+.fv-svg .fv-warm { fill: #bb693b; stroke: #fff; stroke-width: 1.5; }
+.fv-svg .fv-signal { fill: none; stroke: #197d85; stroke-width: 2; stroke-linejoin: round; }
+.fv-svg .fv-scalp { fill: none; stroke: #947362; stroke-width: 7; }
+.fv-svg .fv-skull { fill: #e0e4e8; stroke: #afbec7; stroke-width: 1.3; }
+.fv-svg .fv-tissue { fill: #ead2cc; stroke: #bc968b; stroke-width: 1.4; }
+.fv-svg .fv-cutout { fill: #f6f9fa; stroke: none; }
+.fv-svg .fv-sensor { fill: #d4e9ec; stroke: #287b83; stroke-width: 1.6; }
+.fv-svg .fv-probe { fill: #395a6b; stroke: #263f4d; stroke-width: 1.2; }
+.fv-svg .fv-contact { fill: #f7ca70; stroke: #fff2d0; stroke-width: .6; }
+.fv-svg .fv-contact-wire { fill: none; stroke: #197d85; stroke-width: 2.5; }
+.fv-svg .fv-ray { fill: none; stroke: #8aa3b0; stroke-width: 1.5; stroke-dasharray: 4 5; }
+.fv-svg .fv-light-path { fill: none; stroke: #bb693b; stroke-width: 3; stroke-dasharray: 5 4; }
+.fv-svg .fv-optical-cone { fill: #54c2b5; fill-opacity: .18; stroke: #348f85; stroke-width: 1; }
+.fv-svg .fv-camera rect, .fv-svg .fv-camera path { fill: #d7e7ec; stroke: #527584; stroke-width: 1.3; }
+.fv-svg .fv-camera text { fill: #284f61; font-size: 14px; }
+.fv-svg .fv-skeleton { fill: none; stroke: #2b7880; stroke-width: 3; stroke-linecap: round; }
+.fv-svg .fv-neuron { fill: #c1dfd6; stroke: #4f998a; stroke-width: 1.6; }
+.fv-svg .fv-image-field { fill: #e0eee9; stroke: #b3cfc3; stroke-width: 1; }
+.fv-svg .fv-roi { fill: none; stroke: #8662a6; stroke-width: 1.5; stroke-dasharray: 4 3; }
+.fv-caption { padding: 18px 20px; }
+.fv-eyebrow { display: block; color: #526c79; font-size: .65rem; font-weight: 650; letter-spacing: .13em; line-height: 1.5; }
+.fv-caption > strong { display: block; margin-top: 5px; color: #183848; font-size: 1rem; line-height: 1.35; }
+.fv-caption > p { margin: 8px 0 0; color: #506570; font-size: .8125rem; line-height: 1.6; }
+.fv-foot { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px; margin-top: 14px; padding-top: 11px; border-top: 1px solid #e0e7eb; }
+.fv-foot > span { margin-right: auto; color: #586d79; font-size: .6875rem; line-height: 1.5; }
+.fv-foot a { color: #246575; font-size: .6875rem; line-height: 1.5; text-underline-offset: 3px; }
+.fv-method-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-block: 20px; }
+.fv-method-pair .fv-art { padding-top: 10px; }
+.fv-method-pair .fv-caption { padding: 15px 18px; }
+.fv-topic { margin-block: 18px; }
+.fv-learning, .fv-resource-map { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 24px; align-items: start; margin-block: 22px; }
+.fv-learning-steps, .fv-resource-choices { min-width: 0; padding: 16px 0; }
+.fv-roadmap { display: grid; gap: 0; margin: 12px 0 0; padding: 0; list-style: none; }
+.fv-roadmap li { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; position: relative; padding-bottom: 24px; }
+.fv-roadmap li:not(:last-child)::after { content: ''; position: absolute; top: 37px; bottom: 5px; left: 17px; width: 1px; background: #bfd2d8; }
+.fv-roadmap li > span { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #bfd2d8; border-radius: 50%; background: #eff6f5; color: #256f72; font-size: .75rem; font-variant-numeric: tabular-nums; }
+.fv-roadmap li > div { padding-top: 2px; min-width: 0; }
+.fv-roadmap strong { display: block; color: #203f4d; font-size: .9rem; line-height: 1.4; }
+.fv-roadmap a { display: inline-block; padding-top: 4px; color: #3d6575; font-size: .75rem; line-height: 1.5; text-underline-offset: 3px; }
+.fv-outcome { margin: 0; padding: 12px 15px; border-left: 3px solid #75a9a6; background: #f0f6f5; color: #405e67; font-size: .8125rem; line-height: 1.6; }
+.fv-outcome strong { display: block; margin-bottom: 4px; color: #294f58; font-size: .75rem; }
+.fv-resource-choices { display: grid; gap: 10px; }
+.fv-resource-choices > a { display: flex; align-items: center; gap: 13px; padding: 14px 12px; border: 1px solid #dbe5e9; border-radius: 9px; color: #244655; text-decoration: none; }
+.fv-resource-choices > a:hover { background: #f0f6f5; border-color: #98bcbf; }
+.fv-resource-number { color: #487a80; font-size: .8125rem; font-variant-numeric: tabular-nums; }
+.fv-resource-choices strong { display: block; font-size: .875rem; line-height: 1.4; }
+.fv-resource-choices small { display: block; margin-top: 3px; color: #576d78; font-size: .75rem; line-height: 1.5; }
+.fv-resource-choices b { margin-left: auto; color: #4d7884; }
+.fv-glossary-map { margin-block: 20px 26px; padding: 24px; border: 1px solid #d9e3e7; border-radius: 12px; background: #f4f8f8; }
+.fv-glossary-heading h2 { margin: 8px 0; color: #214653; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.3; letter-spacing: -.02em; }
+.fv-glossary-heading p { margin: 0; color: #566d78; font-size: .8125rem; }
+.fv-concept-lanes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.fv-concept-lane { position: relative; min-width: 0; padding: 16px; border-top: 2px solid #73a4a6; background: #fff; }
+.fv-concept-lane:not(:last-child)::after { content: '→'; position: absolute; z-index: 1; right: -15px; top: 20px; width: 15px; color: #668c98; }
+.fv-concept-step { color: #4f7a86; font-size: .7rem; font-variant-numeric: tabular-nums; }
+.fv-concept-lane h3 { margin: 5px 0 12px; color: #204651; font-size: .9375rem; }
+.fv-concept-lane > div { display: flex; flex-wrap: wrap; gap: 6px; }
+.fv-concept-lane a { padding: 7px 9px; border: 1px solid #d7e5e8; border-radius: 5px; color: #315e6e; font-size: .75rem; line-height: 1.3; text-decoration: none; }
+.fv-concept-lane a:hover { border-color: #7da9ae; background: #eef5f4; }
+.fv-lab { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); margin-block: 22px; align-items: center; }
+.fv-lab .fv-art { align-self: stretch; min-height: 220px; padding: 12px; }
+.fv-lab .fv-svg { max-width: 380px; }
+.fv-lab-signals { margin-top: 13px; }
+.fv-lab-signals > span { display: block; color: #4d6573; font-size: .6875rem; font-weight: 600; }
+.fv-lab-signals > div { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 7px; }
+.fv-lab-signals > div > span { padding: 4px 7px; border: 1px solid #d9e5e8; border-radius: 5px; color: #486473; font-size: .6875rem; line-height: 1.45; }
+:is(.fv-figure, .fv-learning, .fv-resource-map, .fv-glossary-map) a:focus-visible { outline: 2px solid #126e8a; outline-offset: 3px; }
+@media (min-width: 960px) {
+  .fv-topic { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; }
+  .fv-topic .fv-art { align-self: stretch; }
+}
+@media (max-width: 720px) {
+  .fv-method-pair, .fv-learning, .fv-resource-map, .fv-lab { grid-template-columns: minmax(0, 1fr); }
+  .fv-learning, .fv-resource-map { gap: 12px; }
+  .fv-learning-steps, .fv-resource-choices { padding: 10px 0; }
+  .fv-concept-lanes { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .fv-concept-lane:not(:last-child)::after { content: '↓'; left: 18px; right: auto; top: auto; bottom: -16px; }
+  .fv-glossary-map { padding: 18px; }
+  .fv-lab .fv-art { min-height: 0; }
+}

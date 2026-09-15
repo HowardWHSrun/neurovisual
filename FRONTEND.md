@@ -25,3 +25,14 @@ Resource, glossary, and lab filters preserve focus while results rerender. Text 
 - Resource empty results and input clearing with focus retained; alphabetical glossary filtering; method selection; lab section jumps; calculator updates and channel-metric controls.
 
 CSS changes need direct browser inspection in addition to TypeScript and content tests. Keep generated JavaScript and source files together in releases.
+
+## Inline visual system (15 September 2026)
+
+- `data/visuals.json` is the canonical selected lab-media registry; `scripts/build-visuals.mjs` generates `dist/visuals-data.js`. Company photographs and films remain in `data/ideas.json`.
+- `src/visuals.ts` / `visuals.css` supply the picture gallery, overview photo entry, lab photographs, image dialog, idea-side illustrations, and interactive 32-site / 8-channel / 6-example-unit explanation. The example is explicitly illustrative. The dialog traps native focus, closes with Escape, returns focus, and clears video frames on close. Bind calls are idempotent.
+- `src/field-visuals.ts` / `field-visuals.css` draw sourced explanatory schematics for methods, topics, learning, resources, glossary, and labs without a sourced photograph. These are original code-native illustrations, not experimental figures.
+- `src/atlas-visuals.ts` / `atlas-visuals.css` place photographs or method-specific illustrations inside the selected technology, organization, researcher, paper, and career panels. Exact profile matches control photo association; broader matches use clearly labeled reading diagrams.
+- `NeuroMedia.resetPlayers()` restores posters when leaving an outgoing panel, so hidden iframes do not continue playing. YouTube remains click-to-load and retains a direct-link fallback when the client blocks playback.
+- Keep the current load order: guide data, company and idea data/renderers, lab and visual data, visual renderers, labs, atlas visual renderer, atlas app, hub router. TypeScript is compiled as classic scripts.
+
+See `VISUAL-PLAN.md` for the route-by-route revision checklist. `pnpm test` validates media provenance fields, dataset parity, unique IDs, source and route links, and interactive count stage behavior. Real browser checks cover layout and remote image loading.

@@ -4,10 +4,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-ideas.mjs && node scripts/build-labs.mjs && tsc -p tsconfig.json",
+    "build": "node scripts/build-ideas.mjs && node scripts/build-labs.mjs && node scripts/build-visuals.mjs && tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
     "frontier:update": "node scripts/update-frontier.mjs",
-    "test": "pnpm build && node scripts/check-hub.mjs && node scripts/check-ideas.mjs && node scripts/check-labs.mjs",
+    "test": "pnpm build && node scripts/check-hub.mjs && node scripts/check-ideas.mjs && node scripts/check-labs.mjs && node scripts/check-visuals.mjs",
     "jobs:update": "node scripts/update-jobs.mjs"
   },
   "devDependencies": {

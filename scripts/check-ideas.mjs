@@ -7,7 +7,7 @@ const read = path => readFile(new URL(path, root), 'utf8');
 const ideas = JSON.parse(await read('data/ideas.json'));
 const counts = JSON.parse(await read('data/neural-counts.json'));
 const context = vm.createContext({URL, URLSearchParams});
-for (const path of ['dist/hub-utils.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js']) vm.runInContext(await read(path), context);
+for (const path of ['dist/hub-utils.js','dist/ideas-data.js','dist/company-media.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/ideas.js']) vm.runInContext(await read(path), context);
 const api = vm.runInContext('NeuroIdeas', context);
 assert.equal(JSON.stringify(vm.runInContext('neuroIdeasData', context)), JSON.stringify({...ideas, counts}), 'Rebuild after editing source data');
 const atlas = await read('src/app.ts');
@@ -98,7 +98,7 @@ assert(container.querySelector('#idea-budget-result').textContent.startsWith('En
 // Run the actual hub router against lightweight shell elements to check that
 // notebook routes and search coexist with the retained atlas adapter.
 const hubContext=vm.createContext({URL,URLSearchParams,document:{readyState:'loading',documentElement:{setAttribute(){}},addEventListener(){}}});
-for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js']) vm.runInContext(await read(path),hubContext);
+for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/field-visuals.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js']) vm.runInContext(await read(path),hubContext);
 const strings=vm.runInContext('I18N.strings',hubContext);
 for(const m of atlas.matchAll(/I18N\.t\('([^']+)'\)/g)) assert(strings[m[1]]?.en && strings[m[1]]?.zh,`Missing bilingual key ${m[1]}`);
 for(const m of index.matchAll(/data-i18n(?:-aria|-ph|-html)?="([^"]+)"/g)) assert(strings[m[1]],`Missing static translation ${m[1]}`);
