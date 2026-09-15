@@ -36,3 +36,13 @@ CSS changes need direct browser inspection in addition to TypeScript and content
 - Keep the current load order: guide data, company and idea data/renderers, lab and visual data, visual renderers, labs, atlas visual renderer, atlas app, hub router. TypeScript is compiled as classic scripts.
 
 See `VISUAL-PLAN.md` for the route-by-route revision checklist. `pnpm test` validates media provenance fields, dataset parity, unique IDs, source and route links, and interactive count stage behavior. Real browser checks cover layout and remote image loading.
+
+## Research connections (15 September 2026)
+
+- `#connections` adds a focused relationship map and an equivalent readable list. Source-backed stories connect people, training, labs, companies, research platforms and technical comparisons.
+- `data/connections.json` → `scripts/build-connections.mjs` → `dist/connections-data.js`; `src/connections.ts` / `connections.css` render it. Load connection data and renderer after the visual renderer, before profile renderers and the hub.
+- `NeuroConnections.teaser()` provides exact-identity links from company, researcher, technology, lab and company-notebook profiles. Global search indexes connection records. The overview and main navigation provide entry points.
+- Institutional portraits join the existing image viewer and the gallery’s People category. Device and lab photos retain their original captions.
+- The map preserves source-to-target arrow direction regardless of card placement; comparisons use dashed paths without arrowheads. Native selects, a readable list, evidence focus/scroll, history URLs, and observer cleanup support navigation.
+
+See `CONNECTIONS.md` for provenance rules, important historical distinctions and extension instructions.

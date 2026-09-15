@@ -31,3 +31,7 @@ Company imagery uses `data/ideas.json` → `companies[].media`. `image.kind` dis
 ## Verification for this release
 
 All six company image URLs and the institutional image sources were checked against primary pages. Browser checks confirmed the six company pictures render, including Blackrock and Paradromics hosts that reject command-line HEAD requests. Source oEmbed metadata confirmed the five added university films; playback depends on the browser/client permitting YouTube embeds.
+
+## People in the connection map
+
+`data/connections.json` can include an institutional portrait on a person node, with the same `VisualImage` fields. `NeuroVisuals.items()` adds it to the People gallery and the native image viewer; `media: person-<node-id>` references it in the connection context panel. Zhao’s portrait remains hosted on his UCAS faculty profile. A source credit does not establish a reuse license or identify a photographer. Preserve the original image and its provenance.

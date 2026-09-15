@@ -19,6 +19,7 @@
     labels.ideas = 'Ideas notebook';
     labels.labs = 'Research labs';
     labels.visuals = 'Pictures & films';
+    labels.connections = 'Research connections';
     const e = hubUtils.escapeHtml;
     const url = hubUtils.sourceHref;
     const topicById = (id) => hubTopics.find(t => t.id === id);
@@ -38,7 +39,7 @@
         const starters = ['neuromatch', 'mne', 'deeplabcut'].map(id => resourceCard(hubResources.find(r => r.id === id))).join('');
         return pageHead('YOUR FIELD GUIDE', 'Neuroengineering, connected.', 'Understand the field. Find the right tools. Follow the people and ideas moving it forward.', `<a class="button-primary" href="#resources">Explore resources <span aria-hidden="true">↗</span></a>`)
             + `<div class="overview-bar"><span>From neural signals<br><strong>to useful systems.</strong></span><div class="overview-stats">${stats}</div><a href="#about">How this is curated ↗</a></div>
-    ${NeuroVisuals.spotlight()}<div class="overview-destinations"><a class="overview-notebook" href="#ideas"><span class="eyebrow">THE OPEN NOTEBOOK</span><div class="overview-spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h2>Observe. Question.<br>Build an idea.</h2><p>Explore the electrode-count question and compare the systems being built.</p><strong>Open the notebook <span aria-hidden="true">↗</span></strong></a><a class="overview-labs" href="#labs"><span class="eyebrow">THE RESEARCH DIRECTORY</span><div class="overview-lab-number">${neuroLabsData.labs.length}<span>lab profiles</span></div><h2>Go inside the work.</h2><p>Find investigators, instruments, projects, and evidence across neuroengineering.</p><strong>Explore research labs <span aria-hidden="true">↗</span></strong></a></div>
+    ${NeuroVisuals.spotlight()}${NeuroConnections.spotlight()}<div class="overview-destinations"><a class="overview-notebook" href="#ideas"><span class="eyebrow">THE OPEN NOTEBOOK</span><div class="overview-spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h2>Observe. Question.<br>Build an idea.</h2><p>Explore the electrode-count question and compare the systems being built.</p><strong>Open the notebook <span aria-hidden="true">↗</span></strong></a><a class="overview-labs" href="#labs"><span class="eyebrow">THE RESEARCH DIRECTORY</span><div class="overview-lab-number">${neuroLabsData.labs.length}<span>lab profiles</span></div><h2>Go inside the work.</h2><p>Find investigators, instruments, projects, and evidence across neuroengineering.</p><strong>Explore research labs <span aria-hidden="true">↗</span></strong></a></div>
     <section aria-labelledby="topics-heading"><div class="section-heading"><div><span class="eyebrow">FIND YOUR DIRECTION</span><h2 id="topics-heading">Explore the field</h2></div><span>${hubTopics.length} connected areas</span></div><div class="topic-grid">${hubTopics.map(topicCard).join('')}</div></section>
     <section class="overview-bottom"><div><div class="section-heading"><div><span class="eyebrow">MAKE IT PRACTICAL</span><h2>Start with a question</h2></div></div><div class="question-list"><a href="#methods"><span>Which measurement fits my research question?<small>Compare signals, access, strengths, and limitations</small></span><span aria-hidden="true">↗</span></a><a href="#learn/eeg"><span>How do I build my first neural decoder?<small>EEG → preprocessing → held-out evaluation</small></span><span aria-hidden="true">↗</span></a><a href="#learn/motion"><span>How do I measure behavior in 3D?<small>Video → keypoints → calibrated trajectories</small></span><span aria-hidden="true">↗</span></a><a href="#organizations"><span>Who is working on a particular technology?<small>Explore laboratories, companies, and public projects</small></span><span aria-hidden="true">↗</span></a></div></div><aside class="field-note"><span class="eyebrow">READING THE FIELD</span><h2>Follow the evidence.</h2><p>A compelling demonstration, a registered trial, and a deployed device answer different questions. Follow each record to its source and check the date, study model, and limitations.</p><a href="#frontier">Explore papers &amp; updates ↗</a></aside></section>
     <section><div class="section-heading"><div><span class="eyebrow">A GOOD PLACE TO BEGIN</span><h2>Open resources, real practice</h2></div><a href="#resources?level=Beginner">All beginner resources ↗</a></div><div class="resource-grid three">${starters}</div></section>`;
@@ -113,7 +114,7 @@
         return [
             ...NeuroIdeas.records(),
             ...NeuroLabs.records(),
-            ...NeuroVisuals.records(),
+            ...NeuroVisuals.records(), ...NeuroConnections.records(),
             ...hubTopics.map(t => ({ id: t.id, title: t.title, description: t.description, kind: 'Topic', href: topicLink(t.id), keywords: t.concepts.join(' ') + ' ' + JSON.stringify(hubGuides[t.id] || {}) })),
             ...hubMethods.map(m => ({ id: m.id, title: m.name + ' measurement', description: m.signal, kind: 'Method', href: '#methods?left=' + encodeURIComponent(m.id), keywords: m.strength + ' ' + m.limit + ' ' + m.access })),
             ...hubResources.map(r => ({ id: r.id, title: r.title, description: r.description, kind: 'Resource', href: r.url, keywords: topicById(r.topic).title + ' ' + r.type })),
@@ -150,6 +151,7 @@
     function render(focusMain = false) {
         const { route, id, params } = parseRoute();
         NeuroVisuals.close();
+        NeuroConnections.close();
         NeuroMedia.resetPlayers(content);
         NeuroMedia.resetPlayers(atlas);
         const atlasRoute = route === 'org' ? 'organizations' : route === 'tech' ? 'atlas' : route === 'person' ? 'researchers' : route;
@@ -182,12 +184,19 @@
             }
         }
         else {
-            content.innerHTML = route === 'visuals' ? NeuroVisuals.render(params) : route === 'labs' ? NeuroLabs.render(id, params) : route === 'ideas' ? NeuroIdeas.render(id, params) : route === 'overview' ? overview() : route === 'methods' ? methodsPage(params) : route === 'resources' ? resourcePage(params) : route === 'topic' ? topicPage(id) : route === 'learn' ? learnPage(id) : route === 'glossary' ? glossaryPage(params) : route === 'search' ? searchPage(params) : route === 'about' ? aboutPage() : notFound();
+            content.innerHTML = route === 'connections' ? NeuroConnections.render(id, params) : route === 'visuals' ? NeuroVisuals.render(params) : route === 'labs' ? NeuroLabs.render(id, params) : route === 'ideas' ? NeuroIdeas.render(id, params) : route === 'overview' ? overview() : route === 'methods' ? methodsPage(params) : route === 'resources' ? resourcePage(params) : route === 'topic' ? topicPage(id) : route === 'learn' ? learnPage(id) : route === 'glossary' ? glossaryPage(params) : route === 'search' ? searchPage(params) : route === 'about' ? aboutPage() : notFound();
             bindFilters(params);
             if (route === 'ideas')
                 NeuroIdeas.bind(content, id, params);
             if (route === 'labs')
                 NeuroLabs.bind(content, id, params, updateHash);
+            if (route === 'connections')
+                NeuroConnections.bind(content, id, params, (hash, focusId) => { history.pushState(null, '', hash); render(); if (focusId)
+                    document.getElementById(focusId)?.focus({ preventScroll: true });
+                else {
+                    document.getElementById('cn-network-title')?.setAttribute('tabindex', '-1');
+                    document.getElementById('cn-network-title')?.focus({ preventScroll: true });
+                } });
         }
         if (route !== 'ideas')
             NeuroVisuals.bind(isAtlas ? atlas : content);

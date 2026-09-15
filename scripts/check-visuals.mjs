@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 const root=new URL('../',import.meta.url),read=p=>readFile(new URL(p,root),'utf8');
 const data=JSON.parse(await read('data/visuals.json')),labs=JSON.parse(await read('data/labs.json'));
 const ctx=vm.createContext({URL,URLSearchParams,console});
-for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','visuals'])vm.runInContext(await read('dist/'+name+'.js'),ctx);
+for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals'])vm.runInContext(await read('dist/'+name+'.js'),ctx);
 const api=vm.runInContext('NeuroVisuals',ctx),all=api.items();
 assert.equal(JSON.stringify(vm.runInContext('neuroVisualData',ctx)),JSON.stringify(data));
 assert.equal(new Set(all.map(x=>x.id)).size,all.length);
@@ -15,7 +15,7 @@ for(const item of data.items){
  if(item.video){assert.match(item.video.id,/^[\w-]{11}$/);assert(item.video.title&&item.video.channel&&item.video.description);assert.equal(new URL(item.video.source).protocol,'https:');}
  const html=api.labFeature(item.labId);assert(html.includes(item.image.url.replaceAll('&','&amp;')));assert(html.includes(item.image.source.replaceAll('&','&amp;')));assert(!html.includes('<iframe'),'No video tracking before play');
 }
-for(const group of ['all','labs','companies','explainers','invalid']){
+for(const group of ['all','labs','companies','people','explainers','invalid']){
  const html=api.render(new URLSearchParams({group}));assert(!/\bundefined\b|\bNaN\b/.test(html));
  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);assert.equal(new Set(ids).size,ids.length);
  if(group==='labs')assert.equal((html.match(/class="visual-card"/g)||[]).length,data.items.length);

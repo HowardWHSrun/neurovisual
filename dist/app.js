@@ -1310,6 +1310,7 @@
                 (evidence.length ? '<div class="na-section na-sources"><h3>' + I18N.t('connectedEvidence') + '</h3><ul>' + evidence.map(function (x) { return '<li><a href="' + x.url + '" target="_blank" rel="noreferrer">' + x.tech + ' · ' + x.label + '</a></li>'; }).join('') + '</ul></div>' : '') + '</details>' +
                 '<button class="na-ask" type="button">' + (canAskCodex ? I18N.t('askResearchThis') : I18N.t('askCopyResearch')) + '</button>';
         AtlasVisuals.mount(detail, AtlasVisuals.organization(d, related), '.na-summary');
+        detail.insertAdjacentHTML('beforeend', NeuroConnections.teaser('#org/' + d.id));
         Array.from(detail.querySelectorAll('[data-tech]')).forEach(function (b) { b.addEventListener('click', function () { state.selected = b.dataset.tech; state.search = ''; search.value = ''; if (state.view === 'universe') {
             state.universeType = 'tech';
             orbit.focus = true;
@@ -1423,6 +1424,7 @@
             NeuroMedia.bind(entityPage);
         }
         AtlasVisuals.mount(entityPage, AtlasVisuals.organization(d, related), '.na-entity-summary');
+        entityPage.insertAdjacentHTML('beforeend', NeuroConnections.teaser('#org/' + d.id));
         entityPage.querySelector('[data-entity-back]').addEventListener('click', function () { closeEntityPage(true); });
         Array.from(entityPage.querySelectorAll('[data-entity-tab]')).forEach(function (b) { b.addEventListener('click', function () { state.entityTab = b.dataset.entityTab; drawEntityPage(); }); });
         Array.from(entityPage.querySelectorAll('[data-entity-tech]')).forEach(function (b) { b.addEventListener('click', function () { state.entityPage = false; clearEntityHash(); state.view = 'atlas'; state.selected = b.dataset.entityTech; state.detailOpen = true; syncView(); syncControls(); renderDetail(); draw(); }); });
@@ -1515,6 +1517,7 @@
                 '<details class="na-layer"><summary>' + I18N.t('detailProjectsSection') + '</summary><div class="na-section"><h3>' + I18N.t('detailConnectedProjects') + allBuilders.length + '</h3><div class="na-related">' + builders.slice(0, 12).map(function (x) { return '<button type="button" data-builder="' + x.id + '">' + __ln(x) + '</button>'; }).join('') + (allBuilders.length ? '<button type="button" data-browse-tech="' + d.id + '">' + I18N.t('detailBrowseAll') + ' ' + allBuilders.length + ' →</button>' : '') + '</div></div><div class="na-section"><h3>' + I18N.t('detailNearby') + '</h3><div class="na-related">' + related.map(function (x) { return '<button type="button" data-related="' + x.id + '">' + __tn(x) + '</button>'; }).join('') + '</div></div></details>' +
                 '<button class="na-ask" type="button">' + (canAskCodex ? I18N.t('askUnpack') : I18N.t('askCopyLearning')) + '</button>';
         AtlasVisuals.mount(detail, AtlasVisuals.technology(d, srcs), '.na-summary');
+        detail.insertAdjacentHTML('beforeend', NeuroConnections.teaser('#tech/' + d.id));
         Array.from(detail.querySelectorAll('[data-related]')).forEach(function (b) { b.addEventListener('click', function () { selectTech(b.dataset.related); }); });
         Array.from(detail.querySelectorAll('[data-builder]')).forEach(function (b) { b.addEventListener('click', function () { openEntityPage(b.dataset.builder, state.view, true); }); });
         Array.from(detail.querySelectorAll('[data-browse-tech]')).forEach(function (b) { b.addEventListener('click', function () { state.view = 'organizations'; state.orgMode = 'ranked'; state.orgTechFilter = d.id; state.orgGroupFilter = ''; state.search = ''; search.value = ''; state.region = 'all'; region.value = 'all'; state.kind = 'all'; kind.value = 'all'; state.page = 0; syncView(); syncControls(); syncOrganizationModeControls(); renderDetail(); draw(); }); });
@@ -2043,6 +2046,7 @@
         researcherBrowser.innerHTML = '<div class="na-researcher-overview"><div><strong>' + researchers.length + ' ' + I18N.t('researcherTrails') + '</strong><span>' + I18N.t('researcherTrailsSub') + '</span></div><div class="na-researcher-family-summary">' + familySummary + '</div></div><div class="na-researcher-toolbar">' + rosterControls + '<span class="na-researcher-toolbar-note">' + I18N.t('searchByResearcher') + '</span></div><div class="na-researcher-layout"><section class="na-researcher-roster"><div class="na-researcher-roster-title"><h3>' + I18N.t('notableContributors') + '</h3><span>' + I18N.t('curatedNotRanked') + data.length + ' ' + I18N.t('matchesWord') + '</span></div>' + roster + '<div class="na-pager"><span>' + (data.length ? (I18N.t('showing') + ' ' + (start + 1) + '–' + Math.min(start + size, data.length) + ' ' + I18N.t('of') + ' ' + data.length) : I18N.t('tryAnotherSearch')) + '</span><div><button type="button" data-researcher-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + I18N.t('previous') + '</button><button type="button" data-researcher-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + I18N.t('next') + '</button></div></div></section>' + profile + '</div><details class="na-researcher-note"><summary>' + I18N.t('coverageVerificationNote') + '</summary><p>' + I18N.t('coverageVerificationText') + '</p></details>';
         if (selected)
             AtlasVisuals.mount(researcherBrowser, AtlasVisuals.researcher(selected, technologyLinks), '.na-researcher-start');
+        researcherBrowser.insertAdjacentHTML('beforeend', NeuroConnections.teaser(selected ? '#person/' + selected.id : ''));
         var researcherRegion = researcherBrowser.querySelector('[data-researcher-region]');
         if (researcherRegion)
             researcherRegion.addEventListener('change', function () { state.region = researcherRegion.value; state.page = 0; state.selectedResearcher = ''; syncControls(); drawResearcherTrails(filteredResearchers()); });
