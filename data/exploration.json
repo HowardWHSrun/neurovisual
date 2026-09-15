@@ -1,0 +1,481 @@
+{
+  "reviewed": "2026-09-15",
+  "problems": [
+    {
+      "id": "vision",
+      "title": "Vision",
+      "question": "How could technology help people see?",
+      "summary": "Turn scenes into useful visual information and understand how the retina and visual cortex respond. Explore device designs, image-processing methods, and foundational visual research.",
+      "labLinks": [
+        {
+          "labId": "monash-vision-profile",
+          "reason": "Develops the Gennaris cortical visual prosthesis and simulations of useful visual tasks. The covered work concerns device architecture and simulated vision, rather than a demonstrated human outcome.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Monash Vision Group technology",
+            "url": "https://www.monash.edu/bioniceye/technology"
+          }
+        },
+        {
+          "labId": "auc-eldawlatly-neural",
+          "reason": "Studies how to simplify objects and scenes for prosthetic vision, including the PVGAN image-processing model. The work addresses useful visual information under display constraints.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "AUC Seif Eldawlatly faculty profile and publications",
+            "url": "https://www.aucegypt.edu/fac/seif-eldawlatly"
+          }
+        },
+        {
+          "labId": "kaist-binp-profile",
+          "reason": "Investigates selective stimulation of visual cortex with miniature coils, including how activity spreads to downstream visual areas. These are preclinical mechanism and device studies.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Seungwoo Lee: faculty profile and key papers",
+            "url": "https://bcs.kaist.ac.kr/sub020101/view/id/116"
+          }
+        },
+        {
+          "labId": "eth-hierlemann",
+          "reason": "Uses high-density electrode arrays to investigate visual signalling in human retinal tissue outside the body, providing measurements of retinal processing rather than a clinical implant result.",
+          "relationship": "Enabling research",
+          "source": {
+            "title": "Meet Annalisa Bucci: studying visual signaling in human retina",
+            "url": "https://bsse.ethz.ch/news-and-events/d-bsse-news/2026/01/meet-annalisa-bucci-studying-visual-signaling-in-human-retina.html"
+          }
+        },
+        {
+          "labId": "rice-luan",
+          "reason": "The Luan and Xie labs collaborate on an implantable visual prosthesis. Their 2023 report describes controlled intracortical stimulation and tissue compatibility in mice; it does not report restored human vision.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Rice News — flexible nanoelectrodes and visual prosthesis research",
+            "url": "https://news.rice.edu/news/2023/flexible-nanoelectrodes-can-provide-fine-grained-brain-stimulation"
+          }
+        },
+        {
+          "labId": "rice-xie",
+          "reason": "The Luan and Xie labs collaborate on an implantable visual prosthesis. Their 2023 report describes controlled intracortical stimulation and tissue compatibility in mice; it does not report restored human vision.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Rice News — flexible nanoelectrodes and visual prosthesis research",
+            "url": "https://news.rice.edu/news/2023/flexible-nanoelectrodes-can-provide-fine-grained-brain-stimulation"
+          }
+        }
+      ],
+      "imageLabId": "rice-luan"
+    },
+    {
+      "id": "movement",
+      "title": "Movement & independence",
+      "question": "How can people regain movement, touch, and everyday control?",
+      "summary": "Connect intention to useful actions: walking, reaching, grasping, or controlling a prosthesis. Research also asks whether feedback and rehabilitation make these systems useful in daily life.",
+      "imageLabId": "epfl-courtine",
+      "labLinks": [
+        {
+          "labId": "epfl-courtine",
+          "reason": "Connected brain recordings to spinal stimulation for standing and walking in one participant with chronic tetraplegia. The study is an individual proof of concept.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Walking naturally after spinal cord injury using a brain–spine interface",
+            "url": "https://doi.org/10.1038/s41586-023-06094-5"
+          }
+        },
+        {
+          "labId": "pitt-rnel",
+          "reason": "Combines motor decoding with stimulation that evokes touch, testing whether sensory feedback improves robotic-arm manipulation.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "A brain-computer interface that evokes tactile sensations improves robotic arm control",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34016775/"
+          }
+        },
+        {
+          "labId": "rice-mahi",
+          "reason": "Develops lightweight hand and wrist measurements to understand movement outside the clinic and support rehabilitation decisions.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Human motion assessment for rehabilitation",
+            "url": "https://mahilab.rice.edu/research/human-motion-assessment-rehabilitation"
+          }
+        },
+        {
+          "labId": "aalborg-dosen",
+          "reason": "Studies individualized myoelectric control and semi-autonomous robotic prostheses. The cited registry describes research projects, not completed performance results.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Strahinja Dosen: profile and projects",
+            "url": "https://vbn.aau.dk/en/persons/sdosen/"
+          }
+        },
+        {
+          "labId": "case-tyler",
+          "reason": "Studied a sensory-enabled prosthesis used at home and in the community by two participants, including function, willingness to use it, and the experience of embodiment.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Home Use of a Neural-connected Sensory Prosthesis Provides the Functional and Psychosocial Experience of Having a Hand Again",
+            "url": "https://www.nature.com/articles/s41598-018-26952-x"
+          }
+        },
+        {
+          "labId": "umich-chestek",
+          "reason": "Uses reinnervated muscle to amplify residual nerve commands for artificial-hand control. The pilot included four participants, with prosthesis-control tasks in two.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "A regenerative peripheral nerve interface allows real-time control of an artificial hand in upper limb amputees",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8082695/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "communication",
+      "title": "Speech & communication",
+      "question": "How can someone communicate when speaking or moving is difficult?",
+      "summary": "Translate attempted speech, handwriting, or selected visual targets into messages. Compare implanted and non-invasive approaches alongside the kind of communication each supports.",
+      "imageLabId": "ucsf-chang",
+      "labLinks": [
+        {
+          "labId": "ucd-neuroprosthetics",
+          "reason": "Developed a brain-to-voice system that synthesizes audible speech in real time, studying the timing and expressivity needed for communication.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "An instantaneous voice-synthesis neuroprosthesis",
+            "url": "https://www.nature.com/articles/s41586-025-09127-3"
+          }
+        },
+        {
+          "labId": "ucsf-chang",
+          "reason": "Decoded cortical activity into text, synthesized speech, and a facial avatar in a participant, connecting language research with assistive communication.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "A high-performance neuroprosthesis for speech decoding and avatar control",
+            "url": "https://www.nature.com/articles/s41586-023-06443-4"
+          }
+        },
+        {
+          "labId": "stanford-nptl",
+          "reason": "Decoded attempted speech in a participant with ALS, combining neural signals with language modelling. The study evaluates communication performance in that research setting.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "A high-performance speech neuroprosthesis",
+            "url": "https://www.nature.com/articles/s41586-023-06377-x"
+          }
+        },
+        {
+          "labId": "tsinghua-gao-bci",
+          "reason": "Develops visually evoked EEG interfaces for spelling, connecting non-invasive brain measurement with selecting characters and other interaction commands.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Tsinghua faculty profile: Gao Xiaorong",
+            "url": "https://www.med.tsinghua.edu.cn/en/info/1172/1675.htm"
+          }
+        },
+        {
+          "labId": "graz-mueller-putz",
+          "reason": "The team participates in INTRECOM, which aims to develop implantable communication interfaces for home use. That objective is separate from a demonstrated home-use outcome.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Team Müller-Putz",
+            "url": "https://www.tugraz.at/institute/ine/research/team-mueller-putz"
+          }
+        }
+      ]
+    },
+    {
+      "id": "memory-aging",
+      "title": "Memory & aging",
+      "question": "How do we remember and learn, and what changes with age?",
+      "summary": "Explore memory mechanisms, learning across healthy aging, and tools for age-related disease research. Basic memory experiments and disease-model measurements do not establish a treatment for age-related memory loss.",
+      "imageLabId": "rice-kemere",
+      "labLinks": [
+        {
+          "labId": "rice-kemere",
+          "reason": "Studies hippocampal activity, memory, and precisely timed interventions in animal experiments. The work investigates memory mechanisms rather than demonstrating a human memory treatment.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Memory and closed-loop research",
+            "url": "https://rnel.rice.edu/research/memory.html"
+          }
+        },
+        {
+          "labId": "nus-neuroai",
+          "reason": "Records macaque neurons while remembered targets are updated and distracting information is ignored, separating different operations within working memory.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Working Memory Updating in the Macaque Lateral Prefrontal Cortex",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12424936/"
+          }
+        },
+        {
+          "labId": "mgh-cash",
+          "reason": "Studies learned motor-pattern replay during human sleep, linking the timing of neural population activity to learning and offline processing.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "CashLab publications: epilepsy, stimulation, and sleep replay",
+            "url": "https://cashlab.mgh.harvard.edu/publications/"
+          }
+        },
+        {
+          "labId": "epfl-hummel",
+          "reason": "Investigates sensorimotor learning and recovery across healthy aging and focal brain injury. This is an aging-related learning programme, rather than evidence of treating dementia.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Hummel Lab research",
+            "url": "https://www.epfl.ch/labs/hummel-lab/research/"
+          }
+        },
+        {
+          "labId": "mit-boyden",
+          "reason": "Develops expansion-imaging methods that map many proteins in fixed brain tissue; demonstrations include an Alzheimer’s-disease mouse model. This is a measurement tool, not a treatment.",
+          "relationship": "Enabling research",
+          "source": {
+            "title": "Multiplexed expansion revealing for imaging multiprotein nanostructures in healthy and diseased brain",
+            "url": "https://www.nature.com/articles/s41467-024-53729-w"
+          }
+        }
+      ]
+    },
+    {
+      "id": "neurological-health",
+      "title": "Neurological & mental health",
+      "question": "How can we understand disorders and improve interventions?",
+      "summary": "Study disease mechanisms, detect abnormal activity, and improve how interventions are delivered. These examples span epilepsy, pain, depression-related delivery research, and brain-tumor models.",
+      "imageLabId": "rice-tringides",
+      "labLinks": [
+        {
+          "labId": "penn-litt",
+          "reason": "Analyses how brain-network connections reorganize as seizures begin and end, using recordings from people with epilepsy. Network findings do not themselves establish seizure prevention.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Dynamic Network Drivers of Seizure Generation, Propagation and Termination in Human Neocortical Epilepsy",
+            "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004608"
+          }
+        },
+        {
+          "labId": "twente-clinical-neurophysiology",
+          "reason": "Studies EEG in epilepsy, cerebral ischaemia, and intensive-care monitoring to connect measured activity with clinically important brain states.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Clinical Neurophysiology research",
+            "url": "https://www.utwente.nl/en/tnw/cnph/research/"
+          }
+        },
+        {
+          "labId": "duke-grill",
+          "reason": "Investigates how changing the timing of deep-brain stimulation can preserve useful effects while reducing stimulation demands.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Optimized temporal pattern of brain stimulation designed by computational evolution",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5516784/"
+          }
+        },
+        {
+          "labId": "oxford-denison",
+          "reason": "The EPIONE programme combines implantable and non-invasive stimulation research for chronic pain, linking engineering with clinical neuroscience.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "EPIONE",
+            "url": "https://ibme.ox.ac.uk/research/neurotechnology/research-areas/epione/"
+          }
+        },
+        {
+          "labId": "epfl-hummel",
+          "reason": "Studies delivery of home stimulation in the DiSCoVeR depression programme, including checking electrode placement. Delivery-method research is distinct from demonstrated treatment efficacy.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Hummel Lab",
+            "url": "https://www.epfl.ch/labs/hummel-lab/"
+          }
+        },
+        {
+          "labId": "rice-tringides",
+          "reason": "Builds controlled laboratory environments to study interactions between neurons and glioblastoma cells. The models investigate disease mechanisms using cells outside the body.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Rice — glioblastoma microphysiological models",
+            "url": "https://news.rice.edu/news/2026/rices-tringides-wins-prestigious-pew-biomedical-scholar-award"
+          }
+        }
+      ]
+    },
+    {
+      "id": "neural-repair",
+      "title": "Repair & recovery",
+      "question": "What helps damaged nerves and circuits recover?",
+      "summary": "Investigate recovery after injury and the biology that may support repair. Rehabilitation, animal experiments, and cell models answer different parts of this question.",
+      "imageLabId": "rice-luan",
+      "labLinks": [
+        {
+          "labId": "rice-luan",
+          "reason": "Studies neural function, blood vessels, inflammation, and recovery after injury, asking how restored circulation and restored circuit function relate.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Luan Lab — research projects",
+            "url": "https://www.luanlab.net/research-projects"
+          }
+        },
+        {
+          "labId": "epfl-courtine",
+          "reason": "Combines rehabilitation and neuroprosthetics with animal studies of the circuits and cellular mechanisms involved in motor recovery and neuroregeneration.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Courtine Laboratory",
+            "url": "https://www.epfl.ch/labs/courtine-lab/"
+          }
+        },
+        {
+          "labId": "uw-moritz",
+          "reason": "Investigates stimulation-assisted rehabilitation and separate preclinical approaches to making spared pathways more useful after spinal injury or stroke.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Restorative Technologies Laboratory — research overview",
+            "url": "https://depts.washington.edu/moritlab/"
+          }
+        },
+        {
+          "labId": "epfl-lacour",
+          "reason": "Develops compliant three-dimensional electrode interfaces for peripheral nerve repair, supplying physical interfaces for research toward restoration.",
+          "relationship": "Enabling research",
+          "source": {
+            "title": "LSBI Research",
+            "url": "https://www.epfl.ch/labs/lsbi/lsbi-2/research/"
+          }
+        },
+        {
+          "labId": "rice-tringides",
+          "reason": "The hydroMEA platform measures functional myelination in human-derived nerve-cell cultures, helping researchers study how nerves form their protective coating.",
+          "relationship": "Enabling research",
+          "source": {
+            "title": "Rice — hydroMEA functional myelin platform",
+            "url": "https://news.rice.edu/news/2026/rice-researchers-build-3d-platform-study-how-nerves-form-protective-coating"
+          }
+        },
+        {
+          "labId": "tum-neuroelectronics",
+          "reason": "Uses guided axons and localized lesions in cell cultures to investigate structured networks and develop models relevant to injury and regeneration.",
+          "relationship": "Enabling research",
+          "source": {
+            "title": "Structured cell networks",
+            "url": "https://www.ee.cit.tum.de/nel/research/structured-cell-networks/"
+          }
+        }
+      ]
+    },
+    {
+      "id": "understanding-brain",
+      "title": "Understanding the brain",
+      "question": "How do neurons work together to produce thought and behavior?",
+      "summary": "Use experiments and models to explain learning, decisions, development, and the activity of neural circuits. Understanding a mechanism is a research goal in its own right.",
+      "labLinks": [
+        {
+          "labId": "cmu-yu",
+          "reason": "Uses brain–computer interface feedback to test which patterns of population activity monkeys can produce, probing constraints on neural dynamics.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Dynamical constraints on neural population activity",
+            "url": "https://users.ece.cmu.edu/~byronyu/papers/ObyDegenhartGrigsbyNN2025.pdf"
+          }
+        },
+        {
+          "labId": "ucl-neural-computation",
+          "reason": "Studies how dendrites, synapses, and circuit connections transform inputs into neuronal output in cerebellar and neocortical networks.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Neural Computation",
+            "url": "https://www.ucl.ac.uk/medical-sciences/divisions/wolfson-institute-biomedical-research/research/neural-computation"
+          }
+        },
+        {
+          "labId": "oist-neural-computation-profile",
+          "reason": "Connects models of learning and choice to experiments on dopamine, serotonin, and behavior.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Neural Computation Unit research groups",
+            "url": "https://www.oist.jp/research/research-units/ncu/research"
+          }
+        },
+        {
+          "labId": "uct-meintjes-neuroimaging",
+          "reason": "Relates brain connectivity to arithmetic performance in children with prenatal alcohol exposure, linking brain measurement to a specific developmental question.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Lower resting state functional connectivity partially mediates adverse effects of prenatal alcohol exposure on arithmetic performance in children",
+            "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/acer.15332"
+          }
+        },
+        {
+          "labId": "hkust-cce-profile",
+          "reason": "Develops a behaviorally reinforced spike-generation model and tests how it adapts across decoder settings, connecting computational models with neural-interface learning.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "A generative spike prediction model using behavioral reinforcement for re-establishing neural functional connectivity",
+            "url": "https://www.nature.com/articles/s43588-025-00915-5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "research-tools",
+      "title": "Tools that make research possible",
+      "question": "How can researchers measure reliably and share what they learn?",
+      "summary": "Build better recording systems, durable interfaces, imaging methods, and reusable analysis tools. These foundations enable many biological and clinical questions.",
+      "imageLabId": "rice-xie",
+      "labLinks": [
+        {
+          "labId": "rice-xie",
+          "reason": "Develops tissue-integrated, ultraflexible electrodes for following neural activity over time, linking stable recording to how an interface fits within living tissue.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Tissue-integrated neural electrodes",
+            "url": "https://www.chongxie.net/Projects/tissue-integrated-neural-electrodes"
+          }
+        },
+        {
+          "labId": "columbia-shepard",
+          "reason": "Integrates recording, wireless power, and communication in the BISC surface interface. The cited system was evaluated in pigs and nonhuman primates.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Wireless subdural interface with 65,536 electrodes and 1,024 channels",
+            "url": "https://bioee.ee.columbia.edu/wp-content/uploads/2025/12/s41928-025-01509-9.pdf"
+          }
+        },
+        {
+          "labId": "freiburg-stieglitz",
+          "reason": "Studies encapsulation, telemetry, housings, and interconnections that help neural electronics operate as durable systems.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "System integration",
+            "url": "https://www.imtek.uni-freiburg.de/professuren/bmt/forschung%20/systemintegration"
+          }
+        },
+        {
+          "labId": "berkeley-muller",
+          "reason": "Develops WAND to record while stimulating, using artifact cancellation and onboard detection so stimulation does not overwhelm the signal guiding feedback.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "WAND: wireless artifact-free neuromodulation — final paper",
+            "url": "https://www.nature.com/articles/s41551-018-0323-x"
+          }
+        },
+        {
+          "labId": "mit-boyden",
+          "reason": "Develops temporally multiplexed imaging to distinguish several dynamic cellular signals with a standard microscope and computational separation.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "Temporally multiplexed imaging of dynamic signaling networks in living cells",
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10843875/"
+          }
+        },
+        {
+          "labId": "mcgill-neurospeed",
+          "reason": "Contributes to Brainstorm and multimodal electrophysiology workflows, making advanced brain-data analysis available through collaborative open-source tools.",
+          "relationship": "Direct focus",
+          "source": {
+            "title": "McGill — MEG unit and neuroSPEED research",
+            "url": "https://www.mcgill.ca/bic/meg-unit"
+          }
+        }
+      ]
+    }
+  ]
+}

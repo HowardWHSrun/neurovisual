@@ -1,0 +1,1465 @@
+{
+  "reviewed": "2026-09-15",
+  "people": [
+    {
+      "id": "zhengtuo-zhao",
+      "name": "Zhengtuo Zhao",
+      "institution": "StairMed (co-founder); UT Austin / Rice training",
+      "country": "China",
+      "region": "Asia",
+      "group": "record",
+      "summary": "Biomedical engineering researcher and StairMed co-founder. His doctorate was at UT Austin (2015–2019); Rice documented his postdoctoral work in 2020.",
+      "profileUrl": "https://people.ucas.ac.cn/~zhaozt",
+      "connectionIds": [
+        "zhengtuo-zhao"
+      ],
+      "sources": [
+        {
+          "title": "Zhengtuo Zhao — UCAS faculty biography",
+          "url": "https://people.ucas.ac.cn/~zhaozt"
+        },
+        {
+          "title": "Chong Xie laboratory — Team / Alumni",
+          "url": "https://www.chongxie.net/team"
+        },
+        {
+          "title": "Blood flow recovers faster than brain in micro strokes",
+          "url": "https://news.rice.edu/news/2020/blood-flow-recovers-faster-brain-micro-strokes"
+        },
+        {
+          "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+          "url": "https://www.nature.com/articles/s41467-026-71443-7"
+        },
+        {
+          "title": "StairMed Introduction",
+          "url": "https://stairmed.com/en/jietijianjie.html"
+        },
+        {
+          "title": "Ultraflexible nanoelectronic probes form reliable, glial scar-free neural integration",
+          "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
+        },
+        {
+          "title": "An Ultraflexible Electrode Array for Large-Scale Chronic Recording in the Nonhuman Primate Brain",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202302333"
+        }
+      ],
+      "contextEdgeIds": [
+        "zhao-ut-phd",
+        "zhao-xie-training",
+        "zhao-rice-postdoc",
+        "zhao-stairmed-founder",
+        "zhao-net-2017",
+        "zhao-merf-correspondence"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "xue-li",
+      "name": "Xue Li",
+      "institution": "StairMed (co-founder)",
+      "country": "China",
+      "region": "Asia",
+      "group": "record",
+      "summary": "Xie’s lab lists Xue Li as a former PhD student. The human uFINE paper identifies Li and Zhengtuo Zhao as StairMed founders.",
+      "profileUrl": "https://www.chongxie.net/team",
+      "connectionIds": [
+        "xue-li"
+      ],
+      "sources": [
+        {
+          "title": "Chong Xie laboratory — Team / Alumni",
+          "url": "https://www.chongxie.net/team"
+        },
+        {
+          "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+          "url": "https://www.nature.com/articles/s41467-026-71443-7"
+        },
+        {
+          "title": "StairMed Introduction",
+          "url": "https://stairmed.com/en/jietijianjie.html"
+        }
+      ],
+      "contextEdgeIds": [
+        "li-xie-training",
+        "li-stairmed-founder",
+        "li-ufine-correspondence"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "benjamin-rapoport",
+      "name": "Benjamin Rapoport",
+      "institution": "Precision Neuroscience (co-founder)",
+      "country": "United States",
+      "region": "North America",
+      "group": "translation",
+      "summary": "Neurosurgeon and electrical engineer who co-founded Neuralink and Precision Neuroscience. MIT/HST records his EECS doctorate in 2011 and medical degree in 2013; Precision identifies him as co-founder and Chief Science Officer.",
+      "profileUrl": "https://www.precisionneuro.io/our-vision",
+      "connectionIds": [
+        "benjamin-rapoport"
+      ],
+      "sources": [
+        {
+          "title": "Inside the Operating Room: Doctors Test a Revolutionary Brain-Computer Implant",
+          "url": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant"
+        },
+        {
+          "title": "Our Vision — Precision Neuroscience",
+          "url": "https://www.precisionneuro.io/our-vision"
+        },
+        {
+          "title": "Neuralink — official company profile",
+          "url": "https://www.linkedin.com/company/neuralink/"
+        }
+      ],
+      "contextEdgeIds": [
+        "mit-rapoport-phd",
+        "rapoport-neuralink",
+        "rapoport-precision"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "richard-normann",
+      "name": "Richard Normann",
+      "institution": "University of Utah (emeritus; 2024 account)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "University of Utah professor emeritus credited with development of the Utah Electrode Array.",
+      "profileUrl": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "connectionIds": [
+        "richard-normann"
+      ],
+      "sources": [
+        {
+          "title": "Brain Trust: a Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher"
+        },
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ],
+      "contextEdgeIds": [
+        "normann-utah-development",
+        "hiatt-normann-training"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "luming-li",
+      "name": "Luming Li",
+      "institution": "Tsinghua University (DBS research team; 2019 account)",
+      "country": "China",
+      "region": "Asia",
+      "group": "stimulate",
+      "summary": "Tsinghua DBS research-team leader",
+      "profileUrl": "https://www.tsinghua.edu.cn/info/1368/81748.htm",
+      "connectionIds": [
+        "luming-li"
+      ],
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        }
+      ],
+      "contextEdgeIds": [
+        "li-pins-dbs-lead"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "yihua-ning",
+      "name": "Yihua Ning / 宁益华",
+      "institution": "SceneRay (founder)",
+      "country": "China",
+      "region": "Asia",
+      "group": "translation",
+      "summary": "SceneRay founder",
+      "profileUrl": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf",
+      "connectionIds": [
+        "yihua-ning"
+      ],
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        },
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        }
+      ],
+      "contextEdgeIds": [
+        "ning-sceneray-founded",
+        "ning-shanghai-medical-training"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "fangang-zeng",
+      "name": "Fan-Gang Zeng",
+      "institution": "University of California, Irvine / Nurotron (co-founder)",
+      "country": "United States",
+      "region": "North America",
+      "group": "restore",
+      "summary": "UCI hearing researcher and Nurotron co-founder. His university biography documents a 1990 Syracuse doctorate in audiology and neuroscience, connecting auditory research with cochlear-implant commercialization.",
+      "profileUrl": "https://scholarconnect.uci.edu/fzeng",
+      "connectionIds": [
+        "fangang-zeng"
+      ],
+      "sources": [
+        {
+          "title": "Fan-Gang Zeng — UCI biography",
+          "url": "https://scholarconnect.uci.edu/fzeng"
+        },
+        {
+          "title": "Nurotron — company introduction and history",
+          "url": "https://www.nurotron.com/aboutus.html"
+        }
+      ],
+      "contextEdgeIds": [
+        "zeng-nurotron-founded",
+        "zeng-syracuse-phd"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "peng-cao",
+      "name": "Peng Cao / 曹鹏",
+      "institution": "Genlight Neurotech (founder)",
+      "country": "China",
+      "region": "Asia",
+      "group": "translation",
+      "summary": "Genlight founder",
+      "profileUrl": "https://www.hzctxh.com/article/532",
+      "connectionIds": [
+        "peng-cao"
+      ],
+      "sources": [
+        {
+          "title": "Hangzhou Venture Capital Association visits Genlight",
+          "url": "https://www.hzctxh.com/article/532"
+        },
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "contextEdgeIds": [
+        "cao-genlight-founded"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jerry-chen",
+      "name": "Jerry Chieh-Hsiao Chen",
+      "institution": "Brain Navi Biotechnology (founder)",
+      "country": "Taiwan",
+      "region": "Asia",
+      "group": "translation",
+      "summary": "Brain Navi founder",
+      "profileUrl": "https://brainnavi.com/zh/naotrac-fda-clearance/",
+      "connectionIds": [
+        "jerry-chen"
+      ],
+      "sources": [
+        {
+          "title": "Brain Navi announces NaoTrac FDA clearance",
+          "url": "https://brainnavi.com/zh/naotrac-fda-clearance/"
+        },
+        {
+          "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+          "url": "https://registration.uaa2025.org/user/view/1001476:51737"
+        }
+      ],
+      "contextEdgeIds": [
+        "jerry-brainnavi-founded",
+        "jerry-stanford-taiwan-training"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "robert-fischell",
+      "name": "Robert Fischell",
+      "institution": "NeuroPace (founder; historical context)",
+      "country": "United States",
+      "region": "North America",
+      "group": "translation",
+      "summary": "University biography identifies him as a NeuroPace founder.",
+      "profileUrl": "https://bioe.umd.edu/about/meet-the-fischells",
+      "connectionIds": [
+        "robert-fischell"
+      ],
+      "sources": [
+        {
+          "title": "Meet the Fischells",
+          "url": "https://bioe.umd.edu/about/meet-the-fischells"
+        },
+        {
+          "title": "NeuroPace amended and restated certificate of incorporation",
+          "url": "https://www.sec.gov/Archives/edgar/data/1528287/000162828021007595/exhibit31-closing8xk.htm",
+          "published": "2021"
+        }
+      ],
+      "contextEdgeIds": [
+        "fischell-neuropace",
+        "maryland-fischell-degree"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "brian-litt",
+      "name": "Brian Litt",
+      "institution": "University of Pennsylvania",
+      "country": "United States",
+      "region": "North America",
+      "group": "stimulate",
+      "summary": "Penn researcher working on epilepsy and neural devices. His faculty biography reports technology licensed to NeuroPace; that disclosure does not specify the patent, contract scope or current RNS implementation.",
+      "profileUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g324/p6213",
+      "connectionIds": [
+        "brian-litt"
+      ],
+      "sources": [
+        {
+          "title": "Brian Litt — Penn faculty profile",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g324/p6213"
+        }
+      ],
+      "contextEdgeIds": [
+        "litt-neuropace-license"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "justin-williams",
+      "name": "Justin Williams",
+      "institution": "University of Wisconsin–Madison (2022 account)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "UW researcher whose thin-film electrode development drew on operating-room collaboration with neurosurgeon P. Charles Garell. A 2022 university account links this technology and his entrepreneurial work to NeuroOne.",
+      "profileUrl": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+      "connectionIds": [
+        "justin-williams"
+      ],
+      "sources": [
+        {
+          "title": "Hagness, Williams selected as National Academy of Inventors Fellows",
+          "url": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+          "published": "2022"
+        }
+      ],
+      "contextEdgeIds": [
+        "williams-garell-development",
+        "williams-neuroone-founded"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "charles-garell",
+      "name": "P. Charles Garell",
+      "institution": "University of Wisconsin–Madison (historical collaboration)",
+      "country": "United States",
+      "region": "North America",
+      "group": "translation",
+      "summary": "Neurosurgeon who collaborated with Justin Williams at UW to identify surgical electrode needs. The documented operating-room collaboration informed thin, conformable electrode design; this profile describes that historical project context.",
+      "profileUrl": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+      "connectionIds": [
+        "charles-garell"
+      ],
+      "sources": [
+        {
+          "title": "Hagness, Williams selected as National Academy of Inventors Fellows",
+          "url": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+          "published": "2022"
+        }
+      ],
+      "contextEdgeIds": [
+        "williams-garell-development"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "scott-hiatt",
+      "name": "Scott Hiatt",
+      "institution": "Ripple Neuro (company biography)",
+      "country": "United States",
+      "region": "North America",
+      "group": "stimulate",
+      "summary": "Ripple technical leader whose company biography describes mixed-signal recording and implantable-stimulation engineering. It explicitly identifies Richard Normann as directing his stimulation-hardware training at the University of Utah.",
+      "profileUrl": "https://rippleneuro.com/about-ripple-neuro/",
+      "connectionIds": [
+        "scott-hiatt"
+      ],
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ],
+      "contextEdgeIds": [
+        "hiatt-normann-training",
+        "hiatt-ripple-engineering"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "andrew-wilder",
+      "name": "Andrew Wilder",
+      "institution": "Ripple Neuro (company biography)",
+      "country": "United States",
+      "region": "North America",
+      "group": "compute",
+      "summary": "Ripple engineer whose company biography dates his arrival to 2009 after doctoral work on neuro-assistive software. The documented work includes real-time neural visualization and stimulation software.",
+      "profileUrl": "https://rippleneuro.com/about-ripple-neuro/",
+      "connectionIds": [
+        "andrew-wilder"
+      ],
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ],
+      "contextEdgeIds": [
+        "wilder-ripple-joined"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "john-parker",
+      "name": "John Parker",
+      "institution": "Saluda Medical (founder; historical context)",
+      "country": "Australia",
+      "region": "Oceania",
+      "group": "stimulate",
+      "summary": "Saluda founder associated with sensing evoked compound action potentials during spinal stimulation. Parker and colleagues reported human recordings in work published online in 2011; the company connects that sensing concept to its closed-loop stimulation development.",
+      "profileUrl": "https://www.saludamedical.com/press-releases/saluda-medical-announces-executive-leadership-changes/",
+      "connectionIds": [
+        "john-parker"
+      ],
+      "sources": [
+        {
+          "title": "Saluda Medical Announces Executive Leadership Changes",
+          "url": "https://www.saludamedical.com/press-releases/saluda-medical-announces-executive-leadership-changes/",
+          "published": "2021-02-12"
+        },
+        {
+          "title": "CSIRO — Our Spinouts",
+          "url": "https://www.csiro.au/en/work-with-us/industries/technology/Our-Spinouts"
+        },
+        {
+          "title": "Compound action potentials recorded in the human spinal cord during neurostimulation for pain relief",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22188868/",
+          "published": "2011-12-19"
+        }
+      ],
+      "contextEdgeIds": [
+        "parker-saluda-founded",
+        "parker-spinal-ecap-research"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "philip-sabes",
+      "name": "Philip Sabes",
+      "institution": "UCSF (retired in 2017) / Neuralink (founding-team context)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "Neuroscientist whose UCSF laboratory developed robotic insertion of flexible neural probes. His institutional biography describes doctoral research in Michael I. Jordan’s MIT lab and retirement from UCSF in 2017 to join Neuralink full time.",
+      "profileUrl": "https://sabes.ucsf.edu/",
+      "connectionIds": [
+        "philip-sabes"
+      ],
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ],
+      "contextEdgeIds": [
+        "sabes-jordan-training",
+        "sabes-neuralink-founding"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "michael-jordan",
+      "name": "Michael I. Jordan",
+      "institution": "MIT (historical laboratory context)",
+      "country": "United States",
+      "region": "North America",
+      "group": "compute",
+      "summary": "Computational researcher identified in Philip Sabes’s institutional biography as the leader of the MIT laboratory where Sabes performed doctoral research. This entry documents that historical training connection; it does not claim a current MIT appointment.",
+      "profileUrl": "https://sabes.ucsf.edu/",
+      "connectionIds": [
+        "michael-jordan"
+      ],
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ],
+      "contextEdgeIds": [
+        "sabes-jordan-training"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "vanessa-tolosa",
+      "name": "Vanessa Tolosa",
+      "institution": "Precision Neuroscience (June 2025 appointment)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "Flexible-polymer neural-interface engineer with documented work at LLNL and Neuralink. Precision announced her appointment as SVP of Research and Development in June 2025; her earlier engineering responsibilities included microfabrication, packaging and cleanroom development.",
+      "profileUrl": "https://www.precisionneuro.io/our-vision",
+      "connectionIds": [
+        "vanessa-tolosa"
+      ],
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ],
+      "contextEdgeIds": [
+        "tolosa-llnl-research",
+        "tolosa-neuralink",
+        "tolosa-precision"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "matt-angle",
+      "name": "Matt Angle",
+      "institution": "Paradromics (founder)",
+      "country": "United States",
+      "region": "North America",
+      "group": "translation",
+      "summary": "Paradromics founder, identified in the company’s history with its 2015 establishment. The inspected evidence connects him to the company’s engineering effort but does not establish a named doctoral supervisor or a university technology license.",
+      "profileUrl": "https://paradromics.com/company/",
+      "connectionIds": [
+        "matt-angle"
+      ],
+      "sources": [
+        {
+          "title": "Paradromics — Company",
+          "url": "https://paradromics.com/company/"
+        },
+        {
+          "title": "Paradromics Inc. — official company profile",
+          "url": "https://www.linkedin.com/company/paradromics-inc"
+        }
+      ],
+      "contextEdgeIds": [
+        "angle-paradromics-founded"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "florian-solzbacher",
+      "name": "Florian Solzbacher",
+      "institution": "University of Utah / Blackrock Neurotech (co-founder)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "University of Utah engineer and Blackrock co-founder focused on reliable neural-interface systems. Utah and the company both document the founding relationship, although their accounts use 2007 and 2008 respectively.",
+      "profileUrl": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "connectionIds": [
+        "florian-solzbacher"
+      ],
+      "sources": [
+        {
+          "title": "Brain Trust: A Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+          "published": "2024-07-25"
+        },
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ],
+      "contextEdgeIds": [
+        "solzbacher-blackrock-founded"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "marcus-gerhardt",
+      "name": "Marcus Gerhardt",
+      "institution": "Blackrock Neurotech (co-founder)",
+      "country": "United States",
+      "region": "North America",
+      "group": "translation",
+      "summary": "Blackrock co-founder named with Florian Solzbacher in the company’s history. This is a documented entrepreneurial connection to the neural-interface supplier, separate from Richard Normann’s earlier Utah Array development.",
+      "profileUrl": "https://blackrockneurotech.com/our-story/",
+      "connectionIds": [
+        "marcus-gerhardt"
+      ],
+      "sources": [
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ],
+      "contextEdgeIds": [
+        "gerhardt-blackrock-founded"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "rotem-kopel",
+      "name": "Rotem Kopel",
+      "institution": "ABILITY Neurotech (co-founder)",
+      "country": "Switzerland",
+      "region": "Europe",
+      "group": "translation",
+      "summary": "ABILITY Neurotech’s official team identifies Kopel as CEO and co-founder. The company develops fully implanted neural acquisition technology originating at the Wyss Center in Geneva.",
+      "profileUrl": "https://abilityneuro.com/team/",
+      "connectionIds": [
+        "rotem-kopel"
+      ],
+      "sources": [
+        {
+          "title": "ABILITY — Team",
+          "url": "https://abilityneuro.com/team/"
+        },
+        {
+          "title": "ABILITY — Our Journey",
+          "url": "https://abilityneuro.com/"
+        }
+      ],
+      "contextEdgeIds": [
+        "ability-neuro-founder-kopel"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "craig-cook",
+      "name": "Craig Cook",
+      "institution": "ABILITY Neurotech (2025 co-founder appointment)",
+      "country": "Switzerland",
+      "region": "Europe",
+      "group": "translation",
+      "summary": "Wyss Center’s 2025 announcement identifies Cook as Chief Business Officer and co-founder of ABILITY Neurotech. The announcement describes his transition from business development at Wyss to its neural-interface spinout.",
+      "profileUrl": "https://wysscenter.ch/update/craig-cook-appointed-cbo/",
+      "connectionIds": [
+        "craig-cook"
+      ],
+      "sources": [
+        {
+          "title": "Craig Cook appointed Chief Business Officer and Co-founder at ABILITY Neurotech, the Wyss Geneva’s flagship spin-off",
+          "url": "https://wysscenter.ch/update/craig-cook-appointed-cbo/",
+          "published": "2025"
+        }
+      ],
+      "contextEdgeIds": [
+        "ability-neuro-founder-cook"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "alberto-priori",
+      "name": "Alberto Priori",
+      "institution": "Newronika (co-founder)",
+      "country": "Italy",
+      "region": "Europe",
+      "group": "stimulate",
+      "summary": "Neurologist identified by Newronika as a co-founder. His documented company connection concerns sensing-enabled, adaptive deep brain stimulation; this entry does not assert a current university appointment.",
+      "profileUrl": "https://newronika.com/about",
+      "connectionIds": [
+        "alberto-priori"
+      ],
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ],
+      "contextEdgeIds": [
+        "newronika-founder-priori"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "lorenzo-rossi",
+      "name": "Lorenzo Rossi",
+      "institution": "Newronika (co-founder)",
+      "country": "Italy",
+      "region": "Europe",
+      "group": "stimulate",
+      "summary": "Engineer identified by Newronika as a co-founder. The documented company context is sensing-enabled, adaptive deep brain stimulation; no current academic employer is inferred from the company’s institutional origins.",
+      "profileUrl": "https://newronika.com/about",
+      "connectionIds": [
+        "lorenzo-rossi"
+      ],
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ],
+      "contextEdgeIds": [
+        "newronika-founder-rossi"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "sara-marceglia",
+      "name": "Sara Marceglia",
+      "institution": "Newronika (co-founder)",
+      "country": "Italy",
+      "region": "Europe",
+      "group": "stimulate",
+      "summary": "Neuroengineering researcher identified by Newronika as a co-founder. This entry records that contribution to adaptive deep brain stimulation without inferring a current university employer from the company’s origins.",
+      "profileUrl": "https://newronika.com/about",
+      "connectionIds": [
+        "sara-marceglia"
+      ],
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ],
+      "contextEdgeIds": [
+        "newronika-founder-marceglia"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jose-antonio-garrido",
+      "name": "Jose Antonio Garrido",
+      "institution": "ICREA / ICN2; INBRAIN co-founder (2022 account)",
+      "country": "Spain",
+      "region": "Europe",
+      "group": "record",
+      "summary": "An institutional technology-transfer account identifies Garrido as an ICREA professor at ICN2 and an INBRAIN co-founder. The documented company context is graphene neural interfaces; the 2022 source anchors the affiliation stated here.",
+      "profileUrl": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+      "connectionIds": [
+        "jose-antonio-garrido"
+      ],
+      "sources": [
+        {
+          "title": "INBRAIN Neuroelectronics signs an agreement to develop neurotechnology patented by six public research institutions",
+          "url": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+          "published": "2022-03-15"
+        }
+      ],
+      "contextEdgeIds": [
+        "inbrain-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jorn-rickert",
+      "name": "Jörn Rickert",
+      "institution": "CorTec (founder; historical context)",
+      "country": "Germany",
+      "region": "Europe",
+      "group": "translation",
+      "summary": "CorTec founder and early managing director identified in University of Freiburg accounts. This profile records the company-formation connection within Freiburg’s neural-interface research ecosystem.",
+      "profileUrl": "https://news.vm.uni-freiburg.de/de/newsarchiv/biomolekuele-kopieren-gehirnaktivitaet-messen",
+      "connectionIds": [
+        "jorn-rickert"
+      ],
+      "sources": [
+        {
+          "title": "Biomoleküle kopieren, Gehirnaktivität messen",
+          "url": "https://news.vm.uni-freiburg.de/de/newsarchiv/biomolekuele-kopieren-gehirnaktivitaet-messen",
+          "published": "2015"
+        },
+        {
+          "title": "Start-ups — Faculty of Engineering, University of Freiburg",
+          "url": "https://uni-freiburg.de/tf/start-ups/"
+        }
+      ],
+      "contextEdgeIds": [
+        "cortec-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "luca-berdondini",
+      "name": "Luca Berdondini",
+      "institution": "Italian Institute of Technology / Corticale (2021 account)",
+      "country": "Italy",
+      "region": "Europe",
+      "group": "record",
+      "summary": "IIT’s 2021 announcement identifies Berdondini as leader of Microtechnology for Neuroelectronics and a Corticale co-founder. The spinout translates active-pixel SiNAPS neural-probe technology.",
+      "profileUrl": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+      "connectionIds": [
+        "luca-berdondini"
+      ],
+      "sources": [
+        {
+          "title": "Corticale, the new IIT start-up to study and treat brain",
+          "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+          "published": "2021-08-04"
+        }
+      ],
+      "contextEdgeIds": [
+        "corticale-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "paul-le-floch",
+      "name": "Paul Le Floch",
+      "institution": "Axoft (co-founder); Harvard doctoral training",
+      "country": "United States",
+      "region": "North America",
+      "group": "translation",
+      "summary": "Axoft co-founder and Harvard doctoral graduate. Harvard identifies him as a former graduate student in Jia Liu’s laboratory, documenting a training connection behind the company’s ultrasoft neural-interface work.",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "connectionIds": [
+        "paul-le-floch"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        },
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ],
+      "contextEdgeIds": [
+        "lefloch-jia-training",
+        "paul-le-floch-axoft-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jia-liu",
+      "name": "Jia Liu",
+      "institution": "Harvard University / Axoft (co-founder; 2024 account)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "Harvard researcher and academic co-founder of Axoft. Harvard identifies Paul Le Floch as a former graduate student in his laboratory; the research context is long-lasting, mechanically soft neural probes.",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "connectionIds": [
+        "jia-liu"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        },
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ],
+      "contextEdgeIds": [
+        "lefloch-jia-training",
+        "jia-liu-axoft-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "tianyang-ye",
+      "name": "Tianyang Ye",
+      "institution": "Axoft (co-founder); Harvard graduate and postdoctoral training",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "Axoft co-founder who trained as a graduate student and postdoctoral researcher in Hongkun Park’s Harvard group. Harvard documents the training and founding connections without giving exact training dates.",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "connectionIds": [
+        "tianyang-ye"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        },
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ],
+      "contextEdgeIds": [
+        "ye-park-training",
+        "tianyang-ye-axoft-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "hongkun-park",
+      "name": "Hongkun Park",
+      "institution": "Harvard University (Park Group; 2024 account)",
+      "country": "United States",
+      "region": "North America",
+      "group": "record",
+      "summary": "Harvard laboratory leader whose group trained Axoft co-founder Tianyang Ye as a graduate student and postdoctoral researcher. This is a documented training relationship, not a claim that Park himself founded Axoft.",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "connectionIds": [
+        "hongkun-park"
+      ],
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ],
+      "contextEdgeIds": [
+        "ye-park-training"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "tao-hu",
+      "name": "Tao Hu / Tiger H. Tao",
+      "institution": "Shanghai Institute of Microsystem and Information Technology / NeuroXess (2022 account)",
+      "country": "China",
+      "region": "Asia",
+      "group": "record",
+      "summary": "NeuroXess scientific founder identified in the company’s history and 2022 release. That release also documents his SIMIT appointment and X-Lab leadership; a 2025 primary paper names him as a corresponding author of silk-enabled intraventricular neural interfaces.",
+      "profileUrl": "https://www.neuroxess.com/about/",
+      "connectionIds": [
+        "tao-hu"
+      ],
+      "sources": [
+        {
+          "title": "NeuroXess company history",
+          "url": "https://www.neuroxess.com/about/"
+        },
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        },
+        {
+          "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+          "url": "https://www.nature.com/articles/s41467-025-64397-9"
+        }
+      ],
+      "contextEdgeIds": [
+        "tao-neuroxess-founder",
+        "tao-simit-research",
+        "tao-silk-ivi"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "phoenix-peng",
+      "name": "Lei Peng / Phoenix Peng",
+      "institution": "NeuroXess (co-founder)",
+      "country": "China",
+      "region": "Asia",
+      "group": "translation",
+      "summary": "NeuroXess co-founder identified as leading commercialization in its January 2022 announcement. The company account connects him with scientific founder Tao Hu; it does not establish a laboratory mentorship relationship.",
+      "profileUrl": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/",
+      "connectionIds": [
+        "phoenix-peng"
+      ],
+      "sources": [
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ],
+      "contextEdgeIds": [
+        "peng-neuroxess-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "hong-bo",
+      "name": "Hong Bo",
+      "institution": "Tsinghua University (NEO research team; 2024 account)",
+      "country": "China",
+      "region": "Asia",
+      "group": "record",
+      "summary": "Tsinghua academic team leader for NEO’s wireless, minimally invasive brain–computer interface. The university’s 2024 account documents development with Neuracle and the clinical prototype, without making a company-founder claim.",
+      "profileUrl": "https://www.tsinghua.edu.cn/info/1175/109595.htm",
+      "connectionIds": [
+        "hong-bo"
+      ],
+      "sources": [
+        {
+          "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+          "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm"
+        }
+      ],
+      "contextEdgeIds": [
+        "hong-neo-development"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "honglai-xu",
+      "name": "Honglai Xu / 胥红来",
+      "institution": "Neuracle (founder; June 2026 filing)",
+      "country": "China",
+      "region": "Asia",
+      "group": "translation",
+      "summary": "Neuracle founder named in the company’s June 2026 filing, which also records his Tsinghua doctorate in biomedical engineering. Incorporation involved several initial shareholders; the evidence does not support a sole-founder or named-supervisor claim.",
+      "profileUrl": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf",
+      "connectionIds": [
+        "honglai-xu"
+      ],
+      "sources": [
+        {
+          "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf"
+        }
+      ],
+      "contextEdgeIds": [
+        "xu-neuracle-founder",
+        "xu-tsinghua-phd"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "masayuki-hirata",
+      "name": "Masayuki Hirata",
+      "institution": "Osaka research / JiMED (founder)",
+      "country": "Japan",
+      "region": "Asia",
+      "group": "record",
+      "summary": "Osaka BCI researcher and JiMED founder. He was corresponding author of the 2018 W-HERBS study describing a fully implanted wireless 128-channel ECoG recording device, and dates JiMED’s incorporation to March 2020.",
+      "profileUrl": "https://www.kyoto-unicap.co.jp/embark/36-jimed/",
+      "connectionIds": [
+        "masayuki-hirata"
+      ],
+      "sources": [
+        {
+          "title": "JiMED founder and CEO interview — Series EMBARK 36",
+          "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/"
+        },
+        {
+          "title": "JiMED — NEDO startup profile",
+          "url": "https://www.nedo.go.jp/english/activities/startups/company75.html"
+        },
+        {
+          "title": "A fully implantable wireless ECoG 128-channel recording device for human brain–machine interfaces: W-HERBS",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2018.00511/full"
+        }
+      ],
+      "contextEdgeIds": [
+        "hirata-jimed-founder",
+        "hirata-wherbs"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "tao-zhou-neuramatrix",
+      "name": "Tao Zhou / 周涛",
+      "institution": "Beijing NeuraMatrix (co-founder; March 2026 account)",
+      "country": "China",
+      "region": "Asia",
+      "group": "translation",
+      "summary": "The official March 2026 Zhongguancun Forum account identifies Zhou as co-founder and CEO of Beijing NeuraMatrix. The inspected source does not establish his education, original laboratory or the company’s full founding-team history.",
+      "profileUrl": "https://www.zgcforum.com/zh2026/news/forum/963039",
+      "connectionIds": [
+        "tao-zhou-neuramatrix"
+      ],
+      "sources": [
+        {
+          "title": "Zhongguancun Forum Tech-Show — co-founder and CEO Tao Zhou of Beijing NeuraMatrix",
+          "url": "https://www.zgcforum.com/zh2026/news/forum/963039"
+        }
+      ],
+      "contextEdgeIds": [
+        "zhou-neuralmatrix-founder"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "daniel-palanker",
+      "name": "Daniel Palanker",
+      "institution": "Stanford University",
+      "country": "United States",
+      "region": "North America",
+      "group": "restore",
+      "summary": "Stanford retinal-prosthesis researcher credited by Science with the original concept behind PRIMA. His laboratory publication record documents photovoltaic retinal-prosthesis research from 2012.",
+      "profileUrl": "https://profiles.stanford.edu/daniel-palanker",
+      "connectionIds": [
+        "daniel-palanker"
+      ],
+      "sources": [
+        {
+          "title": "Stanford Palanker laboratory: publications",
+          "url": "https://web.stanford.edu/~palanker/List_of_publications.html"
+        },
+        {
+          "title": "Science: welcoming Pixium Vision’s PRIMA retinal prosthesis",
+          "url": "https://science.xyz/news/pixium-vision-acquisition/",
+          "published": "2024-04-25"
+        }
+      ],
+      "contextEdgeIds": [
+        "palanker-stanford",
+        "palanker-prima-origin"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "graeme-clark",
+      "name": "Graeme Clark",
+      "institution": "University of Melbourne (historical research context)",
+      "country": "Australia",
+      "region": "Oceania",
+      "group": "restore",
+      "summary": "Pioneer of multichannel cochlear-implant research at the University of Melbourne. Cochlear’s history documents the research-to-commercialization partnership; Robert Shepherd’s institutional biography explicitly names Clark as his mentor.",
+      "profileUrl": "https://www.cochlear.com/us/en/about-us/proven-over-time",
+      "connectionIds": [
+        "graeme-clark"
+      ],
+      "sources": [
+        {
+          "title": "Cochlear: proven over time",
+          "url": "https://www.cochlear.com/us/en/about-us/proven-over-time"
+        },
+        {
+          "title": "Cochlear Limited: Modern Slavery Statement 2024, our story",
+          "url": "https://assets.cochlear.com/api/public/content/1b9dbdf9214c429e817f2e2eef1ec719?v=66737e32",
+          "published": "2024"
+        },
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ],
+      "contextEdgeIds": [
+        "clark-melbourne-cochlear",
+        "clark-shepherd-mentor"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "robert-shepherd",
+      "name": "Robert Shepherd",
+      "institution": "Bionics Institute (research career context)",
+      "country": "Australia",
+      "region": "Oceania",
+      "group": "restore",
+      "summary": "Bionics Institute researcher whose biography links cochlear research with later suprachoroidal visual prostheses. It identifies Graeme Clark as his mentor and credits work with CERA on the bionic eye, including the 2012 trial.",
+      "profileUrl": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/",
+      "connectionIds": [
+        "robert-shepherd"
+      ],
+      "sources": [
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ],
+      "contextEdgeIds": [
+        "clark-shepherd-mentor",
+        "shepherd-bionic-eye",
+        "shepherd-cochlear-research"
+      ],
+      "affiliationBasis": "Documented affiliation, founder role or historical research context as explicitly labeled; not a complete current-employment census.",
+      "reviewed": "2026-09-15"
+    }
+  ],
+  "corrections": [
+    {
+      "researcherId": "alexander-mathis",
+      "recommended": {
+        "institution": "EPFL",
+        "country": "Switzerland",
+        "region": "Europe"
+      },
+      "reason": "Selected neural/DeepLabCut record matches the computational neuroscientist; exclude the parasitology namesake A5020924014. Current official EPFL sources support EPFL affiliation, replacing Harvard.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://www.mathisgroup.org/"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://actu.epfl.ch/news/nominations-des-professeures-et-professeurs-de-194/"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://actu.epfl.ch/news/real-learning-happens-only-when-students-are-genui/"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "nita-farahany",
+      "recommended": {
+        "profileUrl": "https://scienceandsociety.duke.edu/about-us/people/faculty-governance/nita-farahany-jd-phd/"
+      },
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://scienceandsociety.duke.edu/about-us/people/faculty-governance/nita-farahany-jd-phd/"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "timothy-brown",
+      "recommended": {
+        "profileUrl": "https://phil.washington.edu/people/timothy-emmanuel-brown"
+      },
+      "reason": "Hold: sampled record A5024105482 combines UW neural-device ethics with Digital Video as Research Practice by an LSU sociology researcher in 2005. UW primary profile identifies neuroethicist Timothy Emmanuel Brown, BA2008/PhD2019. The mixed aggregate cannot be used.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://phil.washington.edu/people/timothy-emmanuel-brown"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://jrp.icaap.org/index.php/jrp/article/view/6.html"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "moritz-grosse-wentrup",
+      "recommended": {
+        "institution": "University of Vienna",
+        "profileUrl": "https://ucrisportal.univie.ac.at/de/persons/moritz-grosse-wentrup/",
+        "country": "Austria",
+        "region": "Europe"
+      },
+      "reason": "Selected record matches BCI transfer, CSP and plasticity. Current primary institutional profile places him at University of Vienna, not his former Max Planck role.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://ucrisportal.univie.ac.at/de/persons/moritz-grosse-wentrup/"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "simon-schultz",
+      "recommended": {
+        "profileUrl": "https://profiles.imperial.ac.uk/s.schultz"
+      },
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://profiles.imperial.ac.uk/s.schultz"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "rylie-green",
+      "recommended": {
+        "profileUrl": "https://profiles.imperial.ac.uk/rylie.green"
+      },
+      "reason": "Selected Rylie A. Green neural biomaterials record matches conducting-polymer neural interfaces. Seed /people/r.green redirects to economist Richard Green; corrected official profile is /rylie.green. Do not import Richard Green ORCID.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://profiles.imperial.ac.uk/rylie.green"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "eduardo-moraud",
+      "recommended": {
+        "name": "Eduardo Martín Moraud"
+      },
+      "reason": "Canonical full name Eduardo Martin Moraud matches e-dura, restored locomotion and primate brain-spine interface bylines; route ID preserved despite abbreviated seed name.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://neuro-x.epfl.ch/en/contact/"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "maarten-van-den-heuvel",
+      "recommended": {
+        "name": "Martijn P. van den Heuvel",
+        "suggestedId": "martijn-van-den-heuvel",
+        "institution": "Vrije Universiteit Amsterdam",
+        "profileUrl": "https://research.vu.nl/en/persons/martijn-van-den-heuvel/",
+        "preserveAlias": "maarten-van-den-heuvel",
+        "country": "Netherlands",
+        "region": "Europe"
+      },
+      "reason": "Seed identity correction required: the connectomics narrative describes Martijn P. van den Heuvel, not Maarten. Selected record matches rich-club/hub/resting-state connectome work and official VU faculty profile. Actual Maarten database-author record is unrelated.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://research.vu.nl/en/persons/martijn-van-den-heuvel/"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://research.vu.nl/ws/files/233632873/A_cross_disorder_connectome_landscape_of_brain_dysconnectivity.pdf"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "xilin-liu",
+      "recommended": {
+        "profileUrl": "https://www.ece.utoronto.ca/people/liu-x/"
+      },
+      "reason": "Hold pending disambiguation: A5100639668 contains both neural-IC reviews and conservative-chaos image encryption with Xiaojun Tong. Official Toronto biography and self-asserted ORCID0000-0002-9547-3905 identify the neural-IC researcher, but correspondence of the full candidate corpus is not established; do not use aggregate on name alone.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://www.ece.utoronto.ca/people/liu-x/"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://www.eecg.utoronto.ca/~xilinliu/"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://orcid.org/0000-0002-9547-3905"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "brenton-hordacre",
+      "recommended": {
+        "institution": "Adelaide University",
+        "profileUrl": "https://researchers.adelaide.edu.au/profile/brenton.hordacre"
+      },
+      "reason": "Selected record matches stroke neurophysiology and TMS reliability. Current official institution is Adelaide University after merger; former UniSA profile now gives a transition notice.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://researchers.adelaide.edu.au/profile/brenton.hordacre"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://adelaide.edu.au/people/Brenton.Hordacre"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "dezhong-yao",
+      "recommended": {
+        "institution": "University of Electronic Science and Technology of China",
+        "profileUrl": "https://faculty.uestc.edu.cn/yaodezhong/en/index.htm"
+      },
+      "reason": "Hold aggregate: A5018644308 and A5102822593 both contain coherent UESTC EEG/REST/neuroinformation career subsets, with no single representative record established. Do not sum fragments. Official faculty affiliation is UESTC, not the seed Southwest University link.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://faculty.uestc.edu.cn/yaodezhong/en/index.htm"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "andrew-huth",
+      "recommended": {
+        "name": "Alexander G. Huth",
+        "suggestedId": "alexander-huth",
+        "institution": "University of California, Berkeley",
+        "profileUrl": "https://vision.berkeley.edu/people/alexander-huth",
+        "preserveAlias": "andrew-huth"
+      },
+      "reason": "Seed identity correction required: semantic decoding work belongs to Alexander G. Huth, not Andrew S. Huth. All three selected landmark papers match Alexander. Official Berkeley profile states he returned from UT Austin to Berkeley in2025.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://vision.berkeley.edu/people/alexander-huth"
+        },
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://hwni.berkeley.edu/people/alexander-huth"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "maria-angelica-ocampo",
+      "recommended": {
+        "suppressProfile": true,
+        "reason": "Primary identity and stated research milestones not established."
+      },
+      "reason": "Hold/remove until identity sourced: the seed generic BNI/Chile page does not establish this researcher or its stated BCI milestones. No candidate recovered; name search surfaced unrelated people. Do not invent a profile or treat missing result as zero output.",
+      "sources": [
+        {
+          "title": "Institutional profile evidence",
+          "url": "https://www.bni.cl/"
+        }
+      ],
+      "verified": "2026-09-15"
+    }
+  ],
+  "notes": [
+    "All 43 people already exist as Person nodes in the evidence graph; no graph nodes are added.",
+    "Country describes the displayed institution or company context, not citizenship or a verified home address.",
+    "Founding and historical affiliations do not imply current employment. Dates qualify source context where needed.",
+    "Group is an editorial navigation category, not a bibliometric classification or ranking.",
+    "Citation metrics require the separate identity-audited snapshot; no metrics are fabricated for these profiles."
+  ]
+}

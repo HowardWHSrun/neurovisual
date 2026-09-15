@@ -1,0 +1,4373 @@
+{
+  "reviewed": "2026-09-15",
+  "provider": "OpenAlex",
+  "method": "Manual comparison of name variants, historical institutions, topics, sampled paper bylines and targeted primary records. One author ID per person; no fragment aggregation.",
+  "people": [
+    {
+      "id": "gyorgy-buzsaki",
+      "name": "György Buzsáki",
+      "openalexId": "https://openalex.org/A5043247282",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://med.nyu.edu/faculty/gyorgy-buzsaki"
+        },
+        {
+          "title": "Neuronal Oscillations in Cortical Networks",
+          "url": "https://doi.org/10.1126/science.1099745"
+        },
+        {
+          "title": "Rhythms of the Brain",
+          "url": "https://doi.org/10.1093/acprof:oso/9780195301069.001.0001"
+        },
+        {
+          "title": "The origin of extracellular fields and currents — EEG, ECoG, LFP and spikes",
+          "url": "https://doi.org/10.1038/nrn3241"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "christof-koch",
+      "name": "Christof Koch",
+      "openalexId": "https://openalex.org/A5084822308",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://alleninstitute.org/person/christof-koch"
+        },
+        {
+          "title": "A model of saliency-based visual attention for rapid scene analysis",
+          "url": "https://doi.org/10.1109/34.730558"
+        },
+        {
+          "title": "Computational modelling of visual attention",
+          "url": "https://doi.org/10.1038/35058500"
+        },
+        {
+          "title": "The origin of extracellular fields and currents — EEG, ECoG, LFP and spikes",
+          "url": "https://doi.org/10.1038/nrn3241"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "tim-harris",
+      "name": "Tim Harris",
+      "openalexId": "https://openalex.org/A5101535208",
+      "status": "verified",
+      "reason": "T.D./Timothy D. Harris matches Neuropixels and earlier optical instrumentation. Exact-short-name records instead contain computing, history, or emergency-medicine work.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.janelia.org/people/tim-harris"
+        },
+        {
+          "title": "Fully integrated silicon probes for high-density recording of neural activity",
+          "url": "https://doi.org/10.1038/nature24636"
+        },
+        {
+          "title": "Fluorescence intermittency in single cadmium selenide nanocrystals",
+          "url": "https://doi.org/10.1038/383802a0"
+        },
+        {
+          "title": "Breaking the Diffraction Barrier: Optical Microscopy on a Nanometric Scale",
+          "url": "https://doi.org/10.1126/science.251.5000.1468"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "kenneth-harris",
+      "name": "Kenneth Harris",
+      "openalexId": "https://openalex.org/A5064176073",
+      "status": "verified",
+      "reason": "Kenneth D. Harris matches Cortexlab population neuroscience and Neuropixels. Exclude materials-chemistry namesake and small data/software fragments.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ucl.ac.uk/brain-sciences/cortexlab"
+        },
+        {
+          "title": "Molecular Architecture of the Mouse Nervous System",
+          "url": "https://doi.org/10.1016/j.cell.2018.06.021"
+        },
+        {
+          "title": "Fully integrated silicon probes for high-density recording of neural activity",
+          "url": "https://doi.org/10.1038/nature24636"
+        },
+        {
+          "title": "Spontaneous behaviors drive multidimensional, brainwide activity",
+          "url": "https://doi.org/10.1126/science.aav7893"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "marius-pachitariu",
+      "name": "Marius Pachitariu",
+      "openalexId": "https://openalex.org/A5084844011",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ucl.ac.uk/brain-sciences/cortexlab"
+        },
+        {
+          "title": "Cellpose: a generalist algorithm for cellular segmentation",
+          "url": "https://doi.org/10.1038/s41592-020-01018-x"
+        },
+        {
+          "title": "Fully integrated silicon probes for high-density recording of neural activity",
+          "url": "https://doi.org/10.1038/nature24636"
+        },
+        {
+          "title": "Spontaneous behaviors drive multidimensional, brainwide activity",
+          "url": "https://doi.org/10.1126/science.aav7893"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "karel-svoboda",
+      "name": "Karel Svoboda",
+      "openalexId": "https://openalex.org/A5088944052",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.janelia.org/people/karel-svoboda"
+        },
+        {
+          "title": "Ultrasensitive fluorescent proteins for imaging neuronal activity",
+          "url": "https://doi.org/10.1038/nature12354"
+        },
+        {
+          "title": "Fully integrated silicon probes for high-density recording of neural activity",
+          "url": "https://doi.org/10.1038/nature24636"
+        },
+        {
+          "title": "Imaging neural activity in worms, flies and mice with improved GCaMP calcium indicators",
+          "url": "https://doi.org/10.1038/nmeth.1398"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "loren-frank",
+      "name": "Loren Frank",
+      "openalexId": "https://openalex.org/A5060193294",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://physiology.ucsf.edu/frank"
+        },
+        {
+          "title": "Hippocampal replay in the awake state: a potential substrate for memory consolidation and retrieval",
+          "url": "https://doi.org/10.1038/nn.2732"
+        },
+        {
+          "title": "Awake Hippocampal Sharp-Wave Ripples Support Spatial Memory",
+          "url": "https://doi.org/10.1126/science.1217230"
+        },
+        {
+          "title": "Awake replay of remote experiences in the hippocampus",
+          "url": "https://doi.org/10.1038/nn.2344"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "euisik-yoon",
+      "name": "Euisik Yoon",
+      "openalexId": "https://openalex.org/A5104111210",
+      "status": "verified",
+      "reason": "Neural-probe, sensor and MEMS work are consistent. The AST/ALT sensor-review outlier was verified on the KAIST institutional publication record; it is not evidence of a false match.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://micl.engin.umich.edu/"
+        },
+        {
+          "title": "Aspartate Aminotransferase (AST/GOT) and Alanine Aminotransferase (ALT/GPT) Detection Techniques",
+          "url": "https://doi.org/10.3390/s6070756"
+        },
+        {
+          "title": "Monolithically Integrated μLEDs on Silicon Neural Probes for High-Resolution Optogenetic Studies in Behaving Animals",
+          "url": "https://doi.org/10.1016/j.neuron.2015.10.032"
+        },
+        {
+          "title": "A Flexible Polymer Tactile Sensor: Fabrication and Modular Expandability for Large Area Deployment",
+          "url": "https://doi.org/10.1109/jmems.2006.886021"
+        },
+        {
+          "title": "AST/GOT and ALT/GPT detection techniques — KAIST publication record",
+          "url": "https://pure.kaist.ac.kr/en/publications/aspartate-aminotransferase-astgot-and-alanine-aminotransferase-al/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "michael-roukes",
+      "name": "Michael Roukes",
+      "openalexId": "https://openalex.org/A5082335410",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.roukeslab.caltech.edu/"
+        },
+        {
+          "title": "Spintronics: A Spin-Based Electronics Vision for the Future",
+          "url": "https://doi.org/10.1126/science.1065389"
+        },
+        {
+          "title": "Nanoelectromechanical systems",
+          "url": "https://doi.org/10.1063/1.1927327"
+        },
+        {
+          "title": "Thermoelastic damping in micro- and nanomechanical systems",
+          "url": "https://doi.org/10.1103/physrevb.61.5600"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "shigeyoshi-fujisawa",
+      "name": "Shigeyoshi Fujisawa",
+      "openalexId": "https://openalex.org/A5043580794",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.riken.jp/en/research/labs/cbs/circuit_behav_phys/"
+        },
+        {
+          "title": "A toolbox of Cre-dependent optogenetic transgenic mice for light-induced activation and silencing",
+          "url": "https://doi.org/10.1038/nn.3078"
+        },
+        {
+          "title": "Entrainment of Neocortical Neurons and Gamma Oscillations by the Hippocampal Theta Rhythm",
+          "url": "https://doi.org/10.1016/j.neuron.2008.09.014"
+        },
+        {
+          "title": "Behavior-dependent short-term assembly dynamics in the medial prefrontal cortex",
+          "url": "https://doi.org/10.1038/nn.2134"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "lan-luan",
+      "name": "Lan Luan",
+      "openalexId": "https://openalex.org/A5014103056",
+      "status": "verified",
+      "reason": "NET paper plus earlier nanoscale magnetometry and superconducting-vortex physics are consistent with this researcher’s training. Exclude oncology and lithography namesakes.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://luanlab.rice.edu/"
+        },
+        {
+          "title": "Ultraflexible nanoelectronic probes form reliable, glial scar–free neural integration",
+          "url": "https://doi.org/10.1126/sciadv.1601966"
+        },
+        {
+          "title": "Nanoscale magnetometry with NV centers in diamond",
+          "url": "https://doi.org/10.1557/mrs.2013.23"
+        },
+        {
+          "title": "Mechanics of individual isolated vortices in a cuprate superconductor",
+          "url": "https://doi.org/10.1038/nphys1127"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "chong-xie",
+      "name": "Chong Xie",
+      "openalexId": "https://openalex.org/A5084766385",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://xielab.rice.edu/"
+        },
+        {
+          "title": "Syringe-injectable electronics",
+          "url": "https://doi.org/10.1038/nnano.2015.115"
+        },
+        {
+          "title": "Ultraflexible nanoelectronic probes form reliable, glial scar–free neural integration",
+          "url": "https://doi.org/10.1126/sciadv.1601966"
+        },
+        {
+          "title": "Intracellular recording of action potentials by nanopillar electroporation",
+          "url": "https://doi.org/10.1038/nnano.2012.8"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "charles-lieber",
+      "name": "Charles Lieber",
+      "openalexId": "https://openalex.org/A5084836278",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://cml.harvard.edu/people/charles-m-lieber"
+        },
+        {
+          "title": "Nanowire Nanosensors for Highly Sensitive and Selective Detection of Biological and Chemical Species",
+          "url": "https://doi.org/10.1126/science.1062711"
+        },
+        {
+          "title": "Nanobeam Mechanics: Elasticity, Strength, and Toughness of Nanorods and Nanotubes",
+          "url": "https://doi.org/10.1126/science.277.5334.1971"
+        },
+        {
+          "title": "A Laser Ablation Method for the Synthesis of Crystalline Semiconductor Nanowires",
+          "url": "https://doi.org/10.1126/science.279.5348.208"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "john-rogers",
+      "name": "John A. Rogers",
+      "openalexId": "https://openalex.org/A5045551635",
+      "status": "verified",
+      "reason": "Rogers has several substantial bioelectronics/materials fragments. This dominant selected ID is not a reconciled whole-career total; do not sum fragments or relabel all citations as BCI citations.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://rogersgroup.northwestern.edu/"
+        },
+        {
+          "title": "Materials and Mechanics for Stretchable Electronics",
+          "url": "https://doi.org/10.1126/science.1182383"
+        },
+        {
+          "title": "Epidermal Electronics",
+          "url": "https://doi.org/10.1126/science.1206157"
+        },
+        {
+          "title": "Dissolvable films of silk fibroin for ultrathin conformal bio-integrated electronics",
+          "url": "https://doi.org/10.1038/nmat2745"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jonathan-viventi",
+      "name": "Jonathan Viventi",
+      "openalexId": "https://openalex.org/A5071960014",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://viventi.pratt.duke.edu/"
+        },
+        {
+          "title": "Dissolvable films of silk fibroin for ultrathin conformal bio-integrated electronics",
+          "url": "https://doi.org/10.1038/nmat2745"
+        },
+        {
+          "title": "Flexible, foldable, actively multiplexed, high-density electrode array for mapping brain activity in vivo",
+          "url": "https://doi.org/10.1038/nn.2973"
+        },
+        {
+          "title": "Materials for multifunctional balloon catheters with capabilities in cardiac electrophysiological mapping and ablation therapy",
+          "url": "https://doi.org/10.1038/nmat2971"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "george-malliaras",
+      "name": "George Malliaras",
+      "openalexId": "https://openalex.org/A5022830421",
+      "status": "verified",
+      "reason": "George G. Malliaras matches organic electrochemical transistors and bioelectronics. Short-name mixed snippets are not the intended dominant record.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://bioelectronics.eng.cam.ac.uk/"
+        },
+        {
+          "title": "Organic electrochemical transistors",
+          "url": "https://doi.org/10.1038/natrevmats.2017.86"
+        },
+        {
+          "title": "The rise of plastic bioelectronics",
+          "url": "https://doi.org/10.1038/nature21004"
+        },
+        {
+          "title": "Technology Roadmap for Flexible Sensors",
+          "url": "https://doi.org/10.1021/acsnano.2c12606"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "stephanie-lacour",
+      "name": "Stéphanie Lacour",
+      "openalexId": "https://openalex.org/A5017041671",
+      "status": "verified",
+      "reason": "Stéphanie P. Lacour matches e-dura and stretchable electronics. Short-name law and air-pollution records belong to other people or mixed buckets.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://lsbi.epfl.ch/"
+        },
+        {
+          "title": "Electronic dura mater for long-term multimodal neural interfaces",
+          "url": "https://doi.org/10.1126/science.1260318"
+        },
+        {
+          "title": "Stretchable gold conductors on elastomeric substrates",
+          "url": "https://doi.org/10.1063/1.1565683"
+        },
+        {
+          "title": "Materials and technologies for soft implantable neuroprostheses",
+          "url": "https://doi.org/10.1038/natrevmats.2016.63"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "cynthia-chestek",
+      "name": "Cynthia Chestek",
+      "openalexId": "https://openalex.org/A5037880597",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://chestekresearch.engin.umich.edu/"
+        },
+        {
+          "title": "Long-term stability of neural prosthetic control signals from silicon cortical arrays in rhesus macaque motor cortex",
+          "url": "https://doi.org/10.1088/1741-2560/8/4/045005"
+        },
+        {
+          "title": "A regenerative peripheral nerve interface allows real-time control of an artificial hand in upper limb amputees",
+          "url": "https://doi.org/10.1126/scitranslmed.aay2857"
+        },
+        {
+          "title": "Chronic in vivo stability assessment of carbon fiber microelectrode arrays",
+          "url": "https://doi.org/10.1088/1741-2560/13/6/066002"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "takao-someya",
+      "name": "Takao Someya",
+      "openalexId": "https://openalex.org/A5008853188",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.someya.t.u-tokyo.ac.jp/"
+        },
+        {
+          "title": "Materials and Mechanics for Stretchable Electronics",
+          "url": "https://doi.org/10.1126/science.1182383"
+        },
+        {
+          "title": "An ultra-lightweight design for imperceptible plastic electronics",
+          "url": "https://doi.org/10.1038/nature12314"
+        },
+        {
+          "title": "A large-area, flexible pressure sensor matrix with organic field-effect transistors for artificial skin applications",
+          "url": "https://doi.org/10.1073/pnas.0401918101"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "polina-anikeeva",
+      "name": "Polina Anikeeva",
+      "openalexId": "https://openalex.org/A5009750653",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://anikeeva.mit.edu/"
+        },
+        {
+          "title": "Natural Neural Projection Dynamics Underlying Social Behavior",
+          "url": "https://doi.org/10.1016/j.cell.2014.05.017"
+        },
+        {
+          "title": "Quantum Dot Light-Emitting Devices with Electroluminescence Tunable over the Entire Visible Spectrum",
+          "url": "https://doi.org/10.1021/nl9002969"
+        },
+        {
+          "title": "Wireless magnetothermal deep brain stimulation",
+          "url": "https://doi.org/10.1126/science.1261821"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "john-donoghue",
+      "name": "John Donoghue",
+      "openalexId": "https://openalex.org/A5029666654",
+      "status": "verified",
+      "reason": "John P. Donoghue matches the 2006 BrainGate and 2012 robotic-arm papers. Exact-short-name records include optics, mushrooms and history and must not be substituted.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://vivo.brown.edu/display/jdonoghu"
+        },
+        {
+          "title": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+          "url": "https://doi.org/10.1038/nature04970"
+        },
+        {
+          "title": "Reach and grasp by people with tetraplegia using a neurally controlled robotic arm",
+          "url": "https://doi.org/10.1038/nature11076"
+        },
+        {
+          "title": "Instant neural control of a movement signal",
+          "url": "https://doi.org/10.1038/416141a"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "leigh-hochberg",
+      "name": "Leigh Hochberg",
+      "openalexId": "https://openalex.org/A5032110460",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://vivo.brown.edu/display/lhochber"
+        },
+        {
+          "title": "Neuronal ensemble control of prosthetic devices by a human with tetraplegia",
+          "url": "https://doi.org/10.1038/nature04970"
+        },
+        {
+          "title": "Reach and grasp by people with tetraplegia using a neurally controlled robotic arm",
+          "url": "https://doi.org/10.1038/nature11076"
+        },
+        {
+          "title": "High-performance brain-to-text communication via handwriting",
+          "url": "https://doi.org/10.1038/s41586-021-03506-2"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "krishna-shenoy",
+      "name": "Krishna Shenoy",
+      "openalexId": "https://openalex.org/A5004430663",
+      "status": "verified",
+      "reason": "Krishna V. Shenoy matches population dynamics and computational neuroscience. The short-name record is unusable; mark the career as historical (died in 2023).",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://shenoy.people.stanford.edu/"
+        },
+        {
+          "title": "Context-dependent computation by recurrent dynamics in prefrontal cortex",
+          "url": "https://doi.org/10.1038/nature12742"
+        },
+        {
+          "title": "Neural population dynamics during reaching",
+          "url": "https://doi.org/10.1038/nature11129"
+        },
+        {
+          "title": "Stimulus onset quenches neural variability: a widespread cortical phenomenon",
+          "url": "https://doi.org/10.1038/nn.2501"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jaimie-henderson",
+      "name": "Jaimie Henderson",
+      "openalexId": "https://openalex.org/A5009856256",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.stanford.edu/jaimie-henderson"
+        },
+        {
+          "title": "Electrical stimulation of the anterior nucleus of thalamus for treatment of refractory epilepsy",
+          "url": "https://doi.org/10.1111/j.1528-1167.2010.02536.x"
+        },
+        {
+          "title": "Optical Deconstruction of Parkinsonian Neural Circuitry",
+          "url": "https://doi.org/10.1126/science.1167093"
+        },
+        {
+          "title": "High-performance brain-to-text communication via handwriting",
+          "url": "https://doi.org/10.1038/s41586-021-03506-2"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "frank-willett",
+      "name": "Frank Willett",
+      "openalexId": "https://openalex.org/A5069025834",
+      "status": "verified",
+      "reason": "Record recovered from 2021 handwriting DOI; its sampled BCI papers establish the identity despite OpenAlex displaying Francis R. Willett. Preserve curated display name Frank Willett; do not import the African-art historian record.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.stanford.edu/francis-willett"
+        },
+        {
+          "title": "High-performance brain-to-text communication via handwriting",
+          "url": "https://doi.org/10.1038/s41586-021-03506-2"
+        },
+        {
+          "title": "Restoration of reaching and grasping movements through brain-controlled muscle stimulation in a person with tetraplegia: a proof-of-concept demonstration",
+          "url": "https://doi.org/10.1016/s0140-6736(17)30601-3"
+        },
+        {
+          "title": "High performance communication by people with paralysis using an intracortical brain-computer interface",
+          "url": "https://doi.org/10.7554/elife.18554"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "edward-chang",
+      "name": "Edward Chang",
+      "openalexId": "https://openalex.org/A5091099837",
+      "status": "verified",
+      "reason": "Edward F. Chang matches UCSF. The astrocyte-paper outlier is authentic: PubMed identifies him with UCSF Epilepsy Center. Broad neurosurgery/cell-biology citations are not all speech-BCI citations.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://changlab.ucsf.edu/"
+        },
+        {
+          "title": "Purification and Characterization of Progenitor and Mature Human Astrocytes Reveals Transcriptional and Functional Differences with Mouse",
+          "url": "https://doi.org/10.1016/j.neuron.2015.11.013"
+        },
+        {
+          "title": "Tumor Evolution of Glioma-Intrinsic Gene Expression Subtypes Associates with Immunological Changes in the Microenvironment",
+          "url": "https://doi.org/10.1016/j.ccell.2017.06.003"
+        },
+        {
+          "title": "New tools for studying microglia in the mouse and human CNS",
+          "url": "https://doi.org/10.1073/pnas.1525528113"
+        },
+        {
+          "title": "Purification and Characterization of Progenitor and Mature Human Astrocytes",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26687838/",
+          "evidence": "Author Edward F. Chang has UCSF Epilepsy Center affiliation."
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "gopala-anumanchipalli",
+      "name": "Gopala Anumanchipalli",
+      "openalexId": "https://openalex.org/A5068922218",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://spherelab.berkeley.edu/"
+        },
+        {
+          "title": "Speech synthesis from neural decoding of spoken sentences",
+          "url": "https://doi.org/10.1038/s41586-019-1119-1"
+        },
+        {
+          "title": "Neuroprosthesis for Decoding Speech in a Paralyzed Person with Anarthria",
+          "url": "https://doi.org/10.1056/nejmoa2027540"
+        },
+        {
+          "title": "A high-performance neuroprosthesis for speech decoding and avatar control",
+          "url": "https://doi.org/10.1038/s41586-023-06443-4"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "nick-ramsey",
+      "name": "Nick Ramsey",
+      "openalexId": "https://openalex.org/A5063036619",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.nick-ramsey.eu/"
+        },
+        {
+          "title": "Fully Implanted Brain–Computer Interface in a Locked-In Patient with ALS",
+          "url": "https://doi.org/10.1056/nejmoa1608085"
+        },
+        {
+          "title": "Handedness, language lateralisation and anatomical asymmetry in schizophrenia",
+          "url": "https://doi.org/10.1192/bjp.178.4.344"
+        },
+        {
+          "title": "Δ9-Tetrahydrocannabinol Induces Dopamine Release in the Human Striatum",
+          "url": "https://doi.org/10.1038/npp.2008.138"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jose-millan",
+      "name": "José del R. Millán",
+      "openalexId": "https://openalex.org/A5050363894",
+      "status": "ambiguous",
+      "reason": "The intended BCI identity is present, but a highest-cited sampled work is an IMB-CNM power-semiconductor survey attributed to a different J.Millán context. Suppress aggregate metrics pending correction of this apparent mixed-author bucket; do not repair totals by subtracting one known paper.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://bme.utexas.edu/people/faculty-directory/millan"
+        },
+        {
+          "title": "A Survey of Wide Bandgap Power Semiconductor Devices",
+          "url": "https://doi.org/10.1109/tpel.2013.2268900"
+        },
+        {
+          "title": "Control strategies for active lower extremity prosthetics and orthotics: a review",
+          "url": "https://doi.org/10.1186/1743-0003-12-1"
+        },
+        {
+          "title": "The BCI competition III: validating alternative approaches to actual BCI problems",
+          "url": "https://doi.org/10.1109/tnsre.2006.875642"
+        },
+        {
+          "title": "IMB-CNM 2014 journal papers",
+          "url": "https://power.imb-cnm.csic.es/publications/Journal-papers-Book-Chapters/JournalPapers2014.pdf",
+          "evidence": "Lists the power-semiconductor survey by J.Millán and CSIC power-electronics collaborators."
+        },
+        {
+          "title": "José del R. Millán — UT Austin curriculum vitae",
+          "url": "https://utdirect.utexas.edu/apps/student/coursedocs/nlogon/download/11298820/",
+          "evidence": "Identifies the computer-science/BCI researcher and career."
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "miguel-nicolelis",
+      "name": "Miguel Nicolelis",
+      "openalexId": "https://openalex.org/A5048735359",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://nicolelislab.net/"
+        },
+        {
+          "title": "Brain–machine interfaces: past, present and future",
+          "url": "https://doi.org/10.1016/j.tins.2006.07.004"
+        },
+        {
+          "title": "Learning to Control a Brain–Machine Interface for Reaching and Grasping by Primates",
+          "url": "https://doi.org/10.1371/journal.pbio.0000042"
+        },
+        {
+          "title": "Real-time prediction of hand trajectory by ensembles of cortical neurons in primates",
+          "url": "https://doi.org/10.1038/35042582"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "richard-andersen",
+      "name": "Richard Andersen",
+      "openalexId": "https://openalex.org/A5059911759",
+      "status": "verified",
+      "reason": "Choose the posterior-parietal neuroscience record. A5035244196 mixes organometallic chemistry with neuroscience; several smaller neuroscience fragments also exist.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.vis.caltech.edu/"
+        },
+        {
+          "title": "MULTIMODAL REPRESENTATION OF SPACE IN THE POSTERIOR PARIETAL CORTEX AND ITS USE IN PLANNING MOVEMENTS",
+          "url": "https://doi.org/10.1146/annurev.neuro.20.1.303"
+        },
+        {
+          "title": "Intentional Maps in Posterior Parietal Cortex",
+          "url": "https://doi.org/10.1146/annurev.neuro.25.112701.142922"
+        },
+        {
+          "title": "A back-propagation programmed network that simulates response properties of a subset of posterior parietal neurons",
+          "url": "https://doi.org/10.1038/331679a0"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "andrew-schwartz",
+      "name": "Andrew Schwartz",
+      "openalexId": "https://openalex.org/A5069968340",
+      "status": "verified",
+      "reason": "Andrew B. Schwartz matches Pittsburgh population coding and prosthetic arm control. Exclude surgery/economics namesakes and H. Andrew Schwartz (language/psychology).",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.cnup.pitt.edu/people/andrew-b-schwartz-phd"
+        },
+        {
+          "title": "Neuronal Population Coding of Movement Direction",
+          "url": "https://doi.org/10.1126/science.3749885"
+        },
+        {
+          "title": "High-performance neuroprosthetic control by an individual with tetraplegia",
+          "url": "https://doi.org/10.1016/s0140-6736(12)61816-9"
+        },
+        {
+          "title": "Cortical control of a prosthetic arm for self-feeding",
+          "url": "https://doi.org/10.1038/nature06996"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "sliman-bensmaia",
+      "name": "Sliman Bensmaia",
+      "openalexId": "https://openalex.org/A5025038084",
+      "status": "verified",
+      "reason": "The recovered dominant record uses dotless-i and combining-diaeresis name characters. Its ORCID 0000-0003-4039-9135 matches the Pitt institutional dissertation committee record; sampled tactile texture and sensory-feedback works identify the University of Chicago researcher. Keep the career historical (died in 2023). Do not aggregate the tiny alternate author fragments.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://bensmaialab.org/"
+        },
+        {
+          "title": "Intracortical microstimulation of human somatosensory cortex",
+          "url": "https://doi.org/10.1126/scitranslmed.aaf8083"
+        },
+        {
+          "title": "Spatial and temporal codes mediate the tactile perception of natural textures",
+          "url": "https://doi.org/10.1073/pnas.1305509110"
+        },
+        {
+          "title": "Biomimetic sensory feedback through peripheral nerve stimulation improves dexterous use of a bionic hand",
+          "url": "https://doi.org/10.1126/scirobotics.aax2352"
+        },
+        {
+          "title": "Pittsburgh institutional dissertation record — Sharlene Flesher committee",
+          "url": "https://eprints-prod-01.library.pitt.edu/32886/",
+          "evidence": "Committee member Bensmaia ORCID 0000-0003-4039-9135 matches recovered author record."
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "robert-gaunt",
+      "name": "Robert Gaunt",
+      "openalexId": "https://openalex.org/A5077889991",
+      "status": "verified",
+      "reason": "Robert A. Gaunt matches Pittsburgh somatosensory ICMS. Exact-short-name adrenal/endocrinology and ward-round records are different people.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.rnel.pitt.edu/people/robert-gaunt"
+        },
+        {
+          "title": "Intracortical microstimulation of human somatosensory cortex",
+          "url": "https://doi.org/10.1126/scitranslmed.aaf8083"
+        },
+        {
+          "title": "A brain-computer interface that evokes tactile sensations improves robotic arm control",
+          "url": "https://doi.org/10.1126/science.abd0380"
+        },
+        {
+          "title": "Behavioral assessment of sensitivity to intracortical microstimulation of primate somatosensory cortex",
+          "url": "https://doi.org/10.1073/pnas.1509265112"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "lee-fisher",
+      "name": "Lee Fisher",
+      "openalexId": "https://openalex.org/A5029708385",
+      "status": "verified",
+      "reason": "Lee E. Fisher matches Pittsburgh spinal stimulation and sensory restoration. Exact-short-name public-policy and engine-exhaust records are not this researcher.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.rnel.pitt.edu/people/lee-fisher"
+        },
+        {
+          "title": "An Acellular Biologic Scaffold Promotes Skeletal Muscle Formation in Mice and Humans with Volumetric Muscle Loss",
+          "url": "https://doi.org/10.1126/scitranslmed.3008085"
+        },
+        {
+          "title": "Epidural stimulation of the cervical spinal cord for post-stroke upper-limb paresis",
+          "url": "https://doi.org/10.1038/s41591-022-02202-6"
+        },
+        {
+          "title": "Sensory restoration by epidural stimulation of the lateral spinal cord in upper-limb amputees",
+          "url": "https://doi.org/10.7554/elife.54349"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jennifer-collinger",
+      "name": "Jennifer Collinger",
+      "openalexId": "https://openalex.org/A5009576549",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.rnel.pitt.edu/people/jennifer-collinger"
+        },
+        {
+          "title": "High-performance neuroprosthetic control by an individual with tetraplegia",
+          "url": "https://doi.org/10.1016/s0140-6736(12)61816-9"
+        },
+        {
+          "title": "Intracortical microstimulation of human somatosensory cortex",
+          "url": "https://doi.org/10.1126/scitranslmed.aaf8083"
+        },
+        {
+          "title": "A brain-computer interface that evokes tactile sensations improves robotic arm control",
+          "url": "https://doi.org/10.1126/science.abd0380"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "dustin-tyler",
+      "name": "Dustin Tyler",
+      "openalexId": "https://openalex.org/A5059609496",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://engineering.case.edu/about/school-directory/dustin-tyler"
+        },
+        {
+          "title": "Stimuli-Responsive Polymer Nanocomposites Inspired by the Sea Cucumber Dermis",
+          "url": "https://doi.org/10.1126/science.1153307"
+        },
+        {
+          "title": "A neural interface provides long-term stable natural touch perception",
+          "url": "https://doi.org/10.1126/scitranslmed.3008669"
+        },
+        {
+          "title": "A versatile approach for the processing of polymer nanocomposites with self-assembled nanofibre templates",
+          "url": "https://doi.org/10.1038/nnano.2007.379"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "silvestro-micera",
+      "name": "Silvestro Micera",
+      "openalexId": "https://openalex.org/A5080060929",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.epfl.ch/labs/tne/"
+        },
+        {
+          "title": "Electronic dura mater for long-term multimodal neural interfaces",
+          "url": "https://doi.org/10.1126/science.1260318"
+        },
+        {
+          "title": "Restoring Natural Sensory Feedback in Real-Time Bidirectional Hand Prostheses",
+          "url": "https://doi.org/10.1126/scitranslmed.3006820"
+        },
+        {
+          "title": "A critical review of interfaces with the peripheral nervous system for the control of neuroprostheses and hybrid bionic systems",
+          "url": "https://doi.org/10.1111/j.1085-9489.2005.10303.x"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "stanisa-raspopovic",
+      "name": "Stanisa Raspopovic",
+      "openalexId": "https://openalex.org/A5033447067",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://nuro.ethz.ch/"
+        },
+        {
+          "title": "Restoring Natural Sensory Feedback in Real-Time Bidirectional Hand Prostheses",
+          "url": "https://doi.org/10.1126/scitranslmed.3006820"
+        },
+        {
+          "title": "A Computational Model for Epidural Electrical Stimulation of Spinal Sensorimotor Circuits",
+          "url": "https://doi.org/10.1523/jneurosci.1688-13.2013"
+        },
+        {
+          "title": "Control of Hand Prostheses Using Peripheral Information",
+          "url": "https://doi.org/10.1109/rbme.2010.2085429"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "max-ortiz-catalan",
+      "name": "Max Ortiz-Catalan",
+      "openalexId": "https://openalex.org/A5062966636",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bionicsinstitute.org/"
+        },
+        {
+          "title": "An osseointegrated human-machine gateway for long-term sensory feedback and motor control of artificial limbs",
+          "url": "https://doi.org/10.1126/scitranslmed.3008933"
+        },
+        {
+          "title": "Phantom motor execution facilitated by machine learning and augmented reality as treatment for phantom limb pain: a single group, clinical trial in patients with chronic intractable phantom limb pain",
+          "url": "https://doi.org/10.1016/s0140-6736(16)31598-7"
+        },
+        {
+          "title": "Self-Contained Neuromusculoskeletal Arm Prostheses",
+          "url": "https://doi.org/10.1056/nejmoa1917537"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "andres-lozano",
+      "name": "Andres Lozano",
+      "openalexId": "https://openalex.org/A5071124477",
+      "status": "verified",
+      "reason": "Accented Andrés M. Lozano is the dominant Toronto DBS author. The unaccented exact-name candidates are small recent fragments.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://lozanolab.utoronto.ca/"
+        },
+        {
+          "title": "Deep Brain Stimulation for Treatment-Resistant Depression",
+          "url": "https://doi.org/10.1016/j.neuron.2005.02.014"
+        },
+        {
+          "title": "Parkinson's Disease",
+          "url": "https://doi.org/10.1056/nejm199810083391506"
+        },
+        {
+          "title": "Deep brain stimulation: current challenges and future directions",
+          "url": "https://doi.org/10.1038/s41582-018-0128-2"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "helen-mayberg",
+      "name": "Helen Mayberg",
+      "openalexId": "https://openalex.org/A5026199142",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://labs.icahn.mssm.edu/mayberglab/"
+        },
+        {
+          "title": "Deep Brain Stimulation for Treatment-Resistant Depression",
+          "url": "https://doi.org/10.1016/j.neuron.2005.02.014"
+        },
+        {
+          "title": "Toward discovery science of human brain function",
+          "url": "https://doi.org/10.1073/pnas.0911855107"
+        },
+        {
+          "title": "Reciprocal Limbic-Cortical Function and Negative Mood: Converging PET Findings in Depression and Normal Sadness",
+          "url": "https://doi.org/10.1176/ajp.156.5.675"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "philip-starr",
+      "name": "Philip Starr",
+      "openalexId": "https://openalex.org/A5024860464",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://star-lab.ucsf.edu/"
+        },
+        {
+          "title": "Pallidal versus Subthalamic Deep-Brain Stimulation for Parkinson's Disease",
+          "url": "https://doi.org/10.1056/nejmoa0907083"
+        },
+        {
+          "title": "Gene delivery of AAV2-neurturin for Parkinson's disease: a double-blind, randomised, controlled trial",
+          "url": "https://doi.org/10.1016/s1474-4422(10)70254-4"
+        },
+        {
+          "title": "Therapeutic deep brain stimulation reduces cortical phase-amplitude coupling in Parkinson's disease",
+          "url": "https://doi.org/10.1038/nn.3997"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "timothy-denison",
+      "name": "Timothy Denison",
+      "openalexId": "https://openalex.org/A5031652451",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ibme.ox.ac.uk/research/non-invasive-therapy-drug-delivery/neuromodulation-group"
+        },
+        {
+          "title": "Targeted neurotechnology restores walking in humans with spinal cord injury",
+          "url": "https://doi.org/10.1038/s41586-018-0649-2"
+        },
+        {
+          "title": "A brain–spine interface alleviating gait deficits after spinal cord injury in primates",
+          "url": "https://doi.org/10.1038/nature20118"
+        },
+        {
+          "title": "Walking naturally after spinal cord injury using a brain–spine interface",
+          "url": "https://doi.org/10.1038/s41586-023-06094-5"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "peter-brown",
+      "name": "Peter Brown",
+      "openalexId": "https://openalex.org/A5087477752",
+      "status": "verified",
+      "reason": "Select the Parkinson/DBS neuroscience record. Higher/lower-name variants in astronomy, ecology and history are different people; raw OpenAlex institution strings are not a verified employer history.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.neuroscience.ox.ac.uk/news/retirement-of-professor-peter-brown"
+        },
+        {
+          "title": "Pathological synchronization in Parkinson's disease: networks, models and treatments",
+          "url": "https://doi.org/10.1016/j.tins.2007.05.004"
+        },
+        {
+          "title": "Deep brain stimulation: current challenges and future directions",
+          "url": "https://doi.org/10.1038/s41582-018-0128-2"
+        },
+        {
+          "title": "Adaptive deep brain stimulation in advanced Parkinson disease",
+          "url": "https://doi.org/10.1002/ana.23951"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "warren-grill",
+      "name": "Warren Grill",
+      "openalexId": "https://openalex.org/A5017539910",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://grill-lab.pratt.duke.edu/"
+        },
+        {
+          "title": "Technology of deep brain stimulation: current status and future directions",
+          "url": "https://doi.org/10.1038/s41582-020-00426-z"
+        },
+        {
+          "title": "Cellular Effects of Deep Brain Stimulation: Model-Based Analysis of Activation and Inhibition",
+          "url": "https://doi.org/10.1152/jn.00989.2003"
+        },
+        {
+          "title": "Modeling the Excitability of Mammalian Nerve Fibers: Influence of Afterpotentials on the Recovery Cycle",
+          "url": "https://doi.org/10.1152/jn.00353.2001"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "cameron-mcintyre",
+      "name": "Cameron McIntyre",
+      "openalexId": "https://openalex.org/A5083835604",
+      "status": "verified",
+      "reason": "Cameron C. McIntyre matches DBS modeling, with current Duke appointment independently verified. Exact-short-name isotope/carbon geochemistry records are different people.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://engineering.case.edu/about/school-directory/cameron-mcintyre"
+        },
+        {
+          "title": "Deep brain stimulation: current challenges and future directions",
+          "url": "https://doi.org/10.1038/s41582-018-0128-2"
+        },
+        {
+          "title": "Cellular Effects of Deep Brain Stimulation: Model-Based Analysis of Activation and Inhibition",
+          "url": "https://doi.org/10.1152/jn.00989.2003"
+        },
+        {
+          "title": "Modeling the Excitability of Mammalian Nerve Fibers: Influence of Afterpotentials on the Recovery Cycle",
+          "url": "https://doi.org/10.1152/jn.00353.2001"
+        },
+        {
+          "title": "Cameron C McIntyre — Scholars@Duke",
+          "url": "https://scholars.duke.edu/person/Cameron.McIntyre",
+          "evidence": "Professor of Biomedical Engineering and Neurosurgery, 2021–present."
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "alim-louis-benabid",
+      "name": "Alim-Louis Benabid",
+      "openalexId": "https://openalex.org/A5111660937",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.clinatec.fr/en/"
+        },
+        {
+          "title": "Long-term suppression of tremor by chronic stimulation of the ventral intermediate thalamic nucleus",
+          "url": "https://doi.org/10.1016/0140-6736(91)91175-t"
+        },
+        {
+          "title": "Deep brain stimulation of the subthalamic nucleus for the treatment of Parkinson's disease",
+          "url": "https://doi.org/10.1016/s1474-4422(08)70291-6"
+        },
+        {
+          "title": "Deep brain stimulation for Parkinson’s disease",
+          "url": "https://doi.org/10.1016/j.conb.2003.11.001"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "gregoire-courtine",
+      "name": "Grégoire Courtine",
+      "openalexId": "https://openalex.org/A5018530098",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.neurorestore.swiss/"
+        },
+        {
+          "title": "Targeted neurotechnology restores walking in humans with spinal cord injury",
+          "url": "https://doi.org/10.1038/s41586-018-0649-2"
+        },
+        {
+          "title": "Electronic dura mater for long-term multimodal neural interfaces",
+          "url": "https://doi.org/10.1126/science.1260318"
+        },
+        {
+          "title": "Confronting false discoveries in single-cell differential expression",
+          "url": "https://doi.org/10.1038/s41467-021-25960-2"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jocelyne-bloch",
+      "name": "Jocelyne Bloch",
+      "openalexId": "https://openalex.org/A5010595940",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.neurorestore.swiss/"
+        },
+        {
+          "title": "Neurodegeneration Prevented by Lentiviral Vector Delivery of GDNF in Primate Models of Parkinson's Disease",
+          "url": "https://doi.org/10.1126/science.290.5492.767"
+        },
+        {
+          "title": "Targeted neurotechnology restores walking in humans with spinal cord injury",
+          "url": "https://doi.org/10.1038/s41586-018-0649-2"
+        },
+        {
+          "title": "A brain–spine interface alleviating gait deficits after spinal cord injury in primates",
+          "url": "https://doi.org/10.1038/nature20118"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "karl-deisseroth",
+      "name": "Karl Deisseroth",
+      "openalexId": "https://openalex.org/A5014360828",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://dlab.stanford.edu/"
+        },
+        {
+          "title": "Millisecond-timescale, genetically targeted optical control of neural activity",
+          "url": "https://doi.org/10.1038/nn1525"
+        },
+        {
+          "title": "Driving fast-spiking cells induces gamma rhythm and controls sensory responses",
+          "url": "https://doi.org/10.1038/nature08002"
+        },
+        {
+          "title": "Parvalbumin neurons and gamma rhythms enhance cortical circuit performance",
+          "url": "https://doi.org/10.1038/nature07991"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "ed-boyden",
+      "name": "Ed Boyden",
+      "openalexId": "https://openalex.org/A5109593948",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://syntheticneurobiology.org/"
+        },
+        {
+          "title": "Millisecond-timescale, genetically targeted optical control of neural activity",
+          "url": "https://doi.org/10.1038/nn1525"
+        },
+        {
+          "title": "Expansion microscopy",
+          "url": "https://doi.org/10.1126/science.1260088"
+        },
+        {
+          "title": "A toolbox of Cre-dependent optogenetic transgenic mice for light-induced activation and silencing",
+          "url": "https://doi.org/10.1038/nn.3078"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "peter-hegemann",
+      "name": "Peter Hegemann",
+      "openalexId": "https://openalex.org/A5032787107",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.biologie.hu-berlin.de/en/gruppenseiten/expbp"
+        },
+        {
+          "title": "Channelrhodopsin-2, a directly light-gated cation-selective membrane channel",
+          "url": "https://doi.org/10.1073/pnas.1936192100"
+        },
+        {
+          "title": "Neocortical excitation/inhibition balance in information processing and social dysfunction",
+          "url": "https://doi.org/10.1038/nature10360"
+        },
+        {
+          "title": "Microbial and Animal Rhodopsins: Structures, Functions, and Molecular Mechanisms",
+          "url": "https://doi.org/10.1021/cr4003769"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "georg-nagel",
+      "name": "Georg Nagel",
+      "openalexId": "https://openalex.org/A5003921354",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.biozentrum.uni-wuerzburg.de/en/bot1/research/prof-dr-georg-nagel/"
+        },
+        {
+          "title": "Millisecond-timescale, genetically targeted optical control of neural activity",
+          "url": "https://doi.org/10.1038/nn1525"
+        },
+        {
+          "title": "Channelrhodopsin-2, a directly light-gated cation-selective membrane channel",
+          "url": "https://doi.org/10.1073/pnas.1936192100"
+        },
+        {
+          "title": "Channelrhodopsin-1: A Light-Gated Proton Channel in Green Algae",
+          "url": "https://doi.org/10.1126/science.1072068"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "gero-miesenbock",
+      "name": "Gero Miesenböck",
+      "openalexId": "https://openalex.org/A5109272997",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://cncb.ox.ac.uk/"
+        },
+        {
+          "title": "Visualizing secretion and synaptic transmission with pH-sensitive green fluorescent proteins",
+          "url": "https://doi.org/10.1038/28190"
+        },
+        {
+          "title": "Relation of triglyceride metabolism and coronary artery disease. Studies in the postprandial state.",
+          "url": "https://doi.org/10.1161/01.atv.12.11.1336"
+        },
+        {
+          "title": "Next-Generation Optical Technologies for Illuminating Genetically Targeted Brain Circuits",
+          "url": "https://doi.org/10.1523/jneurosci.3863-06.2006"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "bryan-roth",
+      "name": "Bryan Roth",
+      "openalexId": "https://openalex.org/A5007856961",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket. A missing sampled OpenAlex byline entry was separately verified in the complete primary publisher/manuscript author list.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://rothlab.org/"
+        },
+        {
+          "title": "A SARS-CoV-2 protein interaction map reveals targets for drug repurposing",
+          "url": "https://doi.org/10.1038/s41586-020-2286-9"
+        },
+        {
+          "title": "Relating protein pharmacology by ligand chemistry",
+          "url": "https://doi.org/10.1038/nbt1284"
+        },
+        {
+          "title": "Evolving the lock to fit the key to create a family of G protein-coupled receptors potently activated by an inert ligand",
+          "url": "https://doi.org/10.1073/pnas.0700293104"
+        },
+        {
+          "title": "Nature complete author byline: Bryan L. Roth, UNC Pharmacology",
+          "url": "https://www.nature.com/articles/s41586-020-2286-9"
+        }
+      ],
+      "reviewed": "2026-09-15",
+      "verifiedMissingAuthorshipWorks": [
+        "https://doi.org/10.1038/s41586-020-2286-9"
+      ]
+    },
+    {
+      "id": "scott-sternson",
+      "name": "Scott Sternson",
+      "openalexId": "https://openalex.org/A5021791481",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.janelia.org/lab/sternson-lab"
+        },
+        {
+          "title": "AGRP neurons are sufficient to orchestrate feeding behavior rapidly and without training",
+          "url": "https://doi.org/10.1038/nn.2739"
+        },
+        {
+          "title": "The subcellular organization of neocortical excitatory connections",
+          "url": "https://doi.org/10.1038/nature07709"
+        },
+        {
+          "title": "Deconstruction of a neural circuit for hunger",
+          "url": "https://doi.org/10.1038/nature11270"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "guoping-feng",
+      "name": "Guoping Feng",
+      "openalexId": "https://openalex.org/A5014241947",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket. A missing sampled OpenAlex byline entry was separately verified in the complete primary publisher/manuscript author list.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://mcgovern.mit.edu/profile/guoping-feng/"
+        },
+        {
+          "title": "Imaging Neuronal Subsets in Transgenic Mice Expressing Multiple Spectral Variants of GFP",
+          "url": "https://doi.org/10.1016/s0896-6273(00)00084-2"
+        },
+        {
+          "title": "Mapping genomic loci implicates genes and synaptic biology in schizophrenia",
+          "url": "https://doi.org/10.1038/s41586-022-04434-5"
+        },
+        {
+          "title": "CRISPR-Cas9 Knockin Mice for Genome Editing and Cancer Modeling",
+          "url": "https://doi.org/10.1016/j.cell.2014.09.014"
+        },
+        {
+          "title": "Primary manuscript: Guoping Feng, Broad/MIT, author and SynGO consortium lists",
+          "url": "https://epub.ub.uni-muenchen.de/112647/1/nihms-1824605.pdf"
+        }
+      ],
+      "reviewed": "2026-09-15",
+      "verifiedMissingAuthorshipWorks": [
+        "https://doi.org/10.1038/s41586-022-04434-5"
+      ]
+    },
+    {
+      "id": "viviana-gradinaru",
+      "name": "Viviana Gradinaru",
+      "openalexId": "https://openalex.org/A5050240445",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://gradinaru.caltech.edu/"
+        },
+        {
+          "title": "Gut Microbiota Regulate Motor Deficits and Neuroinflammation in a Model of Parkinson’s Disease",
+          "url": "https://doi.org/10.1016/j.cell.2016.11.018"
+        },
+        {
+          "title": "Structural and molecular interrogation of intact biological systems",
+          "url": "https://doi.org/10.1038/nature12107"
+        },
+        {
+          "title": "Engineered AAVs for efficient noninvasive gene delivery to the central and peripheral nervous systems",
+          "url": "https://doi.org/10.1038/nn.4593"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "bernardo-sabatini",
+      "name": "Bernardo Sabatini",
+      "openalexId": "https://openalex.org/A5043679513",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://sabatini.hms.harvard.edu/"
+        },
+        {
+          "title": "Amyloid-β protein dimers isolated directly from Alzheimer's brains impair synaptic plasticity and memory",
+          "url": "https://doi.org/10.1038/nm1782"
+        },
+        {
+          "title": "Natural Oligomers of the Alzheimer Amyloid-β Protein Induce Reversible Synapse Loss by Modulating an NMDA-Type Glutamate Receptor-Dependent Signaling Pathway",
+          "url": "https://doi.org/10.1523/jneurosci.4970-06.2007"
+        },
+        {
+          "title": "ScanImage: Flexible software for operating laser scanning microscopes",
+          "url": "https://doi.org/10.1186/1475-925x-2-13"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "winfried-denk",
+      "name": "Winfried Denk",
+      "openalexId": "https://openalex.org/A5020934124",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.neuro.mpg.de/denk"
+        },
+        {
+          "title": "Two-Photon Laser Scanning Fluorescence Microscopy",
+          "url": "https://doi.org/10.1126/science.2321027"
+        },
+        {
+          "title": "Deep tissue two-photon microscopy",
+          "url": "https://doi.org/10.1038/nmeth818"
+        },
+        {
+          "title": "Optical stethoscopy: Image recording with resolution λ/20",
+          "url": "https://doi.org/10.1063/1.94865"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "atsushi-miyawaki",
+      "name": "Atsushi Miyawaki",
+      "openalexId": "https://openalex.org/A5005075596",
+      "status": "verified",
+      "reason": "Select the RIKEN fluorescent-protein researcher. The hospital-outcomes/telemedicine namesake is distinct; another substantial fluorophore fragment exists.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.riken.jp/en/research/labs/cbs/cell_func_dyn/"
+        },
+        {
+          "title": "Fluorescent indicators for Ca2+based on green fluorescent proteins and calmodulin",
+          "url": "https://doi.org/10.1038/42264"
+        },
+        {
+          "title": "A variant of yellow fluorescent protein with fast and efficient maturation for cell-biological applications",
+          "url": "https://doi.org/10.1038/nbt0102-87"
+        },
+        {
+          "title": "Visualizing Spatiotemporal Dynamics of Multicellular Cell-Cycle Progression",
+          "url": "https://doi.org/10.1016/j.cell.2007.12.033"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "loren-looger",
+      "name": "Loren Looger",
+      "openalexId": "https://openalex.org/A5054436322",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.janelia.org/people/loren-looger"
+        },
+        {
+          "title": "Ultrasensitive fluorescent proteins for imaging neuronal activity",
+          "url": "https://doi.org/10.1038/nature12354"
+        },
+        {
+          "title": "Imaging neural activity in worms, flies and mice with improved GCaMP calcium indicators",
+          "url": "https://doi.org/10.1038/nmeth.1398"
+        },
+        {
+          "title": "Shared and distinct transcriptomic cell types across neocortical areas",
+          "url": "https://doi.org/10.1038/s41586-018-0654-5"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "na-ji",
+      "name": "Na Ji",
+      "openalexId": "https://openalex.org/A5047895845",
+      "status": "verified",
+      "reason": "A5047895845 contains adaptive optics and fluorescence imaging. The more-cited A5033986934 contains catalytic chemistry and is the wrong person.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.jilab.net/"
+        },
+        {
+          "title": "A general method to fine-tune fluorophores for live-cell and in vivo imaging",
+          "url": "https://doi.org/10.1038/nmeth.4403"
+        },
+        {
+          "title": "Adaptive optics via pupil segmentation for high-resolution imaging in biological tissues",
+          "url": "https://doi.org/10.1038/nmeth.1411"
+        },
+        {
+          "title": "Adaptive optical fluorescence microscopy",
+          "url": "https://doi.org/10.1038/nmeth.4218"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "alipasha-vaziri",
+      "name": "Alipasha Vaziri",
+      "openalexId": "https://openalex.org/A5017672157",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.vazirilab.org/"
+        },
+        {
+          "title": "Entanglement of the orbital angular momentum states of photons",
+          "url": "https://doi.org/10.1038/35085529"
+        },
+        {
+          "title": "Simultaneous whole-animal 3D imaging of neuronal activity using light-field microscopy",
+          "url": "https://doi.org/10.1038/nmeth.2964"
+        },
+        {
+          "title": "Experimental Two-Photon, Three-Dimensional Entanglement for Quantum Communication",
+          "url": "https://doi.org/10.1103/physrevlett.89.240401"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "adam-cohen",
+      "name": "Adam Cohen",
+      "openalexId": "https://openalex.org/A5067931881",
+      "status": "verified",
+      "reason": "Adam E. Cohen matches Harvard optical electrophysiology and optical chirality. Transportation, law and social-psychology short-name records are different people.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://cohenweb.rc.fas.harvard.edu/"
+        },
+        {
+          "title": "Optical Chirality and Its Interaction with Matter",
+          "url": "https://doi.org/10.1103/physrevlett.104.163901"
+        },
+        {
+          "title": "All-optical electrophysiology in mammalian neurons using engineered microbial rhodopsins",
+          "url": "https://doi.org/10.1038/nmeth.3000"
+        },
+        {
+          "title": "Enhanced Enantioselectivity in Excitation of Chiral Molecules by Superchiral Light",
+          "url": "https://doi.org/10.1126/science.1202817"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "fritjof-helmchen",
+      "name": "Fritjof Helmchen",
+      "openalexId": "https://openalex.org/A5038528403",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.hifo.uzh.ch/en/research/helmchen.html"
+        },
+        {
+          "title": "Resting Microglial Cells Are Highly Dynamic Surveillants of Brain Parenchyma in Vivo",
+          "url": "https://doi.org/10.1126/science.1110647"
+        },
+        {
+          "title": "Deep tissue two-photon microscopy",
+          "url": "https://doi.org/10.1038/nmeth818"
+        },
+        {
+          "title": "Transgenic Mice for Intersectional Targeting of Neural Sensors and Effectors with High Specificity and Performance",
+          "url": "https://doi.org/10.1016/j.neuron.2015.02.022"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "david-tank",
+      "name": "David Tank",
+      "openalexId": "https://openalex.org/A5042778805",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://pni.princeton.edu/people/david-tank"
+        },
+        {
+          "title": "Brain magnetic resonance imaging with contrast dependent on blood oxygenation.",
+          "url": "https://doi.org/10.1073/pnas.87.24.9868"
+        },
+        {
+          "title": "“Neural” computation of decisions in optimization problems",
+          "url": "https://doi.org/10.1007/bf00339943"
+        },
+        {
+          "title": "Intrinsic signal changes accompanying sensory stimulation: functional brain mapping with magnetic resonance imaging.",
+          "url": "https://doi.org/10.1073/pnas.89.13.5951"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "rafael-yuste",
+      "name": "Rafael Yuste",
+      "openalexId": "https://openalex.org/A5083888813",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://yustelab.org/"
+        },
+        {
+          "title": "Conserved cell types with divergent features in human versus mouse cortex",
+          "url": "https://doi.org/10.1038/s41586-019-1506-7"
+        },
+        {
+          "title": "Morphological Changes in Dendritic Spines Associated with Long-Term Synaptic Plasticity",
+          "url": "https://doi.org/10.1146/annurev.neuro.24.1.1071"
+        },
+        {
+          "title": "Simultaneous Denoising, Deconvolution, and Demixing of Calcium Imaging Data",
+          "url": "https://doi.org/10.1016/j.neuron.2015.11.037"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "mark-schnitzer",
+      "name": "Mark Schnitzer",
+      "openalexId": "https://openalex.org/A5009631067",
+      "status": "verified",
+      "reason": "Mark J. Schnitzer matches fluorescence microscopes and hippocampal recording. Mark S. Schnitzer is a distinct clinical author.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://pyramidal.stanford.edu/"
+        },
+        {
+          "title": "Long-term dynamics of CA1 hippocampal place codes",
+          "url": "https://doi.org/10.1038/nn.3329"
+        },
+        {
+          "title": "Miniaturized integration of a fluorescence microscope",
+          "url": "https://doi.org/10.1038/nmeth.1694"
+        },
+        {
+          "title": "Single kinesin molecules studied with a molecular force clamp",
+          "url": "https://doi.org/10.1038/22146"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jeff-lichtman",
+      "name": "Jeff Lichtman",
+      "openalexId": "https://openalex.org/A5037495122",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://lichtmanlab.fas.harvard.edu/"
+        },
+        {
+          "title": "Imaging Neuronal Subsets in Transgenic Mice Expressing Multiple Spectral Variants of GFP",
+          "url": "https://doi.org/10.1016/s0896-6273(00)00084-2"
+        },
+        {
+          "title": "Transgenic strategies for combinatorial expression of fluorescent proteins in the nervous system",
+          "url": "https://doi.org/10.1038/nature06293"
+        },
+        {
+          "title": "Fluorescence microscopy",
+          "url": "https://doi.org/10.1038/nmeth817"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "sebastian-seung",
+      "name": "Sebastian Seung",
+      "openalexId": "https://openalex.org/A5044273339",
+      "status": "verified",
+      "reason": "H. Sebastian Seung matches nonnegative matrix factorization and connectomics/image segmentation. The short-name fragments omit most of the main indexed corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://seunglab.org/"
+        },
+        {
+          "title": "Learning the parts of objects by non-negative matrix factorization",
+          "url": "https://doi.org/10.1038/44565"
+        },
+        {
+          "title": "Algorithms for Non-negative Matrix Factorization",
+          "url": "https://openalex.org/W2135029798"
+        },
+        {
+          "title": "Trainable Weka Segmentation: a machine learning tool for microscopy pixel classification",
+          "url": "https://doi.org/10.1093/bioinformatics/btx180"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "viren-jain",
+      "name": "Viren Jain",
+      "openalexId": "https://openalex.org/A5021276997",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket. A missing sampled OpenAlex byline entry was separately verified in the complete primary publisher/manuscript author list.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://research.google/people/virenjain/"
+        },
+        {
+          "title": "A connectome and analysis of the adult Drosophila central brain",
+          "url": "https://doi.org/10.7554/elife.57443"
+        },
+        {
+          "title": "Connectomic reconstruction of the inner plexiform layer in the mouse retina",
+          "url": "https://doi.org/10.1038/nature12346"
+        },
+        {
+          "title": "Natural Image Denoising with Convolutional Networks",
+          "url": "https://openalex.org/W2098477387"
+        },
+        {
+          "title": "eLife complete author byline: Viren Jain, Google Research",
+          "url": "https://elifesciences.org/articles/57443"
+        }
+      ],
+      "reviewed": "2026-09-15",
+      "verifiedMissingAuthorshipWorks": [
+        "https://doi.org/10.7554/elife.57443"
+      ]
+    },
+    {
+      "id": "clay-reid",
+      "name": "R. Clay Reid",
+      "openalexId": "https://openalex.org/A5005494448",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://alleninstitute.org/person/r-clay-reid/"
+        },
+        {
+          "title": "Transgenic Mice for Intersectional Targeting of Neural Sensors and Effectors with High Specificity and Performance",
+          "url": "https://doi.org/10.1016/j.neuron.2015.02.022"
+        },
+        {
+          "title": "Functional imaging with cellular resolution reveals precise micro-architecture in visual cortex",
+          "url": "https://doi.org/10.1038/nature03274"
+        },
+        {
+          "title": "Network anatomy and in vivo physiology of visual cortical neurons",
+          "url": "https://doi.org/10.1038/nature09802"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "moritz-helmstaedter",
+      "name": "Moritz Helmstaedter",
+      "openalexId": "https://openalex.org/A5069874653",
+      "status": "verified",
+      "reason": "The dominant author name, historical institution context and sampled high-citation work titles are consistent with the directory researcher. The review does not validate every publication in the bucket.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://brain.mpg.de/research/helmstaedter-department.html"
+        },
+        {
+          "title": "Connectomic reconstruction of the inner plexiform layer in the mouse retina",
+          "url": "https://doi.org/10.1038/nature12346"
+        },
+        {
+          "title": "Wiring specificity in the direction-selectivity circuit of the retina",
+          "url": "https://doi.org/10.1038/nature09818"
+        },
+        {
+          "title": "Convolutional Networks Can Learn to Generate Affinity Graphs for Image Segmentation",
+          "url": "https://doi.org/10.1162/neco.2009.10-08-881"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "hanchuan-peng",
+      "name": "Hanchuan Peng",
+      "openalexId": null,
+      "status": "unresolved",
+      "reason": "Hold: two-work TeraVR/Rivulet author fragment is coherent but does not represent this career. Other candidates are tiny recent fragments. Academic checked landmark V3D DOI10.1038/nbt.1612 and OpenAlex author.id is null; no dominant record recovered. Do not report 194 citations as career impact.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://penglab.com/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "hongkui-zeng",
+      "name": "Hongkui Zeng",
+      "openalexId": "https://openalex.org/A5010189175",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://alleninstitute.org/person/hongkui-zeng/"
+        },
+        {
+          "title": "A robust and high-throughput Cre reporting and characterization system for the whole mouse brain",
+          "url": "https://doi.org/10.1038/nn.2467"
+        },
+        {
+          "title": "A mesoscale connectome of the mouse brain",
+          "url": "https://doi.org/10.1038/nature13186"
+        },
+        {
+          "title": "Shared and distinct transcriptomic cell types across neocortical areas",
+          "url": "https://doi.org/10.1038/s41586-018-0654-5"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "ed-lein",
+      "name": "Ed Lein",
+      "openalexId": "https://openalex.org/A5085405013",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://alleninstitute.org/person/ed-lein/"
+        },
+        {
+          "title": "A robust and high-throughput Cre reporting and characterization system for the whole mouse brain",
+          "url": "https://doi.org/10.1038/nn.2467"
+        },
+        {
+          "title": "Genome-wide atlas of gene expression in the adult mouse brain",
+          "url": "https://doi.org/10.1038/nature05453"
+        },
+        {
+          "title": "An anatomically comprehensive atlas of the adult human brain transcriptome",
+          "url": "https://doi.org/10.1038/nature11405"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "john-ngai",
+      "name": "John Ngai",
+      "openalexId": "https://openalex.org/A5006317886",
+      "status": "verified",
+      "reason": "Name and Berkeley genomics/neurobiology context match. Two sampled TCGA consortium papers omit the individual in OpenAlex authorships, but primary PubMed expanded collaborators explicitly include John Ngai/J Ngai. The exceptions are limited to those two works.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://braininitiative.nih.gov/about/leadership"
+        },
+        {
+          "title": "Integrated genomic analyses of ovarian carcinoma",
+          "url": "https://doi.org/10.1038/nature10166"
+        },
+        {
+          "title": "Comprehensive genomic characterization defines human glioblastoma genes and core pathways",
+          "url": "https://doi.org/10.1038/nature07385"
+        },
+        {
+          "title": "Slingshot: cell lineage and pseudotime inference for single-cell transcriptomics",
+          "url": "https://doi.org/10.1186/s12864-018-4772-0"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18772890/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/21720365/"
+        }
+      ],
+      "reviewed": "2026-09-15",
+      "verifiedMissingAuthorshipWorks": [
+        "https://doi.org/10.1038/nature07385",
+        "https://doi.org/10.1038/nature10166"
+      ]
+    },
+    {
+      "id": "aviv-regev",
+      "name": "Aviv Regev",
+      "openalexId": "https://openalex.org/A5004067604",
+      "status": "verified",
+      "reason": "Dominant record matches Genentech/MIT/Broad computational genomics, Trinity and Drop-seq bylines. Smaller coherent fragments exist; do not sum IDs.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.gene.com/scientists/our-scientists/aviv-regev"
+        },
+        {
+          "title": "Full-length transcriptome assembly from RNA-Seq data without a reference genome",
+          "url": "https://doi.org/10.1038/nbt.1883"
+        },
+        {
+          "title": "De novo transcript sequence reconstruction from RNA-seq using the Trinity platform for reference generation and analysis",
+          "url": "https://doi.org/10.1038/nprot.2013.084"
+        },
+        {
+          "title": "Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets",
+          "url": "https://doi.org/10.1016/j.cell.2015.05.002"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "matteo-carandini",
+      "name": "Matteo Carandini",
+      "openalexId": "https://openalex.org/A5026654708",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ucl.ac.uk/brain-sciences/cortexlab"
+        },
+        {
+          "title": "Fully integrated silicon probes for high-density recording of neural activity",
+          "url": "https://doi.org/10.1038/nature24636"
+        },
+        {
+          "title": "Normalization as a canonical neural computation",
+          "url": "https://doi.org/10.1038/nrn3136"
+        },
+        {
+          "title": "Spontaneous behaviors drive multidimensional, brainwide activity",
+          "url": "https://doi.org/10.1126/science.aav7893"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "liam-paninski",
+      "name": "Liam Paninski",
+      "openalexId": "https://openalex.org/A5023278055",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.stat.columbia.edu/~liam/"
+        },
+        {
+          "title": "Neuronal Dynamics",
+          "url": "https://doi.org/10.1017/cbo9781107447615"
+        },
+        {
+          "title": "Estimation of Entropy and Mutual Information",
+          "url": "https://doi.org/10.1162/089976603321780272"
+        },
+        {
+          "title": "Spatio-temporal correlations and visual signalling in a complete neuronal population",
+          "url": "https://doi.org/10.1038/nature07140"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jonathan-pillow",
+      "name": "Jonathan Pillow",
+      "openalexId": "https://openalex.org/A5047908820",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://pillowlab.princeton.edu/"
+        },
+        {
+          "title": "Spatio-temporal correlations and visual signalling in a complete neuronal population",
+          "url": "https://doi.org/10.1038/nature07140"
+        },
+        {
+          "title": "Discovering Event Structure in Continuous Narrative Perception and Memory",
+          "url": "https://doi.org/10.1016/j.neuron.2017.06.041"
+        },
+        {
+          "title": "Spike-triggered neural characterization",
+          "url": "https://doi.org/10.1167/6.4.13"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "mackenzie-mathis",
+      "name": "Mackenzie Mathis",
+      "openalexId": "https://openalex.org/A5025196309",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.mathislab.org/"
+        },
+        {
+          "title": "DeepLabCut: markerless pose estimation of user-defined body parts with deep learning",
+          "url": "https://doi.org/10.1038/s41593-018-0209-y"
+        },
+        {
+          "title": "Using DeepLabCut for 3D markerless pose estimation across species and behaviors",
+          "url": "https://doi.org/10.1038/s41596-019-0176-0"
+        },
+        {
+          "title": "Perspectives in machine learning for wildlife conservation",
+          "url": "https://doi.org/10.1038/s41467-022-27980-y"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "alexander-mathis",
+      "name": "Alexander Mathis",
+      "openalexId": "https://openalex.org/A5013861606",
+      "status": "verified",
+      "reason": "Selected neural/DeepLabCut record matches the computational neuroscientist; exclude the parasitology namesake A5020924014. Current official EPFL sources support EPFL affiliation, replacing Harvard.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.mathisgroup.org/"
+        },
+        {
+          "title": "DeepLabCut: markerless pose estimation of user-defined body parts with deep learning",
+          "url": "https://doi.org/10.1038/s41593-018-0209-y"
+        },
+        {
+          "title": "Using DeepLabCut for 3D markerless pose estimation across species and behaviors",
+          "url": "https://doi.org/10.1038/s41596-019-0176-0"
+        },
+        {
+          "title": "Perspectives in machine learning for wildlife conservation",
+          "url": "https://doi.org/10.1038/s41467-022-27980-y"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://actu.epfl.ch/news/nominations-des-professeures-et-professeurs-de-194/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://actu.epfl.ch/news/real-learning-happens-only-when-students-are-genui/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "kristofer-bouchard",
+      "name": "Kristofer Bouchard",
+      "openalexId": "https://openalex.org/A5040319820",
+      "status": "verified",
+      "reason": "Middle-initial record Kristofer E. Bouchard matches sensorimotor speech, iEEG-BIDS and Neurodata Without Borders; name, subject and sampled institutions support identity.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://biosciences.lbl.gov/profiles/kristofer-e-bouchard/"
+        },
+        {
+          "title": "Functional organization of human sensorimotor cortex for speech articulation",
+          "url": "https://doi.org/10.1038/nature11911"
+        },
+        {
+          "title": "iEEG-BIDS, extending the Brain Imaging Data Structure specification to human intracranial electrophysiology",
+          "url": "https://doi.org/10.1038/s41597-019-0105-7"
+        },
+        {
+          "title": "The Neurodata Without Borders ecosystem for neurophysiological data science",
+          "url": "https://doi.org/10.7554/elife.78362"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "satrajit-ghosh",
+      "name": "Satrajit Ghosh",
+      "openalexId": "https://openalex.org/A5051194003",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://satra.cogitatum.org/"
+        },
+        {
+          "title": "fMRIPrep: a robust preprocessing pipeline for functional MRI",
+          "url": "https://doi.org/10.1038/s41592-018-0235-4"
+        },
+        {
+          "title": "Situating the default-mode network along a principal gradient of macroscale cortical organization",
+          "url": "https://doi.org/10.1073/pnas.1608282113"
+        },
+        {
+          "title": "Nipype: A Flexible, Lightweight and Extensible Neuroimaging Data Processing Framework in Python",
+          "url": "https://doi.org/10.3389/fninf.2011.00013"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "yaroslav-halchenko",
+      "name": "Yaroslav Halchenko",
+      "openalexId": "https://openalex.org/A5074058957",
+      "status": "verified",
+      "reason": "Selected middle-initial record matches Nipype/BIDS and the Center for Open Neuroscience. Primary SciPy 1.0 expanded contributor list explicitly includes Yaroslav O. Halchenko despite authorPresent=false in the sampled OpenAlex record. Cambridge primary repository explicitly maps repository DOI10.17863/CAM.64134 to publisher DOI10.1038/s41592-019-0686-2, so the exception includes the sampled repository version.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://centerforopenneuroscience.org/"
+        },
+        {
+          "title": "SciPy 1.0: fundamental algorithms for scientific computing in Python",
+          "url": "https://doi.org/10.17863/cam.64134"
+        },
+        {
+          "title": "Nipype: A Flexible, Lightweight and Extensible Neuroimaging Data Processing Framework in Python",
+          "url": "https://doi.org/10.3389/fninf.2011.00013"
+        },
+        {
+          "title": "The brain imaging data structure, a format for organizing and describing outputs of neuroimaging experiments",
+          "url": "https://doi.org/10.1038/sdata.2016.44"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/pubmed/32015543/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7056644/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://www.repository.cam.ac.uk/items/f6091230-b24f-4b6a-9613-568a24590186"
+        },
+        {
+          "title": "SciPy1.0 expanded contributor list",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/pubmed/32015543/"
+        },
+        {
+          "title": "SciPy1.0 primary manuscript and contributors",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7056644/"
+        },
+        {
+          "title": "Cambridge repository links the SciPy indexed copy to its publisher DOI",
+          "url": "https://www.repository.cam.ac.uk/items/f6091230-b24f-4b6a-9613-568a24590186"
+        }
+      ],
+      "reviewed": "2026-09-15",
+      "verifiedMissingAuthorshipWorks": [
+        "https://doi.org/10.1038/s41592-019-0686-2",
+        "https://doi.org/10.17863/cam.64134"
+      ]
+    },
+    {
+      "id": "scott-linderman",
+      "name": "Scott Linderman",
+      "openalexId": "https://openalex.org/A5054079047",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://web.stanford.edu/~swl1/"
+        },
+        {
+          "title": "The Striatum Organizes 3D Behavior via Moment-to-Moment Action Selection",
+          "url": "https://doi.org/10.1016/j.cell.2018.04.019"
+        },
+        {
+          "title": "Spontaneous behaviour is structured by reinforcement without explicit reward",
+          "url": "https://doi.org/10.1038/s41586-022-05611-2"
+        },
+        {
+          "title": "Keypoint-MoSeq: parsing behavior by linking point tracking to pose dynamics",
+          "url": "https://doi.org/10.1038/s41592-024-02318-2"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jeremy-magland",
+      "name": "Jeremy Magland",
+      "openalexId": "https://openalex.org/A5042248436",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.simonsfoundation.org/people/jeremy-magland/"
+        },
+        {
+          "title": "A Fully Automated Approach to Spike Sorting",
+          "url": "https://doi.org/10.1016/j.neuron.2017.08.030"
+        },
+        {
+          "title": "SpikeInterface, a unified framework for spike sorting",
+          "url": "https://doi.org/10.7554/elife.61834"
+        },
+        {
+          "title": "High-Density, Long-Lasting, and Multi-region Electrophysiological Recordings Using Polymer Electrode Arrays",
+          "url": "https://doi.org/10.1016/j.neuron.2018.11.002"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "judy-illes",
+      "name": "Judy Illes",
+      "openalexId": "https://openalex.org/A5023145420",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://neuroethics.med.ubc.ca/"
+        },
+        {
+          "title": "Managing Incidental Findings in Human Subjects Research: Analysis and Recommendations",
+          "url": "https://doi.org/10.1111/j.1748-720x.2008.00266.x"
+        },
+        {
+          "title": "Journal of Magnetic Resonance Imaging",
+          "url": "https://doi.org/10.1002/(issn)1522-2586"
+        },
+        {
+          "title": "Neurocognitive enhancement: what can we do and what should we do?",
+          "url": "https://doi.org/10.1038/nrn1390"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "martha-farah",
+      "name": "Martha Farah",
+      "openalexId": "https://openalex.org/A5063660509",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://neuroethics.upenn.edu/"
+        },
+        {
+          "title": "Parts and Wholes in Face Recognition",
+          "url": "https://doi.org/10.1080/14640749308401045"
+        },
+        {
+          "title": "Role of left inferior prefrontal cortex in retrieval of semantic knowledge: A reevaluation",
+          "url": "https://doi.org/10.1073/pnas.94.26.14792"
+        },
+        {
+          "title": "Socioeconomic status and the developing brain",
+          "url": "https://doi.org/10.1016/j.tics.2008.11.003"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "nita-farahany",
+      "name": "Nita Farahany",
+      "openalexId": "https://openalex.org/A5046014851",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://scienceandsociety.duke.edu/people/nita-farahany/"
+        },
+        {
+          "title": "The ethics of experimenting with human brain tissue",
+          "url": "https://doi.org/10.1038/d41586-018-04813-x"
+        },
+        {
+          "title": "Design of a Randomized, Placebo-Controlled, Phase 3 Trial of Tofersen Initiated in Clinically Presymptomatic SOD1 Variant Carriers: the ATLAS Study",
+          "url": "https://doi.org/10.1007/s13311-022-01237-4"
+        },
+        {
+          "title": "Neuroscience and behavioral genetics in US criminal law: an empirical analysis",
+          "url": "https://doi.org/10.1093/jlb/lsv059"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "marcello-ienca",
+      "name": "Marcello Ienca",
+      "openalexId": "https://openalex.org/A5057220026",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ieai.sot.tum.de/people/marcello-ienca/"
+        },
+        {
+          "title": "The global landscape of AI ethics guidelines",
+          "url": "https://doi.org/10.1038/s42256-019-0088-2"
+        },
+        {
+          "title": "Towards new human rights in the age of neuroscience and neurotechnology",
+          "url": "https://doi.org/10.1186/s40504-017-0050-1"
+        },
+        {
+          "title": "On the responsible use of digital data to tackle the COVID-19 pandemic",
+          "url": "https://doi.org/10.1038/s41591-020-0832-5"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "saskia-hendriks",
+      "name": "Saskia Hendriks",
+      "openalexId": "https://openalex.org/A5086378659",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://braininitiative.nih.gov/research/neuroethics"
+        },
+        {
+          "title": "Artificial gametes: a systematic review of biological progress towards clinical application",
+          "url": "https://doi.org/10.1093/humupd/dmv001"
+        },
+        {
+          "title": "Ethical Challenges of Risk, Informed Consent, and Posttrial Responsibilities in Human Research With Neural Devices",
+          "url": "https://doi.org/10.1001/jamaneurol.2019.3523"
+        },
+        {
+          "title": "The ethics of clinical applications of germline genome modification: a systematic review of reasons",
+          "url": "https://doi.org/10.1093/humrep/dey257"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "joseph-fins",
+      "name": "Joseph Fins",
+      "openalexId": "https://openalex.org/A5064445958",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://teach.weill.cornell.edu/person/joseph-j-fins"
+        },
+        {
+          "title": "Behavioural improvements with thalamic stimulation after severe traumatic brain injury",
+          "url": "https://doi.org/10.1038/nature06041"
+        },
+        {
+          "title": "Disorders of consciousness after acquired brain injury: the state of the science",
+          "url": "https://doi.org/10.1038/nrneurol.2013.279"
+        },
+        {
+          "title": "Four ethical priorities for neurotechnologies and AI",
+          "url": "https://doi.org/10.1038/551159a"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "laura-cabrera",
+      "name": "Laura Cabrera",
+      "openalexId": "https://openalex.org/A5061267578",
+      "status": "verified",
+      "reason": "Laura Y. Cabrera neuroethics record matches Penn State and neural-technology ethics. Exclude systems-thinking Laura Cabrera A5027128413 and clinical namesakes.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://philosophy.la.psu.edu/people/laura-cabrera/"
+        },
+        {
+          "title": "Alzheimer’s Disease in the Latino Community: Intersection of Genetics and Social Determinants of Health",
+          "url": "https://doi.org/10.3233/jad-161261"
+        },
+        {
+          "title": "Addressing the disparities in dementia risk, early detection and care in Latino populations: Highlights from the second Latinos & Alzheimer's Symposium",
+          "url": "https://doi.org/10.1002/alz.12589"
+        },
+        {
+          "title": "The Interplay of Environmental Exposures and Mental Health: Setting an Agenda",
+          "url": "https://doi.org/10.1289/ehp9889"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jennifer-chandler",
+      "name": "Jennifer Chandler",
+      "openalexId": "https://openalex.org/A5080481788",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.uottawa.ca/faculty-law/civil-law/people/chandler-jennifer"
+        },
+        {
+          "title": "A brain-based definition of death and criteria for its determination after arrest of circulation or neurologic function in Canada: a 2023 clinical practice guideline",
+          "url": "https://doi.org/10.1007/s12630-023-02431-4"
+        },
+        {
+          "title": "Resumption of Cardiac Activity after Withdrawal of Life-Sustaining Measures",
+          "url": "https://doi.org/10.1056/nejmoa2022713"
+        },
+        {
+          "title": "Deep brain stimulation for refractory obsessive-compulsive disorder (OCD): emerging or established therapy?",
+          "url": "https://doi.org/10.1038/s41380-020-00933-x"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jonathan-moreno",
+      "name": "Jonathan Moreno",
+      "openalexId": null,
+      "status": "ambiguous",
+      "reason": "Hold: A5021113694 mixes Penn bioethicist Jonathan D. Moreno with the same-name cardiologist. Primary PMC anti-arrhythmic modeling article gives Cornell/Rockefeller/Sloan Kettering MD-PhD affiliations; later cardiology article gives Washington University. These are not the Penn bioethicist career.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://neuroethics.upenn.edu/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3328405/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6834944/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "timothy-brown",
+      "name": "Timothy Brown",
+      "openalexId": null,
+      "status": "ambiguous",
+      "reason": "Hold: sampled record A5024105482 combines UW neural-device ethics with Digital Video as Research Practice by an LSU sociology researcher in 2005. UW primary profile identifies neuroethicist Timothy Emmanuel Brown, BA2008/PhD2019. The mixed aggregate cannot be used.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://depts.washington.edu/neuroethics/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://phil.washington.edu/people/timothy-emmanuel-brown"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://jrp.icaap.org/index.php/jrp/article/view/6.html"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "maryam-shanechi",
+      "name": "Maryam Shanechi",
+      "openalexId": "https://openalex.org/A5062569186",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://viterbi.usc.edu/directory/faculty/Shanechi/Maryam"
+        },
+        {
+          "title": "Closed-Loop Decoder Adaptation Shapes Neural Plasticity for Skillful Neuroprosthetic Control",
+          "url": "https://doi.org/10.1016/j.neuron.2014.04.048"
+        },
+        {
+          "title": "Brain–machine interfaces from motor to mood",
+          "url": "https://doi.org/10.1038/s41593-019-0488-y"
+        },
+        {
+          "title": "Mood variations decoded from multi-site intracranial human brain activity",
+          "url": "https://doi.org/10.1038/nbt.4200"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "bin-he",
+      "name": "Bin He",
+      "openalexId": "https://openalex.org/A5100671882",
+      "status": "verified",
+      "reason": "Selected CMU neural-engineering record matches motor-imagery BCI, quadcopter control and EEG methods. Exclude oncology and unrelated robotics namesakes.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.cmu.edu/bme/People/Faculty/profile/bhe.html"
+        },
+        {
+          "title": "Quadcopter control in three-dimensional space using a noninvasive motor imagery-based brain–computer interface",
+          "url": "https://doi.org/10.1088/1741-2560/10/4/046003"
+        },
+        {
+          "title": "Brain–Computer Interfaces Using Sensorimotor Rhythms: Current State and Future Perspectives",
+          "url": "https://doi.org/10.1109/tbme.2014.2312397"
+        },
+        {
+          "title": "The standardized EEG electrode array of the IFCN",
+          "url": "https://doi.org/10.1016/j.clinph.2017.06.254"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jose-carmena",
+      "name": "José M. Carmena",
+      "openalexId": null,
+      "status": "unresolved",
+      "reason": "Hold: no suitable author candidate recovered. The person is real; absence in this discovery pass is not zero scientific output.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://vcresearch.berkeley.edu/node/14341"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "michel-maharbiz",
+      "name": "Michel Maharbiz",
+      "openalexId": "https://openalex.org/A5039854529",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://maharbiz.com/"
+        },
+        {
+          "title": "Wireless Recording in the Peripheral Nervous System with Ultrasonic Neural Dust",
+          "url": "https://doi.org/10.1016/j.neuron.2016.06.034"
+        },
+        {
+          "title": "A Highly Elastic, Capacitive Strain Gauge Based on Percolating Nanotube Networks",
+          "url": "https://doi.org/10.1021/nl204052z"
+        },
+        {
+          "title": "A wireless millimetre-scale implantable neural stimulator with ultrasonically powered bidirectional communication",
+          "url": "https://doi.org/10.1038/s41551-020-0518-9"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "rikky-muller",
+      "name": "Rikky Muller",
+      "openalexId": "https://openalex.org/A5009955932",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://muller.eecs.berkeley.edu/"
+        },
+        {
+          "title": "A wireless millimetre-scale implantable neural stimulator with ultrasonically powered bidirectional communication",
+          "url": "https://doi.org/10.1038/s41551-020-0518-9"
+        },
+        {
+          "title": "A Minimally Invasive 64-Channel Wireless μECoG Implant",
+          "url": "https://doi.org/10.1109/jssc.2014.2364824"
+        },
+        {
+          "title": "A 0.013 ${\\hbox {mm}}^{2}$, 5 $\\mu\\hbox{W}$, DC-Coupled Neural Signal Acquisition IC With 0.5 V Supply",
+          "url": "https://doi.org/10.1109/jssc.2011.2163552"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "marcia-omalley",
+      "name": "Marcia O'Malley",
+      "openalexId": "https://openalex.org/A5055353705",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://omalley.rice.edu/"
+        },
+        {
+          "title": "A decade retrospective of medical robotics research from 2010 to 2020",
+          "url": "https://doi.org/10.1126/scirobotics.abi8017"
+        },
+        {
+          "title": "A Review of Intent Detection, Arbitration, and Communication Aspects of Shared Control for Physical Human–Robot Interaction",
+          "url": "https://doi.org/10.1115/1.4039145"
+        },
+        {
+          "title": "Design of a haptic arm exoskeleton for training and rehabilitation",
+          "url": "https://doi.org/10.1109/tmech.2006.875558"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jacob-robinson",
+      "name": "Jacob T. Robinson",
+      "openalexId": "https://openalex.org/A5090124580",
+      "status": "verified",
+      "reason": "Selected Jacob T. Robinson record matches Rice neural-nanowire work and historical UCLA/Cornell training. Early electromagnetics work is not rejected merely for being outside neuroscience: official biography confirms UCLA physics2003 and Cornell appliedphysics2008. Full corpus has not been audited.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://robinsonlab.rice.edu/"
+        },
+        {
+          "title": "Particle swarm optimization in electromagnetics",
+          "url": "https://doi.org/10.1109/tap.2004.823969"
+        },
+        {
+          "title": "Vertical nanowire electrode arrays as a scalable platform for intracellular interfacing to neuronal circuits",
+          "url": "https://doi.org/10.1038/nnano.2011.249"
+        },
+        {
+          "title": "Vertical silicon nanowires as a universal platform for delivering biomolecules into living cells",
+          "url": "https://doi.org/10.1073/pnas.0909350107"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://profiles.rice.edu/faculty/jacob-t-robinson"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "valentin-dragoi",
+      "name": "Valentin Dragoi",
+      "openalexId": "https://openalex.org/A5046743545",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.rice.edu/faculty/valentin-dragoi"
+        },
+        {
+          "title": "Adaptation-Induced Plasticity of Orientation Tuning in Adult Visual Cortex",
+          "url": "https://doi.org/10.1016/s0896-6273(00)00103-3"
+        },
+        {
+          "title": "Adaptive coding of visual information in neural populations",
+          "url": "https://doi.org/10.1038/nature06563"
+        },
+        {
+          "title": "Dynamics of neuronal sensitivity in visual cortex and local feature discrimination",
+          "url": "https://doi.org/10.1038/nn900"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "behnaam-aazhang",
+      "name": "Behnaam Aazhang",
+      "openalexId": "https://openalex.org/A5061405587",
+      "status": "verified",
+      "reason": "Rice biography and sampled communications/cooperation-diversity papers match his established electrical-engineering career; older communications work should not be mislabeled contamination merely because this directory emphasizes neuroengineering.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.rice.edu/faculty/behnaam-aazhang"
+        },
+        {
+          "title": "User cooperation diversity-part I: system description",
+          "url": "https://doi.org/10.1109/tcomm.2003.818096"
+        },
+        {
+          "title": "User cooperation diversity-part II: implementation aspects and performance analysis",
+          "url": "https://doi.org/10.1109/tcomm.2003.819238"
+        },
+        {
+          "title": "Multistage detection in asynchronous code-division multiple-access communications",
+          "url": "https://doi.org/10.1109/26.52662"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jessica-butts",
+      "name": "Jessica Butts",
+      "openalexId": "https://openalex.org/A5102853627",
+      "status": "verified",
+      "reason": "Jessica C. Butts record matches neural organoids and V2a interneuron protocols described in Rice official biography. Exclude malaria and sports-medicine namesakes.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.rice.edu/faculty/jessica-butts"
+        },
+        {
+          "title": "Axial elongation of caudalized human organoids mimics aspects of neural tube development",
+          "url": "https://doi.org/10.1242/dev.198275"
+        },
+        {
+          "title": "Differentiation of V2a interneurons from human pluripotent stem cells",
+          "url": "https://doi.org/10.1073/pnas.1608254114"
+        },
+        {
+          "title": "A Multi-Modality CMOS Sensor Array for Cell-Based Assay and Drug Screening",
+          "url": "https://doi.org/10.1109/tbcas.2015.2504984"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "sameer-sheth",
+      "name": "Sameer Sheth",
+      "openalexId": "https://openalex.org/A5082661128",
+      "status": "verified",
+      "reason": "Sameer A. Sheth neurosurgery record matches dACC neurons, hemodynamics and a glioblastoma biopsy study; broader clinical neurosurgery work is compatible with this identity.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bcm.edu/people-search/sameer-sheth"
+        },
+        {
+          "title": "Human dorsal anterior cingulate cortex neurons mediate ongoing behavioural adaptation",
+          "url": "https://doi.org/10.1038/nature11239"
+        },
+        {
+          "title": "MRI-localized biopsies reveal subtype-specific differences in molecular and cellular composition at the margins of glioblastoma",
+          "url": "https://doi.org/10.1073/pnas.1405839111"
+        },
+        {
+          "title": "Linear and Nonlinear Relationships between Neuronal Activity, Oxygen Metabolism, and Hemodynamic Responses",
+          "url": "https://doi.org/10.1016/s0896-6273(04)00221-1"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jerzy-szablowski",
+      "name": "Jerzy Szablowski",
+      "openalexId": "https://openalex.org/A5030593970",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.rice.edu/faculty/jerzy-szablowski"
+        },
+        {
+          "title": "Biomolecular Ultrasound and Sonogenetics",
+          "url": "https://doi.org/10.1146/annurev-chembioeng-060817-084034"
+        },
+        {
+          "title": "Directed evolution of a magnetic resonance imaging contrast agent for noninvasive imaging of dopamine",
+          "url": "https://doi.org/10.1038/nbt.1609"
+        },
+        {
+          "title": "Acoustically targeted chemogenetics for the non-invasive control of neural circuits",
+          "url": "https://doi.org/10.1038/s41551-018-0258-2"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "ralph-etienne-cummings",
+      "name": "Ralph Etienne-Cummings",
+      "openalexId": null,
+      "status": "unresolved",
+      "reason": "Hold: coherent 30-work record A5066384155 centers EMG/prosthetic control, but appears a small fragment of the professor's broader neuromorphic/VLSI career. Additional tiny exact-name fragments exist; dominant record not established.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://engineering.jhu.edu/ece/faculty/ralph-etienne-cummings/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "sridevi-sarma",
+      "name": "Sridevi Sarma",
+      "openalexId": "https://openalex.org/A5088809750",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/faculty_staff/sridevi-sarma/"
+        },
+        {
+          "title": "Network dynamics of the brain and influence of the epileptic seizure onset zone",
+          "url": "https://doi.org/10.1073/pnas.1401752111"
+        },
+        {
+          "title": "Reinstatement of distributed cortical oscillations occurs with precise spatiotemporal dynamics during successful memory retrieval",
+          "url": "https://doi.org/10.1073/pnas.1417017112"
+        },
+        {
+          "title": "Neural fragility as an EEG marker of the seizure onset zone",
+          "url": "https://doi.org/10.1038/s41593-021-00901-w"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "joshua-vogelstein",
+      "name": "Joshua Vogelstein",
+      "openalexId": "https://openalex.org/A5065441417",
+      "status": "verified",
+      "reason": "Joshua T. Vogelstein record matches JHU computational statistics, circuit connectivity and calcium deconvolution. Cross-disciplinary CancerSEEK coauthorship alone is not evidence of a namesake.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/faculty_staff/joshua-vogelstein/"
+        },
+        {
+          "title": "Detection and localization of surgically resectable cancers with a multi-analyte blood test",
+          "url": "https://doi.org/10.1126/science.aar3247"
+        },
+        {
+          "title": "Differential connectivity and response dynamics of excitatory and inhibitory neurons in visual cortex",
+          "url": "https://doi.org/10.1038/nn.2876"
+        },
+        {
+          "title": "Fast Nonnegative Deconvolution for Spike Train Inference From Population Calcium Imaging",
+          "url": "https://doi.org/10.1152/jn.01073.2009"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "reza-shadmehr",
+      "name": "Reza Shadmehr",
+      "openalexId": "https://openalex.org/A5028793301",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/faculty_staff/reza-shadmehr/"
+        },
+        {
+          "title": "Adaptive representation of dynamics during learning of a motor task",
+          "url": "https://doi.org/10.1523/jneurosci.14-05-03208.1994"
+        },
+        {
+          "title": "Error Correction, Sensory Prediction, and Adaptation in Motor Control",
+          "url": "https://doi.org/10.1146/annurev-neuro-060909-153135"
+        },
+        {
+          "title": "A computational neuroanatomy for motor control",
+          "url": "https://doi.org/10.1007/s00221-008-1280-5"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "kathleen-cullen",
+      "name": "Kathleen Cullen",
+      "openalexId": "https://openalex.org/A5023860476",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/faculty_staff/kathleen-cullen/"
+        },
+        {
+          "title": "Vestibular System: The Many Facets of a Multimodal Sense",
+          "url": "https://doi.org/10.1146/annurev.neuro.31.060407.125555"
+        },
+        {
+          "title": "The vestibular system: multimodal integration and encoding of self-motion for motor control",
+          "url": "https://doi.org/10.1016/j.tins.2011.12.001"
+        },
+        {
+          "title": "Consensus Paper: The Role of the Cerebellum in Perceptual Processes",
+          "url": "https://doi.org/10.1007/s12311-014-0627-7"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "charley-della-santina",
+      "name": "Charley Della Santina",
+      "openalexId": "https://openalex.org/A5084054564",
+      "status": "verified",
+      "reason": "Charles C. Della Santina record uses the formal-name variant of Charley and matches vestibular-prosthesis/balance and inner-ear studies. Other exact-short-name fragment not merged.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/faculty_staff/charley-della-santina/"
+        },
+        {
+          "title": "Disorders of balance and vestibular function in US adults: data from the National Health and Nutrition Examination Survey, 2001-2004.",
+          "url": "https://doi.org/10.1001/archinternmed.2009.66"
+        },
+        {
+          "title": "Bilateral vestibulopathy: Diagnostic criteria Consensus document of the Classification Committee of the Bárány Society1",
+          "url": "https://doi.org/10.3233/ves-170619"
+        },
+        {
+          "title": "Mechanotransduction in mouse inner ear hair cells requires transmembrane channel–like genes",
+          "url": "https://doi.org/10.1172/jci60405"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "michael-miller",
+      "name": "Michael I. Miller",
+      "openalexId": "https://openalex.org/A5033151214",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/?p=19735"
+        },
+        {
+          "title": "Stereotaxic white matter atlas based on diffusion tensor imaging in an ICBM template",
+          "url": "https://doi.org/10.1016/j.neuroimage.2007.12.035"
+        },
+        {
+          "title": "Computing Large Deformation Metric Mappings via Geodesic Flows of Diffeomorphisms",
+          "url": "https://doi.org/10.1023/b:visi.0000043755.93987.aa"
+        },
+        {
+          "title": "Deformable templates using large deformation kinematics",
+          "url": "https://doi.org/10.1109/83.536892"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "xingde-li",
+      "name": "Xingde Li",
+      "openalexId": "https://openalex.org/A5014330564",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bme.jhu.edu/?p=19730"
+        },
+        {
+          "title": "Gold nanostructures: engineering their plasmonic properties for biomedical applications",
+          "url": "https://doi.org/10.1039/b517615h"
+        },
+        {
+          "title": "Immuno Gold Nanocages with Tailored Optical Properties for Targeted Photothermal Destruction of Cancer Cells",
+          "url": "https://doi.org/10.1021/nl070345g"
+        },
+        {
+          "title": "Gold Nanocages: Bioconjugation and Their Potential Use as Optical Imaging Contrast Agents",
+          "url": "https://doi.org/10.1021/nl047950t"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "thomas-stieglitz",
+      "name": "Thomas Stieglitz",
+      "openalexId": null,
+      "status": "ambiguous",
+      "reason": "Hold: A5058067206 includes both neural-interface work and submarine groundwater work. Primary groundwater paper identifies T. Stieglitz with marine institutions AIMS/James Cook; this is a namesake, separate from Freiburg biomedical microtechnology. No clean aggregate selected.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.imtek.uni-freiburg.de/laboratories/biomedical-microtechnology/contact"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://www.whoi.edu/science/MCG/groundwater/pubs/PDF/Nov06/burnett%20STOTEN.pdf"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2007JC004499"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "ulf-ziemann",
+      "name": "Ulf Ziemann",
+      "openalexId": "https://openalex.org/A5070374515",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.medizin.uni-tuebingen.de/en-de/das-klinikum/mitarbeiter/ulf-ziemann"
+        },
+        {
+          "title": "Non-invasive electrical and magnetic stimulation of the brain, spinal cord, roots and peripheral nerves: Basic principles and procedures for routine clinical and research application. An updated report from an I.F.C.N. Committee",
+          "url": "https://doi.org/10.1016/j.clinph.2015.02.001"
+        },
+        {
+          "title": "Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS): An update (2014–2018)",
+          "url": "https://doi.org/10.1016/j.clinph.2019.11.002"
+        },
+        {
+          "title": "Evidence-based guidelines on the therapeutic use of repetitive transcranial magnetic stimulation (rTMS)",
+          "url": "https://doi.org/10.1016/j.clinph.2014.05.021"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "moritz-grosse-wentrup",
+      "name": "Moritz Grosse-Wentrup",
+      "openalexId": "https://openalex.org/A5040565095",
+      "status": "verified",
+      "reason": "Selected record matches BCI transfer, CSP and plasticity. Current primary institutional profile places him at University of Vienna, not his former Max Planck role.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://is.mpg.de/people/grossewentrup"
+        },
+        {
+          "title": "Transfer Learning in Brain-Computer Interfaces Abstract\\uFFFDThe performance of brain-computer interfaces (BCIs) improves with the amount of avail",
+          "url": "https://doi.org/10.1109/mci.2015.2501545"
+        },
+        {
+          "title": "Multiclass Common Spatial Patterns and Information Theoretic Feature Extraction",
+          "url": "https://doi.org/10.1109/tbme.2008.921154"
+        },
+        {
+          "title": "Using brain–computer interfaces to induce neural plasticity and restore function",
+          "url": "https://doi.org/10.1088/1741-2560/8/2/025004"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://ucrisportal.univie.ac.at/de/persons/moritz-grosse-wentrup/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "simon-schultz",
+      "name": "Simon Schultz",
+      "openalexId": "https://openalex.org/A5033931489",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.imperial.ac.uk/people/s.schultz"
+        },
+        {
+          "title": "The Role of Spike Timing in the Coding of Stimulus Location in Rat Somatosensory Cortex",
+          "url": "https://doi.org/10.1016/s0896-6273(01)00251-3"
+        },
+        {
+          "title": "Correlations and the encoding of information in the nervous system",
+          "url": "https://doi.org/10.1098/rspb.1999.0736"
+        },
+        {
+          "title": "Spatial Pattern Coding of Sensory Information by Climbing Fiber-Evoked Calcium Signals in Networks of Neighboring Cerebellar Purkinje Cells",
+          "url": "https://doi.org/10.1523/jneurosci.4919-08.2009"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "rylie-green",
+      "name": "Rylie Green",
+      "openalexId": "https://openalex.org/A5009901504",
+      "status": "verified",
+      "reason": "Selected Rylie A. Green neural biomaterials record matches conducting-polymer neural interfaces. Seed /people/r.green redirects to economist Richard Green; corrected official profile is /rylie.green. Do not import Richard Green ORCID.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.imperial.ac.uk/people/r.green"
+        },
+        {
+          "title": "Conducting polymers for neural interfaces: Challenges in developing an effective long-term implant",
+          "url": "https://doi.org/10.1016/j.biomaterials.2008.04.047"
+        },
+        {
+          "title": "Conducting Polymers for Neural Prosthetic and Neural Interface Applications",
+          "url": "https://doi.org/10.1002/adma.201501810"
+        },
+        {
+          "title": "Conducting polymer-hydrogels for medical electrode applications",
+          "url": "https://doi.org/10.1088/1468-6996/11/1/014107"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://profiles.imperial.ac.uk/rylie.green"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "shlomi-haar",
+      "name": "Shlomi Haar",
+      "openalexId": "https://openalex.org/A5037584185",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.imperial.ac.uk/people/s.haar"
+        },
+        {
+          "title": "Cortical and Subcortical Brain Morphometry Differences Between Patients With Autism Spectrum Disorder and Healthy Individuals Across the Lifespan: Results From the ENIGMA ASD Working Group",
+          "url": "https://doi.org/10.1176/appi.ajp.2017.17010100"
+        },
+        {
+          "title": "Anatomical Abnormalities in Autism?",
+          "url": "https://doi.org/10.1093/cercor/bhu242"
+        },
+        {
+          "title": "Altered structural brain asymmetry in autism spectrum disorder in a study of 54 datasets",
+          "url": "https://doi.org/10.1038/s41467-019-13005-8"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "andrew-jackson",
+      "name": "Andrew Jackson",
+      "openalexId": null,
+      "status": "ambiguous",
+      "reason": "Hold: returned candidates mix rat-genome/radiotherapy or geomagnetism/rehabilitation namesakes. Intended Newcastle neural-interface professor confirmed by institutional profile, but no clean aggregate established. Suggested landmark recovery DOI10.1038/nature05226.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ncl.ac.uk/medical-sciences/people/profile/andrewjackson.html"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "eduardo-moraud",
+      "name": "Eduardo Martín Moraud",
+      "openalexId": "https://openalex.org/A5069196546",
+      "status": "verified",
+      "reason": "Canonical full name Eduardo Martin Moraud matches e-dura, restored locomotion and primate brain-spine interface bylines; route ID preserved despite abbreviated seed name.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://neuro-x.epfl.ch/en/contact/"
+        },
+        {
+          "title": "Electronic dura mater for long-term multimodal neural interfaces",
+          "url": "https://doi.org/10.1126/science.1260318"
+        },
+        {
+          "title": "Restoring Voluntary Control of Locomotion after Paralyzing Spinal Cord Injury",
+          "url": "https://doi.org/10.1126/science.1217416"
+        },
+        {
+          "title": "A brain–spine interface alleviating gait deficits after spinal cord injury in primates",
+          "url": "https://doi.org/10.1038/nature20118"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jens-haueisen",
+      "name": "Jens Haueisen",
+      "openalexId": "https://openalex.org/A5044825834",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.tu-ilmenau.de/en/ntg/people/jens-haueisen"
+        },
+        {
+          "title": "Low intensity transcranial electric stimulation: Safety, ethical, legal regulatory and application guidelines",
+          "url": "https://doi.org/10.1016/j.clinph.2017.06.001"
+        },
+        {
+          "title": "Involuntary Motor Activity in Pianists Evoked by Music Perception",
+          "url": "https://doi.org/10.1162/08989290152541449"
+        },
+        {
+          "title": "Influence of tissue resistivities on neuromagnetic fields and electric potentials studied with a finite element model of the head",
+          "url": "https://doi.org/10.1109/10.605429"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "marcel-van-gerven",
+      "name": "Marcel van Gerven",
+      "openalexId": "https://openalex.org/A5074794877",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ru.nl/en/people/gerven-m-van"
+        },
+        {
+          "title": "Deep Neural Networks Reveal a Gradient in the Complexity of Neural Representations across the Ventral Stream",
+          "url": "https://doi.org/10.1523/jneurosci.5023-14.2015"
+        },
+        {
+          "title": "Shared Neural Mechanisms of Visual Perception and Imagery",
+          "url": "https://doi.org/10.1016/j.tics.2019.02.004"
+        },
+        {
+          "title": "Explainable Deep Learning: A Field Guide for the Uninitiated",
+          "url": "https://doi.org/10.1613/jair.1.13200"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "eric-maris",
+      "name": "Eric Maris",
+      "openalexId": "https://openalex.org/A5091232686",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ru.nl/en/people/maris-e"
+        },
+        {
+          "title": "FieldTrip: Open Source Software for Advanced Analysis of MEG, EEG, and Invasive Electrophysiological Data",
+          "url": "https://doi.org/10.1155/2011/156869"
+        },
+        {
+          "title": "Nonparametric statistical testing of EEG- and MEG-data",
+          "url": "https://doi.org/10.1016/j.jneumeth.2007.03.024"
+        },
+        {
+          "title": "Theta and Gamma Oscillations Predict Encoding and Retrieval of Declarative Memory",
+          "url": "https://doi.org/10.1523/jneurosci.1948-06.2006"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "pieter-roelfsema",
+      "name": "Pieter Roelfsema",
+      "openalexId": "https://openalex.org/A5008620732",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.roelfsemalab.nl/"
+        },
+        {
+          "title": "The distinct modes of vision offered by feedforward and recurrent processing",
+          "url": "https://doi.org/10.1016/s0166-2236(00)01657-x"
+        },
+        {
+          "title": "Conscious Processing and the Global Neuronal Workspace Hypothesis",
+          "url": "https://doi.org/10.1016/j.neuron.2020.01.026"
+        },
+        {
+          "title": "Visuomotor integration is associated with zero time-lag synchronization among cortical areas",
+          "url": "https://doi.org/10.1038/385157a0"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "maarten-van-den-heuvel",
+      "name": "Martijn P. van den Heuvel",
+      "openalexId": "https://openalex.org/A5009949271",
+      "status": "verified",
+      "reason": "Seed identity correction required: the connectomics narrative describes Martijn P. van den Heuvel, not Maarten. Selected record matches rich-club/hub/resting-state connectome work and official VU faculty profile. Actual Maarten database-author record is unrelated.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.umcutrecht.nl/en/research/researchers/maarten-van-den-heuvel"
+        },
+        {
+          "title": "Exploring the brain network: A review on resting-state fMRI functional connectivity",
+          "url": "https://doi.org/10.1016/j.euroneuro.2010.03.008"
+        },
+        {
+          "title": "Rich-Club Organization of the Human Connectome",
+          "url": "https://doi.org/10.1523/jneurosci.3539-11.2011"
+        },
+        {
+          "title": "Network hubs in the human brain",
+          "url": "https://doi.org/10.1016/j.tics.2013.09.012"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://research.vu.nl/en/persons/martijn-van-den-heuvel/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://research.vu.nl/ws/files/233632873/A_cross_disorder_connectome_landscape_of_brain_dysconnectivity.pdf"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "jose-zariffa",
+      "name": "José Zariffa",
+      "openalexId": "https://openalex.org/A5048203934",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://bme.utoronto.ca/faculty-research/core-faculty/jose-zariffa/"
+        },
+        {
+          "title": "Analysis of the Hands in Egocentric Vision: A Survey",
+          "url": "https://doi.org/10.1109/tpami.2020.2986648"
+        },
+        {
+          "title": "Characterization of neurological recovery following traumatic sensorimotor complete thoracic spinal cord injury",
+          "url": "https://doi.org/10.1038/sc.2010.140"
+        },
+        {
+          "title": "Feasibility and efficacy of upper limb robotic rehabilitation in a subacute cervical spinal cord injury population",
+          "url": "https://doi.org/10.1038/sc.2011.104"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "xilin-liu",
+      "name": "Xilin Liu",
+      "openalexId": null,
+      "status": "ambiguous",
+      "reason": "Hold pending disambiguation: A5100639668 contains both neural-IC reviews and conservative-chaos image encryption with Xiaojun Tong. Official Toronto biography and self-asserted ORCID0000-0002-9547-3905 identify the neural-IC researcher, but correspondence of the full candidate corpus is not established; do not use aggregate on name alone.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.ece.utoronto.ca/people/xilin-liu/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://www.ece.utoronto.ca/people/liu-x/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://www.eecg.utoronto.ca/~xilinliu/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://orcid.org/0000-0002-9547-3905"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "paul-yoo",
+      "name": "Paul Yoo",
+      "openalexId": "https://openalex.org/A5031279146",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://bme.utoronto.ca/faculty-research/core-faculty/paul-yoo/"
+        },
+        {
+          "title": "High-resolution measurement of electrically-evoked vagus nerve activity in the anesthetized dog",
+          "url": "https://doi.org/10.1088/1741-2560/10/2/026003"
+        },
+        {
+          "title": "Excitation properties of the right cervical vagus nerve in adult dogs",
+          "url": "https://doi.org/10.1016/j.expneurol.2010.09.011"
+        },
+        {
+          "title": "Selective Recording of the Canine Hypoglossal Nerve Using a Multicontact Flat Interface Nerve Electrode",
+          "url": "https://doi.org/10.1109/tbme.2005.851482"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "tom-chau",
+      "name": "Tom Chau",
+      "openalexId": "https://openalex.org/A5084071828",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://bme.utoronto.ca/faculty-research/core-faculty/tom-chau/"
+        },
+        {
+          "title": "Upper limb prosthesis use and abandonment",
+          "url": "https://doi.org/10.1080/03093640600994581"
+        },
+        {
+          "title": "Short-Term Music Training Enhances Verbal Intelligence and Executive Function",
+          "url": "https://doi.org/10.1177/0956797611416999"
+        },
+        {
+          "title": "Upper-Limb Prosthetics",
+          "url": "https://doi.org/10.1097/phm.0b013e3181587f6c"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "nigel-lovell",
+      "name": "Nigel Lovell",
+      "openalexId": "https://openalex.org/A5060602596",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.unsw.edu.au/staff/nigel-lovell"
+        },
+        {
+          "title": "Implementation of a Real-Time Human Movement Classifier Using a Triaxial Accelerometer for Ambulatory Monitoring",
+          "url": "https://doi.org/10.1109/titb.2005.856864"
+        },
+        {
+          "title": "Accelerometry: providing an integrated, practical method for long-term, ambulatory monitoring of human movement",
+          "url": "https://doi.org/10.1088/0967-3334/25/2/r01"
+        },
+        {
+          "title": "A review of tactile sensing technologies with applications in biomedical engineering",
+          "url": "https://doi.org/10.1016/j.sna.2012.02.051"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "peter-blamey",
+      "name": "Peter Blamey",
+      "openalexId": "https://openalex.org/A5089168733",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bionicsinstitute.org/our-people/peter-blamey/"
+        },
+        {
+          "title": "Factors Affecting Auditory Performance of Postlinguistically Deaf Adults Using Cochlear Implants: An Update with 2251 Patients",
+          "url": "https://doi.org/10.1159/000343189"
+        },
+        {
+          "title": "Relationships Among Speech Perception, Production, Language, Hearing Loss, and Age in Children With Impaired Hearing",
+          "url": "https://doi.org/10.1044/1092-4388(2001/022)"
+        },
+        {
+          "title": "Pre-, Per- and Postoperative Factors Affecting Performance of Postlinguistically Deaf Adults Using Cochlear Implants: A New Conceptual Model over Time",
+          "url": "https://doi.org/10.1371/journal.pone.0048739"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "nicholas-opie",
+      "name": "Nicholas Opie",
+      "openalexId": "https://openalex.org/A5053206239",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bionicsinstitute.org/our-people/nick-opie/"
+        },
+        {
+          "title": "Minimally invasive endovascular stent-electrode array for high-fidelity, chronic recordings of cortical neural activity",
+          "url": "https://doi.org/10.1038/nbt.3428"
+        },
+        {
+          "title": "First-in-Human Trial of a Novel Suprachoroidal Retinal Prosthesis",
+          "url": "https://doi.org/10.1371/journal.pone.0115239"
+        },
+        {
+          "title": "Motor neuroprosthesis implanted with neurointerventional surgery improves capacity for activities of daily living tasks in severe paralysis: first in-human experience",
+          "url": "https://doi.org/10.1136/neurintsurg-2020-016862"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "brenton-hordacre",
+      "name": "Brenton Hordacre",
+      "openalexId": "https://openalex.org/A5046785599",
+      "status": "verified",
+      "reason": "Selected record matches stroke neurophysiology and TMS reliability. Current official institution is Adelaide University after merger; former UniSA profile now gives a transition notice.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.unisa.edu.au/about/our-people/academic/brenton-hordacre/"
+        },
+        {
+          "title": "Minimum number of trials required for within- and between-session reliability of TMS measures of corticospinal excitability",
+          "url": "https://doi.org/10.1016/j.neuroscience.2016.02.012"
+        },
+        {
+          "title": "Do age-related differences in aperiodic neural activity explain differences in resting EEG alpha?",
+          "url": "https://doi.org/10.1016/j.neurobiolaging.2022.09.003"
+        },
+        {
+          "title": "A large, curated, open-source stroke neuroimaging dataset to improve lesion segmentation algorithms",
+          "url": "https://doi.org/10.1038/s41597-022-01401-7"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://researchers.adelaide.edu.au/profile/brenton.hordacre"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://adelaide.edu.au/people/Brenton.Hordacre"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "tom-oxley",
+      "name": "Tom Oxley",
+      "openalexId": "https://openalex.org/A5089907065",
+      "status": "verified",
+      "reason": "Thomas J. Oxley record matches the vascular neurologist's stroke/thrombectomy work and Synchron/Stentrode context. The exact-short-name podcast record is not a scholarly aggregate.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.unimelb.edu.au/about/people/tom-oxley"
+        },
+        {
+          "title": "Endovascular Therapy for Ischemic Stroke with Perfusion-Imaging Selection",
+          "url": "https://doi.org/10.1056/nejmoa1414792"
+        },
+        {
+          "title": "Large-Vessel Stroke as a Presenting Feature of Covid-19 in the Young",
+          "url": "https://doi.org/10.1056/nejmc2009787"
+        },
+        {
+          "title": "Extending thrombolysis to 4·5–9 h and wake-up stroke using perfusion imaging: a systematic review and meta-analysis of individual patient data",
+          "url": "https://doi.org/10.1016/s0140-6736(19)31053-0"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "yukiyasu-kamitani",
+      "name": "Yukiyasu Kamitani",
+      "openalexId": "https://openalex.org/A5078484869",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.kamitani-lab.ist.i.kyoto-u.ac.jp/"
+        },
+        {
+          "title": "Decoding the visual and subjective contents of the human brain",
+          "url": "https://doi.org/10.1038/nn1444"
+        },
+        {
+          "title": "What you see is what you hear",
+          "url": "https://doi.org/10.1038/35048669"
+        },
+        {
+          "title": "Visual illusion induced by sound",
+          "url": "https://doi.org/10.1016/s0926-6410(02)00069-1"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "shangkai-gao",
+      "name": "Shangkai Gao",
+      "openalexId": "https://openalex.org/A5073517028",
+      "status": "verified",
+      "reason": "Selected Tsinghua BCI record matches high-speed spelling/ITR and CCA work. Other coherent publication fragments exist and must not be summed.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.tsinghua.edu.cn/en/"
+        },
+        {
+          "title": "High-speed spelling with a noninvasive brain–computer interface",
+          "url": "https://doi.org/10.1073/pnas.1508080112"
+        },
+        {
+          "title": "Design and implementation of a brain-computer interface with high transfer rates",
+          "url": "https://doi.org/10.1109/tbme.2002.803536"
+        },
+        {
+          "title": "Filter bank canonical correlation analysis for implementing a high-speed SSVEP-based brain–computer interface",
+          "url": "https://doi.org/10.1088/1741-2560/12/4/046008"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "dezhong-yao",
+      "name": "Dezhong Yao",
+      "openalexId": null,
+      "status": "unresolved",
+      "reason": "Hold aggregate: A5018644308 and A5102822593 both contain coherent UESTC EEG/REST/neuroinformation career subsets, with no single representative record established. Do not sum fragments. Official faculty affiliation is UESTC, not the seed Southwest University link.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.swu.edu.cn/"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://faculty.uestc.edu.cn/yaodezhong/en/index.htm"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "josef-parvizi",
+      "name": "Josef Parvizi",
+      "openalexId": "https://openalex.org/A5059660895",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://profiles.stanford.edu/josef-parvizi"
+        },
+        {
+          "title": "Subcortical and cortical brain activity during the feeling of self-generated emotions",
+          "url": "https://doi.org/10.1038/79871"
+        },
+        {
+          "title": "Promises and limitations of human intracranial electroencephalography",
+          "url": "https://doi.org/10.1038/s41593-018-0108-2"
+        },
+        {
+          "title": "Neural Mechanisms of Sustained Attention Are Rhythmic",
+          "url": "https://doi.org/10.1016/j.neuron.2018.07.032"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "andrew-huth",
+      "name": "Alexander G. Huth",
+      "openalexId": "https://openalex.org/A5077310477",
+      "status": "verified",
+      "reason": "Seed identity correction required: semantic decoding work belongs to Alexander G. Huth, not Andrew S. Huth. All three selected landmark papers match Alexander. Official Berkeley profile states he returned from UT Austin to Berkeley in2025.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://huthlab.eecs.berkeley.edu/"
+        },
+        {
+          "title": "Natural speech reveals the semantic maps that tile human cerebral cortex",
+          "url": "https://doi.org/10.1038/nature17637"
+        },
+        {
+          "title": "A Continuous Semantic Space Describes the Representation of Thousands of Object and Action Categories across the Human Brain",
+          "url": "https://doi.org/10.1016/j.neuron.2012.10.014"
+        },
+        {
+          "title": "Semantic reconstruction of continuous language from non-invasive brain recordings",
+          "url": "https://doi.org/10.1038/s41593-023-01304-9"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://vision.berkeley.edu/people/alexander-huth"
+        },
+        {
+          "title": "Additional primary identity evidence",
+          "url": "https://hwni.berkeley.edu/people/alexander-huth"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "nathan-intrator",
+      "name": "Nathan Intrator",
+      "openalexId": "https://openalex.org/A5029500893",
+      "status": "verified",
+      "reason": "Full-name variant, historical institution context and three sampled high-citation work bylines/titles are consistent with the researcher. This is an identity sample, not validation of the entire author corpus.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://en-sagol.tau.ac.il/people/faculty"
+        },
+        {
+          "title": "Free water elimination and mapping from diffusion MRI",
+          "url": "https://doi.org/10.1002/mrm.22055"
+        },
+        {
+          "title": "Fundamentals of Artificial Neural Networks",
+          "url": "https://doi.org/10.1063/1.4822376"
+        },
+        {
+          "title": "Optimal ensemble averaging of neural networks",
+          "url": "https://doi.org/10.1088/0954-898x_8_3_004"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "nikunj-bhagat",
+      "name": "Nikunj Bhagat",
+      "openalexId": "https://openalex.org/A5033421236",
+      "status": "verified",
+      "reason": "Selected Nikunj A. Bhagat record matches IIT Kanpur/neural rehabilitation and EEG/exoskeleton studies. Exclude Twitter Heron software-engineer namesake A5001602649.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.iitk.ac.in/bsbe/index.php/nikunj-bhagat"
+        },
+        {
+          "title": "Powered exoskeletons for bipedal locomotion after spinal cord injury",
+          "url": "https://doi.org/10.1088/1741-2560/13/3/031001"
+        },
+        {
+          "title": "Design and Optimization of an EEG-Based Brain Machine Interface (BMI) to an Upper-Limb Exoskeleton for Stroke Survivors",
+          "url": "https://doi.org/10.3389/fnins.2016.00122"
+        },
+        {
+          "title": "Neural activity modulations and motor recovery following brain-exoskeleton interface mediated stroke rehabilitation",
+          "url": "https://doi.org/10.1016/j.nicl.2020.102502"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "maria-angelica-ocampo",
+      "name": "Maria Angelica Ocampo",
+      "openalexId": null,
+      "status": "unresolved",
+      "reason": "Hold/remove until identity sourced: the seed generic BNI/Chile page does not establish this researcher or its stated BCI milestones. No candidate recovered; name search surfaced unrelated people. Do not invent a profile or treat missing result as zero output.",
+      "evidence": [
+        {
+          "title": "Directory identity reference",
+          "url": "https://www.bni.cl/"
+        }
+      ],
+      "reviewed": "2026-09-15"
+    },
+    {
+      "id": "zhengtuo-zhao",
+      "openalexId": "https://openalex.org/A5079704131",
+      "status": "verified",
+      "reason": "Rice/UT Austin affiliation history and three NET/ultraflexible recording publications match the directory research lineage. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://people.ucas.ac.cn/~zhaozt"
+        },
+        {
+          "title": "Ultraflexible nanoelectronic probes form reliable, glial scar–free neural integration",
+          "url": "https://doi.org/10.1126/sciadv.1601966"
+        },
+        {
+          "title": "Ultraflexible electrode arrays for months-long high-density electrophysiological mapping of thousands of neurons in rodents",
+          "url": "https://doi.org/10.1038/s41551-022-00941-y"
+        },
+        {
+          "title": "Nanofabricated Ultraflexible Electrode Arrays for High‐Density Intracortical Recording",
+          "url": "https://doi.org/10.1002/advs.201700625"
+        }
+      ],
+      "seed": {
+        "id": "zhengtuo-zhao",
+        "name": "Zhengtuo Zhao",
+        "institution": "Rice University / University of Texas at Austin",
+        "summary": "Biomedical engineering researcher and StairMed co-founder. His doctorate was at UT Austin (2015–2019); Rice documented his postdoctoral work in 2020.",
+        "profileUrl": "https://people.ucas.ac.cn/~zhaozt",
+        "queryName": "Zhengtuo Zhao",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "xue-li",
+      "openalexId": "https://openalex.org/A5100372263",
+      "status": "ambiguous",
+      "reason": "Known human uFINE and Rice electrode papers identify this candidate, but its small publication cluster also includes an unrelated Zhejiang breast-cancer screening paper. Aggregate metrics withheld pending author disambiguation.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "OpenAlex candidate",
+          "url": "https://api.openalex.org/authors/A5100372263"
+        }
+      ],
+      "seed": {
+        "id": "xue-li",
+        "name": "Xue Li",
+        "institution": "Rice University / University of Texas at Austin",
+        "summary": "Xie’s lab lists Xue Li as a former PhD student. The human uFINE paper identifies Li and Zhengtuo Zhao as StairMed founders.",
+        "profileUrl": "https://www.chongxie.net/team",
+        "queryName": "Xue Li",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "benjamin-rapoport",
+      "openalexId": "https://openalex.org/A5023009206",
+      "status": "verified",
+      "reason": "MIT/Harvard/Mount Sinai history, glucose-fuel-cell BCI and neurosurgical publications match. His earlier physics work is also listed by Mount Sinai, so a tokamak paper is not treated as evidence of a namesake merge. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://scholars.mssm.edu/en/publications/explicit-calculations-of-homoclinic-tangles-in-tokamaks"
+        },
+        {
+          "title": "A Glucose Fuel Cell for Implantable Brain–Machine Interfaces",
+          "url": "https://doi.org/10.1371/journal.pone.0038436"
+        },
+        {
+          "title": "Experimental signatures of homoclinic tangles in poloidally diverted tokamaks",
+          "url": "https://doi.org/10.1088/1742-6596/7/1/015"
+        },
+        {
+          "title": "Middle meningeal artery embolization for chronic subdural hematoma: Endovascular technique and radiographic findings",
+          "url": "https://doi.org/10.1177/1591019918769336"
+        }
+      ],
+      "seed": {
+        "id": "benjamin-rapoport",
+        "name": "Benjamin Rapoport",
+        "institution": "MIT / Harvard University / Icahn School of Medicine at Mount Sinai",
+        "summary": "Neurosurgeon and electrical engineer; MIT EECS PhD 2011, Harvard/HST MD 2013. Precision co-founder and Chief Science Officer.",
+        "profileUrl": "https://www.precisionneuro.io/our-vision",
+        "queryName": "Benjamin I. Rapoport",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "richard-normann",
+      "openalexId": "https://openalex.org/A5064988221",
+      "status": "ambiguous",
+      "reason": "The candidate combines the Utah intracortical electrode-array paper with unrelated Richard Normann business-management books and value-constellation work. Aggregate metrics withheld pending a clean author cluster.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "OpenAlex candidate",
+          "url": "https://api.openalex.org/authors/A5064988221"
+        }
+      ],
+      "seed": {
+        "id": "richard-normann",
+        "name": "Richard Normann",
+        "institution": "University of Utah",
+        "summary": "University of Utah professor emeritus credited with development of the Utah Electrode Array.",
+        "profileUrl": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+        "queryName": "Richard A. Normann",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "matt-angle",
+      "openalexId": "https://openalex.org/A5033584350",
+      "status": "verified",
+      "reason": "Max Planck/Stanford affiliation history and Argo, CMOS microwire arrays and nanowire cell-penetration papers match Paradromics founder Matthew R. Angle. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://paradromics.com/company/"
+        },
+        {
+          "title": "Massively parallel microwire arrays integrated with CMOS chips for neural recording",
+          "url": "https://doi.org/10.1126/sciadv.aay2789"
+        },
+        {
+          "title": "Mechanical Model of Vertical Nanowire Cell Penetration",
+          "url": "https://doi.org/10.1021/nl403201a"
+        },
+        {
+          "title": "The Argo: a high channel count recording system for neural recording in vivo",
+          "url": "https://doi.org/10.1088/1741-2552/abd0ce"
+        }
+      ],
+      "seed": {
+        "id": "matt-angle",
+        "name": "Matt Angle",
+        "institution": "Max Planck Institute / Stanford University",
+        "summary": "Founder and CEO; specific doctoral mentorship is not established by the inspected primary sources.",
+        "profileUrl": "https://paradromics.com/company/",
+        "queryName": "Matthew R. Angle",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "florian-solzbacher",
+      "openalexId": "https://openalex.org/A5079803960",
+      "status": "verified",
+      "reason": "Utah affiliation, wireless 100-electrode IC publications and sensor-engineering work match the Utah engineer and Blackrock co-founder. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher"
+        },
+        {
+          "title": "A Low-Power Integrated Circuit for a Wireless 100-Electrode Neural Recording System",
+          "url": "https://doi.org/10.1109/jssc.2006.886567"
+        },
+        {
+          "title": "A Low-Power Integrated Circuit for a Wireless 100-Electrode Neural Recording System",
+          "url": "https://doi.org/10.1109/isscc.2006.1696288"
+        },
+        {
+          "title": "H2 gas sensor performance of NiO at high temperatures in gas mixtures",
+          "url": "https://doi.org/10.1016/j.snb.2010.09.027"
+        }
+      ],
+      "seed": {
+        "id": "florian-solzbacher",
+        "name": "Florian Solzbacher",
+        "institution": "University of Utah",
+        "summary": "Utah professor and Blackrock co-founder focused on reliable neural-interface systems.",
+        "profileUrl": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+        "queryName": "Florian Solzbacher",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "rotem-kopel",
+      "openalexId": "https://openalex.org/A5067433442",
+      "status": "verified",
+      "reason": "Geneva/EPFL publication history and real-time fMRI neurofeedback papers match the neuroengineering researcher; unrelated reproductive-medicine profile excluded. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://abilityneuro.com/team/"
+        },
+        {
+          "title": "Meta-analysis of real-time fMRI neurofeedback studies using individual participant data: How is brain regulation mediated?",
+          "url": "https://doi.org/10.1016/j.neuroimage.2015.09.042"
+        },
+        {
+          "title": "Dynamic reconfiguration of human brain functional networks through neurofeedback",
+          "url": "https://doi.org/10.1016/j.neuroimage.2013.05.019"
+        },
+        {
+          "title": "Continuous vs. intermittent neurofeedback to regulate auditory cortex activity of tinnitus patients using real-time fMRI - A pilot study",
+          "url": "https://doi.org/10.1016/j.nicl.2016.12.023"
+        }
+      ],
+      "seed": {
+        "id": "rotem-kopel",
+        "name": "Rotem Kopel",
+        "institution": "University of Geneva / EPFL",
+        "summary": "ABILITY Neurotech co-founder and CEO.",
+        "profileUrl": "",
+        "queryName": "Rotem Kopel",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "jose-antonio-garrido",
+      "openalexId": "https://openalex.org/A5032851715",
+      "status": "verified",
+      "reason": "TUM/ICN2/ICREA affiliation history and graphene/carbon biointerface papers match the INBRAIN scientific co-founder; marine-science and ophthalmology namesakes excluded. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://www.inbrain.tech/inbrain-team/"
+        },
+        {
+          "title": "Science and technology roadmap for graphene, related two-dimensional crystals, and hybrid systems",
+          "url": "https://doi.org/10.1039/c4nr01600a"
+        },
+        {
+          "title": "Protein-modified nanocrystalline diamond thin films for biosensor applications",
+          "url": "https://doi.org/10.1038/nmat1204"
+        },
+        {
+          "title": "Production and processing of graphene and related materials",
+          "url": "https://doi.org/10.1088/2053-1583/ab1e0a"
+        }
+      ],
+      "seed": {
+        "id": "jose-antonio-garrido",
+        "name": "Jose Antonio Garrido",
+        "institution": "Catalan Institute of Nanoscience and Nanotechnology / Technical University of Munich",
+        "summary": "ICREA professor at ICN2 and INBRAIN co-founder.",
+        "profileUrl": "",
+        "queryName": "Jose A. Garrido",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "jorn-rickert",
+      "openalexId": "https://openalex.org/A5114012478",
+      "status": "verified",
+      "reason": "Freiburg affiliation and motor-cortex LFP/micro-ECoG publications match CorTec founder Jörn Rickert. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://www.bcf.uni-freiburg.de/news/2011/20111115-cortec"
+        },
+        {
+          "title": "Inference of hand movements from local field potentials in monkey motor cortex",
+          "url": "https://doi.org/10.1038/nn1158"
+        },
+        {
+          "title": "Encoding of Movement Direction in Different Frequency Ranges of Motor Cortical Local Field Potentials",
+          "url": "https://doi.org/10.1523/jneurosci.0816-05.2005"
+        },
+        {
+          "title": "First long term in vivo study on subdurally implanted Micro-ECoG electrodes, manufactured with a novel laser technology",
+          "url": "https://doi.org/10.1007/s10544-010-9471-9"
+        }
+      ],
+      "seed": {
+        "id": "jorn-rickert",
+        "name": "Jörn Rickert",
+        "institution": "University of Freiburg",
+        "summary": "CorTec founder and early managing director.",
+        "profileUrl": "",
+        "queryName": "Jörn Rickert",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "luca-berdondini",
+      "openalexId": "https://openalex.org/A5088983421",
+      "status": "verified",
+      "reason": "Neuchâtel/IIT publication history, active-pixel electrophysiology and nanoelectrode publications match the SiNAPS developer and Corticale co-founder. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/"
+        },
+        {
+          "title": "Active pixel sensor array for high spatio-temporal resolution electrophysiological recordings from single cell to large scale neuronal networks",
+          "url": "https://doi.org/10.1039/b907394a"
+        },
+        {
+          "title": "Intracellular and Extracellular Recording of Spontaneous Action Potentials in Mammalian Neurons and Cardiac Cells with 3D Plasmonic Nanoelectrodes",
+          "url": "https://doi.org/10.1021/acs.nanolett.7b01523"
+        },
+        {
+          "title": "Astrocyte deletion of Bmal1 alters daily locomotor activity and cognitive functions via GABA signalling",
+          "url": "https://doi.org/10.1038/ncomms14336"
+        }
+      ],
+      "seed": {
+        "id": "luca-berdondini",
+        "name": "Luca Berdondini",
+        "institution": "Istituto Italiano di Tecnologia / University of Neuchâtel",
+        "summary": "IIT Microtechnology for Neuroelectronics leader and Corticale co-founder.",
+        "profileUrl": "",
+        "queryName": "Luca Berdondini",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "paul-le-floch",
+      "openalexId": "https://openalex.org/A5005546087",
+      "status": "verified",
+      "reason": "Harvard affiliation and stretchable conductors, tough materials and cyborg-organoid publications match Axoft co-founder Paul Le Floch. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        },
+        {
+          "title": "Stretchable materials of high toughness and low hysteresis",
+          "url": "https://doi.org/10.1073/pnas.1821420116"
+        },
+        {
+          "title": "Cyborg Organoids: Implantation of Nanoelectronics via Organogenesis for Tissue-Wide Electrophysiology",
+          "url": "https://doi.org/10.1021/acs.nanolett.9b02512"
+        },
+        {
+          "title": "Wearable and Washable Conductors for Active Textiles",
+          "url": "https://doi.org/10.1021/acsami.7b07361"
+        }
+      ],
+      "seed": {
+        "id": "paul-le-floch",
+        "name": "Paul Le Floch",
+        "institution": "Harvard University",
+        "summary": "Axoft co-founder; Harvard PhD",
+        "profileUrl": "",
+        "queryName": "Paul Le Floch",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "jia-liu",
+      "openalexId": "https://openalex.org/A5100409757",
+      "status": "ambiguous",
+      "reason": "The candidate includes the correct Harvard bioelectronics papers but also recent food emulsions, rice-seed vision and liver-fibrosis work under unrelated institutions. Aggregate metrics withheld pending a clean author cluster.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "OpenAlex candidate",
+          "url": "https://api.openalex.org/authors/A5100409757"
+        }
+      ],
+      "seed": {
+        "id": "jia-liu",
+        "name": "Jia Liu",
+        "institution": "Harvard University",
+        "summary": "Academic co-founder of Axoft",
+        "profileUrl": "",
+        "queryName": "Jia Liu",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    },
+    {
+      "id": "daniel-palanker",
+      "openalexId": "https://openalex.org/A5064040602",
+      "status": "verified",
+      "reason": "Stanford affiliation and high-resolution photovoltaic retinal prosthesis publications match the PRIMA researcher. Metrics use this single OpenAlex profile only; this is a sampled identity review, not a publication-by-publication certification.",
+      "reviewed": "2026-09-15",
+      "evidence": [
+        {
+          "title": "Institutional/company identity reference",
+          "url": "https://profiles.stanford.edu/daniel-palanker"
+        },
+        {
+          "title": "Photovoltaic retinal prosthesis with high pixel density",
+          "url": "https://doi.org/10.1038/nphoton.2012.104"
+        },
+        {
+          "title": "Photovoltaic restoration of sight with high visual acuity",
+          "url": "https://doi.org/10.1038/nm.3851"
+        },
+        {
+          "title": "Design of a high-resolution optoelectronic retinal prosthesis",
+          "url": "https://doi.org/10.1088/1741-2560/2/1/012"
+        }
+      ],
+      "seed": {
+        "id": "daniel-palanker",
+        "name": "Daniel Palanker",
+        "institution": "Stanford University",
+        "summary": "Stanford researcher behind the PRIMA photovoltaic concept.",
+        "profileUrl": "https://profiles.stanford.edu/daniel-palanker",
+        "queryName": "Daniel Palanker",
+        "source": "Existing company-origin graph; institution labels are historical identity clues, not a current-employer claim."
+      }
+    }
+  ],
+  "coverage": {
+    "reviewedOriginalDirectoryPeople": 150,
+    "additionalGraphPeople": 13,
+    "totalReviewed": 163
+  },
+  "reviewNote": "All163 original identities were reviewed; unresolved or contaminated profiles are deliberately unranked. Identity review used name, institutional context and sampled publications, not a complete corpus audit. Rejected original-directory decisions remain here for audit history; the updater only emits people still in the current directory or supplemental graph seeds."
+}

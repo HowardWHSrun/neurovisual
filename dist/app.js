@@ -2047,6 +2047,8 @@
         if (selected)
             AtlasVisuals.mount(researcherBrowser, AtlasVisuals.researcher(selected, technologyLinks), '.na-researcher-start');
         researcherBrowser.insertAdjacentHTML('beforeend', NeuroConnections.teaser(selected ? '#person/' + selected.id : ''));
+        if (typeof NeuroPeople !== 'undefined')
+            researcherBrowser.insertAdjacentHTML('beforeend', NeuroPeople.teaser(selected ? '#person/' + selected.id : ''));
         var researcherRegion = researcherBrowser.querySelector('[data-researcher-region]');
         if (researcherRegion)
             researcherRegion.addEventListener('change', function () { state.region = researcherRegion.value; state.page = 0; state.selectedResearcher = ''; syncControls(); drawResearcherTrails(filteredResearchers()); });
@@ -2543,6 +2545,7 @@
     __applyLang();
     document.addEventListener('na-i18n', function () { __applyLang(); syncView(); syncControls(); renderDetail(); draw(); });
     window.neuroAtlas = {
+        organizations: L.map(function (d) { return { id: d.id, name: d.n, country: d.country, city: d.city, kind: d.k, summary: d.d, source: d.u }; }),
         counts: { technologies: T.length, organizations: L.length, researchers: researchers.length },
         records: [
             ...T.map(function (t) { return { id: t.id, title: t.n, description: t.summary, kind: 'Technology', href: '#tech/' + encodeURIComponent(t.id), keywords: [t.signal, t.mechanism, t.ex.join(' ')].join(' ') }; }),

@@ -44,3 +44,28 @@ See `VISUAL-PLAN.md` for the route-by-route revision checklist. `pnpm test` vali
 - `NeuroConnections.teaser()` links exact company, researcher, technology and lab identities to the appropriate story or network. Global search includes graph entries; company-directory search includes referenced people and relationship text.
 - Filters remain compact, submit explicitly and restore focus. Mobile stories stack vertically, graph paths adapt to canvas width, and every graph edge also appears in a keyboard-readable list. Source dialogs restore trigger focus on close.
 - Builds create both data globals and a portable Cytoscape graph. Crossref imports are cached at authoring time. The deployed site does not depend on live graph or bibliography APIs.
+
+## Reader organization (15 September 2026)
+
+- `organization.css` defines the three navigation groups, the beginner landing page (`#overview`, labeled Start here), and the topic directory (`#topics`). Existing section and record links continue to work.
+- Navigation uses native details elements. `setWorkspace` opens the active group for both hash navigation and atlas-originated view changes; topic routes highlight Topic guides and show the topic title in the location bar.
+- `guide-reading.css` keeps visual introductions visible and organizes complete topic guides into expandable sections. Expand all details opens the complete guide, including resources; individually toggling sections updates the button state.
+- The recommended reading sequence starts with the whole BCI system, then recording and signal interpretation. Learning cards show prerequisites and outcomes before the expandable four-step preview; project pages open the first step and leave assessment criteria visible.
+- Content remains in the page when collapsed. Source links, concepts, worked examples, pitfalls, learning instructions, and evaluation criteria are retained.
+
+## Four exploration views (15 September 2026)
+
+- `#explore?by=organizations|problems|people|countries` supplies four views of the same research. The default is problems. `problem` and `country` parameters can be combined; country pages link back to their relevant problem groups.
+- `data/exploration.json` holds purpose-based selections and a reason/source for each lab link. Direct focus and enabling research are different labels. Problem group membership is editorial and overlapping, not a claim of a demonstrated treatment outcome.
+- `data/exploration-people.json` supplies short entry stories using existing graph IDs, relationship types, and exact sources. Graph edge direction is preserved. Training, co-authorship, collaboration, and founding are kept distinct.
+- `scripts/build-explore.mjs` generates `dist/exploration-data.js`. Load this and `dist/explore.js` before the hub router. `window.neuroAtlas.organizations` exposes the existing named country fields for company discovery; no country is inferred from text search.
+- Country guides include exact mapped lab and company locations. Counts measure collection coverage. Global and European Union entries appear separately as work across countries. Long lists initially show eight entries with the rest in native disclosures.
+- Home and exploration images retain their research captions and original sources. The home microscopy is a Rice mouse-brain image; photographs and experimental figures are kept distinct from explanation diagrams.
+- Explore navigation pushes history and moves focus to the main content. Changing the country selector keeps focus on the replacement selector. Ordinary modified clicks remain native.
+
+## People and focused explanations (15 September 2026)
+
+- `#people` is the publication-influence directory; `#people/<id>` shows metrics, identity evidence, indexed papers and documented graph connections. Research-area filtering keeps cohort ranks stable. Profile links retain the results page and filters. `#person/<id>` retains the original research trail.
+- `#people?view=compare` places two people side by side; `#people?view=method` explains matching, metrics and weighted percentiles using a real example. Unknown identities and missing metrics never become fabricated zero scores.
+- `src/visuals.ts` now presents four focused sections: device pictures, labs, people, and neural counts. The illustrative 32-site /8-channel /6-unit journey has one active step, visible context and direct controls.
+- `people.css` adapts the ranked table to compact cards on phones. Native forms, focus restoration and result-page links support keyboard browsing.

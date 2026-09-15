@@ -1,0 +1,211 @@
+{
+  "reviewed": "2026-09-15",
+  "paths": [
+    {
+      "id": "xie-zhao-training",
+      "title": "Chong Xie → Zhengtuo Zhao",
+      "summary": "Follow Zhao's PhD training in Xie's group, then open his wider research network. His doctorate was awarded by UT Austin; his later postdoctoral work included Rice.",
+      "people": ["chong-xie", "zhengtuo-zhao"],
+      "nodeIds": ["chong-xie", "zhengtuo-zhao", "ut-austin"],
+      "edgeIds": ["zhao-xie-training", "zhao-ut-phd"],
+      "imageNodeId": "zhengtuo-zhao",
+      "href": "#connections/chong-xie?view=network&edge=zhao-xie-training",
+      "relationships": [
+        {
+          "from": "zhengtuo-zhao",
+          "to": "chong-xie",
+          "type": "PhD trainee in lab of",
+          "description": "Xie's alumni roster lists Zhengtuo Zhao as a PhD student in the group, with a 2015–2020 lab interval.",
+          "edgeId": "zhao-xie-training",
+          "source": {
+            "title": "Xie Lab — Team and alumni",
+            "url": "https://www.chongxie.net/team"
+          },
+          "limit": "The lab interval is not the doctorate's duration. The roster supports lab training; it does not independently establish sole formal dissertation supervision."
+        },
+        {
+          "from": "zhengtuo-zhao",
+          "to": "ut-austin",
+          "type": "Earned PhD at",
+          "description": "Zhao's UCAS biography dates his UT Austin biomedical engineering doctorate to September 2015–August 2019, followed by a UT Austin/Rice postdoc interval in 2019–2020.",
+          "edgeId": "zhao-ut-phd",
+          "source": {
+            "title": "Zhengtuo Zhao — UCAS faculty biography",
+            "url": "https://people.ucas.ac.cn/~zhaozt"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xie-zhao-shared-paper",
+      "title": "One paper, different author roles",
+      "summary": "See how Zhengtuo Zhao and Chong Xie contributed to the same 2017 nanoelectronic-thread study. The paper makes their authorship roles explicit.",
+      "people": ["zhengtuo-zhao", "chong-xie"],
+      "nodeIds": ["zhengtuo-zhao", "net-2017", "chong-xie"],
+      "edgeIds": ["zhao-net-2017", "xie-net-paper"],
+      "href": "#connections/net-2017?view=network&edge=zhao-net-2017",
+      "relationships": [
+        {
+          "from": "zhengtuo-zhao",
+          "to": "net-2017",
+          "type": "Co-first-authored",
+          "description": "The original paper names Zhao, Lan Luan and Xiaoling Wei as equal contributors.",
+          "edgeId": "zhao-net-2017",
+          "source": {
+            "title": "2017 NET paper — original article at UT Austin",
+            "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
+          },
+          "limit": "These are selected contributors from a larger author team. Authorship alone does not establish patent ownership or a company license."
+        },
+        {
+          "from": "chong-xie",
+          "to": "net-2017",
+          "type": "Corresponding author of",
+          "description": "The same article identifies Xie as its corresponding author, with a UT Austin affiliation.",
+          "edgeId": "xie-net-paper",
+          "source": {
+            "title": "2017 NET paper — author and affiliation information",
+            "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
+          }
+        }
+      ]
+    },
+    {
+      "id": "zhao-li-stairmed",
+      "title": "Zhengtuo Zhao + Xue Li → StairMed",
+      "summary": "Two researchers connect to the same company through disclosed founder roles. Follow each person to their training, papers and technology links.",
+      "people": ["zhengtuo-zhao", "xue-li"],
+      "nodeIds": ["zhengtuo-zhao", "stairmed", "xue-li"],
+      "edgeIds": ["zhao-stairmed-founder", "li-stairmed-founder"],
+      "href": "#connections/stairmed?view=network&edge=zhao-stairmed-founder",
+      "relationships": [
+        {
+          "from": "zhengtuo-zhao",
+          "to": "stairmed",
+          "type": "Co-founded",
+          "description": "The 2026 human uFINE paper's competing-interest disclosure identifies Zhengtuo Zhao as a StairMed founder.",
+          "edgeId": "zhao-stairmed-founder",
+          "source": {
+            "title": "Human uFINE study — competing interests",
+            "url": "https://www.nature.com/articles/s41467-026-71443-7"
+          },
+          "limit": "A founder relationship does not establish a license from the earlier NET research or equate the study device with a marketed implant."
+        },
+        {
+          "from": "xue-li",
+          "to": "stairmed",
+          "type": "Co-founded",
+          "description": "The same disclosure identifies Xue Li as a StairMed founder alongside Zhao.",
+          "edgeId": "li-stairmed-founder",
+          "source": {
+            "title": "Human uFINE study — competing interests",
+            "url": "https://www.nature.com/articles/s41467-026-71443-7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rapoport-two-companies",
+      "title": "Benjamin Rapoport → two companies",
+      "summary": "A shared founder connects Neuralink and Precision Neuroscience. Open the two documented roles to understand the connection.",
+      "people": ["benjamin-rapoport"],
+      "nodeIds": ["neuralink", "benjamin-rapoport", "precision"],
+      "edgeIds": ["rapoport-neuralink", "rapoport-precision"],
+      "href": "#connections/benjamin-rapoport?view=network&edge=rapoport-precision",
+      "relationships": [
+        {
+          "from": "benjamin-rapoport",
+          "to": "neuralink",
+          "type": "Co-founded",
+          "description": "Precision's official leadership biography identifies Rapoport as a Neuralink co-founder before Precision.",
+          "edgeId": "rapoport-neuralink",
+          "source": {
+            "title": "Precision Neuroscience — Benjamin Rapoport biography",
+            "url": "https://www.precisionneuro.io/our-vision"
+          },
+          "limit": "This is a historical founding role, not a statement of current employment."
+        },
+        {
+          "from": "benjamin-rapoport",
+          "to": "precision",
+          "type": "Co-founded",
+          "description": "Precision identifies Rapoport as its co-founder and Chief Science Officer.",
+          "edgeId": "rapoport-precision",
+          "source": {
+            "title": "Precision Neuroscience — leadership",
+            "url": "https://www.precisionneuro.io/our-vision"
+          },
+          "limit": "A shared founder does not establish a corporate spinout, subsidiary relationship or technology license between the companies."
+        }
+      ]
+    },
+    {
+      "id": "oxley-opie-synchron",
+      "title": "Thomas Oxley + Nicholas Opie → Synchron",
+      "summary": "Follow two co-founders into the endovascular interface story. Melbourne's account connects their company to university and clinical research.",
+      "people": ["thomas-oxley", "nicholas-opie"],
+      "nodeIds": ["thomas-oxley", "synchron", "nicholas-opie"],
+      "edgeIds": ["oxley-synchron-founded", "opie-synchron-founded"],
+      "href": "#connections/synchron?view=network&edge=oxley-synchron-founded",
+      "relationships": [
+        {
+          "from": "thomas-oxley",
+          "to": "synchron",
+          "type": "Co-founded",
+          "description": "The University of Melbourne credits Oxley and Opie with founding Synchron in 2012.",
+          "edgeId": "oxley-synchron-founded",
+          "source": {
+            "title": "University of Melbourne — Synchron commercialization story",
+            "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+          }
+        },
+        {
+          "from": "nicholas-opie",
+          "to": "synchron",
+          "type": "Co-founded",
+          "description": "The same university account identifies Opie as a co-founder alongside Oxley.",
+          "edgeId": "opie-synchron-founded",
+          "source": {
+            "title": "University of Melbourne — Synchron commercialization story",
+            "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+          },
+          "limit": "These sources document co-founders and shared research, not a mentor–trainee relationship between the two people."
+        }
+      ]
+    },
+    {
+      "id": "robinson-lab-motif",
+      "title": "Jacob Robinson → Rice lab → Motif",
+      "summary": "A founder role and an explicitly documented lab spinout connect Robinson's university research to Motif. Explore the people and work behind its neuromodulation devices.",
+      "people": ["jacob-robinson"],
+      "nodeIds": ["jacob-robinson", "motif", "robinson-lab-rice"],
+      "edgeIds": ["motif-neurotech-founder", "robinson-motif-spinout"],
+      "href": "#connections/motif?view=network&edge=motif-neurotech-founder",
+      "relationships": [
+        {
+          "from": "jacob-robinson",
+          "to": "motif",
+          "type": "Founder of",
+          "description": "Rice identifies Robinson as a Motif founder and CEO in its January 2025 research announcement.",
+          "edgeId": "motif-neurotech-founder",
+          "source": {
+            "title": "Rice — brain research awards and Motif's research roots",
+            "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards"
+          }
+        },
+        {
+          "from": "robinson-lab-rice",
+          "to": "motif",
+          "type": "Spun out as",
+          "description": "Rice explicitly describes Motif as a startup that spun out of Robinson's Rice laboratory.",
+          "edgeId": "robinson-motif-spinout",
+          "source": {
+            "title": "Rice — brain research awards and Motif's research roots",
+            "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards"
+          },
+          "limit": "This account establishes a lab spinout; it does not specify the terms of a technology license."
+        }
+      ]
+    }
+  ]
+}

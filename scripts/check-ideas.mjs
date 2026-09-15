@@ -58,7 +58,8 @@ assert.equal(api.records().length,ideas.ideas.length+ideas.companies.length);
 const index=await read('index.html');
 const scripts=[...index.matchAll(/<script defer src="([^"?]+)/g)].map(m=>m[1]);
 for(const [a,b] of [['hub-utils','ideas'],['ideas-data','company-media'],['company-media','ideas'],['ideas','app'],['app','hub'],['i18n','app']]) assert(scripts.indexOf('./dist/'+a+'.js')<scripts.indexOf('./dist/'+b+'.js'));
-assert(index.includes('data-route="ideas"'));
+const legacyNavRoutes=['overview','connections','visuals','resources','learn','glossary','methods','ideas','labs','atlas','organizations','researchers','frontier','pathways','timeline'];
+for(const route of [...legacyNavRoutes,'topics','explore']) assert(index.includes(`data-route="${route}"`),`Keep navigation to ${route}`);
 for(const key of ['purposeAll','operationAll','axisGuide1Text','axisGuide2Text','axisGuide3Text']) assert(index.includes('data-i18n="'+key+'"'),`Preserve atlas label ${key}`);
 
 // Exercise the interaction controller with small element doubles. This is a
@@ -98,22 +99,52 @@ assert(container.querySelector('#idea-budget-result').textContent.startsWith('En
 // Run the actual hub router against lightweight shell elements to check that
 // notebook routes and search coexist with the retained atlas adapter.
 const hubContext=vm.createContext({URL,URLSearchParams,document:{readyState:'loading',documentElement:{setAttribute(){}},addEventListener(){}}});
-for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/connections-data.js','dist/connections.js','dist/origins-data.js','dist/connection-network.js','dist/origins.js','dist/field-visuals.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js']) vm.runInContext(await read(path),hubContext);
+for(const path of ['dist/i18n.js','dist/hub-utils.js','dist/hub-data.js','dist/hub-guides.js','dist/labs-data.js','dist/visuals-data.js','dist/visuals.js','dist/connections-data.js','dist/connections.js','dist/origins-data.js','dist/connection-network.js','dist/origins.js','dist/field-visuals.js','dist/labs.js','dist/ideas-data.js','dist/company-media.js','dist/ideas.js','dist/exploration-data.js','dist/explore.js','dist/people-data.js','dist/people.js']) vm.runInContext(await read(path),hubContext);
 const strings=vm.runInContext('I18N.strings',hubContext);
 for(const m of atlas.matchAll(/I18N\.t\('([^']+)'\)/g)) assert(strings[m[1]]?.en && strings[m[1]]?.zh,`Missing bilingual key ${m[1]}`);
 for(const m of index.matchAll(/data-i18n(?:-aria|-ph|-html)?="([^"]+)"/g)) assert(strings[m[1]],`Missing static translation ${m[1]}`);
-function shell(id){return {id,value:'',hidden:false,innerHTML:'',textContent:'',open:false,events:{},dataset:{},classList:{add(){},remove(){},contains(){return false;}},showModal(){this.open=true;},close(){this.open=false;this.events.close?.();},setAttribute(){},removeAttribute(){},focus(){},addEventListener(t,fn){this.events[t]=fn;},querySelector(){return null;},querySelectorAll(){return [];}};}
-const shellIds=['hub-content','neurotech-atlas-2026','global-search','site-sidebar','mobile-menu','main-content','global-search-form','atlas-view-title','atlas-view-description','workspace-page','workspace-section','search-dialog','search-open','search-close','search-status','search-suggestions'];
+function shell(id){return {id,value:'',hidden:false,innerHTML:'',textContent:'',open:false,events:{},dataset:{},attributes:{},classList:{add(){},remove(){},contains(){return false;}},showModal(){this.open=true;},close(){this.open=false;this.events.close?.();},setAttribute(name,value){this.attributes[name]=String(value);},removeAttribute(name){delete this.attributes[name];},getAttribute(name){return this.attributes[name]??null;},focus(){},addEventListener(t,fn){this.events[t]=fn;},querySelector(){return null;},querySelectorAll(){return [];}};}
+const shellIds=['hub-content','neurotech-atlas-2026','global-search','site-sidebar','mobile-menu','main-content','global-search-form','atlas-view-title','atlas-view-description','workspace-page','workspace-section','search-dialog','search-open','search-close','search-status','search-suggestions','na-search','na-family','na-purpose','na-operation','na-region','na-kind','na-model','na-sort'];
 const shellElements=Object.fromEntries(shellIds.map(id=>[id,shell(id)]));
-const nav=[...index.matchAll(/data-route="([^"]+)"/g)].map(m=>({...shell(m[1]),dataset:{route:m[1]}}));
+const navMarkup=index.match(/<nav class="site-nav"[^>]*>([\s\S]*?)<\/nav>/)?.[1];
+assert(navMarkup,'Main navigation exists');
+const nav=[...navMarkup.matchAll(/data-route="([^"]+)"/g)].map(m=>({...shell(m[1]),dataset:{route:m[1]}}));
+const navGroups=[...navMarkup.matchAll(/<details\b([^>]*)>/g)].map(m=>Object.fromEntries([...m[1].matchAll(/([\w-]+)="([^"]*)"/g)].map(a=>[a[1],a[2]]))).filter(a=>a.class?.split(' ').includes('nav-group')).map((attrs,i)=>({...shell('nav-group-'+i),dataset:{views:attrs['data-views']||''}}));
+assert(navGroups.length>1,'Navigation has distinct expandable groups');
+const skipLink=shell('skip-link');
 const windowEvents={},documentEvents={},navigated=[];
 hubContext.location={hash:'#ideas'};
 hubContext.history={replaceState(_a,_b,hash){hubContext.location.hash=hash;},pushState(_a,_b,hash){hubContext.location.hash=hash;}};
 hubContext.window={neuroAtlas:{records:[{id:'neuralink',title:'Neuralink',description:'Organization',kind:'Organization',href:'#org/neuralink'}],counts:{technologies:1,organizations:1,researchers:1},navigate(...args){navigated.push(args);}},addEventListener(type,fn){windowEvents[type]=fn;},scrollTo(){}};
-hubContext.document={body:shell('body'),getElementById:id=>shellElements[id]||null,querySelector:()=>shell('skip-link'),querySelectorAll:()=>nav,addEventListener(type,fn){documentEvents[type]=fn;}};
+hubContext.document={body:shell('body'),getElementById:id=>shellElements[id]||null,querySelector:selector=>selector==='.skip-link'?skipLink:null,querySelectorAll:selector=>selector==='.site-nav a'?nav:selector==='.nav-group'?navGroups:[],addEventListener(type,fn){documentEvents[type]=fn;}};
 vm.runInContext(await read('dist/hub.js'),hubContext);
 const hubContent=shellElements['hub-content'],atlasContent=shellElements['neurotech-atlas-2026'];
+function assertNavigation(view,currentRoute,detail=false){
+  assert.equal(hubContext.document.body.dataset.view,view,`Workspace view is ${view}`);
+  assert.equal(hubContext.document.body.dataset.detail,String(detail),`Detail state for ${view}`);
+  assert.deepEqual(nav.filter(link=>link.getAttribute('aria-current')==='page').map(link=>link.dataset.route),[currentRoute],`Current navigation for ${view}`);
+  for(const group of navGroups){
+    const active=group.dataset.views.split(' ').includes(view);
+    assert.equal(group.open,active,`Group ${group.dataset.views} open state for ${view}`);
+    assert.equal(group.dataset.active,String(active),`Group ${group.dataset.views} active state for ${view}`);
+  }
+}
 assert(hubContent.innerHTML.includes('Big ideas, made testable.'));assert(atlasContent.hidden);
+// A newcomer can enter the topic directory and a guide while staying oriented.
+hubContext.location.hash='#overview';windowEvents.hashchange();
+assertNavigation('overview','overview');assert(hubContent.innerHTML.includes('href="#topics"'));
+for(const by of ['problems','organizations','people','countries'])assert(hubContent.innerHTML.includes(`href="#explore?by=${by}"`),`Welcome links to the ${by} lens`);
+hubContext.location.hash='#explore?by=problems';windowEvents.hashchange();
+assertNavigation('explore','explore');assert(hubContent.innerHTML.includes('data-ex-view="problems"'));
+hubContext.location.hash='#topics';windowEvents.hashchange();
+assertNavigation('topics','topics');assert(!hubContent.hidden && atlasContent.hidden);
+const topics=vm.runInContext('hubTopics',hubContext);
+for(const topic of topics)assert(hubContent.innerHTML.includes(`href="#topic/${topic.id}"`),`Directory links to ${topic.id}`);
+hubContext.location.hash='#topic/interfaces';windowEvents.hashchange();
+assertNavigation('topic','topics',true);
+assert(hubContent.innerHTML.includes('href="#topics"'),'Topic guides return to the topic directory');
+assert(hubContent.innerHTML.includes('Neural interfaces') && hubContent.innerHTML.includes('Electrode impedance and noise'),'Topic detail retains concepts');
+assert(hubContent.innerHTML.includes('https://'),'Topic detail retains source links');
 for(const [hash,expected] of [['#ideas/moores-law-bci?section=counts&metric=channels','384'],['#ideas/moores-law-bci?section=companies&company=synchron','Synchron'],['#search?q=Moore','kind=Idea'],['#search?q=Paradromics','Company scaling'],['#ideas/missing','IDEA NOT FOUND'],['#labs/rice-tringides','hydroMEA'],['#labs?view=schools','University of Zurich'],['#labs?view=progress','lab-progress-table'],['#search?q=hydroMEA','Research lab'],['#labs/missing','profile not found']]){
   hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);assert(!hubContent.hidden && atlasContent.hidden);
 }
@@ -123,7 +154,7 @@ assert(hubContent.innerHTML.includes('method-compare') && hubContent.innerHTML.i
 shellElements['search-open'].events.click();assert(shellElements['search-dialog'].open);
 shellElements['global-search'].value='hydroMEA';shellElements['global-search'].events.input({isComposing:false});
 assert.equal(hubContext.location.hash,'#methods');assert(shellElements['search-suggestions'].innerHTML.includes('Tringides'));
-assert.equal(shellElements['search-status'].textContent,'1 match');
+assert.match(shellElements['search-status'].textContent,/^[1-9]\d* matches?(?: · first 6 shown)?$/);
 documentEvents.keydown({key:'Escape',target:{tagName:'INPUT'},preventDefault(){}});assert(!shellElements['search-dialog'].open);
 documentEvents.keydown({key:'/',target:{tagName:'MAIN'},preventDefault(){}});assert(shellElements['search-dialog'].open);
 shellElements['global-search'].events.compositionstart();documentEvents.keydown({key:'Escape',isComposing:true,target:{tagName:'INPUT'},preventDefault(){}});assert(shellElements['search-dialog'].open);shellElements['global-search'].value='never-render-during-ime';shellElements['global-search'].events.input({isComposing:true});assert(!shellElements['search-suggestions'].innerHTML.includes('No matches yet'));
@@ -132,6 +163,24 @@ shellElements['global-search-form'].events.submit({preventDefault(){}});assert.e
 for(const [hash,expected] of [['#search?q=Calcium+imaging','methods?left=calcium'],['#methods?left=fmri','EEG'],['#resources?type=Dataset','resource-shortcuts'],['#learn','learning-preview'],['#glossary?letter=E','glossary-alphabet'],['#methods?left=ecog&right=intracortical','Intracortical electrodes']]){hubContext.location.hash=hash;windowEvents.hashchange();assert(hubContent.innerHTML.includes(expected),hash);}
 console.log('Passed: on-demand search, keyboard dismissal, IME safety, submit navigation, and purpose-specific section routes.');
 hubContext.location.hash='#org/neuralink';windowEvents.hashchange();assert.equal(navigated.at(-1)[1],'neuralink');assert(hubContent.hidden && !atlasContent.hidden);
+assertNavigation('organizations','organizations',true);
+// Atlas-originated transitions already applied the user's filters and selection.
+// Updating the shell must leave that state in place instead of navigating again.
+const atlasFilters={'na-search':'electrode','na-family':'record','na-purpose':'research','na-operation':'read','na-region':'North America','na-kind':'Company','na-model':'human','na-sort':'name'};
+for(const [id,value] of Object.entries(atlasFilters))shellElements[id].value=value;
+atlasContent.innerHTML='<article data-selected="neuralink">Selected organization</article>';
+const retainedAtlasMarkup=atlasContent.innerHTML,priorNavigationCount=navigated.length;
+for(const [hash,view,currentRoute,detail] of [['#organizations?q=electrode','organizations','organizations',false],['#org/neuralink','organizations','organizations',true],['#atlas?q=electrode','atlas','atlas',false]]){
+  for(const group of navGroups)group.open=false;
+  windowEvents['neuroatlas:viewchange']({detail:{internal:true,hash,view}});
+  assert.equal(hubContext.location.hash,hash,'Internal navigation updates the address');
+  assertNavigation(view,currentRoute,detail);
+  assert.equal(navigated.length,priorNavigationCount,'Internal atlas transition does not re-run atlas navigation');
+  assert.equal(atlasContent.innerHTML,retainedAtlasMarkup,'Internal atlas transition preserves rendered selection');
+  for(const [id,value] of Object.entries(atlasFilters))assert.equal(shellElements[id].value,value,`Internal atlas transition preserves ${id}`);
+  assert(hubContent.hidden && !atlasContent.hidden,'Internal atlas transition keeps the atlas visible');
+}
+console.log('Passed: retained navigation destinations, overview-to-topic journey, active expandable groups, direct organization links, and internal atlas transitions preserving filters and selection.');
 
 const media=vm.runInContext('NeuroMedia',context);
 for(const c of ideas.companies){

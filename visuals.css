@@ -18,3 +18,55 @@
 .topic-visual-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:stretch;margin-bottom:24px}.topic-visual-intro .fv-topic{margin:0}.topic-visual-intro .topic-primer{display:flex;flex-direction:column;justify-content:center;margin:0;padding:27px}.topic-visual-intro .topic-primer h2{font-size:26px;line-height:1.25}.topic-visual-intro .topic-primer h3{margin:15px 0}.learning-visual-preview{margin:15px 0}.learning-visual-preview .fv-figure{margin:0}.learning-visual-preview .fv-art{padding:4px 16px}.learning-visual-preview .fv-svg{max-height:175px}.learning-visual-preview .fv-caption{padding:10px 13px}.learning-visual-preview .fv-caption>strong{font-size:13px}.learning-visual-preview .fv-caption>p{display:none}.learning-visual-preview .fv-foot{margin-top:8px}.learning-visual-preview .fv-eyebrow{font-size:8px}
 @media(max-width:760px){.topic-visual-intro{grid-template-columns:1fr;gap:18px}.topic-visual-intro .topic-primer{padding:22px}.learning-visual-preview .fv-svg{max-height:180px}}
 @media(max-width:700px){.visual-page-head h1{font-size:clamp(34px,10.5vw,49px)}}
+
+/* A selected section has one task: inspect devices, visit labs, meet people,
+   or work through the count example. Keep these route links as real links. */
+.visual-page .visual-page-head{display:block;padding:4px 0 23px}
+.visual-page .visual-page-head h1{font-size:clamp(32px,3.5vw,45px);line-height:1.12;letter-spacing:-.04em;margin:10px 0 12px}
+.visual-page .visual-page-head p{max-width:740px;font-size:15px;line-height:1.65}
+.visual-page .visual-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:5px;margin:0 0 27px;border:1px solid #cedddf;border-radius:10px;background:#eaf0f1}
+.visual-page .visual-tabs a{justify-content:center;min-height:48px;padding:10px 13px;text-align:center;font-size:13px;line-height:1.35;border-radius:6px}
+.visual-page .visual-tabs a[aria-current=page]{background:#163d45;color:#fff;box-shadow:0 2px 5px #163d4517}
+.visual-gallery-heading{align-items:flex-start;margin-bottom:10px}
+.visual-gallery-heading h2{font-size:24px;letter-spacing:-.03em;line-height:1.3;color:#23424d;margin:0 0 9px}
+.visual-gallery-heading p{font-size:13px;line-height:1.7;max-width:700px}
+.visual-gallery-heading>span{padding-top:6px;color:#647d83;font-size:11px}
+.visual-gallery-help{font-size:11px;line-height:1.7;color:#687b85;margin:0 0 22px}
+.visual-people-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 20px;margin:20px 0;background:#e4f0ea;border:1px solid #c7ddd1;border-radius:9px;text-decoration:none;color:#285c51}
+.visual-people-link strong,.visual-people-link small{display:block}
+.visual-people-link strong{font-size:16px;line-height:1.4}
+.visual-people-link small{font-size:12px;line-height:1.6;color:#557769;margin-top:3px}
+.visual-people-link>b{font-size:25px;font-weight:400}
+.visual-grid-people{grid-template-columns:repeat(auto-fill,minmax(240px,340px))}
+.visual-grid-people .visual-image{aspect-ratio:1/1}
+.visual-count-story{margin:0}
+.visual-count-story>header{max-width:760px;margin:0 0 21px}
+.visual-count-story h2{font-size:clamp(25px,3vw,33px);line-height:1.2;margin:10px 0 12px}
+.visual-count-story>header p{font-size:14px;line-height:1.7;margin:0}
+.visual-count-story .visual-count-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px;margin:0 0 23px}
+.visual-count-steps button{position:relative;display:grid;grid-template-columns:auto 1fr;gap:3px 11px;align-items:center;text-align:left;min-height:90px;padding:15px;background:#f0f4f4;color:#527079;border:1px solid #ccdce0;border-radius:8px;font:inherit;cursor:pointer}
+.visual-count-steps button:not(:last-child)::after{content:'→';position:absolute;right:-19px;top:calc(50% - 10px);font-size:18px;color:#6f9393;font-weight:400}
+.visual-count-steps button>strong{grid-column:2;font-size:31px;font-weight:650;line-height:1;color:#396961;letter-spacing:-.04em}
+.visual-count-steps button>span:last-child{grid-column:2;font-size:12px;line-height:1.4}
+.visual-count-step-number{grid-row:1/3;align-self:center;display:grid;place-items:center;border:1px solid #bcd1cd;border-radius:50%;height:24px;width:24px;font-size:10px}
+.visual-count-steps button[aria-pressed=true]{border:2px solid #3c8c79;background:#e0f1e9;padding:14px;color:#254e46}
+.visual-count-steps button[aria-pressed=true] .visual-count-step-number{background:#347865;color:#fff;border-color:#347865}
+.visual-count-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:stretch}
+.visual-count-stage{padding:20px 16px;background:#173442;justify-content:center}
+.visual-count-art svg{max-height:330px}
+.visual-count-stage>p{margin:8px 0 0;font-size:11px;color:#bed2d9}
+.visual-count-reader{padding:8px 0;min-width:0}
+.visual-count-kicker{display:block;font-size:10px;line-height:1.5;letter-spacing:.08em;color:#537d77;font-weight:650}
+.visual-count-reader h3{font-size:25px;color:#234b4c;letter-spacing:-.025em;line-height:1.25;margin:12px 0}
+.visual-count-reader p{font-size:14px;line-height:1.75;margin:0 0 14px;color:#536c77}
+.visual-count-reader .visual-count-takeaway{padding:12px 14px;border-left:3px solid #9abfb2;background:#edf4f1;font-size:12px;line-height:1.75;color:#47675e}
+.visual-count-reader>button{font-size:12px;padding:10px 13px;min-height:42px;margin:0 0 12px}
+.visual-count-navigation{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:auto;padding-top:16px}
+.visual-count-navigation>button{min-height:42px;padding:9px 12px;border:1px solid #a8c1c1;border-radius:6px;background:#fff;color:#245a5b;cursor:pointer;font:inherit;font-size:12px;line-height:1.4}
+.visual-count-navigation>button:last-child{background:#245e59;border-color:#245e59;color:white}
+.visual-count-navigation>button:disabled{background:#edf1f2;color:#7a8e93;border-color:#d5dfe1;cursor:default}
+.visual-count-navigation>span{font-size:10px;color:#617c82;text-align:center;white-space:nowrap}
+.visual-count-reader>a{padding-top:17px;margin-top:0;font-size:12px;line-height:1.7}
+.visual-page :is(a,button):focus-visible,.visual-count-story button:focus-visible,.visual-enlarge:focus-visible{outline:3px solid #b78031;outline-offset:4px}
+@media(max-width:1000px){.visual-page .visual-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}.visual-count-layout{gap:22px}.visual-count-navigation{gap:6px}.visual-count-navigation>button{padding:9px 10px;font-size:11px}}
+@media(max-width:700px){.visual-page .visual-page-head{padding-bottom:20px}.visual-page .visual-page-head h1{font-size:34px}.visual-page .visual-page-head p{font-size:14px}.visual-page .visual-tabs{margin-bottom:22px}.visual-page .visual-tabs a{font-size:12px;padding:10px;min-height:47px}.visual-gallery-heading{gap:12px}.visual-gallery-heading h2{font-size:23px}.visual-gallery-heading>span{display:block;white-space:normal;text-align:right;max-width:100px;flex-shrink:0;font-size:10px}.visual-gallery-help{font-size:11px}.visual-grid-people{grid-template-columns:minmax(0,1fr);max-width:400px}.visual-people-link{padding:16px}.visual-count-story .visual-count-steps{gap:17px;margin-bottom:19px}.visual-count-steps button{grid-template-columns:1fr;gap:7px;padding:12px 8px;min-height:108px;text-align:center;justify-items:center}.visual-count-steps button[aria-pressed=true]{padding:11px 7px}.visual-count-steps button>strong,.visual-count-steps button>span:last-child{grid-column:1}.visual-count-steps button>strong{font-size:29px}.visual-count-steps button>span:last-child{font-size:11px}.visual-count-step-number{position:absolute;left:5px;top:5px;height:15px;width:15px;font-size:8px;grid-row:auto;border:0;opacity:.8}.visual-count-steps button:not(:last-child)::after{right:-15px;font-size:15px}.visual-count-layout{grid-template-columns:1fr;gap:20px}.visual-count-stage{padding:16px 10px}.visual-count-art svg{max-height:300px}.visual-count-reader{padding:0}.visual-count-reader h3{font-size:25px}.visual-count-navigation{padding-top:6px}.visual-count-navigation>button{font-size:12px;padding:10px 13px}.visual-count-reader>a{padding-top:18px}.visual-count-stage>p{font-size:10px}}

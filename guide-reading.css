@@ -1,0 +1,77 @@
+/* Short introductions with the complete guide one disclosure away. */
+.guide-reading-heading { margin: 28px 0 17px; }
+.guide-reading-heading h2 { margin: 0 0 7px; font-size: 1.35rem; letter-spacing: -.02em; }
+.guide-reading-heading p, .guide-term-help, .learning-reading-hint { color: #53697a; font-size: .86rem; line-height: 1.65; }
+.guide-term-help { margin: 17px 0 0; }
+.guide-reading-detail { margin: 10px 0; border: 1px solid #d8e2e9; border-radius: 10px; background: #fff; }
+.guide-reading-detail > summary, .learning-step-detail > summary { padding: 18px 20px; cursor: pointer; color: #193c52; list-style-position: inside; min-height: 44px; }
+.guide-reading-detail > summary::marker, .learning-step-detail > summary::marker { color: #537b89; font-size: .8em; }
+.guide-reading-detail > summary > span, .learning-step-detail > summary > span { display: inline-block; max-width: calc(100% - 23px); vertical-align: top; }
+.guide-reading-detail > summary strong { display: block; font-size: .97rem; line-height: 1.45; font-weight: 600; }
+.guide-reading-detail > summary small { display: block; color: #607586; font-size: .78rem; line-height: 1.55; margin-top: 4px; }
+.guide-reading-detail > summary:hover, .learning-step-detail > summary:hover { background: #f3f8fa; border-radius: 9px; }
+.guide-reading-detail[open] > summary, .learning-step-detail[open] > summary { border-bottom: 1px solid #e1e9ee; border-radius: 9px 9px 0 0; background: #f3f8fa; }
+.guide-reading-detail > summary:focus-visible, .learning-step-detail > summary:focus-visible, .learning-card-preview > summary:focus-visible, .guide-reading-sequence a:focus-visible { outline: 3px solid #236c91; outline-offset: 3px; border-radius: 6px; }
+.guide-reading-body { padding: 22px; overflow-wrap: anywhere; }
+.guide-reading-body > :first-child { margin-top: 0; }
+.guide-reading-body > :last-child { margin-bottom: 0; }
+.guide-reading-body .guide-tradeoffs { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.guide-reading-body .guide-tradeoffs article { background: #fbfcfd; padding: 20px; }
+.guide-reading-body .guide-tradeoffs p, .guide-reading-body .guide-workflow p { font-size: .92rem; line-height: 1.75; }
+.guide-reading-body .guide-workflow { border-top: 0; }
+.guide-reading-body .guide-workflow li:last-child { border-bottom: 0; padding-bottom: 0; }
+.guide-reading-body .worked-example { margin: 0; padding: 0; border: 0; background: transparent; }
+.guide-reading-body .worked-example h3 { margin: 0 0 15px; }
+.guide-reading-pitfalls ul { margin: 0; padding-left: 21px; }
+.guide-reading-pitfalls li, .guide-reading-body.guide-sources li { color: #4b6476; line-height: 1.8; font-size: .93rem; }
+.guide-reading-pitfalls li + li, .guide-reading-body.guide-sources li + li { margin-top: 13px; }
+.guide-reading-body.guide-sources { border-left: 0; }
+.guide-resource-detail { margin-top: 10px; }
+.guide-reading-body .resource-grid { margin: 0; }
+.guide-next-section { margin-top: 30px; padding-top: 9px; }
+.guide-next-section .section-heading { margin-top: 15px; }
+.guide-next-section .topic-next { margin: 15px 0 27px; }
+.guide-next-section > h3 { font-size: .87rem; margin: 0 0 12px; color: #5b7283; }
+.guide-reading-sequence { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 28px 0 0; padding: 17px; background: #edf5f6; border-radius: 10px; }
+.guide-reading-sequence > span { font-size: .75rem; color: #486776; margin-right: 5px; }
+.guide-reading-sequence a { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 8px 10px; min-height: 44px; border-radius: 6px; font-size: .82rem; line-height: 1.5; color: #224b5d; }
+.guide-reading-sequence a > span { color: #68828c; font-size: .7rem; }
+.guide-reading-sequence a[aria-current="step"] { background: #fff; box-shadow: 0 0 0 1px #c5dce1; text-decoration: none; font-weight: 600; }
+.guide-reading-sequence a small { font-size: .65rem; font-weight: 400; color: #586d77; }
+.learning-card-facts { margin: 9px 0 10px; padding: 15px 17px; border-radius: 7px; background: #f5f0e8; }
+.learning-card-facts > div + div { margin-top: 15px; }
+.learning-card-facts dt { font-size: .7rem; font-weight: 650; color: #76573b; }
+.learning-card-facts dd { margin: 5px 0 0; font-size: .83rem; line-height: 1.65; color: #5c625f; }
+.learning-card-preview { margin: 0 0 19px; border-bottom: 1px solid #e4dbce; }
+.learning-card-preview > summary { padding: 12px 0; min-height: 44px; color: #76573b; cursor: pointer; font-size: .8rem; }
+.learning-card-preview .learning-preview { margin: 7px 0 15px; }
+.learning-card-preview .learning-visual-preview { margin-bottom: 15px; }
+.learning-reading-hint { margin: 25px 0 0; text-align: center; }
+body[data-view=learn] .learning-reading-steps { margin-top: 15px; }
+body[data-view=learn] .learning-reading-steps > li { padding: 10px 0; align-items: flex-start; }
+.learning-reading-steps .step-number { margin-top: 17px; flex-shrink: 0; }
+.learning-step-detail { flex: 1; min-width: 0; border: 1px solid #e3ddd5; border-radius: 9px; background: #fff; }
+.learning-step-detail > summary { color: #684b34; }
+.learning-step-detail > summary::marker { color: #967653; }
+.learning-step-detail > summary strong { display: block; margin: 5px 0 0; font-size: 1.06rem; line-height: 1.5; }
+.learning-step-detail > summary .eyebrow { font-size: .62rem; }
+.learning-step-detail[open] > summary { border-bottom-color: #e7ded2; background: #faf7f1; }
+.learning-step-body { padding: 4px 24px 23px; }
+.learning-step-body p { font-size: .91rem; line-height: 1.8; }
+@media (max-width: 760px) {
+  .guide-reading-detail > summary, .learning-step-detail > summary { padding: 16px; }
+  .guide-reading-body { padding: 18px; }
+  .guide-reading-body .guide-tradeoffs { grid-template-columns: 1fr; }
+  .guide-reading-body .guide-tradeoffs article { padding: 17px; }
+  .guide-reading-sequence { align-items: stretch; gap: 5px; }
+  .guide-reading-sequence > span { flex-basis: 100%; margin-bottom: 5px; }
+  .guide-reading-sequence a { flex-basis: 100%; }
+  .learning-step-body { padding: 3px 17px 19px; }
+  .learning-reading-steps .step-number { width: 30px; height: 30px; font-size: .74rem; }
+}
+
+.guide-reading-heading { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.guide-reading-heading p { margin-bottom:0; }
+#guide-expand-all { flex-shrink:0; border:1px solid #b6cbd2; background:white; color:#2e596b; min-height:44px; border-radius:7px; padding:9px 13px; font-size:.78rem; }
+#guide-expand-all:hover { background:#edf5f6; }
+@media(max-width:760px) { .guide-reading-heading{align-items:flex-start;flex-direction:column;gap:13px;} }

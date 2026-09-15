@@ -59,7 +59,7 @@ const ConnectionNetwork = (() => {
             target.addClass('is-selected');
             target.connectedNodes().addClass('is-neighbor');
         } };
-        const showNode = (nodeId) => { const n = node(nodeId); const c = neuroOriginsData.companies.find(c => c.nodeId === nodeId); detail.innerHTML = `<span class="eyebrow">${e(n.kind)}</span><h2>${e(n.name)}</h2><p>${e(n.summary)}</p>${c ? `<a href="#connections/${e(c.id)}?view=origins">Read the origin story ↗</a>` : ''}<a href="${e(href(n.id))}">Explore two steps from here ↗</a>${n.href ? `<a href="${n.href.startsWith('#') ? e(n.href) : u(n.href)}"${n.href.startsWith('#') ? '' : ' target="_blank" rel="noopener noreferrer"'}>Open full profile ↗</a>` : ''}`; if (cy) {
+        const showNode = (nodeId) => { const n = node(nodeId); const c = neuroOriginsData.companies.find(c => c.nodeId === nodeId); const person = typeof NeuroPeople === 'undefined' ? undefined : NeuroPeople.scored.find(p => p.connectionIds.includes(nodeId)); detail.innerHTML = `<span class="eyebrow">${e(n.kind)}</span><h2>${e(n.name)}</h2><p>${e(n.summary)}</p>${person ? `<a href="#people/${e(person.id)}">Research influence &amp; publications ↗</a>` : ''}${c ? `<a href="#connections/${e(c.id)}?view=origins">Read the origin story ↗</a>` : ''}<a href="${e(href(n.id))}">Explore two steps from here ↗</a>${n.href ? `<a href="${n.href.startsWith('#') ? e(n.href) : u(n.href)}"${n.href.startsWith('#') ? '' : ' target="_blank" rel="noopener noreferrer"'}>Open full profile ↗</a>` : ''}`; if (cy) {
             cy.elements().removeClass('is-neighbor is-selected is-dim');
             const focus = cy.getElementById(nodeId);
             cy.elements().addClass('is-dim');

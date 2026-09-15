@@ -1,0 +1,1439 @@
+{
+  "reviewed": "2026-09-15",
+  "researcherToConnectionNodes": {
+    "gyorgy-buzsaki": [],
+    "christof-koch": [],
+    "tim-harris": [],
+    "kenneth-harris": [],
+    "marius-pachitariu": [],
+    "karel-svoboda": [],
+    "loren-frank": [],
+    "euisik-yoon": [],
+    "michael-roukes": [],
+    "shigeyoshi-fujisawa": [],
+    "lan-luan": [],
+    "chong-xie": [
+      "chong-xie"
+    ],
+    "charles-lieber": [],
+    "john-rogers": [],
+    "jonathan-viventi": [],
+    "george-malliaras": [],
+    "stephanie-lacour": [
+      "stephanie-lacour"
+    ],
+    "cynthia-chestek": [],
+    "takao-someya": [],
+    "polina-anikeeva": [],
+    "john-donoghue": [],
+    "leigh-hochberg": [],
+    "krishna-shenoy": [],
+    "jaimie-henderson": [],
+    "frank-willett": [],
+    "edward-chang": [],
+    "gopala-anumanchipalli": [],
+    "nick-ramsey": [],
+    "jose-millan": [],
+    "miguel-nicolelis": [],
+    "richard-andersen": [],
+    "andrew-schwartz": [],
+    "sliman-bensmaia": [],
+    "robert-gaunt": [],
+    "lee-fisher": [],
+    "jennifer-collinger": [],
+    "dustin-tyler": [],
+    "silvestro-micera": [],
+    "stanisa-raspopovic": [],
+    "max-ortiz-catalan": [],
+    "andres-lozano": [],
+    "helen-mayberg": [],
+    "philip-starr": [],
+    "timothy-denison": [
+      "tim-denison"
+    ],
+    "peter-brown": [],
+    "warren-grill": [],
+    "cameron-mcintyre": [],
+    "alim-louis-benabid": [],
+    "gregoire-courtine": [
+      "gregoire-courtine"
+    ],
+    "jocelyne-bloch": [],
+    "karl-deisseroth": [],
+    "ed-boyden": [],
+    "peter-hegemann": [],
+    "georg-nagel": [],
+    "gero-miesenbock": [],
+    "bryan-roth": [],
+    "scott-sternson": [],
+    "guoping-feng": [],
+    "viviana-gradinaru": [],
+    "bernardo-sabatini": [],
+    "winfried-denk": [],
+    "atsushi-miyawaki": [],
+    "loren-looger": [],
+    "na-ji": [],
+    "alipasha-vaziri": [],
+    "adam-cohen": [],
+    "fritjof-helmchen": [],
+    "david-tank": [],
+    "rafael-yuste": [],
+    "mark-schnitzer": [],
+    "jeff-lichtman": [],
+    "sebastian-seung": [],
+    "viren-jain": [],
+    "clay-reid": [],
+    "moritz-helmstaedter": [],
+    "hanchuan-peng": [],
+    "hongkui-zeng": [],
+    "ed-lein": [],
+    "john-ngai": [],
+    "aviv-regev": [],
+    "matteo-carandini": [],
+    "liam-paninski": [],
+    "jonathan-pillow": [],
+    "mackenzie-mathis": [],
+    "alexander-mathis": [],
+    "kristofer-bouchard": [],
+    "satrajit-ghosh": [],
+    "yaroslav-halchenko": [],
+    "scott-linderman": [],
+    "jeremy-magland": [],
+    "judy-illes": [],
+    "martha-farah": [],
+    "nita-farahany": [],
+    "marcello-ienca": [],
+    "saskia-hendriks": [],
+    "joseph-fins": [],
+    "laura-cabrera": [],
+    "jennifer-chandler": [],
+    "jonathan-moreno": [],
+    "timothy-brown": [],
+    "maryam-shanechi": [],
+    "bin-he": [],
+    "jose-carmena": [],
+    "michel-maharbiz": [],
+    "rikky-muller": [],
+    "marcia-omalley": [],
+    "jacob-robinson": [
+      "jacob-robinson"
+    ],
+    "valentin-dragoi": [],
+    "behnaam-aazhang": [],
+    "jessica-butts": [],
+    "sameer-sheth": [],
+    "jerzy-szablowski": [],
+    "ralph-etienne-cummings": [],
+    "sridevi-sarma": [],
+    "joshua-vogelstein": [],
+    "reza-shadmehr": [],
+    "kathleen-cullen": [],
+    "charley-della-santina": [],
+    "michael-miller": [],
+    "xingde-li": [],
+    "thomas-stieglitz": [
+      "thomas-stieglitz"
+    ],
+    "ulf-ziemann": [],
+    "moritz-grosse-wentrup": [],
+    "simon-schultz": [],
+    "rylie-green": [],
+    "shlomi-haar": [],
+    "andrew-jackson": [],
+    "eduardo-moraud": [],
+    "jens-haueisen": [],
+    "marcel-van-gerven": [],
+    "eric-maris": [],
+    "pieter-roelfsema": [],
+    "maarten-van-den-heuvel": [],
+    "jose-zariffa": [],
+    "xilin-liu": [],
+    "paul-yoo": [],
+    "tom-chau": [],
+    "nigel-lovell": [],
+    "peter-blamey": [],
+    "nicholas-opie": [
+      "nicholas-opie"
+    ],
+    "brenton-hordacre": [],
+    "tom-oxley": [
+      "thomas-oxley"
+    ],
+    "yukiyasu-kamitani": [],
+    "shangkai-gao": [],
+    "dezhong-yao": [],
+    "josef-parvizi": [],
+    "andrew-huth": [],
+    "nathan-intrator": [],
+    "nikunj-bhagat": [],
+    "maria-angelica-ocampo": []
+  },
+  "verifiedMatches": [
+    {
+      "researcherId": "chong-xie",
+      "researcherName": "Chong Xie",
+      "connectionNodeIds": [
+        "chong-xie"
+      ],
+      "canonicalName": "Chong Xie",
+      "status": "verified-context-match",
+      "evidence": "Matching full name plus the same institution, lab, or company relationship in the curated profiles.",
+      "sources": [
+        {
+          "title": "Chong Xie laboratory — Team / Alumni",
+          "url": "https://www.chongxie.net/team"
+        },
+        {
+          "title": "Zhengtuo Zhao — UCAS faculty biography",
+          "url": "https://people.ucas.ac.cn/~zhaozt"
+        },
+        {
+          "title": "Ultraflexible nanoelectronic probes form reliable, glial scar-free neural integration",
+          "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
+        }
+      ]
+    },
+    {
+      "researcherId": "stephanie-lacour",
+      "researcherName": "Stéphanie Lacour",
+      "connectionNodeIds": [
+        "stephanie-lacour"
+      ],
+      "canonicalName": "Stéphanie Lacour",
+      "status": "verified-context-match",
+      "evidence": "Matching full name plus the same institution, lab, or company relationship in the curated profiles.",
+      "sources": [
+        {
+          "title": "Neurosoft Bioelectronics Team",
+          "url": "https://www.neurosoft-bio.com/team"
+        }
+      ]
+    },
+    {
+      "researcherId": "gregoire-courtine",
+      "researcherName": "Grégoire Courtine",
+      "connectionNodeIds": [
+        "gregoire-courtine"
+      ],
+      "canonicalName": "Grégoire Courtine",
+      "status": "verified-context-match",
+      "evidence": "Matching full name plus the same institution, lab, or company relationship in the curated profiles.",
+      "sources": [
+        {
+          "title": "ONWARD Medical Annual Report 2024",
+          "url": "https://ir.onwd.com/static-files/09689b6c-28b6-4a0a-b4d5-d8ec8c4fe105",
+          "published": "2025 (FY2024 report)"
+        }
+      ]
+    },
+    {
+      "researcherId": "jacob-robinson",
+      "researcherName": "Jacob T. Robinson",
+      "connectionNodeIds": [
+        "jacob-robinson"
+      ],
+      "canonicalName": "Jacob Robinson",
+      "status": "verified-context-match",
+      "evidence": "Matching full name plus the same institution, lab, or company relationship in the curated profiles.",
+      "sources": [
+        {
+          "title": "The Year in Research",
+          "url": "https://magazine.rice.edu/summer-2023/the-year-in-research",
+          "published": "2023 (summer issue)"
+        },
+        {
+          "title": "From Lab to Launch",
+          "url": "https://magazine.rice.edu/spring-2026/lab-launch",
+          "published": "2026 (spring issue)"
+        }
+      ]
+    },
+    {
+      "researcherId": "thomas-stieglitz",
+      "researcherName": "Thomas Stieglitz",
+      "connectionNodeIds": [
+        "thomas-stieglitz"
+      ],
+      "canonicalName": "Thomas Stieglitz",
+      "status": "verified-context-match",
+      "evidence": "Matching full name plus the same institution, lab, or company relationship in the curated profiles.",
+      "sources": [
+        {
+          "title": "CorTec: University Spin-Off on its Way into the Future of Neurotechnology",
+          "url": "https://www.bcf.uni-freiburg.de/news/2011/20111115-cortec",
+          "published": "2011-11-15"
+        }
+      ]
+    },
+    {
+      "researcherId": "nicholas-opie",
+      "researcherName": "Nicholas Opie",
+      "connectionNodeIds": [
+        "nicholas-opie"
+      ],
+      "canonicalName": "Nicholas Opie",
+      "status": "verified-context-match",
+      "evidence": "Matching full name plus the same institution, lab, or company relationship in the curated profiles.",
+      "sources": [
+        {
+          "title": "Synchron: Giving people with severe paralysis the power to communicate using their thoughts",
+          "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+        },
+        {
+          "title": "Moving with the power of thought",
+          "url": "https://pursuit.unimelb.edu.au/articles/moving-with-the-power-of-thought",
+          "published": "2016-02-09"
+        },
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        }
+      ]
+    },
+    {
+      "researcherId": "timothy-denison",
+      "researcherName": "Timothy Denison",
+      "connectionNodeIds": [
+        "tim-denison"
+      ],
+      "canonicalName": "Tim Denison",
+      "status": "verified-context-match",
+      "evidence": "Oxford uses Tim in the heading and Timothy in its appointment text; Oxford bioelectronics and Amber founder context agree.",
+      "sources": [
+        {
+          "title": "New Chair in Emerging Technologies",
+          "url": "https://www.ndcn.ox.ac.uk/news/new-chair-in-emerging-technologies",
+          "published": "2018-04-10"
+        },
+        {
+          "title": "Amber Therapeutics — founder biography",
+          "url": "https://www.amber-tx.com/"
+        }
+      ]
+    },
+    {
+      "researcherId": "tom-oxley",
+      "researcherName": "Tom Oxley",
+      "connectionNodeIds": [
+        "thomas-oxley"
+      ],
+      "canonicalName": "Thomas Oxley",
+      "status": "verified-context-match",
+      "evidence": "Tom and Thomas refer to the same Melbourne neurologist and Synchron co-founder; the institution and Stentrode project agree.",
+      "sources": [
+        {
+          "title": "The Vascular Bionics Laboratory",
+          "url": "https://medicine.unimelb.edu.au/research-groups/medicine-research/royal-melbourne-hospital/the-vascular-bionics-laboratory"
+        },
+        {
+          "title": "Synchron: Giving people with severe paralysis the power to communicate using their thoughts",
+          "url": "https://research.unimelb.edu.au/commercialisation/community/startup-success-stories/giving-people-with-severe-paralysis-the-power-to-communicate-using-their-thoughts"
+        },
+        {
+          "title": "Translating thought into action",
+          "url": "https://pursuit.unimelb.edu.au/articles/translating-thought-into-action",
+          "published": "2020-10-28"
+        }
+      ]
+    }
+  ],
+  "associatedNodes": [
+    {
+      "researcherId": "michel-maharbiz",
+      "connectionNodeIds": [
+        "maharbiz-lab"
+      ],
+      "relation": "associated laboratory; not the same entity",
+      "sources": [
+        {
+          "title": "The “sewing machine” for minimally invasive neural recording",
+          "url": "https://www.biorxiv.org/content/10.1101/578542v1",
+          "published": "2019-03-14"
+        },
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ]
+    },
+    {
+      "researcherId": "jacob-robinson",
+      "connectionNodeIds": [
+        "robinson-lab-rice"
+      ],
+      "relation": "associated laboratory; canonical Person match is jacob-robinson",
+      "sources": [
+        {
+          "title": "Rice labs tapped for brain research by UK funding agency with multimillion-dollar awards",
+          "url": "https://news.rice.edu/news/2025/rice-labs-tapped-brain-research-uk-funding-agency-multimillion-dollar-awards"
+        },
+        {
+          "title": "Rice team demonstrates miniature brain stimulator in humans",
+          "url": "https://news.rice.edu/news/2024/rice-team-demonstrates-miniature-brain-stimulator-humans"
+        },
+        {
+          "title": "The Year in Research",
+          "url": "https://magazine.rice.edu/summer-2023/the-year-in-research",
+          "published": "2023 (summer issue)"
+        }
+      ]
+    }
+  ],
+  "importantGraphPeopleMissingDirectory": [
+    {
+      "connectionNodeId": "zhengtuo-zhao",
+      "proposedResearcherId": "zhengtuo-zhao",
+      "name": "Zhengtuo Zhao",
+      "summary": "Biomedical engineering researcher and StairMed co-founder. His doctorate was at UT Austin (2015–2019); Rice documented his postdoctoral work in 2020.",
+      "priority": "high",
+      "profileUrl": "https://people.ucas.ac.cn/~zhaozt",
+      "sources": [
+        {
+          "title": "Zhengtuo Zhao — UCAS faculty biography",
+          "url": "https://people.ucas.ac.cn/~zhaozt"
+        },
+        {
+          "title": "Chong Xie laboratory — Team / Alumni",
+          "url": "https://www.chongxie.net/team"
+        },
+        {
+          "title": "Blood flow recovers faster than brain in micro strokes",
+          "url": "https://news.rice.edu/news/2020/blood-flow-recovers-faster-brain-micro-strokes"
+        },
+        {
+          "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+          "url": "https://www.nature.com/articles/s41467-026-71443-7"
+        },
+        {
+          "title": "StairMed Introduction",
+          "url": "https://stairmed.com/en/jietijianjie.html"
+        },
+        {
+          "title": "Ultraflexible nanoelectronic probes form reliable, glial scar-free neural integration",
+          "url": "https://foil.bme.utexas.edu/publication/luan-2017/luan-2017.pdf"
+        },
+        {
+          "title": "An Ultraflexible Electrode Array for Large-Scale Chronic Recording in the Nonhuman Primate Brain",
+          "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202302333"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "xue-li",
+      "proposedResearcherId": "xue-li",
+      "name": "Xue Li",
+      "summary": "Xie’s lab lists Xue Li as a former PhD student. The human uFINE paper identifies Li and Zhengtuo Zhao as StairMed founders.",
+      "priority": "high",
+      "profileUrl": "https://www.chongxie.net/team",
+      "sources": [
+        {
+          "title": "Chong Xie laboratory — Team / Alumni",
+          "url": "https://www.chongxie.net/team"
+        },
+        {
+          "title": "Large-scale single-neuron recording in the human cortex using an ultra-flexible electrode array",
+          "url": "https://www.nature.com/articles/s41467-026-71443-7"
+        },
+        {
+          "title": "StairMed Introduction",
+          "url": "https://stairmed.com/en/jietijianjie.html"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "benjamin-rapoport",
+      "proposedResearcherId": "benjamin-rapoport",
+      "name": "Benjamin Rapoport",
+      "summary": "Neurosurgeon and electrical engineer; MIT EECS PhD 2011, Harvard/HST MD 2013. Precision co-founder and Chief Science Officer.",
+      "priority": "high",
+      "profileUrl": "https://www.precisionneuro.io/our-vision",
+      "sources": [
+        {
+          "title": "Inside the Operating Room: Doctors Test a Revolutionary Brain-Computer Implant",
+          "url": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant"
+        },
+        {
+          "title": "Our Vision — Precision Neuroscience",
+          "url": "https://www.precisionneuro.io/our-vision"
+        },
+        {
+          "title": "Neuralink — official company profile",
+          "url": "https://www.linkedin.com/company/neuralink/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "richard-normann",
+      "proposedResearcherId": "richard-normann",
+      "name": "Richard Normann",
+      "summary": "University of Utah professor emeritus credited with development of the Utah Electrode Array.",
+      "priority": "high",
+      "profileUrl": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "sources": [
+        {
+          "title": "Brain Trust: a Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher"
+        },
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "luming-li",
+      "proposedResearcherId": "luming-li",
+      "name": "Luming Li",
+      "summary": "Tsinghua DBS research-team leader",
+      "priority": "high",
+      "profileUrl": "https://www.tsinghua.edu.cn/info/1368/81748.htm",
+      "sources": [
+        {
+          "title": "Luming Li and the brain-pacemaker research team",
+          "url": "https://www.tsinghua.edu.cn/info/1368/81748.htm"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "yihua-ning",
+      "proposedResearcherId": "yihua-ning",
+      "name": "Yihua Ning / 宁益华",
+      "summary": "SceneRay founder",
+      "priority": "secondary",
+      "profileUrl": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf",
+      "sources": [
+        {
+          "title": "ISAM GATID 2025 — speaker biographies and abstracts",
+          "url": "https://www.isam-hamburg.com/wp-content/uploads/2025/04/ISAM-GATID-2025-Speakers-and-Abstracts.pdf"
+        },
+        {
+          "title": "SceneRay — company history",
+          "url": "https://www.sceneray.com/en/about"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "fangang-zeng",
+      "proposedResearcherId": "fangang-zeng",
+      "name": "Fan-Gang Zeng",
+      "summary": "UCI hearing researcher; Nurotron co-founder",
+      "priority": "high",
+      "profileUrl": "https://scholarconnect.uci.edu/fzeng",
+      "sources": [
+        {
+          "title": "Fan-Gang Zeng — UCI biography",
+          "url": "https://scholarconnect.uci.edu/fzeng"
+        },
+        {
+          "title": "Nurotron — company introduction and history",
+          "url": "https://www.nurotron.com/aboutus.html"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "peng-cao",
+      "proposedResearcherId": "peng-cao",
+      "name": "Peng Cao / 曹鹏",
+      "summary": "Genlight founder",
+      "priority": "secondary",
+      "profileUrl": "https://www.hzctxh.com/article/532",
+      "sources": [
+        {
+          "title": "Hangzhou Venture Capital Association visits Genlight",
+          "url": "https://www.hzctxh.com/article/532"
+        },
+        {
+          "title": "Genlight Neurotech — About us",
+          "url": "https://en.genlight.com/en/aboutus"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "jerry-chen",
+      "proposedResearcherId": "jerry-chen",
+      "name": "Jerry Chieh-Hsiao Chen",
+      "summary": "Brain Navi founder",
+      "priority": "secondary",
+      "profileUrl": "https://brainnavi.com/zh/naotrac-fda-clearance/",
+      "sources": [
+        {
+          "title": "Brain Navi announces NaoTrac FDA clearance",
+          "url": "https://brainnavi.com/zh/naotrac-fda-clearance/"
+        },
+        {
+          "title": "Chieh-Hsiao Chen — UAA Congress 2025 biography",
+          "url": "https://registration.uaa2025.org/user/view/1001476:51737"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "robert-fischell",
+      "proposedResearcherId": "robert-fischell",
+      "name": "Robert Fischell",
+      "summary": "University biography identifies him as a NeuroPace founder.",
+      "priority": "secondary",
+      "profileUrl": "https://bioe.umd.edu/about/meet-the-fischells",
+      "sources": [
+        {
+          "title": "Meet the Fischells",
+          "url": "https://bioe.umd.edu/about/meet-the-fischells"
+        },
+        {
+          "title": "NeuroPace amended and restated certificate of incorporation",
+          "url": "https://www.sec.gov/Archives/edgar/data/1528287/000162828021007595/exhibit31-closing8xk.htm",
+          "published": "2021"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "brian-litt",
+      "proposedResearcherId": "brian-litt",
+      "name": "Brian Litt",
+      "summary": "Reports licensing technology to NeuroPace.",
+      "priority": "high",
+      "profileUrl": "https://www.med.upenn.edu/apps/faculty/index.php/g324/p6213",
+      "sources": [
+        {
+          "title": "Brian Litt — Penn faculty profile",
+          "url": "https://www.med.upenn.edu/apps/faculty/index.php/g324/p6213"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "justin-williams",
+      "proposedResearcherId": "justin-williams",
+      "name": "Justin Williams",
+      "summary": "Clinical observation and microscale fabrication led to NeuroOne technology.",
+      "priority": "high",
+      "profileUrl": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+      "sources": [
+        {
+          "title": "Hagness, Williams selected as National Academy of Inventors Fellows",
+          "url": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+          "published": "2022"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "charles-garell",
+      "proposedResearcherId": "charles-garell",
+      "name": "P. Charles Garell",
+      "summary": "UW neurosurgeon who worked with Williams on surgical needs.",
+      "priority": "secondary",
+      "profileUrl": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+      "sources": [
+        {
+          "title": "Hagness, Williams selected as National Academy of Inventors Fellows",
+          "url": "https://engineering.wisc.edu/blog/hagness-williams-selected-as-national-academy-of-inventors-fellows/",
+          "published": "2022"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "scott-hiatt",
+      "proposedResearcherId": "scott-hiatt",
+      "name": "Scott Hiatt",
+      "summary": "Ripple technical leader trained under Normann in neural stimulation engineering.",
+      "priority": "secondary",
+      "profileUrl": "https://rippleneuro.com/about-ripple-neuro/",
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "andrew-wilder",
+      "proposedResearcherId": "andrew-wilder",
+      "name": "Andrew Wilder",
+      "summary": "Joined Ripple in 2009 after doctoral work on neuro-assistive software.",
+      "priority": "secondary",
+      "profileUrl": "https://rippleneuro.com/about-ripple-neuro/",
+      "sources": [
+        {
+          "title": "Ripple Neuro — team biographies",
+          "url": "https://rippleneuro.com/about-ripple-neuro/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "john-parker",
+      "proposedResearcherId": "john-parker",
+      "name": "John Parker",
+      "summary": "Led the transition from spinal sensing research to closed-loop stimulation.",
+      "priority": "high",
+      "profileUrl": "https://www.saludamedical.com/press-releases/saluda-medical-announces-executive-leadership-changes/",
+      "sources": [
+        {
+          "title": "Saluda Medical Announces Executive Leadership Changes",
+          "url": "https://www.saludamedical.com/press-releases/saluda-medical-announces-executive-leadership-changes/",
+          "published": "2021-02-12"
+        },
+        {
+          "title": "CSIRO — Our Spinouts",
+          "url": "https://www.csiro.au/en/work-with-us/industries/technology/Our-Spinouts"
+        },
+        {
+          "title": "Compound action potentials recorded in the human spinal cord during neurostimulation for pain relief",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/22188868/",
+          "published": "2011-12-19"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "philip-sabes",
+      "proposedResearcherId": "philip-sabes",
+      "name": "Philip Sabes",
+      "summary": "Neuroscientist whose UCSF laboratory developed robotic flexible-probe insertion.",
+      "priority": "high",
+      "profileUrl": "https://sabes.ucsf.edu/",
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "michael-jordan",
+      "proposedResearcherId": "michael-jordan",
+      "name": "Michael I. Jordan",
+      "summary": "Sabes identifies Jordan’s lab as the site of his MIT PhD research.",
+      "priority": "secondary",
+      "profileUrl": "https://sabes.ucsf.edu/",
+      "sources": [
+        {
+          "title": "Philip Sabes — UCSF laboratory and career history",
+          "url": "https://sabes.ucsf.edu/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "vanessa-tolosa",
+      "proposedResearcherId": "vanessa-tolosa",
+      "name": "Vanessa Tolosa",
+      "summary": "LLNL polymer-array researcher, Neuralink co-founder and 2025 Precision R&D hire.",
+      "priority": "high",
+      "profileUrl": "https://www.precisionneuro.io/our-vision",
+      "sources": [
+        {
+          "title": "Precision Neuroscience Expands Leadership Team with Key Hires from Meta and FDA",
+          "url": "https://www.precisionneuro.io/articles/company-news/precision-neuroscience-expands-leadership-team-with-key-hires-from-meta-and-fda",
+          "published": "2025-06-11"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "matt-angle",
+      "proposedResearcherId": "matt-angle",
+      "name": "Matt Angle",
+      "summary": "Founder and CEO; specific doctoral mentorship is not established by the inspected primary sources.",
+      "priority": "high",
+      "profileUrl": "https://paradromics.com/company/",
+      "sources": [
+        {
+          "title": "Paradromics — Company",
+          "url": "https://paradromics.com/company/"
+        },
+        {
+          "title": "Paradromics Inc. — official company profile",
+          "url": "https://www.linkedin.com/company/paradromics-inc"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "florian-solzbacher",
+      "proposedResearcherId": "florian-solzbacher",
+      "name": "Florian Solzbacher",
+      "summary": "Utah professor and Blackrock co-founder focused on reliable neural-interface systems.",
+      "priority": "high",
+      "profileUrl": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+      "sources": [
+        {
+          "title": "Brain Trust: A Q&A with Florian Solzbacher",
+          "url": "https://www.price.utah.edu/2024/07/25/brain-trust-a-qa-with-florian-solzbacher",
+          "published": "2024-07-25"
+        },
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "marcus-gerhardt",
+      "proposedResearcherId": "marcus-gerhardt",
+      "name": "Marcus Gerhardt",
+      "summary": "Co-founded Blackrock with Florian Solzbacher.",
+      "priority": "secondary",
+      "profileUrl": "https://blackrockneurotech.com/our-story/",
+      "sources": [
+        {
+          "title": "Blackrock Neurotech — Our story",
+          "url": "https://blackrockneurotech.com/our-story/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "rotem-kopel",
+      "proposedResearcherId": "rotem-kopel",
+      "name": "Rotem Kopel",
+      "summary": "ABILITY Neurotech co-founder and CEO.",
+      "priority": "secondary",
+      "profileUrl": "https://abilityneuro.com/team/",
+      "sources": [
+        {
+          "title": "ABILITY — Team",
+          "url": "https://abilityneuro.com/team/"
+        },
+        {
+          "title": "ABILITY — Our Journey",
+          "url": "https://abilityneuro.com/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "craig-cook",
+      "proposedResearcherId": "craig-cook",
+      "name": "Craig Cook",
+      "summary": "ABILITY co-founder and former Wyss business-development leader.",
+      "priority": "secondary",
+      "profileUrl": "https://wysscenter.ch/update/craig-cook-appointed-cbo/",
+      "sources": [
+        {
+          "title": "Craig Cook appointed Chief Business Officer and Co-founder at ABILITY Neurotech, the Wyss Geneva’s flagship spin-off",
+          "url": "https://wysscenter.ch/update/craig-cook-appointed-cbo/",
+          "published": "2025"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "alberto-priori",
+      "proposedResearcherId": "alberto-priori",
+      "name": "Alberto Priori",
+      "summary": "Neurologist and Newronika co-founder.",
+      "priority": "secondary",
+      "profileUrl": "https://newronika.com/about",
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "lorenzo-rossi",
+      "proposedResearcherId": "lorenzo-rossi",
+      "name": "Lorenzo Rossi",
+      "summary": "Engineer and Newronika co-founder.",
+      "priority": "secondary",
+      "profileUrl": "https://newronika.com/about",
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "sara-marceglia",
+      "proposedResearcherId": "sara-marceglia",
+      "name": "Sara Marceglia",
+      "summary": "Neuroengineering researcher and Newronika co-founder.",
+      "priority": "secondary",
+      "profileUrl": "https://newronika.com/about",
+      "sources": [
+        {
+          "title": "About Newronika — Setting the New Standard of Care in Neuromodulation",
+          "url": "https://newronika.com/about"
+        },
+        {
+          "title": "Newronika secures 2.5 million euros grant from EIC Accelerator",
+          "url": "https://www.indacosgr.com/news/newronika-secures-2-5-million-euros-grant-from-eic-accelerator/",
+          "published": "2023-03-10 page; release dated 2023-03-08"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "jose-antonio-garrido",
+      "proposedResearcherId": "jose-antonio-garrido",
+      "name": "Jose Antonio Garrido",
+      "summary": "ICREA professor at ICN2 and INBRAIN co-founder.",
+      "priority": "high",
+      "profileUrl": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+      "sources": [
+        {
+          "title": "INBRAIN Neuroelectronics signs an agreement to develop neurotechnology patented by six public research institutions",
+          "url": "https://www.imb-cnm.csic.es/en/outreach/news/inbrain-neuroelectronics-signs-agreement-develop-neurotechnology-patented-six-public",
+          "published": "2022-03-15"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "jorn-rickert",
+      "proposedResearcherId": "jorn-rickert",
+      "name": "Jörn Rickert",
+      "summary": "CorTec founder and early managing director.",
+      "priority": "secondary",
+      "profileUrl": "https://news.vm.uni-freiburg.de/de/newsarchiv/biomolekuele-kopieren-gehirnaktivitaet-messen",
+      "sources": [
+        {
+          "title": "Biomoleküle kopieren, Gehirnaktivität messen",
+          "url": "https://news.vm.uni-freiburg.de/de/newsarchiv/biomolekuele-kopieren-gehirnaktivitaet-messen",
+          "published": "2015"
+        },
+        {
+          "title": "Start-ups — Faculty of Engineering, University of Freiburg",
+          "url": "https://uni-freiburg.de/tf/start-ups/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "luca-berdondini",
+      "proposedResearcherId": "luca-berdondini",
+      "name": "Luca Berdondini",
+      "summary": "IIT Microtechnology for Neuroelectronics leader and Corticale co-founder.",
+      "priority": "high",
+      "profileUrl": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+      "sources": [
+        {
+          "title": "Corticale, the new IIT start-up to study and treat brain",
+          "url": "https://opentalk.iit.it/en/corticale-the-new-iit-start-up-to-study-and-treat-brain/",
+          "published": "2021-08-04"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "paul-le-floch",
+      "proposedResearcherId": "paul-le-floch",
+      "name": "Paul Le Floch",
+      "summary": "Axoft co-founder; Harvard PhD",
+      "priority": "secondary",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        },
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "jia-liu",
+      "proposedResearcherId": "jia-liu",
+      "name": "Jia Liu",
+      "summary": "Academic co-founder of Axoft",
+      "priority": "high",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        },
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "tianyang-ye",
+      "proposedResearcherId": "tianyang-ye",
+      "name": "Tianyang Ye",
+      "summary": "Axoft co-founder; Harvard graduate and postdoc",
+      "priority": "secondary",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        },
+        {
+          "title": "Alumni profile: Paul Le Floch, PhD 2021",
+          "url": "https://seas.harvard.edu/news/alumni-profile-paul-le-floch-phd-21"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "hongkun-park",
+      "proposedResearcherId": "hongkun-park",
+      "name": "Hongkun Park",
+      "summary": "Harvard Park Group",
+      "priority": "secondary",
+      "profileUrl": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe",
+      "sources": [
+        {
+          "title": "A long-lasting neural probe",
+          "url": "https://seas.harvard.edu/news/2024/01/long-lasting-neural-probe"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "tao-hu",
+      "proposedResearcherId": "tao-hu",
+      "name": "Tao Hu / Tiger H. Tao",
+      "summary": "NeuroXess scientific founder",
+      "priority": "secondary",
+      "profileUrl": "https://www.neuroxess.com/about/",
+      "sources": [
+        {
+          "title": "NeuroXess company history",
+          "url": "https://www.neuroxess.com/about/"
+        },
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        },
+        {
+          "title": "Silk-enabled conformal intraventricular interfaces for minimally invasive neural recordings",
+          "url": "https://www.nature.com/articles/s41467-025-64397-9"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "phoenix-peng",
+      "proposedResearcherId": "phoenix-peng",
+      "name": "Lei Peng / Phoenix Peng",
+      "summary": "NeuroXess co-founder",
+      "priority": "secondary",
+      "profileUrl": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/",
+      "sources": [
+        {
+          "title": "NeuroXess raised CNY97 million in angel and pre-Series A rounds",
+          "url": "https://wp.neuroxess.com/2022/01/11/neuroxess-raised-cny97-million-in-an-angel-round-and-pre-series-a-round/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "hong-bo",
+      "proposedResearcherId": "hong-bo",
+      "name": "Hong Bo",
+      "summary": "Tsinghua NEO academic team leader",
+      "priority": "high",
+      "profileUrl": "https://www.tsinghua.edu.cn/info/1175/109595.htm",
+      "sources": [
+        {
+          "title": "Tsinghua and Xuanwu teams perform first wireless minimally invasive BCI clinical trial",
+          "url": "https://www.tsinghua.edu.cn/info/1175/109595.htm"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "honglai-xu",
+      "proposedResearcherId": "honglai-xu",
+      "name": "Honglai Xu / 胥红来",
+      "summary": "Neuracle founder",
+      "priority": "secondary",
+      "profileUrl": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf",
+      "sources": [
+        {
+          "title": "Neuracle Technology (Shanghai) — IPO prospectus, application draft",
+          "url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202606/002198_20260611_0RN0.pdf"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "masayuki-hirata",
+      "proposedResearcherId": "masayuki-hirata",
+      "name": "Masayuki Hirata",
+      "summary": "Osaka BCI researcher; JiMED founder",
+      "priority": "high",
+      "profileUrl": "https://www.kyoto-unicap.co.jp/embark/36-jimed/",
+      "sources": [
+        {
+          "title": "JiMED founder and CEO interview — Series EMBARK 36",
+          "url": "https://www.kyoto-unicap.co.jp/embark/36-jimed/"
+        },
+        {
+          "title": "JiMED — NEDO startup profile",
+          "url": "https://www.nedo.go.jp/english/activities/startups/company75.html"
+        },
+        {
+          "title": "A fully implantable wireless ECoG 128-channel recording device for human brain–machine interfaces: W-HERBS",
+          "url": "https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2018.00511/full"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "tao-zhou-neuramatrix",
+      "proposedResearcherId": "tao-zhou-neuramatrix",
+      "name": "Tao Zhou / 周涛",
+      "summary": "NeuraMatrix co-founder identified in 2026",
+      "priority": "secondary",
+      "profileUrl": "https://www.zgcforum.com/zh2026/news/forum/963039",
+      "sources": [
+        {
+          "title": "Zhongguancun Forum Tech-Show — co-founder and CEO Tao Zhou of Beijing NeuraMatrix",
+          "url": "https://www.zgcforum.com/zh2026/news/forum/963039"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "daniel-palanker",
+      "proposedResearcherId": "daniel-palanker",
+      "name": "Daniel Palanker",
+      "summary": "Stanford researcher behind the PRIMA photovoltaic concept.",
+      "priority": "high",
+      "profileUrl": "https://profiles.stanford.edu/daniel-palanker",
+      "sources": [
+        {
+          "title": "Stanford Palanker laboratory: publications",
+          "url": "https://web.stanford.edu/~palanker/List_of_publications.html"
+        },
+        {
+          "title": "Science: welcoming Pixium Vision’s PRIMA retinal prosthesis",
+          "url": "https://science.xyz/news/pixium-vision-acquisition/",
+          "published": "2024-04-25"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "graeme-clark",
+      "proposedResearcherId": "graeme-clark",
+      "name": "Graeme Clark",
+      "summary": "Melbourne multichannel cochlear-implant research pioneer.",
+      "priority": "high",
+      "profileUrl": "https://www.cochlear.com/us/en/about-us/proven-over-time",
+      "sources": [
+        {
+          "title": "Cochlear: proven over time",
+          "url": "https://www.cochlear.com/us/en/about-us/proven-over-time"
+        },
+        {
+          "title": "Cochlear Limited: Modern Slavery Statement 2024, our story",
+          "url": "https://assets.cochlear.com/api/public/content/1b9dbdf9214c429e817f2e2eef1ec719?v=66737e32",
+          "published": "2024"
+        },
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    },
+    {
+      "connectionNodeId": "robert-shepherd",
+      "proposedResearcherId": "robert-shepherd",
+      "name": "Robert Shepherd",
+      "summary": "Bionics Institute researcher in cochlear and suprachoroidal prostheses.",
+      "priority": "high",
+      "profileUrl": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/",
+      "sources": [
+        {
+          "title": "Bionics Institute: Professor Robert Shepherd AM",
+          "url": "https://www.bionicsinstitute.org/about/professor-robert-shepherd-am/"
+        }
+      ],
+      "note": "Already a documented graph person; absent from the 150-person directory. Citation metrics require a separate author identity match and may remain unavailable."
+    }
+  ],
+  "affiliationCorrections": [
+    {
+      "researcherId": "marius-pachitariu",
+      "name": "Marius Pachitariu",
+      "oldInstitution": "University College London",
+      "recommended": {
+        "institution": "HHMI Janelia Research Campus",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://www.janelia.org/people/marius-pachitariu",
+        "careerStatus": "active"
+      },
+      "reason": "Janelia identifies him as a group leader; UCL describes the earlier doctoral and postdoctoral period.",
+      "sources": [
+        {
+          "title": "Marius Pachitariu — Janelia Research Campus",
+          "url": "https://www.janelia.org/people/marius-pachitariu"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "karel-svoboda",
+      "name": "Karel Svoboda",
+      "oldInstitution": "HHMI Janelia Research Campus",
+      "recommended": {
+        "institution": "Allen Institute for Neural Dynamics",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://alleninstitute.org/person/karel-svoboda",
+        "careerStatus": "active"
+      },
+      "reason": "Allen lists current leadership; Janelia is a former position.",
+      "sources": [
+        {
+          "title": "Karel Svoboda — Allen Institute",
+          "url": "https://alleninstitute.org/person/karel-svoboda"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "charles-lieber",
+      "name": "Charles Lieber",
+      "oldInstitution": "Harvard University",
+      "recommended": {
+        "institution": "Tsinghua Shenzhen International Graduate School",
+        "country": "China",
+        "region": "Asia",
+        "profileUrl": "https://www.sigs.tsinghua.edu.cn/Lieber/main.psp",
+        "careerStatus": "active"
+      },
+      "reason": "Official faculty biography records Harvard retirement in 2023 and Tsinghua SIGS chair professorship from May 2025. Keep historical Harvard work in the timeline.",
+      "sources": [
+        {
+          "title": "Charles M. Lieber — Tsinghua SIGS faculty biography",
+          "url": "https://www.sigs.tsinghua.edu.cn/Lieber/main.psp"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "scott-sternson",
+      "name": "Scott Sternson",
+      "oldInstitution": "HHMI Janelia Research Campus",
+      "recommended": {
+        "institution": "University of California, San Diego",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://profiles.ucsd.edu/scott.sternson",
+        "careerStatus": "active",
+        "orcid": "https://orcid.org/0000-0002-0835-444X"
+      },
+      "reason": "UCSD lists him as Professor of Neurosciences; Janelia is a historical affiliation.",
+      "sources": [
+        {
+          "title": "Scott Sternson — UCSD Profiles",
+          "url": "https://profiles.ucsd.edu/scott.sternson"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "loren-looger",
+      "name": "Loren Looger",
+      "oldInstitution": "HHMI Janelia Research Campus",
+      "recommended": {
+        "institution": "University of California, San Diego",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://neurosciences.ucsd.edu/research/labs/looger/people.html",
+        "careerStatus": "active"
+      },
+      "reason": "His UCSD lab biography states he left Janelia in 2021 and became a UCSD professor and HHMI investigator.",
+      "sources": [
+        {
+          "title": "Looger Lab Team — UC San Diego",
+          "url": "https://neurosciences.ucsd.edu/research/labs/looger/people.html"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "stanisa-raspopovic",
+      "name": "Stanisa Raspopovic",
+      "oldInstitution": "ETH Zürich",
+      "recommended": {
+        "institution": "Medical University of Vienna",
+        "country": "Austria",
+        "region": "Europe",
+        "profileUrl": "https://www.meduniwien.ac.at/web/en/about-us/news/2024/news-in-august-2024/stanisa-raspopovic-takes-over-professorship-for-biomedical-engineering/",
+        "careerStatus": "active"
+      },
+      "reason": "University announcement records appointment effective July 2024, arriving from ETH Zurich.",
+      "sources": [
+        {
+          "title": "Stanisa Raspopovic takes over professorship for Biomedical Engineering",
+          "url": "https://www.meduniwien.ac.at/web/en/about-us/news/2024/news-in-august-2024/stanisa-raspopovic-takes-over-professorship-for-biomedical-engineering/",
+          "published": "2024-08-05"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "krishna-shenoy",
+      "name": "Krishna Shenoy",
+      "oldInstitution": "Stanford University",
+      "recommended": {
+        "institution": "Stanford University (historical)",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://engineering.stanford.edu/news/krishna-shenoy-engineer-who-reimagined-how-brain-makes-body-move-dies-54",
+        "careerStatus": "deceased",
+        "deathDate": "2023-01-21"
+      },
+      "reason": "Retain research contributions but do not present current laboratory leadership. Stanford records death on January 21, 2023.",
+      "sources": [
+        {
+          "title": "Krishna Shenoy, engineer who reimagined how the brain makes the body move, dies at 54",
+          "url": "https://engineering.stanford.edu/news/krishna-shenoy-engineer-who-reimagined-how-brain-makes-body-move-dies-54",
+          "published": "2023-01-27"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "sliman-bensmaia",
+      "name": "Sliman Bensmaia",
+      "oldInstitution": "University of Chicago",
+      "recommended": {
+        "institution": "University of Chicago (historical)",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://biosciences.uchicago.edu/news/articles/sliman-bensmaia-leading-expert-neuroscience-touch-1973-2023",
+        "careerStatus": "deceased",
+        "deathDate": "2023-08-11"
+      },
+      "reason": "Retain research contributions but label the career as historical. University obituary records death on August 11, 2023.",
+      "sources": [
+        {
+          "title": "Sliman Bensmaia, leading expert on the neuroscience of touch, 1973–2023",
+          "url": "https://biosciences.uchicago.edu/news/articles/sliman-bensmaia-leading-expert-neuroscience-touch-1973-2023",
+          "published": "2023-08-16"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "miguel-nicolelis",
+      "name": "Miguel Nicolelis",
+      "oldInstitution": "Duke University",
+      "recommended": {
+        "institution": "Duke University (emeritus)",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://scholars.duke.edu/person/nicoleli",
+        "careerStatus": "emeritus"
+      },
+      "reason": "Current Duke profile specifies Professor Emeritus from 2021. The historical university association remains valid with its career status stated.",
+      "sources": [
+        {
+          "title": "Miguel Angelo L. Nicolelis — Scholars@Duke",
+          "url": "https://scholars.duke.edu/person/nicoleli"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "nicholas-opie",
+      "name": "Nicholas Opie",
+      "oldInstitution": "Bionics Institute",
+      "recommended": {
+        "institution": "University of Melbourne / Synchron",
+        "country": "Australia",
+        "region": "Oceania",
+        "profileUrl": "https://medicine.unimelb.edu.au/research-groups/medicine-research/royal-melbourne-hospital/the-vascular-bionics-laboratory",
+        "careerStatus": "active"
+      },
+      "reason": "Melbourne identifies Opie as a head of its Vascular Bionics Laboratory; the existing Bionics Institute-only affiliation does not identify his current laboratory/company role.",
+      "sources": [
+        {
+          "title": "The Vascular Bionics Laboratory",
+          "url": "https://medicine.unimelb.edu.au/research-groups/medicine-research/royal-melbourne-hospital/the-vascular-bionics-laboratory"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "max-ortiz-catalan",
+      "name": "Max Ortiz-Catalan",
+      "oldInstitution": "Bionics Institute",
+      "recommended": {
+        "institution": "Prometi Pain Rehabilitation Center / Remedi Ukraine (2026 publication affiliations)",
+        "country": "Ukraine",
+        "region": "Europe",
+        "profileUrl": "https://www.maxortizcatalan.com/research",
+        "careerStatus": "active"
+      },
+      "reason": "Current sources differ materially from the old Bionics Institute listing. A July 2026 author affiliation lists these Ukrainian organizations and a 2026 ITU speaker bio states full-time humanitarian work in Ukraine. Do not treat this as proof that every honorary or adjunct affiliation ended.",
+      "sources": [
+        {
+          "title": "Evaluating key features of assessment tools for post-amputation pain: a scoping review",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42525926/",
+          "published": "2026-07-29"
+        },
+        {
+          "title": "Max Ortiz Catalan — ITU AI for Good speaker biography",
+          "url": "https://aiforgood.itu.int/speaker/max-ortiz-catalan/"
+        }
+      ],
+      "verified": "2026-09-15"
+    },
+    {
+      "researcherId": "cameron-mcintyre",
+      "name": "Cameron McIntyre",
+      "oldInstitution": "Case Western Reserve University",
+      "recommended": {
+        "institution": "Duke University",
+        "country": "United States",
+        "region": "North America",
+        "profileUrl": "https://scholars.duke.edu/person/Cameron.McIntyre",
+        "careerStatus": "active"
+      },
+      "reason": "Duke lists Biomedical Engineering and Neurosurgery professorships from 2021 to present; CWRU is historical.",
+      "sources": [
+        {
+          "title": "Cameron C McIntyre — Scholars@Duke",
+          "url": "https://scholars.duke.edu/person/Cameron.McIntyre"
+        }
+      ],
+      "verified": "2026-09-15"
+    }
+  ]
+}

@@ -1824,6 +1824,7 @@ interface Window {
       researcherBrowser.innerHTML='<div class="na-researcher-overview"><div><strong>'+researchers.length+' '+I18N.t('researcherTrails')+'</strong><span>'+I18N.t('researcherTrailsSub')+'</span></div><div class="na-researcher-family-summary">'+familySummary+'</div></div><div class="na-researcher-toolbar">'+rosterControls+'<span class="na-researcher-toolbar-note">'+I18N.t('searchByResearcher')+'</span></div><div class="na-researcher-layout"><section class="na-researcher-roster"><div class="na-researcher-roster-title"><h3>'+I18N.t('notableContributors')+'</h3><span>'+I18N.t('curatedNotRanked')+data.length+' '+I18N.t('matchesWord')+'</span></div>'+roster+'<div class="na-pager"><span>'+(data.length?(I18N.t('showing')+' '+(start+1)+'–'+Math.min(start+size,data.length)+' '+I18N.t('of')+' '+data.length):I18N.t('tryAnotherSearch'))+'</span><div><button type="button" data-researcher-page="prev"'+(state.page===0?' disabled':'')+'>'+I18N.t('previous')+'</button><button type="button" data-researcher-page="next"'+(state.page>=pages-1?' disabled':'')+'>'+I18N.t('next')+'</button></div></div></section>'+profile+'</div><details class="na-researcher-note"><summary>'+I18N.t('coverageVerificationNote')+'</summary><p>'+I18N.t('coverageVerificationText')+'</p></details>';
       if(selected)AtlasVisuals.mount(researcherBrowser,AtlasVisuals.researcher(selected,technologyLinks),'.na-researcher-start');
       researcherBrowser.insertAdjacentHTML('beforeend',NeuroConnections.teaser(selected?'#person/'+selected.id:''));
+      if(typeof NeuroPeople!=='undefined')researcherBrowser.insertAdjacentHTML('beforeend',NeuroPeople.teaser(selected?'#person/'+selected.id:''));
       var researcherRegion=researcherBrowser.querySelector('[data-researcher-region]');
       if(researcherRegion)researcherRegion.addEventListener('change',function(){state.region=researcherRegion.value;state.page=0;state.selectedResearcher='';syncControls();drawResearcherTrails(filteredResearchers());});
       var researcherSort=researcherBrowser.querySelector('[data-researcher-sort]');
@@ -2162,6 +2163,7 @@ interface Window {
     __applyLang();
     document.addEventListener('na-i18n',function(){__applyLang();syncView();syncControls();renderDetail();draw();});
     window.neuroAtlas={
+      organizations:L.map(function(d){return {id:d.id,name:d.n,country:d.country,city:d.city,kind:d.k,summary:d.d,source:d.u};}),
       counts:{technologies:T.length,organizations:L.length,researchers:researchers.length},
       records:[
         ...T.map(function(t){return {id:t.id,title:t.n,description:t.summary,kind:'Technology',href:'#tech/'+encodeURIComponent(t.id),keywords:[t.signal,t.mechanism,t.ex.join(' ')].join(' ')};}),

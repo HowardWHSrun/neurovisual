@@ -7,7 +7,7 @@
     const sidebar = document.getElementById('site-sidebar');
     const menu = document.getElementById('mobile-menu');
     const main = document.getElementById('main-content');
-    const labels = { overview: 'Overview', methods: 'Methods comparison', resources: 'Resource library', learn: 'Learning paths', glossary: 'Glossary', atlas: 'Technologies', organizations: 'Organizations', researchers: 'Researchers', frontier: 'Papers & updates', pathways: 'Study & careers', timeline: 'Milestones', about: 'Coverage & sources', search: 'Search', topic: 'Explore a topic' };
+    const labels = { overview: 'Start here', topics: 'Topic guides', explore: 'Explore the field', methods: 'Methods comparison', resources: 'Resource library', learn: 'Learning paths', glossary: 'Glossary', atlas: 'Technologies', organizations: 'Organizations', researchers: 'Researchers', frontier: 'Papers & updates', pathways: 'Study & careers', timeline: 'Milestones', about: 'Coverage & sources', search: 'Search', topic: 'Explore a topic' };
     const descriptions = {
         atlas: 'Compare recording, stimulation, restoration, and computational methods. Select a point for mechanisms, evidence, and sources.',
         organizations: 'Explore source-linked companies, laboratories, programs, and open-science projects. Rankings describe disclosed metrics, not research quality.',
@@ -20,6 +20,7 @@
     labels.labs = 'Research labs';
     labels.visuals = 'Pictures & films';
     labels.connections = 'Research connections';
+    labels.people = 'People & influence';
     const e = hubUtils.escapeHtml;
     const url = hubUtils.sourceHref;
     const topicById = (id) => hubTopics.find(t => t.id === id);
@@ -35,14 +36,31 @@
         return `<a class="topic-card" href="${topicLink(t.id)}" style="--topic:${t.color}"><div class="topic-card-top"><span>${e(t.eyebrow)}</span><span>${String(index + 1).padStart(2, '0')}</span></div><h3>${e(t.title)}</h3><p>${e(t.description)}</p><span class="topic-card-bottom">${hubResources.filter(r => r.topic === t.id).length} curated resources <span aria-hidden="true">↗</span></span></a>`;
     }
     function overview() {
-        const stats = `<div class="overview-stat"><strong>${count?.technologies ?? '—'}</strong><span>technologies</span></div><div class="overview-stat"><strong>${count?.organizations ?? '—'}</strong><span>organizations</span></div><div class="overview-stat"><strong>${hubResources.length}</strong><span>curated resources</span></div>`;
-        const starters = ['neuromatch', 'mne', 'deeplabcut'].map(id => resourceCard(hubResources.find(r => r.id === id))).join('');
-        return pageHead('YOUR FIELD GUIDE', 'Neuroengineering, connected.', 'Understand the field. Find the right tools. Follow the people and ideas moving it forward.', `<a class="button-primary" href="#resources">Explore resources <span aria-hidden="true">↗</span></a>`)
-            + `<div class="overview-bar"><span>From neural signals<br><strong>to useful systems.</strong></span><div class="overview-stats">${stats}</div><a href="#about">How this is curated ↗</a></div>
-    ${NeuroVisuals.spotlight()}${NeuroConnections.spotlight()}<div class="overview-destinations"><a class="overview-notebook" href="#ideas"><span class="eyebrow">THE OPEN NOTEBOOK</span><div class="overview-spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h2>Observe. Question.<br>Build an idea.</h2><p>Explore the electrode-count question and compare the systems being built.</p><strong>Open the notebook <span aria-hidden="true">↗</span></strong></a><a class="overview-labs" href="#labs"><span class="eyebrow">THE RESEARCH DIRECTORY</span><div class="overview-lab-number">${neuroLabsData.labs.length}<span>lab profiles</span></div><h2>Go inside the work.</h2><p>Find investigators, instruments, projects, and evidence across neuroengineering.</p><strong>Explore research labs <span aria-hidden="true">↗</span></strong></a></div>
-    <section aria-labelledby="topics-heading"><div class="section-heading"><div><span class="eyebrow">FIND YOUR DIRECTION</span><h2 id="topics-heading">Explore the field</h2></div><span>${hubTopics.length} connected areas</span></div><div class="topic-grid">${hubTopics.map(topicCard).join('')}</div></section>
-    <section class="overview-bottom"><div><div class="section-heading"><div><span class="eyebrow">MAKE IT PRACTICAL</span><h2>Start with a question</h2></div></div><div class="question-list"><a href="#methods"><span>Which measurement fits my research question?<small>Compare signals, access, strengths, and limitations</small></span><span aria-hidden="true">↗</span></a><a href="#learn/eeg"><span>How do I build my first neural decoder?<small>EEG → preprocessing → held-out evaluation</small></span><span aria-hidden="true">↗</span></a><a href="#learn/motion"><span>How do I measure behavior in 3D?<small>Video → keypoints → calibrated trajectories</small></span><span aria-hidden="true">↗</span></a><a href="#organizations"><span>Who is working on a particular technology?<small>Explore laboratories, companies, and public projects</small></span><span aria-hidden="true">↗</span></a></div></div><aside class="field-note"><span class="eyebrow">READING THE FIELD</span><h2>Follow the evidence.</h2><p>A compelling demonstration, a registered trial, and a deployed device answer different questions. Follow each record to its source and check the date, study model, and limitations.</p><a href="#frontier">Explore papers &amp; updates ↗</a></aside></section>
-    <section><div class="section-heading"><div><span class="eyebrow">A GOOD PLACE TO BEGIN</span><h2>Open resources, real practice</h2></div><a href="#resources?level=Beginner">All beginner resources ↗</a></div><div class="resource-grid three">${starters}</div></section>`;
+        const neural = neuroVisualData.items.find(m => m.labId === 'rice-luan');
+        const movement = neuroVisualData.items.find(m => m.labId === 'epfl-courtine');
+        const chip = neuroVisualData.items.find(m => m.labId === 'columbia-shepard');
+        const tissue = neuroVisualData.items.find(m => m.labId === 'rice-tringides');
+        const team = { url: 'https://news-network.rice.edu/news/files/2023/05/Luan_Kim_Lycke_Xie_LG-1.jpg', alt: 'Lan Luan, Robin Kim, Roy Lycke, and Chong Xie at Rice University.', caption: 'Luan, Kim, Lycke & Xie', credit: 'Rice University', source: neural.image.source };
+        const cards = [
+            { by: 'organizations', title: 'Companies & labs', question: 'Who is building it?', description: 'Go inside a lab or company: its projects, methods, and evidence.', image: chip.image, caption: 'A wireless cortical interface · Columbia' },
+            { by: 'problems', title: 'Problems to solve', question: 'What could this help us do?', description: 'Explore vision, movement, communication, memory, and more.', image: movement.image, caption: 'Brain–spine interface research · EPFL' },
+            { by: 'people', title: 'People & connections', question: 'How are the scientists connected?', description: 'Follow mentors, collaborators, and the ideas that become companies.', image: team, caption: team.caption },
+            { by: 'countries', title: 'Countries', question: 'Where is the work happening?', description: 'Find mapped labs and companies, then follow their work across borders.', image: tissue.image, caption: 'Neural tissue models · Rice University' },
+        ];
+        return `<section class="welcome-research" aria-labelledby="welcome-title"><div class="welcome-research-copy"><span class="eyebrow">THE NEUROENGINEERING FIELD GUIDE</span><h1 id="welcome-title">See the science.<br>Find the connections.</h1><p>Explore how people measure, understand, and interact with the nervous system—from the problem to the people working on it.</p><a class="welcome-begin" href="#topic/bci">New to the field? Start with the basics <span aria-hidden="true">→</span></a></div><figure class="welcome-micrograph"><img data-visual-image src="${url(neural.image.url)}" alt="${e(neural.image.alt)}" decoding="async" fetchpriority="high"><figcaption><strong>Inside living neural tissue</strong><span>Two-photon microscopy · mouse brain · electrode in yellow</span><a href="${url(neural.image.source)}" target="_blank" rel="noopener noreferrer">Rice Neuroengineering Initiative / Rice University ↗</a></figcaption></figure></section>
+    <section class="welcome-choices" aria-labelledby="welcome-choices-title"><div class="section-heading"><div><span class="eyebrow">FOUR WAYS INTO THE SAME FIELD</span><h2 id="welcome-choices-title">Follow your curiosity.</h2></div><a href="#explore?by=problems">Explore the field →</a></div><div class="welcome-lenses">${cards.map((card, i) => `<article class="welcome-lens"><figure><a href="#explore?by=${card.by}" aria-label="Explore by ${e(card.title.toLowerCase())}"><img data-visual-image src="${url(card.image.url)}" alt="${e(card.image.alt)}" loading="lazy" decoding="async"></a><figcaption><span>${e(card.caption)}</span><a href="${url(card.image.source)}" target="_blank" rel="noopener noreferrer" aria-label="Image source: ${e(card.image.credit)}">Source ↗</a></figcaption></figure><a class="welcome-lens-copy" href="#explore?by=${card.by}"><span class="eyebrow">0${i + 1} / ${e(card.question)}</span><h3>${e(card.title)} <span aria-hidden="true">→</span></h3><p>${e(card.description)}</p></a></article>`).join('')}</div></section>
+    <div class="welcome-support"><div><span class="eyebrow">BUILD YOUR UNDERSTANDING</span><h2>A little background goes a long way.</h2></div><a href="#topics">Topic guides <span>Understand a concept →</span></a><a href="#learn">Learning paths <span>Try a guided project →</span></a><a href="#visuals">Pictures &amp; films <span>See the work up close →</span></a></div>
+    <aside class="welcome-evidence"><div><strong>Every route leads back to the evidence.</strong><p>Browse short explanations first, then open the projects, relationships, and original sources behind them.</p></div><a href="#about">About the sources <span aria-hidden="true">↗</span></a></aside>`;
+    }
+    function topicsPage() {
+        const groups = [
+            { title: 'Measure & understand', description: 'How we record activity, make sense of signals, and relate them to behavior.', ids: ['interfaces', 'signals', 'imaging', 'behavior', 'computation'] },
+            { title: 'Build & interact', description: 'How technology can use signals, influence activity, or connect with living tissue.', ids: ['bci', 'stimulation', 'regeneration'] },
+            { title: 'Check & share the evidence', description: 'How results become reproducible and meaningful to the people who use them.', ids: ['data', 'translation'] },
+        ];
+        return '<a class="back-link" href="#overview">← Start here</a>' + pageHead('LEARN THE BASICS', 'Find the question that interests you.', 'Each guide starts with a visual explanation. Open the workflows, examples, and sources when you want more detail.')
+            + `<aside class="topic-start"><span>Not sure where to begin?</span><a href="#topic/bci">Start with brain–computer interfaces →</a><a href="#glossary">Look up a term ↗</a></aside>`
+            + groups.map((group, i) => `<section class="topic-directory-group" aria-labelledby="topic-group-${i}"><div class="section-heading"><div><span class="eyebrow">0${i + 1}</span><h2 id="topic-group-${i}">${e(group.title)}</h2><p>${e(group.description)}</p></div></div><div class="topic-directory">${group.ids.map(id => topicById(id)).filter(Boolean).map(t => `<a href="${topicLink(t.id)}" class="topic-directory-card" style="--topic:${t.color}"><span class="eyebrow">${e(t.eyebrow)}</span><h3>${e(t.title)}</h3><p>${e(t.question)}</p><span>Open guide <b aria-hidden="true">→</b></span></a>`).join('')}</div></section>`).join('');
     }
     function resourcePage(params) {
         const query = params.get('q') || '', topic = params.get('topic') || '', type = params.get('type') || '', level = params.get('level') || '';
@@ -62,10 +80,12 @@
         if (!guide)
             return '';
         return `<section class="guide-introduction"><span class="eyebrow">UNDERSTAND THE AREA</span><h2>What you are actually working with</h2>${guide.primer.map(p => `<p>${e(p)}</p>`).join('')}</section>
-    <section class="guide-section"><div class="section-heading"><div><span class="eyebrow">ENGINEERING DECISIONS</span><h2>Tradeoffs that shape the work</h2></div></div><div class="guide-tradeoffs">${guide.tradeoffs.map(t => `<article><h3>${e(t.choice)}</h3><div><span class="eyebrow">WHAT YOU GAIN</span><p>${e(t.benefit)}</p></div><div><span class="eyebrow">WHAT TO ACCOUNT FOR</span><p>${e(t.cost)}</p></div></article>`).join('')}</div></section>
-    <section class="guide-section"><div class="section-heading"><div><span class="eyebrow">FROM QUESTION TO RESULT</span><h2>A practical research workflow</h2></div></div><ol class="guide-workflow">${guide.workflow.map((w, i) => `<li><span class="step-number">${String(i + 1).padStart(2, '0')}</span><div><h3>${e(w.title)}</h3><p>${e(w.action)}</p><p class="workflow-output"><strong>Keep:</strong> ${e(w.output)}</p></div></li>`).join('')}</ol></section>
-    ${example ? `<section class="worked-example"><span class="eyebrow">WORKED EXAMPLE</span><h2>${e(example.title)}</h2><p>${e(example.setup)}</p><ol>${example.steps.map(step => `<li>${e(step)}</li>`).join('')}</ol><p>${e(example.interpretation)}</p></section>` : ''}
-    <div class="guide-bottom"><section><span class="eyebrow">CHECK YOUR INTERPRETATION</span><h2>Common mistakes</h2><ul>${guide.pitfalls.map(p => `<li>${e(p)}</li>`).join('')}</ul></section><section class="guide-sources"><span class="eyebrow">GO TO THE SOURCE</span><h2>Further reading</h2><ul>${guide.sources.map(r => `<li><a href="${url(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.title)} ↗</a></li>`).join('')}</ul><p>These guides synthesize the linked sources into an introductory research workflow.</p></section></div>`;
+    <section class="guide-reading" aria-labelledby="guide-reading-title"><div class="guide-reading-heading"><div><h2 id="guide-reading-title">Go deeper, one question at a time</h2><p>Open the part you need, or expand the full guide.</p></div><button type="button" id="guide-expand-all" aria-expanded="false">Expand all details</button></div>
+    <details class="guide-reading-detail"><summary><span><strong>Tradeoffs that shape the work</strong><small>What each engineering choice gains and costs</small></span></summary><div class="guide-reading-body"><div class="guide-tradeoffs">${guide.tradeoffs.map(t => `<article><h3>${e(t.choice)}</h3><div><span class="eyebrow">WHAT YOU GAIN</span><p>${e(t.benefit)}</p></div><div><span class="eyebrow">WHAT TO ACCOUNT FOR</span><p>${e(t.cost)}</p></div></article>`).join('')}</div></div></details>
+    <details class="guide-reading-detail"><summary><span><strong>A practical research workflow</strong><small>${guide.workflow.length} steps from a question to a result</small></span></summary><div class="guide-reading-body"><ol class="guide-workflow">${guide.workflow.map((w, i) => `<li><span class="step-number">${String(i + 1).padStart(2, '0')}</span><div><h3>${e(w.title)}</h3><p>${e(w.action)}</p><p class="workflow-output"><strong>Keep:</strong> ${e(w.output)}</p></div></li>`).join('')}</ol></div></details>
+    ${example ? `<details class="guide-reading-detail"><summary><span><strong>Worked example: ${e(example.title)}</strong><small>Follow the calculation and understand its limits</small></span></summary><div class="guide-reading-body"><section class="worked-example"><h3>${e(example.title)}</h3><p>${e(example.setup)}</p><ol>${example.steps.map(step => `<li>${e(step)}</li>`).join('')}</ol><p>${e(example.interpretation)}</p></section></div></details>` : ''}
+    <details class="guide-reading-detail"><summary><span><strong>Common mistakes</strong><small>Check your interpretation before drawing a conclusion</small></span></summary><div class="guide-reading-body guide-reading-pitfalls"><ul>${guide.pitfalls.map(p => `<li>${e(p)}</li>`).join('')}</ul></div></details>
+    <details class="guide-reading-detail"><summary><span><strong>Further reading &amp; original sources</strong><small>${guide.sources.length} references behind this guide</small></span></summary><div class="guide-reading-body guide-sources"><ul>${guide.sources.map(r => `<li><a href="${url(r.url)}" target="_blank" rel="noopener noreferrer">${e(r.title)} <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></li>`).join('')}</ul><p>These guides synthesize the linked sources into an introductory research workflow.</p></div></details></section>`;
     }
     function topicPage(id) {
         const topic = topicById(id);
@@ -73,11 +93,14 @@
             return notFound();
         const resources = hubResources.filter(r => r.topic === id);
         const related = hubGuides[id]?.related || [];
-        return `<a class="back-link" href="#overview">← All topics</a>` + pageHead(topic.eyebrow, topic.title, topic.description)
+        const sequence = [['bci', 'See the whole system'], ['interfaces', 'Record a signal'], ['signals', 'Understand the signal']];
+        const suggested = sequence.some(([topicId]) => topicId === id) ? `<nav class="guide-reading-sequence" aria-label="Suggested reading"><span>Suggested reading</span>${sequence.map(([topicId, label], index) => `<a href="${topicLink(topicId)}"${topicId === id ? ' aria-current="step"' : ''}><span aria-hidden="true">${index + 1}</span>${e(label)}${topicId === id ? '<small>You are here</small>' : ''}</a>`).join('')}</nav>` : '';
+        return `<a class="back-link" href="#topics">← All topics</a>` + pageHead(topic.eyebrow, topic.title, topic.description)
             + `<div class="topic-visual-intro">${FieldVisuals.topic(id)}<section class="topic-primer" style="--topic:${topic.color}"><div><span class="eyebrow">THE CENTRAL QUESTION</span><h2>${e(topic.question)}</h2></div><div><h3>Concepts to understand</h3><ul>${topic.concepts.map(c => `<li>${e(c)}</li>`).join('')}</ul></div></section></div>
-    <div class="topic-next"><a class="button-primary" href="#atlas?q=${encodeURIComponent(topic.atlasQuery)}">Explore related technologies ↗</a><a href="#organizations?q=${encodeURIComponent(topic.atlasQuery)}">Find organizations ↗</a><a href="#glossary?topic=${id}">Key terms ↗</a><a href="#methods">Compare methods ↗</a></div>
+    <p class="guide-term-help">Unfamiliar words? <a href="#glossary?topic=${id}">Read the key terms for this topic ↗</a></p>
     ${guideDetails(id)}
-    <div class="section-heading"><h2>Tools &amp; references</h2><span>${resources.length} official resources</span></div><div class="resource-grid">${resources.map(resourceCard).join('')}</div><div class="section-heading"><h2>Connected areas</h2><a href="#learn">Learning paths ↗</a></div><div class="related-topics">${related.map(id => topicById(id)).filter(Boolean).map(t => `<a href="${topicLink(t.id)}">${e(t.title)} ↗</a>`).join('')}</div>`;
+    <details class="guide-reading-detail guide-resource-detail"><summary><span><strong>Tools &amp; references</strong><small>${resources.length} official resources to put this topic into practice</small></span></summary><div class="guide-reading-body"><div class="resource-grid">${resources.map(resourceCard).join('')}</div></div></details>
+    ${suggested}<section class="guide-next-section"><div class="section-heading"><h2>Where to go next</h2><a href="#learn">Try a learning path ↗</a></div><div class="topic-next"><a class="button-primary" href="#atlas?q=${encodeURIComponent(topic.atlasQuery)}">Explore related technologies ↗</a><a href="#organizations?q=${encodeURIComponent(topic.atlasQuery)}">Find organizations ↗</a><a href="#methods">Compare methods ↗</a></div><h3>Connected areas</h3><div class="related-topics">${related.map(id => topicById(id)).filter(Boolean).map(t => `<a href="${topicLink(t.id)}">${e(t.title)} ↗</a>`).join('')}</div></section>`;
     }
     function methodsPage(params) {
         const left = hubMethods.find(m => m.id === params.get('left')) || hubMethods[0];
@@ -94,10 +117,10 @@
                 return notFound();
             const assessment = hubProjectChecks[path.id];
             return '<a class="back-link" href="#learn">← All learning paths</a>' + pageHead('GUIDED PRACTICE', path.title, path.description)
-                + FieldVisuals.learning(id) + `<div class="path-context"><div><span class="eyebrow">BEFORE YOU START</span><p>${e(path.prerequisites)}</p></div><div><span class="eyebrow">WHAT YOU WILL MAKE</span><p>${e(path.outcome)}</p></div></div><ol class="learning-steps">${path.steps.map((s, i) => `<li><span class="step-number">0${i + 1}</span><div><span class="eyebrow">STEP ${i + 1}</span><h2>${e(s[1])}</h2><p>${e(s[2])}</p>${external(hubResources.find(r => r.id === s[0]), 'Open ' + hubResources.find(r => r.id === s[0]).title)}</div></li>`).join('')}</ol>${assessment ? `<section class="project-assessment"><span class="eyebrow">CHECK YOUR WORK</span><h2>What a solid result includes</h2><ul>${assessment.checks.map(c => `<li>${e(c)}</li>`).join('')}</ul><p><strong>Stretch question:</strong> ${e(assessment.stretch)}</p></section>` : ''}<p class="page-note">These are editorial learning sequences, not accredited courses. Use research and example data; the outcomes are educational projects.</p>`;
+                + FieldVisuals.learning(id) + `<div class="path-context"><div><span class="eyebrow">BEFORE YOU START</span><p>${e(path.prerequisites)}</p></div><div><span class="eyebrow">WHAT YOU WILL MAKE</span><p>${e(path.outcome)}</p></div></div><p class="learning-reading-hint">Start with step 1, then open each step as you go. You can keep several steps open.</p><ol class="learning-steps learning-reading-steps">${path.steps.map((s, i) => `<li><span class="step-number" aria-hidden="true">0${i + 1}</span><details class="learning-step-detail"${i === 0 ? ' open' : ''}><summary><span><span class="eyebrow">STEP ${i + 1}</span><strong>${e(s[1])}</strong></span></summary><div class="learning-step-body"><p>${e(s[2])}</p>${external(hubResources.find(r => r.id === s[0]), 'Open ' + hubResources.find(r => r.id === s[0]).title)}</div></details></li>`).join('')}</ol>${assessment ? `<section class="project-assessment"><span class="eyebrow">CHECK YOUR WORK</span><h2>What a solid result includes</h2><ul>${assessment.checks.map(c => `<li>${e(c)}</li>`).join('')}</ul><p><strong>Stretch question:</strong> ${e(assessment.stretch)}</p></section>` : ''}<p class="page-note">These are editorial learning sequences, not accredited courses. Use research and example data; the outcomes are educational projects.</p>`;
         }
         return pageHead('LEARN BY DOING', 'A path from curiosity to practice.', 'Choose one concrete project. Build the background you need as you go.')
-            + `<div class="learning-grid">${hubLearningPaths.map((p, i) => `<article class="learning-card"><span class="learning-index">0${i + 1}</span><span class="eyebrow">4 STEPS · PROJECT BASED</span><h2><a href="#learn/${p.id}">${e(p.title)}</a></h2><div class="learning-visual-preview">${FieldVisuals.topic({ eeg: 'signals', spikes: 'interfaces', motion: 'behavior', model: 'computation', calcium: 'imaging', 'stimulation-model': 'stimulation' }[p.id])}</div><p>${e(p.description)}</p><div><span class="eyebrow">YOU WILL MAKE</span><p>${e(p.outcome)}</p></div><ol class="learning-preview" aria-label="Path sequence">${p.steps.map(s => `<li>${e(s[1])}</li>`).join('')}</ol><a class="button-primary" href="#learn/${p.id}">Open learning path ↗</a></article>`).join('')}</div><div class="learning-support"><h2>Looking for a degree or a research role?</h2><p>Compare programs, explore role types, and investigate the people doing work that interests you.</p><a href="#pathways">Study &amp; careers ↗</a><a href="#researchers">Researcher trails ↗</a></div>`;
+            + `<div class="learning-grid">${hubLearningPaths.map((p, i) => `<article class="learning-card"><span class="learning-index">0${i + 1}</span><span class="eyebrow">4 STEPS · PROJECT BASED</span><h2><a href="#learn/${p.id}">${e(p.title)}</a></h2><p>${e(p.description)}</p><dl class="learning-card-facts"><div><dt>You will make</dt><dd>${e(p.outcome)}</dd></div><div><dt>Before you start</dt><dd>${e(p.prerequisites)}</dd></div></dl><details class="learning-card-preview"><summary>Preview the four steps</summary><ol class="learning-preview" aria-label="Path sequence">${p.steps.map(s => `<li>${e(s[1])}</li>`).join('')}</ol><div class="learning-visual-preview">${FieldVisuals.topic({ eeg: 'signals', spikes: 'interfaces', motion: 'behavior', model: 'computation', calcium: 'imaging', 'stimulation-model': 'stimulation' }[p.id])}</div></details><a class="button-primary" href="#learn/${p.id}">Open learning path ↗</a></article>`).join('')}</div><div class="learning-support"><h2>Looking for a degree or a research role?</h2><p>Compare programs, explore role types, and investigate the people doing work that interests you.</p><a href="#pathways">Study &amp; careers ↗</a><a href="#researchers">Researcher trails ↗</a></div>`;
     }
     function glossaryPage(params) {
         const q = params.get('q') || '', topic = params.get('topic') || '', letter = params.get('letter') || '';
@@ -112,9 +135,12 @@
     const matches = hubUtils.matches;
     function searchRecords() {
         return [
+            { id: 'start-here', title: 'Start here', description: 'An introduction to neuroengineering and four ways to explore the research.', kind: 'Section', href: '#overview', keywords: 'beginner new basics overview introduction' },
+            { id: 'topic-guides', title: 'Topic guides', description: 'Browse the field by the question you want to answer.', kind: 'Section', href: '#topics', keywords: 'learn basics overview topics' },
+            ...NeuroExplore.records(),
             ...NeuroIdeas.records(),
             ...NeuroLabs.records(),
-            ...NeuroVisuals.records(), ...NeuroConnections.records(),
+            ...NeuroVisuals.records(), ...NeuroConnections.records(), ...NeuroPeople.records(),
             ...hubTopics.map(t => ({ id: t.id, title: t.title, description: t.description, kind: 'Topic', href: topicLink(t.id), keywords: t.concepts.join(' ') + ' ' + JSON.stringify(hubGuides[t.id] || {}) })),
             ...hubMethods.map(m => ({ id: m.id, title: m.name + ' measurement', description: m.signal, kind: 'Method', href: '#methods?left=' + encodeURIComponent(m.id), keywords: m.strength + ' ' + m.limit + ' ' + m.access })),
             ...hubResources.map(r => ({ id: r.id, title: r.title, description: r.description, kind: 'Resource', href: r.url, keywords: topicById(r.topic).title + ' ' + r.type })),
@@ -131,7 +157,7 @@
         const displayed = filtered.slice((page - 1) * 30, page * 30);
         const kinds = [...new Set(all.map(r => r.kind))];
         const link = (k, p = 1) => '#search?' + new URLSearchParams({ q, ...(k ? { kind: k } : {}), ...(p > 1 ? { page: String(p) } : {}) }).toString();
-        return pageHead('SEARCH THE WHOLE HUB', q ? 'Results for “' + q + '”' : 'What would you like to explore?', 'Search detailed lab projects, investigators, ideas, company scaling strategies, topics, resources, technologies, organizations, researchers, programs, career roles, job listings, and paper snapshots.')
+        return pageHead('SEARCH THE WHOLE HUB', q ? 'Results for “' + q + '”' : 'What would you like to explore?', 'Search a topic, person, technology, or question. Use the result types below to narrow your search.')
             + `<form id="results-search-form" class="results-search-form" role="search"><label class="sr-only" for="results-query">Refine search</label><input id="results-query" type="search" value="${e(q)}" placeholder="Search across Neurovisual"><button type="submit">Search</button></form><div class="search-kinds" aria-label="Result type"><a href="${e(link(''))}"${!kind ? ' aria-current="true"' : ''}>All <span>${all.length}</span></a>${kinds.map(k => `<a href="${e(link(k))}"${kind === k ? ' aria-current="true"' : ''}>${e(k)} <span>${all.filter(r => r.kind === k).length}</span></a>`).join('')}</div><p class="results-line" role="status">${filtered.length} results${filtered.length ? ' · showing ' + ((page - 1) * 30 + 1) + '–' + Math.min(page * 30, filtered.length) : ''}</p><div class="search-results">${displayed.map(r => `<article><span class="eyebrow">${e(r.kind)}</span><h2><a href="${r.href.startsWith('#') ? e(r.href) : url(r.href)}"${r.href.startsWith('#') ? '' : ' target="_blank" rel="noopener noreferrer"'}>${e(r.title)} <span aria-hidden="true">↗</span></a></h2><p>${e(r.description)}</p></article>`).join('') || `<div class="hub-empty"><h2>${q ? 'No matches found.' : 'Start with a topic or a question.'}</h2><p>Try “EEG”, “Stanford”, “spike sorting”, or “3D”.</p><a href="#resources">Browse the resource library</a></div>`}</div>${filtered.length > 30 ? `<nav class="search-pager" aria-label="Search pages">${page > 1 ? `<a href="${e(link(kind, page - 1))}">← Previous</a>` : '<span></span>'}<span>Page ${page} of ${Math.ceil(filtered.length / 30)}</span>${page * 30 < filtered.length ? `<a href="${e(link(kind, page + 1))}">Next →</a>` : '<span></span>'}</nav>` : ''}`;
     }
     function snapshotDate(value) { const d = new Date(String(value)); return Number.isNaN(d.getTime()) ? 'Unavailable' : d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }); }
@@ -145,7 +171,20 @@
         document.body.dataset.view = view;
         document.body.dataset.detail = String(detail);
         document.getElementById('workspace-page').textContent = labels[view] || 'Neurovisual';
-        document.getElementById('workspace-section').textContent = descriptions[view] ? 'Atlas' : view === 'ideas' ? 'Notebook' : view === 'labs' ? 'Research' : 'Field guide';
+        let section = view === 'overview' ? 'Welcome' : view === 'explore' ? 'Explore' : 'Neurovisual';
+        document.querySelectorAll('.nav-group').forEach(group => {
+            const active = (group.dataset.views || '').split(' ').includes(view);
+            group.open = active;
+            group.dataset.active = String(active);
+            if (active)
+                section = group.querySelector('summary strong')?.textContent || section;
+        });
+        document.getElementById('workspace-section').textContent = section;
+        if (view === 'topic') {
+            const topic = topicById(parseRoute().id);
+            if (topic)
+                document.getElementById('workspace-page').textContent = topic.title;
+        }
     }
     function closeMenu() { sidebar.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation'); }
     function render(focusMain = false) {
@@ -161,11 +200,11 @@
         const previousId = previous?.id, selection = previous?.selectionStart;
         content.hidden = isAtlas;
         atlas.hidden = !isAtlas;
-        document.querySelectorAll('.site-nav a').forEach(a => { const active = a.dataset.route === (route === 'topic' ? 'overview' : atlasRoute); if (active)
+        document.querySelectorAll('.site-nav a').forEach(a => { const active = a.dataset.route === (route === 'topic' ? 'topics' : atlasRoute); if (active)
             a.setAttribute('aria-current', 'page');
         else
             a.removeAttribute('aria-current'); });
-        document.title = (labels[atlasRoute] || 'Neuroengineering') + ' — Neurovisual';
+        document.title = (route === 'topic' ? topicById(id)?.title || labels.topic : labels[atlasRoute] || 'Neuroengineering') + ' — Neurovisual';
         setWorkspace(atlasRoute, !!id);
         if (missingRecord) {
             atlas.hidden = true;
@@ -184,12 +223,20 @@
             }
         }
         else {
-            content.innerHTML = route === 'connections' ? NeuroConnections.render(id, params) : route === 'visuals' ? NeuroVisuals.render(params) : route === 'labs' ? NeuroLabs.render(id, params) : route === 'ideas' ? NeuroIdeas.render(id, params) : route === 'overview' ? overview() : route === 'methods' ? methodsPage(params) : route === 'resources' ? resourcePage(params) : route === 'topic' ? topicPage(id) : route === 'learn' ? learnPage(id) : route === 'glossary' ? glossaryPage(params) : route === 'search' ? searchPage(params) : route === 'about' ? aboutPage() : notFound();
+            content.innerHTML = route === 'people' ? NeuroPeople.render(id, params) : route === 'connections' ? NeuroConnections.render(id, params) : route === 'visuals' ? NeuroVisuals.render(params) : route === 'labs' ? NeuroLabs.render(id, params) : route === 'ideas' ? NeuroIdeas.render(id, params) : route === 'overview' ? overview() : route === 'explore' ? NeuroExplore.render(params) : route === 'topics' ? topicsPage() : route === 'methods' ? methodsPage(params) : route === 'resources' ? resourcePage(params) : route === 'topic' ? topicPage(id) : route === 'learn' ? learnPage(id) : route === 'glossary' ? glossaryPage(params) : route === 'search' ? searchPage(params) : route === 'about' ? aboutPage() : notFound();
             bindFilters(params);
+            if (route === 'explore')
+                NeuroExplore.bind(content, params, (hash, focusId) => { history.pushState(null, '', hash); render(!focusId); if (focusId)
+                    document.getElementById(focusId)?.focus({ preventScroll: true }); });
             if (route === 'ideas')
                 NeuroIdeas.bind(content, id, params);
             if (route === 'labs')
                 NeuroLabs.bind(content, id, params, updateHash);
+            if (route === 'people')
+                NeuroPeople.bind(content, id, params, (hash, focusId) => { history.pushState(null, '', hash); render(); const target = focusId ? document.getElementById(focusId) : content.querySelector('.pe-page h1'); if (!focusId) {
+                    target?.setAttribute('tabindex', '-1');
+                    window.scrollTo({ top: 0, behavior: 'instant' });
+                } target?.focus({ preventScroll: true }); });
             if (route === 'connections')
                 NeuroConnections.bind(content, id, params, (hash, focusId) => { history.pushState(null, '', hash); render(); if (focusId)
                     document.getElementById(focusId)?.focus({ preventScroll: true });
@@ -215,6 +262,13 @@
     }
     function updateHash(hash) { history.replaceState(null, '', hash); render(); }
     function bindFilters(params) {
+        const guideToggle = document.getElementById('guide-expand-all');
+        if (guideToggle) {
+            const sections = Array.from(content.querySelectorAll('.guide-reading-detail'));
+            const syncGuideToggle = () => { const open = sections.every(section => section.open); guideToggle.setAttribute('aria-expanded', String(open)); guideToggle.textContent = open ? 'Collapse all details' : 'Expand all details'; };
+            guideToggle.addEventListener('click', () => { const open = !sections.every(section => section.open); sections.forEach(section => { section.open = open; }); syncGuideToggle(); });
+            sections.forEach(section => section.addEventListener('toggle', syncGuideToggle));
+        }
         const liveInput = (input, update) => { let composing = false; input.addEventListener('compositionstart', () => { composing = true; }); input.addEventListener('compositionend', () => { composing = false; update(); }); input.addEventListener('input', (event) => { if (!composing && !event.isComposing)
             update(); }); };
         const form = document.getElementById('resource-filters');

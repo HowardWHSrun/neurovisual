@@ -6,7 +6,9 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 
 ## What is here
 
-- **Overview:** ten connected topics, with short primers and routes into the atlas.
+- **Start here:** a photography-led introduction, a beginner route, and four ways into the research: companies/labs, problems, people/connections, and countries. Navigation keeps the detailed reference sections in expandable groups.
+- **Explore the field:** eight source-linked problem groups and six starter relationship stories. Country guides connect mapped labs and companies; combine problem and country filters, then open the exact profile or original source.
+- **Topic guides:** ten topics grouped by the questions they answer, with visual introductions and expandable workflows, examples, sources, and tools. Use Expand all details for a full read.
 - **Resource library:** 41 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
 - **Learning paths:** six four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, and stimulation modeling. Each includes evaluation criteria and a stretch question.
 - **Glossary:** 40 introductory definitions with links to their topic guides.
@@ -18,6 +20,10 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 - **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
 Atlas records retain their original dates and limitations. Resource links were reviewed on September 7, 2026; this does not mean every atlas record was reverified that day. The site is a curated starting point, not a complete census or a clinical reference.
+
+## People and influence
+
+Browse [People & influence](https://howardwhsrun.github.io/neurovisual/#people): 192 sourced profiles, including 143 ranked using complete OpenAlex metrics. Compare people side by side or inspect the three-step calculation. [PEOPLE.md](PEOPLE.md) documents identity checks, editorial weights, publication-year citation cohorts and refresh instructions. Missing or ambiguous author records remain unranked.
 
 ## Develop and validate
 
@@ -36,7 +42,10 @@ The original TypeScript/classic-script architecture is retained. GitHub Pages se
 
 | File | Purpose |
 | --- | --- |
-| `index.html`, `workspace.css` | Compact navigation, on-demand search, catalog, dictionary, learning, and comparison layouts |
+| `index.html`, `organization.css`, `guide-reading.css` | Navy navigation, research photography, beginner home page, topic directory, and expandable reading |
+| `src/explore.ts`, `explore.css`, `data/exploration*.json` | Four exploration views, problem/country combinations, and evidence-linked people stories |
+| `scripts/build-explore.mjs`, `scripts/check-explore.mjs` | Generate exploration data and check references, filters, geography, rendering, and navigation |
+| `workspace.css` | On-demand search, catalog, dictionary, learning, and comparison layouts |
 | `atlas-experience.css` | Map space, researcher/paper reading panes, career controls, and chronology styles |
 | `data/ideas.json`, `data/neural-counts.json` | Authored research notes, company strategies, and scoped milestone evidence |
 | `data/labs.json`, `src/labs.ts`, `labs.css` | Detailed lab profiles, university directories, filters, and progress measures |
