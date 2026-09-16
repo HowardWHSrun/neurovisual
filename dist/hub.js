@@ -194,6 +194,7 @@
         const { route, id, params } = parseRoute();
         NeuroVisuals.close();
         NeuroConnections.close();
+        PeopleMap.close();
         NeuroMedia.resetPlayers(content);
         NeuroMedia.resetPlayers(atlas);
         const atlasRoute = route === 'org' ? 'organizations' : route === 'tech' ? 'atlas' : route === 'person' ? 'researchers' : route;

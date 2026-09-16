@@ -183,7 +183,7 @@ interface Window { neuroAtlas?: { records: HubRecord[]; counts: { technologies: 
   function closeMenu() { sidebar.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation'); }
   function render(focusMain=false) {
     const {route,id,params} = parseRoute();
-    NeuroVisuals.close();NeuroConnections.close();
+    NeuroVisuals.close();NeuroConnections.close();PeopleMap.close();
     NeuroMedia.resetPlayers(content);NeuroMedia.resetPlayers(atlas);
     const atlasRoute = route==='org'?'organizations':route==='tech'?'atlas':route==='person'?'researchers':route;
     const isAtlas = !!descriptions[atlasRoute];

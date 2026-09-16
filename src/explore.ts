@@ -48,14 +48,6 @@ const NeuroExplore=(()=>{
   const labImage=labVisual('mit-anikeeva'),companyImage=visual('company-bisc');
   return `${intro('START WITH A GROUP','Who is doing the work?','Look inside a laboratory or explore a company. Each profile connects its approach to projects and original sources.')}<div class="ex-grid ex-organization-grid"><article class="ex-card">${photo(labImage,'#labs',true)}<div class="ex-card-body"><span class="ex-card-count">${neuroLabsData.labs.length} mapped lab profiles</span><h3 class="ex-card-title"><a href="#labs">Research labs <span aria-hidden="true">→</span></a></h3><p>See what each group studies, how it works, and which projects to read first.</p><a href="#labs?view=schools">Find labs by university →</a></div></article><article class="ex-card">${photo(companyImage,'#organizations',true)}<div class="ex-card-body"><span class="ex-card-count">Companies, institutes &amp; research programs</span><h3 class="ex-card-title"><a href="#organizations">Organization atlas <span aria-hidden="true">→</span></a></h3><p>Explore the wider ecosystem, from research teams to the companies developing interfaces and tools.</p><a href="#connections">Follow company research origins →</a></div></article></div><aside class="ex-next"><div><span class="eyebrow">FOLLOW THE IDEA</span><h3>How did research become a company?</h3><p>Read the people, experiments, and technology behind each company history.</p></div><a href="#connections">Explore company origins →</a></aside>`;
  }
- function pathCard(p:any,index:number){
-  const image=p.imageNodeId?visual('person-'+p.imageNodeId):undefined;
-  const relationshipCount=(p.relationships||[]).length;
-  return `<article class="ex-person-card${image?' ex-person-feature':''}">${photo(image,p.href,index===0)}<div class="ex-card-body"><span class="ex-label">${e(p.label||'A RESEARCH CONNECTION')}</span><h3><a href="${e(p.href)}">${e(p.title)} <span aria-hidden="true">→</span></a></h3><p>${e(p.summary)}</p><div class="ex-trail" aria-label="People in this story">${(p.people||[]).map((id:string)=>{const n=node(id);return n?`<a class="ex-trail-node" href="#connections/${encodeURIComponent(n.id)}?view=network">${e(n.name)}</a>`:'';}).join('')}</div><details class="ex-path-evidence"><summary>Read ${relationshipCount} ${relationshipCount===1?'relationship':'relationships'} &amp; sources</summary><ol>${(p.relationships||[]).map((r:any)=>`<li><span class="ex-label">${e(r.type)}</span><p><strong>${e(node(r.from)?.name||r.from)}</strong> → <strong>${e(node(r.to)?.name||r.to)}</strong></p><p>${e(r.description)}</p>${r.limit?`<p class="ex-note">${e(r.limit)}</p>`:''}<div class="ex-sources">${r.source?source(r.source.url,r.source.title):''}</div></li>`).join('')}</ol></details><a class="ex-path-link" href="${e(p.href)}">Follow this connection in the network →</a></div></article>`;
- }
- function people(){
-  return `${intro('START WITH THE PEOPLE','How are these scientists connected?','Follow a few real relationships first: who trained whom, who worked together, and how an idea reached a company.')}<div class="ex-person-grid">${paths().map(pathCard).join('')}</div><div class="ex-actions"><a href="#connections?view=network">Explore the whole research network →</a><a href="#people">Browse researcher profiles →</a></div><details class="ex-note"><summary>What does a connection mean?</summary><p>Each relationship has its own label and source. Training, co-authorship, collaboration, and company formation describe different connections. A path through the network does not establish that a technology descended from another.</p></details>`;
- }
  function companyEntries():any[]{return (window.neuroAtlas?.organizations||[]).filter(c=>['Company','Startup','Public company'].includes(c.kind));}
  const isCountry=(country:string)=>!['Global','European Union'].includes(country);
  function countryEntries(){
@@ -78,7 +70,7 @@ const NeuroExplore=(()=>{
  }
  function render(params=new URLSearchParams()){
   const requested=params.get('by')||'',by=lenses.some(([id])=>id===requested)?requested:'problems';
-  return `<div class="ex-page" data-ex-view="${by}">${head(by)}${by==='organizations'?organizations():by==='people'?people():by==='countries'?countries(params):problemView(params)}</div>`;
+  return `<div class="ex-page" data-ex-view="${by}">${head(by)}${by==='organizations'?organizations():by==='people'?PeopleMap.render(params):by==='countries'?countries(params):problemView(params)}</div>`;
  }
  function bind(container:HTMLElement,_params:URLSearchParams,navigate:(hash:string,focusId?:string)=>void){
   container.querySelectorAll<HTMLAnchorElement>('[data-ex-nav]').forEach(a=>a.addEventListener('click',event=>{
@@ -89,6 +81,7 @@ const NeuroExplore=(()=>{
   const updateCountry=()=>{if(countrySelect)navigate(link('problems',{problem:_params.get('problem')||'',...(countrySelect.value?{country:countrySelect.value}:{})}),'ex-problem-country');};
   countrySelect?.addEventListener('change',updateCountry);
   container.querySelector('#ex-problem-filter')?.addEventListener('submit',event=>{event.preventDefault();updateCountry();});
+  if(_params.get('by')==='people')PeopleMap.bind(container,_params,navigate);
   NeuroVisuals.bind(container);
  }
  function records():HubRecord[]{

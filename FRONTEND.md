@@ -79,3 +79,10 @@ See `VISUAL-PLAN.md` for the route-by-route revision checklist. `pnpm test` vali
 - See `NEUROAI.md` for scope, evidence standards and extension instructions.
 
 NeuroAI release verification: full `pnpm test` and `pnpm check` passed. Browser checks covered the project collection, source-linked dossiers, the four explanation layers, filtered search/focus and browser back, plus 390- and 320-pixel phone layouts. Original images were checked against their source pages; tall publication figures use contained, uncropped bounds and an original-image link. This browser blocked the YouTube embed, and the poster/direct-link fallback recovered correctly. Research software was not executed.
+
+## Native people map (15 September 2026)
+
+- `#explore?by=people` uses the bundled Cytoscape renderer and the existing documented graph. It includes people, companies, institutions, and labs; conceptual technology links remain in the wider research network.
+- The first visit opens a labeled example neighborhood; `overview=1` shows the whole map. Search opens a direct neighborhood; `focus`, `depth`, and `relation` preserve the view in the URL. `node` and `edge` preserve the selected detail. Selecting entries updates the panel without recreating the graph or resetting pan and zoom.
+- Training, founding, and work filters organize exact sourced edge labels. Node positions and uniform sizes carry no importance ranking. A readable list provides equivalent entry and relationship access without the canvas.
+- `dist/people-map.js` loads before `dist/explore.js`; the hub destroys its graph, event handlers, and observer before route changes. `scripts/check-people-map.mjs` covers filtered neighborhoods, source fidelity, search, routing, selection, and lifecycle cleanup.

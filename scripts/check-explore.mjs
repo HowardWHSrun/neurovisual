@@ -41,7 +41,7 @@ assert(start>=8 && end>start,'Atlas organization data is available');
 const atlasRows=vm.runInNewContext('('+app.slice(start,end)+')');
 const organizations=atlasRows.map(d=>({id:d.id,name:d.n,country:d.country,city:d.city,kind:d.k,summary:d.d,source:d.u}));
 const ctx=vm.createContext({URL,URLSearchParams,console,window:{neuroAtlas:{organizations},scrollTo(){}}});
-for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals','exploration-data','explore'])vm.runInContext(await read(`dist/${name}.js`),ctx);
+for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals','exploration-data','people-map','explore'])vm.runInContext(await read(`dist/${name}.js`),ctx);
 assert.equal(JSON.stringify(vm.runInContext('neuroExplorationData',ctx)),JSON.stringify(data),'Rebuild problem data');
 assert.equal(JSON.stringify(vm.runInContext('neuroExplorationPeopleData',ctx)),JSON.stringify(people),'Rebuild people data');
 const api=vm.runInContext('NeuroExplore',ctx),escape=vm.runInContext('hubUtils.escapeHtml',ctx);
@@ -83,7 +83,12 @@ assert.equal(selectedCountry(unavailableVision),unavailableCountry,'Keep an unma
 assert(unavailableVision.includes('0 of 6 selected research starting points')&&unavailableVision.includes('No selected labs in this country'),'Explain the empty result');
 assert(hrefs(unavailableVision).includes('#explore?by=problems&problem=vision'),'Clear the country while retaining the problem');
 const peopleHtml=render({by:'people'});
-for(const path of people.paths){assert(hrefs(peopleHtml).includes(path.href));for(const rel of path.relationships){assert(peopleHtml.includes(escape(rel.description)));assert(hrefs(peopleHtml).includes(new URL(rel.source.url).href));if(rel.limit)assert(peopleHtml.includes(escape(rel.limit)),'Preserve evidence limits');}}
+assert(peopleHtml.includes('id="pm-canvas"'),'The people lens opens the native map');
+assert(!peopleHtml.includes('ex-person-grid'),'Long story cards are replaced by the interactive map');
+for(const path of people.paths){
+  const [route,query]=path.href.split('?'),focus=decodeURIComponent(route.split('/')[1]),edge=new URLSearchParams(query).get('edge');
+  assert(hrefs(peopleHtml).some(href=>{if(!href.startsWith('#explore?'))return false;const selection=new URLSearchParams(href.split('?')[1]);return selection.get('by')==='people'&&selection.get('focus')===focus&&selection.get('edge')===edge&&selection.get('depth')==='2';}),`Keep ${path.id} as a focused map shortcut`);
+}
 
 assert(organizations.some(c=>c.kind==='Startup')&&organizations.some(c=>c.kind==='Public company'),'Country coverage includes private startups and public companies');
 const companies=organizations.filter(c=>['Company','Startup','Public company'].includes(c.kind)&&c.country);
