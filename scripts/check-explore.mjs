@@ -41,7 +41,7 @@ assert(start>=8 && end>start,'Atlas organization data is available');
 const atlasRows=vm.runInNewContext('('+app.slice(start,end)+')');
 const organizations=atlasRows.map(d=>({id:d.id,name:d.n,country:d.country,city:d.city,kind:d.k,summary:d.d,source:d.u}));
 const ctx=vm.createContext({URL,URLSearchParams,console,window:{neuroAtlas:{organizations},scrollTo(){}}});
-for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals','exploration-data','people-map','explore'])vm.runInContext(await read(`dist/${name}.js`),ctx);
+for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals','exploration-data','people-data','people','people-workplaces','people-map','explore'])vm.runInContext(await read(`dist/${name}.js`),ctx);
 assert.equal(JSON.stringify(vm.runInContext('neuroExplorationData',ctx)),JSON.stringify(data),'Rebuild problem data');
 assert.equal(JSON.stringify(vm.runInContext('neuroExplorationPeopleData',ctx)),JSON.stringify(people),'Rebuild people data');
 const api=vm.runInContext('NeuroExplore',ctx),escape=vm.runInContext('hubUtils.escapeHtml',ctx);
@@ -82,7 +82,7 @@ assert.deepEqual(labRowLinks(unavailableVision),[],'An unmatched country does no
 assert.equal(selectedCountry(unavailableVision),unavailableCountry,'Keep an unmatched selection visible');
 assert(unavailableVision.includes('0 of 6 selected research starting points')&&unavailableVision.includes('No selected labs in this country'),'Explain the empty result');
 assert(hrefs(unavailableVision).includes('#explore?by=problems&problem=vision'),'Clear the country while retaining the problem');
-const peopleHtml=render({by:'people'});
+const peopleHtml=render({by:'people',view:'map'});
 assert(peopleHtml.includes('id="pm-canvas"'),'The people lens opens the native map');
 assert(!peopleHtml.includes('ex-person-grid'),'Long story cards are replaced by the interactive map');
 for(const path of people.paths){

@@ -68,7 +68,7 @@ const NeuroExplore = (() => {
     }
     function render(params = new URLSearchParams()) {
         const requested = params.get('by') || '', by = lenses.some(([id]) => id === requested) ? requested : 'problems';
-        return `<div class="ex-page" data-ex-view="${by}">${head(by)}${by === 'organizations' ? organizations() : by === 'people' ? PeopleMap.render(params) : by === 'countries' ? countries(params) : problemView(params)}</div>`;
+        return `<div class="ex-page" data-ex-view="${by}">${head(by)}${by === 'organizations' ? organizations() : by === 'people' ? (PeopleWorkplaces.directory(params) ? PeopleWorkplaces.render(params) : PeopleMap.render(params)) : by === 'countries' ? countries(params) : problemView(params)}</div>`;
     }
     function bind(container, _params, navigate) {
         container.querySelectorAll('[data-ex-nav]').forEach(a => a.addEventListener('click', event => {
@@ -83,8 +83,12 @@ const NeuroExplore = (() => {
             navigate(link('problems', { problem: _params.get('problem') || '', ...(countrySelect.value ? { country: countrySelect.value } : {}) }), 'ex-problem-country'); };
         countrySelect?.addEventListener('change', updateCountry);
         container.querySelector('#ex-problem-filter')?.addEventListener('submit', event => { event.preventDefault(); updateCountry(); });
-        if (_params.get('by') === 'people')
-            PeopleMap.bind(container, _params, navigate);
+        if (_params.get('by') === 'people') {
+            if (PeopleWorkplaces.directory(_params))
+                PeopleWorkplaces.bind(container, _params, navigate);
+            else
+                PeopleMap.bind(container, _params, navigate);
+        }
         NeuroVisuals.bind(container);
     }
     function records() {

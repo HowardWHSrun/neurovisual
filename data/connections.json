@@ -1,5 +1,5 @@
 {
-  "reviewed": "2026-09-15",
+  "reviewed": "2026-09-16",
   "nodes": [
     {
       "id": "zhengtuo-zhao",
@@ -175,7 +175,8 @@
       "kind": "Institution",
       "subtitle": "Electrical engineering & computer science",
       "summary": "Rapoport earned his EECS PhD at MIT in 2011. This educational link is separate from his later company founding roles.",
-      "href": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant"
+      "href": "https://hst.mit.edu/news-events/inside-operating-room-doctors-test-revolutionary-brain-computer-implant",
+      "country": "United States"
     },
     {
       "id": "benjamin-rapoport",
@@ -528,7 +529,8 @@
       "kind": "Company",
       "subtitle": "Adaptive peripheral neuromodulation",
       "summary": "Company origin and engineering dossier.",
-      "href": "#org/amber-tx"
+      "href": "#org/amber-tx",
+      "country": "United Kingdom"
     },
     {
       "id": "saluda",
@@ -656,15 +658,17 @@
       "kind": "Institution",
       "subtitle": "Adaptive neuromodulation research",
       "summary": "Academic contributor to DyNeuMo and origin of Amber spinout.",
-      "href": "https://innovation.ox.ac.uk/spin-outs/amber-therapeutics/"
+      "href": "https://innovation.ox.ac.uk/spin-outs/amber-therapeutics/",
+      "country": "United Kingdom"
     },
     {
       "id": "tim-denison",
       "name": "Tim Denison",
       "kind": "Person",
-      "subtitle": "Device engineering across industry and academia",
+      "subtitle": "University of Oxford · Amber Therapeutics",
       "summary": "Amber co-founder and Oxford engineering investigator.",
-      "href": "https://www.amber-tx.com/"
+      "href": "https://www.amber-tx.com/",
+      "researcherId": "timothy-denison"
     },
     {
       "id": "bioinduction",
@@ -768,7 +772,8 @@
       "kind": "Institution",
       "subtitle": "Neural decoding intellectual property",
       "summary": "Owner of speech-decoding IP licensed to multiple BCI companies.",
-      "href": "https://www.stanford.edu/"
+      "href": "https://www.stanford.edu/",
+      "country": "United States"
     },
     {
       "id": "vanessa-tolosa",
@@ -889,7 +894,8 @@
       "kind": "Institution",
       "subtitle": "Wireless transmitter research",
       "summary": "Home of the Brown Wireless Device developed in Arto Nurmikko’s laboratory.",
-      "href": "https://www.brown.edu/news/2021-03-31/braingate-wireless"
+      "href": "https://www.brown.edu/news/2021-03-31/braingate-wireless",
+      "country": "United States"
     },
     {
       "id": "ability-neuro",
@@ -1111,7 +1117,8 @@
       "name": "Stéphanie Lacour",
       "kind": "Person",
       "summary": "EPFL soft bioelectronics laboratory leader and Neurosoft co-founder.",
-      "subtitle": "EPFL soft bioelectronics laboratory leader and Neurosoft co-founder."
+      "subtitle": "École Polytechnique Fédérale de Lausanne (EPFL)",
+      "researcherId": "stephanie-lacour"
     },
     {
       "id": "epfl-lsbi-origin",
@@ -1140,7 +1147,8 @@
       "name": "Grégoire Courtine",
       "kind": "Person",
       "summary": "NeuroRestore co-leader and co-founder of ONWARD’s predecessor.",
-      "subtitle": "NeuroRestore co-leader and co-founder of ONWARD’s predecessor."
+      "subtitle": "École Polytechnique Fédérale de Lausanne (EPFL) · NeuroRestore",
+      "researcherId": "gregoire-courtine"
     },
     {
       "id": "neurorestore",
@@ -1148,7 +1156,8 @@
       "kind": "Lab",
       "summary": "EPFL–CHUV research initiative led by Courtine and Bloch.",
       "href": "#org/neurorestore",
-      "subtitle": "EPFL–CHUV research initiative led by Courtine and Bloch."
+      "subtitle": "EPFL–CHUV research initiative led by Courtine and Bloch.",
+      "country": "Switzerland"
     },
     {
       "id": "wimagine",
@@ -1253,14 +1262,16 @@
       "name": "Harvard University",
       "kind": "Institution",
       "subtitle": "Academic institution",
-      "summary": "Harvard University"
+      "summary": "Harvard University",
+      "country": "United States"
     },
     {
       "id": "tsinghua",
       "name": "Tsinghua University",
       "kind": "Institution",
       "subtitle": "Academic institution",
-      "summary": "Tsinghua University"
+      "summary": "Tsinghua University",
+      "country": "China"
     },
     {
       "id": "osaka-university",
@@ -1489,6 +1500,834 @@
       "kind": "Technology",
       "subtitle": "Retinal stimulation from an implant behind the retina.",
       "summary": "Retinal stimulation from an implant behind the retina."
+    },
+    {
+      "id": "andres-lozano",
+      "name": "Andres Lozano",
+      "kind": "Person",
+      "subtitle": "University of Toronto",
+      "summary": "Expanded DBS toward depression, Alzheimer disease and circuit-guided therapy.",
+      "href": "#people/andres-lozano",
+      "researcherId": "andres-lozano"
+    },
+    {
+      "id": "university-of-toronto",
+      "name": "University of Toronto",
+      "kind": "Institution",
+      "subtitle": "Canada",
+      "summary": "University of Toronto is represented through individually sourced researcher roles.",
+      "href": "https://surgery.utoronto.ca/faculty/andres-lozano",
+      "country": "Canada"
+    },
+    {
+      "id": "ulf-ziemann",
+      "name": "Ulf Ziemann",
+      "kind": "Person",
+      "subtitle": "University Hospital Tübingen",
+      "summary": "Studies TMS, plasticity, biomarkers and personalized neuromodulation for neurological rehabilitation.",
+      "href": "#people/ulf-ziemann",
+      "researcherId": "ulf-ziemann"
+    },
+    {
+      "id": "tubingen",
+      "name": "University Hospital Tübingen",
+      "kind": "Institution",
+      "subtitle": "Germany",
+      "summary": "University Hospital Tübingen is represented through individually sourced researcher roles.",
+      "href": "https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/1601",
+      "country": "Germany"
+    },
+    {
+      "id": "george-malliaras",
+      "name": "George Malliaras",
+      "kind": "Person",
+      "subtitle": "University of Cambridge",
+      "summary": "Developed organic neural transistors, electrophoretic drug delivery and soft implant interfaces.",
+      "href": "#people/george-malliaras",
+      "researcherId": "george-malliaras"
+    },
+    {
+      "id": "cambridge",
+      "name": "University of Cambridge",
+      "kind": "Institution",
+      "subtitle": "United Kingdom",
+      "summary": "University of Cambridge is represented through individually sourced researcher roles.",
+      "href": "https://www.eng.cam.ac.uk/node/4080",
+      "country": "United Kingdom"
+    },
+    {
+      "id": "kenneth-harris",
+      "name": "Kenneth Harris",
+      "kind": "Person",
+      "subtitle": "University College London · Cortexlab",
+      "summary": "Co-developed high-density recording analysis, Kilosort and Neuropixels-based population neuroscience.",
+      "href": "#people/kenneth-harris",
+      "researcherId": "kenneth-harris"
+    },
+    {
+      "id": "ucl",
+      "name": "University College London",
+      "kind": "Institution",
+      "subtitle": "United Kingdom",
+      "summary": "University College London is represented through individually sourced researcher roles.",
+      "href": "https://www.ucl.ac.uk/research/domains/sites/research_domains/files/neuroai_conference_brochure_2025_0.pdf",
+      "country": "United Kingdom"
+    },
+    {
+      "id": "cortexlab",
+      "name": "Cortexlab",
+      "kind": "Lab",
+      "subtitle": "United Kingdom",
+      "summary": "Cortexlab is represented through individually sourced researcher roles.",
+      "href": "https://www.ucl.ac.uk/brain-sciences/cortexlab",
+      "country": "United Kingdom"
+    },
+    {
+      "id": "matteo-carandini",
+      "name": "Matteo Carandini",
+      "kind": "Person",
+      "subtitle": "University College London · Cortexlab",
+      "summary": "Combines Neuropixels, imaging, behavior and theory to study distributed decision circuits.",
+      "href": "#people/matteo-carandini",
+      "researcherId": "matteo-carandini"
+    },
+    {
+      "id": "silvestro-micera",
+      "name": "Silvestro Micera",
+      "kind": "Person",
+      "subtitle": "École Polytechnique Fédérale de Lausanne (EPFL) · Scuola Superiore Sant’Anna",
+      "summary": "Advanced bidirectional hand prostheses, intraneural electrodes and sensory feedback.",
+      "href": "#people/silvestro-micera",
+      "researcherId": "silvestro-micera"
+    },
+    {
+      "id": "epfl",
+      "name": "École Polytechnique Fédérale de Lausanne (EPFL)",
+      "kind": "Institution",
+      "subtitle": "Switzerland",
+      "summary": "École Polytechnique Fédérale de Lausanne (EPFL) is represented through individually sourced researcher roles.",
+      "href": "https://people.epfl.ch/silvestro.micera",
+      "country": "Switzerland"
+    },
+    {
+      "id": "scuola-santanna",
+      "name": "Scuola Superiore Sant’Anna",
+      "kind": "Institution",
+      "subtitle": "Italy",
+      "summary": "Scuola Superiore Sant’Anna is represented through individually sourced researcher roles.",
+      "href": "https://www.santannapisa.it/en/silvestro-micera",
+      "country": "Italy"
+    },
+    {
+      "id": "fritjof-helmchen",
+      "name": "Fritjof Helmchen",
+      "kind": "Person",
+      "subtitle": "University of Zurich",
+      "summary": "Expanded multiphoton microscopy across cortical layers, regions and behaving animals.",
+      "href": "#people/fritjof-helmchen",
+      "researcherId": "fritjof-helmchen"
+    },
+    {
+      "id": "university-of-zurich",
+      "name": "University of Zurich",
+      "kind": "Institution",
+      "subtitle": "Switzerland",
+      "summary": "University of Zurich is represented through individually sourced researcher roles.",
+      "href": "https://www.hifo.uzh.ch/en/research/helmchen.html",
+      "country": "Switzerland"
+    },
+    {
+      "id": "nigel-lovell",
+      "name": "Nigel Lovell",
+      "kind": "Person",
+      "subtitle": "UNSW Sydney",
+      "summary": "Develops bionic vision, implantable devices and translational neural technologies.",
+      "href": "#people/nigel-lovell",
+      "researcherId": "nigel-lovell"
+    },
+    {
+      "id": "unsw",
+      "name": "UNSW Sydney",
+      "kind": "Institution",
+      "subtitle": "Australia",
+      "summary": "UNSW Sydney is represented through individually sourced researcher roles.",
+      "href": "https://www.unsw.edu.au/staff/nigel-lovell",
+      "country": "Australia"
+    },
+    {
+      "id": "pieter-roelfsema",
+      "name": "Pieter Roelfsema",
+      "kind": "Person",
+      "subtitle": "Netherlands Institute for Neuroscience · Vrije Universiteit Amsterdam",
+      "summary": "Studies visual circuits, cortical computation and neural interfaces for restoring vision.",
+      "href": "#people/pieter-roelfsema",
+      "researcherId": "pieter-roelfsema"
+    },
+    {
+      "id": "netherlands-institute-neuroscience",
+      "name": "Netherlands Institute for Neuroscience",
+      "kind": "Institution",
+      "subtitle": "Netherlands",
+      "summary": "Netherlands Institute for Neuroscience is represented through individually sourced researcher roles.",
+      "href": "https://nin.nl/research-groups/roelfsema/",
+      "country": "Netherlands"
+    },
+    {
+      "id": "vu-amsterdam",
+      "name": "Vrije Universiteit Amsterdam",
+      "kind": "Institution",
+      "subtitle": "Netherlands",
+      "summary": "Vrije Universiteit Amsterdam is represented through individually sourced researcher roles.",
+      "href": "https://research.vu.nl/en/persons/pieter-roelfsema/",
+      "country": "Netherlands"
+    },
+    {
+      "id": "nick-ramsey",
+      "name": "Nick Ramsey",
+      "kind": "Person",
+      "subtitle": "University Medical Center Utrecht",
+      "summary": "Developed fully implanted communication BCIs and long-term home-use protocols.",
+      "href": "#people/nick-ramsey",
+      "researcherId": "nick-ramsey"
+    },
+    {
+      "id": "umc-utrecht",
+      "name": "University Medical Center Utrecht",
+      "kind": "Institution",
+      "subtitle": "Netherlands",
+      "summary": "University Medical Center Utrecht is represented through individually sourced researcher roles.",
+      "href": "https://research.umcutrecht.nl/researchers/ramsey/",
+      "country": "Netherlands"
+    },
+    {
+      "id": "jocelyne-bloch",
+      "name": "Jocelyne Bloch",
+      "kind": "Person",
+      "subtitle": "Lausanne University Hospital (CHUV) · University of Lausanne · École Polytechnique Fédérale de Lausanne (EPFL) · NeuroRestore",
+      "summary": "Leads implantation and clinical protocols for spinal stimulation and brain-spine interfaces.",
+      "href": "#people/jocelyne-bloch",
+      "researcherId": "jocelyne-bloch"
+    },
+    {
+      "id": "chuv",
+      "name": "Lausanne University Hospital (CHUV)",
+      "kind": "Institution",
+      "subtitle": "Switzerland",
+      "summary": "Lausanne University Hospital (CHUV) is represented through individually sourced researcher roles.",
+      "href": "https://www.chuv.ch/fr/nos-specialistes/departements-et-services/equipe/profil/web_prf_92/jocelyne-bloch",
+      "country": "Switzerland"
+    },
+    {
+      "id": "university-of-lausanne",
+      "name": "University of Lausanne",
+      "kind": "Institution",
+      "subtitle": "Switzerland",
+      "summary": "University of Lausanne is represented through individually sourced researcher roles.",
+      "href": "https://www.chuv.ch/fr/nos-specialistes/departements-et-services/equipe/profil/web_prf_92/jocelyne-bloch",
+      "country": "Switzerland"
+    },
+    {
+      "id": "peter-hegemann",
+      "name": "Peter Hegemann",
+      "kind": "Person",
+      "subtitle": "Humboldt University of Berlin",
+      "summary": "Characterized light-gated channels that became core optogenetic actuators.",
+      "href": "#people/peter-hegemann",
+      "researcherId": "peter-hegemann"
+    },
+    {
+      "id": "humboldt-berlin",
+      "name": "Humboldt University of Berlin",
+      "kind": "Institution",
+      "subtitle": "Germany",
+      "summary": "Humboldt University of Berlin is represented through individually sourced researcher roles.",
+      "href": "https://www.bbaw.de/die-akademie/bbaw-mitglieder/mitglied-peter-hegemann",
+      "country": "Germany"
+    },
+    {
+      "id": "takao-someya",
+      "name": "Takao Someya",
+      "kind": "Person",
+      "subtitle": "University of Tokyo",
+      "summary": "Pioneered ultrathin, stretchable sensors that shaped wearable physiology and soft neural-interface design.",
+      "href": "#people/takao-someya",
+      "researcherId": "takao-someya"
+    },
+    {
+      "id": "university-of-tokyo",
+      "name": "University of Tokyo",
+      "kind": "Institution",
+      "subtitle": "Japan",
+      "summary": "University of Tokyo is represented through individually sourced researcher roles.",
+      "href": "https://www.eeis.t.u-tokyo.ac.jp/en/staff/someya-takao/",
+      "country": "Japan"
+    },
+    {
+      "id": "atsushi-miyawaki",
+      "name": "Atsushi Miyawaki",
+      "kind": "Person",
+      "subtitle": "RIKEN",
+      "summary": "Created indicator families and multicolor tools for live-cell and whole-brain imaging.",
+      "href": "#people/atsushi-miyawaki",
+      "researcherId": "atsushi-miyawaki"
+    },
+    {
+      "id": "riken",
+      "name": "RIKEN",
+      "kind": "Institution",
+      "subtitle": "Japan",
+      "summary": "RIKEN is represented through individually sourced researcher roles.",
+      "href": "https://cbs.riken.jp/en/faculty/a.miyawaki/",
+      "country": "Japan"
+    },
+    {
+      "id": "yukiyasu-kamitani",
+      "name": "Yukiyasu Kamitani",
+      "kind": "Person",
+      "subtitle": "Kyoto University · ATR Computational Neuroscience Laboratories",
+      "summary": "Develops neural decoding and generative models for visual perception, imagery and brain representations.",
+      "href": "#people/yukiyasu-kamitani",
+      "researcherId": "yukiyasu-kamitani"
+    },
+    {
+      "id": "kyoto-university",
+      "name": "Kyoto University",
+      "kind": "Institution",
+      "subtitle": "Japan",
+      "summary": "Kyoto University is represented through individually sourced researcher roles.",
+      "href": "https://www.i.kyoto-u.ac.jp/en/faculty/professor/",
+      "country": "Japan"
+    },
+    {
+      "id": "atr",
+      "name": "ATR Computational Neuroscience Laboratories",
+      "kind": "Institution",
+      "subtitle": "Japan",
+      "summary": "ATR Computational Neuroscience Laboratories is represented through individually sourced researcher roles.",
+      "href": "https://kdb.iimc.kyoto-u.ac.jp/profile/en.8f4f353628c6dc71.html",
+      "country": "Japan"
+    },
+    {
+      "id": "shangkai-gao",
+      "name": "Shangkai Gao",
+      "kind": "Person",
+      "subtitle": "Tsinghua University",
+      "summary": "Develops EEG-based BCI, neurorehabilitation and neural decoding systems for clinical and assistive use.",
+      "href": "#people/shangkai-gao",
+      "researcherId": "shangkai-gao"
+    },
+    {
+      "id": "stanisa-raspopovic",
+      "name": "Stanisa Raspopovic",
+      "kind": "Person",
+      "subtitle": "Medical University of Vienna",
+      "summary": "Develops selective nerve interfaces and closed-loop neuroprostheses for limbs and internal organs.",
+      "href": "#people/stanisa-raspopovic",
+      "researcherId": "stanisa-raspopovic"
+    },
+    {
+      "id": "medical-university-vienna",
+      "name": "Medical University of Vienna",
+      "kind": "Institution",
+      "subtitle": "Austria",
+      "summary": "Medical University of Vienna is represented through individually sourced researcher roles.",
+      "href": "https://www.meduniwien.ac.at/web/en/about-us/news/2024/news-in-august-2024/stanisa-raspopovic-takes-over-professorship-for-biomedical-engineering/",
+      "country": "Austria"
+    },
+    {
+      "id": "aviv-regev",
+      "name": "Aviv Regev",
+      "kind": "Person",
+      "subtitle": "Genentech",
+      "summary": "Co-founded the Human Cell Atlas and influenced brain-cell census and spatial-omics strategies.",
+      "href": "#people/aviv-regev",
+      "researcherId": "aviv-regev"
+    },
+    {
+      "id": "genentech",
+      "name": "Genentech",
+      "kind": "Company",
+      "subtitle": "United States",
+      "summary": "Genentech is represented through individually sourced researcher roles.",
+      "href": "https://www.gene.com/scientists/our-scientists/aviv-regev",
+      "country": "United States"
+    },
+    {
+      "id": "john-rogers",
+      "name": "John A. Rogers",
+      "kind": "Person",
+      "subtitle": "Northwestern University",
+      "summary": "Translated soft materials into epidermal sensors, cortical arrays and transient bioelectronics.",
+      "href": "#people/john-rogers",
+      "researcherId": "john-rogers"
+    },
+    {
+      "id": "northwestern",
+      "name": "Northwestern University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Northwestern University is represented through individually sourced researcher roles.",
+      "href": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/rogers-john.html",
+      "country": "United States"
+    },
+    {
+      "id": "karl-deisseroth",
+      "name": "Karl Deisseroth",
+      "kind": "Person",
+      "subtitle": "Stanford University",
+      "summary": "Established optogenetics and later tissue-clearing and activity-imaging methods.",
+      "href": "#people/karl-deisseroth",
+      "researcherId": "karl-deisseroth"
+    },
+    {
+      "id": "gyorgy-buzsaki",
+      "name": "György Buzsáki",
+      "kind": "Person",
+      "subtitle": "New York University",
+      "summary": "Linked oscillations, spikes and behavior across scales, and helped establish the interpretive framework for extracellular signals.",
+      "href": "#people/gyorgy-buzsaki",
+      "researcherId": "gyorgy-buzsaki"
+    },
+    {
+      "id": "nyu",
+      "name": "New York University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "New York University is represented through individually sourced researcher roles.",
+      "href": "https://med.nyu.edu/faculty/gyorgy-buzsaki",
+      "country": "United States"
+    },
+    {
+      "id": "karel-svoboda",
+      "name": "Karel Svoboda",
+      "kind": "Person",
+      "subtitle": "Allen Institute",
+      "summary": "Built optical methods and collaborative programs for circuit-level measurement and perturbation.",
+      "href": "#people/karel-svoboda",
+      "researcherId": "karel-svoboda"
+    },
+    {
+      "id": "allen-institute",
+      "name": "Allen Institute",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Allen Institute is represented through individually sourced researcher roles.",
+      "href": "https://alleninstitute.org/person/karel-svoboda",
+      "country": "United States"
+    },
+    {
+      "id": "christof-koch",
+      "name": "Christof Koch",
+      "kind": "Person",
+      "subtitle": "Allen Institute",
+      "summary": "Bridged neuronal biophysics, extracellular-field theory, visual computation, consciousness and cell-census programs.",
+      "href": "#people/christof-koch",
+      "researcherId": "christof-koch"
+    },
+    {
+      "id": "bryan-roth",
+      "name": "Bryan Roth",
+      "kind": "Person",
+      "subtitle": "University of North Carolina at Chapel Hill",
+      "summary": "Created DREADD chemogenetic actuators and receptor-based neuropsychiatric tools.",
+      "href": "#people/bryan-roth",
+      "researcherId": "bryan-roth"
+    },
+    {
+      "id": "unc-chapel-hill",
+      "name": "University of North Carolina at Chapel Hill",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "University of North Carolina at Chapel Hill is represented through individually sourced researcher roles.",
+      "href": "https://unclineberger.org/directory/bryan-roth",
+      "country": "United States"
+    },
+    {
+      "id": "hongkui-zeng",
+      "name": "Hongkui Zeng",
+      "kind": "Person",
+      "subtitle": "Allen Institute",
+      "summary": "Leads multimodal cell-type atlases, connectivity maps and open brain-science resources.",
+      "href": "#people/hongkui-zeng",
+      "researcherId": "hongkui-zeng"
+    },
+    {
+      "id": "ed-lein",
+      "name": "Ed Lein",
+      "kind": "Person",
+      "subtitle": "Allen Institute · University of Washington",
+      "summary": "Maps molecular and cellular organization across species using transcriptomics and spatial methods.",
+      "href": "#people/ed-lein",
+      "researcherId": "ed-lein"
+    },
+    {
+      "id": "university-of-washington",
+      "name": "University of Washington",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "University of Washington is represented through individually sourced researcher roles.",
+      "href": "https://alleninstitute.org/person/ed-lein",
+      "country": "United States"
+    },
+    {
+      "id": "ed-boyden",
+      "name": "Ed Boyden",
+      "kind": "Person",
+      "subtitle": "MIT",
+      "summary": "Expanded neural tools through new opsins, expansion microscopy and high-throughput technology design.",
+      "href": "#people/ed-boyden",
+      "researcherId": "ed-boyden"
+    },
+    {
+      "id": "guoping-feng",
+      "name": "Guoping Feng",
+      "kind": "Person",
+      "subtitle": "MIT · Broad Institute of MIT and Harvard",
+      "summary": "Builds disease models and circuit interventions spanning optogenetics, gene editing and neuromodulation.",
+      "href": "#people/guoping-feng",
+      "researcherId": "guoping-feng"
+    },
+    {
+      "id": "broad-institute",
+      "name": "Broad Institute of MIT and Harvard",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Broad Institute of MIT and Harvard is represented through individually sourced researcher roles.",
+      "href": "https://mcgovern.mit.edu/profile/guoping-feng/",
+      "country": "United States"
+    },
+    {
+      "id": "bernardo-sabatini",
+      "name": "Bernardo Sabatini",
+      "kind": "Person",
+      "subtitle": "Harvard University",
+      "summary": "Connects synaptic physiology, optical tools and basal-ganglia circuit mechanisms.",
+      "href": "#people/bernardo-sabatini",
+      "researcherId": "bernardo-sabatini"
+    },
+    {
+      "id": "loren-looger",
+      "name": "Loren Looger",
+      "kind": "Person",
+      "subtitle": "University of California, San Diego",
+      "summary": "Led development of high-performance GCaMP calcium indicators and neurotransmitter sensors.",
+      "href": "#people/loren-looger",
+      "researcherId": "loren-looger"
+    },
+    {
+      "id": "uc-san-diego",
+      "name": "University of California, San Diego",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "University of California, San Diego is represented through individually sourced researcher roles.",
+      "href": "https://neurosciences.ucsd.edu/research/labs/looger/people.html",
+      "country": "United States"
+    },
+    {
+      "id": "rafael-yuste",
+      "name": "Rafael Yuste",
+      "kind": "Person",
+      "subtitle": "Columbia University",
+      "summary": "Advanced optical circuit interrogation and helped articulate the vision that became the U.S. BRAIN Initiative.",
+      "href": "#people/rafael-yuste",
+      "researcherId": "rafael-yuste"
+    },
+    {
+      "id": "columbia",
+      "name": "Columbia University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Columbia University is represented through individually sourced researcher roles.",
+      "href": "https://biology.columbia.edu/content/rafael-yuste",
+      "country": "United States"
+    },
+    {
+      "id": "jeff-lichtman",
+      "name": "Jeff Lichtman",
+      "kind": "Person",
+      "subtitle": "Harvard University",
+      "summary": "Pioneered Brainbow labeling and large-volume electron-microscopy connectomics.",
+      "href": "#people/jeff-lichtman",
+      "researcherId": "jeff-lichtman"
+    },
+    {
+      "id": "sebastian-seung",
+      "name": "Sebastian Seung",
+      "kind": "Person",
+      "subtitle": "Princeton University",
+      "summary": "Popularized scalable connectome analysis and citizen-science proofreading.",
+      "href": "#people/sebastian-seung",
+      "researcherId": "sebastian-seung"
+    },
+    {
+      "id": "princeton",
+      "name": "Princeton University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Princeton University is represented through individually sourced researcher roles.",
+      "href": "https://pni.princeton.edu/people/h-sebastian-seung",
+      "country": "United States"
+    },
+    {
+      "id": "david-tank",
+      "name": "David Tank",
+      "kind": "Person",
+      "subtitle": "Princeton University",
+      "summary": "Connected virtual behavior, two-photon imaging and quantitative models of navigation circuits.",
+      "href": "#people/david-tank",
+      "researcherId": "david-tank"
+    },
+    {
+      "id": "richard-andersen",
+      "name": "Richard Andersen",
+      "kind": "Person",
+      "subtitle": "California Institute of Technology",
+      "summary": "Translated cognitive planning signals into BCIs for reach, grasp and communication.",
+      "href": "#people/richard-andersen",
+      "researcherId": "richard-andersen"
+    },
+    {
+      "id": "caltech",
+      "name": "California Institute of Technology",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "California Institute of Technology is represented through individually sourced researcher roles.",
+      "href": "https://directory.caltech.edu/personnel/andersen",
+      "country": "United States"
+    },
+    {
+      "id": "michael-roukes",
+      "name": "Michael Roukes",
+      "kind": "Person",
+      "subtitle": "California Institute of Technology",
+      "summary": "Led large-scale nanoelectronic and implantable-interface programs spanning sensors, packaging and translation.",
+      "href": "#people/michael-roukes",
+      "researcherId": "michael-roukes"
+    },
+    {
+      "id": "mark-schnitzer",
+      "name": "Mark Schnitzer",
+      "kind": "Person",
+      "subtitle": "Stanford University",
+      "summary": "Developed cellular-resolution microscopes and analysis for long-term population tracking.",
+      "href": "#people/mark-schnitzer",
+      "researcherId": "mark-schnitzer"
+    },
+    {
+      "id": "edward-chang",
+      "name": "Edward Chang",
+      "kind": "Person",
+      "subtitle": "University of California, San Francisco",
+      "summary": "Leads BRAVO studies translating cortical speech representations into text, audio and avatar control.",
+      "href": "#people/edward-chang",
+      "researcherId": "edward-chang"
+    },
+    {
+      "id": "ucsf",
+      "name": "University of California, San Francisco",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "University of California, San Francisco is represented through individually sourced researcher roles.",
+      "href": "https://www.ucsfhealth.org/providers/edward-chang",
+      "country": "United States"
+    },
+    {
+      "id": "helen-mayberg",
+      "name": "Helen Mayberg",
+      "kind": "Person",
+      "subtitle": "Icahn School of Medicine at Mount Sinai",
+      "summary": "Defined a depression circuit framework and pioneered subcallosal-cingulate DBS.",
+      "href": "#people/helen-mayberg",
+      "researcherId": "helen-mayberg"
+    },
+    {
+      "id": "mount-sinai",
+      "name": "Icahn School of Medicine at Mount Sinai",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Icahn School of Medicine at Mount Sinai is represented through individually sourced researcher roles.",
+      "href": "https://profiles.icahn.mssm.edu/helen-s-mayberg",
+      "country": "United States"
+    },
+    {
+      "id": "philip-starr",
+      "name": "Philip Starr",
+      "kind": "Person",
+      "subtitle": "University of California, San Francisco",
+      "summary": "Pioneered chronic cortical sensing and adaptive stimulation for Parkinson disease.",
+      "href": "#people/philip-starr",
+      "researcherId": "philip-starr"
+    },
+    {
+      "id": "viviana-gradinaru",
+      "name": "Viviana Gradinaru",
+      "kind": "Person",
+      "subtitle": "California Institute of Technology",
+      "summary": "Developed tissue clearing, systemic viral vectors and minimally invasive access to distributed circuits.",
+      "href": "#people/viviana-gradinaru",
+      "researcherId": "viviana-gradinaru"
+    },
+    {
+      "id": "leigh-hochberg",
+      "name": "Leigh Hochberg",
+      "kind": "Person",
+      "subtitle": "Brown University · Massachusetts General Hospital · Harvard University",
+      "summary": "Leads long-running intracortical BCI trials for communication and movement restoration.",
+      "href": "#people/leigh-hochberg",
+      "researcherId": "leigh-hochberg"
+    },
+    {
+      "id": "massachusetts-general-hospital",
+      "name": "Massachusetts General Hospital",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Massachusetts General Hospital is represented through individually sourced researcher roles.",
+      "href": "https://www.massgeneral.org/doctors/17357/leigh-hochberg.page",
+      "country": "United States"
+    },
+    {
+      "id": "jaimie-henderson",
+      "name": "Jaimie Henderson",
+      "kind": "Person",
+      "subtitle": "Stanford University · Neural Prosthetics Translational Laboratory",
+      "summary": "Connects neurosurgery, BrainGate trials and speech/handwriting neuroprostheses.",
+      "href": "#people/jaimie-henderson",
+      "researcherId": "jaimie-henderson"
+    },
+    {
+      "id": "stanford-nptl",
+      "name": "Neural Prosthetics Translational Laboratory",
+      "kind": "Lab",
+      "subtitle": "United States",
+      "summary": "Neural Prosthetics Translational Laboratory is represented through individually sourced researcher roles.",
+      "href": "https://nptl.stanford.edu/",
+      "country": "United States"
+    },
+    {
+      "id": "john-donoghue",
+      "name": "John Donoghue",
+      "kind": "Person",
+      "subtitle": "Brown University",
+      "summary": "Founded BrainGate and helped translate intracortical population decoding into human assistive control.",
+      "href": "#people/john-donoghue",
+      "researcherId": "john-donoghue"
+    },
+    {
+      "id": "bin-he",
+      "name": "Bin He",
+      "kind": "Person",
+      "subtitle": "Carnegie Mellon University",
+      "summary": "Advances non-invasive BCI, electrophysiological neuroimaging and neuromodulation for assistive control and clinical applications.",
+      "href": "#people/bin-he",
+      "researcherId": "bin-he"
+    },
+    {
+      "id": "carnegie-mellon",
+      "name": "Carnegie Mellon University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Carnegie Mellon University is represented through individually sourced researcher roles.",
+      "href": "https://www.cmu.edu/bme/People/Faculty/profile/bhe.html",
+      "country": "United States"
+    },
+    {
+      "id": "warren-grill",
+      "name": "Warren Grill",
+      "kind": "Person",
+      "subtitle": "Duke University",
+      "summary": "Develops mechanisms, electrode designs and control strategies for DBS, spinal and peripheral stimulation.",
+      "href": "#people/warren-grill",
+      "researcherId": "warren-grill"
+    },
+    {
+      "id": "duke",
+      "name": "Duke University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Duke University is represented through individually sourced researcher roles.",
+      "href": "https://scholars.duke.edu/person/warren.grill",
+      "country": "United States"
+    },
+    {
+      "id": "polina-anikeeva",
+      "name": "Polina Anikeeva",
+      "kind": "Person",
+      "subtitle": "MIT",
+      "summary": "Created fiber probes and magnetic, optical and chemical approaches for distributed neural modulation.",
+      "href": "#people/polina-anikeeva",
+      "researcherId": "polina-anikeeva"
+    },
+    {
+      "id": "frank-willett",
+      "name": "Frank Willett",
+      "kind": "Person",
+      "subtitle": "Stanford University · Neural Prosthetics Translational Laboratory",
+      "summary": "Led handwriting and speech decoding systems that turned intracortical signals into fast communication.",
+      "href": "#people/frank-willett",
+      "researcherId": "frank-willett"
+    },
+    {
+      "id": "jonathan-pillow",
+      "name": "Jonathan Pillow",
+      "kind": "Person",
+      "subtitle": "Princeton University",
+      "summary": "Builds probabilistic models for neural coding, behavior and adaptive experiment design.",
+      "href": "#people/jonathan-pillow",
+      "researcherId": "jonathan-pillow"
+    },
+    {
+      "id": "reza-shadmehr",
+      "name": "Reza Shadmehr",
+      "kind": "Person",
+      "subtitle": "Johns Hopkins University",
+      "summary": "Connects human motor control, neuroplasticity, neural decoding and rehabilitation engineering.",
+      "href": "#people/reza-shadmehr",
+      "researcherId": "reza-shadmehr"
+    },
+    {
+      "id": "johns-hopkins",
+      "name": "Johns Hopkins University",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "Johns Hopkins University is represented through individually sourced researcher roles.",
+      "href": "https://profiles.hopkinsmedicine.org/provider/reza-shadmehr/2777030",
+      "country": "United States"
+    },
+    {
+      "id": "michael-miller",
+      "name": "Michael I. Miller",
+      "kind": "Person",
+      "subtitle": "Johns Hopkins University",
+      "summary": "Develops imaging, computational anatomy and data-science tools for neurological disease and brain mapping.",
+      "href": "#people/michael-miller",
+      "researcherId": "michael-miller"
+    },
+    {
+      "id": "marius-pachitariu",
+      "name": "Marius Pachitariu",
+      "kind": "Person",
+      "subtitle": "HHMI Janelia Research Campus",
+      "summary": "Created the Kilosort family of spike-sorting methods and scalable tools for neural data.",
+      "href": "#people/marius-pachitariu",
+      "researcherId": "marius-pachitariu"
+    },
+    {
+      "id": "hhmi-janelia",
+      "name": "HHMI Janelia Research Campus",
+      "kind": "Institution",
+      "subtitle": "United States",
+      "summary": "HHMI Janelia Research Campus is represented through individually sourced researcher roles.",
+      "href": "https://www.janelia.org/people/marius-pachitariu",
+      "country": "United States"
+    },
+    {
+      "id": "liam-paninski",
+      "name": "Liam Paninski",
+      "kind": "Person",
+      "subtitle": "Columbia University",
+      "summary": "Develops scalable inference for electrophysiology, calcium imaging and closed-loop experiments.",
+      "href": "#people/liam-paninski",
+      "researcherId": "liam-paninski"
     }
   ],
   "edges": [
@@ -5367,6 +6206,1617 @@
           "title": "CSIRO and NICTA join forces to create digital research powerhouse",
           "url": "https://www.csiro.au/en/news/all/news/2015/august/csiro-nicta-join-forces",
           "published": "2015-08-28"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-andres-lozano-university-of-toronto",
+      "from": "andres-lozano",
+      "to": "university-of-toronto",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neurosurgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Professor in the Department of Surgery, Division of Neurosurgery, with a clinical location at Toronto Western Hospital.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "University of Toronto — Andres Lozano",
+          "url": "https://surgery.utoronto.ca/faculty/andres-lozano"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-ulf-ziemann-tubingen",
+      "from": "ulf-ziemann",
+      "to": "tubingen",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Medical Director, Neurology with a focus on neurovascular diseases",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the neurovascular neurology department and co-directs the Hertie Institute for Clinical Brain Research.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "University Hospital Tübingen — Ulf Ziemann",
+          "url": "https://www.medizin.uni-tuebingen.de/de/das-klinikum/mitarbeiter/1601"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-george-malliaras-cambridge",
+      "from": "george-malliaras",
+      "to": "cambridge",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Prince Philip Professor of Technology",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Faculty member in Electrical Engineering and leader of the Bioelectronics Laboratory.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Cambridge Engineering — George Malliaras",
+          "url": "https://www.eng.cam.ac.uk/node/4080"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-kenneth-harris-ucl",
+      "from": "kenneth-harris",
+      "to": "ucl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Quantitative Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Holds the Chair of Quantitative Neuroscience at the Queen Square Institute of Neurology and co-directs Cortexlab.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UCL NeuroAI conference 2025 — Kenneth Harris profile",
+          "url": "https://www.ucl.ac.uk/research/domains/sites/research_domains/files/neuroai_conference_brochure_2025_0.pdf"
+        },
+        {
+          "title": "UCL Cortexlab",
+          "url": "https://www.ucl.ac.uk/brain-sciences/cortexlab"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-kenneth-harris-cortexlab",
+      "from": "kenneth-harris",
+      "to": "cortexlab",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-director",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Joint laboratory led by Kenneth Harris and Matteo Carandini at UCL.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UCL — Cortexlab",
+          "url": "https://www.ucl.ac.uk/brain-sciences/cortexlab"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-matteo-carandini-ucl",
+      "from": "matteo-carandini",
+      "to": "ucl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Visual Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "GlaxoSmithKline Professor of Visual Neuroscience at the Institute of Ophthalmology; co-directs Cortexlab with Kenneth Harris.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UCL — Meet Professor Matteo Carandini",
+          "url": "https://www.ucl.ac.uk/brain-sciences/research/meet-expert/meet-expert-professor-matteo-carandini"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-matteo-carandini-cortexlab",
+      "from": "matteo-carandini",
+      "to": "cortexlab",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-director",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Joint laboratory led by Matteo Carandini and Kenneth Harris at UCL.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UCL — Cortexlab",
+          "url": "https://www.ucl.ac.uk/brain-sciences/cortexlab"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-silvestro-micera-epfl",
+      "from": "silvestro-micera",
+      "to": "epfl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Full Professor; Bertarelli Foundation Chair in Translational Neuroengineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the Translational Neural Engineering Laboratory at EPFL.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "EPFL — Silvestro Micera",
+          "url": "https://people.epfl.ch/silvestro.micera"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-silvestro-micera-scuola-santanna",
+      "from": "silvestro-micera",
+      "to": "scuola-santanna",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Full Professor, BioRobotics Institute",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "The current Sant’Anna faculty directory lists Micera as a full professor in the Bioelectronics and Bioengineering Area.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Scuola Superiore Sant’Anna — Silvestro Micera",
+          "url": "https://www.santannapisa.it/en/silvestro-micera"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-fritjof-helmchen-university-of-zurich",
+      "from": "fritjof-helmchen",
+      "to": "university-of-zurich",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Co-directs the Brain Research Institute and leads the Laboratory of Neural Circuit Dynamics.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "University of Zurich — Laboratory of Neural Circuit Dynamics",
+          "url": "https://www.hifo.uzh.ch/en/research/helmchen.html"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-nigel-lovell-unsw",
+      "from": "nigel-lovell",
+      "to": "unsw",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Scientia Professor; Head of the School of Biomedical Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Also co-directs the Tyree Foundation Institute of Health Engineering.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UNSW — Nigel Lovell",
+          "url": "https://www.unsw.edu.au/staff/nigel-lovell"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-pieter-roelfsema-netherlands-institute-neuroscience",
+      "from": "pieter-roelfsema",
+      "to": "netherlands-institute-neuroscience",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Head of the Vision and Cognition group",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the Roelfsema research group. His former role as institute director ended when Christiaan Levelt succeeded him in 2024.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Netherlands Institute for Neuroscience — Roelfsema group",
+          "url": "https://nin.nl/research-groups/roelfsema/"
+        },
+        {
+          "title": "NIN — Christiaan Levelt appointed director",
+          "url": "https://herseninstituut.nl/nieuws/christiaan-levelt-nieuwe-directeur-nederlands-herseninstituut/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-pieter-roelfsema-vu-amsterdam",
+      "from": "pieter-roelfsema",
+      "to": "vu-amsterdam",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Endowed Professor, Integrative Neurophysiology",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Listed as an endowed professor in the Faculty of Science and Amsterdam Neuroscience.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Vrije Universiteit Amsterdam — Pieter Roelfsema",
+          "url": "https://research.vu.nl/en/persons/pieter-roelfsema/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-nick-ramsey-umc-utrecht",
+      "from": "nick-ramsey",
+      "to": "umc-utrecht",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Full Professor of Cognitive Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "The UMC Utrecht researcher directory lists Ramsey as a full professor and connects him to the Utrecht BCI Lab.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UMC Utrecht — Nick Ramsey",
+          "url": "https://research.umcutrecht.nl/researchers/ramsey/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jocelyne-bloch-chuv",
+      "from": "jocelyne-bloch",
+      "to": "chuv",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Head of Neurosurgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Has led the CHUV Neurosurgery service since February 2025.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "CHUV — Jocelyne Bloch",
+          "url": "https://www.chuv.ch/fr/nos-specialistes/departements-et-services/equipe/profil/web_prf_92/jocelyne-bloch"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jocelyne-bloch-university-of-lausanne",
+      "from": "jocelyne-bloch",
+      "to": "university-of-lausanne",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Full Professor, Faculty of Biology and Medicine",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "CHUV’s current profile identifies her full professorship at the University of Lausanne.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "CHUV — Jocelyne Bloch",
+          "url": "https://www.chuv.ch/fr/nos-specialistes/departements-et-services/equipe/profil/web_prf_92/jocelyne-bloch"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jocelyne-bloch-epfl",
+      "from": "jocelyne-bloch",
+      "to": "epfl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Adjunct Professor",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "EPFL lists her adjunct appointment in the Courtine Group.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "EPFL — Jocelyne Bloch",
+          "url": "https://people.epfl.ch/jocelyne.bloch?lang=en"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jocelyne-bloch-neurorestore",
+      "from": "jocelyne-bloch",
+      "to": "neurorestore",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-director",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Co-directs the research centre with Grégoire Courtine, bringing together CHUV–UNIL clinical expertise and EPFL engineering.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "CHUV — NeuroRestore laboratory",
+          "url": "https://www.chuv.ch/fr/neurosciences/dnc-home/recherche/centre-de-recherche-en-neurosciences/autres-laboratoires/laboratoire-neurorestore-centre-defitech-de-neurotherapies-interventionnelles"
+        },
+        {
+          "title": "CHUV — Jocelyne Bloch",
+          "url": "https://www.chuv.ch/fr/nos-specialistes/departements-et-services/equipe/profil/web_prf_92/jocelyne-bloch"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-stephanie-lacour-epfl",
+      "from": "stephanie-lacour",
+      "to": "epfl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Full Professor; Bertarelli Foundation Chair in Neuroprosthetic Technology",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Professor in the School of Engineering; also serves as EPFL Vice-President for Support to Strategic Initiatives.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "EPFL — Stéphanie Lacour",
+          "url": "https://people.epfl.ch/stephanie.lacour?lang=en"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-gregoire-courtine-epfl",
+      "from": "gregoire-courtine",
+      "to": "epfl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Full Professor",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Heads the Courtine Group, which develops interventions to restore sensorimotor function after central nervous system disorders.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "EPFL — Grégoire Courtine",
+          "url": "https://people.epfl.ch/gregoire.courtine/?lang=en"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-gregoire-courtine-neurorestore",
+      "from": "gregoire-courtine",
+      "to": "neurorestore",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-director",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Co-directs NeuroRestore with Jocelyne Bloch, connecting clinical research at CHUV–UNIL with EPFL engineering.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "CHUV — NeuroRestore laboratory",
+          "url": "https://www.chuv.ch/fr/neurosciences/dnc-home/recherche/centre-de-recherche-en-neurosciences/autres-laboratoires/laboratoire-neurorestore-centre-defitech-de-neurotherapies-interventionnelles"
+        },
+        {
+          "title": "CHUV — Jocelyne Bloch",
+          "url": "https://www.chuv.ch/fr/nos-specialistes/departements-et-services/equipe/profil/web_prf_92/jocelyne-bloch"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-timothy-denison-oxford",
+      "from": "tim-denison",
+      "to": "oxford",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor; Royal Academy of Engineering Chair in Emerging Technologies",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Holds a joint appointment in Engineering Science and Clinical Neurosciences and leads a group at the Brain Network Dynamics Unit.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Oxford BNDU — Tim Denison",
+          "url": "https://www.bndu.ox.ac.uk/people/prof-tim-denison-freng"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-timothy-denison-amber-tx",
+      "from": "tim-denison",
+      "to": "amber-tx",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-founder and Chief Engineer",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Oxford’s current profile identifies this company role separately from his university appointment.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Oxford IBME — Tim Denison",
+          "url": "https://ibme.ox.ac.uk/person/tim-denison/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-peter-hegemann-humboldt-berlin",
+      "from": "peter-hegemann",
+      "to": "humboldt-berlin",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Hertie Senior Professor of Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Affiliated with Experimental Biophysics; NeuroCure lists him as a Humboldt researcher in its 2026–2032 membership.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Berlin-Brandenburg Academy of Sciences — Peter Hegemann",
+          "url": "https://www.bbaw.de/die-akademie/bbaw-mitglieder/mitglied-peter-hegemann"
+        },
+        {
+          "title": "NeuroCure — Members 2026–2032",
+          "url": "https://neurocure.de/about-us/members/members-2026-2032.html"
+        },
+        {
+          "title": "Humboldt research portal — Peter Hegemann",
+          "url": "https://fis.hu-berlin.de/converis/portal/detail/Person/400215322?auxfun=&lang=de_DE"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-takao-someya-university-of-tokyo",
+      "from": "takao-someya",
+      "to": "university-of-tokyo",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor, Graduate School of Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Faculty member in Electrical Engineering and Information Systems, researching organic and skin electronics.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "University of Tokyo — Takao Someya",
+          "url": "https://www.eeis.t.u-tokyo.ac.jp/en/staff/someya-takao/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-atsushi-miyawaki-riken",
+      "from": "atsushi-miyawaki",
+      "to": "riken",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Team Director, Cell Function Dynamics",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the Cell Function Dynamics team in the RIKEN Center for Brain Science.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "RIKEN Center for Brain Science — Atsushi Miyawaki",
+          "url": "https://cbs.riken.jp/en/faculty/a.miyawaki/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-yukiyasu-kamitani-kyoto-university",
+      "from": "yukiyasu-kamitani",
+      "to": "kyoto-university",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor, Graduate School of Informatics",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the Neuroinformatics group in the Intelligence Science and Technology course.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Kyoto University — Professors",
+          "url": "https://www.i.kyoto-u.ac.jp/en/faculty/professor/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-yukiyasu-kamitani-atr",
+      "from": "yukiyasu-kamitani",
+      "to": "atr",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Department Head; ATR Fellow",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "His Kyoto University profile documents a concurrent ATR department-head role and ATR fellowship.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Kyoto University researcher database — Yukiyasu Kamitani",
+          "url": "https://kdb.iimc.kyoto-u.ac.jp/profile/en.8f4f353628c6dc71.html"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-shangkai-gao-tsinghua",
+      "from": "shangkai-gao",
+      "to": "tsinghua",
+      "label": "emeritus affiliation at",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "emeritus",
+      "role": "Emeritus / retired faculty",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Tsinghua lists Gao under its combined “Emeritus & Retired Faculty” category. The page does not distinguish her exact retirement designation; this is not represented as an active faculty appointment.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Tsinghua Biomedical Engineering — Emeritus & Retired Faculty",
+          "url": "https://bme.tsinghua.edu.cn/en/Faculty/Emeritus___Retired_Faculty.htm"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-stanisa-raspopovic-medical-university-vienna",
+      "from": "stanisa-raspopovic",
+      "to": "medical-university-vienna",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Biomedical Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Joined the Center for Medical Physics and Biomedical Engineering in July 2024, moving from ETH Zurich.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Medical University of Vienna — Raspopovic appointment",
+          "url": "https://www.meduniwien.ac.at/web/en/about-us/news/2024/news-in-august-2024/stanisa-raspopovic-takes-over-professorship-for-biomedical-engineering/"
+        },
+        {
+          "title": "MedUni Vienna — Raspopovic research projects",
+          "url": "https://mpbmt.meduniwien.ac.at/ueber-uns/news/news/stanisa-raspopovic-startet-hochdotierte-forschungsprojekte/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-aviv-regev-genentech",
+      "from": "aviv-regev",
+      "to": "genentech",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Head and Executive Vice President, Genentech Research and Early Development",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads Genentech research and early development and maintains an active research laboratory at the company.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Genentech: Aviv Regev",
+          "url": "https://www.gene.com/scientists/our-scientists/aviv-regev"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-john-rogers-northwestern",
+      "from": "john-rogers",
+      "to": "northwestern",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor; Director of the Querrey Simpson Institute for Bioelectronics",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Holds appointments in materials science and engineering, biomedical engineering, and neurological surgery at Northwestern.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Northwestern Engineering: John Rogers",
+          "url": "https://www.mccormick.northwestern.edu/research-faculty/directory/profiles/rogers-john.html"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-karl-deisseroth-stanford",
+      "from": "karl-deisseroth",
+      "to": "stanford",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "D. H. Chen Professor of Bioengineering and of Psychiatry and Behavioral Sciences",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Stanford lists Deisseroth as a professor in both bioengineering and psychiatry and behavioral sciences.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Stanford Profiles: Karl Deisseroth",
+          "url": "https://profiles.stanford.edu/karl-deisseroth"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-gyorgy-buzsaki-nyu",
+      "from": "gyorgy-buzsaki",
+      "to": "nyu",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Biggs Professor of Neuroscience; Professor of Neurology",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Works in the neuroscience and neurology departments of NYU Grossman School of Medicine.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "NYU Grossman School of Medicine: Gyorgy Buzsaki",
+          "url": "https://med.nyu.edu/faculty/gyorgy-buzsaki"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-karel-svoboda-allen-institute",
+      "from": "karel-svoboda",
+      "to": "allen-institute",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Executive Vice President and Director, Neural Dynamics",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the Allen Institute neural dynamics program. His previous Janelia position is historical.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Allen Institute: Karel Svoboda",
+          "url": "https://alleninstitute.org/person/karel-svoboda"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-christof-koch-allen-institute",
+      "from": "christof-koch",
+      "to": "allen-institute",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Meritorious Investigator",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "The current Allen Institute profile lists Koch as a Meritorious Investigator; his former chief scientist and president positions are earlier roles.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Allen Institute: Christof Koch",
+          "url": "https://alleninstitute.org/person/christof-koch"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-bryan-roth-unc-chapel-hill",
+      "from": "bryan-roth",
+      "to": "unc-chapel-hill",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Michael Hooker Distinguished Professor",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "UNC lists Roth as a distinguished professor and member of its Lineberger Comprehensive Cancer Center.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UNC Lineberger: Bryan Roth",
+          "url": "https://unclineberger.org/directory/bryan-roth"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-hongkui-zeng-allen-institute",
+      "from": "hongkui-zeng",
+      "to": "allen-institute",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Executive Vice President and Director, Brain Science",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads the Allen Institute Brain Science group and its cell-type and circuit research programs.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Allen Institute: Hongkui Zeng",
+          "url": "https://alleninstitute.org/person/hongkui-zeng"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-ed-lein-allen-institute",
+      "from": "ed-lein",
+      "to": "allen-institute",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Executive Vice President and Director, Brain Health",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads research and international collaboration in the Allen Institute Brain Health accelerator.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Allen Institute: Ed Lein",
+          "url": "https://alleninstitute.org/person/ed-lein"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-ed-lein-university-of-washington",
+      "from": "ed-lein",
+      "to": "university-of-washington",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Affiliate Professor",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Holds affiliate professorships in Neurological Surgery and in Laboratory Medicine and Pathology, alongside his Allen Institute leadership role.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Allen Institute: Ed Lein",
+          "url": "https://alleninstitute.org/person/ed-lein"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-ed-boyden-mit",
+      "from": "ed-boyden",
+      "to": "mit",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Y. Eva Tan Professor in Neurotechnology",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "MIT lists faculty appointments in brain and cognitive sciences, media arts and sciences, and biological engineering. He leads the Synthetic Neurobiology Group.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "MIT McGovern Institute: Ed Boyden",
+          "url": "https://mcgovern.mit.edu/profile/ed-boyden/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-guoping-feng-mit",
+      "from": "guoping-feng",
+      "to": "mit",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Poitras Professor of Neuroscience; Associate Director, McGovern Institute",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Works in MIT brain and cognitive sciences and directs the Tan-Yang Center for Autism Research.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "MIT McGovern Institute: Guoping Feng",
+          "url": "https://mcgovern.mit.edu/profile/guoping-feng/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-guoping-feng-broad-institute",
+      "from": "guoping-feng",
+      "to": "broad-institute",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Institute Member; Director of Model Systems and Neurobiology, Stanley Center",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "MIT documents Feng's additional Broad Institute membership and leadership of model systems and neurobiology at its Stanley Center for Psychiatric Research.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "MIT McGovern Institute: Guoping Feng",
+          "url": "https://mcgovern.mit.edu/profile/guoping-feng/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-bernardo-sabatini-harvard",
+      "from": "bernardo-sabatini",
+      "to": "harvard",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neurobiology; Co-director, Kempner Institute",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Holds the Alice and Rodman W. Moorhead III professorship at Harvard Medical School and co-directs Harvard's Kempner Institute.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Harvard Kempner Institute: Bernardo Sabatini",
+          "url": "https://kempnerinstitute.harvard.edu/people/our-people/bernardo-sabatini/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-loren-looger-uc-san-diego",
+      "from": "loren-looger",
+      "to": "uc-san-diego",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neurosciences",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Leads his laboratory at UC San Diego. The lab biography distinguishes his current UC San Diego appointment from his previous Janelia group-leader roles.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UC San Diego: Looger Lab team",
+          "url": "https://neurosciences.ucsd.edu/research/labs/looger/people.html"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-rafael-yuste-columbia",
+      "from": "rafael-yuste",
+      "to": "columbia",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Biological Sciences",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Columbia lists Yuste in Biological Sciences, with a laboratory studying cortical microcircuits.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Columbia Biology: Rafael Yuste",
+          "url": "https://biology.columbia.edu/content/rafael-yuste"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jeff-lichtman-harvard",
+      "from": "jeff-lichtman",
+      "to": "harvard",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Jeremy R. Knowles Professor of Molecular and Cellular Biology",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Harvard lists Lichtman as a faculty member researching neural connectivity and its changes during development and aging.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Harvard Program in Neuroscience: Jeff W. Lichtman",
+          "url": "https://pinphd.hms.harvard.edu/people/jeff-w-lichtman"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-sebastian-seung-princeton",
+      "from": "sebastian-seung",
+      "to": "princeton",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Anthony B. Evnin Professor in Neuroscience; Professor of Computer Science",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Holds appointments in the Princeton Neuroscience Institute and Computer Science.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Princeton Neuroscience Institute: H. Sebastian Seung",
+          "url": "https://pni.princeton.edu/people/h-sebastian-seung"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-david-tank-princeton",
+      "from": "david-tank",
+      "to": "princeton",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Henry L. Hillman Professor of Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Serves as scientific director of the Bezos Center for Neural Circuit Dynamics within the Princeton Neuroscience Institute.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Princeton Neuroscience Institute: David Tank",
+          "url": "https://pni.princeton.edu/people/david-tank"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-richard-andersen-caltech",
+      "from": "richard-andersen",
+      "to": "caltech",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "James G. Boswell Professor of Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Directs the T&C Chen Brain-Machine Interface Center and holds its leadership chair at Caltech.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Caltech Directory: Richard A. Andersen",
+          "url": "https://directory.caltech.edu/personnel/andersen"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-michael-roukes-caltech",
+      "from": "michael-roukes",
+      "to": "caltech",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Frank J. Roshek Professor of Physics, Applied Physics, and Bioengineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Caltech lists Roukes as a professor working across physics, applied physics, and bioengineering.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Caltech: Michael L. Roukes",
+          "url": "https://www.pma.caltech.edu/people/michael-l-roukes"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-mark-schnitzer-stanford",
+      "from": "mark-schnitzer",
+      "to": "stanford",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Biology, Applied Physics, and Neurosurgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Stanford lists appointments in biology, applied physics, and neurosurgery, with membership in Bio-X and the Wu Tsai Neurosciences Institute.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Stanford Profiles: Mark J. Schnitzer",
+          "url": "https://profiles.stanford.edu/mark-schnitzer"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-edward-chang-ucsf",
+      "from": "edward-chang",
+      "to": "ucsf",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor and Chair of Neurological Surgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "UCSF lists Chang as a professor and department chair. He also co-directs its joint Center for Neural Engineering and Prostheses with UC Berkeley.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UCSF Health: Edward Chang",
+          "url": "https://www.ucsfhealth.org/providers/edward-chang"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-helen-mayberg-mount-sinai",
+      "from": "helen-mayberg",
+      "to": "mount-sinai",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor; founding director, Nash Family Center for Advanced Circuit Therapeutics",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Mayberg holds professorships in neurology, neurosurgery, psychiatry, neuroscience, and artificial intelligence and human health, and leads the Nash Family Center for Advanced Circuit Therapeutics.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Icahn faculty profile: Helen Mayberg",
+          "url": "https://profiles.icahn.mssm.edu/helen-s-mayberg"
+        },
+        {
+          "title": "Mount Sinai: Helen Mayberg",
+          "url": "https://profiles.mountsinai.org/helen-s-mayberg"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-philip-starr-ucsf",
+      "from": "philip-starr",
+      "to": "ucsf",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neurological Surgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Starr holds the Dolores Cakebread endowed chair and co-directs UCSF's Surgical Movement Disorders clinic. His laboratory studies movement disorders and therapeutic stimulation.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "UCSF Profiles: Philip Starr",
+          "url": "https://profiles.ucsf.edu/philip.starr"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-viviana-gradinaru-caltech",
+      "from": "viviana-gradinaru",
+      "to": "caltech",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neuroscience and Biological Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Gradinaru holds the Lois and Victor Troendle professorship and directs Caltech's Richard N. Merkin Institute for Translational Research.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Caltech Biology and Biological Engineering: Viviana Gradinaru",
+          "url": "https://www.bbe.caltech.edu/people/viviana-gradinaru"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-leigh-hochberg-brown",
+      "from": "leigh-hochberg",
+      "to": "brown",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "University Professor of Engineering; Professor of Brain Science",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Hochberg holds Brown's L. Herbert Ballou University professorship in engineering and an appointment in brain science.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Researchers@Brown: Leigh Hochberg",
+          "url": "https://vivo.brown.edu/display/lhochber"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-leigh-hochberg-massachusetts-general-hospital",
+      "from": "leigh-hochberg",
+      "to": "massachusetts-general-hospital",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Neurologist; director, Center for Neurotechnology and Neurorecovery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Hochberg practices vascular and critical-care neurology at MGH and directs its Center for Neurotechnology and Neurorecovery.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Massachusetts General Hospital: Leigh Hochberg",
+          "url": "https://www.massgeneral.org/doctors/17357/leigh-hochberg.page"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-leigh-hochberg-harvard",
+      "from": "leigh-hochberg",
+      "to": "harvard",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Senior Lecturer on Neurology, Harvard Medical School",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "His institutional CV, updated November 25, 2025, lists a Harvard Medical School senior lectureship from 2013 to the present; MGH's current clinician profile also lists this appointment.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Leigh Hochberg institutional CV, November 2025",
+          "url": "https://vivo.brown.edu/docs/l/lhochber_cv.pdf?dt=385110101"
+        },
+        {
+          "title": "Massachusetts General Hospital: Leigh Hochberg",
+          "url": "https://www.massgeneral.org/doctors/17357/leigh-hochberg.page"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jaimie-henderson-stanford",
+      "from": "jaimie-henderson",
+      "to": "stanford",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Neurosurgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Henderson is a Stanford neurosurgery professor, with a courtesy appointment in neurology and neurological sciences, and directs Stereotactic and Functional Neurosurgery.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Stanford Profiles: Jaimie Henderson",
+          "url": "https://profiles.stanford.edu/jaimie-henderson"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jaimie-henderson-stanford-nptl",
+      "from": "jaimie-henderson",
+      "to": "stanford-nptl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-director",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Stanford's NPTL names Henderson and Frank Willett as co-directors of its neuroscience, neuroengineering, and translational BCI research.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Stanford Neural Prosthetics Translational Laboratory",
+          "url": "https://nptl.stanford.edu/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-john-donoghue-brown",
+      "from": "john-donoghue",
+      "to": "brown",
+      "label": "emeritus affiliation at",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "emeritus",
+      "role": "Henry Merritt Wriston Professor Emeritus of Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Donoghue became professor emeritus on July 1, 2026. Brown reports that he will continue working on BrainGate after retirement.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Researchers@Brown: John Donoghue",
+          "url": "https://vivo.brown.edu/display/jdonoghu"
+        },
+        {
+          "title": "Brown: A Brain Science Legend Retires from Brown",
+          "url": "https://medical.brown.edu/news/2026-06-10/john-donoghue-retirement"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-bin-he-carnegie-mellon",
+      "from": "bin-he",
+      "to": "carnegie-mellon",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Trustee Professor of Biomedical Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "He is a biomedical engineering professor and Neuroscience Institute faculty member, with a courtesy appointment in electrical and computer engineering.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Carnegie Mellon Biomedical Engineering: Bin He",
+          "url": "https://www.cmu.edu/bme/People/Faculty/profile/bhe.html"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-warren-grill-duke",
+      "from": "warren-grill",
+      "to": "duke",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "James B. Duke Distinguished Professor of Biomedical Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Duke lists Grill's distinguished professorship from 2025 to the present, together with appointments in neurobiology and neurosurgery.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Scholars@Duke: Warren Grill",
+          "url": "https://scholars.duke.edu/person/warren.grill"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-polina-anikeeva-mit",
+      "from": "polina-anikeeva",
+      "to": "mit",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor and Head, Materials Science and Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Anikeeva heads MIT's materials science and engineering department and is also a professor of brain and cognitive sciences. She leads its Bioelectronics Group and Brain-Body Center.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "MIT Bioelectronics Group: Polina Anikeeva",
+          "url": "https://bioelectronics.mit.edu/polina.html"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-frank-willett-stanford",
+      "from": "frank-willett",
+      "to": "stanford",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Assistant Professor of Neurosurgery",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Stanford's faculty profile lists Willett as an assistant professor of neurosurgery developing BCIs for movement and communication.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Stanford Profiles: Francis Robert Willett",
+          "url": "https://profiles.stanford.edu/francis-willett"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-frank-willett-stanford-nptl",
+      "from": "frank-willett",
+      "to": "stanford-nptl",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Co-director",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Willett co-directs Stanford's NPTL with Jaimie Henderson, leading research on brain function and clinical brain-computer interfaces.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Stanford Neural Prosthetics Translational Laboratory",
+          "url": "https://nptl.stanford.edu/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-jonathan-pillow-princeton",
+      "from": "jonathan-pillow",
+      "to": "princeton",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Psychology and Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Princeton lists Pillow as a professor of psychology and neuroscience. His group develops statistical methods for studying neural systems and behavior.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Princeton Electrical and Computer Engineering: Jonathan Pillow",
+          "url": "https://ece.princeton.edu/people/jonathan-pillow"
+        },
+        {
+          "title": "Princeton Neuroscience Institute: Jonathan Pillow",
+          "url": "https://pni.princeton.edu/people/jonathan-pillow"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-reza-shadmehr-johns-hopkins",
+      "from": "reza-shadmehr",
+      "to": "johns-hopkins",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Biomedical Engineering and Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Shadmehr holds biomedical engineering and neuroscience professorships at Johns Hopkins School of Medicine and co-directs its Biomedical Engineering PhD program.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Johns Hopkins Medicine: Reza Shadmehr",
+          "url": "https://profiles.hopkinsmedicine.org/provider/reza-shadmehr/2777030"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-michael-miller-johns-hopkins",
+      "from": "michael-miller",
+      "to": "johns-hopkins",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Massey Professor and Director of Biomedical Engineering",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Miller leads Johns Hopkins' biomedical engineering department, directs its Center for Imaging Science, and co-directs the Kavli Neuroscience Discovery Institute.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Johns Hopkins Electrical and Computer Engineering: Michael Miller",
+          "url": "https://engineering.jhu.edu/ece/faculty/michael-miller/"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-marius-pachitariu-hhmi-janelia",
+      "from": "marius-pachitariu",
+      "to": "hhmi-janelia",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Group Leader",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Janelia lists Pachitariu as a group leader studying large neural populations and developing computational tools for neural recordings and imaging.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Janelia Research Campus: Marius Pachitariu",
+          "url": "https://www.janelia.org/people/marius-pachitariu"
+        }
+      ]
+    },
+    {
+      "id": "affiliation-liam-paninski-columbia",
+      "from": "liam-paninski",
+      "to": "columbia",
+      "label": "affiliated with",
+      "category": "people",
+      "basis": "documented",
+      "relationshipType": "affiliation",
+      "affiliationStatus": "current",
+      "role": "Professor of Statistics and Neuroscience",
+      "reviewed": "2026-09-16",
+      "date": "Role checked 2026-09-16",
+      "detail": "Paninski holds joint statistics and neuroscience appointments and is a principal investigator at Columbia's Zuckerman Institute.",
+      "limit": "The listed role is the evidence for this affiliation. A shared institution does not establish collaboration, mentorship, or direct contact.",
+      "sources": [
+        {
+          "title": "Columbia Zuckerman Institute: Liam Paninski",
+          "url": "https://zuckermaninstitute.columbia.edu/liam-paninski-phd"
+        }
+      ]
+    },
+    {
+      "id": "willett-henderson-postdoc",
+      "from": "frank-willett",
+      "to": "jaimie-henderson",
+      "label": "trained as a postdoctoral fellow with",
+      "category": "people",
+      "basis": "documented",
+      "date": "2017–2021",
+      "detail": "Stanford's NPTL alumni page lists Willett's 2017–2021 postdoctoral fellowship as a joint appointment with Jaimie Henderson.",
+      "limit": "This edge records the documented postdoctoral relationship; it does not identify Henderson as Willett's only mentor.",
+      "sources": [
+        {
+          "title": "Stanford NPTL: Alumni, postdoctoral fellows",
+          "url": "https://nptl.stanford.edu/alumni"
+        }
+      ]
+    },
+    {
+      "id": "donoghue-hochberg-phd-committee",
+      "from": "john-donoghue",
+      "to": "leigh-hochberg",
+      "label": "served on the PhD thesis committee of",
+      "category": "people",
+      "basis": "documented",
+      "date": "Historical; reported June 10, 2026",
+      "detail": "Brown's June 2026 account identifies Donoghue as a member of Hochberg's PhD thesis committee at Emory University.",
+      "limit": "Committee membership is distinct from being the primary doctoral adviser. Hochberg's institutional CV identifies Donald R. Humphrey as his dissertation adviser. The Brown article does not give committee-service dates.",
+      "sources": [
+        {
+          "title": "Brown: A Brain Science Legend Retires from Brown",
+          "url": "https://medical.brown.edu/news/2026-06-10/john-donoghue-retirement"
+        },
+        {
+          "title": "Leigh Hochberg institutional CV, November 25, 2025",
+          "url": "https://vivo.brown.edu/docs/l/lhochber_cv.pdf?dt=385110101"
+        }
+      ]
+    },
+    {
+      "id": "chang-starr-dystonia-research",
+      "from": "edward-chang",
+      "to": "philip-starr",
+      "label": "collaborated on dystonia physiology with",
+      "category": "people",
+      "basis": "documented",
+      "date": "2007 publication",
+      "detail": "UCSF's resident profile describes Chang's work with Starr on movement-related organization of the globus pallidus internus in people with dystonia, and lists their 2007 Journal of Neurophysiology study.",
+      "limit": "This is a documented historical research collaboration during Chang's residency; it does not establish a formal training relationship or an ongoing joint project.",
+      "sources": [
+        {
+          "title": "UCSF Neurological Surgery academic and research news, volume 8 number 4, page 4",
+          "url": "https://neurosurgery.ucsf.edu/media/5881"
         }
       ]
     }

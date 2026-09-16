@@ -1,5 +1,5 @@
-interface ConnectionNode {id:string;name:string;kind:'Person'|'Lab'|'Company'|'Technology'|'Institution'|'Program';subtitle:string;summary:string;href?:string;aliases?:string[];media?:string;image?:VisualImage;}
-interface ConnectionEdge {id:string;from:string;to:string;label:string;category:'people'|'technology'|'translation';basis:'documented'|'comparison';date:string;detail:string;limit?:string;sources:{title:string;url:string}[];}
+interface ConnectionNode {id:string;name:string;kind:'Person'|'Lab'|'Company'|'Technology'|'Institution'|'Program';subtitle:string;summary:string;href?:string;aliases?:string[];media?:string;image?:VisualImage;researcherId?:string;country?:string;}
+interface ConnectionEdge {id:string;from:string;to:string;label:string;category:'people'|'technology'|'translation';basis:'documented'|'comparison';date:string;detail:string;limit?:string;sources:{title:string;url:string}[];relationshipType?:'affiliation';affiliationStatus?:'current'|'emeritus'|'historical';role?:string;reviewed?:string;}
 interface ConnectionStory {id:string;title:string;deck:string;focus:string;trail:string[];edges:string[];}
 declare var neuroConnectionsData:{reviewed:string;nodes:ConnectionNode[];edges:ConnectionEdge[];stories:ConnectionStory[]};
 

@@ -7,7 +7,7 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 ## What is here
 
 - **Start here:** a photography-led introduction, a beginner route, and four ways into the research: companies/labs, problems, people/connections, and countries. Navigation keeps the detailed reference sections in expandable groups.
-- **Explore the field:** eight source-linked problem groups and a native interactive map of people, labs, companies, and institutions. Search, filter relationship types, focus on nearby connections, or open one of six starting examples. Country guides connect mapped labs and companies; combine problem and country filters, then open the exact profile or original source.
+- **Explore the field:** eight source-linked problem groups and a native interactive map of people, labs, companies, and institutions. Start with the People & workplaces list, filter by research area or organization, then follow sourced affiliation, training, and founding connections on the map. Country guides connect mapped labs and companies; combine problem and country filters, then open the exact profile or original source.
 - **NeuroAI:** sourced project guides spanning connectomics, brain models and emulation, AI inspired by biology, and living neural computing. Follow the four-step Map → Model → Act → Test explanation, then open tools or learning paths. See [NEUROAI.md](NEUROAI.md).
 - **Topic guides:** eleven topics grouped by the questions they answer, with visual introductions and expandable workflows, examples, sources, and tools. Use Expand all details for a full read.
 - **Resource library:** 53 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
@@ -50,6 +50,7 @@ The original TypeScript/classic-script architecture is retained. GitHub Pages se
 | `index.html`, `organization.css`, `guide-reading.css` | Navy navigation, research photography, beginner home page, topic directory, and expandable reading |
 | `data/neuroai.json`, `src/neuroai*.ts`, `neuroai.css` | NeuroAI dossiers, visual explanation, glossary and practical learning integration |
 | `src/explore.ts`, `explore.css`, `data/exploration*.json` | Four exploration views, problem/country combinations, and source-linked starting examples |
+| `src/people-workplaces.ts`, `people-workplaces.css` | Checked researcher roles, organization browsing, source dates, and links into the map |
 | `src/people-map.ts`, `people-map.css`, `scripts/check-people-map.mjs` | Native relationship map, filtered neighborhoods, search, evidence panel, and accessible readable list |
 | `scripts/build-explore.mjs`, `scripts/check-explore.mjs` | Generate exploration data and check references, filters, geography, rendering, and navigation |
 | `workspace.css` | On-demand search, catalog, dictionary, learning, and comparison layouts |

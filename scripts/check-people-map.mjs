@@ -51,9 +51,26 @@ const knownGroups={
   work:['uci-nurotron-translation','harvard-axoft-license','palanker-stanford','williams-garell-development','tolosa-precision','genlight-acquired-nuowei']
 };
 for(const [group,examples] of Object.entries(knownGroups))for(const id of examples)assert.equal(api.relationGroup(edges.get(id)),group,`Conservative relationship grouping: ${id}`);
-const classified=['training','founding','work'].map(relation=>model({relation}));
+const affiliationEdges=eligible.filter(edge=>edge.relationshipType==='affiliation'&&edge.affiliationStatus!=='historical');
+assert(affiliationEdges.length>=50,'Checked researcher workplaces expand the map');
+for(const edge of affiliationEdges)assert.equal(api.relationGroup(edge),'affiliation',`Explicit role metadata controls workplace grouping: ${edge.id}`);
+assert.equal(api.relationGroup({label:'Professor',relationshipType:'affiliation',affiliationStatus:'historical'}),'work','Historical appointments do not appear as present workplaces');
+assert.equal(api.relationGroup({label:'Professor emeritus',relationshipType:'affiliation',affiliationStatus:'emeritus'}),'affiliation','Emeritus remains an explicitly labeled institutional affiliation');
+const classified=['training','founding','work','affiliation'].map(relation=>model({relation}));
 assert.deepEqual(sorted(classified.flatMap(set=>ids(set.edges))),sorted(ids(eligible)),'Relationship filters partition all evidence without dropping or duplicating lines');
-for(const [i,relation] of ['training','founding','work'].entries())for(const edge of classified[i].edges)assert.equal(api.relationGroup(edge),relation);
+for(const [i,relation] of ['training','founding','work','affiliation'].entries())for(const edge of classified[i].edges)assert.equal(api.relationGroup(edge),relation);
+assert.deepEqual(sorted(ids(model({relation:'affiliation'}).edges)),sorted(ids(affiliationEdges)),'Workplace filter contains exactly checked active and emeritus affiliations');
+for(const edge of affiliationEdges){
+  assert.equal(nodes.get(edge.from).kind,'Person');assert.notEqual(nodes.get(edge.to).kind,'Person','An institution bridge never becomes an inferred interpersonal relationship');
+  const html=safeHtml(api.nodeDetail(edge.from,params({relation:'affiliation',focus:edge.from})));
+  assert(html.includes(escape(edge.role)),`Person panel states the checked role: ${edge.id}`);
+  assert(html.includes(escape(edge.reviewed)),`Person panel dates its workplace evidence: ${edge.id}`);
+  assert(hrefs(html).includes(new URL(edge.sources[0].url).href),'A role has an immediate primary-source link');
+  if(edge.affiliationStatus==='emeritus')assert(html.includes('Emeritus'),'Emeritus is not silently presented as an ordinary active role');
+  const line=safeHtml(api.edgeDetail(edge.id,params({relation:'affiliation',edge:edge.id})));
+  assert(line.includes(escape(edge.role)),`Selected workplace line states the exact role: ${edge.id}`);
+  assert(line.includes(`class="pm-role-status">${edge.affiliationStatus==='emeritus'?'Emeritus':'Current'} affiliation`),`Selected workplace line states its current or emeritus status: ${edge.id}`);
+}
 
 // Independently traverse the selected evidence so nearby views cannot leak
 // neighbors from another filter or treat a technical comparison as a link.
@@ -67,7 +84,7 @@ function nearby(focus,allowed,depth){
   return {nodes:sorted(reached),edges:sorted(allowed.filter(edge=>reached.has(edge.from)&&reached.has(edge.to)).map(edge=>edge.id))};
 }
 let cases=0;
-for(const focus of eligibleNodes)for(const relation of ['all','training','founding','work'])for(const depth of [1,2]){
+for(const focus of eligibleNodes)for(const relation of ['all','training','founding','work','affiliation'])for(const depth of [1,2]){
   const allowed=relation==='all'?eligible:eligible.filter(edge=>api.relationGroup(edge)===relation);
   const expected=nearby(focus,allowed,depth),actual=model({focus,relation,depth:String(depth)});
   assert.deepEqual(sorted(ids(actual.nodes)),expected.nodes,`${focus}/${relation}/${depth}: exact nearby entries`);
@@ -97,14 +114,14 @@ for(const id of eligibleNodes){const html=safeHtml(api.nodeDetail(id,params({nod
 const defaultHtml=safeHtml(api.render(params())),defaultState=model({focus:'paul-le-floch',depth:'2'});
 assert(defaultHtml.includes('Example connection'),'The initial focused story is explicitly labeled as an example');
 assert(defaultHtml.includes(`${defaultState.nodes.length} entries · ${defaultState.edges.length} relationships`),'The initial example reports its actual neighborhood counts');
-assert(hrefs(defaultHtml).includes('#explore?by=people&overview=1'),'The whole graph remains one click from the example');
+assert(hrefs(defaultHtml).includes('#explore?by=people&view=map&overview=1'),'The whole graph remains one click from the example');
 const defaultReadable=defaultHtml.match(/<details class="pm-readable">([\s\S]*)<\/details>/)?.[1];
 assert.deepEqual(sorted(attributes(defaultReadable,'data-pm-node')),sorted(ids(defaultState.nodes)),'Initial example matches the documented two-step neighborhood');
 const fullHtml=safeHtml(api.render(params({overview:'1'})));
 assert(fullHtml.includes('pm-canvas'),'Native map is rendered');
 assert(!fullHtml.includes('<iframe'),'The map is embedded directly without an external host');
 assert(!fullHtml.includes('Example connection'),'Whole-map route overrides the introductory example');
-for(const values of [{overview:'1'},{focus:'paul-le-floch'},{focus:'newronika',relation:'founding',depth:'2'},{relation:'training'},{focus:'newronika',relation:'training'},{focus:'missing-entry'}]){
+for(const values of [{overview:'1'},{focus:'paul-le-floch'},{focus:'newronika',relation:'founding',depth:'2'},{relation:'training'},{relation:'affiliation'},{focus:'stanford',relation:'affiliation'},{focus:'newronika',relation:'training'},{focus:'missing-entry'}]){
   const html=safeHtml(api.render(params(values))),set=model(values);
   const readable=html.match(/<details class="pm-readable">([\s\S]*)<\/details>/)?.[1];assert(readable,'Equivalent readable list exists');
   assert.deepEqual(sorted(attributes(readable,'data-pm-edge')),sorted(ids(set.edges)),'Keyboard-readable relationships exactly match filtered graph');
@@ -121,6 +138,7 @@ for(const story of stories){
 const selectedParams=params({relation:'founding',focus:'axoft',depth:'2',edge:'paul-le-floch-axoft-founder',overview:'1',unrelated:'discard'});
 const selectedUrl=api.href(selectedParams),roundTrip=new URLSearchParams(selectedUrl.split('?')[1]);
 assert(selectedUrl.startsWith('#explore?'));
+assert.equal(roundTrip.get('view'),'map','Map navigation stays in the map rather than the person directory');
 for(const key of ['by','relation','focus','depth','edge','overview'])assert.equal(roundTrip.get(key),selectedParams.get(key),`Shareable ${key}`);
 assert(!roundTrip.has('unrelated'),'Other page parameters do not leak into map routes');
 const cleared=new URLSearchParams(api.href(selectedParams,{edge:'',node:'paul-le-floch'}).split('?')[1]);
@@ -130,6 +148,12 @@ assert(!api.edgeDetail('missing-relationship',params()).includes('undefined'),'U
 assert(!api.nodeDetail('missing-person',params()).includes('undefined'),'Unknown selected entry is handled');
 
 const liveGraph=vm.runInContext('neuroConnectionsData',context),liveEdge=liveGraph.edges.find(edge=>edge.id==='rapoport-precision');
+const liveAffiliation=liveGraph.edges.find(edge=>edge.relationshipType==='affiliation'),originalStatus=liveAffiliation.affiliationStatus;
+try{
+  liveAffiliation.affiliationStatus='historical';
+  assert(!ids(api.model(params({relation:'affiliation'})).edges).includes(liveAffiliation.id),'A historical role leaves the workplace filter');
+  assert(api.edgeDetail(liveAffiliation.id,params()).includes('class="pm-role-status">Historical affiliation'),'Historical role status remains explicit in full-map evidence');
+}finally{liveAffiliation.affiliationStatus=originalStatus;}
 const originalLabel=liveEdge.label,originalSources=liveEdge.sources;
 try{
   liveEdge.label='<img src=x onerror="alert(1)">';liveEdge.sources=[{title:'<unsafe> & source',url:'javascript:alert(1)'}];

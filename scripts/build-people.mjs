@@ -8,6 +8,7 @@ const json = async path => JSON.parse(await read(path));
 const snapshot = await json('data/people-metrics.json');
 const links = await json('data/people-connections.json');
 const extras = await json('data/people-profiles.json');
+const graph = await json('data/connections.json');
 const context = vm.createContext({URL, URLSearchParams});
 vm.runInContext(ts.transpileModule(await read('src/researchers.ts'), {
   compilerOptions: {target: ts.ScriptTarget.ES2020, module: ts.ModuleKind.None}
@@ -37,6 +38,23 @@ for (const p of people) {
     if (c.careerStatus === 'deceased' || c.careerStatus === 'emeritus') p.affiliationNote = correction.reason;
     else if (c.institution) p.affiliationNote = 'Institutional context checked against the linked source on ' + correction.verified + '.';
     p.sources.push(...correction.sources);
+  }
+  const mapped = graph.nodes.filter(n => n.kind === 'Person' && n.researcherId === p.id).map(n => n.id);
+  p.connectionIds = [...new Set([...p.connectionIds, ...mapped])];
+  p.affiliations = graph.edges.filter(x => x.relationshipType === 'affiliation' && p.connectionIds.includes(x.from)).map(x => {
+    const org = graph.nodes.find(n => n.id === x.to);
+    return {edgeId:x.id,nodeId:x.from,organizationId:org.id,organizationName:org.name,country:org.country || '',role:x.role,status:x.affiliationStatus,reviewed:x.reviewed,sources:x.sources};
+  });
+  if (p.affiliations.length) {
+    const active = p.affiliations.filter(a => a.status !== 'historical');
+    if (active.length) {
+      p.institution = [...new Set(active.map(a => a.organizationName))].join(' / ');
+      p.country = [...new Set(active.map(a => a.country).filter(Boolean))].join(' / ');
+      p.status = active.every(a => a.status === 'emeritus') ? 'Emeritus' : '';
+      p.affiliationNote = 'Roles checked against original institutional sources on ' + active.map(a => a.reviewed).sort().at(-1) + '.';
+      p.profileUrl = active[0].sources[0].url;
+    }
+    p.sources.push(...p.affiliations.flatMap(a => a.sources));
   }
   p.sources = p.sources.filter((s, i, a) => a.findIndex(t => t.url === s.url) === i);
   p.metric = metricById.get(p.id);

@@ -82,7 +82,14 @@ NeuroAI release verification: full `pnpm test` and `pnpm check` passed. Browser 
 
 ## Native people map (15 September 2026)
 
-- `#explore?by=people` uses the bundled Cytoscape renderer and the existing documented graph. It includes people, companies, institutions, and labs; conceptual technology links remain in the wider research network.
+- `#explore?by=people&view=map` uses the bundled Cytoscape renderer and the existing documented graph. It includes people, companies, institutions, and labs; conceptual technology links remain in the wider research network.
 - The first visit opens a labeled example neighborhood; `overview=1` shows the whole map. Search opens a direct neighborhood; `focus`, `depth`, and `relation` preserve the view in the URL. `node` and `edge` preserve the selected detail. Selecting entries updates the panel without recreating the graph or resetting pan and zoom.
 - Training, founding, and work filters organize exact sourced edge labels. Node positions and uniform sizes carry no importance ranking. A readable list provides equivalent entry and relationship access without the canvas.
 - `dist/people-map.js` loads before `dist/explore.js`; the hub destroys its graph, event handlers, and observer before route changes. `scripts/check-people-map.mjs` covers filtered neighborhoods, source fidelity, search, routing, selection, and lifecycle cleanup.
+
+## People and workplaces (16 September 2026)
+
+- `#explore?by=people` now starts with researchers and their checked roles. Name, research-area, workplace, and ordering filters preserve state in the URL; results show 12 people per page. Existing map links with `focus`, `node`, `edge`, `relation`, or `overview` still open the map.
+- The existing 192-person directory supplies identities, research areas, and publication-based ordering. The workplace list includes only people with newly reviewed affiliation edges; it does not infer current employment from publication metadata. Emeritus roles retain their explicit status.
+- `data/connections.json` is the source of truth: person nodes carry `researcherId`; role edges carry `relationshipType: affiliation`, status, role, review date, and primary sources. `build-people.mjs` derives profile affiliations and graph identities from those records.
+- The affiliation filter connects people through institutions and labs. A shared workplace is not a co-authorship or mentorship claim; separately sourced relationships retain their own edges.
