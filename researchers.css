@@ -1,0 +1,217 @@
+/* Portrait-led researcher directory and a compact, source-aware career trail. */
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-browser {
+  --researcher-ink: #203c4e;
+  --researcher-muted: #647885;
+  --researcher-line: #dce5e9;
+  color: var(--researcher-ink);
+  padding: 4px 0 12px;
+}
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview {
+  border: 0;
+  align-items: center;
+  padding: 24px 26px 18px;
+  gap: 28px;
+}
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview > div:first-child { display: block; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview .na-researcher-eyebrow {
+  display: block;
+  color: #507b80;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .16em;
+  margin-bottom: 9px;
+}
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview strong {
+  display: block;
+  font-size: clamp(25px, 2.6vw, 34px);
+  font-weight: 550;
+  letter-spacing: -.045em;
+  line-height: 1.12;
+}
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview p { color: var(--researcher-muted); font-size: 13px; line-height: 1.6; margin: 10px 0 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count { border-left: 1px solid var(--researcher-line); flex-shrink: 0; padding-left: 27px; text-align: right; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count b { display: block; font-size: 42px; font-weight: 450; letter-spacing: -.06em; line-height: 1; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count span { display: block; font-size: 10px; margin-top: 6px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary { border-bottom: 1px solid var(--researcher-line); justify-content: flex-start; gap: 6px; max-width: none; padding: 0 26px 20px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary > span { background: #f3f6f7; border: 1px solid #e5ebee; border-radius: 5px; color: #526b79; font-size: 10px; gap: 6px; padding: 5px 8px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary b { font-size: 10px; font-weight: 550; opacity: .75; margin-left: 5px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-toolbar { padding: 15px 26px; border: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls { gap: 12px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls label { font-size: 10px; letter-spacing: .025em; gap: 6px; color: var(--researcher-muted); text-transform: none; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls select { color: var(--researcher-ink); font-size: 12px; border-color: #ccdbe2; border-radius: 6px; min-width: 170px; padding: 8px 11px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-toolbar-note { color: var(--researcher-muted); font-size: 11px; max-width: 320px; padding-bottom: 10px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-layout {
+  background: #fff;
+  border: 1px solid var(--researcher-line);
+  border-radius: 12px;
+  grid-template-columns: minmax(280px, .82fr) minmax(0, 2fr);
+  min-height: 0;
+  margin: 0 16px;
+  align-items: start;
+  overflow: hidden;
+}
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster { background: #f9fbfc; border-right: 1px solid var(--researcher-line); border-bottom: 0; padding: 16px 10px 13px; min-height: 100%; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-title { padding: 0 8px; margin-bottom: 12px; align-items: center; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-title h3 { font-size: 12px; font-weight: 650; letter-spacing: -.01em; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-title > span { color: var(--researcher-muted); font-size: 10px; white-space: nowrap; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-list { display: grid; gap: 4px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row { background: transparent; border: 1px solid transparent; border-radius: 8px; grid-template-columns: 44px minmax(0, 1fr) 12px; gap: 10px; padding: 10px 8px; color: var(--researcher-ink); position: relative; transition: background .15s, border-color .15s; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row:hover { background: #edf3f5; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row[aria-pressed="true"] { background: #fff; border-color: #ccdce1; box-shadow: inset 3px 0 0 var(--c), 0 2px 8px #183f5510; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row strong { font-size: 12px; font-weight: 650; letter-spacing: -.01em; line-height: 1.35; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row small { color: var(--researcher-muted); font-size: 10px; line-height: 1.5; margin: 2px 0 3px; white-space: nowrap; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row .na-researcher-row-meta { align-items: center; color: #708591; display: flex; flex-wrap: wrap; gap: 4px; font-size: 9px; line-height: 1.3; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row-meta i { background: var(--c); border-radius: 50%; width: 5px; height: 5px; margin-right: 2px; flex-shrink: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row .na-researcher-row-arrow { color: #8ba0ad; font-size: 14px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row[aria-pressed="true"] .na-researcher-row-arrow { color: var(--c); }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media { background: #e8eff1; color: #6c8790; display: block; overflow: hidden; position: relative; flex-shrink: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media-initials { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; font-weight: 450; letter-spacing: -.04em; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 24%; display: block; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media img[hidden] { display: none; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-avatar { width: 44px; height: 50px; border-radius: 6px; font-size: 17px; border: 1px solid #dde6e9; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster > .na-pager { border-top: 1px solid var(--researcher-line); display: flex; align-items: center; gap: 8px; margin: 13px 6px 0; padding: 13px 0 0; font-size: 10px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster > .na-pager button { min-height: 32px; border-radius: 5px; font-size: 10px; padding: 5px 8px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile { padding: 0; background: white; scroll-margin-top: 130px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > .na-researcher-hero { display: grid; grid-template-columns: minmax(0, 1fr) 164px; gap: 26px; padding: 28px; background: linear-gradient(115deg, #f1f6f7, #fbfcfc); border-bottom: 1px solid var(--researcher-line); }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family { color: var(--researcher-color); display: inline-flex; align-items: center; gap: 7px; font-size: 10px; letter-spacing: .06em; line-height: 1.5; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family > i { display: inline-block; width: 6px; height: 6px; background: currentColor; border-radius: 50%; flex-shrink: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header h2 { margin: 12px 0 9px; color: #19394a; font-size: clamp(27px, 2.7vw, 38px); font-weight: 520; letter-spacing: -.045em; line-height: 1.08; overflow-wrap: anywhere; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header .na-researcher-affiliation { font-size: 12px; color: #496574; line-height: 1.5; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header .na-researcher-location { color: #798d97; font-size: 10px; line-height: 1.5; margin-top: 4px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-location span { padding: 0 4px; color: #a4b4bc; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header .na-researcher-summary { color: #405e6d; font-size: 13px; line-height: 1.7; margin: 16px 0 17px; max-width: 580px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-photo { margin: 0; align-self: start; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-portrait { width: 164px; height: 204px; border-radius: 9px; font-size: 56px; border: 1px solid #d7e3e7; box-shadow: 0 4px 16px #2448560b; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-photo figcaption { line-height: 1.35; text-align: right; margin-top: 7px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media-credit { font-size: 9px; color: #778f9b; text-decoration: none; text-underline-offset: 2px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media-credit:hover { color: #284f65; text-decoration: underline; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media-credit a { color: inherit; text-decoration: none; font-size: inherit; }
+body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media-credit a:hover { text-decoration: underline; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-sources { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-sources a { display: inline-flex; align-items: center; color: #36586b; background: #fff; border: 1px solid #cddde4; border-radius: 5px; font-size: 10px; font-weight: 550; padding: 7px 9px; text-decoration: none; transition: border-color .15s; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-sources a:hover { border-color: #5e899a; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > section { margin: 0; border: 0; padding: 23px 28px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > .na-researcher-technologies { border-bottom: 1px solid var(--researcher-line); padding-top: 20px; padding-bottom: 21px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-section-title { align-items: center; gap: 12px; margin-bottom: 15px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-section-title h3 { font-size: 12px; font-weight: 650; letter-spacing: -.015em; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-section-title > span { color: #7b8e98; font-size: 10px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list { display: flex; flex-wrap: wrap; gap: 8px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list button { display: inline-flex; align-items: center; gap: 8px; color: #385d71; background: #f6f9fa; border: 1px solid #dce7ec; border-radius: 5px; padding: 8px 10px; font-size: 11px; text-align: left; line-height: 1.4; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list button:hover { border-color: var(--c); background: #fff; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list button > i { background: var(--c); height: 6px; width: 6px; border-radius: 50%; flex-shrink: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list button > span { color: #7d94a2; font-size: 12px; margin-left: 3px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-events { display: grid; gap: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event { display: grid; grid-template-columns: 47px 15px minmax(0, 1fr); gap: 10px; padding: 12px 0 19px; position: relative; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event:not(:last-child)::after { content: ''; position: absolute; left: 64px; width: 1px; top: 27px; bottom: -13px; background: #dce7e9; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event > time { color: var(--researcher-color); font-size: 15px; font-weight: 500; line-height: 1.3; letter-spacing: -.04em; padding-top: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event-node { width: 9px; height: 9px; border: 2px solid var(--researcher-color); border-radius: 50%; background: #fff; margin: 5px 3px 0; z-index: 1; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event:last-child .na-researcher-event-node { background: var(--researcher-color); }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event h4 { color: #294a5c; font-size: 13px; font-weight: 650; line-height: 1.45; margin: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event p { color: var(--researcher-muted); font-size: 12px; line-height: 1.65; margin: 5px 0 7px; max-width: 680px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event .na-researcher-evidence-link { display: inline-flex; gap: 7px; color: #607f91; font-size: 10px; line-height: 1.4; text-decoration-color: #c2d2da; text-underline-offset: 3px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event .na-researcher-evidence-link:hover { color: #244e66; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile-footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 28px; border-top: 1px solid var(--researcher-line); background: #fbfcfd; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile-footer > span { font-size: 11px; color: #728995; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-ask { width: auto; display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin: 0; border: 1px solid #cfdee5; border-radius: 5px; padding: 8px 11px; background: #fff; color: #365e72; font-size: 10px; line-height: 1.5; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-note { margin: 15px 24px 21px; color: #718691; font-size: 11px; line-height: 1.7; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-note summary { cursor: pointer; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row:focus-visible,
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-browser a:focus-visible,
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-browser button:focus-visible,
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls select:focus-visible { outline: 2px solid #417d95; outline-offset: 3px; }
+@media (max-width: 1180px) {
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-layout { grid-template-columns: minmax(270px, .9fr) minmax(0, 1.9fr); }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > .na-researcher-hero { grid-template-columns: minmax(0, 1fr) 124px; gap: 20px; padding: 24px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-portrait { width: 124px; height: 157px; font-size: 44px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > section { padding-left: 24px; padding-right: 24px; }
+}
+@media (max-width: 960px) {
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-layout { grid-template-columns: 1fr; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster { border-right: 0; border-bottom: 1px solid var(--researcher-line); padding: 18px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px 12px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster > .na-pager { margin-top: 15px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > .na-researcher-hero { grid-template-columns: minmax(0, 1fr) 160px; padding: 26px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-portrait { width: 160px; height: 198px; }
+}
+@media (max-width: 620px) {
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview { flex-direction: row; align-items: flex-start; padding: 18px 16px 16px; gap: 15px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview strong { font-size: 26px; max-width: 270px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview p { font-size: 12px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count { padding-left: 13px; margin-top: 21px; max-width: 75px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count b { font-size: 30px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count span { font-size: 9px; line-height: 1.4; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary { padding: 0 16px 16px; gap: 5px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary > span { padding: 4px 6px; font-size: 9px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary b { margin-left: 0; font-size: 9px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-toolbar { padding: 14px 16px; gap: 8px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls { width: 100%; gap: 10px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls label { flex: 1; min-width: 0; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-controls select { min-width: 0; width: 100%; padding: 8px; font-size: 11px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-toolbar-note { padding-bottom: 0; font-size: 10px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-layout { margin: 0 8px; border-radius: 9px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster { padding: 15px 10px 12px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-roster-list { gap: 4px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row { grid-template-columns: 32px minmax(0, 1fr); gap: 7px; padding: 8px 6px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-avatar { width: 32px; height: 39px; font-size: 13px; border-radius: 4px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row strong { font-size: 10px; line-height: 1.4; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row small { font-size: 9px; margin-top: 1px; white-space: nowrap; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row .na-researcher-row-meta { font-size: 8px; gap: 3px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row .na-researcher-row-arrow { display: none; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > .na-researcher-hero { gap: 15px; padding: 22px 18px; grid-template-columns: minmax(0, 1fr) 90px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family { font-size: 9px; letter-spacing: .015em; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header h2 { font-size: 28px; margin-top: 11px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header .na-researcher-affiliation { font-size: 11px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header .na-researcher-location { font-size: 9px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-portrait { width: 90px; height: 115px; font-size: 33px; border-radius: 6px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .researcher-media-credit { font-size: 8px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-hero-copy { display: contents; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-hero-copy > :not(.na-researcher-summary):not(.na-researcher-sources) { grid-column: 1; margin: 0; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-photo { grid-column: 2; grid-row: 1 / 5; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > header .na-researcher-summary { grid-column: 1 / -1; margin: 2px 0 0; font-size: 12px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-sources { grid-column: 1 / -1; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile > section { padding: 21px 18px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-section-title { gap: 8px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-section-title h3 { font-size: 11px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-section-title > span { font-size: 9px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list { gap: 6px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-tech-list button { font-size: 10px; padding: 7px 8px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event { grid-template-columns: 38px 12px minmax(0, 1fr); gap: 7px; padding-bottom: 17px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event:not(:last-child)::after { left: 50px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event-node { margin-left: 1px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event > time { font-size: 13px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event h4 { font-size: 12px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event p { font-size: 11px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-profile-footer { padding: 15px 18px; flex-wrap: wrap; gap: 10px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-note { margin: 13px 16px 20px; font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row,
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-sources a { transition: none; }
+}
+
+/* Override earlier atlas reading-pane rules at the same route specificity. */
+body[data-view="researchers"] #neurotech-atlas-2026 .na-plot-title { display: none; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview { padding: 20px 26px 14px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-family-summary { padding-bottom: 12px; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-event { border-bottom: 0; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row small { overflow: hidden; text-overflow: ellipsis; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-row-copy { min-width: 0; }
+body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-head { padding-top: 0; padding-bottom: 8px; margin-bottom: 12px; }
+body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-head h1 { margin-top: 8px; margin-bottom: 8px; }
+body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-controls { margin-top: 0; }
+body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-focus { padding-top: 4px; padding-bottom: 0; margin-top: 4px; min-height: 0; }
+
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview > div:first-child > strong { font-size: 27px; line-height: 1.15; font-weight: 550; letter-spacing: -.035em; }
+body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview { flex-wrap: nowrap; }
+@media(max-width:620px) {
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview { padding: 18px 16px 12px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview > div:first-child > strong { font-size: 25px; }
+  body[data-view="researchers"] #neurotech-atlas-2026 .na-researcher-overview-count { display: none; }
+}
+
+@media(max-width:620px) {
+  body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-head { position: relative; display: block; }
+  body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-lang { position: absolute; right: 8px; top: -5px; }
+  body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-head .na-kicker { padding-right: 90px; font-size: 9px; }
+  body:is([data-view="researchers"],[data-view="timeline"]) #neurotech-atlas-2026 .na-head h1 { margin-top: 18px; }
+}

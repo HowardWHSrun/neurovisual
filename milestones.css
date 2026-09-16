@@ -1,0 +1,97 @@
+/* The milestone route reads as an illustrated chronology, with native controls. */
+body[data-view="timeline"] #neurotech-atlas-2026 .na-plot-wrap { background: transparent; border: 0; overflow: visible; }
+body[data-view="timeline"] #neurotech-atlas-2026 .na-plot-title,
+body[data-view="timeline"] #neurotech-atlas-2026 .na-note { display: none; }
+.na-milestone-browser { --ms-ink: #14283d; --ms-muted: #5d6d7b; color: var(--ms-ink); }
+.na-milestone-browser[hidden] { display: none; }
+#neurotech-atlas-2026 .ms-hero { display: grid; grid-template-columns: 1.05fr 1fr; overflow: hidden; background: #142b3b; border-radius: 18px; color: #fff; }
+#neurotech-atlas-2026 .ms-hero-copy { padding: 36px 38px 32px; align-self: center; }
+#neurotech-atlas-2026 .ms-eyebrow { color: #a8d5cf; font-size: 10px; letter-spacing: .15em; font-weight: 700; }
+#neurotech-atlas-2026 .ms-hero h2 { color: #fff; font-size: clamp(28px,3.2vw,44px); letter-spacing: -.045em; line-height: 1.08; margin: 17px 0; font-weight: 650; }
+#neurotech-atlas-2026 .ms-hero-copy > p { color: #c8d8e0; font-size: 13px; line-height: 1.7; max-width: 420px; margin: 0; }
+#neurotech-atlas-2026 .ms-span { display: flex; align-items: center; gap: 13px; margin-top: 27px; flex-wrap: wrap; }
+#neurotech-atlas-2026 .ms-span > span { font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: -.03em; }
+#neurotech-atlas-2026 .ms-span > i { width: 64px; height: 1px; background: #8dc8bf; position: relative; }
+#neurotech-atlas-2026 .ms-span > i:after { content: ''; position: absolute; width: 5px; height: 5px; border-radius: 50%; background: #8dc8bf; right: 0; top: -2px; }
+#neurotech-atlas-2026 .ms-span > small { color: #b7ced6; font-size: 11px; margin-left: auto; }
+#neurotech-atlas-2026 .ms-image { margin: 0; min-width: 0; background: #edf2f5; }
+#neurotech-atlas-2026 .ms-image > button { border: 0; background: transparent; padding: 0; width: 100%; display: block; position: relative; overflow: hidden; border-radius: 0; cursor: zoom-in; }
+#neurotech-atlas-2026 .ms-image .visual-image { aspect-ratio: 16/10; height: auto; min-height: 120px; position: relative; background: #e5edf1; overflow: hidden; }
+#neurotech-atlas-2026 .ms-image img { width: 100%; height: 100%; object-fit: contain; position: absolute; inset: 0; transition: transform .25s; }
+#neurotech-atlas-2026 .ms-image button:hover img { transform: scale(1.025); }
+#neurotech-atlas-2026 .ms-enlarge { position: absolute; bottom: 10px; right: 10px; width: 28px; height: 28px; display: grid; place-items: center; color: #fff; background: #14283dc9; border: 1px solid #ffffff4d; border-radius: 50%; font-size: 19px; }
+#neurotech-atlas-2026 .ms-image figcaption { display: grid; gap: 4px; padding: 10px 13px; font-size: 10px; line-height: 1.45; color: #536575; }
+#neurotech-atlas-2026 .ms-image figcaption a { color: inherit; text-decoration: none; }
+#neurotech-atlas-2026 .ms-image figcaption a:hover { text-decoration: underline; }
+#neurotech-atlas-2026 .ms-hero-image { display: flex; flex-direction: column; background: #102332; }
+#neurotech-atlas-2026 .ms-hero-image > button { flex: 1; display: flex; }
+#neurotech-atlas-2026 .ms-hero-image .visual-image { width: 100%; min-height: 250px; height: 100%; }
+#neurotech-atlas-2026 .ms-hero-image img { object-fit: cover; object-position: 50% 35%; }
+#neurotech-atlas-2026 .ms-hero-image figcaption { color: #c8dce4; padding: 11px 18px; }
+#neurotech-atlas-2026 .ms-hero-image figcaption > span { color: #fff; font-size: 11px; }
+#neurotech-atlas-2026 .ms-navigation { margin-top: 24px; }
+#neurotech-atlas-2026 .ms-era-tabs { display: grid; grid-template-columns: .8fr repeat(3,1fr); gap: 8px; }
+#neurotech-atlas-2026 .ms-era-tabs button { border: 1px solid #dce4eb; background: #fff; color: #344b5e; padding: 12px 17px; border-radius: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; text-align: left; font-size: 12px; font-weight: 650; min-height: 49px; }
+#neurotech-atlas-2026 .ms-era-tabs button[aria-pressed="true"] { background: #e4f0ed; border-color: #43857b; color: #225c54; }
+#neurotech-atlas-2026 .ms-era-tabs small { font-size: 10px; font-weight: 400; color: inherit; }
+#neurotech-atlas-2026 .ms-era-tabs button > span { background: #fff9; padding: 3px 7px; border-radius: 5px; font-size: 10px; }
+#neurotech-atlas-2026 .ms-navigation > p { font-size: 11px; color: var(--ms-muted); margin: 11px 0 0; }
+#neurotech-atlas-2026 .ms-results { font-size: 11px; color: var(--ms-muted); text-align: right; margin-top: 12px; }
+#neurotech-atlas-2026 .ms-era-section { margin-top: 21px; }
+#neurotech-atlas-2026 .ms-era-heading { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 20px; padding: 19px 0; border-top: 1px solid #d4dfe6; }
+#neurotech-atlas-2026 .ms-era-heading > span { font-size: 13px; color: #71818c; }
+#neurotech-atlas-2026 .ms-era-heading small { font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: #5d7c7a; font-weight: 650; }
+#neurotech-atlas-2026 .ms-era-heading h2 { font-size: 21px; line-height: 1.3; letter-spacing: -.025em; margin: 5px 0 0; color: #20374c; }
+#neurotech-atlas-2026 .ms-entries { list-style: none; margin: 0; padding: 0; }
+#neurotech-atlas-2026 .ms-entry { display: grid; grid-template-columns: 110px 1fr; gap: 20px; padding-bottom: 13px; }
+#neurotech-atlas-2026 .ms-date { position: relative; padding: 24px 25px 0 0; text-align: right; }
+#neurotech-atlas-2026 .ms-date:after { content: ''; position: absolute; right: 0; width: 1px; top: 0; bottom: -14px; background: #d6e1e8; }
+#neurotech-atlas-2026 .ms-entry:last-child .ms-date:after { bottom: calc(100% - 36px); }
+#neurotech-atlas-2026 .ms-date time { font-size: 21px; letter-spacing: -.04em; color: #304b5e; font-weight: 600; font-variant-numeric: tabular-nums; }
+#neurotech-atlas-2026 .ms-date > span { width: 9px; height: 9px; position: absolute; top: 32px; right: -4px; border-radius: 50%; background: var(--ms-accent); box-shadow: 0 0 0 4px #f5f7fa; z-index: 1; }
+#neurotech-atlas-2026 .ms-card { display: grid; border: 1px solid #dce4eb; border-radius: 12px; background: #fff; overflow: hidden; transition: border-color .2s, box-shadow .2s; }
+#neurotech-atlas-2026 .ms-card:hover { border-color: #9cbbc3; box-shadow: 0 5px 15px #21394a08; }
+#neurotech-atlas-2026 .ms-card-copy { padding: 22px 25px; min-width: 0; }
+#neurotech-atlas-2026 .ms-family { color: var(--ms-accent); font-size: 10px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; }
+#neurotech-atlas-2026 .ms-card h3 { margin: 7px 0; font-size: 20px; line-height: 1.3; letter-spacing: -.025em; color: #172f43; }
+#neurotech-atlas-2026 .ms-card p { font-size: 12px; line-height: 1.5; color: #607183; margin: 0 0 13px; }
+#neurotech-atlas-2026 .ms-open { padding: 0; background: transparent; border: 0; color: #306d68; border-radius: 2px; font-size: 11px; font-weight: 650; min-height: 25px; }
+#neurotech-atlas-2026 .ms-open span { display: inline-block; margin-left: 12px; }
+#neurotech-atlas-2026 .ms-has-image { grid-template-columns: 1fr 215px; }
+#neurotech-atlas-2026 .ms-has-image .ms-image { border-left: 1px solid #e1e9ed; }
+#neurotech-atlas-2026 .ms-empty { padding: 40px; text-align: center; background: #fff; border: 1px dashed #c5d3db; border-radius: 12px; margin-top: 25px; }
+#neurotech-atlas-2026 .ms-empty h2 { font-size: 19px; }
+#neurotech-atlas-2026 .ms-empty p { font-size: 13px; color: var(--ms-muted); }
+#neurotech-atlas-2026 .ms-footer { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; border-top: 1px solid #d5e1e7; padding: 24px 0; margin-top: 30px; font-size: 12px; }
+#neurotech-atlas-2026 .ms-footer > span { color: #71808d; margin-right: auto; }
+#neurotech-atlas-2026 .ms-footer a { color: #286962; text-decoration: none; font-weight: 600; }
+#neurotech-atlas-2026 .na-milestone-browser :is(button,a):focus-visible { outline: 3px solid #357f79; outline-offset: 4px; }
+@media(max-width:1100px) {
+  #neurotech-atlas-2026 .ms-hero-copy { padding: 27px; }
+  #neurotech-atlas-2026 .ms-span > small { width: 100%; margin-left: 0; }
+  #neurotech-atlas-2026 .ms-era-tabs button { flex-wrap: wrap; gap: 4px; }
+  #neurotech-atlas-2026 .ms-era-tabs small { width: 100%; }
+}
+@media(max-width:700px) {
+  #neurotech-atlas-2026 .ms-hero { grid-template-columns: 1fr; }
+  #neurotech-atlas-2026 .ms-hero-copy { padding: 28px; }
+  #neurotech-atlas-2026 .ms-hero h2 { font-size: 35px; }
+  #neurotech-atlas-2026 .ms-hero-image .visual-image { min-height: 0; height: auto; aspect-ratio: 16/8; }
+  #neurotech-atlas-2026 .ms-hero-image img { object-position: 50% 42%; }
+  #neurotech-atlas-2026 .ms-span > small { width: auto; margin-left: auto; }
+  #neurotech-atlas-2026 .ms-era-tabs { grid-template-columns: 1fr 1fr; }
+  #neurotech-atlas-2026 .ms-era-tabs small { width: auto; }
+  #neurotech-atlas-2026 .ms-era-heading { grid-template-columns: 1fr; gap: 6px; }
+  #neurotech-atlas-2026 .ms-era-heading h2 { font-size: 20px; }
+  #neurotech-atlas-2026 .ms-entry { grid-template-columns: 53px minmax(0,1fr); gap: 14px; }
+  #neurotech-atlas-2026 .ms-date { padding-right: 12px; }
+  #neurotech-atlas-2026 .ms-date time { font-size: 17px; }
+  #neurotech-atlas-2026 .ms-date > span { top: 29px; }
+  #neurotech-atlas-2026 .ms-card-copy { padding: 18px; }
+  #neurotech-atlas-2026 .ms-card h3 { font-size: 18px; }
+  #neurotech-atlas-2026 .ms-has-image { grid-template-columns: 1fr; }
+  #neurotech-atlas-2026 .ms-has-image .ms-image { border-left: 0; border-top: 1px solid #e1e9ed; }
+  #neurotech-atlas-2026 .ms-footer { gap: 15px; }
+  #neurotech-atlas-2026 .ms-footer > span { width: 100%; }
+}
+@media(prefers-reduced-motion:reduce) { #neurotech-atlas-2026 .ms-image img, #neurotech-atlas-2026 .ms-card { transition: none; } }

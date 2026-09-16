@@ -1251,7 +1251,12 @@
         syncView(); if (state.view === 'universe')
         state.universeType = 'tech'; renderDetail(); draw(); }
     function closeDetail() { state.detailOpen = false; detail.hidden = true; if (focusButton)
-        focusButton.hidden = true; syncView(); }
+        focusButton.hidden = true; syncView(); if (state.view === 'timeline') {
+        root.querySelectorAll('[data-milestone-tech]').forEach(function (button) { button.setAttribute('aria-pressed', 'false'); });
+        var trigger = root.querySelector('[data-milestone-key="' + lastMilestoneTrigger + '"]');
+        if (trigger)
+            trigger.focus();
+    } }
     function bindDetailClose() { var close = detail.querySelector('[data-close-detail]'); if (close)
         close.addEventListener('click', closeDetail); }
     function formatCapital(v) {
@@ -1576,95 +1581,26 @@
             g.append('text').attr('class', 'na-node-label').attr('x', sel.px + (anchor === 'start' ? 11 : -11)).attr('y', sel.py - 8).attr('text-anchor', anchor).text(labelText);
         }
     }
+    var lastMilestoneTrigger = '';
     function drawTimeline(w, h) {
-        var compact = w < 600, left = compact ? 14 : 26, rail = compact ? 68 : 96, textX = rail + 24;
-        var right = compact ? 16 : 30, textWidth = Math.max(100, Math.min(720, w - textX - right - 11));
-        var fontFamily = getComputedStyle(root).fontFamily;
-        function wrapTimelineText(value, width, size, weight) {
-            universeContext.font = weight + ' ' + size + 'px ' + fontFamily;
-            var lines = [], line = '';
-            String(value).split(/(\s+)/).forEach(function (token) {
-                if (universeContext.measureText(line + token).width <= width) {
-                    line += token;
-                    return;
-                }
-                if (line.trim()) {
-                    lines.push(line.trim());
-                    line = '';
-                }
-                if (!token.trim())
-                    return;
-                Array.from(token).forEach(function (character) {
-                    if (line && universeContext.measureText(line + character).width > width) {
-                        lines.push(line);
-                        line = '';
-                    }
-                    line += character;
-                });
-            });
-            if (line.trim())
-                lines.push(line.trim());
-            return lines;
+        var host = root.querySelector('.na-milestone-browser');
+        if (!host) {
+            host = document.createElement('div');
+            host.className = 'na-milestone-browser';
+            root.querySelector('#na-chart').after(host);
         }
-        function appendLines(group, lines, x, y, lineHeight, className, size, weight) {
-            var text = group.append('text').attr('class', className).attr('x', x).attr('y', y)
-                .style('font-size', size + 'px').style('font-weight', weight);
-            lines.forEach(function (line, i) { text.append('tspan').attr('x', x).attr('dy', i ? lineHeight : 0).text(line); });
-        }
-        var note = I18N.lang === 'zh' ? '按年份排列；条目间距不代表时间间隔。' : 'Chronological sequence · spacing does not represent elapsed time.';
-        var noteLines = wrapTimelineText(note, w - left - right, 12, 400);
-        appendLines(svg, noteLines, left, 24, 18, 'na-timeline-note', 12, 400);
-        var y = noteLines.length * 18 + 28;
+        root.querySelector('#na-chart').setAttribute('hidden', '');
+        host.hidden = false;
         var eligibleTechnologies = new Set(filtered(true).map(function (t) { return t.id; }));
-        var visibleMilestones = milestones.filter(function (d) { var technology = T.find(function (t) { return t.id === d.id; }); return eligibleTechnologies.has(d.id) && hubUtils.matches([Math.floor(d.year), d.title, __tn(technology), technology.n].join(' '), state.search); });
+        var visibleMilestones = milestones.filter(function (d) { var technology = T.find(function (t) { return t.id === d.id; }); return eligibleTechnologies.has(d.id) && hubUtils.matches([Math.floor(d.year), d.title, __tn(technology), technology.n].join(' '), state.search); }).sort(function (a, b) { return a.year - b.year; });
         root.querySelector('.na-count').textContent = visibleMilestones.length + ' ' + I18N.t('of') + ' ' + milestones.length + ' ' + I18N.t('viewMilestones');
-        var entries = visibleMilestones.sort(function (a, b) { return a.year - b.year; }).map(function (d) {
-            var technology = T.find(function (t) { return t.id === d.id; });
-            var titleLines = wrapTimelineText(d.title, textWidth, 15, 600);
-            var technologyLines = wrapTimelineText(__tn(technology), textWidth, 12, 400);
-            var height = Math.max(82, titleLines.length * 22 + technologyLines.length * 18 + 30);
-            var entry = { d: d, technology: technology, titleLines: titleLines, technologyLines: technologyLines, y: y, height: height };
-            y += height;
-            return entry;
-        });
-        if (!entries.length) {
-            appendLines(svg, wrapTimelineText(I18N.lang === 'zh' ? '没有符合这些筛选条件的里程碑。' : 'No milestones match these filters.', w - left - right, 14, 500), left, y + 26, 22, 'na-timeline-note', 14, 500);
-            y += 90;
-        }
-        h = y + 14;
-        svg.attr('viewBox', '0 0 ' + w + ' ' + h).attr('height', h).attr('aria-label', I18N.t('selectedFieldMilestones') + '. ' + note);
-        if (entries.length) {
-            svg.append('line').attr('class', 'na-timeline-line').attr('x1', rail).attr('x2', rail)
-                .attr('y1', entries[0].y + 23).attr('y2', entries[entries.length - 1].y + 23);
-        }
-        function activateMilestone(entry) {
-            selectTech(entry.d.id);
+        MilestoneExperience.render(host, visibleMilestones, milestones, T.map(function (t) { return Object.assign({}, t, { n: __tn(t) }); }), groups, state.selected, state.detailOpen, function (id, key) {
+            lastMilestoneTrigger = key;
+            selectTech(id);
             detail.scrollIntoView({ block: 'nearest' });
             var closeButton = detail.querySelector('[data-close-detail]');
             if (closeButton)
                 closeButton.focus({ preventScroll: true });
-        }
-        var gm = svg.selectAll('.na-milestone').data(entries).enter().append('g')
-            .attr('class', 'na-milestone na-timeline-entry').attr('tabindex', 0).attr('role', 'button')
-            .attr('aria-label', function (entry) { return Math.floor(entry.d.year) + ', ' + entry.d.title + '. ' + __tn(entry.technology); })
-            .attr('aria-pressed', function (entry) { return String(entry.d.id === state.selected && state.detailOpen); })
-            .attr('transform', function (entry) { return 'translate(0,' + entry.y + ')'; })
-            .style('--milestone-color', function (entry) { return color(entry.technology); })
-            .on('click', function (e, entry) { activateMilestone(entry); })
-            .on('keydown', function (e, entry) { if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            activateMilestone(entry);
-        } });
-        gm.append('rect').attr('class', 'na-timeline-card').attr('x', rail + 13).attr('y', 2)
-            .attr('width', Math.min(w - rail - right - 13, textWidth + 22)).attr('height', function (entry) { return entry.height - 10; }).attr('rx', 6);
-        gm.append('text').attr('class', 'na-timeline-year').attr('x', rail - 16).attr('y', 28)
-            .attr('text-anchor', 'end').style('font-size', '14px').style('font-weight', 600).text(function (entry) { return Math.floor(entry.d.year); });
-        gm.append('circle').attr('cx', rail).attr('cy', 23).attr('r', 6).attr('stroke', 'var(--background)').attr('stroke-width', 3)
-            .style('fill', 'var(--milestone-color)');
-        gm.each(function (entry) {
-            var group = d3.select(this);
-            appendLines(group, entry.titleLines, textX, 28, 22, 'na-timeline-title', 15, 600);
-            appendLines(group, entry.technologyLines, textX, 28 + entry.titleLines.length * 22 + 2, 18, 'na-timeline-technology', 12, 400);
         });
     }
     var orbit = { focus: false, showEntities: false, equalSize: false, hit: [], hover: null };
@@ -2012,12 +1948,13 @@
         Array.from(labBrowser.querySelectorAll('[data-page]')).forEach(function (b) { b.addEventListener('click', function () { state.page += b.dataset.page === 'next' ? 1 : -1; drawLabs(data); }); });
     }
     function drawResearcherTrails(data) {
+        var zh = I18N.lang === 'zh';
         var regions = Array.from(new Set(researchers.map(function (d) { return d.region; }))).sort();
         var sortOptions = '<option value="timeline"' + (state.researcherSort === 'timeline' ? ' selected' : '') + '>' + I18N.t('timelineOrder') + '</option><option value="name"' + (state.researcherSort === 'name' ? ' selected' : '') + '>' + I18N.t('sortName') + '</option><option value="region"' + (state.researcherSort === 'region' ? ' selected' : '') + '>' + I18N.t('sortRegion') + '</option><option value="field"' + (state.researcherSort === 'field' ? ' selected' : '') + '>' + I18N.t('sortFieldFamily') + '</option>';
         var rosterControls = '<div class="na-researcher-controls"><label>' + I18N.t('researcherRegion') + '<select data-researcher-region><option value="all">' + I18N.t('allRegions') + '</option>' + regions.map(function (v) { return '<option value="' + v + '"' + (state.region === v ? ' selected' : '') + '>' + __region(v) + '</option>'; }).join('') + '</select></label><label>' + I18N.t('researcherSort') + '<select data-researcher-sort>' + sortOptions + '</select></label></div>';
-        var familySummary = groupKeys.map(function (k) { var n = data.filter(function (d) { return d.group === k; }).length; return n ? '<span style="--c:' + groups[k].color + '"><i></i>' + groups[k].name + ' · ' + n + '</span>' : ''; }).filter(Boolean).join('');
+        var familySummary = groupKeys.map(function (k) { var n = data.filter(function (d) { return d.group === k; }).length; return n ? '<span style="--c:' + groups[k].color + '"><i></i>' + groups[k].name + ' <b>' + n + '</b></span>' : ''; }).filter(Boolean).join('');
         var restoreFocus = rememberFocus(researcherBrowser);
-        var size = root.getBoundingClientRect().width < 760 ? 6 : 12;
+        var size = root.getBoundingClientRect().width < 760 ? 6 : 10;
         var pages = Math.max(1, Math.ceil(data.length / size));
         state.page = Math.max(0, Math.min(state.page, pages - 1));
         var start = state.page * size;
@@ -2026,30 +1963,24 @@
         if (selected)
             state.selectedResearcher = selected.id;
         var roster = rows.length ? rows.map(function (d) {
-            return '<button type="button" class="na-researcher-row" data-researcher="' + d.id + '" aria-pressed="' + String(selected && d.id === selected.id) + '" style="--c:' + groups[d.group].color + '"><i></i><span><strong>' + __rn(d) + '</strong><small>' + d.institution + ' · ' + __country(d.country) + '</small></span><time>' + d.startYear + '</time></button>';
+            return '<button type="button" class="na-researcher-row" data-researcher="' + d.id + '" aria-pressed="' + String(selected && d.id === selected.id) + '" aria-label="' + html(__rn(d)) + '" style="--c:' + groups[d.group].color + '">' + ResearcherMedia.portrait(d.id, d.name, 'na-researcher-avatar') + '<span class="na-researcher-row-copy"><strong>' + __rn(d) + '</strong><small>' + html(d.institution) + '</small><span class="na-researcher-row-meta"><i></i>' + __country(d.country) + ' <span aria-hidden="true">·</span> ' + d.startYear + '</span></span><span class="na-researcher-row-arrow" aria-hidden="true">↗</span></button>';
         }).join('') : '<p class="na-summary">' + I18N.t('noResearcherTrails') + '</p>';
         var profile = '';
         if (selected) {
-            var events = [{ year: selected.startYear, title: I18N.t('howTrailStarts'), detail: __rstart(selected), url: selected.profileUrl }].concat(selected.milestones);
+            var events = [{ year: selected.startYear, title: I18N.t('howTrailStarts'), detail: __rstart(selected), url: selected.profileUrl, context: true }].concat(selected.milestones.map(function (m) { return Object.assign({ context: false }, m); })).sort(function (a, b) { return a.year - b.year; });
             var first = events.reduce(function (v, m) { return Math.min(v, m.year); }, events[0].year);
             var last = events.reduce(function (v, m) { return Math.max(v, m.year); }, events[0].year);
-            var spread = Math.max(1, last - first);
             var technologyLinks = selected.techIds.map(function (id) { return T.find(function (t) { return t.id === id; }); }).filter(Boolean);
-            var dots = events.map(function (m) { var p = Math.round((m.year - first) / spread * 100); var url = m.url || ('https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(selected.name + ' ' + m.title)); return '<a href="' + url + '" target="_blank" rel="noreferrer" class="na-researcher-dot" style="--p:' + p + '%;--c:' + groups[selected.group].color + '" aria-label="' + m.year + ', ' + m.title + '" title="' + m.year + ' · ' + m.title + '"><span></span></a>'; }).join('');
-            var eventCards = events.map(function (m, i) { var url = m.url || (i === 0 ? selected.profileUrl : 'https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(selected.name + ' ' + m.title)); return '<article class="na-researcher-event"><time>' + m.year + '</time><div><h4>' + m.title + '</h4><p>' + m.detail + '</p><a href="' + url + '" target="_blank" rel="noreferrer">' + (i === 0 ? I18N.t('profileContext') : I18N.t('relatedWork')) + ' ↗</a></div></article>'; }).join('');
+            var eventCards = events.map(function (m) { var url = m.url || ('https://pubmed.ncbi.nlm.nih.gov/?term=' + encodeURIComponent(selected.name + ' ' + m.title)); var evidence = m.context ? I18N.t('profileContext') : m.url ? (zh ? '关联来源' : 'Linked source') : (zh ? '文献检索' : 'Literature search'); return '<article class="na-researcher-event' + (m.context ? ' is-context' : '') + '"><time>' + m.year + '</time><span class="na-researcher-event-node" aria-hidden="true"></span><div><h4>' + html(m.title) + '</h4><p>' + html(m.detail) + '</p><a href="' + sourceHref(url) + '" target="_blank" rel="noreferrer" class="na-researcher-evidence-link">' + evidence + ' <span aria-hidden="true">↗</span></a></div></article>'; }).join('');
             profile = '<article class="na-researcher-profile" style="--researcher-color:' + groups[selected.group].color + '">' +
-                '<header><div><span class="na-researcher-family">' + groups[selected.group].name + ' · ' + __region(selected.region) + '</span><h2>' + __rn(selected) + '</h2><p>' + selected.institution + ' · ' + __country(selected.country) + '</p></div><time>' + selected.startYear + ' →</time></header>' +
-                '<p class="na-researcher-summary">' + __rs(selected) + '</p>' +
-                '<section class="na-researcher-start"><span>' + I18N.t('howTrailBegins') + '</span><p>' + __rstart(selected) + '</p></section>' +
-                '<section><div class="na-researcher-section-title"><h3>' + I18N.t('projectTimeline') + '</h3><span>' + first + '–' + last + '</span></div><div class="na-researcher-rail"><div class="na-researcher-line"></div>' + dots + '<time class="is-first">' + first + '</time><time class="is-last">' + last + '</time></div><div class="na-researcher-events">' + eventCards + '</div></section>' +
-                '<section><div class="na-researcher-section-title"><h3>' + I18N.t('connectedTechnologiesTitle') + '</h3><span>' + technologyLinks.length + ' ' + I18N.t('atlasLinks') + '</span></div><div class="na-related">' + technologyLinks.map(function (t) { return '<button type="button" data-researcher-tech="' + t.id + '">' + __tn(t) + '</button>'; }).join('') + '</div></section>' +
-                '<section class="na-researcher-sources"><a href="' + selected.profileUrl + '" target="_blank" rel="noreferrer">' + I18N.t('officialProfile') + ' ↗</a><a href="' + selected.literatureUrl + '" target="_blank" rel="noreferrer">' + I18N.t('pubmedSearch') + ' ↗</a></section>' +
-                '<button class="na-ask na-researcher-ask" type="button">' + (canAskCodex ? I18N.t('askDeepen') : I18N.t('askCopyDeepen')) + '</button>' +
+                '<header class="na-researcher-hero"><div class="na-researcher-hero-copy"><span class="na-researcher-family"><i></i>' + groups[selected.group].name + '</span><h2>' + __rn(selected) + '</h2><p class="na-researcher-affiliation">' + html(selected.institution) + '</p><p class="na-researcher-location">' + __country(selected.country) + ' <span aria-hidden="true">/</span> ' + __region(selected.region) + '</p><p class="na-researcher-summary">' + __rs(selected) + '</p><div class="na-researcher-sources"><a href="' + sourceHref(selected.profileUrl) + '" target="_blank" rel="noreferrer">' + I18N.t('officialProfile') + ' ↗</a><a href="' + sourceHref(selected.literatureUrl) + '" target="_blank" rel="noreferrer">' + I18N.t('pubmedSearch') + ' ↗</a></div></div><figure class="na-researcher-photo">' + ResearcherMedia.portrait(selected.id, selected.name, 'na-researcher-portrait') + '<figcaption>' + ResearcherMedia.credit(selected.id) + '</figcaption></figure></header>' +
+                '<section class="na-researcher-technologies"><div class="na-researcher-section-title"><h3>' + I18N.t('connectedTechnologiesTitle') + '</h3><span>' + technologyLinks.length + ' ' + I18N.t('atlasLinks') + '</span></div><div class="na-researcher-tech-list">' + technologyLinks.map(function (t) { return '<button type="button" data-researcher-tech="' + t.id + '" style="--c:' + groups[t.g].color + '"><i></i>' + __tn(t) + '<span aria-hidden="true">↗</span></button>'; }).join('') + '</div></section>' +
+                '<section class="na-researcher-journey"><div class="na-researcher-section-title"><h3>' + I18N.t('projectTimeline') + '</h3><span>' + first + '—' + last + '</span></div><div class="na-researcher-events">' + eventCards + '</div></section>' +
+                '<footer class="na-researcher-profile-footer"><span>' + (zh ? '继续探索这位研究者的工作' : 'Follow this researcher’s work') + '</span><button class="na-ask na-researcher-ask" type="button">' + (canAskCodex ? I18N.t('askDeepen') : I18N.t('askCopyDeepen')) + ' <span aria-hidden="true">↗</span></button></footer>' +
                 '</article>';
         }
-        researcherBrowser.innerHTML = '<div class="na-researcher-overview"><div><strong>' + researchers.length + ' ' + I18N.t('researcherTrails') + '</strong><span>' + I18N.t('researcherTrailsSub') + '</span></div><div class="na-researcher-family-summary">' + familySummary + '</div></div><div class="na-researcher-toolbar">' + rosterControls + '<span class="na-researcher-toolbar-note">' + I18N.t('searchByResearcher') + '</span></div><div class="na-researcher-layout"><section class="na-researcher-roster"><div class="na-researcher-roster-title"><h3>' + I18N.t('notableContributors') + '</h3><span>' + I18N.t('curatedNotRanked') + data.length + ' ' + I18N.t('matchesWord') + '</span></div>' + roster + '<div class="na-pager"><span>' + (data.length ? (I18N.t('showing') + ' ' + (start + 1) + '–' + Math.min(start + size, data.length) + ' ' + I18N.t('of') + ' ' + data.length) : I18N.t('tryAnotherSearch')) + '</span><div><button type="button" data-researcher-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + I18N.t('previous') + '</button><button type="button" data-researcher-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + I18N.t('next') + '</button></div></div></section>' + profile + '</div><details class="na-researcher-note"><summary>' + I18N.t('coverageVerificationNote') + '</summary><p>' + I18N.t('coverageVerificationText') + '</p></details>';
-        if (selected)
-            AtlasVisuals.mount(researcherBrowser, AtlasVisuals.researcher(selected, technologyLinks), '.na-researcher-start');
+        researcherBrowser.innerHTML = '<div class="na-researcher-overview"><div><span class="na-researcher-eyebrow">' + (zh ? '研究者与发现' : 'PEOPLE & DISCOVERY') + '</span><strong>' + (zh ? '推动神经技术的人' : 'The people behind the tools') + '</strong><p>' + (zh ? '从研究者出发，探索他们的研究起点、重要进展与关联技术。' : 'Explore the researchers, pivotal projects, and ideas shaping neurotechnology.') + '</p></div><div class="na-researcher-overview-count"><b>' + researchers.length + '</b><span>' + (zh ? '精选研究者' : 'researcher trails') + '</span></div></div><div class="na-researcher-family-summary">' + familySummary + '</div><div class="na-researcher-toolbar">' + rosterControls + '<span class="na-researcher-toolbar-note">' + I18N.t('searchByResearcher') + '</span></div><div class="na-researcher-layout"><section class="na-researcher-roster"><div class="na-researcher-roster-title"><h3>' + (zh ? '浏览研究者' : 'Browse researchers') + '</h3><span>' + data.length + ' ' + I18N.t('matchesWord') + '</span></div><div class="na-researcher-roster-list">' + roster + '</div><div class="na-pager"><span>' + (data.length ? ((start + 1) + '–' + Math.min(start + size, data.length) + ' ' + I18N.t('of') + ' ' + data.length) : I18N.t('tryAnotherSearch')) + '</span><div><button type="button" data-researcher-page="prev"' + (state.page === 0 ? ' disabled' : '') + '>' + I18N.t('previous') + '</button><button type="button" data-researcher-page="next"' + (state.page >= pages - 1 ? ' disabled' : '') + '>' + I18N.t('next') + '</button></div></div></section>' + profile + '</div><details class="na-researcher-note"><summary>' + I18N.t('coverageVerificationNote') + '</summary><p>' + I18N.t('coverageVerificationText') + '</p></details>';
+        ResearcherMedia.bind(researcherBrowser);
         researcherBrowser.insertAdjacentHTML('beforeend', NeuroConnections.teaser(selected ? '#person/' + selected.id : ''));
         if (typeof NeuroPeople !== 'undefined')
             researcherBrowser.insertAdjacentHTML('beforeend', NeuroPeople.teaser(selected ? '#person/' + selected.id : ''));
@@ -2059,7 +1990,11 @@
         var researcherSort = researcherBrowser.querySelector('[data-researcher-sort]');
         if (researcherSort)
             researcherSort.addEventListener('change', function () { state.researcherSort = researcherSort.value; state.page = 0; drawResearcherTrails(filteredResearchers()); });
-        Array.from(researcherBrowser.querySelectorAll('[data-researcher]')).forEach(function (b) { b.addEventListener('click', function () { state.selectedResearcher = b.dataset.researcher; drawResearcherTrails(data); }); });
+        Array.from(researcherBrowser.querySelectorAll('[data-researcher]')).forEach(function (b) { b.addEventListener('click', function () { state.selectedResearcher = b.dataset.researcher; drawResearcherTrails(data); if (window.innerWidth < 960) {
+            var profile = researcherBrowser.querySelector('.na-researcher-profile');
+            if (profile)
+                profile.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
+        } }); });
         Array.from(researcherBrowser.querySelectorAll('[data-researcher-page]')).forEach(function (b) { b.addEventListener('click', function () { state.page += b.dataset.researcherPage === 'next' ? 1 : -1; var firstOnPage = data[state.page * size]; if (firstOnPage)
             state.selectedResearcher = firstOnPage.id; drawResearcherTrails(data); }); });
         Array.from(researcherBrowser.querySelectorAll('[data-researcher-tech]')).forEach(function (b) { b.addEventListener('click', function () { state.selected = b.dataset.researcherTech; state.view = 'atlas'; state.search = ''; search.value = ''; state.family = 'all'; family.value = 'all'; state.purpose = 'all'; purpose.value = 'all'; state.operation = 'all'; operation.value = 'all'; state.activeGroups = new Set(groupKeys); state.detailOpen = true; syncView(); syncControls(); renderDetail(); draw(); }); });
@@ -2336,6 +2271,9 @@
     function draw() {
         if (root.hidden)
             return;
+        var milestoneBrowser = root.querySelector('.na-milestone-browser');
+        if (milestoneBrowser)
+            milestoneBrowser.hidden = true;
         entityPage.hidden = true;
         orgUI.hidden = true;
         root.querySelector('.na-focus').hidden = state.entityPage;
