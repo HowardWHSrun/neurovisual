@@ -2328,6 +2328,33 @@
       "summary": "Develops scalable inference for electrophysiology, calcium imaging and closed-loop experiments.",
       "href": "#people/liam-paninski",
       "researcherId": "liam-paninski"
+    },
+    {
+      "id": "lan-luan",
+      "name": "Lan Luan",
+      "kind": "Person",
+      "subtitle": "MCN · Builder",
+      "summary": "The official Maximum Connectivity Neurotech team page lists Lan Luan under Builders.",
+      "href": "#people/lan-luan",
+      "researcherId": "lan-luan"
+    },
+    {
+      "id": "sameer-sheth",
+      "name": "Sameer Sheth",
+      "kind": "Person",
+      "subtitle": "MCN · Advisor",
+      "summary": "The official Maximum Connectivity Neurotech team page lists Sameer Sheth under Advisors.",
+      "href": "#people/sameer-sheth",
+      "researcherId": "sameer-sheth"
+    },
+    {
+      "id": "max-connectivity",
+      "name": "Maximum Connectivity Neurotech (MCN)",
+      "kind": "Company",
+      "subtitle": "Houston, Texas · Implantable neurotechnology",
+      "summary": "An early-stage, venture-backed neurotechnology startup based in Houston, Texas. Its official implant-electronics role describes flexible electrodes and recording and stimulation ASICs.",
+      "href": "#org/max-connectivity",
+      "country": "United States"
     }
   ],
   "edges": [
@@ -7817,6 +7844,60 @@
         {
           "title": "UCSF Neurological Surgery academic and research news, volume 8 number 4, page 4",
           "url": "https://neurosurgery.ucsf.edu/media/5881"
+        }
+      ]
+    },
+    {
+      "id": "max-connectivity-chong-xie-builder",
+      "from": "chong-xie",
+      "to": "max-connectivity",
+      "label": "Builder",
+      "category": "people",
+      "basis": "documented",
+      "date": "Team page checked 2026-09-18",
+      "reviewed": "2026-09-18",
+      "detail": "The official Maximum Connectivity Neurotech team page lists Chong Xie under Builders.",
+      "limit": "The source supplies this team label only; it does not establish a founder title, employment contract, role start date, or university spinout.",
+      "sources": [
+        {
+          "title": "Maximum Connectivity Neurotech — Team",
+          "url": "https://www.maxconnectivity.com/#team"
+        }
+      ]
+    },
+    {
+      "id": "max-connectivity-lan-luan-builder",
+      "from": "lan-luan",
+      "to": "max-connectivity",
+      "label": "Builder",
+      "category": "people",
+      "basis": "documented",
+      "date": "Team page checked 2026-09-18",
+      "reviewed": "2026-09-18",
+      "detail": "The official Maximum Connectivity Neurotech team page lists Lan Luan under Builders.",
+      "limit": "The source supplies this team label only; it does not establish a founder title, employment contract, role start date, or university spinout.",
+      "sources": [
+        {
+          "title": "Maximum Connectivity Neurotech — Team",
+          "url": "https://www.maxconnectivity.com/#team"
+        }
+      ]
+    },
+    {
+      "id": "max-connectivity-sameer-sheth-advisor",
+      "from": "sameer-sheth",
+      "to": "max-connectivity",
+      "label": "Advisor",
+      "category": "people",
+      "basis": "documented",
+      "date": "Team page checked 2026-09-18",
+      "reviewed": "2026-09-18",
+      "detail": "The official Maximum Connectivity Neurotech team page lists Sameer Sheth under Advisors.",
+      "limit": "The source supplies this team label only; it does not establish a founder title, employment contract, role start date, or university spinout.",
+      "sources": [
+        {
+          "title": "Maximum Connectivity Neurotech — Team",
+          "url": "https://www.maxconnectivity.com/#team"
         }
       ]
     }

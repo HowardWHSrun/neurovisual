@@ -1,6 +1,6 @@
 # Origins and research connections
 
-Neurovisual now starts with company histories instead of a centered card-and-wire map. The September 2026 release investigates 33 companies involved in implanted interfaces, stimulation, sensory prostheses and supporting hardware. Its coverage ledger lists all 120 companies in the wider atlas and identifies the remaining entries as not audited for origins in this release. This is a curated, expandable research collection, not a complete genealogy.
+Neurovisual now starts with company histories instead of a centered card-and-wire map. The September 2026 release investigates 33 companies involved in implanted interfaces, stimulation, sensory prostheses and supporting hardware. Its coverage ledger lists all 121 companies in the wider atlas and identifies the remaining entries as not audited for origins in this release. This is a curated, expandable research collection, not a complete genealogy.
 
 ## Four ways to explore
 

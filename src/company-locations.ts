@@ -58,9 +58,9 @@ const CompanyLocations=(()=>{
    }).join('');
   }).join('');
  }
- // Official company career pages checked 17 September 2026. Keep identity
+ // Official company career pages checked 17 September 2026; MCN added 18 September. Keep identity
  // matching explicit: the generic Kernel Ashby board is an unrelated business.
- const careers:Record<string,string>={neuralink:'https://neuralink.com/careers/',neuropace:'https://www.neuropace.com/about-neuropace/neuropace-careers/','motif-neurotech':'https://motifneuro.tech/careers',synchron:'https://synchron.com/careers'};
+ const careers:Record<string,string>={'max-connectivity':'https://www.maxconnectivity.com/#careers',neuralink:'https://neuralink.com/careers/',neuropace:'https://www.neuropace.com/about-neuropace/neuropace-careers/','motif-neurotech':'https://motifneuro.tech/careers',synchron:'https://synchron.com/careers'};
  function careerUrl(c:LocationCompany){return careers[c.id]||'';}
  const external=(href:string,label:string)=>`<a href="${u(href)}" target="_blank" rel="noopener noreferrer">${e(label)} ↗</a>`;
  function row(c:LocationCompany,params:URLSearchParams){

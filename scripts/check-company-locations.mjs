@@ -29,12 +29,12 @@ function render(value={}){
 }
 
 const all=model();
-assert.equal(all.rows.length,120,'Current collection contains 120 companies');
+assert.equal(all.rows.length,121,'Current collection contains 121 companies');
 assert.equal(all.countries.length,29,'Current collection contains 29 countries');
 assert.equal(new Set(all.rows.map(c=>c.country+'\0'+c.city)).size,86,'City counts use country-city pairs');
 assert.deepEqual(sortedIds(all.rows),sortedIds(expected),'Include exactly companies, startups, and public companies from the atlas');
 assert.equal(new Set(all.rows.map(c=>c.id)).size,all.rows.length,'Each company occurs once');
-assert.equal(places(all).reduce((n,p)=>n+p.count,0),120,'Treemap total equals company coverage');
+assert.equal(places(all).reduce((n,p)=>n+p.count,0),121,'Treemap total equals company coverage');
 assert.equal(new Set(places(all).map(p=>p.href)).size,29,'Every country has one treemap destination');
 for(const group of all.groups)for(const place of group.places){
   assert.equal(place.count,expected.filter(c=>c.country===place.name&&c.region===group.region).length,'Region and country counts reflect exact atlas locations');
@@ -141,4 +141,4 @@ const writes=f.map.writes;firstObserver.callback();assert.equal(f.map.writes,wri
 const second=fixture();api.bind(second.container,params(),()=>{});assert.equal(firstObserver.disconnects,1,'Rebinding disconnects the previous observer');
 const lastObserver=observers.at(-1);api.close();api.close();assert.equal(lastObserver.disconnects,1,'Route cleanup is idempotent');
 
-console.log('Company location checks passed: 120 companies, 29 countries, 86 country-city pairs, exact drilldowns, URL context, search/sort/pagination, safe rendering, truthful career links, desktop/mobile layout, focus, native navigation, and observer cleanup.');
+console.log('Company location checks passed: 121 companies, 29 countries, 86 country-city pairs, exact drilldowns, URL context, search/sort/pagination, safe rendering, truthful career links, desktop/mobile layout, focus, native navigation, and observer cleanup.');

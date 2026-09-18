@@ -7494,6 +7494,12 @@
       "name": "Akonic",
       "scope": "wider",
       "url": "https://akonic.com.ar/"
+    },
+    {
+      "id": "max-connectivity",
+      "name": "Maximum Connectivity Neurotech (MCN)",
+      "scope": "implant",
+      "url": "https://www.maxconnectivity.com/"
     }
   ],
   "families": [

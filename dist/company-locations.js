@@ -70,7 +70,7 @@ const CompanyLocations = (() => {
             }).join('');
         }).join('');
     }
-    const careers = { neuralink: 'https://neuralink.com/careers/', neuropace: 'https://www.neuropace.com/about-neuropace/neuropace-careers/', 'motif-neurotech': 'https://motifneuro.tech/careers', synchron: 'https://synchron.com/careers' };
+    const careers = { 'max-connectivity': 'https://www.maxconnectivity.com/#careers', neuralink: 'https://neuralink.com/careers/', neuropace: 'https://www.neuropace.com/about-neuropace/neuropace-careers/', 'motif-neurotech': 'https://motifneuro.tech/careers', synchron: 'https://synchron.com/careers' };
     function careerUrl(c) { return careers[c.id] || ''; }
     const external = (href, label) => `<a href="${u(href)}" target="_blank" rel="noopener noreferrer">${e(label)} ↗</a>`;
     function row(c, params) {
