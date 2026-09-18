@@ -39,9 +39,9 @@ for(const p of people.paths){
 const app=await read('src/app.ts'),start=app.indexOf('var L = [')+8,end=app.indexOf('\n    ];',start)+6;
 assert(start>=8 && end>start,'Atlas organization data is available');
 const atlasRows=vm.runInNewContext('('+app.slice(start,end)+')');
-const organizations=atlasRows.map(d=>({id:d.id,name:d.n,country:d.country,city:d.city,kind:d.k,summary:d.d,source:d.u}));
+const organizations=atlasRows.map(d=>({id:d.id,name:d.n,country:d.country,city:d.city,region:d.r,kind:d.k,summary:d.d,source:d.u}));
 const ctx=vm.createContext({URL,URLSearchParams,console,window:{neuroAtlas:{organizations},scrollTo(){}}});
-for(const name of ['hub-utils','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals','exploration-data','people-data','people','people-workplaces','people-map','explore'])vm.runInContext(await read(`dist/${name}.js`),ctx);
+for(const name of ['hub-utils','jobs-data','ideas-data','company-media','labs-data','visuals-data','connections-data','visuals','exploration-data','people-data','people','people-workplaces','people-map','company-locations','explore'])vm.runInContext(await read(`dist/${name}.js`),ctx);
 assert.equal(JSON.stringify(vm.runInContext('neuroExplorationData',ctx)),JSON.stringify(data),'Rebuild problem data');
 assert.equal(JSON.stringify(vm.runInContext('neuroExplorationPeopleData',ctx)),JSON.stringify(people),'Rebuild people data');
 const api=vm.runInContext('NeuroExplore',ctx),escape=vm.runInContext('hubUtils.escapeHtml',ctx);
@@ -59,6 +59,24 @@ for(const by of lensIds){
   assert.equal((html.match(/aria-current="page"/g)||[]).length,1,'Exactly one active exploration lens');
   for(const lens of lensIds)assert(hrefs(html).includes(`#explore?by=${lens}`),`Navigate from ${by} to ${lens}`);
 }
+const locationsHref='#explore?by=countries&view=companies';
+assert(hrefs(render({by:'organizations'})).includes(locationsHref),'Organization discovery links to companies by location');
+const locationApi=vm.runInContext('CompanyLocations',ctx),originalLocationRender=locationApi.render,originalLocationBind=locationApi.bind;
+const locationCalls=[];
+try{
+  locationApi.render=params=>{locationCalls.push(['render',params.toString()]);return '<div data-company-location-test>Company location view</div>';};
+  locationApi.bind=(_container,params)=>locationCalls.push(['bind',params.toString()]);
+  const params={by:'countries',view:'companies',country:'United States',city:'Austin'};
+  const html=render(params);assert(html.includes('data-company-location-test'),'The location route renders the location module');
+  assert.equal((html.match(/aria-current="page"/g)||[]).length,1,'The location view retains one active exploration lens');
+  assert(hrefs(html).includes(locationsHref)&&hrefs(html).includes('#explore?by=countries'),'Both company and lab location views remain available');
+  api.bind({querySelector(){return null;},querySelectorAll(){return [];}},new URLSearchParams(params),()=>{});
+  assert.deepEqual(locationCalls.map(call=>call[0]),['render','bind'],'Location view renders and binds once');
+  for(const other of [{by:'countries'},{by:'countries',country:'United States'},{by:'organizations',view:'companies'}]){
+    render(other);api.bind({querySelector(){return null;},querySelectorAll(){return [];}},new URLSearchParams(other),()=>{});
+  }
+  assert.equal(locationCalls.length,2,'Other exploration views do not render or bind the company location module');
+}finally{locationApi.render=originalLocationRender;locationApi.bind=originalLocationBind;}
 const problemListing=render({by:'problems'});
 for(const p of data.problems){
   assert(hrefs(problemListing).includes('#explore?'+new URLSearchParams({by:'problems',problem:p.id})));
@@ -94,9 +112,11 @@ assert(organizations.some(c=>c.kind==='Startup')&&organizations.some(c=>c.kind==
 const companies=organizations.filter(c=>['Company','Startup','Public company'].includes(c.kind)&&c.country);
 const countries=[...new Set([...labs.labs.map(l=>l.country),...companies.map(c=>c.country)])];
 const countryListing=render({by:'countries'});
+assert(hrefs(countryListing).includes(locationsHref),'Country guides keep company location discovery visible');
 for(const country of countries){
   assert(hrefs(countryListing).includes('#explore?'+new URLSearchParams({by:'countries',country})),`Country listing links to ${country}`);
   const html=render({by:'countries',country});assert(html.includes(escape(country)));
+  if(companies.some(c=>c.country===country))assert(hrefs(html).includes('#explore?'+new URLSearchParams({by:'countries',view:'companies',country})),`Country guide opens its exact company location view for ${country}`);
   for(const lab of labs.labs.filter(l=>l.country===country))assert(hrefs(html).includes('#labs/'+lab.id),`Keep ${lab.id} in ${country}`);
   for(const company of companies.filter(c=>c.country===country)){assert(hrefs(html).includes('#org/'+encodeURIComponent(company.id)),`Keep ${company.id} in ${country}`);if(company.source)assert(hrefs(html).includes(new URL(company.source).href));}
   for(const company of companies.filter(c=>c.country!==country))assert(!hrefs(html).includes('#org/'+encodeURIComponent(company.id)),`Exclude other countries from ${country}`);

@@ -15,11 +15,15 @@ const scriptPath = join(root, "dist", "jobs-data.js");
 const USER_AGENT = "neurovisual-jobs/1.0 (https://github.com/HowardWHSrun/neurovisual)";
 
 // --- Public ATS boards (auto-fetched) ---
+// Exclude the Ashby token "kernel": it belongs to enterprise-AI company
+// Momentum AI Ltd., whose official careers page links to that board:
+// https://www.kernel.ai/company/careers (checked 2026-09-17).
+// The neurotechnology company is https://www.kernel.com/about; no verified
+// careers board is configured for it. Do not match employers by name alone.
 const boards = [
   { name: "Neuralink", ats: "greenhouse", token: "neuralink" },
   { name: "NeuroPace", ats: "greenhouse", token: "neuropace" },
-  { name: "Motif Neurotech", ats: "greenhouse", token: "motifneurotech" },
-  { name: "Kernel", ats: "ashby", token: "kernel" }
+  { name: "Motif Neurotech", ats: "greenhouse", token: "motifneurotech" }
 ];
 
 // --- Curated entries (non-public ATS) ---
@@ -145,7 +149,6 @@ const employerBoards = {
   "Neuralink": "https://boards.greenhouse.io/neuralink",
   "NeuroPace": "https://boards.greenhouse.io/neuropace",
   "Motif Neurotech": "https://boards.greenhouse.io/motifneurotech",
-  "Kernel": "https://jobs.ashbyhq.com/kernel",
   "Synchron": "https://synchron.com/careers",
   "Allen Institute": "https://alleninstitute.org/careers/jobs"
 };

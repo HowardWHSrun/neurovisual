@@ -93,3 +93,11 @@ NeuroAI release verification: full `pnpm test` and `pnpm check` passed. Browser 
 - The existing 192-person directory supplies identities, research areas, and publication-based ordering. The workplace list includes only people with newly reviewed affiliation edges; it does not infer current employment from publication metadata. Emeritus roles retain their explicit status.
 - `data/connections.json` is the source of truth: person nodes carry `researcherId`; role edges carry `relationshipType: affiliation`, status, role, review date, and primary sources. `build-people.mjs` derives profile affiliations and graph identities from those records.
 - The affiliation filter connects people through institutions and labs. A shared workplace is not a co-authorship or mentorship claim; separately sourced relationships retain their own edges.
+
+## Companies by location (17 September 2026)
+
+- `#explore?by=countries&view=companies` adds a company location treemap and company directory for career discovery. Optional `country`, `city`, `q`, `sort`, and `page` parameters preserve the selection in shareable URLs. The existing Countries landing page and `#explore?by=countries&country=…` lab and country guides remain available.
+- `src/company-locations.ts` / `company-locations.css` use the atlas’s explicit country, city, and region fields. `window.neuroAtlas.organizations` exposes those fields; locations are not inferred from company descriptions. The module contributes location entries to global search.
+- Load the bundled D3, hub utilities, and `dist/company-locations.js` before `dist/explore.js`; bind the location module only on the companies location route and call `CompanyLocations.close()` before every hub route render.
+- Current coverage is 120 companies, 29 countries, and 86 city/country pairs. Each company contributes one count; missing location fields stay explicit and office/job locations are not inferred. Verified official career pages are keyed by exact company identity. The unrelated Kernel AI job board and its four listings were removed from the existing jobs feed.
+- Validation: full site suite plus focused company-location checks; browser inspection at 1280, 390, and 320 pixels, country/city drilldown, history, filter focus, empty states, readable place list, and zero horizontal overflow.

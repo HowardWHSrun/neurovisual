@@ -17,18 +17,12 @@
       "name": "Motif Neurotech",
       "ats": "greenhouse",
       "token": "motifneurotech"
-    },
-    {
-      "name": "Kernel",
-      "ats": "ashby",
-      "token": "kernel"
     }
   ],
   "employerBoards": {
     "Neuralink": "https://boards.greenhouse.io/neuralink",
     "NeuroPace": "https://boards.greenhouse.io/neuropace",
     "Motif Neurotech": "https://boards.greenhouse.io/motifneurotech",
-    "Kernel": "https://jobs.ashbyhq.com/kernel",
     "Synchron": "https://synchron.com/careers",
     "Allen Institute": "https://alleninstitute.org/careers/jobs"
   },
@@ -62,62 +56,6 @@
       "source": "Curated",
       "level": "Mid",
       "fn": "Data & Software",
-      "remote": false
-    },
-    {
-      "id": "kernel-c86e62e8-d6bd-4e87-80fe-d4b477315508",
-      "title": "Account Manager",
-      "employer": "Kernel",
-      "location": "London",
-      "url": "https://jobs.ashbyhq.com/kernel/c86e62e8-d6bd-4e87-80fe-d4b477315508",
-      "postedAt": "2026-09-14",
-      "source": "Ashby",
-      "observedAt": "2026-09-14",
-      "stale": false,
-      "level": "Senior",
-      "fn": "Operations & Other",
-      "remote": false
-    },
-    {
-      "id": "kernel-48d397f4-788e-491b-a4ee-7def5ffcfce8",
-      "title": "Business Development Representative",
-      "employer": "Kernel",
-      "location": "London",
-      "url": "https://jobs.ashbyhq.com/kernel/48d397f4-788e-491b-a4ee-7def5ffcfce8",
-      "postedAt": "2026-08-25",
-      "source": "Ashby",
-      "observedAt": "2026-09-14",
-      "stale": false,
-      "level": "Mid",
-      "fn": "Operations & Other",
-      "remote": false
-    },
-    {
-      "id": "kernel-945f0f8a-39de-430b-80ab-17f4786094e4",
-      "title": "Commercial Associate",
-      "employer": "Kernel",
-      "location": "London",
-      "url": "https://jobs.ashbyhq.com/kernel/945f0f8a-39de-430b-80ab-17f4786094e4",
-      "postedAt": "2026-08-25",
-      "source": "Ashby",
-      "observedAt": "2026-09-14",
-      "stale": false,
-      "level": "Junior",
-      "fn": "Operations & Other",
-      "remote": false
-    },
-    {
-      "id": "kernel-030c447d-f81f-4bc6-9fa6-78352a772adb",
-      "title": "Founding Product Designer",
-      "employer": "Kernel",
-      "location": "London",
-      "url": "https://jobs.ashbyhq.com/kernel/030c447d-f81f-4bc6-9fa6-78352a772adb",
-      "postedAt": "2026-09-07",
-      "source": "Ashby",
-      "observedAt": "2026-09-14",
-      "stale": false,
-      "level": "Mid",
-      "fn": "Design & Product",
       "remote": false
     },
     {

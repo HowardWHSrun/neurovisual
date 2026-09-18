@@ -2105,7 +2105,7 @@ interface Window {
     __applyLang();
     document.addEventListener('na-i18n',function(){__applyLang();syncView();syncControls();renderDetail();draw();});
     window.neuroAtlas={
-      organizations:L.map(function(d){return {id:d.id,name:d.n,country:d.country,city:d.city,kind:d.k,summary:d.d,source:d.u};}),
+      organizations:L.map(function(d){return {id:d.id,name:d.n,country:d.country,city:d.city,region:d.r,kind:d.k,summary:d.d,source:d.u};}),
       counts:{technologies:T.length,organizations:L.length,researchers:researchers.length},
       records:[
         ...T.map(function(t){return {id:t.id,title:t.n,description:t.summary,kind:'Technology',href:'#tech/'+encodeURIComponent(t.id),keywords:[t.signal,t.mechanism,t.ex.join(' ')].join(' ')};}),

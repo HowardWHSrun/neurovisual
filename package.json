@@ -7,7 +7,7 @@
     "build": "node scripts/build-ideas.mjs && node scripts/build-labs.mjs && node scripts/build-company-status.mjs && node scripts/build-visuals.mjs && node scripts/build-connections.mjs && node scripts/build-explore.mjs && node scripts/build-people.mjs && node scripts/build-neuroai.mjs && tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
     "frontier:update": "node scripts/update-frontier.mjs",
-    "test": "pnpm build && node scripts/check-hub.mjs && node scripts/check-ideas.mjs && node scripts/check-labs.mjs && node scripts/check-company-status.mjs && node scripts/check-visuals.mjs && node scripts/check-connections.mjs && node scripts/check-people-map.mjs && node scripts/check-workplaces.mjs && node scripts/check-explore.mjs && node scripts/check-people.mjs && node scripts/check-neuroai.mjs",
+    "test": "pnpm build && node scripts/check-hub.mjs && node scripts/check-ideas.mjs && node scripts/check-labs.mjs && node scripts/check-company-status.mjs && node scripts/check-visuals.mjs && node scripts/check-connections.mjs && node scripts/check-people-map.mjs && node scripts/check-workplaces.mjs && node scripts/check-explore.mjs && node scripts/check-company-locations.mjs && node scripts/check-people.mjs && node scripts/check-neuroai.mjs",
     "jobs:update": "node scripts/update-jobs.mjs",
     "people:update": "python3 scripts/update-people.py"
   },

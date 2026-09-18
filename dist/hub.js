@@ -195,6 +195,7 @@
         NeuroVisuals.close();
         NeuroConnections.close();
         PeopleMap.close();
+        CompanyLocations.close();
         NeuroMedia.resetPlayers(content);
         NeuroMedia.resetPlayers(atlas);
         const atlasRoute = route === 'org' ? 'organizations' : route === 'tech' ? 'atlas' : route === 'person' ? 'researchers' : route;

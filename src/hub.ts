@@ -1,5 +1,5 @@
 interface HubRecord { id: string; title: string; description: string; kind: string; href: string; keywords?: string; }
-interface Window { neuroAtlas?: { records: HubRecord[]; counts: { technologies: number; organizations: number; researchers: number }; organizations?: {id:string;name:string;country:string;city:string;kind:string;summary:string;source:string}[]; navigate: (route: string, id?: string, query?: string) => void }; }
+interface Window { neuroAtlas?: { records: HubRecord[]; counts: { technologies: number; organizations: number; researchers: number }; organizations?: {id:string;name:string;country:string;city:string;region?:string;kind:string;summary:string;source:string}[]; navigate: (route: string, id?: string, query?: string) => void }; }
 
 (function () {
   const content = document.getElementById('hub-content')!;
@@ -183,7 +183,7 @@ interface Window { neuroAtlas?: { records: HubRecord[]; counts: { technologies: 
   function closeMenu() { sidebar.classList.remove('is-open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation'); }
   function render(focusMain=false) {
     const {route,id,params} = parseRoute();
-    NeuroVisuals.close();NeuroConnections.close();PeopleMap.close();
+    NeuroVisuals.close();NeuroConnections.close();PeopleMap.close();CompanyLocations.close();
     NeuroMedia.resetPlayers(content);NeuroMedia.resetPlayers(atlas);
     const atlasRoute = route==='org'?'organizations':route==='tech'?'atlas':route==='person'?'researchers':route;
     const isAtlas = !!descriptions[atlasRoute];

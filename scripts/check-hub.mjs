@@ -45,7 +45,7 @@ const scripts=[...html.matchAll(/<script defer src="([^"?]+)/g)].map(m=>m[1]);
 assert(scripts.indexOf('./dist/hub-utils.js')<scripts.indexOf('./dist/app.js'));
 assert(scripts.indexOf('./dist/app.js')<scripts.indexOf('./dist/hub.js'));
 assert(scripts.indexOf('./dist/hub-guides.js')<scripts.indexOf('./dist/hub.js'));
-for(const [before,after] of [['hub-data','neuroai-learning'],['hub-guides','neuroai-learning'],['neuroai-data','neuroai-learning'],['neuroai-data','neuroai'],['company-media','neuroai'],['neuroai-learning','hub'],['neuroai','hub']]){
+for(const [before,after] of [['hub-data','neuroai-learning'],['hub-guides','neuroai-learning'],['neuroai-data','neuroai-learning'],['neuroai-data','neuroai'],['company-media','neuroai'],['neuroai-learning','hub'],['neuroai','hub'],['jobs-data','company-locations'],['app','company-locations'],['company-locations','explore'],['explore','hub']]){
   const a=scripts.indexOf('./dist/'+before+'.js'),b=scripts.indexOf('./dist/'+after+'.js');
   assert(a>=0 && b>=0 && a<b,`${before} must load before ${after}`);
 }
