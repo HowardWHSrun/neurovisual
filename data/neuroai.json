@@ -453,11 +453,11 @@
       "subtitle": "Compare neural activity in a learned coordinate system.",
       "category": "models",
       "evidence": "Peer-reviewed method + code",
-      "date": "2023 paper",
+      "date": "2023-05-03 paper; v0.6.1 software released 2026-05-30",
       "summary": "Compress high-dimensional recordings into representations that can be compared across sessions, animals and recording methods.",
       "question": "Does shared structure survive a change of session or recording method?",
-      "does": "CEBRA learns compact representations of time-series data using temporal structure and, when appropriate, measured behavioral or stimulus variables. The paper demonstrates neural-behavior alignment, consistency across recordings, position and movement decoding, and identification of viewed movie frames. Tutorials show how to fit models and test consistency across repeated runs or datasets.",
-      "boundary": "An appealing embedding is not proof of a causal neural mechanism. Behavior labels shape the representation. The movie demonstration concerns recorded responses to known stimuli; it does not establish unrestricted reconstruction of thoughts, dreams or unseen experiences.",
+      "does": "CEBRA learns compact representations of time-series data using temporal structure and, when appropriate, measured behavioral or stimulus variables. The paper demonstrates neural-behavior alignment, consistency across recordings, position and movement decoding, and identification of viewed movie frames. Tutorials show how to fit models and test consistency across repeated runs or datasets. The 0.6 software series adds batched inference and a shared encoder for multiple sessions. The decoding tutorial provides a temporal train/test split and shuffled-label controls, giving readers a concrete evaluation starting point.",
+      "boundary": "An appealing embedding is not proof of a causal neural mechanism. Behavior labels shape the representation. The movie demonstration concerns recorded responses to known stimuli; it does not establish unrestricted reconstruction of thoughts, dreams or unseen experiences. Current software extensions have their own evidence and version requirements; they should not be attributed to the original 2023 paper. The website review inspected documentation and release notes without executing the notebooks.",
       "nextTest": "Do the same features survive held-out data, repeated training and a comparison against time-only and shuffled-label baselines?",
       "facts": [],
       "sources": [
@@ -469,19 +469,38 @@
         {
           "title": "CEBRA project",
           "url": "https://cebra.ai/",
-          "detail": "Authors provide explanatory demonstrations and links to official code."
+          "detail": "Official authors’ project page. Reviewed 2026-10-02 for method context; the original Nature paper remains dated 2023."
         },
         {
           "title": "Using CEBRA",
           "url": "https://cebra.ai/docs/usage.html",
-          "detail": "Documentation explains behavioral/time models and consistency metrics."
+          "detail": "Official documentation reviewed 2026-10-02; describes behavioral/time models, multi-session fitting and consistency metrics."
+        },
+        {
+          "title": "CEBRA v0.6 release notes",
+          "url": "https://github.com/AdaptiveMotorControlLab/CEBRA/releases",
+          "detail": "Official software releases, reviewed 2026-10-02. v0.6.0 (2026-01-17) includes unified encoders and batched inference; v0.6.1 (2026-05-30) updates model loading and data-download URLs."
+        },
+        {
+          "title": "Decoding from a CEBRA embedding",
+          "url": "https://cebra.ai/docs/demo_notebooks/Demo_decoding.html",
+          "detail": "Official tutorial reviewed 2026-10-02: rat hippocampal data, temporal train/test split and shuffled behavior-label baselines. Notebook dependencies and data are required; execution was not tested."
+        },
+        {
+          "title": "CEBRA paper: PubMed record and abstract",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37138088/",
+          "detail": "Primary paper record reviewed 2026-10-02. Published online 2023-05-03; preserves the distinction between the original method and later software capabilities."
         }
       ],
       "actions": [
         {
-          "label": "Fit an embedding and inspect consistency",
-          "url": "https://cebra.ai/docs/usage.html",
-          "note": "Public material inspected; software or biological-hardware access was not tested."
+          "label": "Inspect held-out decoding and shuffled-label controls",
+          "url": "https://cebra.ai/docs/demo_notebooks/Demo_decoding.html",
+          "note": "Requires CEBRA, notebook dependencies and demo data. The website review did not execute the notebook."
+        },
+        {
+          "label": "Check the current software release",
+          "url": "https://github.com/AdaptiveMotorControlLab/CEBRA/releases"
         }
       ],
       "related": [
@@ -501,7 +520,8 @@
           "label": "Mackenzie Mathis",
           "href": "#people/mackenzie-mathis"
         }
-      ]
+      ],
+      "reviewed": "2026-10-02"
     },
     {
       "id": "zapbench",
@@ -822,32 +842,47 @@
     },
     {
       "id": "poyo",
-      "title": "POYO",
-      "subtitle": "Reuse a decoder when the recorded neurons change.",
+      "title": "POYO / POYO+",
+      "subtitle": "Test transfer across sessions, tasks and neural populations.",
       "category": "models",
-      "evidence": "NeurIPS research model",
-      "date": "2023 paper",
-      "summary": "Represent spikes as tokens so one neural-population model can learn from many recording sessions.",
+      "evidence": "Peer-reviewed conference models + code",
+      "date": "POYO: NeurIPS 2023; POYO+: ICLR 2025",
+      "summary": "Reuse neural-population decoders across changing recordings, with separate evidence for primate spikes and mouse calcium signals.",
       "question": "Can one decoder transfer across populations with different neuron identities?",
-      "does": "POYO tokenizes spike identity and timing, then uses attention to build a shared representation of population activity. Its reported training subset includes 158 sessions from seven nonhuman primates. The model can be adapted to held-out sessions with little labeled data even when neuron identities do not correspond across recordings. The project explains spike and behavior-query tokens interactively.",
-      "boundary": "Adaptation across these motor-related datasets is not universal decoding across every species, behavior or recording modality. The training subset differs from the larger curated corpus on the project page. This is a predictive model, not a mechanistic copy of an individual brain.",
-      "nextTest": "How much labeled recalibration is needed after electrode drift, and how does transfer compare with a strong session-specific decoder?",
+      "does": "POYO tokenizes spike identity and timing, then uses attention to build a shared representation of population activity. Its reported training subset includes 158 sessions from seven nonhuman primates, with adaptation to unseen sessions. POYO+ adds regular time-series inputs and multiple decoding tasks. Its 2025 study uses mouse visual-cortex calcium recordings; transfer tests reserve sessions from 30 animals, then adapt on each held-out session’s training split before evaluation.",
+      "boundary": "POYO’s primate motor recordings and POYO+’s mouse visual-cortex calcium signals are different datasets and modalities. POYO+ transfer includes supervised adaptation; it does not establish zero-calibration human BCI use. Neither study demonstrates universal decoding across species and behaviors or a mechanistic copy of an individual brain.",
+      "nextTest": "With a fixed labeled recalibration budget, does transfer outperform a tuned session-specific baseline on held-out animals and days, and how much inference delay does the chosen context window add?",
       "facts": [],
       "sources": [
         {
           "title": "A Unified, Scalable Framework for Neural Population Decoding",
           "url": "https://arxiv.org/abs/2310.16046",
-          "detail": "Published 2023-10-24. Authors' paper describes tokenization, attention, the training subset and few-shot transfer; record states NeurIPS acceptance."
+          "detail": "Submitted 2023-10-24; accepted at NeurIPS 2023. Author abstract reviewed 2026-10-02 for spike tokenization, the primate training subset and few-shot adaptation."
         },
         {
           "title": "POYO-1 project",
           "url": "https://poyo-brain.github.io/",
-          "detail": "Interactive tokenization explanation and separate curated-corpus/training statistics."
+          "detail": "Authors’ POYO-1 project page; original study context. The successor has its own project page and dataset."
         },
         {
           "title": "Official POYO code",
           "url": "https://github.com/nerdslab/poyo",
-          "detail": "Repository provides installation, brainsets preparation and training configurations."
+          "detail": "Official original-model repository reviewed 2026-10-02. Provides installation, dataset preparation and POYO-1 training configurations; the software was not run."
+        },
+        {
+          "title": "POYO+: Multi-session, multi-task neural decoding from distinct cell-types and brain regions",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/953390c834451505703c9da45de634d8-Paper-Conference.pdf",
+          "detail": "Peer-reviewed ICLR 2025 paper, reviewed 2026-10-02. Methods specify mouse calcium data, within-session splits and supervised adaptation of held-out animals; these are not human clinical results."
+        },
+        {
+          "title": "POYO+ authors’ project",
+          "url": "https://poyo-plus.github.io/",
+          "detail": "Official project page reviewed 2026-10-02; explains time-series inputs, multi-task outputs and links the paper and code."
+        },
+        {
+          "title": "Torch Brain neural-model framework",
+          "url": "https://github.com/neuro-galaxy/torch_brain",
+          "detail": "Official successor framework repository reviewed 2026-10-02. Current documentation notes migration of temporaldata and brainsets into torch_brain; installations and training were not tested."
         }
       ],
       "actions": [
@@ -855,13 +890,19 @@
           "label": "Explore spike tokenization, then open the code",
           "url": "https://poyo-brain.github.io/",
           "note": "Public material inspected; software or biological-hardware access was not tested."
+        },
+        {
+          "label": "Compare the POYO+ study and transfer protocol",
+          "url": "https://poyo-plus.github.io/",
+          "note": "Mouse calcium-imaging benchmark; transfer uses labeled fine-tuning. Code requires a Python environment, prepared data and training compute."
         }
       ],
       "related": [
         "cebra",
         "ibl",
         "brainlm"
-      ]
+      ],
+      "reviewed": "2026-10-02"
     },
     {
       "id": "ibl",

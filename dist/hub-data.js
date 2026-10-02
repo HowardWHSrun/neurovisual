@@ -33,14 +33,14 @@ const hubGlossary = [
 const hubResources = [
     { id: 'bci2000', title: 'BCI2000 user tutorial', url: 'https://bci2000.org/mediawiki/index.php/User_Tutorial', description: 'Connect signal acquisition, processing, stimulus presentation, and feedback in a BCI workflow.', topic: 'bci', type: 'Tutorial', level: 'Beginner' },
     { id: 'brainflow', title: 'BrainFlow', url: 'https://brainflow.readthedocs.io/en/stable/', description: 'A common API for acquiring and analyzing EEG, EMG, ECG, and other biosensor streams.', topic: 'bci', type: 'Tool', level: 'Intermediate' },
-    { id: 'open-ephys', title: 'Open Ephys GUI', url: 'https://open-ephys.github.io/gui-docs/', description: 'Modular acquisition software and practical guides for extracellular electrophysiology.', topic: 'interfaces', type: 'Tool', level: 'Intermediate' },
+    { id: 'open-ephys', title: 'Open Ephys GUI', url: 'https://open-ephys.github.io/gui-docs/', description: 'Plugin-based extracellular acquisition software with guides for stream synchronization and measured closed-loop latency; plugin support varies by operating system.', topic: 'interfaces', type: 'Tool', level: 'Intermediate', reviewed: '2026-10-02' },
     { id: 'neuropixels', title: 'Neuropixels', url: 'https://www.neuropixels.org/', description: 'Official probe, acquisition-system, software, manual, and training resources for dense neural recordings.', topic: 'interfaces', type: 'Hardware', level: 'Advanced' },
     { id: 'mne', title: 'MNE-Python tutorials', url: 'https://mne.tools/stable/auto_tutorials/index.html', description: 'Work through EEG and MEG loading, preprocessing, visualization, and decoding.', topic: 'signals', type: 'Tutorial', level: 'Beginner' },
-    { id: 'spikeinterface', title: 'SpikeInterface', url: 'https://spikeinterface.readthedocs.io/en/stable/', description: 'Build reproducible spike-sorting workflows with quality metrics, curation, and visualization.', topic: 'signals', type: 'Tool', level: 'Intermediate' },
+    { id: 'spikeinterface', title: 'SpikeInterface', url: 'https://spikeinterface.readthedocs.io/en/stable/', description: 'Build spike-sorting and drift-correction workflows, then use SortingAnalyzer outputs for quality metrics, curation, and visualization. Pin the software version and parameters.', topic: 'signals', type: 'Tool', level: 'Intermediate', reviewed: '2026-10-02' },
     { id: 'brian', title: 'Brian 2', url: 'https://brian2.readthedocs.io/en/stable/', description: 'Simulate spiking neurons and networks with Python equations and worked examples.', topic: 'computation', type: 'Tool', level: 'Intermediate' },
     { id: 'neuron', title: 'NEURON simulator', url: 'https://www.neuronsimulator.org/en/latest/index.html', description: 'Build biophysical neuron and network models using Python, HOC, or graphical tools.', topic: 'computation', type: 'Tool', level: 'Advanced' },
     { id: 'deeplabcut', title: 'DeepLabCut', url: 'https://deeplabcut.github.io/DeepLabCut/docs/UseOverviewGuide.html', description: 'Get started with markerless animal pose estimation using notebooks, a GUI, or Python.', topic: 'behavior', type: 'Tutorial', level: 'Beginner' },
-    { id: 'anipose', title: 'Anipose tutorial', url: 'https://anipose.readthedocs.io/en/stable/tutorial.html', description: 'Reconstruct 3D movement from multiple camera views, including calibration and filtering.', topic: 'behavior', type: 'Tutorial', level: 'Intermediate' },
+    { id: 'anipose', title: 'Anipose tutorial', url: 'https://anipose.readthedocs.io/en/stable/tutorial.html', description: 'Reconstruct 3D movement from multiple camera views, including calibration, reprojection checks, and configurable temporal and spatial constraints.', topic: 'behavior', type: 'Tutorial', level: 'Intermediate', reviewed: '2026-10-02' },
     { id: 'bonsai', title: 'Bonsai', url: 'https://bonsai-rx.org/docs/', description: 'Create visual workflows for hardware interfaces, video, and real-time data streams.', topic: 'behavior', type: 'Tool', level: 'Intermediate' },
     { id: 'nilearn', title: 'Nilearn quickstart', url: 'https://nilearn.github.io/stable/quickstart.html', description: 'Analyze brain volumes and surfaces using statistical models, decoding, and connectivity.', topic: 'imaging', type: 'Tutorial', level: 'Intermediate' },
     { id: 'suite2p', title: 'Suite2p', url: 'https://suite2p.readthedocs.io/en/latest/index.html', description: 'Process calcium imaging through registration, cell detection, and signal extraction.', topic: 'imaging', type: 'Tool', level: 'Intermediate' },
@@ -136,7 +136,8 @@ hubResources.push(...[
         "description": "Compare EEG decoding pipelines across public datasets with within-session, cross-session, and cross-subject evaluation strategies.",
         "topic": "bci",
         "type": "Tool",
-        "level": "Intermediate"
+        "level": "Intermediate",
+        "reviewed": "2026-10-02"
     },
     {
         "id": "kilosort",
@@ -281,5 +282,57 @@ hubResources.push(...[
         "topic": "regeneration",
         "type": "Directory",
         "level": "Beginner"
+    }
+]);
+hubResources.push(...[
+    {
+        "id": "wild-neurologger",
+        "title": "WILD wireless recording documentation",
+        "url": "https://ayalab1.github.io/Neurologger/",
+        "description": "Inspect public hardware files, release images, and analysis workflows for a 64-channel animal neurologger with onboard event-triggered stimulation. Full-resolution data use local microSD storage; BLE supports control and preview. Record the hardware revision and release image used.",
+        "topic": "interfaces",
+        "type": "Hardware",
+        "level": "Advanced",
+        "reviewed": "2026-10-02"
+    },
+    {
+        "id": "open-ephys-latency",
+        "title": "Measure closed-loop latency with Open Ephys",
+        "url": "https://open-ephys.github.io/gui-docs/Tutorials/Closed-Loop-Latency.html",
+        "description": "Use a bench input and recorded output to measure the delay of an acquisition-to-feedback chain. The tutorial lists required hardware and explains processing-buffer tradeoffs; measure your own configuration before interpreting event-triggered feedback.",
+        "topic": "stimulation",
+        "type": "Tutorial",
+        "level": "Intermediate",
+        "reviewed": "2026-10-02"
+    },
+    {
+        "id": "spikeinterface-quality",
+        "title": "SpikeInterface quality-metrics reference",
+        "url": "https://spikeinterface.readthedocs.io/en/stable/modules/metrics/quality_metrics.html",
+        "description": "Separate contamination, completeness, and drift checks, and inspect which SortingAnalyzer extensions each metric requires. The SNR definition changed in version 0.104.0; preserve versions and metric parameters when comparing analyses.",
+        "topic": "signals",
+        "type": "Tutorial",
+        "level": "Advanced",
+        "reviewed": "2026-10-02"
+    },
+    {
+        "id": "speech-gesture-decoding",
+        "title": "Simultaneous speech and gesture decoding code",
+        "url": "https://github.com/ChangLabUcsf/Brosler2026_simultaneous_decoding",
+        "description": "Inspect notebooks for nested cross-validation, isolated/concurrent training, and false commands during the opposite modality, accompanying the September 14, 2026 peer-reviewed human ECoG study. Figure data and code are public; neural training data require restricted-access approval.",
+        "topic": "bci",
+        "type": "Tool",
+        "level": "Advanced",
+        "reviewed": "2026-10-02"
+    },
+    {
+        "id": "fly3d-kinematics",
+        "title": "Whole-body fly 3D kinematics pipeline",
+        "url": "https://github.com/elliottabe/3d_tracking_dataset",
+        "description": "Explore multiview pose estimation, STAC inverse-kinematics fitting, and analysis notebooks for the Drosophila preprint revised September 16, 2026. The repository includes skeleton definitions and a MuJoCo body model; the pipeline requires separately supplied local recordings. This animal study remains a preprint.",
+        "topic": "behavior",
+        "type": "Tool",
+        "level": "Advanced",
+        "reviewed": "2026-10-02"
     }
 ]);

@@ -48,3 +48,5 @@ Load the data after the core guide data and before the NeuroAI modules. Commit t
 ## Review scope
 
 The September 15, 2026 review inspected primary research, official project pages, documentation and public source repositories. Link and media checks establish accessibility at review time. The research software and models were not installed or reproduced as part of this website update. Third-party images and players may become unavailable; credited original-source links remain available.
+
+The October 2 selective follow-up reviewed CEBRA documentation, releases and decoding tutorial, and the POYO / POYO+ primary papers and public repositories. Those two dossiers show their own review dates; other projects keep the September 15 collection baseline. The new decoder-transfer note distinguishes animal offline evaluation, supervised recalibration and online control. Software and notebooks were not executed.

@@ -257,7 +257,7 @@
       "name": "Precision Neuroscience",
       "stage": "Human studies + temporary electrode clearance",
       "headline": "Layer 7 has human-study experience and a defined FDA clearance.",
-      "summary": "Precision’s current homepage reports 95+ clinical-study patients. This undated company total does not establish 95 chronic wireless BCI implants.",
+      "summary": "Precision’s homepage reports 100+ clinical-study patients as observed on 2 October 2026. This undated company total does not establish 100 chronic wireless BCI implants.",
       "scope": "FDA K242618 covers Layer 7-T cortical electrodes for temporary use of less than 30 days. The cleared device is wired and has no software or wireless capability. Precision’s full BCI remains investigational.",
       "facts": [
         {
@@ -277,6 +277,13 @@
             "home"
           ],
           "date": "2025-04-17"
+        },
+        {
+          "title": "Clinical partners and patient totals have different denominators",
+          "text": "The homepage separately reports 18+ active hospital partners. Sites, patients, temporary cortical-electrode uses and chronic wireless implants are distinct measures. No date for either homepage total is provided.",
+          "refs": [
+            "home"
+          ]
         }
       ],
       "sources": [
@@ -285,8 +292,8 @@
           "title": "Precision: current clinical program",
           "url": "https://www.precisionneuro.io/",
           "kind": "Company website",
-          "checkedAt": "2026-09-15",
-          "scope": "Homepage read; 95+ is an undated company total observed on the review date."
+          "checkedAt": "2026-10-02",
+          "scope": "Homepage clinical section read on 2 October: 100+ clinical-study patients and 18+ active hospital partners are undated company totals. Earlier FDA and announcement sources retain their 15 September review dates."
         },
         {
           "id": "fda",
@@ -318,7 +325,7 @@
         "fda",
         "home"
       ],
-      "checkedAt": "2026-09-15"
+      "checkedAt": "2026-10-02"
     },
     {
       "id": "paradromics",
@@ -768,13 +775,14 @@
       "name": "CorTec",
       "stage": "Chronic human feasibility studies",
       "headline": "Brain Interchange is implanted in people in a stroke-rehabilitation study.",
-      "summary": "CorTec’s current website reports three chronically implanted stroke participants at the University of Washington and, separately, 13 people studied during acute epilepsy recordings at Mayo Clinic.",
+      "summary": "CorTec’s current therapeutic-BCI page describes preliminary observations in its first three stroke-study participants. Its pipeline separately lists epilepsy research as active but not recruiting, paralysis research as recruiting, and depression research in planning.",
       "scope": "Brain Interchange remains investigational. FDA trial permission and Breakthrough Device Designations do not constitute marketing authorization or establish rehabilitation benefit.",
       "headlineRefs": [
         "first"
       ],
       "summaryRefs": [
-        "current"
+        "therapeutic",
+        "pipeline"
       ],
       "scopeRefs": [
         "pipeline",
@@ -803,6 +811,13 @@
           "refs": [
             "pipeline"
           ]
+        },
+        {
+          "title": "Recording and stimulation are parts of one control loop",
+          "text": "The company specifies 32 contacts, recording sampled at 1 kHz, and closed-loop latency of 25 ms or less. Signals stream wirelessly to external computing and stimulation commands return to the implant. These engineering specifications do not establish rehabilitation benefit.",
+          "refs": [
+            "platform"
+          ]
         }
       ],
       "sources": [
@@ -811,8 +826,8 @@
           "title": "CorTec: current clinical evidence summary",
           "url": "https://cortec-neuro.com/",
           "kind": "Company website",
-          "checkedAt": "2026-09-15",
-          "scope": "Homepage content read. Three chronic and 13 acute participants are separate company-reported cohorts; page gives no date for those counts."
+          "checkedAt": "2026-10-02",
+          "scope": "Homepage reread: clinical-stage closed-loop platform and links to indication-specific evidence. Participant claims are now cited to the therapeutic-BCI page rather than inferred from the homepage."
         },
         {
           "id": "first",
@@ -828,8 +843,8 @@
           "title": "Clinical Pipeline — Brain Interchange",
           "url": "https://cortec-neuro.com/bci/clinical-pipeline",
           "kind": "Company trial page",
-          "checkedAt": "2026-09-15",
-          "scope": "Full pipeline read, including study-specific statuses and explicit investigational-device disclaimer."
+          "checkedAt": "2026-10-02",
+          "scope": "Full pipeline reread: Mayo epilepsy active/not recruiting; UMC Utrecht INTENSE recruiting; Freiburg depression in planning. Company statuses and investigational disclaimer read; recruitment is separate from enrollment or implantation."
         },
         {
           "id": "designation",
@@ -839,9 +854,25 @@
           "checkedAt": "2026-09-15",
           "scope": "Read indication descriptions and dates; this is a company report of designations, not a marketing decision.",
           "published": "2026-08-31"
+        },
+        {
+          "id": "therapeutic",
+          "title": "Therapeutic BCI: preliminary stroke-study observations",
+          "url": "https://cortec-neuro.com/bci/therapeutic-bci",
+          "kind": "Company website",
+          "checkedAt": "2026-10-02",
+          "scope": "Page read: first-three-participant preliminary recovery and 6+ month wireless-operation claims, without a dated report, control comparison or generalizable efficacy estimate."
+        },
+        {
+          "id": "platform",
+          "title": "Brain Interchange: recording, stimulation and closed-loop specifications",
+          "url": "https://cortec-neuro.com/bci/brain-interchange",
+          "kind": "Company technical description",
+          "checkedAt": "2026-10-02",
+          "scope": "System architecture and specification section read: 32 contacts, 1-kHz recording, external computing and company-stated closed-loop latency of 25 ms or less. These are company specifications, not independently benchmarked clinical performance."
         }
       ],
-      "checkedAt": "2026-09-15"
+      "checkedAt": "2026-10-02"
     },
     {
       "id": "inbrain",

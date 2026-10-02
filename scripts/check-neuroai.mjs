@@ -24,6 +24,7 @@ function imageRecord(image,label){
 imageRecord(data.hero,'Hero');
 for(const p of data.projects){
   assert.match(p.id,/^[a-z0-9-]+$/);
+  if(p.reviewed)assert.match(p.reviewed,/^\d{4}-\d{2}-\d{2}$/,'Explicit selective project review date');
   for(const key of ['title','subtitle','category','evidence','date','summary','question','does','boundary','nextTest'])nonempty(p[key],`${p.id}: ${key}`);
   assert(Object.hasOwn(api.categories,p.category),`${p.id}: known category`);
   assert(p.sources.length>=2,`${p.id}: retain primary evidence and usable context`);
@@ -73,6 +74,7 @@ assert.equal((overview.match(/class="ai-project-card"/g)||[]).length,data.projec
 assert(overview.includes(utils.escapeHtml(data.hero.credit)) && overview.includes(utils.sourceHref(data.hero.source)),'Visible hero attribution and source');
 for(const p of data.projects){
   const html=api.render(p.id);rendered(html);
+  assert(html.includes('reviewed '+(p.reviewed||data.reviewed)),'Display the actual project review date');
   for(const value of [p.title,p.boundary,p.nextTest])assert(html.includes(utils.escapeHtml(value)),`${p.id}: retain title, limits and test question`);
   assert(html.includes('Editorial research question, not a reported result.'));
   for(const source of p.sources)assert(html.includes(utils.sourceHref(source.url)),`${p.id}: source retained`);

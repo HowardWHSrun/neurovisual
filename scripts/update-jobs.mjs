@@ -28,17 +28,17 @@ const boards = [
 
 // --- Curated entries (non-public ATS) ---
 const SYNC = "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d290c04e-0230-4cd9-8bf0-f116bfab1405&ccId=19000101_000003&lang=en_US&jobId=";
+// Manual review on 2026-10-02: direct ADP listings for former curated-0,
+// curated-3 through curated-7 explicitly stopped accepting applications.
+// Keep the surviving IDs stable; a careers-page link alone is not proof that
+// the original application listing is still available.
 const curated = [
-  { title: "Senior R&D Engineer, Mechanical/Biomedical", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201627514618_1" },
-  { title: "Senior Quality Engineer, New Product Dev", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201609769879_1" },
-  { title: "Senior Quality Engineer, Operations", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201609762270_1" },
-  { title: "Electrical Engineer, ASIC Program Lead", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201592899997_1" },
-  { title: "Senior Director, Regulatory Affairs", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201592489640_1" },
-  { title: "Senior R&D Engineer, Electrical Engineering", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201546894497_1" },
-  { title: "Senior Engineer, Mechanical Engineering", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201544249618_1" },
-  { title: "Senior Engineer, Embedded Software/Firmware", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201542540262_1" },
-  { title: "Research Associate II - In vivo Electrophysiology and Behavior", employer: "Allen Institute", location: "Seattle, WA", url: "https://alleninstitute.org/careers/jobs?jobId=09c3fea4-fb46-9a70-3fbc-bf7562ce3859" },
-  { title: "Software Engineer II - Scientific Computing", employer: "Allen Institute", location: "Seattle, WA", url: "https://alleninstitute.org/careers/jobs?jobId=eaf7f3c2-59c1-8e73-7d9e-56463c4bcbe1" }
+  { id: "curated-1", title: "Senior Quality Engineer, New Product Dev", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201609769879_1", verifiedAt: "2026-10-02" },
+  { id: "curated-2", title: "Senior Quality Engineer, Operations", employer: "Synchron", location: "San Diego, CA", url: SYNC + "9201609762270_1", verifiedAt: "2026-10-02" },
+  { id: "curated-8", title: "Research Associate II - In vivo Electrophysiology and Behavior", employer: "Allen Institute", location: "Seattle, WA", url: "https://alleninstitute.org/careers/jobs?jobId=09c3fea4-fb46-9a70-3fbc-bf7562ce3859", verificationNote: "Original listing returned a loading error when checked on October 2, 2026; availability remains unconfirmed." },
+  { id: "curated-9", title: "Software Engineer II - Scientific Computing", employer: "Allen Institute", location: "Seattle, WA", url: "https://alleninstitute.org/careers/jobs?jobId=eaf7f3c2-59c1-8e73-7d9e-56463c4bcbe1", verificationNote: "Original listing returned a loading error when checked on October 2, 2026; availability remains unconfirmed." },
+  { id: "curated-allen-neural-circuits-theory", title: "Scientist I – Neural Circuits Theory", employer: "Allen Institute", location: "Seattle, WA (onsite)", url: "https://alleninstitute.org/careers/jobs?jobId=f4864596-9e85-bbf6-a1f6-9e880b149f05", verifiedAt: "2026-10-02", verificationNote: "Data-driven circuit theories using connectivity atlases, brain-wide neural recordings and activity perturbations. PhD or equivalent experience required." },
+  { id: "curated-allen-neuroscience-ml-intern", title: "Intern - Machine Learning for Neuroscience", employer: "Allen Institute", location: "Seattle, WA (hybrid; onsite at least one day per week)", url: "https://alleninstitute.org/careers/jobs?jobId=8a07edcf-40de-64a2-b0d2-2e45dcbee070", verifiedAt: "2026-10-02", verificationNote: "One-year graduate internship starting late October / early November 2026: neural population models, EMG and synchronized behavior video. Remote work must be in Washington State." }
 ];
 
 const LEVELS = ["Intern", "Junior", "Mid", "Senior", "Lead"];
@@ -124,13 +124,14 @@ async function collectBoard(board) {
 const fetched = (await Promise.all(boards.map(collectBoard))).flat();
 
 const curatedJobs = curated.map((entry, index) => ({
-  id: `curated-${index}`,
+  id: entry.id || `curated-${index}`,
   title: entry.title,
   employer: entry.employer,
   location: entry.location,
   url: entry.url,
   postedAt: null,
   verifiedAt: entry.verifiedAt || null,
+  ...(entry.verificationNote ? { verificationNote: entry.verificationNote } : {}),
   source: "Curated"
 }));
 
@@ -156,7 +157,7 @@ const employerBoards = {
 const snapshot = {
   generatedAt: generatedAt.toISOString(),
   cadence: "Every Monday at 07:30 UTC",
-  method: "Dated listings from public ATS boards plus manually curated opportunities whose availability is not automatically rechecked. Failed boards retain previous rows marked stale. Source dates are distinct from retrieval dates. Levels and functions are inferred from titles and are approximate.",
+  method: "Dated listings from public ATS boards plus manually curated opportunities. Curated verification dates record manual review of the original listing, not automatic rechecks or posting dates; entries without them have unconfirmed availability. Failed boards retain previous rows marked stale. Source dates are distinct from retrieval dates. Levels and functions are inferred from titles and are approximate.",
   boards,
   employerBoards,
   curatedSources: ["Synchron (ADP)", "Allen Institute (careers site)"],

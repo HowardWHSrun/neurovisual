@@ -245,6 +245,45 @@
           "change": "Extended the counting notebook from recording hardware to anatomical maps and predictive models."
         }
       ]
+    },
+    {
+      "id": "decoder-transfer",
+      "title": "When does a decoder really transfer?",
+      "status": "Open hypothesis",
+      "theme": "Neural decoding",
+      "question": "What survives a change of animal, recording day, cell population or task when the recalibration budget stays fixed?",
+      "summary": "Make the held-out unit and labeled adaptation budget visible beside the decoding score. Test whether a shared model reduces the work needed for a new recording.",
+      "observation": "The ICLR 2025 POYO+ study evaluates mouse visual-cortex calcium data and adapts to held-out animals using each new session’s training split. CEBRA’s decoding tutorial separates training from later test data and compares behavior-aligned embeddings with shuffled-label controls. These are offline analysis examples, not demonstrations of human closed-loop control.",
+      "interpretation": "A shared representation may reduce recalibration, but the claim depends on what was held out and what new labels were supplied. Attractive embeddings and an average session score can conceal a poor result for a particular animal or task.",
+      "test": "Freeze session, animal and task splits before model selection. Fit preprocessing, embeddings and decoder settings using training data only. Compare a shared model with tuned single-session and shuffled-label baselines at equal labeled adaptation budgets. Report each held-out result, uncertainty, context-window duration and inference time. Evaluate real-time closed-loop performance separately before claiming useful online control.",
+      "revision": "Revise the transfer hypothesis if gains disappear under matched tuning or stricter held-out splits, depend on unavailable future samples, or fail when fewer adaptation labels are allowed. Animal offline results alone cannot resolve human communication or stimulation performance.",
+      "updated": "2026-10-02",
+      "sources": [
+        {
+          "title": "POYO+ · peer-reviewed ICLR 2025 transfer protocol",
+          "url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/953390c834451505703c9da45de634d8-Paper-Conference.pdf"
+        },
+        {
+          "title": "POYO+ authors’ project · mouse calcium data and multi-task decoder",
+          "url": "https://poyo-plus.github.io/"
+        },
+        {
+          "title": "CEBRA decoding tutorial · train/test split and shuffled-label controls",
+          "url": "https://cebra.ai/docs/demo_notebooks/Demo_decoding.html"
+        }
+      ],
+      "related": [
+        "useful-channels",
+        "readout-budget",
+        "connectome-to-model"
+      ],
+      "organizations": [],
+      "history": [
+        {
+          "date": "2026-10-02",
+          "change": "Added a source-backed evaluation question separating held-out transfer, labeled recalibration and online control; primary paper and official tutorial reviewed."
+        }
+      ]
     }
   ],
   "companies": [

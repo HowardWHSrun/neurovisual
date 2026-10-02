@@ -3,7 +3,8 @@ const hubGuides: Record<string, HubGuide> = {
   "interfaces": {
     "primer": [
       "A recording interface connects tissue and sensor to a calibrated digital signal through electrodes, a reference, amplification, acquisition, and timing.",
-      "High-density extracellular probes sample voltages near neuronal populations; their channel count alone does not establish how many distinct neurons can be recovered or tracked over time."
+      "High-density extracellular probes sample voltages near neuronal populations; their channel count alone does not establish how many distinct neurons can be recovered or tracked over time.",
+      "Source example reviewed October 2, 2026: the September 10 peer-reviewed WILD report combines wireless animal recordings, behavioral sensors, and event-triggered optogenetics. Its public 64-channel workflow logs full-resolution data locally to microSD; BLE provides control and low-bandwidth preview. The reported animal experiments do not establish human or clinical usefulness."
     ],
     "tradeoffs": [
       {
@@ -20,6 +21,11 @@ const hubGuides: Record<string, HubGuide> = {
         "choice": "Simple clocks versus shared synchronization",
         "benefit": "Independent devices are easy to assemble into a flexible recording rig.",
         "cost": "Matching nominal sample rates does not correct start offsets or clock drift."
+      },
+      {
+        "choice": "Local logging versus continuous telemetry",
+        "benefit": "Onboard storage and event detection can support untethered recordings without streaming every sample.",
+        "cost": "Battery, storage, enabled sensors, and release-specific processing constrain a session; wireless control does not guarantee continuous full-bandwidth telemetry."
       }
     ],
     "workflow": [
@@ -56,6 +62,14 @@ const hubGuides: Record<string, HubGuide> = {
       {
         "title": "Open Ephys — Synchronizing Data Streams",
         "url": "https://open-ephys.github.io/gui-docs/Tutorials/Data-Synchronization.html"
+      },
+      {
+        "title": "Zhao et al. — WILD neuro-behavioral recording and closed-loop manipulation (Nature Methods, September 10, 2026)",
+        "url": "https://www.nature.com/articles/s41592-026-03220-9"
+      },
+      {
+        "title": "WILD — Public workflow scope and reproducibility record (reviewed October 2, 2026)",
+        "url": "https://ayalab1.github.io/Neurologger/"
       }
     ],
     "related": [
@@ -67,7 +81,8 @@ const hubGuides: Record<string, HubGuide> = {
   "signals": {
     "primer": [
       "Neural signal processing turns calibrated recordings into quantities such as event-related responses, spectral power, or candidate spike trains while preserving their measurement context.",
-      "Electrophysiology measures electrical potentials, and MEG detects associated magnetic fields. fNIRS and BOLD fMRI track hemodynamic changes and require different timing and interpretation."
+      "Electrophysiology measures electrical potentials, and MEG detects associated magnetic fields. fNIRS and BOLD fMRI track hemodynamic changes and require different timing and interpretation.",
+      "Metric definitions are part of the analysis record. SpikeInterface documentation reviewed October 2, 2026 separates contamination, completeness, and drift metrics and notes that its SNR definition changed in version 0.104.0. A repeated metric name does not guarantee a comparable calculation across software versions."
     ],
     "tradeoffs": [
       {
@@ -104,7 +119,7 @@ const hubGuides: Record<string, HubGuide> = {
       },
       {
         "title": "Challenge the result",
-        "action": "Compare sensible parameter choices, inspect discarded data, and evaluate multiple unit-quality metrics when sorting spikes.",
+        "action": "Compare sensible parameter choices and inspect discarded data. When sorting spikes, assess contamination, completeness, and drift together; record metric definitions, prerequisites, software versions, and exclusion thresholds.",
         "output": "A sensitivity summary showing which conclusions persist."
       }
     ],
@@ -131,7 +146,8 @@ const hubGuides: Record<string, HubGuide> = {
   "bci": {
     "primer": [
       "A brain-computer interface maps recorded neural activity to an output such as a selection, cursor command, or communication signal, usually within a feedback loop.",
-      "A useful decoder must survive the conditions in which it will operate: within-session prediction, transfer to later sessions, and online use answer different engineering questions."
+      "A useful decoder must survive the conditions in which it will operate: within-session prediction, transfer to later sessions, and online use answer different engineering questions.",
+      "Human evidence example reviewed October 2, 2026: a September 14 peer-reviewed ECoG study tested simultaneous speech and gesture decoding in two people with paralysis. Training on isolated and concurrent attempts improved generalization across the tested contexts. Simultaneous copy-task decoding was evaluated online in one participant and offline in the other; limited vocabularies and proof-of-concept conversation tasks constrain broader conclusions."
     ],
     "tradeoffs": [
       {
@@ -153,7 +169,7 @@ const hubGuides: Record<string, HubGuide> = {
     "workflow": [
       {
         "title": "Define the task",
-        "action": "Specify outputs, the no-command state, feedback, and metrics for errors, latency, and task completion.",
+        "action": "Specify outputs, the no-command state, feedback, and metrics for errors, latency, and task completion. If outputs run in parallel, include isolated and simultaneous attempts and false commands during the other output's activity.",
         "output": "An operational task specification."
       },
       {
@@ -163,7 +179,7 @@ const hubGuides: Record<string, HubGuide> = {
       },
       {
         "title": "Match evaluation to deployment",
-        "action": "Report within-session held-out trials separately from held-out sessions; group correlated windows and document any target-session adaptation.",
+        "action": "Report within-session held-out trials separately from held-out sessions; group correlated windows, test intended behavioral contexts, and document any target-session adaptation.",
         "output": "A split manifest and performance by participant and session."
       },
       {
@@ -184,6 +200,10 @@ const hubGuides: Record<string, HubGuide> = {
       {
         "title": "MOABB — CrossSessionEvaluation",
         "url": "https://moabb.neurotechx.com/docs/generated/moabb.evaluations.CrossSessionEvaluation.html"
+      },
+      {
+        "title": "Brosler et al. — Simultaneous speech and gesture decoding for multimodal communication in paralysis (September 14, 2026)",
+        "url": "https://www.nature.com/articles/s41593-026-02446-2"
       }
     ],
     "related": [
@@ -195,7 +215,8 @@ const hubGuides: Record<string, HubGuide> = {
   "stimulation": {
     "primer": [
       "Neural stimulation research studies how an imposed perturbation interacts with neural tissue; this introductory workflow focuses on electric-field modeling for non-invasive stimulation.",
-      "A SimNIBS field map estimates exposure under anatomical and physical assumptions, while neural responses, behavioral changes, and clinical outcomes require separate measurements."
+      "A SimNIBS field map estimates exposure under anatomical and physical assumptions, while neural responses, behavioral changes, and clinical outcomes require separate measurements.",
+      "For closed-loop experiments, separately verify sensing, event detection, and the delivered output. The Open Ephys bench tutorial reviewed October 2, 2026 measures input-to-output delay and explains buffer tradeoffs. A detector's processing time alone does not establish the latency or timing variability of the complete stimulation loop."
     ],
     "tradeoffs": [
       {
@@ -248,6 +269,10 @@ const hubGuides: Record<string, HubGuide> = {
       {
         "title": "SimNIBS — Uncertainty Quantification",
         "url": "https://simnibs.github.io/simnibs/build/html/tutorial/advanced/uq.html"
+      },
+      {
+        "title": "Open Ephys — Measuring Closed-Loop Latency (reviewed October 2, 2026)",
+        "url": "https://open-ephys.github.io/gui-docs/Tutorials/Closed-Loop-Latency.html"
       }
     ],
     "related": [
@@ -323,7 +348,8 @@ const hubGuides: Record<string, HubGuide> = {
   "behavior": {
     "primer": [
       "Video-based pose estimation measures behavior by predicting visible body landmarks; it does not directly record neural activity.",
-      "DeepLabCut provides learned landmark tracking, while a multi-camera workflow such as Anipose combines calibrated views to reconstruct three-dimensional positions."
+      "DeepLabCut provides learned landmark tracking, while a multi-camera workflow such as Anipose combines calibrated views to reconstruct three-dimensional positions.",
+      "Preprint example reviewed October 2, 2026: the September 16 revision abstract of Whole-body 3D kinematics of freely behaving Drosophila describes seven synchronized 800-fps cameras, 50 tracked landmarks, and biomechanical inverse-kinematics refinement. The revised full text was unavailable at review; the May 4 version is accessible in PMC. These are animal kinematic measurements, and model-constrained trajectories still require validation against the images."
     ],
     "tradeoffs": [
       {
@@ -350,7 +376,7 @@ const hubGuides: Record<string, HubGuide> = {
       },
       {
         "title": "Calibrate geometry and time",
-        "action": "For multiple views, estimate camera intrinsics and extrinsics, preserve scale units, and verify frame correspondence.",
+        "action": "For multiple views, estimate camera intrinsics and extrinsics, preserve scale units, and verify frame correspondence. For fast motion, record exposure and illumination timing as well as nominal frame rate.",
         "output": "A calibration record and shared frame timeline."
       },
       {
@@ -360,13 +386,14 @@ const hubGuides: Record<string, HubGuide> = {
       },
       {
         "title": "Reconstruct and validate behavior",
-        "action": "Triangulate matched views, inspect reprojections and implausible motion, then align derived behavior with neural events.",
+        "action": "Triangulate matched views, inspect reprojections and implausible motion, and compare constrained fits with the original detections. Separate measured kinematics from inferred forces, then align behavior with neural events.",
         "output": "Validated trajectories with uncertainty and a documented time base."
       }
     ],
     "pitfalls": [
       "Treating high landmark confidence as proof of accurate three-dimensional position or camera calibration.",
-      "Randomly splitting adjacent video frames and calling the result generalization to new animals or recording sessions."
+      "Randomly splitting adjacent video frames and calling the result generalization to new animals or recording sessions.",
+      "Treating biomechanically feasible motion as proof of accurate landmarks or directly measured muscle and ground-reaction forces."
     ],
     "sources": [
       {
@@ -376,6 +403,14 @@ const hubGuides: Record<string, HubGuide> = {
       {
         "title": "Anipose — Tutorial",
         "url": "https://anipose.readthedocs.io/en/stable/tutorial.html"
+      },
+      {
+        "title": "Ispizua et al. — Whole-body 3D kinematics of freely behaving Drosophila (bioRxiv preprint, revision September 16, 2026; abstract reviewed)",
+        "url": "https://www.biorxiv.org/content/10.64898/2026.05.03.722293v2"
+      },
+      {
+        "title": "Whole-body 3D kinematics — May 4, 2026 preprint version 1, full text in PMC",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13174342/"
       }
     ],
     "related": [

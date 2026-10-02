@@ -1,6 +1,6 @@
 # Neurovisual: research labs and university directories
 
-Source pages reviewed 2026-09-15. 75 detailed profiles; 56 institutions.
+Full survey baseline 2026-09-15; selective updates use the profile and page review dates below. 75 detailed profiles; 56 institutions.
 
 ## Method
 
@@ -2750,28 +2750,32 @@ Magnetoelectric materials convert externally applied magnetic fields into electr
 
 ### Website review
 
-Read the research/publication pages and both complete device articles, including the May 2026 backscatter work.
+Selective 2 October follow-up reread research and publication pages and the distributed-implant article abstract/bibliographic record. Its online 2025 date is separate from its March 2026 issue. Earlier endocisternal and backscatter readings retain their 15 September review dates; full text of the added network study was unavailable.
 
-Status: reviewed. Checked: 2026-09-15.
+Status: partial. Checked: 2026-10-02.
 
 Newest dated source found: [A roadmap to navigate the future of neural engineering — publication listing](https://www.robinsonlab.com/publications) — 2026-08.
 
 - Specified sheep and the exact online date for endocisternal work.
 - Added recent backscatter work with its cardiac, rather than neural, validation.
 - Excluded the publication list’s post-cutoff November 2026 item.
+- Replaced the generic distributed-implant project with dated power-transfer measurements and large-animal scope, keeping online publication and issue dates separate.
 
-- [Robinson Lab — current research](https://www.robinsonlab.com/research) — Page content read; checked 2026-09-15. Magnetoelectric, lensless imaging and translational research directions; 2024 primate imaging citation.
+- [Robinson Lab — current research](https://www.robinsonlab.com/research) — Page content read; checked 2026-10-02. Research page reread: magnetoelectric power and communication, distributed implants, endocisternal access and cross-species recording/imaging directions.
 - [Endocisternal neural interfaces](https://www.nature.com/articles/s41551-024-01281-9) — Page content read; checked 2026-09-15. Full paper: November 2024 online date, sheep CSF-space delivery, recording/stimulation and explantation.
-- [Robinson Lab — publications](https://www.robinsonlab.com/publications) — Page content read; checked 2026-09-15. Dated 2026 publication list, including August roadmaps; future-dated entry excluded.
+- [Robinson Lab — publications](https://www.robinsonlab.com/publications) — Page content read; checked 2026-10-02. 2026 publication entries reread, including the March issue listing for the distributed-implant study and August roadmap. The future-dated November 2026 entry remains excluded.
 - [Robust magnetoelectric backscatter communication system for bioelectronic implants](https://www.nature.com/articles/s44172-026-00678-5) — Page content read; checked 2026-09-15. Full May 2026 article: backscatter mechanism, receiver and porcine cardiac demonstration.
+- [Distributed battery-free bioelectronic implants with improved network power transfer efficiency via magnetoelectrics](https://pubmed.ncbi.nlm.nih.gov/40877535/) — Abstract / publication record read; checked 2026-10-02. Primary article abstract and bibliographic record read on PubMed: online publication 28 August 2025, March 2026 issue, one-to-six-node efficiency experiment and large-animal spinal/cardiac proof of concept. Full publisher and PMC text unavailable.
+- [Distributed-implant network study — publisher attempt](https://www.nature.com/articles/s41551-025-01489-3) — Page unavailable; checked 2026-10-02. Publisher retrieval failed at the cookie/identity redirect; no full-text reading claimed.
+- [Distributed-implant network study — PMC attempt](https://pmc.ncbi.nlm.nih.gov/articles/PMC12557647/) — Page unavailable; checked 2026-10-02. PMC returned a browser-check page; the PubMed primary abstract and bibliographic record were used instead.
 
 ### Projects
 
-#### Distributed wireless bioelectronics
+#### Distributed battery-free stimulation networks
 
-*Published device and preclinical work*
+*Engineering measurements and large-animal proof of concept*
 
-Miniature stimulators and implant networks aim to reduce batteries, wiring, and implant size. The lab’s cited studies include epidural cortical stimulators and endovascular peripheral-nerve stimulation. These are distinct anatomical delivery routes. [1](https://www.robinsonlab.com/research)
+A peer-reviewed study published online in August 2025 and assigned to the March 2026 issue tested one to six magnetoelectric nodes. In its reported 1-cm-distance experiment, total power-transfer efficiency rose from 0.2% to 1.3%, with 2.2 mW delivered per node. Separate large-animal proof-of-concept experiments demonstrated spinal stimulation and cardiac pacing. The network count is not a count of human implants or recording channels. [5](https://pubmed.ncbi.nlm.nih.gov/40877535/)
 
 #### Endocisternal access
 
@@ -2793,7 +2797,7 @@ A May 2026 paper uses load modulation and an adaptive receiver to return informa
 
 ### Progress to track: Implant volume, wireless reach, and distributed access
 
-Count independently powered and addressable implants alongside power delivery and recording or stimulation performance. For imaging, track field of view and behavioral freedom rather than electrode count. [1](https://www.robinsonlab.com/research) [2](https://www.nature.com/articles/s41551-024-01281-9)
+Track powered nodes and per-node power at a stated transmitter distance alongside independently addressable stimulation outputs. The distributed-implant study measures network power efficiency, while recording throughput, synchronization and chronic reliability remain separate dimensions. Imaging requires its own field-of-view and behavioral-freedom measures. [1](https://www.robinsonlab.com/research) [2](https://www.nature.com/articles/s41551-024-01281-9) [5](https://pubmed.ncbi.nlm.nih.gov/40877535/)
 
 ### Study context
 
@@ -2805,10 +2809,11 @@ Can a network of small implants gain coverage while maintaining reliable power, 
 
 ### Sources
 
-1. [Robinson Lab — current research](https://www.robinsonlab.com/research) — Lab; publication date not recorded. Page content read; checked 2026-09-15. Magnetoelectric, lensless imaging and translational research directions; 2024 primate imaging citation.
+1. [Robinson Lab — current research](https://www.robinsonlab.com/research) — Lab; publication date not recorded. Page content read; checked 2026-10-02. Research page reread: magnetoelectric power and communication, distributed implants, endocisternal access and cross-species recording/imaging directions.
 2. [Endocisternal neural interfaces](https://www.nature.com/articles/s41551-024-01281-9) — Paper; 2024-11-11. Page content read; checked 2026-09-15. Full paper: November 2024 online date, sheep CSF-space delivery, recording/stimulation and explantation.
-3. [Robinson Lab — publications](https://www.robinsonlab.com/publications) — Lab; publication date not recorded. Page content read; checked 2026-09-15. Dated 2026 publication list, including August roadmaps; future-dated entry excluded.
+3. [Robinson Lab — publications](https://www.robinsonlab.com/publications) — Lab; publication date not recorded. Page content read; checked 2026-10-02. 2026 publication entries reread, including the March issue listing for the distributed-implant study and August roadmap. The future-dated November 2026 entry remains excluded.
 4. [Robust magnetoelectric backscatter communication system for bioelectronic implants](https://www.nature.com/articles/s44172-026-00678-5) — Paper; 2026-05-13. Page content read; checked 2026-09-15. Full May 2026 article: backscatter mechanism, receiver and porcine cardiac demonstration.
+5. [Distributed battery-free bioelectronic implants with improved network power transfer efficiency via magnetoelectrics](https://pubmed.ncbi.nlm.nih.gov/40877535/) — Paper; 2025-08-28. Abstract / publication record read; checked 2026-10-02. Primary article abstract and bibliographic record read on PubMed: online publication 28 August 2025, March 2026 issue, one-to-six-node efficiency experiment and large-animal spinal/cardiac proof of concept. Full publisher and PMC text unavailable.
 
 ## Tringides Lab — Cell and Material Technologies
 
@@ -3834,20 +3839,24 @@ High-density recordings sample cortical population activity during speech tasks.
 
 ### Website review
 
-Retained claims rebuilt from the listed pages. Recent publications or news were sought explicitly; dated examples are identified in the profile.
+Selective 2 October follow-up read the lab overview, publication index and September 2026 simultaneous speech-and-gesture paper. Earlier 2023 and 2025 milestones retain their 15 September source review dates; their publisher pages could not be reread in this follow-up.
 
-Status: reviewed. Checked: 2026-09-15.
+Status: partial. Checked: 2026-10-02.
 
-Newest dated source found: [Toward Individualized Deep Brain Stimulation: A Stereo-EEG Workflow (listed by lab)](https://changlab.ucsf.edu/publications) — 2025.
+Newest dated source found: [Simultaneous speech and gesture decoding for multimodal communication in paralysis](https://www.nature.com/articles/s41593-026-02446-2) — 2026-09-14.
 
 - Added the 2025 streaming speech paper.
 - Separated 80-ms updates from end-to-end latency.
 - Retained the 2023 avatar result as a dated single-participant milestone.
+- Added September 2026 simultaneous speech and gesture decoding, separating the three-person movement cohort from two-person avatar and simultaneous-decoding experiments.
 
-- [Chang Lab: foundations of human speech and research methods](https://changlab.ucsf.edu/) — Page content read; checked 2026-09-15. Page content read; retained claims checked against the page.
+- [Chang Lab: foundations of human speech and research methods](https://changlab.ucsf.edu/) — Page content read; checked 2026-10-02. Lab overview and methods reread: human speech, functional mapping, cortical recording, stimulation and real-time processing.
 - [A high-performance neuroprosthesis for speech decoding and avatar control](https://www.nature.com/articles/s41586-023-06443-4) — Page content read; checked 2026-09-15. Page content read; retained claims checked against the page.
 - [A streaming brain-to-voice neuroprosthesis to restore naturalistic communication](https://www.nature.com/articles/s41593-025-01905-6) — Page content read; checked 2026-09-15. Read abstract, streaming method, and latency descriptions; 80 ms is decoding granularity.
-- [Chang Lab publications](https://changlab.ucsf.edu/publications) — Page content read; checked 2026-09-15. Read current publication list, including 2025 speech and individualized stimulation work; no newer clinical-result claim inferred.
+- [Chang Lab publications](https://changlab.ucsf.edu/publications) — Page content read; checked 2026-10-02. Publication index and 2025 streaming-speech abstract reread. The visible index stops at 2025; it is not a complete 2026 publication census.
+- [Simultaneous speech and gesture decoding for multimodal communication in paralysis](https://www.nature.com/articles/s41593-026-02446-2) — Page content read; checked 2026-10-02. Publisher abstract, results, participant methods and publication metadata read. Movement mapping includes three participants; simultaneous speech/gesture and avatar experiments include two. Peer-reviewed article; finite phrase and gesture sets.
+- [A high-performance neuroprosthesis for speech decoding and avatar control — October recheck](https://www.nature.com/articles/s41586-023-06443-4) — Page unavailable; checked 2026-10-02. Publisher content could not be retrieved during this follow-up. The retained 2023 milestone uses the earlier 15 September source reading.
+- [A streaming brain-to-voice neuroprosthesis to restore naturalistic communication — October recheck](https://www.nature.com/articles/s41593-025-01905-6) — Page unavailable; checked 2026-10-02. Publisher content could not be retrieved during this follow-up. The retained milestone uses the earlier 15 September reading; the 2025 streaming abstract is also visible on the lab publication page.
 
 ### Projects
 
@@ -3863,6 +3872,12 @@ A clinical study in one participant with severe paralysis and anarthria decoded 
 
 An earlier study used a 253-channel surface interface to decode text, voice and facial-avatar movements in one participant after brainstem stroke. Its text benchmark reached a median 78 words per minute with a 25% median word error rate on the reported task. [2](https://www.nature.com/articles/s41586-023-06443-4)
 
+#### Simultaneous speech and gesture decoding, 2026
+
+*Human early-feasibility research, two simultaneous-decoding participants*
+
+The September 2026 peer-reviewed study combines parallel speech and gesture decoders from a single high-density ECoG implant. Movement mapping involved three participants; simultaneous decoding and avatar experiments involved two. Training on isolated and simultaneous behaviors improved generalization across those contexts. The experiments used finite phrase and gesture sets, rather than unrestricted conversation. [5](https://www.nature.com/articles/s41593-026-02446-2)
+
 ### Progress to track: End-to-end communication and timing
 
 Channel number is one system property. Streaming update interval, onset latency, intelligibility, error rate and training requirements address different practical bottlenecks and should be reported separately. [2](https://www.nature.com/articles/s41586-023-06443-4) [3](https://www.nature.com/articles/s41593-025-01905-6)
@@ -3873,14 +3888,15 @@ The laboratory provides a direct bridge from speech neuroscience to clinical int
 
 ### Editorial notebook question
 
-Editorial question: Can a streaming system keep the user’s intended timing and voice while remaining reliable during spontaneous conversation?
+Can context-inclusive training support larger phrase and gesture vocabularies while preserving intended timing and reliable control during spontaneous communication?
 
 ### Sources
 
-1. [Chang Lab: foundations of human speech and research methods](https://changlab.ucsf.edu/) — Lab; publication date not recorded. Page content read; checked 2026-09-15. Page content read; retained claims checked against the page.
+1. [Chang Lab: foundations of human speech and research methods](https://changlab.ucsf.edu/) — Lab; publication date not recorded. Page content read; checked 2026-10-02. Lab overview and methods reread: human speech, functional mapping, cortical recording, stimulation and real-time processing.
 2. [A high-performance neuroprosthesis for speech decoding and avatar control](https://www.nature.com/articles/s41586-023-06443-4) — Paper; 2023-08-23. Page content read; checked 2026-09-15. Page content read; retained claims checked against the page.
 3. [A streaming brain-to-voice neuroprosthesis to restore naturalistic communication](https://www.nature.com/articles/s41593-025-01905-6) — Paper; 2025-03-31. Page content read; checked 2026-09-15. Read abstract, streaming method, and latency descriptions; 80 ms is decoding granularity.
-4. [Chang Lab publications](https://changlab.ucsf.edu/publications) — Lab; publication date not recorded. Page content read; checked 2026-09-15. Read current publication list, including 2025 speech and individualized stimulation work; no newer clinical-result claim inferred.
+4. [Chang Lab publications](https://changlab.ucsf.edu/publications) — Lab; publication date not recorded. Page content read; checked 2026-10-02. Publication index and 2025 streaming-speech abstract reread. The visible index stops at 2025; it is not a complete 2026 publication census.
+5. [Simultaneous speech and gesture decoding for multimodal communication in paralysis](https://www.nature.com/articles/s41593-026-02446-2) — Paper; 2026-09-14. Page content read; checked 2026-10-02. Publisher abstract, results, participant methods and publication metadata read. Movement mapping includes three participants; simultaneous speech/gesture and avatar experiments include two. Peer-reviewed article; finite phrase and gesture sets.
 
 ## Bioelectronics Laboratory
 

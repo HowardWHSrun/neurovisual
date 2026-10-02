@@ -51,5 +51,8 @@ for(const [before,after] of [['hub-data','neuroai-learning'],['hub-guides','neur
 }
 assert(!html.includes('cdn.jsdelivr.net'),'Core rendering dependency must be local');
 const jobs=JSON.parse(await readFile(join(root,'data/jobs.json'),'utf8'));
-for(const job of jobs.jobs.filter(j=>j.source==='Curated'))assert.equal(job.postedAt,null,'Curated jobs must not have fabricated posting dates');
+for(const job of jobs.jobs.filter(j=>j.source==='Curated')){
+  assert.equal(job.postedAt,null,'Curated jobs must not have fabricated posting dates');
+  if(job.verifiedAt){assert.match(job.verifiedAt,/^\d{4}-\d{2}-\d{2}$/);assert(job.verifiedAt<=jobs.generatedAt.slice(0,10),'Manual verification cannot postdate the snapshot');}
+}
 console.log(`Passed: escaping and URL boundaries, search and routes, dates, ${topics.length} topics, ${resources.length} resources, ${paths.length} learning paths, ${glossary.length} terms, ${methods.length} methods, complete guides and project criteria, script order, local assets, and curated job date integrity.`);

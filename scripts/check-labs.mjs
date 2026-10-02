@@ -3,6 +3,8 @@ import vm from 'node:vm';
 import {readFile} from 'node:fs/promises';
 const root=new URL('../',import.meta.url),read=p=>readFile(new URL(p,root),'utf8');
 const data=JSON.parse(await read('data/labs.json'));
+const reviewDate=value=>assert.match(value,/^\d{4}-\d{2}-\d{2}$/,'Explicit review date');
+reviewDate(data.reviewed);
 const ctx=vm.createContext({URL,URLSearchParams,console});
 for(const file of ['hub-utils','hub-data','hub-guides','ideas-data','company-media','labs-data','visuals-data','visuals','connections-data','connections','origins-data','connection-network','origins','field-visuals','labs'])vm.runInContext(await read('dist/'+file+'.js'),ctx);
 const api=vm.runInContext('NeuroLabs',ctx);
@@ -17,15 +19,16 @@ for(const l of data.labs){
  for(const t of l.themes)assert(api.themes.includes(t),l.id+': invalid theme');
  const refs=new Set(l.sources.map(s=>s.id));assert.equal(refs.size,l.sources.length);
  for(const group of [l.overviewRefs,l.scale.refs,l.translation.refs,...l.projects.map(p=>p.refs)]){assert(group.length);for(const id of group)assert(refs.has(id),l.id+': missing '+id);}
- assert.equal(l.verified,data.reviewed);
+ reviewDate(l.verified);assert(l.verified>=data.reviewed);
  assert(l.audit,l.id+': missing website review');assert(['reviewed','partial'].includes(l.audit.status));assert(l.audit.summary&&l.audit.changes.length&&l.audit.pages.length);
  const auditUrls=new Set(l.audit.pages.map(p=>p.url));
- for(const p of l.audit.pages){assert(new URL(p.url));assert(p.title&&p.supports);assert.equal(p.checkedAt,data.reviewed);assert(['read','abstract-only','unavailable'].includes(p.status));}
- if(l.audit.latest){assert(l.audit.latest.title&&l.audit.latest.date);assert(l.audit.latest.date<=data.reviewed);assert(auditUrls.has(l.audit.latest.url),l.id+': latest source must have been checked');}
- for(const source of l.sources){assert(source.review,l.id+': source access scope missing');assert(auditUrls.has(source.url),l.id+': retained source absent from page review');assert.equal(source.review.checkedAt,data.reviewed);assert(['read','abstract-only','unavailable'].includes(source.review.status));assert(source.review.note);}
+ assert.equal(l.verified,l.audit.pages.map(p=>p.checkedAt).sort().at(-1),'Profile date matches its latest page check');
+ for(const p of l.audit.pages){assert(new URL(p.url));assert(p.title&&p.supports);reviewDate(p.checkedAt);assert(p.checkedAt<=l.verified);assert(['read','abstract-only','unavailable'].includes(p.status));}
+ if(l.audit.latest){assert(l.audit.latest.title&&l.audit.latest.date);assert(l.audit.latest.date<=l.verified);assert(auditUrls.has(l.audit.latest.url),l.id+': latest source must have been checked');}
+ for(const source of l.sources){assert(source.review,l.id+': source access scope missing');assert(auditUrls.has(source.url),l.id+': retained source absent from page review');reviewDate(source.review.checkedAt);assert(source.review.checkedAt<=l.verified);assert(['read','abstract-only','unavailable'].includes(source.review.status));assert(source.review.note);}
  for(const group of [l.overviewRefs,l.scale.refs,l.translation.refs,...l.projects.map(p=>p.refs)])assert(group.some(id=>l.sources.find(s=>s.id===id).review.status!=='unavailable'),l.id+': claim has no accessible supporting source');
 
- for(const s of l.sources){assert(['https:','http:'].includes(new URL(s.url).protocol));assert(s.title.trim());if(s.published){assert(/^\d{4}(-\d{2})?(-\d{2})?$/.test(s.published),l.id+' '+s.published);assert(s.published<=data.reviewed);}}
+ for(const s of l.sources){assert(['https:','http:'].includes(new URL(s.url).protocol));assert(s.title.trim());if(s.published){assert(/^\d{4}(-\d{2})?(-\d{2})?$/.test(s.published),l.id+' '+s.published);assert(s.published<=s.review.checkedAt);}}
  for(const id of l.atlasIds)assert(atlas.some(a=>a.id===id),l.id+': unknown atlas '+id);
  const html=api.render(l.id);assert(html.includes(l.name.replaceAll('&','&amp;')));assert(!/\bundefined\b|\bNaN\b/.test(html));assert.equal((html.match(/class="lab-stage"/g)||[]).length,l.projects.length);
  assert(html.includes('What the source review found'));assert(html.includes('Newest dated source found'));if(l.audit.status==='partial')assert(html.includes('Review has unresolved gaps'));assert(html.includes('EDITORIAL QUESTION'));assert(html.includes('STUDY CONTEXT'));
@@ -43,7 +46,7 @@ const htmls=['','view=schools','view=progress','view=coverage','page=2','page=99
 for(const html of htmls){assert(!/<img src=x/.test(html));assert(!/\bundefined\b|\bNaN\b/.test(html));}
 assert(api.render('missing').includes('not found'));
 assert(api.teaser('mcgovern').includes('Anikeeva')&&api.teaser('mcgovern').includes('Boyden'),'Many labs may link to one center');
-for(const s of data.schools){assert(new URL(s.url));assert(s.institution&&s.detail&&s.title&&s.region);assert(s.review&&s.review.note);assert(['read','abstract-only','unavailable'].includes(s.review.status));assert.equal(s.review.checkedAt,data.reviewed);}
+for(const s of data.schools){assert(new URL(s.url));assert(s.institution&&s.detail&&s.title&&s.region);assert(s.review&&s.review.note);assert(['read','abstract-only','unavailable'].includes(s.review.status));reviewDate(s.review.checkedAt);}
 const index=await read('index.html');assert(index.includes('data-route="labs"'));
 for(const [before,after] of [['labs-data','labs'],['labs','app'],['app','hub']])assert(index.indexOf(`dist/${before}.js`)<index.indexOf(`dist/${after}.js`));
 const dossier=await read('downloads/lab-research/research-directory.md');for(const l of data.labs)assert(dossier.includes('## '+l.name));

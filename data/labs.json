@@ -6730,11 +6730,11 @@
       ],
       "projects": [
         {
-          "title": "Distributed wireless bioelectronics",
-          "detail": "Miniature stimulators and implant networks aim to reduce batteries, wiring, and implant size. The lab’s cited studies include epidural cortical stimulators and endovascular peripheral-nerve stimulation. These are distinct anatomical delivery routes.",
-          "stage": "Published device and preclinical work",
+          "title": "Distributed battery-free stimulation networks",
+          "detail": "A peer-reviewed study published online in August 2025 and assigned to the March 2026 issue tested one to six magnetoelectric nodes. In its reported 1-cm-distance experiment, total power-transfer efficiency rose from 0.2% to 1.3%, with 2.2 mW delivered per node. Separate large-animal proof-of-concept experiments demonstrated spinal stimulation and cardiac pacing. The network count is not a count of human implants or recording channels.",
+          "stage": "Engineering measurements and large-animal proof of concept",
           "refs": [
-            "s1"
+            "s5"
           ]
         },
         {
@@ -6764,10 +6764,11 @@
       ],
       "scale": {
         "metric": "Implant volume, wireless reach, and distributed access",
-        "detail": "Count independently powered and addressable implants alongside power delivery and recording or stimulation performance. For imaging, track field of view and behavioral freedom rather than electrode count.",
+        "detail": "Track powered nodes and per-node power at a stated transmitter distance alongside independently addressable stimulation outputs. The distributed-implant study measures network power efficiency, while recording throughput, synchronization and chronic reliability remain separate dimensions. Imaging requires its own field-of-view and behavioral-freedom measures.",
         "refs": [
           "s1",
-          "s2"
+          "s2",
+          "s5"
         ]
       },
       "translation": {
@@ -6785,9 +6786,9 @@
           "url": "https://www.robinsonlab.com/research",
           "kind": "Lab",
           "review": {
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "note": "Magnetoelectric, lensless imaging and translational research directions; 2024 primate imaging citation."
+            "note": "Research page reread: magnetoelectric power and communication, distributed implants, endocisternal access and cross-species recording/imaging directions."
           }
         },
         {
@@ -6808,9 +6809,9 @@
           "url": "https://www.robinsonlab.com/publications",
           "kind": "Lab",
           "review": {
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "note": "Dated 2026 publication list, including August roadmaps; future-dated entry excluded."
+            "note": "2026 publication entries reread, including the March issue listing for the distributed-implant study and August roadmap. The future-dated November 2026 entry remains excluded."
           }
         },
         {
@@ -6824,16 +6825,29 @@
             "status": "read",
             "note": "Full May 2026 article: backscatter mechanism, receiver and porcine cardiac demonstration."
           }
+        },
+        {
+          "id": "s5",
+          "title": "Distributed battery-free bioelectronic implants with improved network power transfer efficiency via magnetoelectrics",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40877535/",
+          "kind": "Paper",
+          "published": "2025-08-28",
+          "review": {
+            "checkedAt": "2026-10-02",
+            "status": "abstract-only",
+            "note": "Primary article abstract and bibliographic record read on PubMed: online publication 28 August 2025, March 2026 issue, one-to-six-node efficiency experiment and large-animal spinal/cardiac proof of concept. Full publisher and PMC text unavailable."
+          }
         }
       ],
-      "verified": "2026-09-15",
+      "verified": "2026-10-02",
       "audit": {
-        "status": "reviewed",
-        "summary": "Read the research/publication pages and both complete device articles, including the May 2026 backscatter work.",
+        "status": "partial",
+        "summary": "Selective 2 October follow-up reread research and publication pages and the distributed-implant article abstract/bibliographic record. Its online 2025 date is separate from its March 2026 issue. Earlier endocisternal and backscatter readings retain their 15 September review dates; full text of the added network study was unavailable.",
         "changes": [
           "Specified sheep and the exact online date for endocisternal work.",
           "Added recent backscatter work with its cardiac, rather than neural, validation.",
-          "Excluded the publication list’s post-cutoff November 2026 item."
+          "Excluded the publication list’s post-cutoff November 2026 item.",
+          "Replaced the generic distributed-implant project with dated power-transfer measurements and large-animal scope, keeping online publication and issue dates separate."
         ],
         "latest": {
           "title": "A roadmap to navigate the future of neural engineering — publication listing",
@@ -6844,9 +6858,9 @@
           {
             "url": "https://www.robinsonlab.com/research",
             "title": "Robinson Lab — current research",
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "supports": "Magnetoelectric, lensless imaging and translational research directions; 2024 primate imaging citation."
+            "supports": "Research page reread: magnetoelectric power and communication, distributed implants, endocisternal access and cross-species recording/imaging directions."
           },
           {
             "url": "https://www.nature.com/articles/s41551-024-01281-9",
@@ -6859,9 +6873,9 @@
           {
             "url": "https://www.robinsonlab.com/publications",
             "title": "Robinson Lab — publications",
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "supports": "Dated 2026 publication list, including August roadmaps; future-dated entry excluded."
+            "supports": "2026 publication entries reread, including the March issue listing for the distributed-implant study and August roadmap. The future-dated November 2026 entry remains excluded."
           },
           {
             "url": "https://www.nature.com/articles/s44172-026-00678-5",
@@ -6870,6 +6884,28 @@
             "status": "read",
             "supports": "Full May 2026 article: backscatter mechanism, receiver and porcine cardiac demonstration.",
             "published": "2026-05-13"
+          },
+          {
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40877535/",
+            "title": "Distributed battery-free bioelectronic implants with improved network power transfer efficiency via magnetoelectrics",
+            "checkedAt": "2026-10-02",
+            "status": "abstract-only",
+            "supports": "Primary article abstract and bibliographic record read on PubMed: online publication 28 August 2025, March 2026 issue, one-to-six-node efficiency experiment and large-animal spinal/cardiac proof of concept. Full publisher and PMC text unavailable.",
+            "published": "2025-08-28"
+          },
+          {
+            "url": "https://www.nature.com/articles/s41551-025-01489-3",
+            "title": "Distributed-implant network study — publisher attempt",
+            "checkedAt": "2026-10-02",
+            "status": "unavailable",
+            "supports": "Publisher retrieval failed at the cookie/identity redirect; no full-text reading claimed."
+          },
+          {
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12557647/",
+            "title": "Distributed-implant network study — PMC attempt",
+            "checkedAt": "2026-10-02",
+            "status": "unavailable",
+            "supports": "PMC returned a browser-check page; the PubMed primary abstract and bibliographic record were used instead."
           }
         ]
       }
@@ -9342,6 +9378,14 @@
           "refs": [
             "s2"
           ]
+        },
+        {
+          "title": "Simultaneous speech and gesture decoding, 2026",
+          "detail": "The September 2026 peer-reviewed study combines parallel speech and gesture decoders from a single high-density ECoG implant. Movement mapping involved three participants; simultaneous decoding and avatar experiments involved two. Training on isolated and simultaneous behaviors improved generalization across those contexts. The experiments used finite phrase and gesture sets, rather than unrestricted conversation.",
+          "stage": "Human early-feasibility research, two simultaneous-decoding participants",
+          "refs": [
+            "s5"
+          ]
         }
       ],
       "scale": {
@@ -9359,7 +9403,7 @@
           "s4"
         ]
       },
-      "nextQuestion": "Editorial question: Can a streaming system keep the user’s intended timing and voice while remaining reliable during spontaneous conversation?",
+      "nextQuestion": "Can context-inclusive training support larger phrase and gesture vocabularies while preserving intended timing and reliable control during spontaneous communication?",
       "sources": [
         {
           "id": "s1",
@@ -9367,9 +9411,9 @@
           "url": "https://changlab.ucsf.edu/",
           "kind": "Lab",
           "review": {
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "note": "Page content read; retained claims checked against the page."
+            "note": "Lab overview and methods reread: human speech, functional mapping, cortical recording, stimulation and real-time processing."
           }
         },
         {
@@ -9402,33 +9446,46 @@
           "url": "https://changlab.ucsf.edu/publications",
           "kind": "Lab",
           "review": {
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "note": "Read current publication list, including 2025 speech and individualized stimulation work; no newer clinical-result claim inferred."
+            "note": "Publication index and 2025 streaming-speech abstract reread. The visible index stops at 2025; it is not a complete 2026 publication census."
+          }
+        },
+        {
+          "id": "s5",
+          "title": "Simultaneous speech and gesture decoding for multimodal communication in paralysis",
+          "url": "https://www.nature.com/articles/s41593-026-02446-2",
+          "kind": "Paper",
+          "published": "2026-09-14",
+          "review": {
+            "checkedAt": "2026-10-02",
+            "status": "read",
+            "note": "Publisher abstract, results, participant methods and publication metadata read. Movement mapping includes three participants; simultaneous speech/gesture and avatar experiments include two. Peer-reviewed article; finite phrase and gesture sets."
           }
         }
       ],
-      "verified": "2026-09-15",
+      "verified": "2026-10-02",
       "audit": {
-        "status": "reviewed",
-        "summary": "Retained claims rebuilt from the listed pages. Recent publications or news were sought explicitly; dated examples are identified in the profile.",
+        "status": "partial",
+        "summary": "Selective 2 October follow-up read the lab overview, publication index and September 2026 simultaneous speech-and-gesture paper. Earlier 2023 and 2025 milestones retain their 15 September source review dates; their publisher pages could not be reread in this follow-up.",
         "changes": [
           "Added the 2025 streaming speech paper.",
           "Separated 80-ms updates from end-to-end latency.",
-          "Retained the 2023 avatar result as a dated single-participant milestone."
+          "Retained the 2023 avatar result as a dated single-participant milestone.",
+          "Added September 2026 simultaneous speech and gesture decoding, separating the three-person movement cohort from two-person avatar and simultaneous-decoding experiments."
         ],
         "latest": {
-          "title": "Toward Individualized Deep Brain Stimulation: A Stereo-EEG Workflow (listed by lab)",
-          "date": "2025",
-          "url": "https://changlab.ucsf.edu/publications"
+          "title": "Simultaneous speech and gesture decoding for multimodal communication in paralysis",
+          "date": "2026-09-14",
+          "url": "https://www.nature.com/articles/s41593-026-02446-2"
         },
         "pages": [
           {
             "url": "https://changlab.ucsf.edu/",
             "title": "Chang Lab: foundations of human speech and research methods",
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "supports": "Page content read; retained claims checked against the page."
+            "supports": "Lab overview and methods reread: human speech, functional mapping, cortical recording, stimulation and real-time processing."
           },
           {
             "url": "https://www.nature.com/articles/s41586-023-06443-4",
@@ -9449,9 +9506,31 @@
           {
             "url": "https://changlab.ucsf.edu/publications",
             "title": "Chang Lab publications",
-            "checkedAt": "2026-09-15",
+            "checkedAt": "2026-10-02",
             "status": "read",
-            "supports": "Read current publication list, including 2025 speech and individualized stimulation work; no newer clinical-result claim inferred."
+            "supports": "Publication index and 2025 streaming-speech abstract reread. The visible index stops at 2025; it is not a complete 2026 publication census."
+          },
+          {
+            "url": "https://www.nature.com/articles/s41593-026-02446-2",
+            "title": "Simultaneous speech and gesture decoding for multimodal communication in paralysis",
+            "checkedAt": "2026-10-02",
+            "status": "read",
+            "supports": "Publisher abstract, results, participant methods and publication metadata read. Movement mapping includes three participants; simultaneous speech/gesture and avatar experiments include two. Peer-reviewed article; finite phrase and gesture sets.",
+            "published": "2026-09-14"
+          },
+          {
+            "url": "https://www.nature.com/articles/s41586-023-06443-4",
+            "title": "A high-performance neuroprosthesis for speech decoding and avatar control — October recheck",
+            "checkedAt": "2026-10-02",
+            "status": "unavailable",
+            "supports": "Publisher content could not be retrieved during this follow-up. The retained 2023 milestone uses the earlier 15 September source reading."
+          },
+          {
+            "url": "https://www.nature.com/articles/s41593-025-01905-6",
+            "title": "A streaming brain-to-voice neuroprosthesis to restore naturalistic communication — October recheck",
+            "checkedAt": "2026-10-02",
+            "status": "unavailable",
+            "supports": "Publisher content could not be retrieved during this follow-up. The retained milestone uses the earlier 15 September reading; the 2025 streaming abstract is also visible on the lab publication page."
           }
         ]
       }

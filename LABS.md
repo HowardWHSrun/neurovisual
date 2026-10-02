@@ -41,7 +41,7 @@ Every detailed profile has an `audit` object. Every retained claim source has a
 `review` object, with its actual access scope: `read`, `abstract-only`, or
 `unavailable`. School discovery pages use the same status vocabulary. A check date
 is not a publication date. An HTTP success is not evidence that content was read.
-Do not refresh check dates without rereading content.
+Do not refresh check dates without rereading content. Selective follow-ups keep the collection baseline unchanged and record each profile and page date independently.
 
 `audit.latest` means the newest dated source found in this review, not an exhaustive
 claim about the lab's newest work. Keep failures and alternative official pages in
@@ -55,3 +55,5 @@ Separate human use, recruitment, registry enrollment estimates, company performa
 announcements, device-specific clearance, and commercial authorization. Use the
 regulator's exact indication when a company headline is broader. Registry record
 update dates must remain separate from the snapshot fetch date.
+
+The October 2 follow-up updated Chang and Robinson profiles. Older source readings remain dated September 15; unavailable rereads and abstract-only evidence are recorded in each profile. Precision and CorTec company records were selectively reviewed with source-specific dates.
