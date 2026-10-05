@@ -168,10 +168,11 @@ hubResources.push(...[
     "id": "lsl",
     "title": "Lab Streaming Layer",
     "url": "https://labstreaminglayer.readthedocs.io/info/intro.html",
-    "description": "Stream, time-stamp, synchronize, and record neural and behavioral measurements from multiple devices through a shared software layer.",
+    "description": "Stream neural and behavioral samples with timestamps and clock-offset measurements. LabRecorder preserves these in XDF for importer alignment; online alignment needs explicit processing. Device delays and non-LSL clocks require separate checks.",
     "topic": "interfaces",
     "type": "Tool",
-    "level": "Intermediate"
+    "level": "Intermediate",
+    "reviewed": "2026-10-05"
   },
   {
     "id": "moabb",
@@ -380,5 +381,29 @@ hubResources.push(...[
     "type": "Tool",
     "level": "Advanced",
     "reviewed": "2026-10-02"
+  }
+]);
+
+// Selective October 5 documentation review; publication dates are stated separately.
+hubResources.push(...[
+  {
+    "id": "lightning-pose",
+    "title": "Lightning Pose labeling and evaluation tutorial",
+    "url": "https://lightning-pose.readthedocs.io/en/latest/source/create_first_project.html",
+    "description": "Label animal landmarks, train models, and inspect multiple camera views in a browser interface. The original method is peer reviewed (2024); the newer multiview-transformer study is an April 2026 preprint. Current installation requires Linux or WSL and an NVIDIA GPU.",
+    "topic": "behavior",
+    "type": "Tutorial",
+    "level": "Intermediate",
+    "reviewed": "2026-10-05"
+  },
+  {
+    "id": "pycontrol-sync",
+    "title": "pyControl camera and electrophysiology synchronization",
+    "url": "https://pycontrol.readthedocs.io/en/latest/user-guide/synchronisation/",
+    "description": "Align behavioral events, camera frames, and electrophysiology using shared recorded pulse trains and the Rsync aligner. Inspect pulse matches, time units, missing intervals, and extrapolation; regular camera triggers and random alignment pulses serve different purposes.",
+    "topic": "behavior",
+    "type": "Tutorial",
+    "level": "Intermediate",
+    "reviewed": "2026-10-05"
   }
 ]);

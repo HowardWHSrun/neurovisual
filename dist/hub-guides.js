@@ -3,7 +3,8 @@ const hubGuides = {
         "primer": [
             "A recording interface connects tissue and sensor to a calibrated digital signal through electrodes, a reference, amplification, acquisition, and timing.",
             "High-density extracellular probes sample voltages near neuronal populations; their channel count alone does not establish how many distinct neurons can be recovered or tracked over time.",
-            "Source example reviewed October 2, 2026: the September 10 peer-reviewed WILD report combines wireless animal recordings, behavioral sensors, and event-triggered optogenetics. Its public 64-channel workflow logs full-resolution data locally to microSD; BLE provides control and low-bandwidth preview. The reported animal experiments do not establish human or clinical usefulness."
+            "Source example reviewed October 2, 2026: the September 10 peer-reviewed WILD report combines wireless animal recordings, behavioral sensors, and event-triggered optogenetics. Its public 64-channel workflow logs full-resolution data locally to microSD; BLE provides control and low-bandwidth preview. The reported animal experiments do not establish human or clinical usefulness.",
+            "Timing documentation reviewed October 5, 2026: Lab Streaming Layer supplies sample timestamps and clock offsets. LabRecorder stores them for XDF importers to align streams; online alignment requires configured processing. Clock correction does not by itself measure sensor or display delay, and non-LSL clocks need a separate mapping."
         ],
         "tradeoffs": [
             {
@@ -69,6 +70,10 @@ const hubGuides = {
             {
                 "title": "WILD — Public workflow scope and reproducibility record (reviewed October 2, 2026)",
                 "url": "https://ayalab1.github.io/Neurologger/"
+            },
+            {
+                "title": "Lab Streaming Layer — Time Synchronization (documentation reviewed October 5, 2026)",
+                "url": "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html"
             }
         ],
         "related": [
@@ -348,7 +353,8 @@ const hubGuides = {
         "primer": [
             "Video-based pose estimation measures behavior by predicting visible body landmarks; it does not directly record neural activity.",
             "DeepLabCut provides learned landmark tracking, while a multi-camera workflow such as Anipose combines calibrated views to reconstruct three-dimensional positions.",
-            "Preprint example reviewed October 2, 2026: the September 16 revision abstract of Whole-body 3D kinematics of freely behaving Drosophila describes seven synchronized 800-fps cameras, 50 tracked landmarks, and biomechanical inverse-kinematics refinement. The revised full text was unavailable at review; the May 4 version is accessible in PMC. These are animal kinematic measurements, and model-constrained trajectories still require validation against the images."
+            "Preprint example reviewed October 2, 2026: the September 16 revision abstract of Whole-body 3D kinematics of freely behaving Drosophila describes seven synchronized 800-fps cameras, 50 tracked landmarks, and biomechanical inverse-kinematics refinement. The revised full text was unavailable at review; the May 4 version is accessible in PMC. These are animal kinematic measurements, and model-constrained trajectories still require validation against the images.",
+            "Lightning Pose documentation and publication abstracts reviewed October 5, 2026: the original animal-pose method was published in Nature Methods on June 25, 2024. The April 23, 2026 Lightning Pose 3D preprint adds joint multiview prediction and uncertainty-aware processing. Its full text was unavailable in this review. Current tutorials cover labeling, model training and viewing predictions; software capability does not establish accuracy for a new camera setup or a high-speed experiment."
         ],
         "tradeoffs": [
             {
@@ -375,7 +381,7 @@ const hubGuides = {
             },
             {
                 "title": "Calibrate geometry and time",
-                "action": "For multiple views, estimate camera intrinsics and extrinsics, preserve scale units, and verify frame correspondence. For fast motion, record exposure and illumination timing as well as nominal frame rate.",
+                "action": "For multiple views, estimate camera intrinsics and extrinsics, preserve scale units, and verify frame correspondence. For fast motion, record exposure and illumination timing as well as nominal frame rate. Shared recorded pulses can map camera and electrophysiology clocks; inspect missing pulses, units, and extrapolated intervals before aligning events.",
                 "output": "A calibration record and shared frame timeline."
             },
             {
@@ -410,6 +416,22 @@ const hubGuides = {
             {
                 "title": "Whole-body 3D kinematics — May 4, 2026 preprint version 1, full text in PMC",
                 "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13174342/"
+            },
+            {
+                "title": "Lightning Pose — Original peer-reviewed study (June 25, 2024; publication abstract reviewed)",
+                "url": "https://www.nature.com/articles/s41592-024-02319-1"
+            },
+            {
+                "title": "Lightning Pose 3D — bioRxiv preprint (April 23, 2026; abstract reviewed)",
+                "url": "https://www.biorxiv.org/content/10.64898/2026.04.20.719731v1"
+            },
+            {
+                "title": "Lightning Pose — Create your first project (documentation reviewed October 5, 2026)",
+                "url": "https://lightning-pose.readthedocs.io/en/latest/source/create_first_project.html"
+            },
+            {
+                "title": "pyControl — Synchronisation (documentation reviewed October 5, 2026)",
+                "url": "https://pycontrol.readthedocs.io/en/latest/user-guide/synchronisation/"
             }
         ],
         "related": [

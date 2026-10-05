@@ -10,7 +10,7 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 - **Explore the field:** eight source-linked problem groups and a native interactive map of people, labs, companies, and institutions. Start with the People & workplaces list, filter by research area or organization, then follow sourced affiliation, training, and founding connections on the map. Country guides connect mapped labs and companies; combine problem and country filters, then open the exact profile or original source.
 - **NeuroAI:** sourced project guides spanning connectomics, brain models and emulation, AI inspired by biology, and living neural computing. Follow the four-step Map → Model → Act → Test explanation, then open tools or learning paths. See [NEUROAI.md](NEUROAI.md).
 - **Topic guides:** eleven topics grouped by the questions they answer, with visual introductions and expandable workflows, examples, sources, and tools. Use Expand all details for a full read.
-- **Resource library:** 58 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
+- **Resource library:** 60 official tools, tutorials, courses, standards, and datasets. Filter by topic, type, level, and text.
 - **Learning paths:** eight four-step projects covering EEG decoding, 3D behavior, network simulation, spike sorting, calcium imaging, stimulation modeling, connectome exploration, and neural representation evaluation. Each includes evaluation criteria and a stretch question.
 - **Glossary:** 49 introductory definitions with links to their topic guides.
 - **Methods comparison:** a two-method comparison bench with direct links from search, plus the full reference for eight electrical, magnetic, hemodynamic, calcium, and behavioral measurements.
@@ -23,6 +23,8 @@ Public site: https://howardwhsrun.github.io/neurovisual/
 - **Existing atlas:** technology maps, organizational profiles and rankings, researcher trails, papers and updates, academic/career pathways, and milestones.
 
 Atlas records retain their original dates and limitations. The core resource collection baseline is September 7, 2026; NeuroAI, ideas and lab survey baselines are September 15. The October 2 selective refresh adds recording, closed-loop and 3D-behavior resources; updates CEBRA/POYO, two lab and two company profiles; adds a decoder-transfer note; and checks curated jobs. Only inspected entries and sources carry October 2 review dates. See [review scope and validation](EDITORIAL_REVIEW_2026-10-02.md). The site is a curated starting point, not a complete census or a clinical reference.
+
+The October 5 selective refresh adds Lightning Pose and pyControl synchronization tutorials and corrects the LSL resource and timing guide. The 2024 peer-reviewed method and April 2026 multiview preprint retain separate publication dates and access notes. Other collection baselines are unchanged. See [October 5 review scope and validation](EDITORIAL_REVIEW_2026-10-05.md).
 
 ## Editorial approach
 

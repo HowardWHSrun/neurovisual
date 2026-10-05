@@ -1,0 +1,21 @@
+# Editorial review — 5 October 2026
+
+This bounded follow-up adds two practical behavior tutorials and clarifies stream timing. Collection baselines and earlier source readings retain their dates. No new lab, company, NeuroAI dossier or notebook claim was justified in this pass.
+
+## Sources and access scope
+
+- **Lightning Pose:** read the authors’ [project repository](https://github.com/paninski-lab/lightning-pose), [documentation](https://lightning-pose.readthedocs.io/en/latest/), [first-project tutorial](https://lightning-pose.readthedocs.io/en/latest/source/create_first_project.html) and [installation guide](https://lightning-pose.readthedocs.io/en/latest/source/installation_guide.html). The tutorial covers labeling, model training and inspecting predictions across views; the current documented installation requires Linux/WSL and an NVIDIA GPU. Software was not installed or benchmarked.
+- **Original Lightning Pose study:** [Nature Methods publication](https://www.nature.com/articles/s41592-024-02319-1), first published **25 June 2024**, with a July issue date. Publication metadata and abstract read through the [Europe PMC record](https://europepmc.org/article/MED/38918605). Publisher full text and the linked PMC full text were unavailable during this review. No numerical performance result was added.
+- **Lightning Pose 3D:** [bioRxiv version 1](https://www.biorxiv.org/content/10.64898/2026.04.20.719731v1), posted **23 April 2026**. Read metadata and abstract through the [official bioRxiv API](https://api.biorxiv.org/details/biorxiv/10.64898/2026.04.20.719731). The API returned version 1 with no published-journal link. Full text could not be retrieved. The guide labels joint multiview prediction and uncertainty-aware processing as preprint methods; current documentation is separate evidence for available software features. Neither establishes accuracy in a new high-speed setup.
+- **pyControl:** read the [synchronization guide](https://pycontrol.readthedocs.io/en/latest/user-guide/synchronisation/) and its pulse-generation, camera-frame logging and Rsync alignment sections. The new tutorial links a concrete camera/electrophysiology workflow, with missing-pulse, unit and extrapolation checks. No latency or accuracy guarantee was added.
+- **Lab Streaming Layer:** read the [introduction](https://labstreaminglayer.readthedocs.io/info/intro.html) and [time-synchronization documentation](https://labstreaminglayer.readthedocs.io/info/time_synchronization.html). Corrected the resource description and added guide context separating timestamps/clock offsets, XDF import alignment, configured online processing, device delay and non-LSL clock mapping. Documentation review dates are distinct from publication dates.
+
+## Scope and validation
+
+The resource library now contains 60 entries. Only Lightning Pose, pyControl synchronization and the LSL resource carry new October 5 resource review dates. The behavior and interface guides identify the new evidence beside the relevant paragraphs. Existing high-speed fly evidence retains its October 2 review and preprint label.
+
+Installed the locked TypeScript dependency with `pnpm install --frozen-lockfile`; `pnpm check` and the full `pnpm test` passed, including the build, content relationships, generated-data parity, source URL boundaries, routes, search, notebook, labs, company evidence, graph and NeuroAI checks. Generated JavaScript is committed with the source. `git diff --check` passed.
+
+Chrome inspection beneath the `/neurovisual/` subdirectory checked the new resource cards, resource filtering with retained search focus, the behavior guide, expanded workflow/source sections and browser-back navigation. The Lightning Pose card and guide were inspected at a 390-pixel mobile viewport, with no horizontal page overflow; desktop card layout was also inspected. This was a focused content check, not a full-site visual regression pass.
+
+The existing frontier and jobs workflows retain their Monday **07:17** and **07:30 UTC** schedules. Both latest inspected scheduled runs (28 September) succeeded. Their discovery snapshots were not manually regenerated, and no workflows or automations were added or changed. GitHub Pages serves the repository root; exact-commit deployment and live assets are verified after pushing.
