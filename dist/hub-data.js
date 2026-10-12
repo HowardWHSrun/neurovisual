@@ -359,3 +359,25 @@ hubResources.push(...[
         "reviewed": "2026-10-05"
     }
 ]);
+hubResources.push(...[
+    {
+        "id": "posepal",
+        "title": "PosePAL animal-keypoint labeling",
+        "url": "https://github.com/Zhuoyang-Pan/PosePAL",
+        "description": "Propagate sparse labels into dense 2D animal-keypoint annotations with a web interface and JSON export. The September 23, 2026 IJCV paper is peer reviewed; software was first released in 2025. Setup needs Python/PyTorch, CoTracker3 weights, repository dependencies, and Node.js. Per-video optimization is offline.",
+        "topic": "behavior",
+        "type": "Tool",
+        "level": "Advanced",
+        "reviewed": "2026-10-12"
+    },
+    {
+        "id": "pem-ude",
+        "title": "PEM-UDE dynamical-model research code",
+        "url": "https://github.com/Neuroblox/pem-ude",
+        "description": "Inspect Julia demos and reproduction scripts for the October 8, 2026 peer-reviewed study of prediction-error feedback and interpretable differential equations. Neural-model learning uses simulations. Recording analysis needs separate CRCNS data, MATLAB scripts, and local-path edits; check the demo imports against the dependency file before installation.",
+        "topic": "computation",
+        "type": "Tool",
+        "level": "Advanced",
+        "reviewed": "2026-10-12"
+    }
+]);

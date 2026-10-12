@@ -289,7 +289,8 @@ const hubGuides: Record<string, HubGuide> = {
   "computation": {
     "primer": [
       "Computational neuroscience expresses a hypothesis as a model whose simulated or predicted observations can be compared with data.",
-      "A model's explanatory value depends on what it can distinguish from alternatives, not just whether one parameter setting produces a plausible-looking neural trace."
+      "A model's explanatory value depends on what it can distinguish from alternatives, not just whether one parameter setting produces a plausible-looking neural trace.",
+      "Peer-reviewed example reviewed October 12, 2026: PEM-UDE (PRX Intelligence, October 8) combines prediction-error feedback and symbolic regression to learn corrections to a neural-mass model from simulated spiking populations. Rat and human recordings provide indirect frequency/synchrony checks; the equations were not fitted to those recordings. Agreement does not uniquely identify a biological mechanism."
     ],
     "tradeoffs": [
       {
@@ -342,6 +343,10 @@ const hubGuides: Record<string, HubGuide> = {
       {
         "title": "Brian2 — Running a simulation",
         "url": "https://brian2.readthedocs.io/en/stable/user/running.html"
+      },
+      {
+        "title": "PEM-UDE — Peer-reviewed dynamical-model study (October 8, 2026; full text reviewed)",
+        "url": "https://journals.aps.org/prxintelligence/abstract/10.1103/xtb5-mlc8"
       }
     ],
     "related": [
@@ -355,7 +360,8 @@ const hubGuides: Record<string, HubGuide> = {
       "Video-based pose estimation measures behavior by predicting visible body landmarks; it does not directly record neural activity.",
       "DeepLabCut provides learned landmark tracking, while a multi-camera workflow such as Anipose combines calibrated views to reconstruct three-dimensional positions.",
       "Preprint example reviewed October 2, 2026: the September 16 revision abstract of Whole-body 3D kinematics of freely behaving Drosophila describes seven synchronized 800-fps cameras, 50 tracked landmarks, and biomechanical inverse-kinematics refinement. The revised full text was unavailable at review; the May 4 version is accessible in PMC. These are animal kinematic measurements, and model-constrained trajectories still require validation against the images.",
-      "Lightning Pose documentation and publication abstracts reviewed October 5, 2026: the original animal-pose method was published in Nature Methods on June 25, 2024. The April 23, 2026 Lightning Pose 3D preprint adds joint multiview prediction and uncertainty-aware processing. Its full text was unavailable in this review. Current tutorials cover labeling, model training and viewing predictions; software capability does not establish accuracy for a new camera setup or a high-speed experiment."
+      "Lightning Pose documentation and publication abstracts reviewed October 5, 2026: the original animal-pose method was published in Nature Methods on June 25, 2024. The April 23, 2026 Lightning Pose 3D preprint adds joint multiview prediction and uncertainty-aware processing. Its full text was unavailable in this review. Current tutorials cover labeling, model training and viewing predictions; software capability does not establish accuracy for a new camera setup or a high-speed experiment.",
+      "Peer-reviewed example reviewed October 12, 2026: PosePAL (IJCV, September 23) assists dense 2D annotation using point tracking and sparse labels. Its reported optimization takes about three minutes per 100-frame, 480p clip on an RTX A6000. Fast-motion robustness tests do not establish high-speed 3D reconstruction or real-time operation; incorrect seed labels and occlusion remain important checks."
     ],
     "tradeoffs": [
       {
@@ -433,6 +439,10 @@ const hubGuides: Record<string, HubGuide> = {
       {
         "title": "pyControl — Synchronisation (documentation reviewed October 5, 2026)",
         "url": "https://pycontrol.readthedocs.io/en/latest/user-guide/synchronisation/"
+      },
+      {
+        "title": "PosePAL — Efficient Animal Pose Labeling Using Point Trackers (IJCV, September 23, 2026; full text reviewed)",
+        "url": "https://link.springer.com/article/10.1007/s11263-026-02976-z"
       }
     ],
     "related": [
