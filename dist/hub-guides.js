@@ -4,7 +4,8 @@ const hubGuides = {
             "A recording interface connects tissue and sensor to a calibrated digital signal through electrodes, a reference, amplification, acquisition, and timing.",
             "High-density extracellular probes sample voltages near neuronal populations; their channel count alone does not establish how many distinct neurons can be recovered or tracked over time.",
             "Source example reviewed October 2, 2026: the September 10 peer-reviewed WILD report combines wireless animal recordings, behavioral sensors, and event-triggered optogenetics. Its public 64-channel workflow logs full-resolution data locally to microSD; BLE provides control and low-bandwidth preview. The reported animal experiments do not establish human or clinical usefulness.",
-            "Timing documentation reviewed October 5, 2026: Lab Streaming Layer supplies sample timestamps and clock offsets. LabRecorder stores them for XDF importers to align streams; online alignment requires configured processing. Clock correction does not by itself measure sensor or display delay, and non-LSL clocks need a separate mapping."
+            "Timing documentation reviewed October 5, 2026: Lab Streaming Layer supplies sample timestamps and clock offsets. LabRecorder stores them for XDF importers to align streams; online alignment requires configured processing. Clock correction does not by itself measure sensor or display delay, and non-LSL clocks need a separate mapping.",
+            "Peer-reviewed review published and read October 19, 2026: Li et al. compare multiplexing architectures as ways to share finite acquisition resources. Their neural-interface discussion connects calibration, signal fidelity and stimulation-artifact recovery to useful feedback. The accepted article synthesizes prior work; it does not demonstrate a new BCI."
         ],
         "tradeoffs": [
             {
@@ -74,6 +75,10 @@ const hubGuides = {
             {
                 "title": "Lab Streaming Layer — Time Synchronization (documentation reviewed October 5, 2026)",
                 "url": "https://labstreaminglayer.readthedocs.io/info/time_synchronization.html"
+            },
+            {
+                "title": "Li et al. — Multiplexed sensor arrays (peer-reviewed review, October 19, 2026; accepted article)",
+                "url": "https://www.nature.com/articles/s41528-026-00654-1"
             }
         ],
         "related": [
@@ -220,7 +225,8 @@ const hubGuides = {
         "primer": [
             "Neural stimulation research studies how an imposed perturbation interacts with neural tissue; this introductory workflow focuses on electric-field modeling for non-invasive stimulation.",
             "A SimNIBS field map estimates exposure under anatomical and physical assumptions, while neural responses, behavioral changes, and clinical outcomes require separate measurements.",
-            "For closed-loop experiments, separately verify sensing, event detection, and the delivered output. The Open Ephys bench tutorial reviewed October 2, 2026 measures input-to-output delay and explains buffer tradeoffs. A detector's processing time alone does not establish the latency or timing variability of the complete stimulation loop."
+            "For closed-loop experiments, separately verify sensing, event detection, and the delivered output. The Open Ephys bench tutorial reviewed October 2, 2026 measures input-to-output delay and explains buffer tradeoffs. A detector's processing time alone does not establish the latency or timing variability of the complete stimulation loop.",
+            "Peer-reviewed retrospective study published and read October 19, 2026: Gibbons et al. used retrospective rTMS records from 1,609 adults across 19 clinic groups to develop and evaluate a reinforcement-learning policy. In 370 patients at held-out clinics, clinician choices matching the policy were associated with greater next-session symptom improvement. Episode-wide gains were modeled projections. Confounding and outcome imputation limit inference; prospective testing is needed to establish benefit. This accepted article concerns session-level decisions, not real-time neural-feedback control."
         ],
         "tradeoffs": [
             {
@@ -277,6 +283,10 @@ const hubGuides = {
             {
                 "title": "Open Ephys — Measuring Closed-Loop Latency (reviewed October 2, 2026)",
                 "url": "https://open-ephys.github.io/gui-docs/Tutorials/Closed-Loop-Latency.html"
+            },
+            {
+                "title": "Gibbons et al. — Reinforcement learning for rTMS protocol selection (peer-reviewed retrospective study, October 19, 2026; accepted article)",
+                "url": "https://www.nature.com/articles/s41746-026-03417-4"
             }
         ],
         "related": [

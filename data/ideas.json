@@ -140,7 +140,7 @@
       "theme": "Electronics & information",
       "question": "When is selecting good sites more valuable than recording all of them?",
       "summary": "A large array can contain far more sites than the electronics read simultaneously. More silicon contacts do not automatically mean more concurrent data.",
-      "observation": "BISC has 65,536 selectable sites and up to 1,024 concurrent channels at 8.475 kS/s; its alternative mode records 256 at 33.9 kS/s.",
+      "observation": "BISC has 65,536 selectable sites and up to 1,024 concurrent channels at 8.475 kS/s; its alternative mode records 256 at 33.9 kS/s. Li et al.’s October 19, 2026 peer-reviewed multiplexing review separates physical sites, simultaneous acquisition and sampling budgets, and cautions that benchmarks collected under different conditions are not directly comparable. This accepted review adds a design framework, not new device-performance evidence.",
       "interpretation": "Working hypothesis: site selection can increase useful access within a fixed channel budget. Some tasks may instead require broader simultaneous sampling; switching among sites is not an equivalent measurement.",
       "test": "Compare fixed and training-selected subsets at the same channel and sampling budgets, then evaluate on held-out sessions. Report raw data rate, wireless power, selection overhead, and task performance.",
       "revision": "The calculator is arithmetic for hypothetical acquisition settings, not a device power model or an information-rate estimate.",
@@ -152,6 +152,10 @@
         {
           "title": "Rice 5,376-channel platform · 2026",
           "url": "https://doi.org/10.1038/s44385-026-00103-8"
+        },
+        {
+          "title": "Li et al. · multiplexing review, October 19, 2026 · accepted article",
+          "url": "https://www.nature.com/articles/s41528-026-00654-1"
         }
       ],
       "related": [
@@ -159,11 +163,15 @@
         "useful-channels"
       ],
       "organizations": [],
-      "updated": "2026-09-15",
+      "updated": "2026-10-19",
       "history": [
         {
           "date": "2026-09-15",
           "change": "The calculator is arithmetic for hypothetical acquisition settings, not a device power model or an information-rate estimate."
+        },
+        {
+          "date": "2026-10-19",
+          "change": "Added the multiplexing review and its benchmark-comparability caveat. Earlier device evidence and calculator assumptions were not re-reviewed."
         }
       ]
     },

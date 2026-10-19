@@ -431,3 +431,15 @@ hubResources.push(...[
     "reviewed": "2026-10-12"
   }
 ]);
+
+// Selective October 19 review; publication and review scope are explicit.
+hubResources.push({
+  id: 'multiplexed-sensor-review',
+  title: 'Multiplexed sensor arrays: choosing a readout architecture',
+  url: 'https://www.nature.com/articles/s41528-026-00654-1',
+  description: 'Compare time, frequency, spatial, optical, code and hybrid multiplexing against measurement requirements. This peer-reviewed review, published October 19, 2026 as an accepted article, covers shared readout, power and recovery constraints; it is a design reference, not a validated hardware implementation.',
+  topic: 'interfaces',
+  type: 'Review',
+  level: 'Advanced',
+  reviewed: '2026-10-19'
+});
