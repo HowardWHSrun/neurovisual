@@ -261,11 +261,11 @@
       "theme": "Neural decoding",
       "question": "What survives a change of animal, recording day, cell population or task when the recalibration budget stays fixed?",
       "summary": "Make the held-out unit and labeled adaptation budget visible beside the decoding score. Test whether a shared model reduces the work needed for a new recording.",
-      "observation": "The ICLR 2025 POYO+ study evaluates mouse visual-cortex calcium data and adapts to held-out animals using each new session’s training split. CEBRA’s decoding tutorial separates training from later test data and compares behavior-aligned embeddings with shuffled-label controls. These are offline analysis examples, not demonstrations of human closed-loop control. The October 9, 2026 LaS preprint aligns neural features with language-based class prototypes. On 61 overtly spoken Chinese words from 12 participants’ intracranial sEEG, Du-IN with LaS reports 60.49% mean accuracy versus 55.27% with class-label supervision. This is offline word classification on held-out trials from the same participants represented in training; it does not establish transfer to new speech users, scalp-EEG speech decoding or imagined-speech decoding.",
+      "observation": "The ICLR 2025 POYO+ study evaluates mouse visual-cortex calcium data and adapts to held-out animals using each new session’s training split. CEBRA’s decoding tutorial separates training from later test data and compares behavior-aligned embeddings with shuffled-label controls. These are offline analysis examples, not demonstrations of human closed-loop control. The October 9, 2026 LaS preprint aligns neural features with language-based class prototypes. On 61 overtly spoken Chinese words from 12 participants’ intracranial sEEG, Du-IN with LaS reports 60.49% mean accuracy versus 55.27% with class-label supervision. This is offline word classification on held-out trials from the same participants represented in training; it does not establish transfer to new speech users, scalp-EEG speech decoding or imagined-speech decoding. Gu et al.’s October 23, 2026 peer-reviewed review separates cross-session, cross-participant and cross-device transfer, and fixed decoding from target-data adaptation. It synthesizes evidence rather than reporting a new clinical trial.",
       "interpretation": "A shared representation may reduce recalibration, but the claim depends on what was held out and what new labels were supplied. Attractive embeddings and an average session score can conceal a poor result for a particular animal or task. LaS subject/session adaptation still requires labeled calibration. Its motor-imagery evaluation reuses the held-out fold for checkpoint selection and reporting, so that result needs a separate test-set replication; online control and long-term stability remain untested.",
-      "test": "Freeze session, animal and task splits before model selection. Fit preprocessing, embeddings and decoder settings using training data only. Compare a shared model with tuned single-session and shuffled-label baselines at equal labeled adaptation budgets. Report each held-out result, uncertainty, context-window duration and inference time. Evaluate real-time closed-loop performance separately before claiming useful online control.",
+      "test": "Freeze session, animal and task splits before model selection. Fit preprocessing, embeddings and decoder settings using training data only. Compare a shared model with tuned single-session and shuffled-label baselines at equal labeled adaptation budgets. Report each held-out result, uncertainty, context-window duration and inference time. Evaluate real-time closed-loop performance separately before claiming useful online control. As an editorial extension, record pretraining overlap, calibration time and both inference and update costs against the intended hardware budget.",
       "revision": "Revise the transfer hypothesis if gains disappear under matched tuning or stricter held-out splits, depend on unavailable future samples, or fail when fewer adaptation labels are allowed. Animal offline results alone cannot resolve human communication or stimulation performance.",
-      "updated": "2026-10-12",
+      "updated": "2026-10-26",
       "sources": [
         {
           "title": "POYO+ · peer-reviewed ICLR 2025 transfer protocol",
@@ -282,6 +282,10 @@
         {
           "title": "LaS — Teaching neural decoders with language · October 9, 2026 arXiv preprint; Table 1, evaluation setup and limitations",
           "url": "https://arxiv.org/html/2610.12921v1"
+        },
+        {
+          "title": "Gu et al. · Generalizable neural decoding for clinically scalable brain-computer interfaces · peer-reviewed review, October 23, 2026",
+          "url": "https://www.nature.com/articles/s44385-026-00119-0"
         }
       ],
       "related": [
@@ -298,6 +302,10 @@
         {
           "date": "2026-10-12",
           "change": "Added the LaS preprint as a human intracranial word-classification example, preserving calibration, held-out-fold reuse and offline-evaluation limits. Earlier POYO+ and CEBRA evidence retains its prior review scope."
+        },
+        {
+          "date": "2026-10-26",
+          "change": "Added the Gu et al. review and an editorial hardware-budget reporting extension. Earlier POYO+, CEBRA and LaS evidence was not re-reviewed."
         }
       ]
     }

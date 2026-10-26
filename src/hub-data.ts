@@ -443,3 +443,15 @@ hubResources.push({
   level: 'Advanced',
   reviewed: '2026-10-19'
 });
+
+// Selective October 26 review; earlier collection dates are unchanged.
+hubResources.push({
+  id: 'generalizable-decoding-review',
+  title: 'Generalizable neural decoding: evaluation and deployment',
+  url: 'https://www.nature.com/articles/s44385-026-00119-0',
+  description: 'Use this peer-reviewed review, published October 23, 2026, to audit held-out sessions, participants and devices, target-data access and calibration burden. Compare inference and adaptation costs against power, memory, latency, telemetry and heat limits. This synthesis does not provide new clinical efficacy evidence.',
+  topic: 'bci',
+  type: 'Review',
+  level: 'Advanced',
+  reviewed: '2026-10-26'
+});
